@@ -1,0 +1,45 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "Modul-PathologieBefund",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core//ImplementationGuide/Modul-PathologieBefund",
+  "version": "0.1.0",
+  "name": "ImplementationGuideModulPathologieBefund",
+  "status": "draft",
+  "packageId": "Modul-PathologieBefund",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/MyPatient"
+        },
+        "name": "MyPatient",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2021+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}
