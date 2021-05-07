@@ -8,8 +8,11 @@ name: ImplementationGuide-Modul-PathologieBefund
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
+# date: 
 copyrightYear: 2021+
 releaseLabel: ci-build
+# TODO: add dependencies!
+# dependencies: 
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

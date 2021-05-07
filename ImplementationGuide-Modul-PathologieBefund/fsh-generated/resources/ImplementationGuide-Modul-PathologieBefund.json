@@ -17,6 +17,14 @@
         },
         "name": "MyPatient",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pathologie-befundbericht"
+        },
+        "name": "Pathologie Befundbericht",
+        "description": "tbd",
+        "exampleBoolean": false
       }
     ],
     "page": {
