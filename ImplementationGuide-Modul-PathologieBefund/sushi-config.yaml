@@ -1,0 +1,22 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: Modul-PathologieBefund
+canonical: https://www.medizininformatik-initiative.de/fhir/core/
+name: ImplementationGuide-Modul-PathologieBefund
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+# date: 
+copyrightYear: 2021+
+releaseLabel: ci-build
+# TODO: add dependencies!
+# dependencies: 
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
