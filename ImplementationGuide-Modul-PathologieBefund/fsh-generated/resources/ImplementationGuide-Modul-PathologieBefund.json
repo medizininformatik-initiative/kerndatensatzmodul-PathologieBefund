@@ -13,16 +13,17 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/MyPatient"
+          "reference": "StructureDefinition/PathologieBefundbericht"
         },
-        "name": "MyPatient",
+        "name": "Pathologie Befundbericht",
+        "description": "tbd",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/pathologie-befundbericht"
+          "reference": "StructureDefinition/PraeparatProbe"
         },
-        "name": "Pathologie Befundbericht",
+        "name": "Praeparat Probe",
         "description": "tbd",
         "exampleBoolean": false
       }
