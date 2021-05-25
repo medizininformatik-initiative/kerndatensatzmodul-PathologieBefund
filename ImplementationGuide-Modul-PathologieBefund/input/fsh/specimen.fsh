@@ -6,3 +6,6 @@ Parent: Specimen
 Id: PraeparatProbe
 Title: "Praeparat Probe"
 Description: "tbd"
+
+// set to draft
+* ^status = #draft

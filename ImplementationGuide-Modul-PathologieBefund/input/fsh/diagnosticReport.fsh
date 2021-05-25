@@ -12,6 +12,9 @@ Id: PathologieBefundbericht
 Title: "Pathologie Befundbericht"
 Description: "tbd"
 
+// set to draft
+* ^status = #draft
+
 // ID
 * id MS
 // Identifikator

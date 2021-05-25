@@ -15,7 +15,7 @@
   "version": "0.1.0",
   "name": "PraeparatProbe",
   "title": "Praeparat Probe",
-  "status": "active",
+  "status": "draft",
   "description": "tbd",
   "fhirVersion": "4.0.1",
   "mapping": [
