@@ -15,7 +15,7 @@
   "version": "0.1.0",
   "name": "Untersuchungsauftrag",
   "title": "Untersuchungsauftrag",
-  "status": "active",
+  "status": "draft",
   "description": "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, ein Auftrag zur Konsiliarischen Begutachtung und überlässt der auftragenehmenden Pathologieeinrichtung die Auswahl und den Umfang der einzusetzenden Methoden (Arbeitsaufträge und Arbeitsauftragsschritte). Aus diesem Grunde werden Pathologieeinrichtungen als Inspektionsstellen akkreditiert.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -106,9 +106,9 @@
         "min": 1
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:vn-type",
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:placer-type",
         "path": "ServiceRequest.identifier.type.coding",
-        "sliceName": "vn-type",
+        "sliceName": "placer-type",
         "min": 1,
         "max": "1",
         "patternCoding": {
@@ -119,19 +119,19 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:vn-type.system",
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:placer-type.system",
         "path": "ServiceRequest.identifier.type.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:vn-type.code",
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:placer-type.code",
         "path": "ServiceRequest.identifier.type.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:vn-type.display",
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:placer-type.display",
         "path": "ServiceRequest.identifier.type.coding.display",
         "mustSupport": true
       },
@@ -176,9 +176,9 @@
         "min": 1
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:vn-type",
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:filler-type",
         "path": "ServiceRequest.identifier.type.coding",
-        "sliceName": "vn-type",
+        "sliceName": "filler-type",
         "min": 1,
         "max": "1",
         "patternCoding": {
@@ -189,19 +189,19 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:vn-type.system",
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:filler-type.system",
         "path": "ServiceRequest.identifier.type.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:vn-type.code",
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:filler-type.code",
         "path": "ServiceRequest.identifier.type.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:vn-type.display",
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:filler-type.display",
         "path": "ServiceRequest.identifier.type.coding.display",
         "mustSupport": true
       },

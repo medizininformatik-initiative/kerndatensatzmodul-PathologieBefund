@@ -11,6 +11,8 @@ Id: Untersuchungsauftrag
 Title: "Untersuchungsauftrag"
 Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, ein Auftrag zur Konsiliarischen Begutachtung und überlässt der auftragenehmenden Pathologieeinrichtung die Auswahl und den Umfang der einzusetzenden Methoden (Arbeitsaufträge und Arbeitsauftragsschritte). Aus diesem Grunde werden Pathologieeinrichtungen als Inspektionsstellen akkreditiert."
 
+* ^status = #draft
+
 // Meta
 * meta.profile MS
 * meta.source MS
@@ -31,11 +33,11 @@ Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, e
 * identifier[Auftraggeber-ID].type.coding ^slicing.discriminator[0].type = #pattern
 * identifier[Auftraggeber-ID].type.coding ^slicing.discriminator[0].path = "$this"
 * identifier[Auftraggeber-ID].type.coding ^slicing.rules = #open
-* identifier[Auftraggeber-ID].type.coding contains vn-type 1..1 MS
-* identifier[Auftraggeber-ID].type.coding[vn-type] = v2-0203#PLAC "Placer Identifier"
-* identifier[Auftraggeber-ID].type.coding[vn-type].system 1..1 MS
-* identifier[Auftraggeber-ID].type.coding[vn-type].code 1..1 MS
-* identifier[Auftraggeber-ID].type.coding[vn-type].display MS
+* identifier[Auftraggeber-ID].type.coding contains placer-type 1..1 MS
+* identifier[Auftraggeber-ID].type.coding[placer-type] = v2-0203#PLAC "Placer Identifier"
+* identifier[Auftraggeber-ID].type.coding[placer-type].system 1..1 MS
+* identifier[Auftraggeber-ID].type.coding[placer-type].code 1..1 MS
+* identifier[Auftraggeber-ID].type.coding[placer-type].display MS
 
 * identifier[Auftragnehmer-ID].value 1.. MS
 * identifier[Auftragnehmer-ID].system 1.. MS
@@ -43,11 +45,11 @@ Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, e
 * identifier[Auftragnehmer-ID].type.coding ^slicing.discriminator[0].type = #pattern
 * identifier[Auftragnehmer-ID].type.coding ^slicing.discriminator[0].path = "$this"
 * identifier[Auftragnehmer-ID].type.coding ^slicing.rules = #open
-* identifier[Auftragnehmer-ID].type.coding contains vn-type 1..1 MS
-* identifier[Auftragnehmer-ID].type.coding[vn-type] = v2-0203#FILL "Filler"
-* identifier[Auftragnehmer-ID].type.coding[vn-type].system 1..1 MS
-* identifier[Auftragnehmer-ID].type.coding[vn-type].code 1..1 MS
-* identifier[Auftragnehmer-ID].type.coding[vn-type].display MS
+* identifier[Auftragnehmer-ID].type.coding contains filler-type 1..1 MS
+* identifier[Auftragnehmer-ID].type.coding[filler-type] = v2-0203#FILL "Filler"
+* identifier[Auftragnehmer-ID].type.coding[filler-type].system 1..1 MS
+* identifier[Auftragnehmer-ID].type.coding[filler-type].code 1..1 MS
+* identifier[Auftragnehmer-ID].type.coding[filler-type].display MS
 
 // Auftragsgruppen-ID
 * requisition MS
