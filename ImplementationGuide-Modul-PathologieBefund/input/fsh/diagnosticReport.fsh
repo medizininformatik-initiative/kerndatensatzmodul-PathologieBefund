@@ -25,14 +25,18 @@ Description: "Defines the general pathology report structure for German hospital
 * identifier ^slicing.discriminator[0].path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains Set-ID 1.. MS
-// * identifier[Set-ID].type 1..1 MS
-// * identifier[Set-ID].type = v2-0203#VN "Visit Number"
+* identifier[Set-ID].value 1.. MS
+* identifier[Set-ID].system 1.. MS
+* identifier[Set-ID].type 1.. MS
 
 * identifier[Set-ID].type.coding ^slicing.discriminator[0].type = #pattern
 * identifier[Set-ID].type.coding ^slicing.discriminator[0].path = "$this"
 * identifier[Set-ID].type.coding ^slicing.rules = #open
 * identifier[Set-ID].type.coding contains vn-type 1..1 MS
 * identifier[Set-ID].type.coding[vn-type] = v2-0203#VN "Visit Number"
+* identifier[Set-ID].type.coding[vn-type].system 1..1 MS
+* identifier[Set-ID].type.coding[vn-type].code 1..1 MS
+* identifier[Set-ID].type.coding[vn-type].display MS
 
 // Versionsnummer
 * meta MS
@@ -44,9 +48,6 @@ Description: "Defines the general pathology report structure for German hospital
 * status MS
 // Code
 * code MS
-// * code.coding.system MS
-// * code.coding.code MS
-// * code.coding.display MS
 // define slice for pathology report code
 * code ^slicing.discriminator[0].type = #pattern
 * code ^slicing.discriminator[0].path = "$this"
@@ -59,11 +60,10 @@ Description: "Defines the general pathology report structure for German hospital
 * code[pathology-report].coding.display MS
 * code[pathology-report] = LOINC#60568-3 "Pathology Synoptic report" 
 
-//LOINC#60568-3 "Pathology Synoptic report"
-// Referenz zu Patient*in
+// Referenz zu Patient:in
 * subject 1.. MS
 * subject only Reference(Patient)
-// Referenz zu Fall (z.B. ueber Aufnahmenummer/Fallnummer)
+// Referenz zu Fall 
 * encounter MS
 // Dokumentationsdatum
 * effective[x] MS
