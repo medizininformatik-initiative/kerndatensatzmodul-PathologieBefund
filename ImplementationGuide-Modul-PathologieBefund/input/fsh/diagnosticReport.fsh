@@ -40,14 +40,19 @@ Description: "Defines the general pathology report structure for German hospital
 * status MS
 // Code
 * code MS
-* code.coding.system MS
-* code.coding.code MS
-* code.coding.display MS
+// * code.coding.system MS
+// * code.coding.code MS
+// * code.coding.display MS
 // define slice for pathology report code
 * code ^slicing.discriminator[0].type = #pattern
 * code ^slicing.discriminator[0].path = "$this"
 * code ^slicing.rules = #open
+
 * code contains pathology-report 1..1 MS
+* code[pathology-report].coding MS
+* code[pathology-report].coding.system MS
+* code[pathology-report].coding.code MS
+* code[pathology-report].coding.display MS
 * code[pathology-report] = LOINC#60568-3 "Pathology Synoptic report" 
 
 //LOINC#60568-3 "Pathology Synoptic report"

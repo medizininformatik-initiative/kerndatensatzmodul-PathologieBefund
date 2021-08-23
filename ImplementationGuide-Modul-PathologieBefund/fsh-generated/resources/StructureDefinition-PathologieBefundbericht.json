@@ -134,21 +134,6 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.code.coding.system",
-        "path": "DiagnosticReport.code.coding.system",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.code.coding.code",
-        "path": "DiagnosticReport.code.coding.code",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.code.coding.display",
-        "path": "DiagnosticReport.code.coding.display",
-        "mustSupport": true
-      },
-      {
         "id": "DiagnosticReport.code:pathology-report",
         "path": "DiagnosticReport.code",
         "sliceName": "pathology-report",
@@ -163,6 +148,26 @@
             }
           ]
         },
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code:pathology-report.coding",
+        "path": "DiagnosticReport.code.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code:pathology-report.coding.system",
+        "path": "DiagnosticReport.code.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code:pathology-report.coding.code",
+        "path": "DiagnosticReport.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code:pathology-report.coding.display",
+        "path": "DiagnosticReport.code.coding.display",
         "mustSupport": true
       },
       {
