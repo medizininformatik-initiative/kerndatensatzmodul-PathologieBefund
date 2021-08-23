@@ -4,6 +4,7 @@
 
 // Aliases
 Alias: LOINC = http://loinc.org/
+Alias: v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203 
 
 // Profile definition
 Profile: PathologieBefundbericht
@@ -23,7 +24,16 @@ Description: "Defines the general pathology report structure for German hospital
 * identifier ^slicing.discriminator[0].type = #pattern
 * identifier ^slicing.discriminator[0].path = "$this"
 * identifier ^slicing.rules = #open
-* identifier contains Set-ID 1..1
+* identifier contains Set-ID 1.. MS
+// * identifier[Set-ID].type 1..1 MS
+// * identifier[Set-ID].type = v2-0203#VN "Visit Number"
+
+* identifier[Set-ID].type.coding ^slicing.discriminator[0].type = #pattern
+* identifier[Set-ID].type.coding ^slicing.discriminator[0].path = "$this"
+* identifier[Set-ID].type.coding ^slicing.rules = #open
+* identifier[Set-ID].type.coding contains vn-type 1..1 MS
+* identifier[Set-ID].type.coding[vn-type] = v2-0203#VN "Visit Number"
+
 // Versionsnummer
 * meta MS
 * meta.versionId MS
@@ -34,15 +44,20 @@ Description: "Defines the general pathology report structure for German hospital
 * status MS
 // Code
 * code MS
-* code.coding.system MS
-* code.coding.code MS
-* code.coding.display MS
+// * code.coding.system MS
+// * code.coding.code MS
+// * code.coding.display MS
 // define slice for pathology report code
 * code ^slicing.discriminator[0].type = #pattern
 * code ^slicing.discriminator[0].path = "$this"
 * code ^slicing.rules = #open
-* code contains pathology-report 1..1
-* code[pathology-report] = LOINC#60568-3 "Pathology Synoptic report"
+
+* code contains pathology-report 1..1 MS
+* code[pathology-report].coding MS
+* code[pathology-report].coding.system MS
+* code[pathology-report].coding.code MS
+* code[pathology-report].coding.display MS
+* code[pathology-report] = LOINC#60568-3 "Pathology Synoptic report" 
 
 //LOINC#60568-3 "Pathology Synoptic report"
 // Referenz zu Patient*in
