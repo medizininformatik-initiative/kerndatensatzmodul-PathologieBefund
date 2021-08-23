@@ -2,6 +2,7 @@
 
 // Aliases
 Alias: sct = http://snomed.info/sct
+Alias: v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203 
 
 // Profile definition
 Profile: Untersuchungsauftrag
@@ -15,7 +16,38 @@ Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, e
 * meta.source MS
 
 // Identifikation - Auftrags-ID: Auftrags-ID des Auftraggebers || Auftrags-ID des Auftragnehmers
-* identifier MS
+* identifier 1.. MS
+* identifier ^slicing.discriminator[0].type = #pattern
+* identifier ^slicing.discriminator[0].path = "$this"
+* identifier ^slicing.rules = #open
+
+// cardinalities could still change
+* identifier contains Auftraggeber-ID 0..1 MS
+                    and Auftragnehmer-ID 0..1 MS
+
+* identifier[Auftraggeber-ID].value 1.. MS
+* identifier[Auftraggeber-ID].system 1.. MS
+* identifier[Auftraggeber-ID].type 1.. MS
+* identifier[Auftraggeber-ID].type.coding ^slicing.discriminator[0].type = #pattern
+* identifier[Auftraggeber-ID].type.coding ^slicing.discriminator[0].path = "$this"
+* identifier[Auftraggeber-ID].type.coding ^slicing.rules = #open
+* identifier[Auftraggeber-ID].type.coding contains vn-type 1..1 MS
+* identifier[Auftraggeber-ID].type.coding[vn-type] = v2-0203#PLAC "Placer Identifier"
+* identifier[Auftraggeber-ID].type.coding[vn-type].system 1..1 MS
+* identifier[Auftraggeber-ID].type.coding[vn-type].code 1..1 MS
+* identifier[Auftraggeber-ID].type.coding[vn-type].display MS
+
+* identifier[Auftragnehmer-ID].value 1.. MS
+* identifier[Auftragnehmer-ID].system 1.. MS
+* identifier[Auftragnehmer-ID].type 1.. MS
+* identifier[Auftragnehmer-ID].type.coding ^slicing.discriminator[0].type = #pattern
+* identifier[Auftragnehmer-ID].type.coding ^slicing.discriminator[0].path = "$this"
+* identifier[Auftragnehmer-ID].type.coding ^slicing.rules = #open
+* identifier[Auftragnehmer-ID].type.coding contains vn-type 1..1 MS
+* identifier[Auftragnehmer-ID].type.coding[vn-type] = v2-0203#FILL "Filler"
+* identifier[Auftragnehmer-ID].type.coding[vn-type].system 1..1 MS
+* identifier[Auftragnehmer-ID].type.coding[vn-type].code 1..1 MS
+* identifier[Auftragnehmer-ID].type.coding[vn-type].display MS
 
 // Auftragsgruppen-ID
 * requisition MS
