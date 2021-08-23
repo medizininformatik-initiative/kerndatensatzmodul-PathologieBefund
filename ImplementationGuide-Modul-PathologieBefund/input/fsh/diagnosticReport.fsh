@@ -24,11 +24,15 @@ Description: "Defines the general pathology report structure for German hospital
 * identifier ^slicing.discriminator[0].type = #pattern
 * identifier ^slicing.discriminator[0].path = "$this"
 * identifier ^slicing.rules = #open
+* identifier contains Set-ID 1.. MS
+// * identifier[Set-ID].type 1..1 MS
+// * identifier[Set-ID].type = v2-0203#VN "Visit Number"
 
-* identifier contains Set-ID 1..1 MS
-* identifier[Set-ID].type 1..1 MS
-* identifier[Set-ID].type = v2-0203#VN "Visit Number"
-
+* identifier[Set-ID].type.coding ^slicing.discriminator[0].type = #pattern
+* identifier[Set-ID].type.coding ^slicing.discriminator[0].path = "$this"
+* identifier[Set-ID].type.coding ^slicing.rules = #open
+* identifier[Set-ID].type.coding contains vn-type 1..1 MS
+* identifier[Set-ID].type.coding[vn-type] = v2-0203#VN "Visit Number"
 
 // Versionsnummer
 * meta MS

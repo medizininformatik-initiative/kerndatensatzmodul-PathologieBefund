@@ -82,21 +82,33 @@
         "path": "DiagnosticReport.identifier",
         "sliceName": "Set-ID",
         "min": 1,
-        "max": "1",
+        "max": "*",
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.identifier:Set-ID.type",
-        "path": "DiagnosticReport.identifier.type",
-        "min": 1,
-        "patternCodeableConcept": {
-          "coding": [
+        "id": "DiagnosticReport.identifier:Set-ID.type.coding",
+        "path": "DiagnosticReport.identifier.type.coding",
+        "slicing": {
+          "discriminator": [
             {
-              "code": "VN",
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "display": "Visit Number"
+              "type": "pattern",
+              "path": "$this"
             }
-          ]
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DiagnosticReport.identifier:Set-ID.type.coding:vn-type",
+        "path": "DiagnosticReport.identifier.type.coding",
+        "sliceName": "vn-type",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "VN",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+          "display": "Visit Number"
         },
         "mustSupport": true
       },
