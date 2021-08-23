@@ -41,6 +41,9 @@ Description: "Defines the general pathology report structure for German hospital
 // Versionsnummer
 * meta MS
 * meta.versionId MS
+// Weitere MS Elemente aus Metadata
+* meta.source MS
+* meta.profile MS 
 // Referenz zum Untersuchungsauftrag
 * basedOn 1.. MS
 * basedOn only Reference(ServiceRequest)

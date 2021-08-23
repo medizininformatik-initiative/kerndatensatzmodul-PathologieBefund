@@ -63,6 +63,16 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.meta.source",
+        "path": "DiagnosticReport.meta.source",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.meta.profile",
+        "path": "DiagnosticReport.meta.profile",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
         "slicing": {
