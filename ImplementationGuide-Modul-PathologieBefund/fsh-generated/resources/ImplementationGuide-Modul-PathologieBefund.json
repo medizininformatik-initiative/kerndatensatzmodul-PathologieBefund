@@ -18,6 +18,14 @@
         "name": "Pathologie Befundbericht",
         "description": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Untersuchungsauftrag"
+        },
+        "name": "Untersuchungsauftrag",
+        "description": "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, ein Auftrag zur Konsiliarischen Begutachtung und überlässt der auftragenehmenden Pathologieeinrichtung die Auswahl und den Umfang der einzusetzenden Methoden (Arbeitsaufträge und Arbeitsauftragsschritte). Aus diesem Grunde werden Pathologieeinrichtungen als Inspektionsstellen akkreditiert.",
+        "exampleBoolean": false
       }
     ],
     "page": {

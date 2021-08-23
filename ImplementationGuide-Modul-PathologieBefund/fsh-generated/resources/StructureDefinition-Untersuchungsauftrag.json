@@ -1,0 +1,313 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Untersuchungsauftrag",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Care Provision"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Untersuchungsauftrag",
+  "version": "0.1.0",
+  "name": "Untersuchungsauftrag",
+  "title": "Untersuchungsauftrag",
+  "status": "active",
+  "description": "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, ein Auftrag zur Konsiliarischen Begutachtung und überlässt der auftragenehmenden Pathologieeinrichtung die Auswahl und den Umfang der einzusetzenden Methoden (Arbeitsaufträge und Arbeitsauftragsschritte). Aus diesem Grunde werden Pathologieeinrichtungen als Inspektionsstellen akkreditiert.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "quick",
+      "uri": "http://siframework.org/cqf",
+      "name": "Quality Improvement and Clinical Knowledge (QUICK)"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.meta.source",
+        "path": "ServiceRequest.meta.source",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.meta.profile",
+        "path": "ServiceRequest.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier",
+        "path": "ServiceRequest.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftraggeber-ID",
+        "path": "ServiceRequest.identifier",
+        "sliceName": "Auftraggeber-ID",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.type",
+        "path": "ServiceRequest.identifier.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding",
+        "path": "ServiceRequest.identifier.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:vn-type",
+        "path": "ServiceRequest.identifier.type.coding",
+        "sliceName": "vn-type",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "PLAC",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+          "display": "Placer Identifier"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:vn-type.system",
+        "path": "ServiceRequest.identifier.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:vn-type.code",
+        "path": "ServiceRequest.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:vn-type.display",
+        "path": "ServiceRequest.identifier.type.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.system",
+        "path": "ServiceRequest.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftraggeber-ID.value",
+        "path": "ServiceRequest.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID",
+        "path": "ServiceRequest.identifier",
+        "sliceName": "Auftragnehmer-ID",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type",
+        "path": "ServiceRequest.identifier.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding",
+        "path": "ServiceRequest.identifier.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:vn-type",
+        "path": "ServiceRequest.identifier.type.coding",
+        "sliceName": "vn-type",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "FILL",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+          "display": "Filler"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:vn-type.system",
+        "path": "ServiceRequest.identifier.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:vn-type.code",
+        "path": "ServiceRequest.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:vn-type.display",
+        "path": "ServiceRequest.identifier.type.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.system",
+        "path": "ServiceRequest.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Auftragnehmer-ID.value",
+        "path": "ServiceRequest.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requisition",
+        "path": "ServiceRequest.requisition",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requisition.type",
+        "path": "ServiceRequest.requisition.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requisition.system",
+        "path": "ServiceRequest.requisition.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requisition.value",
+        "path": "ServiceRequest.requisition.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.encounter",
+        "path": "ServiceRequest.encounter",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.performer",
+        "path": "ServiceRequest.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.specimen",
+        "path": "ServiceRequest.specimen",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}
