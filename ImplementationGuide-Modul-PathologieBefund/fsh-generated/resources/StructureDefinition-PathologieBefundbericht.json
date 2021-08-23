@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/core//StructureDefinition/PathologieBefundbericht",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/PathologieBefundbericht",
   "version": "0.1.0",
   "name": "PathologieBefundbericht",
   "title": "Pathologie Befundbericht",
   "status": "draft",
-  "description": "tbd",
+  "description": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -65,8 +65,24 @@
       {
         "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
         "min": 1,
         "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:Set-ID",
+        "path": "DiagnosticReport.identifier",
+        "sliceName": "Set-ID",
+        "min": 1,
+        "max": "1"
       },
       {
         "id": "DiagnosticReport.basedOn",
@@ -90,16 +106,16 @@
       {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
         "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.code.coding",
-        "path": "DiagnosticReport.code.coding",
-        "patternCoding": {
-          "code": "60568-3",
-          "system": "http://loinc.org/",
-          "display": "Pathology Synoptic report"
-        }
       },
       {
         "id": "DiagnosticReport.code.coding.system",
@@ -115,6 +131,22 @@
         "id": "DiagnosticReport.code.coding.display",
         "path": "DiagnosticReport.code.coding.display",
         "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code:pathology-report",
+        "path": "DiagnosticReport.code",
+        "sliceName": "pathology-report",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "60568-3",
+              "system": "http://loinc.org/",
+              "display": "Pathology Synoptic report"
+            }
+          ]
+        }
       },
       {
         "id": "DiagnosticReport.subject",
@@ -171,6 +203,16 @@
       {
         "id": "DiagnosticReport.media",
         "path": "DiagnosticReport.media",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.media.comment",
+        "path": "DiagnosticReport.media.comment",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.media.link",
+        "path": "DiagnosticReport.media.link",
         "mustSupport": true
       },
       {

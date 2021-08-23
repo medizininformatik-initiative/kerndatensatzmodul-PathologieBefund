@@ -10,7 +10,7 @@ Profile: PathologieBefundbericht
 Parent: DiagnosticReport
 Id: PathologieBefundbericht
 Title: "Pathologie Befundbericht"
-Description: "tbd"
+Description: "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative"
 
 // set to draft
 * ^status = #draft
@@ -19,6 +19,11 @@ Description: "tbd"
 * id MS
 // Identifikator
 * identifier 1.. MS
+// Identifier Slice in Set-ID und Versionsnummer
+* identifier ^slicing.discriminator[0].type = #pattern
+* identifier ^slicing.discriminator[0].path = "$this"
+* identifier ^slicing.rules = #open
+* identifier contains Set-ID 1..1
 // Versionsnummer
 * meta MS
 * meta.versionId MS
@@ -32,7 +37,13 @@ Description: "tbd"
 * code.coding.system MS
 * code.coding.code MS
 * code.coding.display MS
-* code.coding = LOINC#60568-3 "Pathology Synoptic report"
+// define slice for pathology report code
+* code ^slicing.discriminator[0].type = #pattern
+* code ^slicing.discriminator[0].path = "$this"
+* code ^slicing.rules = #open
+* code contains pathology-report 1..1
+* code[pathology-report] = LOINC#60568-3 "Pathology Synoptic report"
+
 //LOINC#60568-3 "Pathology Synoptic report"
 // Referenz zu Patient*in
 * subject 1.. MS
@@ -46,7 +57,7 @@ Description: "tbd"
 // Autor 
 // TODO: kann der Autor auch eine Organisation sein oder handelt es sich hierbei immer um einen Practitioner? 
 * performer 1.. MS
-// Referenz zu Probe oder Praeparat
+// Referenz zur Probe
 * specimen 1.. MS
 // Beobachtungsabschnitte bzw. Beobachtungen
 * result 1.. MS
@@ -54,6 +65,8 @@ Description: "tbd"
 * imagingStudy MS
 // Referenz zu angehaengten Bildern
 * media MS
+* media.comment MS
+* media.link MS
 // zugehoeriges Dokument
 * presentedForm MS
 

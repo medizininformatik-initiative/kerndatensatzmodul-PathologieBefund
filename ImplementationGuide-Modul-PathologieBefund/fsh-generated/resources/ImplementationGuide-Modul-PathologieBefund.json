@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "Modul-PathologieBefund",
-  "url": "https://www.medizininformatik-initiative.de/fhir/core//ImplementationGuide/Modul-PathologieBefund",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/ImplementationGuide/Modul-PathologieBefund",
   "version": "0.1.0",
   "name": "ImplementationGuideModulPathologieBefund",
   "status": "draft",
@@ -16,15 +16,7 @@
           "reference": "StructureDefinition/PathologieBefundbericht"
         },
         "name": "Pathologie Befundbericht",
-        "description": "tbd",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/PraeparatProbe"
-        },
-        "name": "Praeparat Probe",
-        "description": "tbd",
+        "description": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative",
         "exampleBoolean": false
       }
     ],
