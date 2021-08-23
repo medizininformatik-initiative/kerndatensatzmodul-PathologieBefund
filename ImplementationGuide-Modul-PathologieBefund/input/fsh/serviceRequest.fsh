@@ -51,6 +51,9 @@ Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, e
 
 // Auftragsgruppen-ID
 * requisition MS
+* requisition.system 1.. MS
+* requisition.value 1.. MS
+* requisition.type 1.. MS
 
 // Status
 * status MS
