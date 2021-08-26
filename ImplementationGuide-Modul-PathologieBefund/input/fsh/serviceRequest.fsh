@@ -63,8 +63,6 @@ Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, e
 // Intent
 * intent MS
 
-// Klinische Angaben
-
 // Patient
 * subject MS
 * subject only Reference(Patient)
@@ -85,3 +83,20 @@ Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, e
 
 // TODO: Referenz zu Probe(n)
 * specimen 1.. MS
+
+// Klinische Angaben (muss noch ueberprueft werden)
+// Fragestellung & Ueberweisungsgrund
+* reasonCode MS
+* reasonCode ^slicing.discriminator[0].type = #pattern
+* reasonCode ^slicing.discriminator[0].path = "$this"
+* reasonCode ^slicing.rules = #open
+* reasonCode contains Fragestellung 0.. MS 
+                    and Ueberweisungsgrund 0..1 MS
+
+// Diagnose kodiert
+* reasonReference MS
+* reasonReference only Reference(Condition)
+
+// Anamnese - Annahme: besteht zum groessten Teil aus Observations
+* supportingInfo MS
+* supportingInfo only Reference(Observation)
