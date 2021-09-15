@@ -45,8 +45,8 @@
       {
         "id": "LogicalModelPathologieBefundbericht.Status",
         "path": "LogicalModelPathologieBefundbericht.Status",
-        "short": "Status des Pathologiebefundberichts. * vorläufig * final",
-        "definition": "Status des Pathologiebefundberichts. * vorläufig * final",
+        "short": "Status des Pathologiebefundberichts.",
+        "definition": "Status des Pathologiebefundberichts.",
         "min": 1,
         "max": "1",
         "type": [
@@ -141,8 +141,8 @@
       {
         "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.klinischeInformation.DiagnoseKodiert",
         "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.klinischeInformation.DiagnoseKodiert",
-        "short": "tbd",
-        "definition": "tbd",
+        "short": "Diagnose nach gültiger ICD-10-GM ",
+        "definition": "Diagnose nach gültiger ICD-10-GM ",
         "min": 0,
         "max": "*",
         "type": [
@@ -159,7 +159,7 @@
         "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.AuftragsID",
         "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.AuftragsID",
         "short": "AuftragsID",
-        "definition": "tbd",
+        "definition": "ID des Untersuchungsauftrags.",
         "min": 1,
         "max": "*",
         "type": [
@@ -275,8 +275,8 @@
         "isSummary": true
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben",
-        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben",
+        "id": "LogicalModelPathologieBefundbericht.Proben",
+        "path": "LogicalModelPathologieBefundbericht.Proben",
         "short": "Probe",
         "definition": "Von einem Patienten gewonnenes Physisches Objekt oder Sammlung physischer Objekte, die als Einheit betrachtet werden, in der Pathologieeinrichtung eindeutig identifiziert sind und als Gegenstand einer oder mehrerer Prozeduren im Workflow gelten. Ein Einsendungspräparat (syn. Material, nur für Abrechnungszwecke verwendet, syn. Probe) resultiert aus einer Probengewinnungsprozedur und kann in mehreren Containern enthalten sein. Im Pathologielabor werden die Einsendungspräparate (Case), die aus mehreren Teilen (Parts) bestehen können, beginnend mit dem Zuschnitt, meist als  Proben bezeichnet. Proben können einen oder mehrere Bearbeitungsschritte üblicherweise zu Blöcken und gefärbten Schnitten haben.",
         "min": 1,
@@ -288,8 +288,8 @@
         ]
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.ProbenID",
-        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.ProbenID",
+        "id": "LogicalModelPathologieBefundbericht.Proben.ProbenID",
+        "path": "LogicalModelPathologieBefundbericht.Proben.ProbenID",
         "short": "Eindeutiger Identifikator für die Probe (Einsendungspräparat). Formal oft identisch mit der Falleingangsnummer (Accession identifier).",
         "definition": "Eindeutiger Identifikator für die Probe (Einsendungspräparat). Formal oft identisch mit der Falleingangsnummer (Accession identifier).",
         "min": 0,
@@ -302,8 +302,8 @@
         "isSummary": true
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Status",
-        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Status",
+        "id": "LogicalModelPathologieBefundbericht.Proben.Status",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Status",
         "short": "Status der Probe hinsichtlich der Verfügbarkeit",
         "definition": "Status der Probe hinsichtlich der Verfügbarkeit",
         "min": 0,
@@ -316,8 +316,8 @@
         "isSummary": true
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Probenart",
-        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Probenart",
+        "id": "LogicalModelPathologieBefundbericht.Proben.Probenart",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Probenart",
         "short": "Art der Probe",
         "definition": "Art der Probe",
         "min": 1,
@@ -330,8 +330,8 @@
         "isSummary": true
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Laboreingangszeitpunkt",
-        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Laboreingangszeitpunkt",
+        "id": "LogicalModelPathologieBefundbericht.Proben.Laboreingangszeitpunkt",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Laboreingangszeitpunkt",
         "short": "Zeitpunkt des Eingangs der Probe im Labor",
         "definition": "Zeitpunkt des Eingangs der Probe im Labor",
         "min": 0,
@@ -344,12 +344,12 @@
         "isSummary": true
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Entnahme",
-        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Entnahme",
+        "id": "LogicalModelPathologieBefundbericht.Proben.Entnahme",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Entnahme",
         "short": "Entnahme",
         "definition": "Prozedur zur Probengewinnung an Patient:in",
-        "min": 0,
-        "max": "*",
+        "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "BackboneElement"
@@ -357,8 +357,8 @@
         ]
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Entnahme.Entnahmemethode",
-        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Entnahme.Entnahmemethode",
+        "id": "LogicalModelPathologieBefundbericht.Proben.Entnahme.Entnahmemethode",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Entnahme.Entnahmemethode",
         "short": "Klinische Methode (Prozedur) der Probengewinnung (an Patient:in)",
         "definition": "Klinische Methode (Prozedur) der Probengewinnung (an Patient:in)",
         "min": 0,
@@ -371,8 +371,8 @@
         "isSummary": true
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Entnahme.Herkunft",
-        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Entnahme.Herkunft",
+        "id": "LogicalModelPathologieBefundbericht.Proben.Entnahme.Herkunft",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Entnahme.Herkunft",
         "short": "Lokalisation der Körperstelle, von der die Probe stammt.",
         "definition": "Lokalisation der Körperstelle, von der die Probe stammt.",
         "min": 0,
@@ -385,8 +385,8 @@
         "isSummary": true
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Entnahme.EntnahmeZeitpunkt",
-        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Entnahme.EntnahmeZeitpunkt",
+        "id": "LogicalModelPathologieBefundbericht.Proben.Entnahme.EntnahmeZeitpunkt",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Entnahme.EntnahmeZeitpunkt",
         "short": "Zeitpunkt der Ent- / Abnahme der Probe",
         "definition": "Zeitpunkt der Ent- / Abnahme der Probe",
         "min": 0,
@@ -399,8 +399,8 @@
         "isSummary": true
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Entnahme.Eigenschaften",
-        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Proben.Entnahme.Eigenschaften",
+        "id": "LogicalModelPathologieBefundbericht.Proben.Entnahme.Eigenschaften",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Entnahme.Eigenschaften",
         "short": "Beobachtungen zu Eigenschaften des Einsendungspräparats / der Probe, z.B. Abmessungen, Randbeziehungen, Markierungen etc., die vom Einsender mitgeteilt werden.",
         "definition": "Beobachtungen zu Eigenschaften des Einsendungspräparats / der Probe, z.B. Abmessungen, Randbeziehungen, Markierungen etc., die vom Einsender mitgeteilt werden.",
         "min": 0,
@@ -408,6 +408,441 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Proben.Bearbeitung",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Bearbeitung",
+        "short": "Bearbeitung",
+        "definition": "Prozedur der Probenbearbeitung im Labor",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Proben.Bearbeitung.Bearbeitungsprozedur",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Bearbeitung.Bearbeitungsprozedur",
+        "short": "Kodierte Prozedur der Probenbearbeitung in der Pathologie",
+        "definition": "Kodierte Prozedur der Probenbearbeitung in der Pathologie",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Proben.Bearbeitung.Elternprobe",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Bearbeitung.Elternprobe",
+        "short": "Referenz auf den Gegenstand der Bearbeitungsprozedur / auf die Elternprobe",
+        "definition": "Referenz auf den Gegenstand der Bearbeitungsprozedur / auf die Elternprobe",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Proben.Bearbeitung.Additive",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Bearbeitung.Additive",
+        "short": "Additive bei der Probenbearbeitung (Fixationsmittel, Einbettungs- und Eindeckungsmedien, Färbungen)",
+        "definition": "Additive bei der Probenbearbeitung (Fixationsmittel, Einbettungs- und Eindeckungsmedien, Färbungen)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Substance"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Proben.Bearbeitung.Beschreibung",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Bearbeitung.Beschreibung",
+        "short": "Textuelle Beschreibung der Probenbearbeitung.",
+        "definition": "Textuelle Beschreibung der Probenbearbeitung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Proben.Container",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Container",
+        "short": "Container",
+        "definition": "Physikalisches Objekt, das Proben enthält oder trägt. Probenbehälter im weitesten Sinn: Einsendungsgefäß, Gewebskassette, Paraffinblock, Objektträger etc.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Proben.Container.ContainerID",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Container.ContainerID",
+        "short": "Identifikation des Containers, kann von Proben-ID verschieden sein",
+        "definition": "Identifikation des Containers, kann von Proben-ID verschieden sein",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Proben.Container.ContainerTyp",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Container.ContainerTyp",
+        "short": "Typ des Containers",
+        "definition": "Typ des Containers",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Proben.Container.Additive[x]",
+        "path": "LogicalModelPathologieBefundbericht.Proben.Container.Additive[x]",
+        "short": "Additive im Container: Fixative im Einsendungsgefäß, Paraffin im Block, Einbettungsmedium auf dem Objektträger",
+        "definition": "Additive im Container: Fixative im Einsendungsgefäß, Paraffin im Block, Einbettungsmedium auf dem Objektträger",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Substance"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt",
+        "short": "Beobachtungsberichtabschnitt",
+        "definition": "Bericht über eine Beobachtung (Abschnitt eines Befundberichts), die zu einem Befund führt. Dieser Berichtsabschnitt kann generische kodierte anatomisch-pathologische Beobachtungen (Befunde) enthalten. Im Berichtsabschnitt *Materialbearbeitung* kann die gesamte Probengewinnung und -bearbeitung detailliert kodiert werden. Im Berichtsabschnitt *Diagnostische Schlussfolgerung* muss mindestens eine kodierte Beobachtung enthalten sein.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung",
+        "short": "IntraoperativeBegutachtung",
+        "definition": "Die Intraoperative Begutachtungssektion (Schnellschnitt) enthält die intraoperative Diagnose für jedes übersandte Material, die Materialidentifikation und -beschreibung und Informationen über Proben, die für weitere Untersuchungen (z.B. Flowzytometrie, Molekularpathologie, Elektronenmikroskopie) abgeleitet wurden.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung.Text",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung.Text",
+        "short": "Text einer intraoperativen Beobachtung.",
+        "definition": "Text einer intraoperativen Beobachtung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung.Einzelbeobachtung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung.Einzelbeobachtung",
+        "short": "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomischen Beobachtung",
+        "definition": "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomischen Beobachtung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung.EingebettetesBild",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung.EingebettetesBild",
+        "short": "tbd",
+        "definition": "tbd",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Media"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung",
+        "short": "MakroskopischeBeurteilung",
+        "definition": "Die Makroskopische Beurteilungssektion enthält die Beschreibung der Proben, des Zuschnitts und der makroskopische Befunde, verlinkt zu Makrobildern und Skizzen von Zuschnittssituationen. Sie sollte auch Informationen über Gewebsgele enthalten, die für zusätzliche Studien bereitgestellt oder an Biobanken gesandt wurden.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.Text",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.Text",
+        "short": "Makroskopischer Begutachtungstext",
+        "definition": "Makroskopischer Begutachtungstext",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.Einzelbeobachtung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.Einzelbeobachtung",
+        "short": "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung",
+        "definition": "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild",
+        "short": "EingebettetesBild",
+        "definition": "tbd",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.BildID",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.BildID",
+        "short": "tbd",
+        "definition": "tbd",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.MakroBild",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.MakroBild",
+        "short": "tbd",
+        "definition": "tbd",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.Skizze",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.Skizze",
+        "short": "tbd",
+        "definition": "tbd",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung",
+        "short": "MikrokopischeBeurteilung",
+        "definition": "tbd",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.Text",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.Text",
+        "short": "tbd",
+        "definition": "tbd",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.Einzelbeobachtung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.Einzelbeobachtung",
+        "short": "tbd",
+        "definition": "tbd",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild",
+        "short": "EingebettetesBild",
+        "definition": "tbd",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.BildID",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.BildID",
+        "short": "tbd",
+        "definition": "tbd",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.MikroBild",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.MikroBild",
+        "short": "tbd",
+        "definition": "tbd",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.ROI",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.ROI",
+        "short": "Region-of-interest",
+        "definition": "Region-of-interest",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustätzlicheBeobachtung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustätzlicheBeobachtung",
+        "short": "ZusätzlicheBeobachtung",
+        "definition": "tbd",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustätzlicheBeobachtung.Text",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustätzlicheBeobachtung.Text",
+        "short": "tbd",
+        "definition": "tbd",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
           }
         ],
         "isSummary": true
