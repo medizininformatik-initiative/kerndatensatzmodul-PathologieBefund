@@ -26,6 +26,14 @@
         "name": "Untersuchungsauftrag",
         "description": "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, ein Auftrag zur Konsiliarischen Begutachtung und überlässt der auftragenehmenden Pathologieeinrichtung die Auswahl und den Umfang der einzusetzenden Methoden (Arbeitsaufträge und Arbeitsauftragsschritte). Aus diesem Grunde werden Pathologieeinrichtungen als Inspektionsstellen akkreditiert.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LogicalModelPathologieBefundbericht"
+        },
+        "name": "LogicalModel Pathologie Befundbericht",
+        "description": "tbd",
+        "exampleBoolean": false
       }
     ],
     "page": {
