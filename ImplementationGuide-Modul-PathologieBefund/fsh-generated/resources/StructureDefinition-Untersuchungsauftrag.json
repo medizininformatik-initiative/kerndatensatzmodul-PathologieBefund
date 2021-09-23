@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "Untersuchungsauftrag",
+  "id": "untersuchungsauftrag",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Untersuchungsauftrag",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/untersuchungsauftrag",
   "version": "0.1.0",
   "name": "Untersuchungsauftrag",
   "title": "Untersuchungsauftrag",
@@ -52,6 +52,12 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "ServiceRequest.id",
+        "path": "ServiceRequest.id",
+        "min": 1,
+        "mustSupport": true
+      },
       {
         "id": "ServiceRequest.meta.source",
         "path": "ServiceRequest.meta.source",
@@ -294,6 +300,27 @@
         "mustSupport": true
       },
       {
+        "id": "ServiceRequest.code.coding.display",
+        "path": "ServiceRequest.code.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code:pathology-order",
+        "path": "ServiceRequest.code",
+        "sliceName": "pathology-order",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "721966001",
+              "system": "http://snomed.info/sct",
+              "display": "Pathology order (record artifact)"
+            }
+          ]
+        }
+      },
+      {
         "id": "ServiceRequest.subject",
         "path": "ServiceRequest.subject",
         "type": [
@@ -315,6 +342,18 @@
       {
         "id": "ServiceRequest.requester",
         "path": "ServiceRequest.requester",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "Practitioner"
+            },
+            {
+              "path": "Organization"
+            }
+          ],
+          "rules": "open"
+        },
         "min": 1,
         "type": [
           {
@@ -328,6 +367,20 @@
         "mustSupport": true
       },
       {
+        "id": "ServiceRequest.requester:Practitioner",
+        "path": "ServiceRequest.requester",
+        "sliceName": "Practitioner",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ServiceRequest.requester:Organization",
+        "path": "ServiceRequest.requester",
+        "sliceName": "Organization",
+        "min": 0,
+        "max": "1"
+      },
+      {
         "id": "ServiceRequest.performer",
         "path": "ServiceRequest.performer",
         "type": [
@@ -339,6 +392,19 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonReference",
+        "path": "ServiceRequest.reasonReference",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+            ]
+          }
+        ]
       },
       {
         "id": "ServiceRequest.specimen",
