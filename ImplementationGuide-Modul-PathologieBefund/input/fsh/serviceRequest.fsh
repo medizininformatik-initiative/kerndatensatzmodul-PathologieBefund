@@ -1,19 +1,17 @@
 // FSH Definition fuer den pathologischen Untersuchungsauftrag
 
-// Aliases
-Alias: sct = http://snomed.info/sct
+Alias:   SCT = http://snomed.info/sct
+Alias:   LNC = http://loinc.org
 Alias: v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203 
 
-// Profile definition
 Profile: Untersuchungsauftrag
 Parent: ServiceRequest
-Id: Untersuchungsauftrag
+Id: untersuchungsauftrag
 Title: "Untersuchungsauftrag"
-Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, ein Auftrag zur Konsiliarischen Begutachtung und überlässt der auftragenehmenden Pathologieeinrichtung die Auswahl und den Umfang der einzusetzenden Methoden (Arbeitsaufträge und Arbeitsauftragsschritte). Aus diesem Grunde werden Pathologieeinrichtungen als Inspektionsstellen akkreditiert."
-
+Description: "?"
 * ^status = #draft
 
-// Meta
+* id 1..1 MS
 * meta.profile MS
 * meta.source MS
 
@@ -23,7 +21,6 @@ Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, e
 * identifier ^slicing.discriminator[0].path = "$this"
 * identifier ^slicing.rules = #open
 
-// cardinalities could still change
 * identifier contains Auftraggeber-ID 0..1 MS
                     and Auftragnehmer-ID 0..1 MS
 
@@ -51,35 +48,68 @@ Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, e
 * identifier[Auftragnehmer-ID].type.coding[filler-type].code 1..1 MS
 * identifier[Auftragnehmer-ID].type.coding[filler-type].display MS
 
+
 // Auftragsgruppen-ID
 * requisition MS
 * requisition.system 1.. MS
 * requisition.value 1.. MS
 * requisition.type 1.. MS
 
-// Status
-* status MS
+//Status
+* status 1..1 MS
 
-// Intent
-* intent MS
+// Referenz zur Probe
+* specimen 1..* MS
 
-// Patient
+// Referenz zum Patienten
 * subject MS
 * subject only Reference(Patient)
 
-// Einsender
-* requester 1.. MS 
-* requester only Reference(Practitioner or Organization)
+// Referenz zum Pathologiebefundbericht
+* reasonReference 0..1 
+* reasonReference only Reference(DiagnosticReport)
 
-// Probenentnehmer
-* performer MS 
-* performer only Reference(Practitioner)
+// Referenz zu Klinischen Angaben?
+* supportingInfo 0..*
+// Resource muss noch nachgetragen werden
+//* supportingInfo only Reference()
+
+// Referenz für Einsender
+* requester 1..1 MS
+* requester only Reference(Practitioner or Organization)
+* requester ^slicing.discriminator.type = #type
+* requester ^slicing.discriminator[0].path = "Practitioner"
+* requester ^slicing.discriminator[1].path = "Organization"
+* requester ^slicing.rules = #open
+* requester contains 
+    Practitioner 0..1 and
+    Organization 0..1
+
+//* requester[Practitioner] contains ?
+//* requester[Organization] contains ?
 
 // Referenz zum Versorgungsstellenkontakt
 * encounter 1.. MS
 
-// TODO: Beauftragte Untersuchung in codierter Form 
+//Referenz für Probenentnehmer
+* performer 0..* MS
+* performer only Reference(Practitioner)
+
 * code MS
+* code.coding.system and
+    code.coding.code and
+    code.coding.display MS
+
+* code ^slicing.discriminator[0].type = #pattern
+* code ^slicing.discriminator[0].path = "$this"
+* code ^slicing.rules = #open
+* code contains pathology-order 1..1
+* code[pathology-order] = SCT#721966001 "Pathology order (record artifact)"
+
+
+/*
+Klinische Angaben - Welche Resource? Von anderem Modul? muss noch geklärt werden 
+Was muss zum Einsender(Practitioner&Organization) alles hinzugefügt werden? Erstmal warten
 
 // TODO: Referenz zu Probe(n)
 * specimen 1.. MS
@@ -100,3 +130,5 @@ Description: "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, e
 // Anamnese - Annahme: besteht zum groessten Teil aus Observations
 * supportingInfo MS
 * supportingInfo only Reference(Observation)
+*/
+
