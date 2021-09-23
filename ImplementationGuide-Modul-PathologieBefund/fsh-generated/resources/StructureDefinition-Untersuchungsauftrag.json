@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "Untersuchungsauftrag",
+  "id": "untersuchungsauftrag",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Untersuchungsauftrag",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/untersuchungsauftrag",
   "version": "0.1.0",
   "name": "Untersuchungsauftrag",
   "title": "Untersuchungsauftrag",
   "status": "draft",
-  "description": "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, ein Auftrag zur Konsiliarischen Begutachtung und überlässt der auftragenehmenden Pathologieeinrichtung die Auswahl und den Umfang der einzusetzenden Methoden (Arbeitsaufträge und Arbeitsauftragsschritte). Aus diesem Grunde werden Pathologieeinrichtungen als Inspektionsstellen akkreditiert.",
+  "description": "?",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -52,6 +52,12 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "ServiceRequest.id",
+        "path": "ServiceRequest.id",
+        "min": 1,
+        "mustSupport": true
+      },
       {
         "id": "ServiceRequest.meta.source",
         "path": "ServiceRequest.meta.source",
@@ -246,14 +252,50 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.intent",
-        "path": "ServiceRequest.intent",
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.code",
-        "path": "ServiceRequest.code",
+        "id": "ServiceRequest.code.coding.system",
+        "path": "ServiceRequest.code.coding.system",
         "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code.coding.code",
+        "path": "ServiceRequest.code.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code.coding.display",
+        "path": "ServiceRequest.code.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code:pathology-order",
+        "path": "ServiceRequest.code",
+        "sliceName": "pathology-order",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "721966001",
+              "system": "http://snomed.info/sct",
+              "display": "Pathology order (record artifact)"
+            }
+          ]
+        }
       },
       {
         "id": "ServiceRequest.subject",
@@ -277,6 +319,18 @@
       {
         "id": "ServiceRequest.requester",
         "path": "ServiceRequest.requester",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "Practitioner"
+            },
+            {
+              "path": "Organization"
+            }
+          ],
+          "rules": "open"
+        },
         "min": 1,
         "type": [
           {
@@ -290,6 +344,20 @@
         "mustSupport": true
       },
       {
+        "id": "ServiceRequest.requester:Practitioner",
+        "path": "ServiceRequest.requester",
+        "sliceName": "Practitioner",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ServiceRequest.requester:Organization",
+        "path": "ServiceRequest.requester",
+        "sliceName": "Organization",
+        "min": 0,
+        "max": "1"
+      },
+      {
         "id": "ServiceRequest.performer",
         "path": "ServiceRequest.performer",
         "type": [
@@ -301,6 +369,19 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonReference",
+        "path": "ServiceRequest.reasonReference",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+            ]
+          }
+        ]
       },
       {
         "id": "ServiceRequest.specimen",
