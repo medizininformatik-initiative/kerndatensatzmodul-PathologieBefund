@@ -13,6 +13,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "StructureDefinition/generische-beobachtung"
+        },
+        "name": "Generische Beobachtung",
+        "description": "?",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/PathologieBefundbericht"
         },
         "name": "Pathologie Befundbericht",
@@ -24,7 +32,7 @@
           "reference": "StructureDefinition/Untersuchungsauftrag"
         },
         "name": "Untersuchungsauftrag",
-        "description": "Der Untersuchungsauftrag ist, im Gegensatz zum Klinischen Labor, ein Auftrag zur Konsiliarischen Begutachtung und überlässt der auftragenehmenden Pathologieeinrichtung die Auswahl und den Umfang der einzusetzenden Methoden (Arbeitsaufträge und Arbeitsauftragsschritte). Aus diesem Grunde werden Pathologieeinrichtungen als Inspektionsstellen akkreditiert.",
+        "description": "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.",
         "exampleBoolean": false
       },
       {

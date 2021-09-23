@@ -6,12 +6,12 @@ Alias: v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 
 Profile: Untersuchungsauftrag
 Parent: ServiceRequest
-Id: untersuchungsauftrag
+Id: Untersuchungsauftrag
 Title: "Untersuchungsauftrag"
-Description: "?"
+Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben."
 * ^status = #draft
 
-* id 1..1 MS
+// Meta
 * meta.profile MS
 * meta.source MS
 
@@ -56,56 +56,30 @@ Description: "?"
 * requisition.type 1.. MS
 
 //Status
-* status 1..1 MS
+* status MS
 
 // Referenz zur Probe
-* specimen 1..* MS
+* specimen 1.. MS
 
 // Referenz zum Patienten
 * subject MS
 * subject only Reference(Patient)
 
-// Referenz zum Pathologiebefundbericht
-* reasonReference 0..1 
-* reasonReference only Reference(DiagnosticReport)
+// Referenz für Einsender
+* requester 1.. MS
+* requester only Reference(Practitioner or Organization)
+
+// Referenz zum Versorgungsstellenkontakt - ob die Referenz zum Versorgungsstellenkontakt gehen wird ist noch zu klaeren 
+* encounter 1.. MS
+
+//Referenz für Probenentnehmer
+* performer MS
+* performer only Reference(Practitioner)
 
 // Referenz zu Klinischen Angaben?
 * supportingInfo 0..*
 // Resource muss noch nachgetragen werden
 //* supportingInfo only Reference()
-
-// Referenz für Einsender
-* requester 1..1 MS
-* requester only Reference(Practitioner or Organization)
-* requester ^slicing.discriminator.type = #type
-* requester ^slicing.discriminator[0].path = "Practitioner"
-* requester ^slicing.discriminator[1].path = "Organization"
-* requester ^slicing.rules = #open
-* requester contains 
-    Practitioner 0..1 and
-    Organization 0..1
-
-//* requester[Practitioner] contains ?
-//* requester[Organization] contains ?
-
-// Referenz zum Versorgungsstellenkontakt
-* encounter 1.. MS
-
-//Referenz für Probenentnehmer
-* performer 0..* MS
-* performer only Reference(Practitioner)
-
-* code MS
-* code.coding.system and
-    code.coding.code and
-    code.coding.display MS
-
-* code ^slicing.discriminator[0].type = #pattern
-* code ^slicing.discriminator[0].path = "$this"
-* code ^slicing.rules = #open
-* code contains pathology-order 1..1
-* code[pathology-order] = SCT#721966001 "Pathology order (record artifact)"
-
 
 /*
 Klinische Angaben - Welche Resource? Von anderem Modul? muss noch geklärt werden 
@@ -132,3 +106,18 @@ Was muss zum Einsender(Practitioner&Organization) alles hinzugefügt werden? Ers
 * supportingInfo only Reference(Observation)
 */
 
+// Zusaetzliche Elemente
+
+// category for searching purposes 
+// 721966001 | Pathology order (record artifact) |
+* category 1..1 MS 
+
+* category ^slicing.discriminator[0].type = #pattern
+* category ^slicing.discriminator[0].path = "$this"
+* category ^slicing.rules = #open
+
+* category contains pathology 1..1 MS
+* category[pathology].coding.system MS
+* category[pathology].coding.code MS
+* category[pathology].coding.display MS
+* category[pathology] = SCT#721966001 "Pathology order (record artifact)"
