@@ -16,7 +16,7 @@
   "name": "Untersuchungsauftrag",
   "title": "Untersuchungsauftrag",
   "status": "draft",
-  "description": "?",
+  "description": "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -252,8 +252,8 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.code",
-        "path": "ServiceRequest.code",
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
         "slicing": {
           "discriminator": [
             {
@@ -264,16 +264,39 @@
           "rules": "open"
         },
         "min": 1,
+        "max": "1",
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.code.coding.system",
-        "path": "ServiceRequest.code.coding.system",
+        "id": "ServiceRequest.category:pathology",
+        "path": "ServiceRequest.category",
+        "sliceName": "pathology",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "721966001",
+              "system": "http://snomed.info/sct",
+              "display": "Pathology order (record artifact)"
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.code.coding.code",
-        "path": "ServiceRequest.code.coding.code",
+        "id": "ServiceRequest.category:pathology.coding.system",
+        "path": "ServiceRequest.category.coding.system",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.category:pathology.coding.code",
+        "path": "ServiceRequest.category.coding.code",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.category:pathology.coding.display",
+        "path": "ServiceRequest.category.coding.display",
         "mustSupport": true
       },
       {

@@ -32,7 +32,7 @@
           "reference": "StructureDefinition/untersuchungsauftrag"
         },
         "name": "Untersuchungsauftrag",
-        "description": "?",
+        "description": "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.",
         "exampleBoolean": false
       },
       {
