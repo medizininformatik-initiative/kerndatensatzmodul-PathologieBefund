@@ -1,6 +1,3 @@
-Alias:   SCT = http://snomed.info/sct
-Alias:   LNC = http://loinc.org
-
 Profile: GenerischeBeobachtung
 Parent: Observation
 Id: generische-beobachtung
@@ -22,7 +19,7 @@ Description: "Ressource zur Darstellung der Beobachtungen"
 * category.coding ^slicing.discriminator[0].path = "$this"
 * category.coding ^slicing.rules = #open
 * category.coding contains pathology-observation 1..1
-* category.coding[pathology-observation] = LNC#24419-4 "Pathology report gross observation"
+* category.coding[pathology-observation] = $LOINC#24419-4 "Pathology report gross observation"
 
 // Kodierte Beobachtung
 * code 1.. MS
