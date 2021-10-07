@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "Probenart",
+  "id": "Probenart",
+  "title": "Probenart",
+  "description": "Art der Probe",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Probenart",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "123038009"
+          }
+        ]
+      }
+    ]
+  }
+}

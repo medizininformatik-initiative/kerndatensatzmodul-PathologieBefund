@@ -1,9 +1,4 @@
 // FSH Definition fuer den pathologischen Untersuchungsauftrag
-
-Alias:   SCT = http://snomed.info/sct
-Alias:   LNC = http://loinc.org
-Alias: v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203 
-
 Profile: Untersuchungsauftrag
 Parent: ServiceRequest
 Id: Untersuchungsauftrag
@@ -31,7 +26,7 @@ Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.
 * identifier[Auftraggeber-ID].type.coding ^slicing.discriminator[0].path = "$this"
 * identifier[Auftraggeber-ID].type.coding ^slicing.rules = #open
 * identifier[Auftraggeber-ID].type.coding contains placer-type 1..1 MS
-* identifier[Auftraggeber-ID].type.coding[placer-type] = v2-0203#PLAC "Placer Identifier"
+* identifier[Auftraggeber-ID].type.coding[placer-type] = $v2-0203#PLAC "Placer Identifier"
 * identifier[Auftraggeber-ID].type.coding[placer-type].system 1..1 MS
 * identifier[Auftraggeber-ID].type.coding[placer-type].code 1..1 MS
 * identifier[Auftraggeber-ID].type.coding[placer-type].display MS
@@ -43,7 +38,7 @@ Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.
 * identifier[Auftragnehmer-ID].type.coding ^slicing.discriminator[0].path = "$this"
 * identifier[Auftragnehmer-ID].type.coding ^slicing.rules = #open
 * identifier[Auftragnehmer-ID].type.coding contains filler-type 1..1 MS
-* identifier[Auftragnehmer-ID].type.coding[filler-type] = v2-0203#FILL "Filler"
+* identifier[Auftragnehmer-ID].type.coding[filler-type] = $v2-0203#FILL "Filler"
 * identifier[Auftragnehmer-ID].type.coding[filler-type].system 1..1 MS
 * identifier[Auftragnehmer-ID].type.coding[filler-type].code 1..1 MS
 * identifier[Auftragnehmer-ID].type.coding[filler-type].display MS
@@ -120,4 +115,4 @@ Was muss zum Einsender(Practitioner&Organization) alles hinzugefügt werden? Ers
 * category[pathology].coding.system MS
 * category[pathology].coding.code MS
 * category[pathology].coding.display MS
-* category[pathology] = SCT#721966001 "Pathology order (record artifact)"
+* category[pathology] = $SCT#721966001 "Pathology order (record artifact)"

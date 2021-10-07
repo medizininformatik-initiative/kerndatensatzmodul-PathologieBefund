@@ -1,11 +1,3 @@
-// This is a simple example of a FSH file.
-// This file can be renamed, and additional FSH files can be added.
-// SUSHI will look for definitions in any file using the .fsh ending.
-
-// Aliases
-Alias: LOINC = http://loinc.org/
-Alias: v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203 
-
 // Profile definition
 Profile: PathologieBefundbericht
 Parent: DiagnosticReport
@@ -33,7 +25,7 @@ Description: "Defines the general pathology report structure for German hospital
 * identifier[Set-ID].type.coding ^slicing.discriminator[0].path = "$this"
 * identifier[Set-ID].type.coding ^slicing.rules = #open
 * identifier[Set-ID].type.coding contains vn-type 1..1 MS
-* identifier[Set-ID].type.coding[vn-type] = v2-0203#VN "Visit Number"
+* identifier[Set-ID].type.coding[vn-type] = $v2-0203#VN "Visit Number"
 * identifier[Set-ID].type.coding[vn-type].system 1..1 MS
 * identifier[Set-ID].type.coding[vn-type].code 1..1 MS
 * identifier[Set-ID].type.coding[vn-type].display MS
@@ -61,7 +53,7 @@ Description: "Defines the general pathology report structure for German hospital
 * code[pathology-report].coding.system MS
 * code[pathology-report].coding.code MS
 * code[pathology-report].coding.display MS
-* code[pathology-report] = LOINC#60568-3 "Pathology Synoptic report" 
+* code[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report" 
 
 // Referenz zu Patient:in
 * subject 1.. MS
