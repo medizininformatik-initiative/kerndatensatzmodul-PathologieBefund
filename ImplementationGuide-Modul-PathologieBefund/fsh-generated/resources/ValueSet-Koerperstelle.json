@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "Koerperstelle",
+  "id": "Koerperstelle",
+  "title": "Koerperstelle",
+  "description": "Lokalisation der Körperstell von der die Probe stammt",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Koerperstelle",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "123037004"
+          }
+        ]
+      }
+    ]
+  }
+}

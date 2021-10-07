@@ -1,0 +1,116 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "Additive",
+  "id": "Additive",
+  "title": "Additive",
+  "description": "Additive bei der Probenbearbeitung (Fixationsmittel, Einbettungs- und Eindeckungsmedien, Färbungen)",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Additive",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "434746001",
+            "display": "Specimen vial (physical object)"
+          },
+          {
+            "code": "434464009",
+            "display": "Tissue cassette (physical object)"
+          },
+          {
+            "code": "434708008",
+            "display": "Tissue cassette for microarray (physical object)"
+          },
+          {
+            "code": "433466003",
+            "display": "Microscope slide (physical object)"
+          },
+          {
+            "code": "433453003",
+            "display": "Specimen container component (physical object)"
+          },
+          {
+            "code": "430863003",
+            "display": "Tissue embedding medium (substance)"
+          },
+          {
+            "code": "311731000",
+            "display": "Paraffin wax (substance)"
+          },
+          {
+            "code": "433469005",
+            "display": "Frozen section embedding medium (substance)"
+          },
+          {
+            "code": "61088005",
+            "display": "Plastic (substance)"
+          },
+          {
+            "code": "10249006",
+            "display": "Agar (substance)"
+          },
+          {
+            "code": "65345002",
+            "display": "Epoxy resin (substance)"
+          },
+          {
+            "code": "427811002",
+            "display": "Polymethyl methacrylate (substance)"
+          },
+          {
+            "code": "433472003",
+            "display": "Microscope slide coverslip (physical object)"
+          },
+          {
+            "code": "430862008",
+            "display": "Microscope slide mounting medium (substance)"
+          }
+        ]
+      },
+      {
+        "system": "http://dicom.nema.org/resources/ontology/DCM",
+        "concept": [
+          {
+            "code": "CID8101",
+            "display": "Container type"
+          },
+          {
+            "code": "A-01024",
+            "display": "Specimen vial"
+          },
+          {
+            "code": "A-0101B",
+            "display": "Microscope slide"
+          },
+          {
+            "code": "A-01023",
+            "display": "Specimen container"
+          },
+          {
+            "code": "A-01021",
+            "display": "Electron microscopy grid"
+          },
+          {
+            "code": "A-01025",
+            "display": "Specimen well"
+          },
+          {
+            "code": "CID8114",
+            "display": "Fixatives"
+          },
+          {
+            "code": "CID8102",
+            "display": "Container Component Types"
+          },
+          {
+            "code": "CID8115",
+            "display": "Specimen Embedding Media"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "Bearbeitungsprozedur",
+  "id": "Bearbeitungsprozedur",
+  "title": "Bearbeitungsprozedur",
+  "description": "Kodierte Prozedur der Probenbearbeitung in der Pathologie",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Bearbeitungsprozedur",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "9265001"
+          }
+        ]
+      }
+    ]
+  }
+}
