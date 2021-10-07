@@ -28,6 +28,6 @@ Definition der Inhalte:
 * 
 
 Technische Umsetzung: 
-* Anddrea Essenwanger (Technische Umsetzung FHIR Profile, Implementation Guide und Logical Models)
-* Alexander Bartschke (Modellierung in Art-Decor)
-* Thimo Andre Hölter (Technische Umsetzung FHIR Profile)
+* [Anddrea Essenwanger](https://github.com/ByteGnome) (Technische Umsetzung FHIR Profile, Implementation Guide und Logical Models)
+* [Alexander Bartschke](https://github.com/Kosmos3) (Modellierung in Art-Decor)
+* [Thimo Andre Hölter](https://github.com/ThimoHoelter) (Technische Umsetzung FHIR Profile)
