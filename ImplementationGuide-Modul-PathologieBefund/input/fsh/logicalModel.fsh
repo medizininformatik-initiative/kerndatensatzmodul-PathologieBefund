@@ -1,10 +1,9 @@
  // LogicalModel definition
 Logical: LogicalModelPathologieBefundbericht
 Title: "LogicalModel Pathologie Befundbericht"
-Description: "tbd"
+Description: "Logical Model zur grafischen Darstellung des Art-Decor Modells zum Pathologiebefundbericht"
 
-// set to draft
-* ^status = #draft
+* insert RuleSet1
 
 * Identifikation 1..* SU Identifier "Der Identifikator eines Pathologiebefundberichts (z.B. E/20/12345.1) ist eineindeutig und wird meist aus der Eingangsnummer (Fall-Nummer) abgeleitet. Er sollte zusammengesetzt werden aus der Set-ID (z.B. E/20/12345), unter der alle Versionen eines Befundberichts erfasst werden, und der Versionsnummer (z.B. 1). Es ist allerdings auch möglich, einen UID (Unique identifier) oder GUID (Global Unique Identifier) zu verwenden, der keine Ableitung aus der Fallnummer darstellt. Üblicherweise wird die Fall-Nummer als Set-ID verwendet."
 * Status 1..1 SU code "Status des Pathologiebefundberichts."
@@ -14,7 +13,7 @@ Description: "tbd"
     * Fragestellung 0..1 SU string "Fragestellung zum Fall"
     * Anamnese 0..* SU string "Anamnestische Angaben zum Fall"
     * Ueberweisungsgrund 0..* SU string "Überweisungsgrund"
-    * DiagnoseKodiert 0..* SU Reference(Condition) "Diagnose nach gültiger ICD-10-GM " // setze MII Diagnoseprofil
+    * DiagnoseKodiert 0..* SU Reference(Condition) "Diagnose nach gültiger ICD-10-GM " // setze MII Diagnoseprofil?
   * AuftragsID 1..* BackboneElement "AuftragsID" "ID des Untersuchungsauftrags."
     * AuftragsgruppenID 0..1 SU Identifier "ID einer Auftragsgruppe, bestehend aus mehreren Untersuchungsaufträgen"
     * AuftragsIDAuftraggeber 0..1 SU Identifier "Auftrags-ID vom Auftraggeber vergeben"
@@ -45,25 +44,40 @@ Description: "tbd"
 * Beobachtungsberichtabschnitt 1..* BackboneElement "Beobachtungsberichtabschnitt" "Bericht über eine Beobachtung (Abschnitt eines Befundberichts), die zu einem Befund führt. Dieser Berichtsabschnitt kann generische kodierte anatomisch-pathologische Beobachtungen (Befunde) enthalten. Im Berichtsabschnitt *Materialbearbeitung* kann die gesamte Probengewinnung und -bearbeitung detailliert kodiert werden. Im Berichtsabschnitt *Diagnostische Schlussfolgerung* muss mindestens eine kodierte Beobachtung enthalten sein."
   //* Probenbearbeitung 0..* BackboneElement "Probenbearbeitung" "Die Sektion enthält die Beschreibung der eingesandten Präparate und der Proben einschließlich der Prozeduren um ein Präparat zu gewinnen und eine Probe zu bearbeiten, sowie die eineindeutige Identifikation aller Proben im Bearbeitungs- und Beobachtungsprozess (Routineworkflow als auch zusätzliche Verfahren)."
     //* Materialbericht 1..1 
+  // TODO: Klaeren wie die Abschnitte Klinische Informationen und Proben/Technische Bearbeitung im Logical Model abgebildet werden
   * IntraoperativeBegutachtung 0..1 BackboneElement "IntraoperativeBegutachtung" "Die Intraoperative Begutachtungssektion (Schnellschnitt) enthält die intraoperative Diagnose für jedes übersandte Material, die Materialidentifikation und -beschreibung und Informationen über Proben, die für weitere Untersuchungen (z.B. Flowzytometrie, Molekularpathologie, Elektronenmikroskopie) abgeleitet wurden."
     * Text 0..1 SU string "Text einer intraoperativen Beobachtung."
     * Einzelbeobachtung 0..* SU Reference(Observation) "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomischen Beobachtung"
-    * EingebettetesBild 0..* SU Reference(Media) "tbd"
+    * EingebettetesBild 0..* SU Reference(Media) "Referenz zum eingebetteten Bild"
   * MakrokopischeBeurteilung 0..1 BackboneElement "MakroskopischeBeurteilung" "Die Makroskopische Beurteilungssektion enthält die Beschreibung der Proben, des Zuschnitts und der makroskopische Befunde, verlinkt zu Makrobildern und Skizzen von Zuschnittssituationen. Sie sollte auch Informationen über Gewebsgele enthalten, die für zusätzliche Studien bereitgestellt oder an Biobanken gesandt wurden."
     * Text 0..1 SU string "Makroskopischer Begutachtungstext"
     * Einzelbeobachtung 0..* SU Reference(Observation) "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung"
-    * EingebettetesBild 0..* BackboneElement "EingebettetesBild" "tbd"
-      * BildID 1..* SU id "tbd"
-      * MakroBild 1..* SU Attachment "tbd"
-      * Skizze 0..* SU Attachment "tbd"
-  * MikroskopischeBeurteilung 0..1 BackboneElement "MikrokopischeBeurteilung" "tbd"
-    * Text 0..1 SU string "tbd"
-    * Einzelbeobachtung 0..* SU Reference(Observation) "tbd"
-    * EingebettetesBild 0..* BackboneElement "EingebettetesBild" "tbd"
-      * BildID 1..* SU id "tbd"
-      * MikroBild 1..* SU Attachment "tbd"
+    * EingebettetesBild 0..* BackboneElement "EingebettetesBild" "In eine Beobachtung eingebettetes Bild"
+      * ID 1..* SU id "ID des eingebetteten Bildes"
+      * MakroBild 1..* SU Attachment "Makro-Bild der Zuschnittsituation"
+      * Skizze 0..* SU Attachment "Skizze einer (z.B. Zuschnitts)situation" "Während des Zuschnitts des Materials werden auch Skizzen zur Schnittführung, zur Aufteilung von Gewebsstücken und zur Markierung angefertigt, um die resultierenden Blöcke und Schnitte topografisch dem Gewebe, aus dem sie entnommen wurden, zuordnen zu können."
+  * MikroskopischeBeurteilung 0..1 BackboneElement "Die Mikroskopische Begutachtungssektion enthält optional die histopathologischen Befunde des Falles" "Die Mikroskopische Begutachtungssektion enthält optional die histopathologischen Befunde des Falles. Sie sollte genutzt werden, um die Ergebnisse histochemischer und immunhistochemischer Färbungen und von bildgestützten molekularpathologischen Befunden aufzuzeichnen."
+    * Text 0..1 SU string "Mikroskopischer Beurteilungstext"
+    * Einzelbeobachtung 0..* SU Reference(Observation) "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung" "Jede Beobachtung, die als Bestandteil einer pathologisch-anatomischen Untersuchung im Befundbericht erwähnt ist, kann zusätzlich zur textuellen Erwähnung auch semantisch annotiert, d.h. mit einem Code und einem Value in den Bericht maschinenlesbar aufgenommen werden. Die semantische Annotation kann durch beliebige Terminologiesysteme erfolgen, LOINC (für die Kodierung der Beobachtung) und SNOMED-CT (für die Kodierung des Beobachtungsergebnisses, falls es sich nicht um einen Messwert handelt), sind bevorzugt zu verwenden. Codierungsregeln für diese beiden Referenzterminologien sind unter \"Practical Guidance on Uses of SNOMED CT and LOINC\" (https://confluence.ihtsdotools.org/display/DOCLOINC/5.2+Practical+Guidance+on+Uses+of+SNOMED+CT+and+LOINC) hinterlegt."
+    * EingebettetesBild 0..* BackboneElement "EingebettetesBild" "In eine Beobachtung eingebettetes Bild"
+      * ID 1..* SU id "ID des eingebetteten Bildes"
+      * MikroBild 1..* SU Attachment "Okularaufnahme oder WSI oder Screenshot von WSI"
       * ROI 0..* SU Attachment "Region-of-interest"
-  * ZustätzlicheBeobachtung 0..1 BackboneElement "ZusätzlicheBeobachtung" "tbd"
-    * Text 0..1 SU string "tbd"
-//* Beobachtungsberichtabschnitt
+  * ZustaetzlicheBeobachtung 0..1 BackboneElement "Nicht-morphologische Beobachtung" "Ein für die jeweilige nicht-morphologische Beobachtung zutreffender LOINC-Code ist auszuwählen."
+    * Text 0..1 SU string "Text einer zusätzlichen spezifizierten Beobachtung"
+    * Einzelbeobachtung 0..* SU Reference(Observation) "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung" "Jede Beobachtung, die als Bestandteil einer pathologisch-anatomischen Untersuchung im Befundbericht erwähnt ist, kann zusätzlich zur textuellen Erwähnung auch semantisch annotiert, d.h. mit einem Code und einem Value in den Bericht maschinenlesbar aufgenommen werden. Die semantische Annotation kann durch beliebige Terminologiesysteme erfolgen, LOINC (für die Kodierung der Beobachtung) und SNOMED-CT (für die Kodierung des Beobachtungsergebnisses, falls es sich nicht um einen Messwert handelt), sind bevorzugt zu verwenden. Codierungsregeln für diese beiden Referenzterminologien sind unter \"Practical Guidance on Uses of SNOMED CT and LOINC\" (https://confluence.ihtsdotools.org/display/DOCLOINC/5.2+Practical+Guidance+on+Uses+of+SNOMED+CT+and+LOINC)
+ hinterlegt."
+    * EingebettetesBild 0..* BackboneElement "EingebettetesBild" "In eine Beobachtung eingebettetes Bild"
+      * ID 1..* SU id "ID des eingebetteten Bildes"
+  * DiagnostischeSchlussfolgerung 1..1 BackboneElement "Die Diagnostische Schlussfolgerungssektion enthält die Diagnose(n) an allen Materialien / Proben, die zu einem Fall eingesandt wurden" "Die Diagnostische Schlussfolgerungssektion enthält die Diagnose(n) an allen Materialien / Proben, die zu einem Fall eingesandt wurden. Diagnosen werden für jedes Material oder jede Gruppe von Materialien werden separat berichtet. Die Sektion schließt zusätzliche pathologische Befunde und Ergebnisse von unterstützenden Untersuchungen ein. Sie kann Diagramme, Bilder und virtuelle Schnitte enthalten. Für komplexe Beobachtungen, z.B. Tumorformeln, Score-Systeme, Gradings, etc.  sollte auf entsprechende Profile aus anderen MII-Modulen zurückgegriffen werden. Wenn Cancer Checklists zur Befundberichtserstellung benutzt wurden, sollte dies ebenfalls in dieser Sektion eingeschlossen sein."
+    * Text 0..1 SU string "Text der diagnostischen Schlussfolgerung"
+    * Einzelbeobachtung 0..* SU Reference(Observation) "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung" "Jede Beobachtung, die als Bestandteil einer pathologisch-anatomischen Untersuchung im Befundbericht erwähnt ist, kann zusätzlich zur textuellen Erwähnung auch semantisch annotiert, d.h. mit einem Code und einem Value in den Bericht maschinenlesbar aufgenommen werden. Die semantische Annotation kann durch beliebige Terminologiesysteme erfolgen, LOINC (für die Kodierung der Beobachtung) und SNOMED-CT (für die Kodierung des Beobachtungsergebnisses, falls es sich nicht um einen Messwert handelt), sind bevorzugt zu verwenden. Codierungsregeln für diese beiden Referenzterminologien sind unter \"Practical Guidance on Uses of SNOMED CT and LOINC\" (https://confluence.ihtsdotools.org/display/DOCLOINC/5.2+Practical+Guidance+on+Uses+of+SNOMED+CT+and+LOINC)
+ hinterlegt."
+    * EingebettetesBild 0..* BackboneElement "EingebettetesBild" "In eine Beobachtung eingebettetes Bild"
+      * ID 1..* SU id "ID des eingebetteten Bildes"
+      * Skizze 0..* SU Attachment "Skizze"
+      * MakroBild 0..* SU Attachment "Makro-Bild"
+      * MikroBild 0..* SU Attachment "Mikro-Bild"
+      * ROI 0..* SU Attachment "Region-of-interest"
+
 

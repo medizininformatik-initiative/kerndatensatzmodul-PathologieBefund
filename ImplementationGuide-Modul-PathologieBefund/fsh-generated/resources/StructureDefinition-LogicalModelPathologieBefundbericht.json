@@ -6,7 +6,7 @@
   "name": "LogicalModelPathologieBefundbericht",
   "title": "LogicalModel Pathologie Befundbericht",
   "status": "draft",
-  "description": "tbd",
+  "description": "Logical Model zur grafischen Darstellung des Art-Decor Modells zum Pathologiebefundbericht",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -26,7 +26,7 @@
         "id": "LogicalModelPathologieBefundbericht",
         "path": "LogicalModelPathologieBefundbericht",
         "short": "LogicalModel Pathologie Befundbericht",
-        "definition": "tbd"
+        "definition": "Logical Model zur grafischen Darstellung des Art-Decor Modells zum Pathologiebefundbericht"
       },
       {
         "id": "LogicalModelPathologieBefundbericht.Identifikation",
@@ -608,8 +608,8 @@
       {
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung.EingebettetesBild",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung.EingebettetesBild",
-        "short": "tbd",
-        "definition": "tbd",
+        "short": "Referenz zum eingebetteten Bild",
+        "definition": "Referenz zum eingebetteten Bild",
         "min": 0,
         "max": "*",
         "type": [
@@ -670,7 +670,7 @@
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild",
         "short": "EingebettetesBild",
-        "definition": "tbd",
+        "definition": "In eine Beobachtung eingebettetes Bild",
         "min": 0,
         "max": "*",
         "type": [
@@ -680,10 +680,10 @@
         ]
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.BildID",
-        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.BildID",
-        "short": "tbd",
-        "definition": "tbd",
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.ID",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.ID",
+        "short": "ID des eingebetteten Bildes",
+        "definition": "ID des eingebetteten Bildes",
         "min": 1,
         "max": "*",
         "type": [
@@ -696,8 +696,8 @@
       {
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.MakroBild",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.MakroBild",
-        "short": "tbd",
-        "definition": "tbd",
+        "short": "Makro-Bild der Zuschnittsituation",
+        "definition": "Makro-Bild der Zuschnittsituation",
         "min": 1,
         "max": "*",
         "type": [
@@ -710,8 +710,8 @@
       {
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.Skizze",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.Skizze",
-        "short": "tbd",
-        "definition": "tbd",
+        "short": "Skizze einer (z.B. Zuschnitts)situation",
+        "definition": "Während des Zuschnitts des Materials werden auch Skizzen zur Schnittführung, zur Aufteilung von Gewebsstücken und zur Markierung angefertigt, um die resultierenden Blöcke und Schnitte topografisch dem Gewebe, aus dem sie entnommen wurden, zuordnen zu können.",
         "min": 0,
         "max": "*",
         "type": [
@@ -724,8 +724,8 @@
       {
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung",
-        "short": "MikrokopischeBeurteilung",
-        "definition": "tbd",
+        "short": "Die Mikroskopische Begutachtungssektion enthält optional die histopathologischen Befunde des Falles",
+        "definition": "Die Mikroskopische Begutachtungssektion enthält optional die histopathologischen Befunde des Falles. Sie sollte genutzt werden, um die Ergebnisse histochemischer und immunhistochemischer Färbungen und von bildgestützten molekularpathologischen Befunden aufzuzeichnen.",
         "min": 0,
         "max": "1",
         "type": [
@@ -737,8 +737,8 @@
       {
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.Text",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.Text",
-        "short": "tbd",
-        "definition": "tbd",
+        "short": "Mikroskopischer Beurteilungstext",
+        "definition": "Mikroskopischer Beurteilungstext",
         "min": 0,
         "max": "1",
         "type": [
@@ -751,8 +751,8 @@
       {
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.Einzelbeobachtung",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.Einzelbeobachtung",
-        "short": "tbd",
-        "definition": "tbd",
+        "short": "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung",
+        "definition": "Jede Beobachtung, die als Bestandteil einer pathologisch-anatomischen Untersuchung im Befundbericht erwähnt ist, kann zusätzlich zur textuellen Erwähnung auch semantisch annotiert, d.h. mit einem Code und einem Value in den Bericht maschinenlesbar aufgenommen werden. Die semantische Annotation kann durch beliebige Terminologiesysteme erfolgen, LOINC (für die Kodierung der Beobachtung) und SNOMED-CT (für die Kodierung des Beobachtungsergebnisses, falls es sich nicht um einen Messwert handelt), sind bevorzugt zu verwenden. Codierungsregeln für diese beiden Referenzterminologien sind unter \"Practical Guidance on Uses of SNOMED CT and LOINC\" (https://confluence.ihtsdotools.org/display/DOCLOINC/5.2+Practical+Guidance+on+Uses+of+SNOMED+CT+and+LOINC) hinterlegt.",
         "min": 0,
         "max": "*",
         "type": [
@@ -769,7 +769,7 @@
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild",
         "short": "EingebettetesBild",
-        "definition": "tbd",
+        "definition": "In eine Beobachtung eingebettetes Bild",
         "min": 0,
         "max": "*",
         "type": [
@@ -779,10 +779,10 @@
         ]
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.BildID",
-        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.BildID",
-        "short": "tbd",
-        "definition": "tbd",
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.ID",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.ID",
+        "short": "ID des eingebetteten Bildes",
+        "definition": "ID des eingebetteten Bildes",
         "min": 1,
         "max": "*",
         "type": [
@@ -795,8 +795,8 @@
       {
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.MikroBild",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.MikroBild",
-        "short": "tbd",
-        "definition": "tbd",
+        "short": "Okularaufnahme oder WSI oder Screenshot von WSI",
+        "definition": "Okularaufnahme oder WSI oder Screenshot von WSI",
         "min": 1,
         "max": "*",
         "type": [
@@ -821,10 +821,10 @@
         "isSummary": true
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustätzlicheBeobachtung",
-        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustätzlicheBeobachtung",
-        "short": "ZusätzlicheBeobachtung",
-        "definition": "tbd",
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung",
+        "short": "Nicht-morphologische Beobachtung",
+        "definition": "Ein für die jeweilige nicht-morphologische Beobachtung zutreffender LOINC-Code ist auszuwählen.",
         "min": 0,
         "max": "1",
         "type": [
@@ -834,15 +834,186 @@
         ]
       },
       {
-        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustätzlicheBeobachtung.Text",
-        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustätzlicheBeobachtung.Text",
-        "short": "tbd",
-        "definition": "tbd",
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.Text",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.Text",
+        "short": "Text einer zusätzlichen spezifizierten Beobachtung",
+        "definition": "Text einer zusätzlichen spezifizierten Beobachtung",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.Einzelbeobachtung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.Einzelbeobachtung",
+        "short": "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung",
+        "definition": "Jede Beobachtung, die als Bestandteil einer pathologisch-anatomischen Untersuchung im Befundbericht erwähnt ist, kann zusätzlich zur textuellen Erwähnung auch semantisch annotiert, d.h. mit einem Code und einem Value in den Bericht maschinenlesbar aufgenommen werden. Die semantische Annotation kann durch beliebige Terminologiesysteme erfolgen, LOINC (für die Kodierung der Beobachtung) und SNOMED-CT (für die Kodierung des Beobachtungsergebnisses, falls es sich nicht um einen Messwert handelt), sind bevorzugt zu verwenden. Codierungsregeln für diese beiden Referenzterminologien sind unter \"Practical Guidance on Uses of SNOMED CT and LOINC\" (https://confluence.ihtsdotools.org/display/DOCLOINC/5.2+Practical+Guidance+on+Uses+of+SNOMED+CT+and+LOINC)\r\n hinterlegt.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.EingebettetesBild",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.EingebettetesBild",
+        "short": "EingebettetesBild",
+        "definition": "In eine Beobachtung eingebettetes Bild",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.EingebettetesBild.ID",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.EingebettetesBild.ID",
+        "short": "ID des eingebetteten Bildes",
+        "definition": "ID des eingebetteten Bildes",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung",
+        "short": "Die Diagnostische Schlussfolgerungssektion enthält die Diagnose(n) an allen Materialien / Proben, die zu einem Fall eingesandt wurden",
+        "definition": "Die Diagnostische Schlussfolgerungssektion enthält die Diagnose(n) an allen Materialien / Proben, die zu einem Fall eingesandt wurden. Diagnosen werden für jedes Material oder jede Gruppe von Materialien werden separat berichtet. Die Sektion schließt zusätzliche pathologische Befunde und Ergebnisse von unterstützenden Untersuchungen ein. Sie kann Diagramme, Bilder und virtuelle Schnitte enthalten. Für komplexe Beobachtungen, z.B. Tumorformeln, Score-Systeme, Gradings, etc.  sollte auf entsprechende Profile aus anderen MII-Modulen zurückgegriffen werden. Wenn Cancer Checklists zur Befundberichtserstellung benutzt wurden, sollte dies ebenfalls in dieser Sektion eingeschlossen sein.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.Text",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.Text",
+        "short": "Text der diagnostischen Schlussfolgerung",
+        "definition": "Text der diagnostischen Schlussfolgerung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.Einzelbeobachtung",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.Einzelbeobachtung",
+        "short": "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung",
+        "definition": "Jede Beobachtung, die als Bestandteil einer pathologisch-anatomischen Untersuchung im Befundbericht erwähnt ist, kann zusätzlich zur textuellen Erwähnung auch semantisch annotiert, d.h. mit einem Code und einem Value in den Bericht maschinenlesbar aufgenommen werden. Die semantische Annotation kann durch beliebige Terminologiesysteme erfolgen, LOINC (für die Kodierung der Beobachtung) und SNOMED-CT (für die Kodierung des Beobachtungsergebnisses, falls es sich nicht um einen Messwert handelt), sind bevorzugt zu verwenden. Codierungsregeln für diese beiden Referenzterminologien sind unter \"Practical Guidance on Uses of SNOMED CT and LOINC\" (https://confluence.ihtsdotools.org/display/DOCLOINC/5.2+Practical+Guidance+on+Uses+of+SNOMED+CT+and+LOINC)\r\n hinterlegt.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild",
+        "short": "EingebettetesBild",
+        "definition": "In eine Beobachtung eingebettetes Bild",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.ID",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.ID",
+        "short": "ID des eingebetteten Bildes",
+        "definition": "ID des eingebetteten Bildes",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.Skizze",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.Skizze",
+        "short": "Skizze",
+        "definition": "Skizze",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.MakroBild",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.MakroBild",
+        "short": "Makro-Bild",
+        "definition": "Makro-Bild",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.MikroBild",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.MikroBild",
+        "short": "Mikro-Bild",
+        "definition": "Mikro-Bild",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.ROI",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.ROI",
+        "short": "Region-of-interest",
+        "definition": "Region-of-interest",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
           }
         ],
         "isSummary": true
