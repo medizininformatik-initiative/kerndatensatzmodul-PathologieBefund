@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "Entnahmemethode",
   "id": "Entnahmemethode",
   "title": "Entnahmemethode",

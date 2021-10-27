@@ -3,12 +3,14 @@ ValueSet: Probenart
 Id: Probenart
 Title: "Probenart"
 Description: "Art der Probe"
+* insert RuleSet1
 * include codes from system $SCT where concept is-a #123038009
 
 ValueSet: Entnahmemethode
 Id: Entnahmemethode
 Title: "Entnahmemethode"
 Description: "Klinische Methode der Probengewinnung an Patient:in"
+* insert RuleSet1
 * include codes from system $SCT where concept is-a #118292001
 // Specimen Collection 17636008 oder Removal 118292001? 
 
@@ -16,18 +18,21 @@ ValueSet: Koerperstelle
 Id: Koerperstelle
 Title: "Koerperstelle"
 Description: "Lokalisation der Körperstell von der die Probe stammt"
+* insert RuleSet1
 * include codes from system $SCT where concept is-a #123037004
 
 ValueSet: Bearbeitungsprozedur
 Id: Bearbeitungsprozedur
 Title: "Bearbeitungsprozedur"
 Description: "Kodierte Prozedur der Probenbearbeitung in der Pathologie"
+* insert RuleSet1
 * include codes from system $SCT where concept is-a #108252007
 
 ValueSet: Beobachtungsabschnittstypen
 Id: Beobachtungsabschnittstypen
 Title: "Beobachtungsabschnittstypen"
 Description: "ValueSet für die von IHE PaLM APSR definierten Abschnittstypen eines Pathologiebefundberichts"
+* insert RuleSet1
 // TODO: Include further observation codes from LOINC and SCT? 
 * $LOINC#22636 "Pathology report relevant history"
 * $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document"
