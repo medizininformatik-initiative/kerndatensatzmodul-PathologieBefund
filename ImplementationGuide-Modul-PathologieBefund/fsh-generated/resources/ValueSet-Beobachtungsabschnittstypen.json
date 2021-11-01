@@ -13,7 +13,7 @@
         "system": "http://loinc.org/",
         "concept": [
           {
-            "code": "22636",
+            "code": "22636-5",
             "display": "Pathology report relevant history"
           },
           {
