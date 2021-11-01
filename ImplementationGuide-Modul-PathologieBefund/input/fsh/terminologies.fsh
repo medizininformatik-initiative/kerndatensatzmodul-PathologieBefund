@@ -34,7 +34,7 @@ Title: "Beobachtungsabschnittstypen"
 Description: "ValueSet für die von IHE PaLM APSR definierten Abschnittstypen eines Pathologiebefundberichts"
 * insert RuleSet1
 // TODO: Include further observation codes from LOINC and SCT? 
-* $LOINC#22636 "Pathology report relevant history"
+* $LOINC#22636-5 "Pathology report relevant history"
 * $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document"
 * $LOINC#22634-0 "Pathology report gross observation"
 * $LOINC#22635-7 "Pathology report microscopic observation"
