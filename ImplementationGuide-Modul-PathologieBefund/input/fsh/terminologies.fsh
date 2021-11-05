@@ -28,17 +28,17 @@ Description: "Kodierte Prozedur der Probenbearbeitung in der Pathologie"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #108252007
 
-ValueSet: Beobachtungsabschnittstypen
-Id: Beobachtungsabschnittstypen
-Title: "Beobachtungsabschnittstypen"
-Description: "ValueSet für die von IHE PaLM APSR definierten Abschnittstypen eines Pathologiebefundberichts"
-* insert RuleSet1
-// TODO: Include further observation codes from LOINC and SCT? 
-* $LOINC#22636-5 "Pathology report relevant history"
-* $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document"
-* $LOINC#22634-0 "Pathology report gross observation"
-* $LOINC#22635-7 "Pathology report microscopic observation"
-* $LOINC#22637-3 "Pathology report diagnosis"
+// ValueSet: Beobachtungsabschnittstypen
+// Id: Beobachtungsabschnittstypen
+// Title: "Beobachtungsabschnittstypen"
+// Description: "ValueSet für die von IHE PaLM APSR definierten Abschnittstypen eines Pathologiebefundberichts"
+// * insert RuleSet1
+// // TODO: Include further observation codes from LOINC and SCT? 
+// * $LOINC#22636-5 "Pathology report relevant history"
+// * $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document"
+// * $LOINC#22634-0 "Pathology report gross observation"
+// * $LOINC#22635-7 "Pathology report microscopic observation"
+// * $LOINC#22637-3 "Pathology report diagnosis"
 
 // ValueSet: Faerbesubstanzen
 // Id: Faerbesubstanzen
@@ -95,5 +95,3 @@ Description: "ValueSet für die von IHE PaLM APSR definierten Abschnittstypen ei
 // * $DICOM#CID8114 "Fixatives"
 // * $DICOM#CID8102 "Container Component Types"
 // * $DICOM#CID8115 "Specimen Embedding Media"
-
-// TODO: Abschnittstypen
