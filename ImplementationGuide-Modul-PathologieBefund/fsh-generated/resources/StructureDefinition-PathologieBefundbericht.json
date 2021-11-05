@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/PathologieBefundbericht",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologieBefundbericht",
   "version": "0.1.0",
   "name": "PathologieBefundbericht",
   "title": "Pathologie Befundbericht",

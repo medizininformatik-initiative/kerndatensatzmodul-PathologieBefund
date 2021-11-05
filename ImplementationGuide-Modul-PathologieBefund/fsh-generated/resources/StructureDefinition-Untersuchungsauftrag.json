@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Untersuchungsauftrag",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/Untersuchungsauftrag",
   "version": "0.1.0",
   "name": "Untersuchungsauftrag",
   "title": "Untersuchungsauftrag",

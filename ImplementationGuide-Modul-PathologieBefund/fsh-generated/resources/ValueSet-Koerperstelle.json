@@ -6,7 +6,7 @@
   "title": "Koerperstelle",
   "description": "Lokalisation der Körperstell von der die Probe stammt",
   "version": "0.1.0",
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/ValueSet/Koerperstelle",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/ValueSet/Koerperstelle",
   "compose": {
     "include": [
       {
