@@ -6,6 +6,7 @@ Id: BasePathologyObservation
 Title: "BasePathologyObservation"
 Description: "Abstract Observation to define common features of a main pathology observation"
 * insert RuleSet1
+* ^abstract = true
 * category 1.. MS 
   * coding 1.. MS
   * coding ^slicing.discriminator[0].type = #pattern

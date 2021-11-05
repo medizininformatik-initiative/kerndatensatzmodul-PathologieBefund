@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/generische-beobachtung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/generische-beobachtung",
   "version": "0.1.0",
   "name": "GenerischeBeobachtung",
   "title": "Generische Beobachtung",

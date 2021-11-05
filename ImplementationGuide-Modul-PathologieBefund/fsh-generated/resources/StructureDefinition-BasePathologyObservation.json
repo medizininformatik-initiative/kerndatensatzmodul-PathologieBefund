@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/BasePathologyObservation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/BasePathologyObservation",
   "version": "0.1.0",
   "name": "BasePathologyObservation",
   "title": "BasePathologyObservation",
@@ -51,7 +51,7 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
