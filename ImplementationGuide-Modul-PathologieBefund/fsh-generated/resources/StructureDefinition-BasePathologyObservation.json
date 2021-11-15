@@ -188,6 +188,11 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "mustSupport": true

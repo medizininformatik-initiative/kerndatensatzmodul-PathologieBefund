@@ -41,7 +41,7 @@ Description: "Abstract Observation to define common features of a main pathology
 // Untersuchungsmethode
 * method MS
 // Referenz - Probe
-//* specimen MS
+* specimen MS
 // Moegliche Unterbeobachtungen
 * hasMember MS
 // Referenz - Eingebettetes Bild
