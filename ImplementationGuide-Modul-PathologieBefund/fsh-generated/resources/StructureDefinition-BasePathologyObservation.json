@@ -58,6 +58,34 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.id",
+        "path": "Observation.id",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier",
+        "path": "Observation.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.basedOn",
+        "path": "Observation.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/Untersuchungsauftrag"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.category",
         "path": "Observation.category",
         "min": 1,
@@ -147,18 +175,49 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.bodySite.coding",
+        "path": "Observation.bodySite.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.bodySite.coding:sct",
+        "path": "Observation.bodySite.coding",
+        "sliceName": "sct",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/sct-body-structures"
+        }
+      },
+      {
+        "id": "Observation.bodySite.coding:sct.system",
+        "path": "Observation.bodySite.coding.system",
+        "min": 1,
+        "patternUri": "http://snomed.info/sct"
+      },
+      {
         "id": "Observation.method",
         "path": "Observation.method",
         "mustSupport": true
       },
       {
-        "id": "Observation.hasMember",
-        "path": "Observation.hasMember",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
         "mustSupport": true
       }
     ]
