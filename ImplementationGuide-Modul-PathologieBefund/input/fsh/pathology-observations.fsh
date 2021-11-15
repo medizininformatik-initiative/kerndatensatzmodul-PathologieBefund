@@ -29,6 +29,15 @@ Description: "Abstract Observation to define common features of a main pathology
 // Wert
 * value[x] MS
 * value[x] only Quantity or CodeableConcept
+// Koerperstelle
+* bodySite MS
+  * coding ^slicing.discriminator.type = #pattern
+  * coding ^slicing.discriminator.path = "$this"
+  * coding ^slicing.rules = #open
+  * coding contains sct 0..1 MS
+  * coding[sct] from $bio-bodystructure (required)
+    * system 1.. 
+    * system = $SCT
 // Untersuchungsmethode
 * method MS
 // Referenz - Probe
