@@ -122,9 +122,9 @@
         "min": 1,
         "max": "1",
         "patternCoding": {
-          "code": "VN",
+          "code": "ACSN",
           "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-          "display": "Visit Number"
+          "display": "Accession ID"
         },
         "mustSupport": true
       },

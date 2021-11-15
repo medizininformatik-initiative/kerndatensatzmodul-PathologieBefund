@@ -25,7 +25,7 @@ Description: "Defines the general pathology report structure for German hospital
 * identifier[Set-ID].type.coding ^slicing.discriminator[0].path = "$this"
 * identifier[Set-ID].type.coding ^slicing.rules = #open
 * identifier[Set-ID].type.coding contains vn-type 1..1 MS
-* identifier[Set-ID].type.coding[vn-type] = $v2-0203#VN "Visit Number"
+* identifier[Set-ID].type.coding[vn-type] = $v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].type.coding[vn-type].system 1..1 MS
 * identifier[Set-ID].type.coding[vn-type].code 1..1 MS
 * identifier[Set-ID].type.coding[vn-type].display MS
