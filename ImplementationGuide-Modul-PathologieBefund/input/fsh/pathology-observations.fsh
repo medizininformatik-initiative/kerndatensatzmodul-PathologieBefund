@@ -7,6 +7,11 @@ Title: "BasePathologyObservation"
 Description: "Abstract Observation to define common features of a main pathology observation"
 * insert RuleSet1
 * ^abstract = true
+* id MS
+* identifier MS
+* basedOn MS 
+* basedOn only Reference(Untersuchungsauftrag)
+* status MS
 * category 1.. MS 
   * coding 1.. MS
   * coding ^slicing.discriminator[0].type = #pattern
@@ -42,10 +47,6 @@ Description: "Abstract Observation to define common features of a main pathology
 * method MS
 // Referenz - Probe
 * specimen MS
-// Moegliche Unterbeobachtungen
-* hasMember MS
-// Referenz - Eingebettetes Bild
-* derivedFrom MS
 
 
 // ProcedureSteps
@@ -69,8 +70,12 @@ Id: GenericPathologyFinding
 Title: "GenericPathologyFinding"
 Description: "Concrete Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
 * insert RuleSet1
-// tmp CS - later custom VS (extensible)
+// tmp - later custom VS (extensible)
 * code.coding from $LOINC (preferred)
+// Moegliche Unterbeobachtungen
+* hasMember MS
+// Referenz - Eingebettetes Bild
+* derivedFrom MS
 * derivedFrom only Reference(ImagingStudy or Media or DocumentReference)
 
 // IntraoperativeObservation

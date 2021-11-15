@@ -66,6 +66,11 @@
         }
       },
       {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "type": [
@@ -77,7 +82,8 @@
               "http://hl7.org/fhir/StructureDefinition/DocumentReference"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       }
     ]
   }

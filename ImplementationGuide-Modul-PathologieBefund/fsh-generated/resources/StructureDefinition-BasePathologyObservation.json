@@ -58,6 +58,34 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.id",
+        "path": "Observation.id",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.identifier",
+        "path": "Observation.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.basedOn",
+        "path": "Observation.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/Untersuchungsauftrag"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.category",
         "path": "Observation.category",
         "min": 1,
@@ -190,16 +218,6 @@
       {
         "id": "Observation.specimen",
         "path": "Observation.specimen",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.hasMember",
-        "path": "Observation.hasMember",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
         "mustSupport": true
       }
     ]
