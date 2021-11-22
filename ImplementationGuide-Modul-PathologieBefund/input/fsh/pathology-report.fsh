@@ -1,4 +1,4 @@
-// Profile definition
+// DiagnosticReport
 Profile: PathologieBefundbericht
 Parent: DiagnosticReport
 Id: PathologieBefundbericht
@@ -80,4 +80,96 @@ Description: "Defines the general pathology report structure for German hospital
 // zugehoeriges Dokument
 * presentedForm MS
 
-// Example
+// Composition
+Profile: PathologyComposition
+Parent: Composition
+Id: PathologyComposition
+Title: "PathologyComposition"
+Description: "tbd"
+* insert RuleSet1
+* status MS
+* type MS
+// Titel
+* title 1.. MS
+// Autor
+* author 1.. MS
+// Legaler Authentikator 
+* attester 1.. MS
+  * mode MS
+  * mode = #legal
+  * party 1.. MS
+  * party only Reference(Practitioner or Organization)
+* custodian MS
+* date MS
+* subject MS
+* section ^slicing.discriminator[0].type = #pattern
+* section ^slicing.discriminator[0].path = "$this"
+* section ^slicing.rules = #open
+* section contains clinical-information 0..1 MS 
+  and procedure-steps 0..1 MS 
+  and intraoperative-observation 0..1 MS 
+  and macroscopic-observation 0..1 MS 
+  and microscopic-observation 0..1 MS 
+  and additional-observation 0..1 MS
+  and diagnostic-conclusion 1..1 MS
+// Clinical Information 
+* section[clinical-information]
+  * code 1.. MS
+  * code = $LOINC#22636-5 "Pathology report relevant history"
+    * coding 1.. MS
+      * system 1.. MS
+      * code 1.. MS
+  * entry 1.. MS
+// Procedure Steps
+* section[procedure-steps]
+  * code 1.. MS
+  * code = $LOINC#46059-2 "Special treatments and procedures section"
+    * coding 1.. MS
+      * system 1.. MS
+      * code 1.. MS
+  * entry 1.. MS
+// Intraoperative Observation
+* section[intraoperative-observation]
+  * code 1.. MS
+  * code = $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document"
+    * coding 1.. MS
+      * system 1.. MS
+      * code 1.. MS
+  * entry 1.. MS
+  * entry only Reference(IntraoperativeObservation)
+// Macroscopic Observation
+* section[macroscopic-observation]
+  * code 1.. MS
+  * code = $LOINC#22634-0 "Pathology report gross observation"
+    * coding 1.. MS
+      * system 1.. MS
+      * code 1.. MS
+  * entry 1.. MS
+  * entry only Reference(MacroscopicObservation)
+// Microscopic Observation 
+* section[microscopic-observation]
+  * code 1.. MS
+  * code = $LOINC#22635-7 "Pathology report microscopic observation"
+    * coding 1.. MS
+      * system 1.. MS
+      * code 1.. MS
+  * entry 1.. MS
+  * entry only Reference(MicroscopicObservation)
+// Additional Specified Observation
+* section[additional-observation]
+  * code 1.. MS 
+    * coding 1.. MS
+    * coding from $LOINC (extensible)
+      * system 1.. MS
+      * system = $LOINC
+      * code 1.. MS
+  * entry 1.. MS
+  * entry only Reference(GenericPathologyFinding)
+// Diagnostic Conclusion
+* section[diagnostic-conclusion]
+  * code 1.. MS
+  * code = $LOINC#22637-3 "Pathology report diagnosis"
+    * coding 1.. MS
+      * system 1.. MS
+      * code 1.. MS
+  * entry 1.. MS
