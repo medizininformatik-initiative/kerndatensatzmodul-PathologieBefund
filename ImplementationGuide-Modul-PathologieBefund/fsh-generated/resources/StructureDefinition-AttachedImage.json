@@ -1,0 +1,141 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AttachedImage",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage",
+  "version": "0.1.0",
+  "name": "AttachedImage",
+  "title": "AttachedImage",
+  "status": "draft",
+  "description": "Allgemeines Profil für eingebettetes Bild",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "dicom",
+      "uri": "http://nema.org/dicom",
+      "name": "DICOM Tag Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Media",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Media",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Media.id",
+        "path": "Media.id",
+        "mustSupport": true
+      },
+      {
+        "id": "Media.partOf",
+        "path": "Media.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Media"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Media.status",
+        "path": "Media.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Media.type",
+        "path": "Media.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Media.type.coding",
+        "path": "Media.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Media.type.coding:image",
+        "path": "Media.type.coding",
+        "sliceName": "image",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "image",
+          "system": "http://hl7.org/fhir/codesystem-media-type.html"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Media.subject",
+        "path": "Media.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologySpecimen"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Media.content",
+        "path": "Media.content",
+        "mustSupport": true
+      }
+    ]
+  }
+}

@@ -71,7 +71,7 @@ Description: "Defines the general pathology report structure for German hospital
 * specimen 1.. MS
 // Beobachtungsabschnitte bzw. Beobachtungen
 * result 1.. MS
-// Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM)
+// Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) - kann auch raus wenn DICOM wirklich nicht notwendig
 * imagingStudy MS
 // Referenz zu angehaengten Bildern
 * media MS
