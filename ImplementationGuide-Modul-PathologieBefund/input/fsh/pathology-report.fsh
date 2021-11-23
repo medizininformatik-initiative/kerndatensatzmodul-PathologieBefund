@@ -1,4 +1,6 @@
+// -------------------------
 // DiagnosticReport
+// -------------------------
 Profile: PathologieBefundbericht
 Parent: DiagnosticReport
 Id: PathologieBefundbericht
@@ -71,21 +73,29 @@ Description: "Defines the general pathology report structure for German hospital
 * specimen 1.. MS
 // Beobachtungsabschnitte bzw. Beobachtungen
 * result 1.. MS
-// Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) - kann auch raus wenn DICOM wirklich nicht notwendig
+// Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) 
+// TODO: kann auch raus wenn DICOM wirklich nicht notwendig
 * imagingStudy MS
 // Referenz zu angehaengten Bildern
+// TODO: Slicing fuer einzelne Bildtypen notwendig? Makro, Mikro, etc.
 * media MS
-* media.comment MS
-* media.link MS
+  * comment MS
+  * link MS
+  * link only Reference(AttachedImage)
 // zugehoeriges Dokument
 * presentedForm MS
+// Diagnostische Schlussfolgerung
+* conclusion 1.. MS
+* conclusionCode 1.. MS
 
+// -------------------------
 // Composition
+// -------------------------
 Profile: PathologyComposition
 Parent: Composition
 Id: PathologyComposition
 Title: "PathologyComposition"
-Description: "tbd"
+Description: "Composition als Template für Pathologiebefundbericht als FHIR Dokument"
 * insert RuleSet1
 * status MS
 * type MS
@@ -105,14 +115,15 @@ Description: "tbd"
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this"
 * section ^slicing.rules = #open
-* section contains clinical-information 0..1 MS 
-  and procedure-steps 0..1 MS 
-  and intraoperative-observation 0..1 MS 
-  and macroscopic-observation 0..1 MS 
-  and microscopic-observation 0..1 MS 
-  and additional-observation 0..1 MS
-  and diagnostic-conclusion 1..1 MS
-// Clinical Information 
+* section contains 
+    clinical-information 0..1 MS 
+    and procedure-steps 0..1 MS 
+    and intraoperative-observation 0..1 MS 
+    and macroscopic-observation 0..1 MS 
+    and microscopic-observation 0..1 MS 
+    and additional-observation 0..* MS
+    and diagnostic-conclusion 1..1 MS
+// Clinical Information - Klinische Informationen
 * section[clinical-information]
   * code 1.. MS
   * code = $LOINC#22636-5 "Pathology report relevant history"
@@ -120,7 +131,7 @@ Description: "tbd"
       * system 1.. MS
       * code 1.. MS
   * entry 1.. MS
-// Procedure Steps
+// Procedure Steps - Proben/Technische Bearbeitung
 * section[procedure-steps]
   * code 1.. MS
   * code = $LOINC#46059-2 "Special treatments and procedures section"
@@ -128,16 +139,39 @@ Description: "tbd"
       * system 1.. MS
       * code 1.. MS
   * entry 1.. MS
-// Intraoperative Observation
+// Intraoperative Observation - Intraoperative Begutachtung
 * section[intraoperative-observation]
   * code 1.. MS
   * code = $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document"
     * coding 1.. MS
       * system 1.. MS
       * code 1.. MS
+  // Referenz auf Observation
   * entry 1.. MS
   * entry only Reference(IntraoperativeObservation)
-// Macroscopic Observation
+  * text 1.. MS
+  * title 1.. MS
+  * title = "Intraoperative Begutachtung"
+  // Eingebettetes Bild
+  // TODO: klaeren ob es ausreicht wenn hier nur ein Bild referenziert wird. Sonst Sub-sections fuer Bilddaten
+  // * focus 
+  * section MS
+  * section ^slicing.discriminator.type = #pattern
+  * section ^slicing.discriminator.path = "$this"
+  * section ^slicing.rules = #open
+  * section contains attached-images 0..* MS
+  * section[attached-images] 
+    * code 1.. MS
+    * code = $SCT#900000000000517004 "Associated image"
+    //* code = $SCT#900000000000471006 "Image reference"
+      * coding 1.. MS
+        * system 1.. MS
+        * code 1.. MS
+    * entry 1.. MS
+    * entry only Reference(AttachedImage)
+    * title 1.. MS
+    * title = "Eingebettetes Bild"
+// Macroscopic Observation - Makroskopische Beurteilung
 * section[macroscopic-observation]
   * code 1.. MS
   * code = $LOINC#22634-0 "Pathology report gross observation"
@@ -146,7 +180,29 @@ Description: "tbd"
       * code 1.. MS
   * entry 1.. MS
   * entry only Reference(MacroscopicObservation)
-// Microscopic Observation 
+  * text 1.. MS
+  * title 1.. MS
+  * title = "Makroskopische Beurteilung"
+  // Eingebettetes Bild
+  // TODO: klaeren ob es ausreicht wenn hier nur ein Bild referenziert wird. Sonst Sub-sections fuer Bilddaten
+  // * focus 
+  * section MS
+  * section ^slicing.discriminator.type = #pattern
+  * section ^slicing.discriminator.path = "$this"
+  * section ^slicing.rules = #open
+  * section contains attached-images 0..* MS
+  * section[attached-images] 
+    * code 1.. MS
+    * code = $SCT#900000000000517004 "Associated image"
+    //* code = $SCT#900000000000471006 "Image reference"
+      * coding 1.. MS
+        * system 1.. MS
+        * code 1.. MS
+    * entry 1.. MS
+    * entry only Reference(AttachedImage)
+    * title 1.. MS
+    * title = "Eingebettetes Bild"
+// Microscopic Observation - Mikroskopische Beurteilung
 * section[microscopic-observation]
   * code 1.. MS
   * code = $LOINC#22635-7 "Pathology report microscopic observation"
@@ -155,7 +211,29 @@ Description: "tbd"
       * code 1.. MS
   * entry 1.. MS
   * entry only Reference(MicroscopicObservation)
-// Additional Specified Observation
+  * text 1.. MS
+  * title 1.. MS
+  * title = "Mikroskopische Beurteilung"
+  // Eingebettetes Bild
+  // TODO: klaeren ob es ausreicht wenn hier nur ein Bild referenziert wird. Sonst Sub-sections fuer Bilddaten
+  // * focus 
+  * section MS
+  * section ^slicing.discriminator.type = #pattern
+  * section ^slicing.discriminator.path = "$this"
+  * section ^slicing.rules = #open
+  * section contains attached-images 0..* MS
+  * section[attached-images] 
+    * code 1.. MS
+    * code = $SCT#900000000000517004 "Associated image"
+    //* code = $SCT#900000000000471006 "Image reference"
+      * coding 1.. MS
+        * system 1.. MS
+        * code 1.. MS
+    * entry 1.. MS
+    * entry only Reference(AttachedImage)
+    * title 1.. MS
+    * title = "Eingebettetes Bild"
+// Additional Specified Observation - Zusaetzliche spezifizierte Beobachtung
 * section[additional-observation]
   * code 1.. MS 
     * coding 1.. MS
@@ -165,7 +243,29 @@ Description: "tbd"
       * code 1.. MS
   * entry 1.. MS
   * entry only Reference(GenericPathologyFinding)
-// Diagnostic Conclusion
+  * text 1.. MS
+  * title 1.. MS
+  * title = "Zusätzliche spezifizierte Beobachtung"
+  // Eingebettetes Bild
+  // TODO: klaeren ob es ausreicht wenn hier nur ein Bild referenziert wird. Sonst Sub-sections fuer Bilddaten
+  // * focus 
+  * section MS
+  * section ^slicing.discriminator.type = #pattern
+  * section ^slicing.discriminator.path = "$this"
+  * section ^slicing.rules = #open
+  * section contains attached-images 0..* MS
+  * section[attached-images] 
+    * code 1.. MS
+    * code = $SCT#900000000000517004 "Associated image"
+    //* code = $SCT#900000000000471006 "Image reference"
+      * coding 1.. MS
+        * system 1.. MS
+        * code 1.. MS
+    * entry 1.. MS
+    * entry only Reference(AttachedImage)
+    * title 1.. MS
+    * title = "Eingebettetes Bild"
+// Diagnostic Conclusion - Diagnostische Schlussfolgerung
 * section[diagnostic-conclusion]
   * code 1.. MS
   * code = $LOINC#22637-3 "Pathology report diagnosis"
@@ -173,3 +273,7 @@ Description: "tbd"
       * system 1.. MS
       * code 1.. MS
   * entry 1.. MS
+  * entry only Reference(PathologieBefundbericht)
+  * text 1.. MS
+  * title 1.. MS 
+  * title = "Diagnostische Schlussfolgerung"

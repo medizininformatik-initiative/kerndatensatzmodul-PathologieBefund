@@ -16,7 +16,7 @@
   "name": "PathologyComposition",
   "title": "PathologyComposition",
   "status": "draft",
-  "description": "tbd",
+  "description": "Composition als Template für Pathologiebefundbericht als FHIR Dokument",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -231,6 +231,13 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.section:intraoperative-observation.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Intraoperative Begutachtung",
+        "mustSupport": true
+      },
+      {
         "id": "Composition.section:intraoperative-observation.code",
         "path": "Composition.section.code",
         "min": 1,
@@ -264,6 +271,12 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.section:intraoperative-observation.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Composition.section:intraoperative-observation.entry",
         "path": "Composition.section.entry",
         "min": 1,
@@ -278,11 +291,99 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.section:intraoperative-observation.section",
+        "path": "Composition.section.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images",
+        "path": "Composition.section.section",
+        "sliceName": "attached-images",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.title",
+        "path": "Composition.section.section.title",
+        "min": 1,
+        "patternString": "Eingebettetes Bild",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.code",
+        "path": "Composition.section.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "900000000000517004",
+              "system": "http://snomed.info/sct",
+              "display": "Associated image"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.code.coding",
+        "path": "Composition.section.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.code.coding.system",
+        "path": "Composition.section.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.code.coding.code",
+        "path": "Composition.section.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.entry",
+        "path": "Composition.section.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Composition.section:macroscopic-observation",
         "path": "Composition.section",
         "sliceName": "macroscopic-observation",
         "min": 0,
         "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Makroskopische Beurteilung",
         "mustSupport": true
       },
       {
@@ -319,6 +420,12 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.section:macroscopic-observation.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Composition.section:macroscopic-observation.entry",
         "path": "Composition.section.entry",
         "min": 1,
@@ -333,11 +440,99 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.section:macroscopic-observation.section",
+        "path": "Composition.section.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images",
+        "path": "Composition.section.section",
+        "sliceName": "attached-images",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.title",
+        "path": "Composition.section.section.title",
+        "min": 1,
+        "patternString": "Eingebettetes Bild",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.code",
+        "path": "Composition.section.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "900000000000517004",
+              "system": "http://snomed.info/sct",
+              "display": "Associated image"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.code.coding",
+        "path": "Composition.section.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.code.coding.system",
+        "path": "Composition.section.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.code.coding.code",
+        "path": "Composition.section.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.entry",
+        "path": "Composition.section.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Composition.section:microscopic-observation",
         "path": "Composition.section",
         "sliceName": "microscopic-observation",
         "min": 0,
         "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Mikroskopische Beurteilung",
         "mustSupport": true
       },
       {
@@ -374,6 +569,12 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.section:microscopic-observation.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Composition.section:microscopic-observation.entry",
         "path": "Composition.section.entry",
         "min": 1,
@@ -388,11 +589,99 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.section:microscopic-observation.section",
+        "path": "Composition.section.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images",
+        "path": "Composition.section.section",
+        "sliceName": "attached-images",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.title",
+        "path": "Composition.section.section.title",
+        "min": 1,
+        "patternString": "Eingebettetes Bild",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.code",
+        "path": "Composition.section.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "900000000000517004",
+              "system": "http://snomed.info/sct",
+              "display": "Associated image"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.code.coding",
+        "path": "Composition.section.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.code.coding.system",
+        "path": "Composition.section.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.code.coding.code",
+        "path": "Composition.section.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.entry",
+        "path": "Composition.section.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Composition.section:additional-observation",
         "path": "Composition.section",
         "sliceName": "additional-observation",
         "min": 0,
-        "max": "1",
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Zusätzliche spezifizierte Beobachtung",
         "mustSupport": true
       },
       {
@@ -425,6 +714,12 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.section:additional-observation.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Composition.section:additional-observation.entry",
         "path": "Composition.section.entry",
         "min": 1,
@@ -439,11 +734,99 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.section:additional-observation.section",
+        "path": "Composition.section.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images",
+        "path": "Composition.section.section",
+        "sliceName": "attached-images",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.title",
+        "path": "Composition.section.section.title",
+        "min": 1,
+        "patternString": "Eingebettetes Bild",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.code",
+        "path": "Composition.section.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "900000000000517004",
+              "system": "http://snomed.info/sct",
+              "display": "Associated image"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.code.coding",
+        "path": "Composition.section.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.code.coding.system",
+        "path": "Composition.section.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.code.coding.code",
+        "path": "Composition.section.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.entry",
+        "path": "Composition.section.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Composition.section:diagnostic-conclusion",
         "path": "Composition.section",
         "sliceName": "diagnostic-conclusion",
         "min": 1,
         "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:diagnostic-conclusion.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Diagnostische Schlussfolgerung",
         "mustSupport": true
       },
       {
@@ -480,9 +863,23 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.section:diagnostic-conclusion.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Composition.section:diagnostic-conclusion.entry",
         "path": "Composition.section.entry",
         "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologieBefundbericht"
+            ]
+          }
+        ],
         "mustSupport": true
       }
     ]
