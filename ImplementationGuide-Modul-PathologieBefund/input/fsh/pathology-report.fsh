@@ -46,16 +46,16 @@ Description: "Defines the general pathology report structure for German hospital
 // Code
 * code MS
 // define slice for pathology report code
-* code ^slicing.discriminator[0].type = #pattern
-* code ^slicing.discriminator[0].path = "$this"
-* code ^slicing.rules = #open
+  * coding ^slicing.discriminator[0].type = #pattern
+  * coding ^slicing.discriminator[0].path = "$this"
+  * coding ^slicing.rules = #open
+  * coding contains pathology-report 1..1 MS
+  * coding[pathology-report] MS
+  * coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report" 
+    * system MS
+    * code MS
+    * display MS
 
-* code contains pathology-report 1..1 MS
-* code[pathology-report].coding MS
-* code[pathology-report].coding.system MS
-* code[pathology-report].coding.code MS
-* code[pathology-report].coding.display MS
-* code[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report" 
 
 // Referenz zu Patient:in
 * subject 1.. MS
