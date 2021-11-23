@@ -1,9 +1,9 @@
 // -------------------------
 // DiagnosticReport
 // -------------------------
-Profile: PathologieBefundbericht
+Profile: PathologyReport
 Parent: DiagnosticReport
-Id: PathologieBefundbericht
+Id: PathologyReport
 Title: "Pathologie Befundbericht"
 Description: "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative"
 
@@ -40,7 +40,7 @@ Description: "Defines the general pathology report structure for German hospital
 * meta.profile MS 
 // Referenz zum Untersuchungsauftrag
 * basedOn 1.. MS
-* basedOn only Reference(ServiceRequest)
+* basedOn only Reference(PathologyServiceRequest)
 // Status
 * status MS
 // Code
@@ -275,7 +275,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
       * system 1.. MS
       * code 1.. MS
   * entry 1.. MS
-  * entry only Reference(PathologieBefundbericht)
+  * entry only Reference (PathologyReport)
   * text 1.. MS
   * title 1.. MS 
   * title = "Diagnostische Schlussfolgerung"

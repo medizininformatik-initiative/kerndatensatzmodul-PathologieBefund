@@ -3,7 +3,7 @@ Profile: PathologySpecimen
 Parent: Specimen
 Id: PathologySpecimen
 Title: "PathologySpecimen - Temporary"
-Description: "tbd"
+Description: "tmp"
 * insert RuleSet1
 // features from Biobank SpecimenCore
 * identifier MS
@@ -71,4 +71,4 @@ Description: "tbd"
 * note MS 
 // Direkt aus Patho
 * request 1..1 MS 
-* request only Reference(Untersuchungsauftrag)
+* request only Reference(PathologyServiceRequest)

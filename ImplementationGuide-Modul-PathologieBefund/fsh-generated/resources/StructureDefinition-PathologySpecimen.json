@@ -16,7 +16,7 @@
   "name": "PathologySpecimen",
   "title": "PathologySpecimen - Temporary",
   "status": "draft",
-  "description": "tbd",
+  "description": "tmp",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -117,7 +117,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/Untersuchungsauftrag"
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyServiceRequest"
             ]
           }
         ],

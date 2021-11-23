@@ -10,7 +10,7 @@ Description: "Abstract Observation to define common features of a main pathology
 * id MS
 * identifier MS
 * basedOn MS 
-* basedOn only Reference(Untersuchungsauftrag)
+* basedOn only Reference(PathologyServiceRequest)
 * status MS
 * category 1.. MS 
   * coding 1.. MS
@@ -76,7 +76,7 @@ Description: "Concrete Observation to describe a generic pathology finding, base
 * hasMember MS
 // Referenz - Eingebettetes Bild
 * derivedFrom MS
-* derivedFrom only Reference(ImagingStudy or Media or DocumentReference)
+* derivedFrom only Reference(AttachedImage)
 
 // IntraoperativeObservation
 Profile: IntraoperativeObservation
@@ -88,8 +88,7 @@ Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * code.coding.code ^fixedCode = #83321-0 
 * code.coding.system ^fixedUri = $LOINC
 * code.coding.display = "Pathology report intraoperative observation in Specimen Document"
-// TODO: Reference to Media Pathology Profiles when available
-* derivedFrom only Reference(Media or ImagingStudy)
+* derivedFrom only Reference(AttachedImage)
 
 // Macroscopic Observation
 Profile: MacroscopicObservation
@@ -97,7 +96,6 @@ Parent: GenericPathologyFinding
 Id: MacroscopicObservation
 Title: "MacroscopicObservation"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
-// TODO: only Reference possible future profile for pathology images and sketches?
 * insert RuleSet1
 * code.coding.code ^fixedCode = #22634-0
 * code.coding.system ^fixedUri = $LOINC
@@ -107,13 +105,13 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * derivedFrom ^slicing.discriminator[0].path = "$this"
 * derivedFrom ^slicing.rules = #open
 * derivedFrom contains macroscopic-image 0..1 MS
-* derivedFrom[macroscopic-image] only Reference(Media)
+* derivedFrom[macroscopic-image] only Reference(AttachedImage)
 // Skizze
 * derivedFrom ^slicing.discriminator[1].type = #pattern
 * derivedFrom ^slicing.discriminator[1].path = "$this"
 * derivedFrom ^slicing.rules = #open
 * derivedFrom contains macroscopic-sketch 0..1 MS
-* derivedFrom[macroscopic-sketch] only Reference(Media)
+* derivedFrom[macroscopic-sketch] only Reference(AttachedImage)
 
 // Microscopic Observation
 Profile: MicroscopicObservation
@@ -130,13 +128,13 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * derivedFrom ^slicing.discriminator[0].path = "$this"
 * derivedFrom ^slicing.rules = #open
 * derivedFrom contains microscopic-image 0..1 MS
-* derivedFrom[microscopic-image] only Reference(Media)
+* derivedFrom[microscopic-image] only Reference(AttachedImage)
 // ROI
 * derivedFrom ^slicing.discriminator[1].type = #pattern
 * derivedFrom ^slicing.discriminator[1].path = "$this"
 * derivedFrom ^slicing.rules = #open
 * derivedFrom contains microscopic-ROI 0..1 MS
-* derivedFrom[microscopic-ROI] only Reference(Media)
+* derivedFrom[microscopic-ROI] only Reference(AttachedImage)
 
 /*
 // DiagnosticConclusion

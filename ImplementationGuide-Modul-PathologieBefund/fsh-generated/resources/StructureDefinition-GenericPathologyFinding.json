@@ -77,9 +77,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
-              "http://hl7.org/fhir/StructureDefinition/Media",
-              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage"
             ]
           }
         ],

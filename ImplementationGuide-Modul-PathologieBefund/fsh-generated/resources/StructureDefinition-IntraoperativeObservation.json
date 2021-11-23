@@ -71,19 +71,6 @@
         "id": "Observation.code.coding.display",
         "path": "Observation.code.coding.display",
         "patternString": "Pathology report intraoperative observation in Specimen Document"
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Media",
-              "http://hl7.org/fhir/StructureDefinition/ImagingStudy"
-            ]
-          }
-        ]
       }
     ]
   }
