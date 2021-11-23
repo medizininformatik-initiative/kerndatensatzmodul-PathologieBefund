@@ -103,6 +103,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * title 1.. MS
 // Autor
 * author 1.. MS
+* author only Reference(Practitioner or Organization)
 // Legaler Authentikator 
 * attester 1.. MS
   * mode MS
@@ -111,7 +112,8 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * party only Reference(Practitioner or Organization)
 * custodian MS
 * date MS
-* subject MS
+* subject 1.. MS
+* subject only Reference(Patient)
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this"
 * section ^slicing.rules = #open
