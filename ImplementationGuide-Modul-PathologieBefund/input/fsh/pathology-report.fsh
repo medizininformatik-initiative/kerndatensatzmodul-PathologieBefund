@@ -4,7 +4,7 @@
 Profile: PathologyReport
 Parent: DiagnosticReport
 Id: PathologyReport
-Title: "Pathologie Befundbericht"
+Title: "PathologyReport"
 Description: "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative"
 
 // set to draft
