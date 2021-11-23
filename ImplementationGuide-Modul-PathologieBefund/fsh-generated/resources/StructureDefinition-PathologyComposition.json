@@ -1,0 +1,887 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PathologyComposition",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Foundation.Documents"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "not-classified"
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyComposition",
+  "version": "0.1.0",
+  "name": "PathologyComposition",
+  "title": "PathologyComposition",
+  "status": "draft",
+  "description": "Composition als Template für Pathologiebefundbericht als FHIR Dokument",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "fhirdocumentreference",
+      "uri": "http://hl7.org/fhir/documentreference",
+      "name": "FHIR DocumentReference"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type",
+        "path": "Composition.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.subject",
+        "path": "Composition.subject",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.date",
+        "path": "Composition.date",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.author",
+        "path": "Composition.author",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.title",
+        "path": "Composition.title",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.attester",
+        "path": "Composition.attester",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.attester.mode",
+        "path": "Composition.attester.mode",
+        "patternCode": "legal",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.attester.party",
+        "path": "Composition.attester.party",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.custodian",
+        "path": "Composition.custodian",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section",
+        "path": "Composition.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Composition.section:clinical-information",
+        "path": "Composition.section",
+        "sliceName": "clinical-information",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:clinical-information.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "22636-5",
+              "system": "http://loinc.org/",
+              "display": "Pathology report relevant history"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:clinical-information.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:clinical-information.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:clinical-information.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:clinical-information.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:procedure-steps",
+        "path": "Composition.section",
+        "sliceName": "procedure-steps",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:procedure-steps.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "46059-2",
+              "system": "http://loinc.org/",
+              "display": "Special treatments and procedures section"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:procedure-steps.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:procedure-steps.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:procedure-steps.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:procedure-steps.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation",
+        "path": "Composition.section",
+        "sliceName": "intraoperative-observation",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Intraoperative Begutachtung",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "83321-0",
+              "system": "http://loinc.org/",
+              "display": "Pathology report intraoperative observation in Specimen Document"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/IntraoperativeObservation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section",
+        "path": "Composition.section.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images",
+        "path": "Composition.section.section",
+        "sliceName": "attached-images",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.title",
+        "path": "Composition.section.section.title",
+        "min": 1,
+        "patternString": "Eingebettetes Bild",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.code",
+        "path": "Composition.section.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "900000000000517004",
+              "system": "http://snomed.info/sct",
+              "display": "Associated image"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.code.coding",
+        "path": "Composition.section.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.code.coding.system",
+        "path": "Composition.section.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.code.coding.code",
+        "path": "Composition.section.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperative-observation.section:attached-images.entry",
+        "path": "Composition.section.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation",
+        "path": "Composition.section",
+        "sliceName": "macroscopic-observation",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Makroskopische Beurteilung",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "22634-0",
+              "system": "http://loinc.org/",
+              "display": "Pathology report gross observation"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/MacroscopicObservation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section",
+        "path": "Composition.section.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images",
+        "path": "Composition.section.section",
+        "sliceName": "attached-images",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.title",
+        "path": "Composition.section.section.title",
+        "min": 1,
+        "patternString": "Eingebettetes Bild",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.code",
+        "path": "Composition.section.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "900000000000517004",
+              "system": "http://snomed.info/sct",
+              "display": "Associated image"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.code.coding",
+        "path": "Composition.section.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.code.coding.system",
+        "path": "Composition.section.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.code.coding.code",
+        "path": "Composition.section.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:macroscopic-observation.section:attached-images.entry",
+        "path": "Composition.section.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation",
+        "path": "Composition.section",
+        "sliceName": "microscopic-observation",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Mikroskopische Beurteilung",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "22635-7",
+              "system": "http://loinc.org/",
+              "display": "Pathology report microscopic observation"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/MicroscopicObservation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section",
+        "path": "Composition.section.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images",
+        "path": "Composition.section.section",
+        "sliceName": "attached-images",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.title",
+        "path": "Composition.section.section.title",
+        "min": 1,
+        "patternString": "Eingebettetes Bild",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.code",
+        "path": "Composition.section.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "900000000000517004",
+              "system": "http://snomed.info/sct",
+              "display": "Associated image"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.code.coding",
+        "path": "Composition.section.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.code.coding.system",
+        "path": "Composition.section.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.code.coding.code",
+        "path": "Composition.section.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:microscopic-observation.section:attached-images.entry",
+        "path": "Composition.section.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation",
+        "path": "Composition.section",
+        "sliceName": "additional-observation",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Zusätzliche spezifizierte Beobachtung",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://loinc.org/"
+        }
+      },
+      {
+        "id": "Composition.section:additional-observation.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "patternUri": "http://loinc.org/",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/GenericPathologyFinding"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section",
+        "path": "Composition.section.section",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images",
+        "path": "Composition.section.section",
+        "sliceName": "attached-images",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.title",
+        "path": "Composition.section.section.title",
+        "min": 1,
+        "patternString": "Eingebettetes Bild",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.code",
+        "path": "Composition.section.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "900000000000517004",
+              "system": "http://snomed.info/sct",
+              "display": "Associated image"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.code.coding",
+        "path": "Composition.section.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.code.coding.system",
+        "path": "Composition.section.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.code.coding.code",
+        "path": "Composition.section.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-observation.section:attached-images.entry",
+        "path": "Composition.section.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:diagnostic-conclusion",
+        "path": "Composition.section",
+        "sliceName": "diagnostic-conclusion",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:diagnostic-conclusion.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "patternString": "Diagnostische Schlussfolgerung",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:diagnostic-conclusion.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "22637-3",
+              "system": "http://loinc.org/",
+              "display": "Pathology report diagnosis"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:diagnostic-conclusion.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:diagnostic-conclusion.code.coding.system",
+        "path": "Composition.section.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:diagnostic-conclusion.code.coding.code",
+        "path": "Composition.section.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:diagnostic-conclusion.text",
+        "path": "Composition.section.text",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:diagnostic-conclusion.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologieBefundbericht"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}
