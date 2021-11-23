@@ -14,7 +14,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyReport",
   "version": "0.1.0",
   "name": "PathologyReport",
-  "title": "Pathologie Befundbericht",
+  "title": "PathologyReport",
   "status": "draft",
   "description": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative",
   "fhirVersion": "4.0.1",
