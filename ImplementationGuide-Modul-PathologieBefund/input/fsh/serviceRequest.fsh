@@ -1,8 +1,8 @@
-// FSH Definition fuer den pathologischen Untersuchungsauftrag
-Profile: Untersuchungsauftrag
+// FSH Definition fuer den pathologischen PathologyServiceRequest
+Profile: PathologyServiceRequest
 Parent: ServiceRequest
-Id: Untersuchungsauftrag
-Title: "Untersuchungsauftrag"
+Id: PathologyServiceRequest
+Title: "PathologyServiceRequest"
 Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben."
 * ^status = #draft
 

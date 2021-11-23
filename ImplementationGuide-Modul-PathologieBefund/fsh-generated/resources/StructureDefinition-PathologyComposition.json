@@ -894,7 +894,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologieBefundbericht"
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyReport"
             ]
           }
         ],

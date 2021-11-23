@@ -74,7 +74,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/Untersuchungsauftrag"
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyServiceRequest"
             ]
           }
         ],

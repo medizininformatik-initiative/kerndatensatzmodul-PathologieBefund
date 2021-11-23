@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "Untersuchungsauftrag",
+  "id": "PathologyServiceRequest",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,10 +11,10 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/Untersuchungsauftrag",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyServiceRequest",
   "version": "0.1.0",
-  "name": "Untersuchungsauftrag",
-  "title": "Untersuchungsauftrag",
+  "name": "PathologyServiceRequest",
+  "title": "PathologyServiceRequest",
   "status": "draft",
   "description": "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.",
   "fhirVersion": "4.0.1",
