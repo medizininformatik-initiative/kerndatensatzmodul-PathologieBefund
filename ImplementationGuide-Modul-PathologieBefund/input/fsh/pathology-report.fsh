@@ -154,25 +154,6 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * text 1.. MS
   * title 1.. MS
   * title = "Intraoperative Begutachtung"
-  // Eingebettetes Bild
-  // TODO: klaeren ob es ausreicht wenn hier nur ein Bild referenziert wird. Sonst Sub-sections fuer Bilddaten
-  // * focus 
-  * section MS
-  * section ^slicing.discriminator.type = #pattern
-  * section ^slicing.discriminator.path = "$this"
-  * section ^slicing.rules = #open
-  * section contains attached-images 0..* MS
-  * section[attached-images] 
-    * code 1.. MS
-    * code = $SCT#900000000000517004 "Associated image"
-    //* code = $SCT#900000000000471006 "Image reference"
-      * coding 1.. MS
-        * system 1.. MS
-        * code 1.. MS
-    * entry 1.. MS
-    * entry only Reference(AttachedImage)
-    * title 1.. MS
-    * title = "Eingebettetes Bild"
 // Macroscopic Observation - Makroskopische Beurteilung
 * section[macroscopic-observation]
   * code 1.. MS
@@ -185,25 +166,6 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * text 1.. MS
   * title 1.. MS
   * title = "Makroskopische Beurteilung"
-  // Eingebettetes Bild
-  // TODO: klaeren ob es ausreicht wenn hier nur ein Bild referenziert wird. Sonst Sub-sections fuer Bilddaten
-  // * focus 
-  * section MS
-  * section ^slicing.discriminator.type = #pattern
-  * section ^slicing.discriminator.path = "$this"
-  * section ^slicing.rules = #open
-  * section contains attached-images 0..* MS
-  * section[attached-images] 
-    * code 1.. MS
-    * code = $SCT#900000000000517004 "Associated image"
-    //* code = $SCT#900000000000471006 "Image reference"
-      * coding 1.. MS
-        * system 1.. MS
-        * code 1.. MS
-    * entry 1.. MS
-    * entry only Reference(AttachedImage)
-    * title 1.. MS
-    * title = "Eingebettetes Bild"
 // Microscopic Observation - Mikroskopische Beurteilung
 * section[microscopic-observation]
   * code 1.. MS
@@ -216,25 +178,6 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * text 1.. MS
   * title 1.. MS
   * title = "Mikroskopische Beurteilung"
-  // Eingebettetes Bild
-  // TODO: klaeren ob es ausreicht wenn hier nur ein Bild referenziert wird. Sonst Sub-sections fuer Bilddaten
-  // * focus 
-  * section MS
-  * section ^slicing.discriminator.type = #pattern
-  * section ^slicing.discriminator.path = "$this"
-  * section ^slicing.rules = #open
-  * section contains attached-images 0..* MS
-  * section[attached-images] 
-    * code 1.. MS
-    * code = $SCT#900000000000517004 "Associated image"
-    //* code = $SCT#900000000000471006 "Image reference"
-      * coding 1.. MS
-        * system 1.. MS
-        * code 1.. MS
-    * entry 1.. MS
-    * entry only Reference(AttachedImage)
-    * title 1.. MS
-    * title = "Eingebettetes Bild"
 // Additional Specified Observation - Zusaetzliche spezifizierte Beobachtung
 * section[additional-observation]
   * code 1.. MS 
@@ -248,25 +191,6 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * text 1.. MS
   * title 1.. MS
   * title = "Zusätzliche spezifizierte Beobachtung"
-  // Eingebettetes Bild
-  // TODO: klaeren ob es ausreicht wenn hier nur ein Bild referenziert wird. Sonst Sub-sections fuer Bilddaten
-  // * focus 
-  * section MS
-  * section ^slicing.discriminator.type = #pattern
-  * section ^slicing.discriminator.path = "$this"
-  * section ^slicing.rules = #open
-  * section contains attached-images 0..* MS
-  * section[attached-images] 
-    * code 1.. MS
-    * code = $SCT#900000000000517004 "Associated image"
-    //* code = $SCT#900000000000471006 "Image reference"
-      * coding 1.. MS
-        * system 1.. MS
-        * code 1.. MS
-    * entry 1.. MS
-    * entry only Reference(AttachedImage)
-    * title 1.. MS
-    * title = "Eingebettetes Bild"
 // Diagnostic Conclusion - Diagnostische Schlussfolgerung
 * section[diagnostic-conclusion]
   * code 1.. MS
