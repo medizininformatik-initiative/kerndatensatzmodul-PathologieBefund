@@ -1,0 +1,22 @@
+{
+  "resourceType": "Media",
+  "id": "ImageExample",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "code": "image",
+        "system": "http://hl7.org/fhir/codesystem-media-type.html"
+      }
+    ]
+  },
+  "status": "completed",
+  "content": {
+    "contentType": "DICOM",
+    "url": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/image"
+  }
+}

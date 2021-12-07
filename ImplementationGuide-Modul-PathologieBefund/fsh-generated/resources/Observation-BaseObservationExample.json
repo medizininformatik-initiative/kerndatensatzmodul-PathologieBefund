@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "BaseObservationExample",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/BasePathologyObservation"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "laboratory",
+          "system": "http://hl7.org/fhir/codesystem-observation-category.html"
+        }
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "value": "H2021.15692"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "82619000",
+        "system": "http://snomed.info/sct",
+        "display": "Left colectomy (procedure)"
+      }
+    ]
+  },
+  "status": "final",
+  "basedOn": [
+    {
+      "reference": "PathologyServiceRequest"
+    }
+  ],
+  "specimen": {
+    "reference": "PathologySpecimen"
+  },
+  "subject": {
+    "reference": "Patient"
+  }
+}

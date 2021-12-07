@@ -1,0 +1,34 @@
+{
+  "resourceType": "Observation",
+  "id": "MacroExample",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/MacroscopicObservation"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "laboratory",
+          "system": "http://hl7.org/fhir/codesystem-observation-category.html"
+        }
+      ]
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "22634-0",
+        "system": "http://loinc.org/",
+        "display": "Pathology report gross observation Narrative"
+      }
+    ]
+  },
+  "derivedFrom": [
+    {
+      "reference": "AttachedImage"
+    }
+  ]
+}

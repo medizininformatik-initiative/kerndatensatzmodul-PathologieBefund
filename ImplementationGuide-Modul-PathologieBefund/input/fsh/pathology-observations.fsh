@@ -145,3 +145,36 @@ Title: "DiagnosticConclusion"
 Description: "tbd"
 * insert RuleSet1
 */
+
+// Examples
+
+Instance: BaseObservationExample
+InstanceOf: BasePathologyObservation
+Usage: #example
+Title: "BaseObservationExample"
+Description: "Exemplarischer Befundbericht - 3"
+* identifier.value = "H2021.15692"
+* code.coding = $SCT#82619000 "Left colectomy (procedure)"
+* status = #final
+* basedOn = Reference(PathologyServiceRequest)
+* specimen = Reference(PathologySpecimen)
+* subject = Reference(Patient)
+
+Instance: ProcedureExample
+InstanceOf: ProcedureSteps
+Usage: #example
+Title: "ProcedureExample"
+Description: "Exemplarischer Befundbericht - 3"
+* status = #final
+* code = $LOINC#46059-2 "Special treatments and procedures section"
+* note.text = "Hemicolektomie links, onkologische Resektion"
+* specimen = Reference(PathologySpecimen)
+
+Instance: MacroExample
+InstanceOf: MacroscopicObservation
+Usage: #example
+Title: "MacroExample"
+Description: "Exemplarischer Befundbericht - 3"
+* status = #final
+* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
+* derivedFrom[macroscopic-image] = Reference(AttachedImage)

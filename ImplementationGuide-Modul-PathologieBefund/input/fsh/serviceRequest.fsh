@@ -116,3 +116,21 @@ Was muss zum Einsender(Practitioner&Organization) alles hinzugefügt werden? Ers
 * category[pathology].coding.code MS
 * category[pathology].coding.display MS
 * category[pathology] = $SCT#721966001 "Pathology order (record artifact)"
+
+//Example
+Instance: RequestExample
+InstanceOf: PathologyServiceRequest
+Usage: #example
+Title: "RequestExample"
+Description: "Exemplarischer Befundbericht - 3"
+* identifier[Auftraggeber-ID].value = "12345"
+* identifier[Auftraggeber-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
+* identifier[Auftragnehmer-ID].value = "H2021.15692"
+* identifier[Auftragnehmer-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
+* status = #completed
+* intent = #order
+* subject.reference = "Patient/12345"
+* encounter.reference = "Fall/12345"
+* requester = Reference(Practitioner)
+* specimen = Reference(PathologySpecimen)
+* category = $SCT#108252007 "Laboratory procedure (procedure)"
