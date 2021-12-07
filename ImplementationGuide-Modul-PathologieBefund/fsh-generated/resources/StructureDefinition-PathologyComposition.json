@@ -194,53 +194,6 @@
         "mustSupport": true
       },
       {
-        "id": "Composition.section:procedure-steps",
-        "path": "Composition.section",
-        "sliceName": "procedure-steps",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Composition.section:procedure-steps.code",
-        "path": "Composition.section.code",
-        "min": 1,
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "46059-2",
-              "system": "http://loinc.org/",
-              "display": "Special treatments and procedures section"
-            }
-          ]
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Composition.section:procedure-steps.code.coding",
-        "path": "Composition.section.code.coding",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Composition.section:procedure-steps.code.coding.system",
-        "path": "Composition.section.code.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Composition.section:procedure-steps.code.coding.code",
-        "path": "Composition.section.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Composition.section:procedure-steps.entry",
-        "path": "Composition.section.entry",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "Composition.section:intraoperative-observation",
         "path": "Composition.section",
         "sliceName": "intraoperative-observation",

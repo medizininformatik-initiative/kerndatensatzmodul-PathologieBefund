@@ -43,6 +43,7 @@ Description: "Defines the general pathology report structure for German hospital
 * basedOn only Reference(PathologyServiceRequest)
 // Status
 * status MS
+
 // Code
 * code MS
 // define slice for pathology report code
@@ -55,7 +56,6 @@ Description: "Defines the general pathology report structure for German hospital
     * system MS
     * code MS
     * display MS
-
 
 // Referenz zu Patient:in
 * subject 1.. MS
@@ -119,7 +119,6 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * section ^slicing.rules = #open
 * section contains 
     clinical-information 0..1 MS 
-    and procedure-steps 0..1 MS 
     and intraoperative-observation 0..1 MS 
     and macroscopic-observation 0..1 MS 
     and microscopic-observation 0..1 MS 
@@ -129,14 +128,6 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * section[clinical-information]
   * code 1.. MS
   * code = $LOINC#22636-5 "Pathology report relevant history"
-    * coding 1.. MS
-      * system 1.. MS
-      * code 1.. MS
-  * entry 1.. MS
-// Procedure Steps - Proben/Technische Bearbeitung
-* section[procedure-steps]
-  * code 1.. MS
-  * code = $LOINC#46059-2 "Special treatments and procedures section"
     * coding 1.. MS
       * system 1.. MS
       * code 1.. MS
