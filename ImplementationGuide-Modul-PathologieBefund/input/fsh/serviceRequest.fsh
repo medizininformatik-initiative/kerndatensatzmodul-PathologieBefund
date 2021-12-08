@@ -4,7 +4,7 @@ Parent: ServiceRequest
 Id: PathologyServiceRequest
 Title: "PathologyServiceRequest"
 Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben."
-* ^status = #draft
+* insert RuleSet1
 
 // Meta
 * meta.profile MS
@@ -43,15 +43,17 @@ Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.
 * identifier[Auftragnehmer-ID].type.coding[filler-type].code 1..1 MS
 * identifier[Auftragnehmer-ID].type.coding[filler-type].display MS
 
-
 // Auftragsgruppen-ID
 * requisition MS
-* requisition.system 1.. MS
-* requisition.value 1.. MS
-* requisition.type 1.. MS
+  * system 1.. MS
+  * value 1.. MS
+  * type 1.. MS
+  * type = $v2-0203#PLAC "Placer Identifier"
 
 //Status
 * status MS
+
+* intent MS
 
 // Referenz zur Probe
 * specimen 1.. MS
@@ -71,19 +73,10 @@ Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.
 * performer MS
 * performer only Reference(Practitioner)
 
-// Referenz zu Klinischen Angaben?
-* supportingInfo 0..*
-// Resource muss noch nachgetragen werden
-//* supportingInfo only Reference()
+//---------------------------------------
+// Klinische Informationen
+//---------------------------------------
 
-/*
-Klinische Angaben - Welche Resource? Von anderem Modul? muss noch geklärt werden 
-Was muss zum Einsender(Practitioner&Organization) alles hinzugefügt werden? Erstmal warten
-
-// TODO: Referenz zu Probe(n)
-* specimen 1.. MS
-
-// Klinische Angaben (muss noch ueberprueft werden)
 // Fragestellung & Ueberweisungsgrund
 * reasonCode MS
 * reasonCode ^slicing.discriminator[0].type = #pattern
@@ -96,15 +89,13 @@ Was muss zum Einsender(Practitioner&Organization) alles hinzugefügt werden? Ers
 * reasonReference MS
 * reasonReference only Reference(Condition)
 
-// Anamnese - Annahme: besteht zum groessten Teil aus Observations
+// Anamnese - Annahme: besteht zum groessten Teil aus Observations u/o Conditions
 * supportingInfo MS
-* supportingInfo only Reference(Observation)
-*/
+* supportingInfo only Reference(Observation or Condition)
 
 // Zusaetzliche Elemente
 
 // category for searching purposes 
-// 721966001 | Pathology order (record artifact) |
 * category 1..1 MS 
 
 * category ^slicing.discriminator[0].type = #pattern
@@ -112,25 +103,32 @@ Was muss zum Einsender(Practitioner&Organization) alles hinzugefügt werden? Ers
 * category ^slicing.rules = #open
 
 * category contains pathology 1..1 MS
-* category[pathology].coding.system MS
-* category[pathology].coding.code MS
-* category[pathology].coding.display MS
 * category[pathology] = $SCT#721966001 "Pathology order (record artifact)"
+  * coding MS
+    * system MS
+    * code MS
+    * display MS
+
+* code MS
 
 //Example
-Instance: RequestExample
+Instance: PathologyRequestExample
 InstanceOf: PathologyServiceRequest
 Usage: #example
-Title: "RequestExample"
-Description: "Exemplarischer Befundbericht - 3"
-* identifier[Auftraggeber-ID].value = "12345"
-* identifier[Auftraggeber-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
-* identifier[Auftragnehmer-ID].value = "H2021.15692"
-* identifier[Auftragnehmer-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
+Title: "PathologyRequestExample"
+Description: "Pathology Report Example "
+* identifier[+].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].value = "KHXX_ENDO_18.123451"
+* identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
+* identifier[+].type = $v2-0203#FILL "Filler"
+* identifier[=].value = "E18-321654"
+* identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
 * status = #completed
 * intent = #order
 * subject.reference = "Patient/12345"
-* encounter.reference = "Fall/12345"
-* requester = Reference(Practitioner)
-* specimen = Reference(PathologySpecimen)
-* category = $SCT#108252007 "Laboratory procedure (procedure)"
+* encounter.reference = "Encounter/87687"
+* requester.reference = "Practitioner/34456"
+* specimen[+].reference = "Specimen/87689"
+//* category = $SCT#108252007 "Laboratory procedure (procedure)"
+* category = $SCT#721966001 "Pathology order (record artifact)"
+* code = $SCT#82619000 "Left colectomy (procedure)"

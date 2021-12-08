@@ -114,75 +114,12 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * date MS
 * subject 1.. MS
 * subject only Reference(Patient)
+
+// Entry referenziert nur auf die diagnostische Schlussfolgerung (PathologyReport)
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this"
 * section ^slicing.rules = #open
-* section contains 
-    clinical-information 0..1 MS 
-    and intraoperative-observation 0..1 MS 
-    and macroscopic-observation 0..1 MS 
-    and microscopic-observation 0..1 MS 
-    and additional-observation 0..* MS
-    and diagnostic-conclusion 1..1 MS
-// Clinical Information - Klinische Informationen
-* section[clinical-information]
-  * code 1.. MS
-  * code = $LOINC#22636-5 "Pathology report relevant history"
-    * coding 1.. MS
-      * system 1.. MS
-      * code 1.. MS
-  * entry 1.. MS
-// Intraoperative Observation - Intraoperative Begutachtung
-* section[intraoperative-observation]
-  * code 1.. MS
-  * code = $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document"
-    * coding 1.. MS
-      * system 1.. MS
-      * code 1.. MS
-  // Referenz auf Observation
-  * entry 1.. MS
-  * entry only Reference(IntraoperativeObservation)
-  * text 1.. MS
-  * title 1.. MS
-  * title = "Intraoperative Begutachtung"
-// Macroscopic Observation - Makroskopische Beurteilung
-* section[macroscopic-observation]
-  * code 1.. MS
-  * code = $LOINC#22634-0 "Pathology report gross observation"
-    * coding 1.. MS
-      * system 1.. MS
-      * code 1.. MS
-  * entry 1.. MS
-  * entry only Reference(MacroscopicObservation)
-  * text 1.. MS
-  * title 1.. MS
-  * title = "Makroskopische Beurteilung"
-// Microscopic Observation - Mikroskopische Beurteilung
-* section[microscopic-observation]
-  * code 1.. MS
-  * code = $LOINC#22635-7 "Pathology report microscopic observation"
-    * coding 1.. MS
-      * system 1.. MS
-      * code 1.. MS
-  * entry 1.. MS
-  * entry only Reference(MicroscopicObservation)
-  * text 1.. MS
-  * title 1.. MS
-  * title = "Mikroskopische Beurteilung"
-// Additional Specified Observation - Zusaetzliche spezifizierte Beobachtung
-* section[additional-observation]
-  * code 1.. MS 
-    * coding 1.. MS
-    * coding from $LOINC (extensible)
-      * system 1.. MS
-      * system = $LOINC
-      * code 1.. MS
-  * entry 1.. MS
-  * entry only Reference(GenericPathologyFinding)
-  * text 1.. MS
-  * title 1.. MS
-  * title = "Zusätzliche spezifizierte Beobachtung"
-// Diagnostic Conclusion - Diagnostische Schlussfolgerung
+* section contains diagnostic-conclusion 1..1 MS
 * section[diagnostic-conclusion]
   * code 1.. MS
   * code = $LOINC#22637-3 "Pathology report diagnosis"
@@ -196,23 +133,22 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * title = "Diagnostische Schlussfolgerung"
 
 // Example
-Instance: ReportExample
+Instance: PathologyReportExample
 InstanceOf: PathologyReport
 Usage: #example
-Title: "Report Example"
+Title: "PathologyReportExample"
 Description: "Exemplarischer Befundbericht - 3"
 * identifier[Set-ID].value = "H2021.15692"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-* basedOn.reference = "Untersuchungsauftrag/12345"
+* basedOn = Reference(PathologyRequestExample)
 * status = #final
 * subject.reference = "Patient/12345"
-* performer = Reference(Practitioner)
-* specimen = Reference(PathologySpecimen)
+* performer.reference = "Practitioner/2346545"
+* specimen.reference = "Specimen/87689"
 * encounter.reference = "Fall/12345"
-* result = Reference(BasePathologyObservation)
-* conclusion = "Hemicolektomieresektat links mit einem differenzierten,partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden.."
-* conclusionCode = #pT3b
+* result = Reference(MacroExample)
+* conclusion = "Hemicolektomieresektat links mit einem differenzierten, partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden.."
+* conclusionCode = $SCT#399393006 
 * effective[x] = "2021-06-01"
-* imagingStudy = Reference(GenericPathologyFinding)
 * media.comment = "Ein 25cm langes, im Umfang bis zu 2,5cm messendes Colonresektat. Das Präperat wurde von ventral und dorsal fotodokumentiert"
-* media.link = Reference(AttachedImage)
+* media.link = Reference(ImageExample)
