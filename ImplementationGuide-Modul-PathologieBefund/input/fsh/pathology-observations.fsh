@@ -33,7 +33,7 @@ Description: "Abstract Observation to define common features of a main pathology
 //* effectiveDateTime 1.. MS
 // Wert
 * value[x] MS
-* value[x] only Quantity or CodeableConcept
+* value[x] only Quantity or CodeableConcept or string
 // Koerperstelle
 * bodySite MS
   * coding ^slicing.discriminator.type = #pattern
