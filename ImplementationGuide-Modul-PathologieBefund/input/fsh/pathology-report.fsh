@@ -6,9 +6,7 @@ Parent: DiagnosticReport
 Id: PathologyReport
 Title: "PathologyReport"
 Description: "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative"
-
-// set to draft
-* ^status = #draft
+* insert RuleSet1
 
 // ID
 * id MS
@@ -22,7 +20,8 @@ Description: "Defines the general pathology report structure for German hospital
 * identifier[Set-ID].value 1.. MS
 * identifier[Set-ID].system 1.. MS
 * identifier[Set-ID].type 1.. MS
-
+* identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
+/*
 * identifier[Set-ID].type.coding ^slicing.discriminator[0].type = #pattern
 * identifier[Set-ID].type.coding ^slicing.discriminator[0].path = "$this"
 * identifier[Set-ID].type.coding ^slicing.rules = #open
@@ -31,7 +30,7 @@ Description: "Defines the general pathology report structure for German hospital
 * identifier[Set-ID].type.coding[ascn-type].system 1..1 MS
 * identifier[Set-ID].type.coding[ascn-type].code 1..1 MS
 * identifier[Set-ID].type.coding[ascn-type].display MS
-
+*/
 // Versionsnummer
 * meta MS
 * meta.versionId MS
@@ -99,6 +98,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * insert RuleSet1
 * status MS
 * type MS
+* type = $LOINC#11526-1 "Pathology study"
 // Titel
 * title 1.. MS
 // Autor
@@ -116,6 +116,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * subject only Reference(Patient)
 
 // Entry referenziert nur auf die diagnostische Schlussfolgerung (PathologyReport)
+* section 1.. MS
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this"
 * section ^slicing.rules = #open
@@ -128,9 +129,9 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
       * code 1.. MS
   * entry 1.. MS
   * entry only Reference (PathologyReport)
-  * text 1.. MS
+  * text MS
   * title 1.. MS 
-  * title = "Diagnostische Schlussfolgerung"
+  * title ^fixedString = "Diagnostische Schlussfolgerung"
 
 // Example
 Instance: PathologyReportExample
@@ -138,17 +139,35 @@ InstanceOf: PathologyReport
 Usage: #example
 Title: "PathologyReportExample"
 Description: "Exemplarischer Befundbericht - 3"
-* identifier[Set-ID].value = "H2021.15692"
-* identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+* identifier[+].value = "H2021.15692"
+* identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+* identifier[=].type = $v2-0203#ACSN "Accession ID"
 * basedOn = Reference(PathologyRequestExample)
 * status = #final
 * subject.reference = "Patient/12345"
 * performer.reference = "Practitioner/2346545"
 * specimen.reference = "Specimen/87689"
-* encounter.reference = "Fall/12345"
+* encounter.reference = "Encounter/12345"
 * result = Reference(MacroExample)
 * conclusion = "Hemicolektomieresektat links mit einem differenzierten, partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden.."
 * conclusionCode = $SCT#399393006 
-* effective[x] = "2021-06-01"
+* effectiveDateTime = "2021-06-01"
 * media.comment = "Ein 25cm langes, im Umfang bis zu 2,5cm messendes Colonresektat. Das Präperat wurde von ventral und dorsal fotodokumentiert"
 * media.link = Reference(ImageExample)
+
+Instance: PathologyCompositionExample
+InstanceOf: PathologyComposition
+Usage: #example
+Title: "PathologyCompositionExample"
+Description: "tbd"
+* status = #final
+* type = $LOINC#11526-1 "Pathology study"
+* subject.reference = "Patient/34545"
+* date = "2021-06-08"
+* author[+].reference = "Practitioner/45756"
+* title = "Pathologie Befundbericht"
+* attester[+].mode = #legal
+* attester[=].party.reference = "Practitioner/765879"
+* section[+].title = "Diagnostische Schlussfolgerung"
+* section[=].code = $LOINC#22637-3 "Pathology report diagnosis"
+* section[=].entry = Reference(PathologyReportExample)

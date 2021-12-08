@@ -1,0 +1,56 @@
+{
+  "resourceType": "Composition",
+  "id": "PathologyCompositionExample",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyComposition"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "code": "11526-1",
+        "system": "http://loinc.org/",
+        "display": "Pathology study"
+      }
+    ]
+  },
+  "attester": [
+    {
+      "mode": "legal",
+      "party": {
+        "reference": "Practitioner/765879"
+      }
+    }
+  ],
+  "section": [
+    {
+      "title": "Diagnostische Schlussfolgerung",
+      "code": {
+        "coding": [
+          {
+            "code": "22637-3",
+            "system": "http://loinc.org/",
+            "display": "Pathology report diagnosis"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "reference": "DiagnosticReport/PathologyReportExample"
+        }
+      ]
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "Patient/34545"
+  },
+  "date": "2021-06-08",
+  "author": [
+    {
+      "reference": "Practitioner/45756"
+    }
+  ],
+  "title": "Pathologie Befundbericht"
+}
