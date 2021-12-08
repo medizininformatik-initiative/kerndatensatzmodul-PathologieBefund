@@ -170,6 +170,9 @@
           },
           {
             "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
           }
         ],
         "mustSupport": true
