@@ -96,7 +96,7 @@ Description: "Defines the general pathology report structure for German hospital
 * presentedForm MS
 // Diagnostische Schlussfolgerung
 * conclusion 1.. MS
-* conclusionCode 1.. MS
+* conclusionCode MS
 
 // -------------------------
 // Composition
