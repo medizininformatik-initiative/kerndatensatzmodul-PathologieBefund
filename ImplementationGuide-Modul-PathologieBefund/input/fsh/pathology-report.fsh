@@ -72,8 +72,19 @@ Description: "Defines the general pathology report structure for German hospital
 * specimen 1.. MS
 // Beobachtungsabschnitte bzw. Beobachtungen
 * result 1.. MS
+* result ^slicing.discriminator[+].type = #type
+* result ^slicing.discriminator[=].path = "$this"
+* result ^slicing.rules = #open
+* result contains 
+      intraoperative-observation 0..1 MS
+      and macroscopic-observation 0..1 MS
+      and microscopic-observation 0..1 MS
+      and additional-observation 0..* MS
+* result[intraoperative-observation] only Reference(IntraoperativeObservation)
+* result[macroscopic-observation] only Reference(MacroscopicObservation)
+* result[microscopic-observation] only Reference(MicroscopicObservation)
+* result[additional-observation] only Reference(GenericPathologyFinding)      
 // Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) 
-// TODO: kann auch raus wenn DICOM wirklich nicht notwendig
 * imagingStudy MS
 // Referenz zu angehaengten Bildern
 // TODO: Slicing fuer einzelne Bildtypen notwendig? Makro, Mikro, etc.
@@ -148,7 +159,7 @@ Description: "Exemplarischer Befundbericht - 3"
 * performer.reference = "Practitioner/2346545"
 * specimen.reference = "Specimen/87689"
 * encounter.reference = "Encounter/12345"
-* result = Reference(MacroExample)
+* result[+] = Reference(MacroExample)
 * conclusion = "Hemicolektomieresektat links mit einem differenzierten, partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden.."
 * conclusionCode = $SCT#399393006 
 * effectiveDateTime = "2021-06-01"
