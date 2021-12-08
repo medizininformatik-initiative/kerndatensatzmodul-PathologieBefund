@@ -21,3 +21,13 @@ Description: "Allgemeines Profil für eingebettetes Bild"
 * subject MS 
 * subject only Reference(PathologySpecimen)
 * content MS
+
+//Example
+Instance: ImageExample
+InstanceOf: AttachedImage
+Usage: #example
+Title: "ImageExample"
+Description: "Exemplarischer Befundbericht - 3"
+* status = #completed
+* content.contentType = #DICOM
+* content.url = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/image"

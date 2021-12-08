@@ -194,3 +194,25 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * text 1.. MS
   * title 1.. MS 
   * title = "Diagnostische Schlussfolgerung"
+
+// Example
+Instance: ReportExample
+InstanceOf: PathologyReport
+Usage: #example
+Title: "Report Example"
+Description: "Exemplarischer Befundbericht - 3"
+* identifier[Set-ID].value = "H2021.15692"
+* identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+* basedOn.reference = "Untersuchungsauftrag/12345"
+* status = #final
+* subject.reference = "Patient/12345"
+* performer = Reference(Practitioner)
+* specimen = Reference(PathologySpecimen)
+* encounter.reference = "Fall/12345"
+* result = Reference(BasePathologyObservation)
+* conclusion = "Hemicolektomieresektat links mit einem differenzierten,partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden.."
+* conclusionCode = #pT3b
+* effective[x] = "2021-06-01"
+* imagingStudy = Reference(GenericPathologyFinding)
+* media.comment = "Ein 25cm langes, im Umfang bis zu 2,5cm messendes Colonresektat. Das Präperat wurde von ventral und dorsal fotodokumentiert"
+* media.link = Reference(AttachedImage)
