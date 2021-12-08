@@ -70,5 +70,5 @@ Description: "tmp"
 // NOTE
 * note MS 
 // Direkt aus Patho
-* request 1..1 MS 
+* request MS 
 * request only Reference(PathologyServiceRequest)
