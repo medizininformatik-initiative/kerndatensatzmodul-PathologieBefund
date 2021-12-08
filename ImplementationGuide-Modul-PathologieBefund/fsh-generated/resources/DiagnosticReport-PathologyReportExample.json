@@ -1,6 +1,6 @@
 {
   "resourceType": "DiagnosticReport",
-  "id": "ReportExample",
+  "id": "PathologyReportExample",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyReport"
@@ -32,7 +32,7 @@
   },
   "basedOn": [
     {
-      "reference": "Untersuchungsauftrag/12345"
+      "reference": "ServiceRequest/PathologyRequestExample"
     }
   ],
   "status": "final",
@@ -41,12 +41,12 @@
   },
   "performer": [
     {
-      "reference": "Practitioner"
+      "reference": "Practitioner/2346545"
     }
   ],
   "specimen": [
     {
-      "reference": "PathologySpecimen"
+      "reference": "Specimen/87689"
     }
   ],
   "encounter": {
@@ -54,30 +54,26 @@
   },
   "result": [
     {
-      "reference": "BasePathologyObservation"
+      "reference": "Observation/MacroExample"
     }
   ],
-  "conclusion": "Hemicolektomieresektat links mit einem differenzierten,partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden..",
+  "conclusion": "Hemicolektomieresektat links mit einem differenzierten, partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden..",
   "conclusionCode": [
     {
       "coding": [
         {
-          "code": "pT3b"
+          "code": "399393006",
+          "system": "http://snomed.info/sct"
         }
       ]
     }
   ],
   "effective[x]": "2021-06-01",
-  "imagingStudy": [
-    {
-      "reference": "GenericPathologyFinding"
-    }
-  ],
   "media": [
     {
       "comment": "Ein 25cm langes, im Umfang bis zu 2,5cm messendes Colonresektat. Das Präperat wurde von ventral und dorsal fotodokumentiert",
       "link": {
-        "reference": "AttachedImage"
+        "reference": "Media/ImageExample"
       }
     }
   ]

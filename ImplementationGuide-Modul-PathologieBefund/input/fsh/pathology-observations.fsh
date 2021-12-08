@@ -136,34 +136,13 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * derivedFrom contains microscopic-ROI 0..1 MS
 * derivedFrom[microscopic-ROI] only Reference(AttachedImage)
 
-/*
-// DiagnosticConclusion
-Profile: DiagnosticConclusion
-Parent: DiagnosticReport
-Id: DiagnosticConclusion
-Title: "DiagnosticConclusion"
-Description: "tbd"
-* insert RuleSet1
-*/
 
 // Examples
 
-Instance: BaseObservationExample
-InstanceOf: BasePathologyObservation
-Usage: #example
-Title: "BaseObservationExample"
-Description: "Exemplarischer Befundbericht - 3"
-* identifier.value = "H2021.15692"
-* code.coding = $SCT#82619000 "Left colectomy (procedure)"
-* status = #final
-* basedOn = Reference(PathologyServiceRequest)
-* specimen = Reference(PathologySpecimen)
-* subject = Reference(Patient)
-
-Instance: ProcedureExample
+Instance: ProcedureStepsExample
 InstanceOf: ProcedureSteps
 Usage: #example
-Title: "ProcedureExample"
+Title: "ProcedureStepsExample"
 Description: "Exemplarischer Befundbericht - 3"
 * status = #final
 * code = $LOINC#46059-2 "Special treatments and procedures section"

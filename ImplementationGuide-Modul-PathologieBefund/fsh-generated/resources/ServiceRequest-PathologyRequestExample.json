@@ -1,6 +1,6 @@
 {
   "resourceType": "ServiceRequest",
-  "id": "RequestExample",
+  "id": "PathologyRequestExample",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyServiceRequest"
@@ -10,9 +10,9 @@
     {
       "coding": [
         {
-          "code": "108252007",
+          "code": "721966001",
           "system": "http://snomed.info/sct",
-          "display": "Laboratory procedure (procedure)"
+          "display": "Pathology order (record artifact)"
         }
       ]
     }
@@ -28,7 +28,7 @@
           }
         ]
       },
-      "value": "12345",
+      "value": "KHXX_ENDO_18.123451",
       "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
     },
     {
@@ -41,7 +41,7 @@
           }
         ]
       },
-      "value": "H2021.15692",
+      "value": "E18-321654",
       "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
     }
   ],
@@ -51,14 +51,23 @@
     "reference": "Patient/12345"
   },
   "encounter": {
-    "reference": "Fall/12345"
+    "reference": "Encounter/87687"
   },
   "requester": {
-    "reference": "Practitioner"
+    "reference": "Practitioner/34456"
   },
   "specimen": [
     {
-      "reference": "PathologySpecimen"
+      "reference": "Specimen/87689"
     }
-  ]
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "82619000",
+        "system": "http://snomed.info/sct",
+        "display": "Left colectomy (procedure)"
+      }
+    ]
+  }
 }

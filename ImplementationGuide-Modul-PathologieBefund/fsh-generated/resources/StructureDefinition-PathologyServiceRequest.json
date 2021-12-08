@@ -226,6 +226,15 @@
         "id": "ServiceRequest.requisition.type",
         "path": "ServiceRequest.requisition.type",
         "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "PLAC",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "display": "Placer Identifier"
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
@@ -243,6 +252,11 @@
       {
         "id": "ServiceRequest.status",
         "path": "ServiceRequest.status",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
         "mustSupport": true
       },
       {
@@ -279,6 +293,11 @@
         "mustSupport": true
       },
       {
+        "id": "ServiceRequest.category:pathology.coding",
+        "path": "ServiceRequest.category.coding",
+        "mustSupport": true
+      },
+      {
         "id": "ServiceRequest.category:pathology.coding.system",
         "path": "ServiceRequest.category.coding.system",
         "mustSupport": true
@@ -291,6 +310,11 @@
       {
         "id": "ServiceRequest.category:pathology.coding.display",
         "path": "ServiceRequest.category.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
         "mustSupport": true
       },
       {
@@ -335,6 +359,63 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonCode",
+        "path": "ServiceRequest.reasonCode",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonCode:Fragestellung",
+        "path": "ServiceRequest.reasonCode",
+        "sliceName": "Fragestellung",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonCode:Ueberweisungsgrund",
+        "path": "ServiceRequest.reasonCode",
+        "sliceName": "Ueberweisungsgrund",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonReference",
+        "path": "ServiceRequest.reasonReference",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo",
+        "path": "ServiceRequest.supportingInfo",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/Condition"
             ]
           }
         ],
