@@ -54,7 +54,16 @@
   },
   "result": [
     {
-      "reference": "MacroExample"
+      "reference": "Observation/MacroTumorSizeDim1"
+    },
+    {
+      "reference": "Observation/MacroTumorSizeDim2"
+    },
+    {
+      "reference": "Observation/MacroTumorSizeDim3"
+    },
+    {
+      "reference": "Observation/DiagnosticConclusion1"
     }
   ],
   "conclusion": "Hemicolektomieresektat links mit einem differenzierten, partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden..",

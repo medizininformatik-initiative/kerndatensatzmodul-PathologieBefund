@@ -193,3 +193,16 @@ Description: "Example for a macroscopic Observation - third dimension of tumor s
 * component[=].valueQuantity.unit = "mm"
 * component[=].valueQuantity.system = $UCUM
 * component[=].valueQuantity.code = #mm
+
+Instance: DiagnosticConclusion1
+InstanceOf: DiagnosticConclusion
+Usage: #example
+Title: "DiagnosticConclusion1"
+Description: "Example for a diagnostic conclusion"
+* status = #final
+* code.coding = $LOINC#22637-3 "Pathology report diagnosis"
+* derivedFrom[+] = Reference(MacroTumorSizeDim1)
+* derivedFrom[+] = Reference(MacroTumorSizeDim2)
+* derivedFrom[+] = Reference(MacroTumorSizeDim3)
+* component[+].code = $SCT#35917007 "Adenocarcinoma, no subtype (morphologic abnormality)"
+* component[=].valueString = "Fokal zirkumfentiell wachsenden und stenosierenden Adenocarcinom"
