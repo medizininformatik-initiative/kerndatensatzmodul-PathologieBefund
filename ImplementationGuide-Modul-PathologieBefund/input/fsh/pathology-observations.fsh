@@ -49,20 +49,6 @@ Description: "Abstract Observation to define common features of a main pathology
 * specimen MS
 
 
-// ProcedureSteps
-Profile: ProcedureSteps
-Parent: BasePathologyObservation
-Id: ProcedureSteps
-Title: "ProcedureSteps"
-Description: "Concrete Observation which contains the description of specimen collection and processing. Based on IHE PaLM APSR - ProcedureSteps"
-* insert RuleSet1
-* code.coding.code ^fixedCode = #46059-2
-* code.coding.system ^fixedUri = $LOINC
-* code.coding.display ^fixedString = "Special treatments and procedures section"
-* specimen 1.. MS
-* note 1.. MS
-
-
 // PathologyFinding
 Profile: PathologyFinding
 Parent: BasePathologyObservation
@@ -138,16 +124,6 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 
 
 // Examples
-
-Instance: ProcedureStepsExample
-InstanceOf: ProcedureSteps
-Usage: #example
-Title: "ProcedureStepsExample"
-Description: "Exemplarischer Befundbericht - 3"
-* status = #final
-* code = $LOINC#46059-2 "Special treatments and procedures section"
-* note.text = "Hemicolektomie links, onkologische Resektion"
-* specimen = Reference(PathologySpecimen)
 
 Instance: MacroExample
 InstanceOf: MacroscopicObservation
