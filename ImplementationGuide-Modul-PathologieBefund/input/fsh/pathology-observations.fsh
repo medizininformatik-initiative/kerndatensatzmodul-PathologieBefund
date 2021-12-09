@@ -44,7 +44,6 @@ Description: "Abstract Observation to define common features of a main pathology
 // Referenz - Probe
 * specimen MS
 
-
 // PathologyFinding
 Profile: PathologyFinding
 Parent: BasePathologyObservation
@@ -135,7 +134,13 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
   * code ^fixedCode = #22637-3
   * system ^fixedUri = $LOINC
   * display ^fixedString = "Pathology report diagnosis"
-
+// Observation the Diagnostic Conclusion derives from
+* derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding)
+// Diagnostic text
+* component 1.. 
+  * code MS
+  * value[x] only string or Quantity or CodeableConcept
+  * dataAbsentReason MS
 
 
 // Examples
