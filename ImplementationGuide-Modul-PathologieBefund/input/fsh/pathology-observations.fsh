@@ -1,4 +1,6 @@
+//-----------------------------------------
 // BasePathologyObservation
+//-----------------------------------------
 // Entweder neue Base Observation profilieren oder wenn passend Laboruntersuchung aus Modul Labor als Base Observation nehmen
 Profile: BasePathologyObservation
 Parent: Observation
@@ -21,19 +23,15 @@ Description: "Abstract Observation to define common features of a main pathology
   * coding[laboratory-category] = $obs-category#laboratory
 // Code
 * code MS
-  * coding MS
-    * code MS
-    * system MS
+  * coding 1.. MS
+    * code 1.. MS
+    * system 1.. MS
 // Referenz - Patient:in
 * subject MS
 * subject only Reference(Patient)
 // Befundzeit
 * effective[x] MS
 * effective[x] only dateTime
-//* effectiveDateTime 1.. MS
-// Wert
-* value[x] MS
-* value[x] only Quantity or CodeableConcept or string
 // Koerperstelle
 * bodySite MS
   * coding ^slicing.discriminator.type = #pattern
@@ -47,30 +45,21 @@ Description: "Abstract Observation to define common features of a main pathology
 * method MS
 // Referenz - Probe
 * specimen MS
+// Components fuer die Erfassung der Ergebnisse
+* component 1.. 
+  * code MS
+  * value[x] only string or Quantity or CodeableConcept
+  * dataAbsentReason MS
 
-
-// ProcedureSteps
-Profile: ProcedureSteps
+//-------------------------------------------
+// PathologyFinding
+//-------------------------------------------
+Profile: PathologyFinding
 Parent: BasePathologyObservation
-Id: ProcedureSteps
-Title: "ProcedureSteps"
-Description: "Concrete Observation which contains the description of specimen collection and processing. Based on IHE PaLM APSR - ProcedureSteps"
-* insert RuleSet1
-* code.coding.code ^fixedCode = #46059-2
-* code.coding.system ^fixedUri = $LOINC
-* code.coding.display ^fixedString = "Special treatments and procedures section"
-* specimen 1.. MS
-* note 1.. MS
-
-
-// GenericPathologyFinding
-Profile: GenericPathologyFinding
-Parent: BasePathologyObservation
-Id: GenericPathologyFinding
-Title: "GenericPathologyFinding"
+Id: PathologyFinding
+Title: "PathologyFinding"
 Description: "Concrete Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
 * insert RuleSet1
-// tmp - later custom VS (extensible)
 * code.coding from $LOINC (preferred)
 // Moegliche Unterbeobachtungen
 * hasMember MS
@@ -78,28 +67,33 @@ Description: "Concrete Observation to describe a generic pathology finding, base
 * derivedFrom MS
 * derivedFrom only Reference(AttachedImage)
 
+//--------------------------------------------
 // IntraoperativeObservation
+//--------------------------------------------
 Profile: IntraoperativeObservation
-Parent: GenericPathologyFinding
+Parent: PathologyFinding
 Id: IntraoperativeObservation
 Title: "IntraoperativeObservation"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert RuleSet1
-* code.coding.code ^fixedCode = #83321-0 
-* code.coding.system ^fixedUri = $LOINC
-* code.coding.display = "Pathology report intraoperative observation in Specimen Document"
-* derivedFrom only Reference(AttachedImage)
+* code.coding 
+  * code ^fixedCode = #83321-0 
+  * system ^fixedUri = $LOINC
+  * display = "Pathology report intraoperative observation in Specimen Document"
 
+//--------------------------------------------
 // Macroscopic Observation
+//--------------------------------------------
 Profile: MacroscopicObservation
-Parent: GenericPathologyFinding
+Parent: PathologyFinding
 Id: MacroscopicObservation
 Title: "MacroscopicObservation"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert RuleSet1
-* code.coding.code ^fixedCode = #22634-0
-* code.coding.system ^fixedUri = $LOINC
-* code.coding.display ^fixedString = "Pathology report gross observation Narrative"
+* code.coding
+  * code ^fixedCode = #22634-0
+  * system ^fixedUri = $LOINC
+  * display ^fixedString = "Pathology report gross observation Narrative"
 // Makro-Bild
 * derivedFrom ^slicing.discriminator[0].type = #pattern
 * derivedFrom ^slicing.discriminator[0].path = "$this"
@@ -113,16 +107,19 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * derivedFrom contains macroscopic-sketch 0..1 MS
 * derivedFrom[macroscopic-sketch] only Reference(AttachedImage)
 
+//-------------------------------------
 // Microscopic Observation
+//-------------------------------------
 Profile: MicroscopicObservation
-Parent: GenericPathologyFinding
+Parent: PathologyFinding
 Id: MicroscopicObservation
 Title: "MicroscopicObservation"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert RuleSet1
-* code.coding.code ^fixedCode = #22635-7
-* code.coding.system ^fixedUri = $LOINC
-* code.coding.display ^fixedString = "Pathology report microscopic observation Narrative Other stain"
+* code.coding
+  * code ^fixedCode = #22635-7
+  * system ^fixedUri = $LOINC
+  * display ^fixedString = "Pathology report microscopic observation Narrative Other stain"
 // Mikro-Bild
 * derivedFrom ^slicing.discriminator[0].type = #pattern
 * derivedFrom ^slicing.discriminator[0].path = "$this"
@@ -136,24 +133,63 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * derivedFrom contains microscopic-ROI 0..1 MS
 * derivedFrom[microscopic-ROI] only Reference(AttachedImage)
 
+//--------------------------------
+// Diagnostic Conclusion
+//--------------------------------
+Profile: DiagnosticConclusion
+Parent: BasePathologyObservation	
+Id: DiagnosticConclusion
+Title: "DiagnosticConclusion"
+Description: "Grouper profile to collect Diagnostic Conclusion information"
+* insert RuleSet1
+* code.coding
+  * code ^fixedCode = #22637-3
+  * system ^fixedUri = $LOINC
+  * display ^fixedString = "Pathology report diagnosis"
+// Observation the Diagnostic Conclusion derives from
+* derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding)
 
+//---------------------------------
 // Examples
-
-Instance: ProcedureStepsExample
-InstanceOf: ProcedureSteps
-Usage: #example
-Title: "ProcedureStepsExample"
-Description: "Exemplarischer Befundbericht - 3"
-* status = #final
-* code = $LOINC#46059-2 "Special treatments and procedures section"
-* note.text = "Hemicolektomie links, onkologische Resektion"
-* specimen = Reference(PathologySpecimen)
-
-Instance: MacroExample
+//---------------------------------
+Instance: MacroTumorSizeDim1
 InstanceOf: MacroscopicObservation
 Usage: #example
-Title: "MacroExample"
-Description: "Exemplarischer Befundbericht - 3"
+Title: "MacroTumorSizeDim1"
+Description: "Example for a macroscopic Observation - first dimension of tumor size"
 * status = #final
 * code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
 * derivedFrom[macroscopic-image] = Reference(AttachedImage)
+* component[+].code = $SCT#372299002 "Tumor size, dimension 1"
+* component[=].valueQuantity.value = 25
+* component[=].valueQuantity.unit = "mm"
+* component[=].valueQuantity.system = $UCUM
+* component[=].valueQuantity.code = #mm
+
+Instance: MacroTumorSizeDim2
+InstanceOf: MacroscopicObservation
+Usage: #example
+Title: "MacroTumorSizeDim2"
+Description: "Example for a macroscopic Observation - second dimension of tumor size"
+* status = #final
+* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
+* derivedFrom[macroscopic-image] = Reference(AttachedImage)
+* component[+].code = $SCT#372300005 "Tumor size, dimension 2"
+* component[=].valueQuantity.value = 30
+* component[=].valueQuantity.unit = "mm"
+* component[=].valueQuantity.system = $UCUM
+* component[=].valueQuantity.code = #mm
+
+Instance: MacroTumorSizeDim3
+InstanceOf: MacroscopicObservation
+Usage: #example
+Title: "MacroTumorSizeDim3"
+Description: "Example for a macroscopic Observation - third dimension of tumor size"
+* status = #final
+* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
+* derivedFrom[macroscopic-image] = Reference(AttachedImage)
+* component[+].code = $SCT#372301009 "Tumor size, dimension 3"
+* component[=].valueQuantity.value = 7
+* component[=].valueQuantity.unit = "mm"
+* component[=].valueQuantity.system = $UCUM
+* component[=].valueQuantity.code = #mm

@@ -1,0 +1,53 @@
+{
+  "resourceType": "Observation",
+  "id": "MacroTumorSizeDim3",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/MacroscopicObservation"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "laboratory",
+          "system": "http://hl7.org/fhir/codesystem-observation-category.html"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org/",
+        "code": "22634-0",
+        "display": "Pathology report gross observation Narrative"
+      }
+    ]
+  },
+  "status": "final",
+  "derivedFrom": [
+    {
+      "reference": "AttachedImage"
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "372301009",
+            "system": "http://snomed.info/sct",
+            "display": "Tumor size, dimension 3"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 7,
+        "unit": "mm",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      }
+    }
+  ]
+}
