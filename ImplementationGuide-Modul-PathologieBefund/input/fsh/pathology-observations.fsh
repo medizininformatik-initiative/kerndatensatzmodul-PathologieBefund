@@ -21,19 +21,15 @@ Description: "Abstract Observation to define common features of a main pathology
   * coding[laboratory-category] = $obs-category#laboratory
 // Code
 * code MS
-  * coding MS
-    * code MS
-    * system MS
+  * coding 1.. MS
+    * code 1.. MS
+    * system 1.. MS
 // Referenz - Patient:in
 * subject MS
 * subject only Reference(Patient)
 // Befundzeit
 * effective[x] MS
 * effective[x] only dateTime
-//* effectiveDateTime 1.. MS
-// Wert
-* value[x] MS
-* value[x] only Quantity or CodeableConcept or string
 // Koerperstelle
 * bodySite MS
   * coding ^slicing.discriminator.type = #pattern
@@ -58,6 +54,9 @@ Description: "Concrete Observation to describe a generic pathology finding, base
 * insert RuleSet1
 // tmp - later custom VS (extensible)
 * code.coding from $LOINC (preferred)
+// Wert
+* value[x] MS
+* value[x] only Quantity or CodeableConcept or string
 // Moegliche Unterbeobachtungen
 * hasMember MS
 // Referenz - Eingebettetes Bild
@@ -71,9 +70,10 @@ Id: IntraoperativeObservation
 Title: "IntraoperativeObservation"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert RuleSet1
-* code.coding.code ^fixedCode = #83321-0 
-* code.coding.system ^fixedUri = $LOINC
-* code.coding.display = "Pathology report intraoperative observation in Specimen Document"
+* code.coding 
+  * code ^fixedCode = #83321-0 
+  * system ^fixedUri = $LOINC
+  * display = "Pathology report intraoperative observation in Specimen Document"
 * derivedFrom only Reference(AttachedImage)
 
 // Macroscopic Observation
@@ -83,9 +83,10 @@ Id: MacroscopicObservation
 Title: "MacroscopicObservation"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert RuleSet1
-* code.coding.code ^fixedCode = #22634-0
-* code.coding.system ^fixedUri = $LOINC
-* code.coding.display ^fixedString = "Pathology report gross observation Narrative"
+* code.coding
+  * code ^fixedCode = #22634-0
+  * system ^fixedUri = $LOINC
+  * display ^fixedString = "Pathology report gross observation Narrative"
 // Makro-Bild
 * derivedFrom ^slicing.discriminator[0].type = #pattern
 * derivedFrom ^slicing.discriminator[0].path = "$this"
@@ -106,9 +107,10 @@ Id: MicroscopicObservation
 Title: "MicroscopicObservation"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert RuleSet1
-* code.coding.code ^fixedCode = #22635-7
-* code.coding.system ^fixedUri = $LOINC
-* code.coding.display ^fixedString = "Pathology report microscopic observation Narrative Other stain"
+* code.coding
+  * code ^fixedCode = #22635-7
+  * system ^fixedUri = $LOINC
+  * display ^fixedString = "Pathology report microscopic observation Narrative Other stain"
 // Mikro-Bild
 * derivedFrom ^slicing.discriminator[0].type = #pattern
 * derivedFrom ^slicing.discriminator[0].path = "$this"
@@ -121,6 +123,19 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * derivedFrom ^slicing.rules = #open
 * derivedFrom contains microscopic-ROI 0..1 MS
 * derivedFrom[microscopic-ROI] only Reference(AttachedImage)
+
+// Diagnostic Conclusion
+Profile: DiagnosticConclusion
+Parent: BasePathologyObservation	
+Id: DiagnosticConclusion
+Title: "DiagnosticConclusion"
+Description: "Grouper profile to collect Diagnostic Conclusion information"
+* insert RuleSet1
+* code.coding
+  * code ^fixedCode = #22637-3
+  * system ^fixedUri = $LOINC
+  * display ^fixedString = "Pathology report diagnosis"
+
 
 
 // Examples

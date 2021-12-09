@@ -126,16 +126,19 @@
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Observation.code.coding.system",
         "path": "Observation.code.coding.system",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Observation.code.coding.code",
         "path": "Observation.code.coding.code",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -157,22 +160,6 @@
         "type": [
           {
             "code": "dateTime"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "type": [
-          {
-            "code": "Quantity"
-          },
-          {
-            "code": "CodeableConcept"
-          },
-          {
-            "code": "string"
           }
         ],
         "mustSupport": true

@@ -16,16 +16,16 @@
       ]
     }
   ],
-  "status": "final",
   "code": {
     "coding": [
       {
-        "code": "22634-0",
         "system": "http://loinc.org/",
+        "code": "22634-0",
         "display": "Pathology report gross observation Narrative"
       }
     ]
   },
+  "status": "final",
   "derivedFrom": [
     {
       "reference": "AttachedImage"
