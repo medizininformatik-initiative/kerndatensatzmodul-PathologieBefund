@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MacroExample",
+  "id": "MacroTumorSizeDim2",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/MacroscopicObservation"
@@ -29,6 +29,25 @@
   "derivedFrom": [
     {
       "reference": "AttachedImage"
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "372300005",
+            "system": "http://snomed.info/sct",
+            "display": "Tumor size, dimension 2"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 30,
+        "unit": "mm",
+        "system": "http://unitsofmeasure.org",
+        "code": "mm"
+      }
     }
   ]
 }

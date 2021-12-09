@@ -1,4 +1,6 @@
+//-----------------------------------------
 // BasePathologyObservation
+//-----------------------------------------
 // Entweder neue Base Observation profilieren oder wenn passend Laboruntersuchung aus Modul Labor als Base Observation nehmen
 Profile: BasePathologyObservation
 Parent: Observation
@@ -43,26 +45,31 @@ Description: "Abstract Observation to define common features of a main pathology
 * method MS
 // Referenz - Probe
 * specimen MS
+// Components fuer die Erfassung der Ergebnisse
+* component 1.. 
+  * code MS
+  * value[x] only string or Quantity or CodeableConcept
+  * dataAbsentReason MS
 
+//-------------------------------------------
 // PathologyFinding
+//-------------------------------------------
 Profile: PathologyFinding
 Parent: BasePathologyObservation
 Id: PathologyFinding
 Title: "PathologyFinding"
 Description: "Concrete Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
 * insert RuleSet1
-// tmp - later custom VS (extensible)
 * code.coding from $LOINC (preferred)
-// Wert
-* value[x] MS
-* value[x] only Quantity or CodeableConcept or string
 // Moegliche Unterbeobachtungen
 * hasMember MS
 // Referenz - Eingebettetes Bild
 * derivedFrom MS
 * derivedFrom only Reference(AttachedImage)
 
+//--------------------------------------------
 // IntraoperativeObservation
+//--------------------------------------------
 Profile: IntraoperativeObservation
 Parent: PathologyFinding
 Id: IntraoperativeObservation
@@ -73,9 +80,10 @@ Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
   * code ^fixedCode = #83321-0 
   * system ^fixedUri = $LOINC
   * display = "Pathology report intraoperative observation in Specimen Document"
-* derivedFrom only Reference(AttachedImage)
 
+//--------------------------------------------
 // Macroscopic Observation
+//--------------------------------------------
 Profile: MacroscopicObservation
 Parent: PathologyFinding
 Id: MacroscopicObservation
@@ -99,7 +107,9 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * derivedFrom contains macroscopic-sketch 0..1 MS
 * derivedFrom[macroscopic-sketch] only Reference(AttachedImage)
 
+//-------------------------------------
 // Microscopic Observation
+//-------------------------------------
 Profile: MicroscopicObservation
 Parent: PathologyFinding
 Id: MicroscopicObservation
@@ -123,7 +133,9 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * derivedFrom contains microscopic-ROI 0..1 MS
 * derivedFrom[microscopic-ROI] only Reference(AttachedImage)
 
+//--------------------------------
 // Diagnostic Conclusion
+//--------------------------------
 Profile: DiagnosticConclusion
 Parent: BasePathologyObservation	
 Id: DiagnosticConclusion
@@ -136,20 +148,48 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
   * display ^fixedString = "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding)
-// Diagnostic text
-* component 1.. 
-  * code MS
-  * value[x] only string or Quantity or CodeableConcept
-  * dataAbsentReason MS
 
-
+//---------------------------------
 // Examples
-
-Instance: MacroExample
+//---------------------------------
+Instance: MacroTumorSizeDim1
 InstanceOf: MacroscopicObservation
 Usage: #example
-Title: "MacroExample"
-Description: "Exemplarischer Befundbericht - 3"
+Title: "MacroTumorSizeDim1"
+Description: "Example for a macroscopic Observation - first dimension of tumor size"
 * status = #final
 * code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
 * derivedFrom[macroscopic-image] = Reference(AttachedImage)
+* component[+].code = $SCT#372299002 "Tumor size, dimension 1"
+* component[=].valueQuantity.value = 25
+* component[=].valueQuantity.unit = "mm"
+* component[=].valueQuantity.system = $UCUM
+* component[=].valueQuantity.code = #mm
+
+Instance: MacroTumorSizeDim2
+InstanceOf: MacroscopicObservation
+Usage: #example
+Title: "MacroTumorSizeDim2"
+Description: "Example for a macroscopic Observation - second dimension of tumor size"
+* status = #final
+* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
+* derivedFrom[macroscopic-image] = Reference(AttachedImage)
+* component[+].code = $SCT#372300005 "Tumor size, dimension 2"
+* component[=].valueQuantity.value = 30
+* component[=].valueQuantity.unit = "mm"
+* component[=].valueQuantity.system = $UCUM
+* component[=].valueQuantity.code = #mm
+
+Instance: MacroTumorSizeDim3
+InstanceOf: MacroscopicObservation
+Usage: #example
+Title: "MacroTumorSizeDim3"
+Description: "Example for a macroscopic Observation - third dimension of tumor size"
+* status = #final
+* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
+* derivedFrom[macroscopic-image] = Reference(AttachedImage)
+* component[+].code = $SCT#372301009 "Tumor size, dimension 3"
+* component[=].valueQuantity.value = 7
+* component[=].valueQuantity.unit = "mm"
+* component[=].valueQuantity.system = $UCUM
+* component[=].valueQuantity.code = #mm

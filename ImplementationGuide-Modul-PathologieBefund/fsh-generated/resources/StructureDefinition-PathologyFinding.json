@@ -66,22 +66,6 @@
         }
       },
       {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "type": [
-          {
-            "code": "Quantity"
-          },
-          {
-            "code": "CodeableConcept"
-          },
-          {
-            "code": "string"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "mustSupport": true

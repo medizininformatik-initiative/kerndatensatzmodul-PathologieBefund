@@ -6,6 +6,7 @@ Alias: $obs-category = http://hl7.org/fhir/codesystem-observation-category.html
 Alias: $icd-o-3 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $v2-0916 = http://terminology.hl7.org/ValueSet/v2-0916
 Alias: $media-type = http://hl7.org/fhir/codesystem-media-type.html 
+Alias: $UCUM = http://unitsofmeasure.org
 // Biobank Terminologien
 Alias: $bio-probenart = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/probenart
 Alias: $bio-bodystructure = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/sct-body-structures
