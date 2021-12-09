@@ -249,7 +249,7 @@
         "path": "DiagnosticReport.result",
         "sliceName": "intraoperative-observation",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "Reference",
@@ -265,7 +265,7 @@
         "path": "DiagnosticReport.result",
         "sliceName": "macroscopic-observation",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "Reference",
@@ -281,7 +281,7 @@
         "path": "DiagnosticReport.result",
         "sliceName": "microscopic-observation",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "Reference",
@@ -303,6 +303,22 @@
             "code": "Reference",
             "targetProfile": [
               "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyFinding"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.result:diagnostic-conclusion",
+        "path": "DiagnosticReport.result",
+        "sliceName": "diagnostic-conclusion",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/DiagnosticConclusion"
             ]
           }
         ],
