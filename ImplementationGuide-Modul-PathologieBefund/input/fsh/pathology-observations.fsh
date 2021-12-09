@@ -63,11 +63,11 @@ Description: "Concrete Observation which contains the description of specimen co
 * note 1.. MS
 
 
-// GenericPathologyFinding
-Profile: GenericPathologyFinding
+// PathologyFinding
+Profile: PathologyFinding
 Parent: BasePathologyObservation
-Id: GenericPathologyFinding
-Title: "GenericPathologyFinding"
+Id: PathologyFinding
+Title: "PathologyFinding"
 Description: "Concrete Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
 * insert RuleSet1
 // tmp - later custom VS (extensible)
@@ -80,7 +80,7 @@ Description: "Concrete Observation to describe a generic pathology finding, base
 
 // IntraoperativeObservation
 Profile: IntraoperativeObservation
-Parent: GenericPathologyFinding
+Parent: PathologyFinding
 Id: IntraoperativeObservation
 Title: "IntraoperativeObservation"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
@@ -92,7 +92,7 @@ Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 
 // Macroscopic Observation
 Profile: MacroscopicObservation
-Parent: GenericPathologyFinding
+Parent: PathologyFinding
 Id: MacroscopicObservation
 Title: "MacroscopicObservation"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
@@ -115,7 +115,7 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 
 // Microscopic Observation
 Profile: MicroscopicObservation
-Parent: GenericPathologyFinding
+Parent: PathologyFinding
 Id: MicroscopicObservation
 Title: "MicroscopicObservation"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"

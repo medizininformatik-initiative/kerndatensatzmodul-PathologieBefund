@@ -83,7 +83,7 @@ Description: "Defines the general pathology report structure for German hospital
 * result[intraoperative-observation] only Reference(IntraoperativeObservation)
 * result[macroscopic-observation] only Reference(MacroscopicObservation)
 * result[microscopic-observation] only Reference(MicroscopicObservation)
-* result[additional-observation] only Reference(GenericPathologyFinding)      
+* result[additional-observation] only Reference(PathologyFinding)      
 // Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) 
 * imagingStudy MS
 // Referenz zu angehaengten Bildern

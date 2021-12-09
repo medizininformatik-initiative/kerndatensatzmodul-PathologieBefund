@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GenericPathologyFinding",
+  "id": "PathologyFinding",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,10 +11,10 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/GenericPathologyFinding",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyFinding",
   "version": "0.1.0",
-  "name": "GenericPathologyFinding",
-  "title": "GenericPathologyFinding",
+  "name": "PathologyFinding",
+  "title": "PathologyFinding",
   "status": "draft",
   "description": "Concrete Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section",
   "fhirVersion": "4.0.1",
