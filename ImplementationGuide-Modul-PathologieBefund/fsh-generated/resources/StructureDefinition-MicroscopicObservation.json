@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/MicroscopicObservation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicObservation",
   "version": "0.1.0",
   "name": "MicroscopicObservation",
   "title": "MicroscopicObservation",
@@ -53,7 +53,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyFinding",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyFinding",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -73,37 +73,16 @@
         "fixedString": "Pathology report microscopic observation Narrative Other stain"
       },
       {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            },
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Observation.derivedFrom:microscopic-image",
-        "path": "Observation.derivedFrom",
-        "sliceName": "microscopic-image",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.derivedFrom:microscopic-ROI",
-        "path": "Observation.derivedFrom",
-        "sliceName": "microscopic-ROI",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicObservation"
+            ]
+          }
+        ]
       }
     ]
   }

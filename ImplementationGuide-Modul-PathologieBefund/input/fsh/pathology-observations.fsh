@@ -46,7 +46,7 @@ Description: "Abstract Observation to define common features of a main pathology
 // Referenz - Probe
 * specimen MS
 // Components fuer die Erfassung der Ergebnisse
-* component 1.. 
+* component 0.. 
   * code MS
   * value[x] only string or Quantity or CodeableConcept
   * dataAbsentReason MS
@@ -80,6 +80,8 @@ Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
   * code ^fixedCode = #83321-0 
   * system ^fixedUri = $LOINC
   * display = "Pathology report intraoperative observation in Specimen Document"
+// Grouper
+* hasMember only Reference(IntraoperativeObservation)
 
 //--------------------------------------------
 // Macroscopic Observation
@@ -94,18 +96,8 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
   * code ^fixedCode = #22634-0
   * system ^fixedUri = $LOINC
   * display ^fixedString = "Pathology report gross observation Narrative"
-// Makro-Bild
-* derivedFrom ^slicing.discriminator[0].type = #pattern
-* derivedFrom ^slicing.discriminator[0].path = "$this"
-* derivedFrom ^slicing.rules = #open
-* derivedFrom contains macroscopic-image 0..1 MS
-* derivedFrom[macroscopic-image] only Reference(AttachedImage)
-// Skizze
-* derivedFrom ^slicing.discriminator[1].type = #pattern
-* derivedFrom ^slicing.discriminator[1].path = "$this"
-* derivedFrom ^slicing.rules = #open
-* derivedFrom contains macroscopic-sketch 0..1 MS
-* derivedFrom[macroscopic-sketch] only Reference(AttachedImage)
+// Grouper
+* hasMember only Reference(MacroscopicObservation)
 
 //-------------------------------------
 // Microscopic Observation
@@ -120,18 +112,8 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
   * code ^fixedCode = #22635-7
   * system ^fixedUri = $LOINC
   * display ^fixedString = "Pathology report microscopic observation Narrative Other stain"
-// Mikro-Bild
-* derivedFrom ^slicing.discriminator[0].type = #pattern
-* derivedFrom ^slicing.discriminator[0].path = "$this"
-* derivedFrom ^slicing.rules = #open
-* derivedFrom contains microscopic-image 0..1 MS
-* derivedFrom[microscopic-image] only Reference(AttachedImage)
-// ROI
-* derivedFrom ^slicing.discriminator[1].type = #pattern
-* derivedFrom ^slicing.discriminator[1].path = "$this"
-* derivedFrom ^slicing.rules = #open
-* derivedFrom contains microscopic-ROI 0..1 MS
-* derivedFrom[microscopic-ROI] only Reference(AttachedImage)
+// Grouper
+* hasMember only Reference(MicroscopicObservation)
 
 //--------------------------------
 // Diagnostic Conclusion
@@ -159,7 +141,7 @@ Title: "MacroTumorSizeDim1"
 Description: "Example for a macroscopic Observation - first dimension of tumor size"
 * status = #final
 * code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
-* derivedFrom[macroscopic-image] = Reference(AttachedImage)
+* derivedFrom[+] = Reference(AttachedImage)
 * component[+].code = $SCT#372299002 "Tumor size, dimension 1"
 * component[=].valueQuantity.value = 25
 * component[=].valueQuantity.unit = "mm"
@@ -173,7 +155,7 @@ Title: "MacroTumorSizeDim2"
 Description: "Example for a macroscopic Observation - second dimension of tumor size"
 * status = #final
 * code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
-* derivedFrom[macroscopic-image] = Reference(AttachedImage)
+* derivedFrom[+] = Reference(AttachedImage)
 * component[+].code = $SCT#372300005 "Tumor size, dimension 2"
 * component[=].valueQuantity.value = 30
 * component[=].valueQuantity.unit = "mm"
@@ -187,22 +169,31 @@ Title: "MacroTumorSizeDim3"
 Description: "Example for a macroscopic Observation - third dimension of tumor size"
 * status = #final
 * code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
-* derivedFrom[macroscopic-image] = Reference(AttachedImage)
+* derivedFrom[+] = Reference(AttachedImage)
 * component[+].code = $SCT#372301009 "Tumor size, dimension 3"
 * component[=].valueQuantity.value = 7
 * component[=].valueQuantity.unit = "mm"
 * component[=].valueQuantity.system = $UCUM
 * component[=].valueQuantity.code = #mm
 
-Instance: DiagnosticConclusion1
+Instance: MacroGrouperA
+InstanceOf: MacroscopicObservation
+Usage: #example
+Title: "MacroGrouperA"
+Description: "Grouper for all Observations of Specimen A"
+* status = #final
+* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
+* hasMember[+] = Reference(MacroTumorSizeDim1)
+* hasMember[+] = Reference(MacroTumorSizeDim2)
+* hasMember[+] = Reference(MacroTumorSizeDim3)
+
+Instance: DiagnosticConclusionA
 InstanceOf: DiagnosticConclusion
 Usage: #example
-Title: "DiagnosticConclusion1"
+Title: "DiagnosticConclusionA"
 Description: "Example for a diagnostic conclusion"
 * status = #final
 * code.coding = $LOINC#22637-3 "Pathology report diagnosis"
-* derivedFrom[+] = Reference(MacroTumorSizeDim1)
-* derivedFrom[+] = Reference(MacroTumorSizeDim2)
-* derivedFrom[+] = Reference(MacroTumorSizeDim3)
+* derivedFrom[+] = Reference(MacroGrouperA)
 * component[+].code = $SCT#35917007 "Adenocarcinoma, no subtype (morphologic abnormality)"
 * component[=].valueString = "Fokal zirkumfentiell wachsenden und stenosierenden Adenocarcinom"

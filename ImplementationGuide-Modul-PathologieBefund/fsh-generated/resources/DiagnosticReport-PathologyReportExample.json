@@ -3,7 +3,7 @@
   "id": "PathologyReportExample",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyReport"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyReport"
     ]
   },
   "identifier": [
@@ -63,7 +63,7 @@
       "reference": "Observation/MacroTumorSizeDim3"
     },
     {
-      "reference": "Observation/DiagnosticConclusion1"
+      "reference": "DiagnosticConclusion1"
     }
   ],
   "conclusion": "Hemicolektomieresektat links mit einem differenzierten, partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden..",

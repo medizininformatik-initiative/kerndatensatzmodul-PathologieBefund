@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/BasePathologyObservation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/BasePathologyObservation",
   "version": "0.1.0",
   "name": "BasePathologyObservation",
   "title": "BasePathologyObservation",
@@ -74,7 +74,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologyServiceRequest"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyServiceRequest"
             ]
           }
         ],
@@ -209,11 +209,6 @@
         "id": "Observation.specimen",
         "path": "Observation.specimen",
         "mustSupport": true
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "min": 1
       },
       {
         "id": "Observation.component.code",
