@@ -6,7 +6,7 @@
   "title": "Entnahmemethode",
   "description": "Klinische Methode der Probengewinnung an Patient:in",
   "version": "0.1.0",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/ValueSet/Entnahmemethode",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//ValueSet/Entnahmemethode",
   "compose": {
     "include": [
       {

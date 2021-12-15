@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/AttachedImage",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/AttachedImage",
   "version": "0.1.0",
   "name": "AttachedImage",
   "title": "AttachedImage",
@@ -125,7 +125,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/StructureDefinition/PathologySpecimen"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/PathologySpecimen"
             ]
           }
         ],
