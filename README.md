@@ -27,7 +27,7 @@ Leitung des Moduls:
 Definition der Inhalte:
 * 
 
-Technische Umsetzung: 
+Technische Umsetzung (in alphabetischer Reihenfolge): 
 * [Alexander Bartschke](https://github.com/Kosmos3) (Modellierung in Art-Decor)
 * [Andrea Essenwanger](https://github.com/ByteGnome) (Technische Umsetzung FHIR Profile, Implementation Guide und Logical Models)
 * [Thimo Andre Hölter](https://github.com/ThimoHoelter) (Technische Umsetzung FHIR Profile)
