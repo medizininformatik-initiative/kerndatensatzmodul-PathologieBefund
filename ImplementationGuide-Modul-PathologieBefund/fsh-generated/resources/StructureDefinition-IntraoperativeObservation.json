@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/IntraoperativeObservation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeObservation",
   "version": "0.1.0",
   "name": "IntraoperativeObservation",
   "title": "IntraoperativeObservation",
@@ -53,7 +53,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/PathologyFinding",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyFinding",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -79,7 +79,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/IntraoperativeObservation"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeObservation"
             ]
           }
         ]

@@ -46,7 +46,7 @@ Description: "Abstract Observation to define common features of a main pathology
 // Referenz - Probe
 * specimen MS
 // Components fuer die Erfassung der Ergebnisse
-* component 1.. 
+* component 0.. 
   * code MS
   * value[x] only string or Quantity or CodeableConcept
   * dataAbsentReason MS
@@ -176,15 +176,24 @@ Description: "Example for a macroscopic Observation - third dimension of tumor s
 * component[=].valueQuantity.system = $UCUM
 * component[=].valueQuantity.code = #mm
 
-Instance: DiagnosticConclusion1
+Instance: MacroGrouperA
+InstanceOf: MacroscopicObservation
+Usage: #example
+Title: "MacroGrouperA"
+Description: "Grouper for all Observations of Specimen A"
+* status = #final
+* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
+* hasMember[+] = Reference(MacroTumorSizeDim1)
+* hasMember[+] = Reference(MacroTumorSizeDim2)
+* hasMember[+] = Reference(MacroTumorSizeDim3)
+
+Instance: DiagnosticConclusionA
 InstanceOf: DiagnosticConclusion
 Usage: #example
-Title: "DiagnosticConclusion1"
+Title: "DiagnosticConclusionA"
 Description: "Example for a diagnostic conclusion"
 * status = #final
 * code.coding = $LOINC#22637-3 "Pathology report diagnosis"
-* derivedFrom[+] = Reference(MacroTumorSizeDim1)
-* derivedFrom[+] = Reference(MacroTumorSizeDim2)
-* derivedFrom[+] = Reference(MacroTumorSizeDim3)
+* derivedFrom[+] = Reference(MacroGrouperA)
 * component[+].code = $SCT#35917007 "Adenocarcinoma, no subtype (morphologic abnormality)"
 * component[=].valueString = "Fokal zirkumfentiell wachsenden und stenosierenden Adenocarcinom"

@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/PathologyReport",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyReport",
   "version": "0.1.0",
   "name": "PathologyReport",
   "title": "PathologyReport",
@@ -130,7 +130,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/PathologyServiceRequest"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyServiceRequest"
             ]
           }
         ],
@@ -254,7 +254,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/IntraoperativeObservation"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeObservation"
             ]
           }
         ],
@@ -270,7 +270,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/MacroscopicObservation"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation"
             ]
           }
         ],
@@ -286,7 +286,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/MicroscopicObservation"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicObservation"
             ]
           }
         ],
@@ -302,7 +302,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/PathologyFinding"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyFinding"
             ]
           }
         ],
@@ -318,7 +318,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/DiagnosticConclusion"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/DiagnosticConclusion"
             ]
           }
         ],
@@ -346,7 +346,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho//StructureDefinition/AttachedImage"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/AttachedImage"
             ]
           }
         ],

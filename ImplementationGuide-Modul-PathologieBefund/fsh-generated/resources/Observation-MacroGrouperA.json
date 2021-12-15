@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MacroTumorSizeDim3",
+  "id": "MacroGrouperA",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation"
@@ -26,28 +26,15 @@
     ]
   },
   "status": "final",
-  "derivedFrom": [
+  "hasMember": [
     {
-      "reference": "AttachedImage"
-    }
-  ],
-  "component": [
+      "reference": "Observation/MacroTumorSizeDim1"
+    },
     {
-      "code": {
-        "coding": [
-          {
-            "code": "372301009",
-            "system": "http://snomed.info/sct",
-            "display": "Tumor size, dimension 3"
-          }
-        ]
-      },
-      "valueQuantity": {
-        "value": 7,
-        "unit": "mm",
-        "system": "http://unitsofmeasure.org",
-        "code": "mm"
-      }
+      "reference": "Observation/MacroTumorSizeDim2"
+    },
+    {
+      "reference": "Observation/MacroTumorSizeDim3"
     }
   ]
 }
