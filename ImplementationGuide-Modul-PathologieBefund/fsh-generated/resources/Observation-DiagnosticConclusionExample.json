@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "DiagnosticConclusionA",
+  "id": "DiagnosticConclusionExample",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/DiagnosticConclusion"
@@ -29,6 +29,15 @@
   "derivedFrom": [
     {
       "reference": "Observation/MacroGrouperA"
+    },
+    {
+      "reference": "Observation/MacroGrouperB"
+    },
+    {
+      "reference": "Observation/MicroGrouperA"
+    },
+    {
+      "reference": "Observation/MicroGrouperB"
     }
   ],
   "component": [

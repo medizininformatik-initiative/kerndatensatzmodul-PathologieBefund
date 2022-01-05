@@ -16,7 +16,7 @@
   "name": "PathologyFinding",
   "title": "PathologyFinding",
   "status": "draft",
-  "description": "Concrete Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section",
+  "description": "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

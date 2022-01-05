@@ -54,13 +54,13 @@
   },
   "result": [
     {
-      "reference": "Observation/MacroTumorSizeDim1"
+      "reference": "MacroTumorSizeDim1"
     },
     {
-      "reference": "Observation/MacroTumorSizeDim2"
+      "reference": "MacroTumorSizeDim2"
     },
     {
-      "reference": "Observation/MacroTumorSizeDim3"
+      "reference": "MacroTumorSizeDim3"
     },
     {
       "reference": "DiagnosticConclusion1"
