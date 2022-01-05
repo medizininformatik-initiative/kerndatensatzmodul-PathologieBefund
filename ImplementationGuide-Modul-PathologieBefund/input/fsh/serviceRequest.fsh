@@ -77,21 +77,18 @@ Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.
 // Klinische Informationen
 //---------------------------------------
 
-// Fragestellung & Ueberweisungsgrund
-* reasonCode MS
-* reasonCode ^slicing.discriminator[0].type = #pattern
-* reasonCode ^slicing.discriminator[0].path = "$this"
-* reasonCode ^slicing.rules = #open
-* reasonCode contains Fragestellung 0.. MS 
-                    and Ueberweisungsgrund 0..1 MS
-
-// Diagnose kodiert
-* reasonReference MS
-* reasonReference only Reference(Condition)
-
-// Anamnese - Annahme: besteht zum groessten Teil aus Observations u/o Conditions
 * supportingInfo MS
-* supportingInfo only Reference(Observation or Condition)
+* supportingInfo ^slicing.discriminator.type = #pattern
+* supportingInfo ^slicing.discriminator.path = "$this"
+* supportingInfo ^slicing.rules = #open
+// * supportingInfo ^slicing.description = ""
+* supportingInfo ^slicing.ordered = false
+* supportingInfo contains CodedCondition 0.. MS 
+                      and Anamnesis 0.. MS
+// Diagnose codiert
+* supportingInfo[CodedCondition] only Reference(Condition)
+// Anamnese - Annahme: besteht zum groessten Teil aus Observations u/o Conditions
+* supportingInfo[Anamnesis] only Reference(Observation or Condition)
 
 // Zusaetzliche Elemente
 
@@ -108,10 +105,21 @@ Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.
     * system MS
     * code MS
     * display MS
-
 * code MS
+// Ueberweisungsgrund
+* extension contains ReasonForReferral named reasonForReferral 0.. MS
 
-//Example
+// Fragestellung (Problem list $LOINC#11450-4) & Ueberweisungsgrund (Reason for referral (Narrative) $LOINC#42349-1)
+Extension: ReasonForReferral
+Id: ReasonForReferral
+Title: "Extension - ReasonForReferral"
+Description: "The reason for the ServiceRequest as Narrative"
+* value[x] only string
+* valueString 0.. MS
+
+//---------------------------
+//Examples
+//---------------------------
 Instance: PathologyRequestExample
 InstanceOf: PathologyServiceRequest
 Usage: #example

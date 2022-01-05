@@ -63,6 +63,36 @@
         "mustSupport": true
       },
       {
+        "id": "ServiceRequest.extension",
+        "path": "ServiceRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.extension:reasonForReferral",
+        "path": "ServiceRequest.extension",
+        "sliceName": "reasonForReferral",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/ReasonForReferral"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "ServiceRequest.identifier",
         "path": "ServiceRequest.identifier",
         "slicing": {
@@ -365,8 +395,8 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.reasonCode",
-        "path": "ServiceRequest.reasonCode",
+        "id": "ServiceRequest.supportingInfo",
+        "path": "ServiceRequest.supportingInfo",
         "slicing": {
           "discriminator": [
             {
@@ -374,29 +404,17 @@
               "path": "$this"
             }
           ],
-          "rules": "open"
+          "rules": "open",
+          "ordered": false
         },
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.reasonCode:Fragestellung",
-        "path": "ServiceRequest.reasonCode",
-        "sliceName": "Fragestellung",
+        "id": "ServiceRequest.supportingInfo:CodedCondition",
+        "path": "ServiceRequest.supportingInfo",
+        "sliceName": "CodedCondition",
         "min": 0,
         "max": "*",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.reasonCode:Ueberweisungsgrund",
-        "path": "ServiceRequest.reasonCode",
-        "sliceName": "Ueberweisungsgrund",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.reasonReference",
-        "path": "ServiceRequest.reasonReference",
         "type": [
           {
             "code": "Reference",
@@ -408,8 +426,11 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.supportingInfo",
+        "id": "ServiceRequest.supportingInfo:Anamnesis",
         "path": "ServiceRequest.supportingInfo",
+        "sliceName": "Anamnesis",
+        "min": 0,
+        "max": "*",
         "type": [
           {
             "code": "Reference",

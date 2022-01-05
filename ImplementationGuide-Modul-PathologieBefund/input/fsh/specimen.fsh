@@ -16,7 +16,7 @@ Description: "tmp"
   * coding[sct] from $bio-probenart (extensible)
     * system = $SCT
 * subject 1.. MS
-* subject only Reference($mii-patient)
+* subject only Reference(Patient)
 * parent MS
 // COLLECTION
 * collection 1.. 
