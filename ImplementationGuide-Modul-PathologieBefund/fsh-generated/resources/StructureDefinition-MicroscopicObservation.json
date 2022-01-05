@@ -70,7 +70,7 @@
       {
         "id": "Observation.code.coding.display",
         "path": "Observation.code.coding.display",
-        "fixedString": "Pathology report microscopic observation Narrative Other stain"
+        "fixedString": "Pathology report microscopic observation"
       },
       {
         "id": "Observation.hasMember",

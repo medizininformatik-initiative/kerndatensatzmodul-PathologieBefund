@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MacroTumorSizeDim3",
+  "id": "MacroObsTissueLengthA",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation"
@@ -21,7 +21,7 @@
       {
         "system": "http://loinc.org/",
         "code": "22634-0",
-        "display": "Pathology report gross observation Narrative"
+        "display": "Pathology report gross observation"
       }
     ]
   },
@@ -36,17 +36,17 @@
       "code": {
         "coding": [
           {
-            "code": "372301009",
-            "system": "http://snomed.info/sct",
-            "display": "Tumor size, dimension 3"
+            "code": "44619-5",
+            "system": "http://loinc.org/",
+            "display": "Length of tissue core(s)"
           }
         ]
       },
       "valueQuantity": {
-        "value": 7,
-        "unit": "mm",
+        "value": 1.2,
+        "unit": "cm",
         "system": "http://unitsofmeasure.org",
-        "code": "mm"
+        "code": "cm"
       }
     }
   ]

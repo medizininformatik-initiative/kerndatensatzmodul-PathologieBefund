@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MacroTumorSizeDim2",
+  "id": "MacroObsBiopsySiteB",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation"
@@ -21,7 +21,7 @@
       {
         "system": "http://loinc.org/",
         "code": "22634-0",
-        "display": "Pathology report gross observation Narrative"
+        "display": "Pathology report gross observation"
       }
     ]
   },
@@ -36,17 +36,20 @@
       "code": {
         "coding": [
           {
-            "code": "372300005",
-            "system": "http://snomed.info/sct",
-            "display": "Tumor size, dimension 2"
+            "code": "94738-2",
+            "system": "http://loinc.org/",
+            "display": "Biopsy site"
           }
         ]
       },
-      "valueQuantity": {
-        "value": 30,
-        "unit": "mm",
-        "system": "http://unitsofmeasure.org",
-        "code": "mm"
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "716934008",
+            "system": "http://snomed.info/sct",
+            "display": "Structure of apical part of peripheral zone of right half prostate (body structure)"
+          }
+        ]
       }
     }
   ]

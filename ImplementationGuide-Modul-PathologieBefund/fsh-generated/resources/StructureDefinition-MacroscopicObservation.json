@@ -70,7 +70,7 @@
       {
         "id": "Observation.code.coding.display",
         "path": "Observation.code.coding.display",
-        "fixedString": "Pathology report gross observation Narrative"
+        "fixedString": "Pathology report gross observation"
       },
       {
         "id": "Observation.hasMember",

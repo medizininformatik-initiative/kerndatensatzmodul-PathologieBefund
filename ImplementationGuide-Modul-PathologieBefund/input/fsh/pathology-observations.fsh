@@ -58,7 +58,7 @@ Profile: PathologyFinding
 Parent: BasePathologyObservation
 Id: PathologyFinding
 Title: "PathologyFinding"
-Description: "Concrete Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
+Description: "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
 * insert RuleSet1
 * code.coding from $LOINC (preferred)
 // Moegliche Unterbeobachtungen
@@ -95,7 +95,7 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * code.coding
   * code ^fixedCode = #22634-0
   * system ^fixedUri = $LOINC
-  * display ^fixedString = "Pathology report gross observation Narrative"
+  * display ^fixedString = "Pathology report gross observation"
 // Grouper
 * hasMember only Reference(MacroscopicObservation)
 
@@ -111,7 +111,7 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * code.coding
   * code ^fixedCode = #22635-7
   * system ^fixedUri = $LOINC
-  * display ^fixedString = "Pathology report microscopic observation Narrative Other stain"
+  * display ^fixedString = "Pathology report microscopic observation"
 // Grouper
 * hasMember only Reference(MicroscopicObservation)
 
@@ -134,66 +134,141 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
 //---------------------------------
 // Examples
 //---------------------------------
-Instance: MacroTumorSizeDim1
-InstanceOf: MacroscopicObservation
-Usage: #example
-Title: "MacroTumorSizeDim1"
-Description: "Example for a macroscopic Observation - first dimension of tumor size"
-* status = #final
-* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
-* derivedFrom[+] = Reference(AttachedImage)
-* component[+].code = $SCT#372299002 "Tumor size, dimension 1"
-* component[=].valueQuantity.value = 25
-* component[=].valueQuantity.unit = "mm"
-* component[=].valueQuantity.system = $UCUM
-* component[=].valueQuantity.code = #mm
 
-Instance: MacroTumorSizeDim2
+//---------------------------------
+// Macroscopic Report
+//---------------------------------
+// Macro Specimen A
+Instance: MacroObsBiopsySiteA
 InstanceOf: MacroscopicObservation
 Usage: #example
-Title: "MacroTumorSizeDim2"
-Description: "Example for a macroscopic Observation - second dimension of tumor size"
+Title: "MacroObsBiopsySiteA"
+Description: "Biopsy site of Specimen A (1st punch)"
 * status = #final
-* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
+* code.coding = $LOINC#22634-0 "Pathology report gross observation"
 * derivedFrom[+] = Reference(AttachedImage)
-* component[+].code = $SCT#372300005 "Tumor size, dimension 2"
-* component[=].valueQuantity.value = 30
-* component[=].valueQuantity.unit = "mm"
-* component[=].valueQuantity.system = $UCUM
-* component[=].valueQuantity.code = #mm
+* component[+].code = $LOINC#94738-2 "Biopsy site"
+* component[=].valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
 
-Instance: MacroTumorSizeDim3
+Instance: MacroObsTissueLengthA
 InstanceOf: MacroscopicObservation
 Usage: #example
-Title: "MacroTumorSizeDim3"
-Description: "Example for a macroscopic Observation - third dimension of tumor size"
+Title: "MacroObsTissueLengthA"
+Description: "Tissue length of Specimen A (1st punch)"
 * status = #final
-* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
+* code.coding = $LOINC#22634-0 "Pathology report gross observation"
 * derivedFrom[+] = Reference(AttachedImage)
-* component[+].code = $SCT#372301009 "Tumor size, dimension 3"
-* component[=].valueQuantity.value = 7
-* component[=].valueQuantity.unit = "mm"
+* component[+].code = $LOINC#44619-5 "Length of tissue core(s)"
+* component[=].valueQuantity.value = 1.2
+* component[=].valueQuantity.unit = "cm"
 * component[=].valueQuantity.system = $UCUM
-* component[=].valueQuantity.code = #mm
+* component[=].valueQuantity.code = #cm
 
 Instance: MacroGrouperA
 InstanceOf: MacroscopicObservation
 Usage: #example
 Title: "MacroGrouperA"
-Description: "Grouper for all Observations of Specimen A"
+Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
 * status = #final
-* code.coding = $LOINC#22634-0 "Pathology report gross observation Narrative"
-* hasMember[+] = Reference(MacroTumorSizeDim1)
-* hasMember[+] = Reference(MacroTumorSizeDim2)
-* hasMember[+] = Reference(MacroTumorSizeDim3)
+* code.coding = $LOINC#22634-0 "Pathology report gross observation"
+* valueString = "Specimen A: Prostataseitenlappen rechts, lateral 1.2cm"
+* hasMember[+] = Reference(MacroObsBiopsySiteA)
+* hasMember[+] = Reference(MacroObsTissueLengthA)
 
-Instance: DiagnosticConclusionA
+// Macro Specimen B
+Instance: MacroObsBiopsySiteB
+InstanceOf: MacroscopicObservation
+Usage: #example
+Title: "MacroObsBiopsySiteB"
+Description: "Biopsy site of Specimen B (2nd punch)"
+* status = #final
+* code.coding = $LOINC#22634-0 "Pathology report gross observation"
+* derivedFrom[+] = Reference(AttachedImage)
+* component[+].code = $LOINC#94738-2 "Biopsy site"
+* component[=].valueCodeableConcept = $SCT#716934008 "Structure of apical part of peripheral zone of right half prostate (body structure)"
+
+Instance: MacroObsTissueLengthB
+InstanceOf: MacroscopicObservation
+Usage: #example
+Title: "MacroObsTissueLengthB"
+Description: "Tissue length of Specimen B (2nd punch)"
+* status = #final
+* code.coding = $LOINC#22634-0 "Pathology report gross observation"
+* derivedFrom[+] = Reference(AttachedImage)
+* component[+].code = $LOINC#44619-5 "Length of tissue core(s)"
+* component[=].valueQuantity.value = 1.5
+* component[=].valueQuantity.unit = "cm"
+* component[=].valueQuantity.system = $UCUM
+* component[=].valueQuantity.code = #cm
+
+Instance: MacroGrouperB
+InstanceOf: MacroscopicObservation
+Usage: #example
+Title: "MacroGrouperB"
+Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)"
+* status = #final
+* code.coding = $LOINC#22634-0 "Pathology report gross observation"
+* valueString = "Specimen B: Prostataseitenlappen rechts, apikal 1.5cm"
+* hasMember[+] = Reference(MacroObsBiopsySiteB)
+* hasMember[+] = Reference(MacroObsTissueLengthB)
+
+//-------------------------------
+// Microscopic Report
+//-------------------------------
+// Micro Specimen A
+Instance: MicroObsHistologicTypeA
+InstanceOf: MicroscopicObservation
+Usage: #example
+Title: "MicroObsHistologicTypeA"
+Description: "Histologic type of Specimen A"
+* status = #final 
+* code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
+* component[+].code = $SCT#371441004 "Histologic type (observable entity)"
+* component[=].valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma (morphologic abnormality)"
+
+Instance: MicroObsGleasonPatternA
+InstanceOf: MicroscopicObservation
+Usage: #example
+Title: "MicroObsGleasonPatternA"
+Description: "Gleason pattern.primary in prostate tumor for Specimen A"
+* status = #final
+* code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
+* component[+].code = $LOINC#44641-9 "Gleason pattern.primary in prostate tumor"
+* component[=].valueCodeableConcept = $SCT#369772003 "Pattern 3 (staging scale)"
+
+Instance: MicroGrouperA
+InstanceOf: MicroscopicObservation
+Usage: #example
+Title: "MicroGrouperA"
+Description: "Grouper for all Microscopic Observations of Specimen A"
+* status = #final
+* code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
+* valueString = "Specimen A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders..."
+* hasMember[+] = Reference(MicroObsHistologicTypeA)
+* hasMember[+] = Reference(MicroObsGleasonPatternA)
+
+Instance: MicroGrouperB
+InstanceOf: MicroscopicObservation
+Usage: #example
+Title: "MicroGrouperB"
+Description: "Grouper for all Microscopic Observations of Specimen B"
+* status = #final 
+* code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
+* valueString = "Specimen B: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär  und k (Gleason-Muster 3 und 4 (10%)), die sich zwischen ortständige Drüsen schieben und ca. 70% der Schnittfläche des Zylinders (1 von Nervenscheiden und herdförmig kapselüberschreitendes Wachstum mit Infiltration des periprostatischen Fettgewebes."
+
+//-------------------------------
+// Diagnostic Conclusion
+//-------------------------------
+Instance: DiagnosticConclusionExample
 InstanceOf: DiagnosticConclusion
 Usage: #example
-Title: "DiagnosticConclusionA"
+Title: "DiagnosticConclusionExample"
 Description: "Example for a diagnostic conclusion"
 * status = #final
 * code.coding = $LOINC#22637-3 "Pathology report diagnosis"
 * derivedFrom[+] = Reference(MacroGrouperA)
+* derivedFrom[+] = Reference(MacroGrouperB)
+* derivedFrom[+] = Reference(MicroGrouperA)
+* derivedFrom[+] = Reference(MicroGrouperB)
 * component[+].code = $SCT#35917007 "Adenocarcinoma, no subtype (morphologic abnormality)"
 * component[=].valueString = "Fokal zirkumfentiell wachsenden und stenosierenden Adenocarcinom"
