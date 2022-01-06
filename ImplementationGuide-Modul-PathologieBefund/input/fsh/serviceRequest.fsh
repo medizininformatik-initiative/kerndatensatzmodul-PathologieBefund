@@ -109,13 +109,39 @@ Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.
 // Ueberweisungsgrund
 * extension contains ReasonForReferral named reasonForReferral 0.. MS
 
-// Fragestellung (Problem list $LOINC#11450-4) & Ueberweisungsgrund (Reason for referral (Narrative) $LOINC#42349-1)
+// Ueberweisungsgrund (Reason for referral (Narrative) $LOINC#42349-1)
 Extension: ReasonForReferral
 Id: ReasonForReferral
 Title: "Extension - ReasonForReferral"
 Description: "The reason for the ServiceRequest as Narrative"
+* url 1.. MS
 * value[x] only string
-* valueString 0.. MS
+* valueString 1.. MS
+
+// Fragestellung (Problem list $LOINC#11450-4)
+Profile: ProblemList
+Parent: Observation
+Id: ProblemList
+Title: "ProblemList"
+Description: "List of problems or questions concernin the reason for the ServiceRequest"
+* insert RuleSet1
+* status MS
+* code MS
+  * coding 1.. MS
+    * code 1.. MS
+    * code ^fixedCode = #11450-4
+    * system 1.. MS
+    * system ^fixedString = $LOINC
+    * display MS
+    * display ^fixedString = "Problem list"
+* subject 1.. MS
+
+Extension: ProblemList
+Id: ProblemList
+Title: "ProblemList"
+Description: "Reference to a list of problems or questions concerning the reason for the ServiceRequest"
+* url 1.. MS
+* value[x] only Reference(ProblemList)
 
 //---------------------------
 //Examples
