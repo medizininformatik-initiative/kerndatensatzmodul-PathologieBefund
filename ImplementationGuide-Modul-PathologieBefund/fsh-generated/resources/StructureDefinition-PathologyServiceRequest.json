@@ -16,7 +16,7 @@
   "name": "PathologyServiceRequest",
   "title": "PathologyServiceRequest",
   "status": "draft",
-  "description": "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.",
+  "description": "Order for the analysis of a sample or a group of samples.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -80,6 +80,8 @@
         "id": "ServiceRequest.extension:reasonForReferral",
         "path": "ServiceRequest.extension",
         "sliceName": "reasonForReferral",
+        "short": "Reason for the referral as string",
+        "definition": "String representation for the reason for the referral. In case of coded reason, use 'reasonCode'",
         "min": 0,
         "max": "*",
         "type": [
@@ -96,6 +98,7 @@
         "id": "ServiceRequest.extension:problemList",
         "path": "ServiceRequest.extension",
         "sliceName": "problemList",
+        "short": "List of possible problems that should be analyzed",
         "min": 0,
         "max": "*",
         "type": [
@@ -115,150 +118,121 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "$this"
+              "path": "type.coding"
             }
           ],
-          "rules": "open"
+          "rules": "open",
+          "description": "Contains slices for the request's placer- and filler IDs based on type.coding pattern"
         },
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID",
+        "id": "ServiceRequest.identifier:Placer-ID",
         "path": "ServiceRequest.identifier",
-        "sliceName": "Auftraggeber-ID",
+        "sliceName": "Placer-ID",
+        "short": "Placer identifier",
+        "definition": "Identifier for the placer of the pathology request",
         "min": 0,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.type",
+        "id": "ServiceRequest.identifier:Placer-ID.type",
         "path": "ServiceRequest.identifier.type",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding",
+        "id": "ServiceRequest.identifier:Placer-ID.type.coding",
         "path": "ServiceRequest.identifier.type.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:placer-type",
-        "path": "ServiceRequest.identifier.type.coding",
-        "sliceName": "placer-type",
         "min": 1,
-        "max": "1",
         "patternCoding": {
           "code": "PLAC",
           "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-          "display": "Placer Identifier"
-        },
-        "mustSupport": true
+          "display": "Placer identifier"
+        }
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:placer-type.system",
+        "id": "ServiceRequest.identifier:Placer-ID.type.coding.system",
         "path": "ServiceRequest.identifier.type.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:placer-type.code",
+        "id": "ServiceRequest.identifier:Placer-ID.type.coding.code",
         "path": "ServiceRequest.identifier.type.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.type.coding:placer-type.display",
+        "id": "ServiceRequest.identifier:Placer-ID.type.coding.display",
         "path": "ServiceRequest.identifier.type.coding.display",
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.system",
+        "id": "ServiceRequest.identifier:Placer-ID.system",
         "path": "ServiceRequest.identifier.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftraggeber-ID.value",
+        "id": "ServiceRequest.identifier:Placer-ID.value",
         "path": "ServiceRequest.identifier.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID",
+        "id": "ServiceRequest.identifier:Filler-ID",
         "path": "ServiceRequest.identifier",
-        "sliceName": "Auftragnehmer-ID",
+        "sliceName": "Filler-ID",
+        "short": "Filler Identifier",
+        "definition": "Identifier for the filler of the pathology request",
         "min": 0,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type",
+        "id": "ServiceRequest.identifier:Filler-ID.type",
         "path": "ServiceRequest.identifier.type",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding",
+        "id": "ServiceRequest.identifier:Filler-ID.type.coding",
         "path": "ServiceRequest.identifier.type.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 1
-      },
-      {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:filler-type",
-        "path": "ServiceRequest.identifier.type.coding",
-        "sliceName": "filler-type",
         "min": 1,
-        "max": "1",
         "patternCoding": {
           "code": "FILL",
           "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
           "display": "Filler"
-        },
-        "mustSupport": true
+        }
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:filler-type.system",
+        "id": "ServiceRequest.identifier:Filler-ID.type.coding.system",
         "path": "ServiceRequest.identifier.type.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:filler-type.code",
+        "id": "ServiceRequest.identifier:Filler-ID.type.coding.code",
         "path": "ServiceRequest.identifier.type.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.type.coding:filler-type.display",
+        "id": "ServiceRequest.identifier:Filler-ID.type.coding.display",
         "path": "ServiceRequest.identifier.type.coding.display",
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.system",
+        "id": "ServiceRequest.identifier:Filler-ID.system",
         "path": "ServiceRequest.identifier.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.identifier:Auftragnehmer-ID.value",
+        "id": "ServiceRequest.identifier:Filler-ID.value",
         "path": "ServiceRequest.identifier.value",
         "min": 1,
         "mustSupport": true
@@ -266,6 +240,7 @@
       {
         "id": "ServiceRequest.requisition",
         "path": "ServiceRequest.requisition",
+        "short": "Composite or group identifier",
         "mustSupport": true
       },
       {
@@ -325,6 +300,7 @@
         "id": "ServiceRequest.category:pathology",
         "path": "ServiceRequest.category",
         "sliceName": "pathology",
+        "short": "Fixed category 'Pathology order'",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -346,11 +322,15 @@
       {
         "id": "ServiceRequest.category:pathology.coding.system",
         "path": "ServiceRequest.category.coding.system",
+        "min": 1,
+        "fixedString": "http://snomed.info/sct",
         "mustSupport": true
       },
       {
         "id": "ServiceRequest.category:pathology.coding.code",
         "path": "ServiceRequest.category.coding.code",
+        "min": 1,
+        "fixedCode": "721966001",
         "mustSupport": true
       },
       {
@@ -411,6 +391,11 @@
         "mustSupport": true
       },
       {
+        "id": "ServiceRequest.reasonCode",
+        "path": "ServiceRequest.reasonCode",
+        "mustSupport": true
+      },
+      {
         "id": "ServiceRequest.supportingInfo",
         "path": "ServiceRequest.supportingInfo",
         "slicing": {
@@ -423,6 +408,7 @@
           "rules": "open",
           "ordered": false
         },
+        "short": "Reference to anamnesis and diagnostic data",
         "mustSupport": true
       },
       {
@@ -451,8 +437,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation",
-              "http://hl7.org/fhir/StructureDefinition/Condition"
+              "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
         ],
