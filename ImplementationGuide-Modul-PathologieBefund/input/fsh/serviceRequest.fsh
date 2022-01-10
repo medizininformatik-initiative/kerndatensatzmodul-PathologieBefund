@@ -52,7 +52,6 @@ Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.
 
 //Status
 * status MS
-
 * intent MS
 
 // Referenz zur Probe
@@ -106,12 +105,13 @@ Description: "Auftrag zur Untersuchung einer Probe oder einer Gruppe von Proben.
     * code MS
     * display MS
 * code MS
-// Ueberweisungsgrund
-* extension contains ReasonForReferral named reasonForReferral 0.. MS
+// Ueberweisungsgrund und Fragestellung
+* extension contains ExtReasonForReferral named reasonForReferral 0.. MS 
+            and ExtProblemList named problemList 0.. MS
 
 // Ueberweisungsgrund (Reason for referral (Narrative) $LOINC#42349-1)
-Extension: ReasonForReferral
-Id: ReasonForReferral
+Extension: ExtensionReasonForReferral
+Id: ExtReasonForReferral
 Title: "Extension - ReasonForReferral"
 Description: "The reason for the ServiceRequest as Narrative"
 * url 1.. MS
@@ -123,7 +123,7 @@ Profile: ProblemList
 Parent: Observation
 Id: ProblemList
 Title: "ProblemList"
-Description: "List of problems or questions concernin the reason for the ServiceRequest"
+Description: "List of problems or questions concerning the reason for the ServiceRequest"
 * insert RuleSet1
 * status MS
 * code MS
@@ -135,10 +135,18 @@ Description: "List of problems or questions concernin the reason for the Service
     * display MS
     * display ^fixedString = "Problem list"
 * subject 1.. MS
+* component 1.. MS
+  * code MS
+    * coding MS
+      * system 1.. MS
+      * code 1.. MS
+  * value[x] MS
+  * dataAbsentReason MS
 
-Extension: ProblemList
-Id: ProblemList
-Title: "ProblemList"
+// Extension for problem list
+Extension: ExtProblemList
+Id: ExtProblemList
+Title: "Extension - ProblemList"
 Description: "Reference to a list of problems or questions concerning the reason for the ServiceRequest"
 * url 1.. MS
 * value[x] only Reference(ProblemList)
