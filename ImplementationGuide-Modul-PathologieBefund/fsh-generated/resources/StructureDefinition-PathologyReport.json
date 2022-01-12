@@ -125,6 +125,7 @@
       {
         "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
+        "short": "Reference to respective PathologyServiceRequest",
         "min": 1,
         "type": [
           {
@@ -144,47 +145,34 @@
       {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
+        "short": "Pathology report code",
         "mustSupport": true
       },
       {
         "id": "DiagnosticReport.code.coding",
         "path": "DiagnosticReport.code.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 1
-      },
-      {
-        "id": "DiagnosticReport.code.coding:pathology-report",
-        "path": "DiagnosticReport.code.coding",
-        "sliceName": "pathology-report",
-        "min": 1,
-        "max": "1",
         "patternCoding": {
           "code": "60568-3",
           "system": "http://loinc.org/",
           "display": "Pathology Synoptic report"
-        },
-        "mustSupport": true
+        }
       },
       {
-        "id": "DiagnosticReport.code.coding:pathology-report.system",
+        "id": "DiagnosticReport.code.coding.system",
         "path": "DiagnosticReport.code.coding.system",
+        "min": 1,
+        "fixedString": "http://loinc.org/",
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.code.coding:pathology-report.code",
+        "id": "DiagnosticReport.code.coding.code",
         "path": "DiagnosticReport.code.coding.code",
+        "min": 1,
+        "fixedCode": "60568-3",
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.code.coding:pathology-report.display",
+        "id": "DiagnosticReport.code.coding.display",
         "path": "DiagnosticReport.code.coding.display",
         "mustSupport": true
       },
@@ -248,6 +236,7 @@
         "id": "DiagnosticReport.result:intraoperative-observation",
         "path": "DiagnosticReport.result",
         "sliceName": "intraoperative-observation",
+        "short": "Reference to intraoperative Observations",
         "min": 0,
         "max": "*",
         "type": [
@@ -264,6 +253,7 @@
         "id": "DiagnosticReport.result:macroscopic-observation",
         "path": "DiagnosticReport.result",
         "sliceName": "macroscopic-observation",
+        "short": "Reference to macroscopic Observations",
         "min": 0,
         "max": "*",
         "type": [
@@ -280,6 +270,7 @@
         "id": "DiagnosticReport.result:microscopic-observation",
         "path": "DiagnosticReport.result",
         "sliceName": "microscopic-observation",
+        "short": "Reference to microscopic Observations",
         "min": 0,
         "max": "*",
         "type": [
@@ -296,6 +287,7 @@
         "id": "DiagnosticReport.result:additional-observation",
         "path": "DiagnosticReport.result",
         "sliceName": "additional-observation",
+        "short": "Reference to any additional Observation",
         "min": 0,
         "max": "*",
         "type": [
@@ -312,6 +304,7 @@
         "id": "DiagnosticReport.result:diagnostic-conclusion",
         "path": "DiagnosticReport.result",
         "sliceName": "diagnostic-conclusion",
+        "short": "Reference to the 'Diagnostic Conclusion' grouper(s)",
         "min": 1,
         "max": "*",
         "type": [
@@ -327,11 +320,13 @@
       {
         "id": "DiagnosticReport.imagingStudy",
         "path": "DiagnosticReport.imagingStudy",
+        "short": "Reference to attached DICOM images",
         "mustSupport": true
       },
       {
         "id": "DiagnosticReport.media",
         "path": "DiagnosticReport.media",
+        "short": "Reference to single attached images",
         "mustSupport": true
       },
       {

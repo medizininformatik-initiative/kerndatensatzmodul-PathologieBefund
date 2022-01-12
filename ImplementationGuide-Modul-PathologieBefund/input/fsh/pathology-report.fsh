@@ -21,16 +21,7 @@ Description: "Defines the general pathology report structure for German hospital
 * identifier[Set-ID].system 1.. MS
 * identifier[Set-ID].type 1.. MS
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
-/*
-* identifier[Set-ID].type.coding ^slicing.discriminator[0].type = #pattern
-* identifier[Set-ID].type.coding ^slicing.discriminator[0].path = "$this"
-* identifier[Set-ID].type.coding ^slicing.rules = #open
-* identifier[Set-ID].type.coding contains ascn-type 1..1 MS
-* identifier[Set-ID].type.coding[ascn-type] = $v2-0203#ACSN "Accession ID"
-* identifier[Set-ID].type.coding[ascn-type].system 1..1 MS
-* identifier[Set-ID].type.coding[ascn-type].code 1..1 MS
-* identifier[Set-ID].type.coding[ascn-type].display MS
-*/
+
 // Versionsnummer
 * meta MS
 * meta.versionId MS
@@ -40,20 +31,18 @@ Description: "Defines the general pathology report structure for German hospital
 // Referenz zum Untersuchungsauftrag
 * basedOn 1.. MS
 * basedOn only Reference(PathologyServiceRequest)
+* basedOn ^short = "Reference to respective PathologyServiceRequest"
 // Status
 * status MS
 
 // Code
 * code MS
-// define slice for pathology report code
-  * coding ^slicing.discriminator[0].type = #pattern
-  * coding ^slicing.discriminator[0].path = "$this"
-  * coding ^slicing.rules = #open
-  * coding contains pathology-report 1..1 MS
-  * coding[pathology-report] MS
-  * coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report" 
-    * system MS
-    * code MS
+* code ^short = "Pathology report code"
+  * coding = $LOINC#60568-3 "Pathology Synoptic report"
+    * system 1.. MS 
+    * system ^fixedString = $LOINC
+    * code 1.. MS
+    * code ^fixedCode = #60568-3
     * display MS
 
 // Referenz zu Patient:in
@@ -66,7 +55,6 @@ Description: "Defines the general pathology report structure for German hospital
 * effective[x] only dateTime
 //* issued MS // nur fuer maschinell erstellte Zeitstempel, fuer manuell eingetragene Zeiten effective[x] dateTime nutzen
 // Autor 
-// TODO: kann der Autor auch eine Organisation sein oder handelt es sich hierbei immer um einen Practitioner? 
 * performer 1.. MS
 // Referenz zur Probe
 * specimen 1.. MS
@@ -82,14 +70,21 @@ Description: "Defines the general pathology report structure for German hospital
       and additional-observation 0..* MS
       and diagnostic-conclusion 1..* MS
 * result[intraoperative-observation] only Reference(IntraoperativeObservation)
+* result[intraoperative-observation] ^short = "Reference to intraoperative Observations"
 * result[macroscopic-observation] only Reference(MacroscopicObservation)
+* result[macroscopic-observation] ^short = "Reference to macroscopic Observations"
 * result[microscopic-observation] only Reference(MicroscopicObservation)
+* result[microscopic-observation] ^short = "Reference to microscopic Observations"
 * result[additional-observation] only Reference(PathologyFinding)     
+* result[additional-observation] ^short = "Reference to any additional Observation"
 * result[diagnostic-conclusion] only Reference(DiagnosticConclusion) 
+* result[diagnostic-conclusion] ^short = "Reference to the 'Diagnostic Conclusion' grouper(s)"
 // Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) 
 * imagingStudy MS
+* imagingStudy ^short = "Reference to attached DICOM images"
 // Referenz zu angehaengten Bildern
 * media MS
+* media ^short = "Reference to single attached images"
   * comment MS
   * link MS
   * link only Reference(AttachedImage)
@@ -111,29 +106,38 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * status MS
 * type MS
 * type = $LOINC#11526-1 "Pathology study"
+* type ^short = "Type fixed to 'Pathology study'"
+  * coding MS
+    * system 1.. MS
+    * system ^fixedString = $LOINC
+    * code 1.. MS
+    * code ^fixedCode = #11526-1
+    * display MS 
 // Titel
 * title 1.. MS
 // Autor
 * author 1.. MS
 * author only Reference(Practitioner or Organization)
+* author ^short = "Author can only be of type Practitioner or Organization"
 // Legaler Authentikator 
 * attester 1.. MS
-  * mode MS
-  * mode = #legal
+* attester ^short = "Legal attester"
+  * mode 1.. MS
+  * mode ^fixedCode = #legal
+  * mode ^short = "Mode fixed to 'legal'"
   * party 1.. MS
   * party only Reference(Practitioner or Organization)
 * custodian MS
 * date MS
 * subject 1.. MS
 * subject only Reference(Patient)
-
-// Entry referenziert nur auf die diagnostische Schlussfolgerung (PathologyReport)
+// Entry referenziert nur auf PathologyReport
 * section 1.. MS
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this"
 * section ^slicing.rules = #open
-* section contains diagnostic-conclusion 1..1 MS
-* section[diagnostic-conclusion]
+* section contains diagnostic-report 1..1 MS
+* section[diagnostic-report]
   * code 1.. MS
   * code = $LOINC#22637-3 "Pathology report diagnosis"
     * coding 1.. MS
@@ -158,6 +162,7 @@ Description: "Exemplarischer Befundbericht - 3"
 * identifier[=].type = $v2-0203#ACSN "Accession ID"
 * basedOn = Reference(PathologyRequestExample)
 * status = #final
+* code.coding = $LOINC#60568-3 "Pathology Synoptic report"
 * subject.reference = "Patient/12345"
 * performer.reference = "Practitioner/2346545"
 * specimen.reference = "Specimen/87689"
