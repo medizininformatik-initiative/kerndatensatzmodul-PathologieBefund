@@ -323,7 +323,7 @@
         "id": "ServiceRequest.category:pathology.coding.system",
         "path": "ServiceRequest.category.coding.system",
         "min": 1,
-        "fixedString": "http://snomed.info/sct",
+        "fixedUri": "http://snomed.info/sct",
         "mustSupport": true
       },
       {

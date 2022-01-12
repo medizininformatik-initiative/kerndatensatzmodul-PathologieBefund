@@ -81,7 +81,7 @@
         "id": "Composition.type.coding.system",
         "path": "Composition.type.coding.system",
         "min": 1,
-        "fixedString": "http://loinc.org/",
+        "fixedUri": "http://loinc.org/",
         "mustSupport": true
       },
       {

@@ -40,7 +40,7 @@ Description: "Defines the general pathology report structure for German hospital
 * code ^short = "Pathology report code"
   * coding = $LOINC#60568-3 "Pathology Synoptic report"
     * system 1.. MS 
-    * system ^fixedString = $LOINC
+    * system ^fixedUri = $LOINC
     * code 1.. MS
     * code ^fixedCode = #60568-3
     * display MS
@@ -109,7 +109,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * type ^short = "Type fixed to 'Pathology study'"
   * coding MS
     * system 1.. MS
-    * system ^fixedString = $LOINC
+    * system ^fixedUri = $LOINC
     * code 1.. MS
     * code ^fixedCode = #11526-1
     * display MS 

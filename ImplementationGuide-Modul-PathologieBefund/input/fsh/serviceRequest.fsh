@@ -86,7 +86,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 * category[pathology] ^short = "Fixed category 'Pathology order'"
   * coding MS
     * system 1.. MS
-    * system ^fixedString = $SCT
+    * system ^fixedUri = $SCT
     * code 1.. MS
     * code ^fixedCode = #721966001
     * display MS
@@ -125,7 +125,7 @@ Description: "List of problems or questions concerning the reason for the Servic
     * code 1.. MS
     * code ^fixedCode = #11450-4
     * system 1.. MS
-    * system ^fixedString = $LOINC
+    * system ^fixedUri = $LOINC
     * display MS
     * display ^fixedString = "Problem list"
 * subject 1.. MS

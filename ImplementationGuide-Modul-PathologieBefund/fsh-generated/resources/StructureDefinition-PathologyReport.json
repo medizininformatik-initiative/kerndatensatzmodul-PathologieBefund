@@ -161,7 +161,7 @@
         "id": "DiagnosticReport.code.coding.system",
         "path": "DiagnosticReport.code.coding.system",
         "min": 1,
-        "fixedString": "http://loinc.org/",
+        "fixedUri": "http://loinc.org/",
         "mustSupport": true
       },
       {
