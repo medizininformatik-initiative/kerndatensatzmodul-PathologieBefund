@@ -77,7 +77,7 @@
         "id": "Observation.code.coding.system",
         "path": "Observation.code.coding.system",
         "min": 1,
-        "fixedString": "http://loinc.org/",
+        "fixedUri": "http://loinc.org/",
         "mustSupport": true
       },
       {

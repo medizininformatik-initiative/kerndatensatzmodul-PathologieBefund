@@ -21,11 +21,17 @@ Description: "Abstract Observation to define common features of a main pathology
   * coding ^slicing.rules = #open
   * coding contains laboratory-category 1..1 MS
   * coding[laboratory-category] = $obs-category#laboratory
+    * system 1.. MS 
+    * system ^fixedString = $obs-category
+    * code 1.. MS
+    * code ^fixedCode = #laboratory
+    * display MS
 // Code
 * code MS
   * coding 1.. MS
     * code 1.. MS
     * system 1.. MS
+    * display MS
 // Referenz - Patient:in
 * subject MS
 * subject only Reference(Patient)
@@ -39,7 +45,7 @@ Description: "Abstract Observation to define common features of a main pathology
   * coding ^slicing.rules = #open
   * coding contains sct 0..1 MS
   * coding[sct] from $bio-bodystructure (required)
-    * system 1.. 
+    * system 1.. MS
     * system = $SCT
 // Untersuchungsmethode
 * method MS
