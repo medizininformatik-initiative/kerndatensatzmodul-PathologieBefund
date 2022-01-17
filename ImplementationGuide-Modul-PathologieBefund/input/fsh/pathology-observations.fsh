@@ -67,6 +67,8 @@ Title: "PathologyFinding"
 Description: "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
 * insert RuleSet1
 * code.coding from $LOINC (preferred)
+* value[x] MS
+* value[x] only string or Quantity or CodeableConcept
 // Moegliche Unterbeobachtungen
 * hasMember MS
 // Referenz - Eingebettetes Bild
@@ -82,10 +84,15 @@ Id: IntraoperativeObservation
 Title: "IntraoperativeObservation"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert RuleSet1
-* code.coding 
-  * code ^fixedCode = #83321-0 
-  * system ^fixedUri = $LOINC
-  * display = "Pathology report intraoperative observation in Specimen Document"
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "category.coding"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Additional category for intraoperative observations"
+* category ^slicing.ordered = false
+  * coding contains intraoperative 1..1 MS
+  * coding[intraoperative].code ^fixedCode = #83321-0
+  * coding[intraoperative].system ^fixedUri = $LOINC
+  * coding[intraoperative].display = "Pathology report intraoperative observation in Specimen Document"
 // Grouper
 * hasMember only Reference(IntraoperativeObservation)
 
