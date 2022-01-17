@@ -159,10 +159,15 @@ Id: DiagnosticConclusion
 Title: "DiagnosticConclusion"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
 * insert RuleSet1
-* code.coding
-  * code ^fixedCode = #22637-3
-  * system ^fixedUri = $LOINC
-  * display ^fixedString = "Pathology report diagnosis"
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "category.coding"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Section type"
+* category ^slicing.ordered = false
+  * coding contains diag-conclusion 1..1 MS
+  * coding[diag-conclusion].code ^fixedCode = #22637-3
+  * coding[diag-conclusion].system ^fixedUri = $LOINC
+  * coding[diag-conclusion].display = "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding or PathologyGrouper)
 
@@ -293,10 +298,40 @@ Description: "Grouper for all Microscopic Observations of Specimen A"
 //-------------------------------
 // Diagnostic Conclusion
 //-------------------------------
-Instance: DiagnosticConclusionExample
+Instance: DiagnosticConclusion1
 InstanceOf: DiagnosticConclusion
 Usage: #example
-Title: "DiagnosticConclusionExample"
+Title: "DiagnosticConclusion1"
+Description: "Example for a diagnostic conclusion"
+* status = #final
+* category[+].coding[diag-conclusion] = $LOINC#22637-3 "Pathology report diagnosis"
+* code = $LOINC#59847-4 "Histology and Behavior ICD-O-3 Cancer"
+* valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom (azinär)"
+
+Instance: DiagnosticConclusion2
+InstanceOf: DiagnosticConclusion
+Usage: #example
+Title: "DiagnosticConclusion2"
+Description: "Example for diagnostic conclusion"
+* status = #final
+* category[+].coding[diag-conclusion] = $LOINC#22637-3 "Pathology report diagnosis"
+* code = $LOINC#35266-6 "Gleason score in Specimen Qualitative"
+* valueCodeableConcept = $SCT#57403001 "Gleason grade 7 (staging scale)"
+
+Instance: DiagnosticConclusion3
+InstanceOf: DiagnosticConclusion
+Usage: #example
+Title: "DiagnosticConclusion3"
+Description: "Example for diagnostic conclusion"
+* status = #final
+* category[+].coding[diag-conclusion] = $LOINC#22637-3 "Pathology report diagnosis"
+* code = $LOINC#94734-1 "Prostate cancer grade group"
+* valueCodeableConcept = $LOINC#LA9630-0 "Grade 2"
+
+Instance: DiagnosticConclusionGrouper
+InstanceOf: PathologyGrouper
+Usage: #example
+Title: "DiagnosticConclusionGrouper"
 Description: "Example for a diagnostic conclusion"
 * status = #final
 * code.coding = $LOINC#22637-3 "Pathology report diagnosis"
@@ -306,3 +341,6 @@ Description: "Example for a diagnostic conclusion"
 // * derivedFrom[+] = Reference(MicroGrouperB)
 * component[+].code = $SCT#35917007 "Adenocarcinoma, no subtype (morphologic abnormality)"
 * component[=].valueString = "Fokal zirkumfentiell wachsenden und stenosierenden Adenocarcinom"
+* hasMember[+] = Reference(DiagnosticConclusion1)
+* hasMember[+] = Reference(DiagnosticConclusion2)
+* hasMember[+] = Reference(DiagnosticConclusion3)
