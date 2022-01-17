@@ -76,14 +76,6 @@ Description: "Instantiable Observation to describe a generic pathology finding, 
 * derivedFrom only Reference(AttachedImage)
 
 //--------------------------------------------
-// Constraints
-//--------------------------------------------
-Invariant: mii-ext-obs-1
-Description: "If an Observation is not used as a grouper, it SHALL have a code."
-Expression: "hasMember.hasValue().not() implies code.coding.exists()"
-Severity: #error
-
-//--------------------------------------------
 // Grouper
 //--------------------------------------------
 Profile: PathologyGrouper
