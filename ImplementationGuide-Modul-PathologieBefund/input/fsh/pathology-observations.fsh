@@ -164,7 +164,7 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
   * system ^fixedUri = $LOINC
   * display ^fixedString = "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
-* derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding)
+* derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding or PathologyGrouper)
 
 //---------------------------------
 // Examples
