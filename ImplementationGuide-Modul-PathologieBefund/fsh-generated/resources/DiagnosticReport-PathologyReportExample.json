@@ -17,7 +17,7 @@
           }
         ]
       },
-      "value": "H2021.15692",
+      "value": "E21.12345",
       "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
     }
   ],
@@ -54,24 +54,24 @@
   },
   "result": [
     {
-      "reference": "MacroTumorSizeDim1"
+      "reference": "Observation/MacroGrouperA"
     },
     {
-      "reference": "MacroTumorSizeDim2"
+      "reference": "Observation/MacroGrouperB"
     },
     {
-      "reference": "MacroTumorSizeDim3"
+      "reference": "Observation/MicroGrouperA"
     },
     {
-      "reference": "Observation/DiagnosticConclusion1"
+      "reference": "Observation/DiagnosticConclusionGrouper"
     }
   ],
-  "conclusion": "Hemicolektomieresektat links mit einem differenzierten, partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden..",
+  "conclusion": "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2",
   "conclusionCode": [
     {
       "coding": [
         {
-          "code": "399393006",
+          "code": "399490008",
           "system": "http://snomed.info/sct"
         }
       ]
@@ -80,10 +80,10 @@
   "effectiveDateTime": "2021-06-01",
   "media": [
     {
-      "comment": "Ein 25cm langes, im Umfang bis zu 2,5cm messendes Colonresektat. Das Präperat wurde von ventral und dorsal fotodokumentiert",
       "link": {
         "reference": "Media/ImageExample"
-      }
+      },
+      "comment": "HE-Schnitt einer Prostatstanze, infiltriert durch Karzinomverbände, fotodokumentiert"
     }
   ]
 }

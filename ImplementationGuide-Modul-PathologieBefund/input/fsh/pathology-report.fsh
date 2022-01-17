@@ -156,8 +156,8 @@ Instance: PathologyReportExample
 InstanceOf: PathologyReport
 Usage: #example
 Title: "PathologyReportExample"
-Description: "Exemplarischer Befundbericht - 3"
-* identifier[+].value = "H2021.15692"
+Description: "Example for PathologyReport"
+* identifier[+].value = "E21.12345"
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * identifier[=].type = $v2-0203#ACSN "Accession ID"
 * basedOn = Reference(PathologyRequestExample)
@@ -167,21 +167,22 @@ Description: "Exemplarischer Befundbericht - 3"
 * performer.reference = "Practitioner/2346545"
 * specimen.reference = "Specimen/87689"
 * encounter.reference = "Encounter/12345"
-* result[+] = Reference(MacroTumorSizeDim1)
-* result[+] = Reference(MacroTumorSizeDim2)
-* result[+] = Reference(MacroTumorSizeDim3)
-* result[+] = Reference(DiagnosticConclusion1)
-* conclusion = "Hemicolektomieresektat links mit einem differenzierten, partiell muzinösen (ca. 30%), fokal zirkumferentiell wachsenden.."
-* conclusionCode = $SCT#399393006 
+* result[+] = Reference(MacroGrouperA)
+* result[+] = Reference(MacroGrouperB)
+* result[+] = Reference(MicroGrouperA)
+* result[+] = Reference(DiagnosticConclusionGrouper)
+* conclusion = "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2"
+* conclusionCode = $SCT#399490008  
 * effectiveDateTime = "2021-06-01"
-* media.comment = "Ein 25cm langes, im Umfang bis zu 2,5cm messendes Colonresektat. Das Präperat wurde von ventral und dorsal fotodokumentiert"
+// * issued = "2021-06-02T13:28:17.239+02:00"
 * media.link = Reference(ImageExample)
+* media.comment = "HE-Schnitt einer Prostatstanze, infiltriert durch Karzinomverbände, fotodokumentiert"
 
 Instance: PathologyCompositionExample
 InstanceOf: PathologyComposition
 Usage: #example
 Title: "PathologyCompositionExample"
-Description: "tbd"
+Description: "Example for a PathologyComposition"
 * status = #final
 * type = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"
