@@ -35,9 +35,6 @@
     },
     {
       "reference": "Observation/MicroGrouperA"
-    },
-    {
-      "reference": "Observation/MicroGrouperB"
     }
   ],
   "component": [

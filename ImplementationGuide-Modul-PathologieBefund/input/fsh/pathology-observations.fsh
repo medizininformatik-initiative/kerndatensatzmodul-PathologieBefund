@@ -138,10 +138,15 @@ Id: MicroscopicObservation
 Title: "MicroscopicObservation"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert RuleSet1
-* code.coding
-  * code ^fixedCode = #22635-7
-  * system ^fixedUri = $LOINC
-  * display ^fixedString = "Pathology report microscopic observation"
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "category.coding"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Section type"
+* category ^slicing.ordered = false
+  * coding contains microscopic 1..1 MS
+  * coding[microscopic].code ^fixedCode = #22635-7
+  * coding[microscopic].system ^fixedUri = $LOINC
+  * coding[microscopic].display = "Pathology report microscopic observation"
 // Grouper
 * hasMember only Reference(MicroscopicObservation)
 
@@ -250,9 +255,9 @@ Usage: #example
 Title: "MicroObsHistologicTypeA"
 Description: "Histologic type of Specimen A"
 * status = #final 
-* code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
-* component[+].code = $SCT#371441004 "Histologic type (observable entity)"
-* component[=].valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma (morphologic abnormality)"
+* category[+].coding[microscopic] = $LOINC#22635-7 "Pathology report microscopic observation"
+* code = $SCT#371441004 "Histologic type (observable entity)"
+* valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma (morphologic abnormality)"
 
 Instance: MicroObsGleasonPatternA
 InstanceOf: MicroscopicObservation
@@ -260,12 +265,12 @@ Usage: #example
 Title: "MicroObsGleasonPatternA"
 Description: "Gleason pattern.primary in prostate tumor for Specimen A"
 * status = #final
-* code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
-* component[+].code = $LOINC#44641-9 "Gleason pattern.primary in prostate tumor"
-* component[=].valueCodeableConcept = $SCT#369772003 "Pattern 3 (staging scale)"
+* category[+].coding[microscopic] = $LOINC#22635-7 "Pathology report microscopic observation"
+* code = $LOINC#44641-9 "Gleason pattern.primary in prostate tumor"
+* valueCodeableConcept = $SCT#369772003 "Pattern 3 (staging scale)"
 
 Instance: MicroGrouperA
-InstanceOf: MicroscopicObservation
+InstanceOf: PathologyGrouper
 Usage: #example
 Title: "MicroGrouperA"
 Description: "Grouper for all Microscopic Observations of Specimen A"
@@ -275,14 +280,15 @@ Description: "Grouper for all Microscopic Observations of Specimen A"
 * hasMember[+] = Reference(MicroObsHistologicTypeA)
 * hasMember[+] = Reference(MicroObsGleasonPatternA)
 
-Instance: MicroGrouperB
-InstanceOf: MicroscopicObservation
-Usage: #example
-Title: "MicroGrouperB"
-Description: "Grouper for all Microscopic Observations of Specimen B"
-* status = #final 
-* code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
-* valueString = "Specimen B: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär  und k (Gleason-Muster 3 und 4 (10%)), die sich zwischen ortständige Drüsen schieben und ca. 70% der Schnittfläche des Zylinders (1 von Nervenscheiden und herdförmig kapselüberschreitendes Wachstum mit Infiltration des periprostatischen Fettgewebes."
+// Micro Specimen B
+// Instance: MicroGrouperB
+// InstanceOf: PathologyGrouper
+// Usage: #example
+// Title: "MicroGrouperB"
+// Description: "Grouper for all Microscopic Observations of Specimen B"
+// * status = #final 
+// * code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
+// * valueString = "Specimen B: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär  und k (Gleason-Muster 3 und 4 (10%)), die sich zwischen ortständige Drüsen schieben und ca. 70% der Schnittfläche des Zylinders (1 von Nervenscheiden und herdförmig kapselüberschreitendes Wachstum mit Infiltration des periprostatischen Fettgewebes."
 
 //-------------------------------
 // Diagnostic Conclusion
@@ -297,6 +303,6 @@ Description: "Example for a diagnostic conclusion"
 * derivedFrom[+] = Reference(MacroGrouperA)
 * derivedFrom[+] = Reference(MacroGrouperB)
 * derivedFrom[+] = Reference(MicroGrouperA)
-* derivedFrom[+] = Reference(MicroGrouperB)
+// * derivedFrom[+] = Reference(MicroGrouperB)
 * component[+].code = $SCT#35917007 "Adenocarcinoma, no subtype (morphologic abnormality)"
 * component[=].valueString = "Fokal zirkumfentiell wachsenden und stenosierenden Adenocarcinom"

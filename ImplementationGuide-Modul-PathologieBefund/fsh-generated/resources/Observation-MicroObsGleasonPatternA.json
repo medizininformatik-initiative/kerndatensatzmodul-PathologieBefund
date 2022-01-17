@@ -12,40 +12,32 @@
         {
           "code": "laboratory",
           "system": "http://hl7.org/fhir/codesystem-observation-category.html"
+        },
+        {
+          "code": "22635-7",
+          "system": "http://loinc.org/",
+          "display": "Pathology report microscopic observation"
         }
       ]
     }
   ],
+  "status": "final",
   "code": {
     "coding": [
       {
+        "code": "44641-9",
         "system": "http://loinc.org/",
-        "code": "22635-7",
-        "display": "Pathology report microscopic observation"
+        "display": "Gleason pattern.primary in prostate tumor"
       }
     ]
   },
-  "status": "final",
-  "component": [
-    {
-      "code": {
-        "coding": [
-          {
-            "code": "44641-9",
-            "system": "http://loinc.org/",
-            "display": "Gleason pattern.primary in prostate tumor"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "369772003",
-            "system": "http://snomed.info/sct",
-            "display": "Pattern 3 (staging scale)"
-          }
-        ]
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "369772003",
+        "system": "http://snomed.info/sct",
+        "display": "Pattern 3 (staging scale)"
       }
-    }
-  ]
+    ]
+  }
 }
