@@ -3,7 +3,7 @@
   "id": "MacroGrouperB",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyGrouper"
     ]
   },
   "category": [
@@ -16,16 +16,16 @@
       ]
     }
   ],
+  "status": "final",
   "code": {
     "coding": [
       {
-        "system": "http://loinc.org/",
         "code": "22634-0",
+        "system": "http://loinc.org/",
         "display": "Pathology report gross observation"
       }
     ]
   },
-  "status": "final",
   "valueString": "Specimen B: Prostataseitenlappen rechts, apikal 1.5cm",
   "hasMember": [
     {

@@ -12,42 +12,34 @@
         {
           "code": "laboratory",
           "system": "http://hl7.org/fhir/codesystem-observation-category.html"
+        },
+        {
+          "code": "22634-0",
+          "system": "http://loinc.org/",
+          "display": "Pathology report gross observation"
         }
       ]
     }
   ],
+  "status": "final",
   "code": {
     "coding": [
       {
+        "code": "44619-5",
         "system": "http://loinc.org/",
-        "code": "22634-0",
-        "display": "Pathology report gross observation"
+        "display": "Length of tissue core(s)"
       }
     ]
   },
-  "status": "final",
+  "valueQuantity": {
+    "value": 1.5,
+    "unit": "cm",
+    "system": "http://unitsofmeasure.org",
+    "code": "cm"
+  },
   "derivedFrom": [
     {
       "reference": "AttachedImage"
-    }
-  ],
-  "component": [
-    {
-      "code": {
-        "coding": [
-          {
-            "code": "44619-5",
-            "system": "http://loinc.org/",
-            "display": "Length of tissue core(s)"
-          }
-        ]
-      },
-      "valueQuantity": {
-        "value": 1.5,
-        "unit": "cm",
-        "system": "http://unitsofmeasure.org",
-        "code": "cm"
-      }
     }
   ]
 }

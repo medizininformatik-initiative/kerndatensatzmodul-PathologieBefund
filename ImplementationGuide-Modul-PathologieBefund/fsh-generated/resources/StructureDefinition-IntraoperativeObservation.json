@@ -68,7 +68,7 @@
             }
           ],
           "rules": "open",
-          "description": "Additional category for intraoperative observations",
+          "description": "Section type",
           "ordered": false
         }
       },

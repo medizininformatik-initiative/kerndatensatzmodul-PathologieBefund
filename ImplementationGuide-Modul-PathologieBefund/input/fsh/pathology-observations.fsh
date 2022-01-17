@@ -76,6 +76,26 @@ Description: "Instantiable Observation to describe a generic pathology finding, 
 * derivedFrom only Reference(AttachedImage)
 
 //--------------------------------------------
+// Constraints
+//--------------------------------------------
+Invariant: mii-ext-obs-1
+Description: "If an Observation is not used as a grouper, it SHALL have a code."
+Expression: "hasMember.hasValue().not() implies code.coding.exists()"
+Severity: #error
+
+//--------------------------------------------
+// Grouper
+//--------------------------------------------
+Profile: PathologyGrouper
+Parent: BasePathologyObservation
+Id: PathologyGrouper
+Title: "PathologyGrouper"
+Description: "Grouper profile for pathological findings"
+* insert RuleSet1
+* code.coding from SectionTypes (required)
+* hasMember 1.. 
+
+//--------------------------------------------
 // IntraoperativeObservation
 //--------------------------------------------
 Profile: IntraoperativeObservation
@@ -87,7 +107,7 @@ Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "category.coding"
 * category ^slicing.rules = #open
-* category ^slicing.description = "Additional category for intraoperative observations"
+* category ^slicing.description = "Section type"
 * category ^slicing.ordered = false
   * coding contains intraoperative 1..1 MS
   * coding[intraoperative].code ^fixedCode = #83321-0
@@ -105,10 +125,15 @@ Id: MacroscopicObservation
 Title: "MacroscopicObservation"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert RuleSet1
-* code.coding
-  * code ^fixedCode = #22634-0
-  * system ^fixedUri = $LOINC
-  * display ^fixedString = "Pathology report gross observation"
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "category.coding"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Section type"
+* category ^slicing.ordered = false
+  * coding contains macroscopic 1..1 MS
+  * coding[macroscopic].code ^fixedCode = #22634-0
+  * coding[macroscopic].system ^fixedUri = $LOINC
+  * coding[macroscopic].display = "Pathology report gross observation"
 // Grouper
 * hasMember only Reference(MacroscopicObservation)
 
@@ -147,8 +172,6 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
 //---------------------------------
 // Examples
 //---------------------------------
-
-//---------------------------------
 // Macroscopic Report
 //---------------------------------
 // Macro Specimen A
@@ -158,10 +181,10 @@ Usage: #example
 Title: "MacroObsBiopsySiteA"
 Description: "Biopsy site of Specimen A (1st punch)"
 * status = #final
-* code.coding = $LOINC#22634-0 "Pathology report gross observation"
+* category[+].coding[macroscopic] = $LOINC#22634-0 "Pathology report gross observation"
+* code.coding = $LOINC#94738-2 "Biopsy site"
+* valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
 * derivedFrom[+] = Reference(AttachedImage)
-* component[+].code = $LOINC#94738-2 "Biopsy site"
-* component[=].valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
 
 Instance: MacroObsTissueLengthA
 InstanceOf: MacroscopicObservation
@@ -169,16 +192,16 @@ Usage: #example
 Title: "MacroObsTissueLengthA"
 Description: "Tissue length of Specimen A (1st punch)"
 * status = #final
-* code.coding = $LOINC#22634-0 "Pathology report gross observation"
+* category[+].coding[macroscopic] = $LOINC#22634-0 "Pathology report gross observation"
+* code.coding = $LOINC#44619-5 "Length of tissue core(s)"
+* valueQuantity.value = 1.2
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $UCUM 
+* valueQuantity.code = #cm
 * derivedFrom[+] = Reference(AttachedImage)
-* component[+].code = $LOINC#44619-5 "Length of tissue core(s)"
-* component[=].valueQuantity.value = 1.2
-* component[=].valueQuantity.unit = "cm"
-* component[=].valueQuantity.system = $UCUM
-* component[=].valueQuantity.code = #cm
 
 Instance: MacroGrouperA
-InstanceOf: MacroscopicObservation
+InstanceOf: PathologyGrouper
 Usage: #example
 Title: "MacroGrouperA"
 Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
@@ -195,10 +218,10 @@ Usage: #example
 Title: "MacroObsBiopsySiteB"
 Description: "Biopsy site of Specimen B (2nd punch)"
 * status = #final
-* code.coding = $LOINC#22634-0 "Pathology report gross observation"
+* category[+].coding[macroscopic] = $LOINC#22634-0 "Pathology report gross observation"
+* code.coding = $LOINC#94738-2 "Biopsy site"
+* valueCodeableConcept = $SCT#716934008 "Structure of apical part of peripheral zone of right half prostate (body structure)"
 * derivedFrom[+] = Reference(AttachedImage)
-* component[+].code = $LOINC#94738-2 "Biopsy site"
-* component[=].valueCodeableConcept = $SCT#716934008 "Structure of apical part of peripheral zone of right half prostate (body structure)"
 
 Instance: MacroObsTissueLengthB
 InstanceOf: MacroscopicObservation
@@ -206,16 +229,16 @@ Usage: #example
 Title: "MacroObsTissueLengthB"
 Description: "Tissue length of Specimen B (2nd punch)"
 * status = #final
-* code.coding = $LOINC#22634-0 "Pathology report gross observation"
+* category[+].coding[macroscopic] = $LOINC#22634-0 "Pathology report gross observation"
+* code.coding = $LOINC#44619-5 "Length of tissue core(s)"
+* valueQuantity.value = 1.5
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $UCUM
+* valueQuantity.code = #cm 
 * derivedFrom[+] = Reference(AttachedImage)
-* component[+].code = $LOINC#44619-5 "Length of tissue core(s)"
-* component[=].valueQuantity.value = 1.5
-* component[=].valueQuantity.unit = "cm"
-* component[=].valueQuantity.system = $UCUM
-* component[=].valueQuantity.code = #cm
 
 Instance: MacroGrouperB
-InstanceOf: MacroscopicObservation
+InstanceOf: PathologyGrouper
 Usage: #example
 Title: "MacroGrouperB"
 Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)"

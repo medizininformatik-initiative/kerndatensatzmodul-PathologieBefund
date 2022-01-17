@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "SectionTypes",
+  "id": "SectionTypes",
+  "title": "SectionTypes",
+  "description": "ValueSet for IHE PaLM APSR's section types",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/SectionTypes",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org/",
+        "concept": [
+          {
+            "code": "22636-5",
+            "display": "Pathology report relevant history"
+          },
+          {
+            "code": "83321-0",
+            "display": "Pathology report intraoperative observation in Specimen Document"
+          },
+          {
+            "code": "22634-0",
+            "display": "Pathology report gross observation"
+          },
+          {
+            "code": "22635-7",
+            "display": "Pathology report microscopic observation"
+          },
+          {
+            "code": "22637-3",
+            "display": "Pathology report diagnosis"
+          }
+        ]
+      }
+    ]
+  }
+}
