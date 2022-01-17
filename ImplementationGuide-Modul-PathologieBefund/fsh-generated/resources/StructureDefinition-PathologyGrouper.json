@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "PathologyFinding",
+  "id": "PathologyGrouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyFinding",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyGrouper",
   "version": "0.1.0",
-  "name": "PathologyFinding",
-  "title": "PathologyFinding",
+  "name": "PathologyGrouper",
+  "title": "PathologyGrouper",
   "status": "draft",
-  "description": "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section",
+  "description": "Grouper profile for pathological findings",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -61,43 +61,14 @@
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "binding": {
-          "strength": "preferred",
-          "valueSet": "http://loinc.org/"
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/SectionTypes"
         }
-      },
-      {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "type": [
-          {
-            "code": "Quantity"
-          },
-          {
-            "code": "CodeableConcept"
-          },
-          {
-            "code": "string"
-          }
-        ],
-        "mustSupport": true
       },
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/AttachedImage"
-            ]
-          }
-        ],
-        "mustSupport": true
+        "min": 1
       }
     ]
   }

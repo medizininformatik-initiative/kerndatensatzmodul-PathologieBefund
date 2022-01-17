@@ -58,18 +58,46 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code.coding.system",
-        "path": "Observation.code.coding.system",
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "category.coding"
+            }
+          ],
+          "rules": "open",
+          "description": "Section type",
+          "ordered": false
+        }
+      },
+      {
+        "id": "Observation.category.coding",
+        "path": "Observation.category.coding",
+        "min": 2
+      },
+      {
+        "id": "Observation.category.coding:intraoperative",
+        "path": "Observation.category.coding",
+        "sliceName": "intraoperative",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding:intraoperative.system",
+        "path": "Observation.category.coding.system",
         "fixedUri": "http://loinc.org/"
       },
       {
-        "id": "Observation.code.coding.code",
-        "path": "Observation.code.coding.code",
+        "id": "Observation.category.coding:intraoperative.code",
+        "path": "Observation.category.coding.code",
         "fixedCode": "83321-0"
       },
       {
-        "id": "Observation.code.coding.display",
-        "path": "Observation.code.coding.display",
+        "id": "Observation.category.coding:intraoperative.display",
+        "path": "Observation.category.coding.display",
         "patternString": "Pathology report intraoperative observation in Specimen Document"
       },
       {
