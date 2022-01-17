@@ -1,9 +1,9 @@
 {
   "resourceType": "Observation",
-  "id": "MicroObsGleasonPatternA",
+  "id": "DiagnosticConclusion3",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicObservation"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/DiagnosticConclusion"
     ]
   },
   "category": [
@@ -14,9 +14,9 @@
           "system": "http://hl7.org/fhir/codesystem-observation-category.html"
         },
         {
-          "code": "22635-7",
+          "code": "22637-3",
           "system": "http://loinc.org/",
-          "display": "Pathology report microscopic observation"
+          "display": "Pathology report diagnosis"
         }
       ]
     }
@@ -25,18 +25,18 @@
   "code": {
     "coding": [
       {
-        "code": "44641-9",
+        "code": "94734-1",
         "system": "http://loinc.org/",
-        "display": "Gleason pattern.primary in prostate tumor"
+        "display": "Prostate cancer grade group"
       }
     ]
   },
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "369772003",
-        "system": "http://snomed.info/sct",
-        "display": "Pattern 3 (staging scale)"
+        "code": "LA9630-0",
+        "system": "http://loinc.org/",
+        "display": "Grade 2"
       }
     ]
   }

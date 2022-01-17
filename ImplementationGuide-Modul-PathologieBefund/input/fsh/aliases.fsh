@@ -12,7 +12,6 @@ Alias: $bio-probenart = https://www.medizininformatik-initiative.de/fhir/ext/mod
 Alias: $bio-bodystructure = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/sct-body-structures
 Alias: $bio-icd-o-3 = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/icd-o-3-topography
 // Profile Canonicals
-Alias: $mii-patient = http://hl7.org/fhir/StructureDefinition/Patient
 Alias: $mii-bio-specimencore = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
 Alias: $mii-bio-additive = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance
 // Extensions

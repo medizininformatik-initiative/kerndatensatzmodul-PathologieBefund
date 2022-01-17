@@ -119,6 +119,25 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.category.coding:laboratory-category.system",
+        "path": "Observation.category.coding.system",
+        "min": 1,
+        "fixedString": "http://hl7.org/fhir/codesystem-observation-category.html",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding:laboratory-category.code",
+        "path": "Observation.category.coding.code",
+        "min": 1,
+        "fixedCode": "laboratory",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding:laboratory-category.display",
+        "path": "Observation.category.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.code",
         "path": "Observation.code",
         "mustSupport": true
@@ -139,6 +158,11 @@
         "id": "Observation.code.coding.code",
         "path": "Observation.code.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.coding.display",
+        "path": "Observation.code.coding.display",
         "mustSupport": true
       },
       {
@@ -198,7 +222,8 @@
         "id": "Observation.bodySite.coding:sct.system",
         "path": "Observation.bodySite.coding.system",
         "min": 1,
-        "patternUri": "http://snomed.info/sct"
+        "patternUri": "http://snomed.info/sct",
+        "mustSupport": true
       },
       {
         "id": "Observation.method",

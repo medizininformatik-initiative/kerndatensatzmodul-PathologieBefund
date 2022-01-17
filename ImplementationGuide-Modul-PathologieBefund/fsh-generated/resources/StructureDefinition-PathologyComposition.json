@@ -60,6 +60,7 @@
       {
         "id": "Composition.type",
         "path": "Composition.type",
+        "short": "Type fixed to 'Pathology study'",
         "patternCodeableConcept": {
           "coding": [
             {
@@ -69,6 +70,30 @@
             }
           ]
         },
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding",
+        "path": "Composition.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding.system",
+        "path": "Composition.type.coding.system",
+        "min": 1,
+        "fixedUri": "http://loinc.org/",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding.code",
+        "path": "Composition.type.coding.code",
+        "min": 1,
+        "fixedCode": "11526-1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.type.coding.display",
+        "path": "Composition.type.coding.display",
         "mustSupport": true
       },
       {
@@ -93,6 +118,7 @@
       {
         "id": "Composition.author",
         "path": "Composition.author",
+        "short": "Author can only be of type Practitioner or Organization",
         "type": [
           {
             "code": "Reference",
@@ -112,13 +138,15 @@
       {
         "id": "Composition.attester",
         "path": "Composition.attester",
+        "short": "Legal attester",
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "Composition.attester.mode",
         "path": "Composition.attester.mode",
-        "patternCode": "legal",
+        "short": "Mode fixed to 'legal'",
+        "fixedCode": "legal",
         "mustSupport": true
       },
       {
@@ -157,22 +185,22 @@
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-conclusion",
+        "id": "Composition.section:diagnostic-report",
         "path": "Composition.section",
-        "sliceName": "diagnostic-conclusion",
+        "sliceName": "diagnostic-report",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-conclusion.title",
+        "id": "Composition.section:diagnostic-report.title",
         "path": "Composition.section.title",
         "min": 1,
         "fixedString": "Diagnostische Schlussfolgerung",
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-conclusion.code",
+        "id": "Composition.section:diagnostic-report.code",
         "path": "Composition.section.code",
         "min": 1,
         "patternCodeableConcept": {
@@ -187,30 +215,30 @@
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-conclusion.code.coding",
+        "id": "Composition.section:diagnostic-report.code.coding",
         "path": "Composition.section.code.coding",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-conclusion.code.coding.system",
+        "id": "Composition.section:diagnostic-report.code.coding.system",
         "path": "Composition.section.code.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-conclusion.code.coding.code",
+        "id": "Composition.section:diagnostic-report.code.coding.code",
         "path": "Composition.section.code.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-conclusion.text",
+        "id": "Composition.section:diagnostic-report.text",
         "path": "Composition.section.text",
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-conclusion.entry",
+        "id": "Composition.section:diagnostic-report.entry",
         "path": "Composition.section.entry",
         "min": 1,
         "type": [

@@ -12,40 +12,32 @@
         {
           "code": "laboratory",
           "system": "http://hl7.org/fhir/codesystem-observation-category.html"
+        },
+        {
+          "code": "22635-7",
+          "system": "http://loinc.org/",
+          "display": "Pathology report microscopic observation"
         }
       ]
     }
   ],
+  "status": "final",
   "code": {
     "coding": [
       {
-        "system": "http://loinc.org/",
-        "code": "22635-7",
-        "display": "Pathology report microscopic observation"
+        "code": "371441004",
+        "system": "http://snomed.info/sct",
+        "display": "Histologic type (observable entity)"
       }
     ]
   },
-  "status": "final",
-  "component": [
-    {
-      "code": {
-        "coding": [
-          {
-            "code": "371441004",
-            "system": "http://snomed.info/sct",
-            "display": "Histologic type (observable entity)"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "45410002",
-            "system": "http://snomed.info/sct",
-            "display": "Acinar adenocarcinoma (morphologic abnormality)"
-          }
-        ]
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "45410002",
+        "system": "http://snomed.info/sct",
+        "display": "Acinar adenocarcinoma (morphologic abnormality)"
       }
-    }
-  ]
+    ]
+  }
 }
