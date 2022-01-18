@@ -88,12 +88,6 @@
       {
         "id": "Observation.category",
         "path": "Observation.category",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category.coding",
-        "path": "Observation.category.coding",
         "slicing": {
           "discriminator": [
             {
@@ -107,33 +101,43 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.category.coding:laboratory-category",
-        "path": "Observation.category.coding",
+        "id": "Observation.category:laboratory-category",
+        "path": "Observation.category",
         "sliceName": "laboratory-category",
         "min": 1,
         "max": "1",
-        "patternCoding": {
-          "code": "laboratory",
-          "system": "http://hl7.org/fhir/codesystem-observation-category.html"
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "laboratory",
+              "system": "http://hl7.org/fhir/codesystem-observation-category.html"
+            }
+          ]
         },
         "mustSupport": true
       },
       {
-        "id": "Observation.category.coding:laboratory-category.system",
+        "id": "Observation.category:laboratory-category.coding",
+        "path": "Observation.category.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:laboratory-category.coding.system",
         "path": "Observation.category.coding.system",
         "min": 1,
         "fixedString": "http://hl7.org/fhir/codesystem-observation-category.html",
         "mustSupport": true
       },
       {
-        "id": "Observation.category.coding:laboratory-category.code",
+        "id": "Observation.category:laboratory-category.coding.code",
         "path": "Observation.category.coding.code",
         "min": 1,
         "fixedCode": "laboratory",
         "mustSupport": true
       },
       {
-        "id": "Observation.category.coding:laboratory-category.display",
+        "id": "Observation.category:laboratory-category.coding.display",
         "path": "Observation.category.coding.display",
         "mustSupport": true
       },
