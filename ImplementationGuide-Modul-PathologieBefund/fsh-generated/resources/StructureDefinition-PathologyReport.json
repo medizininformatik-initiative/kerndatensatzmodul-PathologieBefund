@@ -223,8 +223,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "type",
-              "path": "$this"
+              "type": "profile",
+              "path": "$this.resolve()"
             }
           ],
           "rules": "open"
@@ -250,6 +250,12 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.result:intraoperative-observation.reference",
+        "path": "DiagnosticReport.result.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.result:macroscopic-observation",
         "path": "DiagnosticReport.result",
         "sliceName": "macroscopic-observation",
@@ -264,6 +270,12 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.result:macroscopic-observation.reference",
+        "path": "DiagnosticReport.result.reference",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -284,6 +296,12 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.result:microscopic-observation.reference",
+        "path": "DiagnosticReport.result.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.result:additional-observation",
         "path": "DiagnosticReport.result",
         "sliceName": "additional-observation",
@@ -301,6 +319,12 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.result:additional-observation.reference",
+        "path": "DiagnosticReport.result.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.result:diagnostic-conclusion",
         "path": "DiagnosticReport.result",
         "sliceName": "diagnostic-conclusion",
@@ -315,6 +339,12 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.result:diagnostic-conclusion.reference",
+        "path": "DiagnosticReport.result.reference",
+        "min": 1,
         "mustSupport": true
       },
       {

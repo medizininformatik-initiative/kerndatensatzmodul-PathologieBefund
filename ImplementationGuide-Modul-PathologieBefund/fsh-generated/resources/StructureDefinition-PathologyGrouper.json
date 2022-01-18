@@ -68,7 +68,15 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
-        "min": 1
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyFinding"
+            ]
+          }
+        ]
       }
     ]
   }

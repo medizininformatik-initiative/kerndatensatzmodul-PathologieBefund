@@ -60,8 +60,9 @@ Description: "Defines the general pathology report structure for German hospital
 * specimen 1.. MS
 // Beobachtungsabschnitte bzw. Beobachtungen
 * result 1.. MS
-* result ^slicing.discriminator[+].type = #type
-* result ^slicing.discriminator[=].path = "$this"
+// * result only Reference(PathologyGrouper)
+* result ^slicing.discriminator[+].type = #profile
+* result ^slicing.discriminator[=].path = "$this.resolve()"
 * result ^slicing.rules = #open
 * result contains 
       intraoperative-observation 0..* MS
@@ -70,18 +71,23 @@ Description: "Defines the general pathology report structure for German hospital
       and additional-observation 0..* MS
       and diagnostic-conclusion 1..* MS
 * result[intraoperative-observation] only Reference(IntraoperativeObservation)
-* result[intraoperative-observation] ^short = "Reference to intraoperative Observations"
+  * reference 1.. MS
+  * ^short = "Reference to intraoperative Observations"
 * result[macroscopic-observation] only Reference(MacroscopicObservation)
-* result[macroscopic-observation] ^short = "Reference to macroscopic Observations"
+  * reference 1.. MS
+  * ^short = "Reference to macroscopic Observations"
 * result[microscopic-observation] only Reference(MicroscopicObservation)
-* result[microscopic-observation] ^short = "Reference to microscopic Observations"
+  * reference 1.. MS
+  * ^short = "Reference to microscopic Observations"
 * result[additional-observation] only Reference(PathologyFinding)     
-* result[additional-observation] ^short = "Reference to any additional Observation"
+  * reference 1.. MS
+  * ^short = "Reference to any additional Observation"
 * result[diagnostic-conclusion] only Reference(DiagnosticConclusion) 
-* result[diagnostic-conclusion] ^short = "Reference to the 'Diagnostic Conclusion' grouper(s)"
+  * reference 1.. MS
+  * ^short = "Reference to the 'Diagnostic Conclusion' grouper(s)"
 // Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) 
 * imagingStudy MS
-* imagingStudy ^short = "Reference to attached DICOM images"
+  * ^short = "Reference to attached DICOM images"
 // Referenz zu angehaengten Bildern
 * media MS
 * media ^short = "Reference to single attached images"

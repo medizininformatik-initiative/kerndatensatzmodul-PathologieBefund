@@ -53,64 +53,24 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyFinding",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyGrouper",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Observation.category",
-        "path": "Observation.category",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "category.coding"
-            }
-          ],
-          "rules": "open",
-          "description": "Section type",
-          "ordered": false
-        }
-      },
-      {
-        "id": "Observation.category.coding",
-        "path": "Observation.category.coding",
-        "min": 2
-      },
-      {
-        "id": "Observation.category.coding:microscopic",
-        "path": "Observation.category.coding",
-        "sliceName": "microscopic",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category.coding:microscopic.system",
-        "path": "Observation.category.coding.system",
+        "id": "Observation.code.coding.system",
+        "path": "Observation.code.coding.system",
         "fixedUri": "http://loinc.org/"
       },
       {
-        "id": "Observation.category.coding:microscopic.code",
-        "path": "Observation.category.coding.code",
+        "id": "Observation.code.coding.code",
+        "path": "Observation.code.coding.code",
         "fixedCode": "22635-7"
       },
       {
-        "id": "Observation.category.coding:microscopic.display",
-        "path": "Observation.category.coding.display",
+        "id": "Observation.code.coding.display",
+        "path": "Observation.code.coding.display",
         "patternString": "Pathology report microscopic observation"
-      },
-      {
-        "id": "Observation.hasMember",
-        "path": "Observation.hasMember",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicObservation"
-            ]
-          }
-        ]
       }
     ]
   }
