@@ -53,7 +53,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/BasePathologyObservation",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyGrouper",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -81,7 +81,8 @@
             "targetProfile": [
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeObservation",
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicObservation"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicObservation",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyFinding"
             ]
           }
         ]

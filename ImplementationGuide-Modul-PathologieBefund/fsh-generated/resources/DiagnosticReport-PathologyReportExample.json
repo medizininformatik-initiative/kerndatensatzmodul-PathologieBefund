@@ -60,10 +60,10 @@
       "reference": "Observation/MacroGrouperB"
     },
     {
-      "reference": "MicroGrouperA"
+      "reference": "Observation/MicroGrouperA"
     },
     {
-      "reference": "DiagnosticConclusionGrouper"
+      "reference": "Observation/DiagnosticConclusionGrouper"
     }
   ],
   "conclusion": "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2",

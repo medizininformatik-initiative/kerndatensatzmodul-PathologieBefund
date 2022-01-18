@@ -141,7 +141,7 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 // Diagnostic Conclusion
 //--------------------------------
 Profile: DiagnosticConclusion
-Parent: BasePathologyObservation	
+Parent: PathologyGrouper	
 Id: DiagnosticConclusion
 Title: "DiagnosticConclusion"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
@@ -151,7 +151,7 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
   * coding.system ^fixedUri = $LOINC
   * coding.display = "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
-* derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation)
+* derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding)
 
 //---------------------------------
 // Examples
@@ -240,29 +240,31 @@ Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)
 // Microscopic Report
 //-------------------------------
 // Micro Specimen A
-/*
+
 Instance: MicroObsHistologicTypeA
-InstanceOf: MicroscopicObservation
+InstanceOf: PathologyFinding
 Usage: #example
 Title: "MicroObsHistologicTypeA"
 Description: "Histologic type of Specimen A"
 * status = #final 
-* category[+].coding[microscopic] = $LOINC#22635-7 "Pathology report microscopic observation"
+* category[laboratory-category].coding = $obs-category#laboratory
+* category[section-type].coding = $LOINC#22635-7 "Pathology report microscopic observation"
 * code = $SCT#371441004 "Histologic type (observable entity)"
 * valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma (morphologic abnormality)"
 
 Instance: MicroObsGleasonPatternA
-InstanceOf: MicroscopicObservation
+InstanceOf: PathologyFinding
 Usage: #example
 Title: "MicroObsGleasonPatternA"
 Description: "Gleason pattern.primary in prostate tumor for Specimen A"
 * status = #final
-* category[+].coding[microscopic] = $LOINC#22635-7 "Pathology report microscopic observation"
+* category[laboratory-category].coding = $obs-category#laboratory
+* category[section-type].coding = $LOINC#22635-7 "Pathology report microscopic observation"
 * code = $LOINC#44641-9 "Gleason pattern.primary in prostate tumor"
 * valueCodeableConcept = $SCT#369772003 "Pattern 3 (staging scale)"
 
 Instance: MicroGrouperA
-InstanceOf: PathologyGrouper
+InstanceOf: MicroscopicObservation
 Usage: #example
 Title: "MicroGrouperA"
 Description: "Grouper for all Microscopic Observations of Specimen A"
@@ -286,37 +288,40 @@ Description: "Grouper for all Microscopic Observations of Specimen A"
 // Diagnostic Conclusion
 //-------------------------------
 Instance: DiagnosticConclusion1
-InstanceOf: DiagnosticConclusion
+InstanceOf: PathologyFinding
 Usage: #example
 Title: "DiagnosticConclusion1"
 Description: "Example for a diagnostic conclusion"
 * status = #final
-* category[+].coding[diag-conclusion] = $LOINC#22637-3 "Pathology report diagnosis"
+* category[laboratory-category].coding = $obs-category#laboratory
+* category[section-type].coding = $LOINC#22637-3 "Pathology report diagnosis"
 * code = $LOINC#59847-4 "Histology and Behavior ICD-O-3 Cancer"
 * valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom (azinär)"
 
 Instance: DiagnosticConclusion2
-InstanceOf: DiagnosticConclusion
+InstanceOf: PathologyFinding
 Usage: #example
 Title: "DiagnosticConclusion2"
 Description: "Example for diagnostic conclusion"
 * status = #final
-* category[+].coding[diag-conclusion] = $LOINC#22637-3 "Pathology report diagnosis"
+* category[laboratory-category].coding = $obs-category#laboratory
+* category[section-type].coding = $LOINC#22637-3 "Pathology report diagnosis"
 * code = $LOINC#35266-6 "Gleason score in Specimen Qualitative"
 * valueCodeableConcept = $SCT#57403001 "Gleason grade 7 (staging scale)"
 
 Instance: DiagnosticConclusion3
-InstanceOf: DiagnosticConclusion
+InstanceOf: PathologyFinding
 Usage: #example
 Title: "DiagnosticConclusion3"
 Description: "Example for diagnostic conclusion"
 * status = #final
-* category[+].coding[diag-conclusion] = $LOINC#22637-3 "Pathology report diagnosis"
+* category[laboratory-category].coding = $obs-category#laboratory
+* category[section-type].coding = $LOINC#22637-3 "Pathology report diagnosis"
 * code = $LOINC#94734-1 "Prostate cancer grade group"
 * valueCodeableConcept = $LOINC#LA9630-0 "Grade 2"
 
 Instance: DiagnosticConclusionGrouper
-InstanceOf: PathologyGrouper
+InstanceOf: DiagnosticConclusion
 Usage: #example
 Title: "DiagnosticConclusionGrouper"
 Description: "Example for a diagnostic conclusion"
@@ -331,4 +336,3 @@ Description: "Example for a diagnostic conclusion"
 * hasMember[+] = Reference(DiagnosticConclusion1)
 * hasMember[+] = Reference(DiagnosticConclusion2)
 * hasMember[+] = Reference(DiagnosticConclusion3)
-*/

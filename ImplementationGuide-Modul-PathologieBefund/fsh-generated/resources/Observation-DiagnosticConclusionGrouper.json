@@ -1,0 +1,65 @@
+{
+  "resourceType": "Observation",
+  "id": "DiagnosticConclusionGrouper",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/DiagnosticConclusion"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "laboratory",
+          "system": "http://hl7.org/fhir/codesystem-observation-category.html"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org/",
+        "code": "22637-3",
+        "display": "Pathology report diagnosis"
+      }
+    ]
+  },
+  "status": "final",
+  "derivedFrom": [
+    {
+      "reference": "Observation/MacroGrouperA"
+    },
+    {
+      "reference": "Observation/MacroGrouperB"
+    },
+    {
+      "reference": "Observation/MicroGrouperA"
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "35917007",
+            "system": "http://snomed.info/sct",
+            "display": "Adenocarcinoma, no subtype (morphologic abnormality)"
+          }
+        ]
+      },
+      "valueString": "Fokal zirkumfentiell wachsenden und stenosierenden Adenocarcinom"
+    }
+  ],
+  "hasMember": [
+    {
+      "reference": "Observation/DiagnosticConclusion1"
+    },
+    {
+      "reference": "Observation/DiagnosticConclusion2"
+    },
+    {
+      "reference": "Observation/DiagnosticConclusion3"
+    }
+  ]
+}
