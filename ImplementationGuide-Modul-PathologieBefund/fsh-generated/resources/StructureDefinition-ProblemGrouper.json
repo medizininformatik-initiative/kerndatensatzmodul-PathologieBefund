@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ProblemList",
+  "id": "ProblemGrouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,10 +11,10 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/ProblemList",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/ProblemGrouper",
   "version": "0.1.0",
-  "name": "ProblemList",
-  "title": "ProblemList",
+  "name": "ProblemGrouper",
+  "title": "ProblemGrouper",
   "status": "draft",
   "description": "List of problems or questions concerning the reason for the ServiceRequest",
   "fhirVersion": "4.0.1",
