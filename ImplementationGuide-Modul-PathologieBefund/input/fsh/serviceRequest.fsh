@@ -113,10 +113,10 @@ Description: "The reason for the ServiceRequest as Narrative"
 //------------------------------------------------
 // Fragestellung (Problem list $LOINC#11450-4)
 //------------------------------------------------
-Profile: ProblemList
+Profile: ProblemGrouper
 Parent: Observation
-Id: ProblemList
-Title: "ProblemList"
+Id: ProblemGrouper
+Title: "ProblemGrouper"
 Description: "List of problems or questions concerning the reason for the ServiceRequest"
 * insert RuleSet1
 * status MS
@@ -142,10 +142,10 @@ Description: "List of problems or questions concerning the reason for the Servic
 //----------------------------------
 Extension: ExtProblemList
 Id: ExtProblemList
-Title: "Extension - ProblemList"
+Title: "Extension - ProblemGrouper"
 Description: "Reference to a list of problems or questions concerning the reason for the ServiceRequest"
 * url 1.. MS
-* value[x] only Reference(ProblemList)
+* value[x] only Reference(ProblemGrouper)
 
 //---------------------------
 //Examples
