@@ -59,7 +59,6 @@ Description: "Order for the analysis of a sample or a group of samples."
 //Referenz für Probenentnehmer
 * performer MS
 * performer only Reference(Practitioner)
-
 // Clinical Information - Pathology report relevant history $LOINC#22636-5
 * supportingInfo MS
 * supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
