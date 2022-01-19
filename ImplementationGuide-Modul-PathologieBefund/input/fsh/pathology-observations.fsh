@@ -137,6 +137,20 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
   * coding.system ^fixedUri = $LOINC
   * coding.display = "Pathology report microscopic observation"
 
+//-------------------------------------
+// Additional Specified Observations
+//-------------------------------------
+Profile: AdditionalSpecifiedObservations
+Parent: PathologyGrouper
+Id: AdditionalSpecifiedObservations
+Title: "AdditionalSpecifiedObservations"
+Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
+* insert RuleSet1
+* code  
+  * coding.code ^fixedCode = #81317-0
+  * coding.system ^fixedUri = $LOINC
+  * coding.display = "Additional pathological findings"
+
 //--------------------------------
 // Diagnostic Conclusion
 //--------------------------------

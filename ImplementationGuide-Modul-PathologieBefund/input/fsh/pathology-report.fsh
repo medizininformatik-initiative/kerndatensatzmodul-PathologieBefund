@@ -79,7 +79,7 @@ Description: "Defines the general pathology report structure for German hospital
 * result[microscopic-observation] only Reference(MicroscopicObservation)
   * reference 1.. MS
   * ^short = "Reference to microscopic Observations"
-* result[additional-observation] only Reference(PathologyFinding)     
+* result[additional-observation] only Reference(AdditionalSpecifiedObservations)     
   * reference 1.. MS
   * ^short = "Reference to any additional Observation"
 * result[diagnostic-conclusion] only Reference(DiagnosticConclusion) 
