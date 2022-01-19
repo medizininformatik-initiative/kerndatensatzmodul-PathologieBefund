@@ -167,6 +167,7 @@
       {
         "id": "Composition.custodian",
         "path": "Composition.custodian",
+        "min": 1,
         "mustSupport": true
       },
       {

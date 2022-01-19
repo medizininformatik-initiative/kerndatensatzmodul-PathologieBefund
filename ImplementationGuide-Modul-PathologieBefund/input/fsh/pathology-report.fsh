@@ -132,7 +132,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * mode ^short = "Mode fixed to 'legal'"
   * party 1.. MS
   * party only Reference(Practitioner or Organization)
-* custodian MS
+* custodian 1.. MS
 * date MS
 * subject 1.. MS
 * subject only Reference(Patient)
@@ -195,6 +195,7 @@ Description: "Example for a PathologyComposition"
 * date = "2021-06-08"
 * author[+].reference = "Practitioner/45756"
 * title = "Pathologie Befundbericht"
+* custodian.reference = "Organization/12345"
 * attester[+].mode = #legal
 * attester[=].party.reference = "Practitioner/765879"
 * event.period.start = "2021-06-05"
