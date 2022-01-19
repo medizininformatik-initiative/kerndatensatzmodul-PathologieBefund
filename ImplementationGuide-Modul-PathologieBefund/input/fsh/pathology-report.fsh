@@ -86,8 +86,7 @@ Description: "Defines the general pathology report structure for German hospital
   * reference 1.. MS
   * ^short = "Reference to the 'Diagnostic Conclusion' grouper(s)"
 // Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) 
-// * imagingStudy MS
-//   * ^short = "Reference to attached DICOM images"
+* imagingStudy MS
 // Referenz zu angehaengten Bildern
 * media MS
 * media ^short = "Reference to single attached images"

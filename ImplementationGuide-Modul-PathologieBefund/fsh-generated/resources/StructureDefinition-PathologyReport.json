@@ -348,6 +348,11 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.imagingStudy",
+        "path": "DiagnosticReport.imagingStudy",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.media",
         "path": "DiagnosticReport.media",
         "short": "Reference to single attached images",
