@@ -52,5 +52,16 @@
       "reference": "Practitioner/45756"
     }
   ],
-  "title": "Pathologie Befundbericht"
+  "title": "Pathologie Befundbericht",
+  "custodian": {
+    "reference": "Organization/12345"
+  },
+  "event": [
+    {
+      "period": {
+        "start": "2021-06-05",
+        "end": "2021-06-08"
+      }
+    }
+  ]
 }
