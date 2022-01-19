@@ -37,20 +37,6 @@
       "reference": "Observation/MicroGrouperA"
     }
   ],
-  "component": [
-    {
-      "code": {
-        "coding": [
-          {
-            "code": "35917007",
-            "system": "http://snomed.info/sct",
-            "display": "Adenocarcinoma, no subtype (morphologic abnormality)"
-          }
-        ]
-      },
-      "valueString": "Fokal zirkumfentiell wachsenden und stenosierenden Adenocarcinom"
-    }
-  ],
   "hasMember": [
     {
       "reference": "Observation/DiagnosticConclusion1"

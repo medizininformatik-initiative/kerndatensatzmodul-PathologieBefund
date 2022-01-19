@@ -137,6 +137,20 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
   * coding.system ^fixedUri = $LOINC
   * coding.display = "Pathology report microscopic observation"
 
+//-------------------------------------
+// Additional Specified Observations
+//-------------------------------------
+Profile: AdditionalSpecifiedObservations
+Parent: PathologyGrouper
+Id: AdditionalSpecifiedObservations
+Title: "AdditionalSpecifiedObservations"
+Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
+* insert RuleSet1
+* code  
+  * coding.code ^fixedCode = #81317-0
+  * coding.system ^fixedUri = $LOINC
+  * coding.display = "Additional pathological findings"
+
 //--------------------------------
 // Diagnostic Conclusion
 //--------------------------------
@@ -240,7 +254,6 @@ Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)
 // Microscopic Report
 //-------------------------------
 // Micro Specimen A
-
 Instance: MicroObsHistologicTypeA
 InstanceOf: PathologyFinding
 Usage: #example
@@ -273,16 +286,6 @@ Description: "Grouper for all Microscopic Observations of Specimen A"
 * valueString = "Specimen A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders..."
 * hasMember[+] = Reference(MicroObsHistologicTypeA)
 * hasMember[+] = Reference(MicroObsGleasonPatternA)
-
-// Micro Specimen B
-// Instance: MicroGrouperB
-// InstanceOf: PathologyGrouper
-// Usage: #example
-// Title: "MicroGrouperB"
-// Description: "Grouper for all Microscopic Observations of Specimen B"
-// * status = #final 
-// * code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
-// * valueString = "Specimen B: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär  und k (Gleason-Muster 3 und 4 (10%)), die sich zwischen ortständige Drüsen schieben und ca. 70% der Schnittfläche des Zylinders (1 von Nervenscheiden und herdförmig kapselüberschreitendes Wachstum mit Infiltration des periprostatischen Fettgewebes."
 
 //-------------------------------
 // Diagnostic Conclusion
@@ -331,8 +334,6 @@ Description: "Example for a diagnostic conclusion"
 * derivedFrom[+] = Reference(MacroGrouperB)
 * derivedFrom[+] = Reference(MicroGrouperA)
 // * derivedFrom[+] = Reference(MicroGrouperB)
-* component[+].code = $SCT#35917007 "Adenocarcinoma, no subtype (morphologic abnormality)"
-* component[=].valueString = "Fokal zirkumfentiell wachsenden und stenosierenden Adenocarcinom"
 * hasMember[+] = Reference(DiagnosticConclusion1)
 * hasMember[+] = Reference(DiagnosticConclusion2)
 * hasMember[+] = Reference(DiagnosticConclusion3)

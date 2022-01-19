@@ -63,55 +63,6 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.extension",
-        "path": "ServiceRequest.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "ServiceRequest.extension:reasonForReferral",
-        "path": "ServiceRequest.extension",
-        "sliceName": "reasonForReferral",
-        "short": "Reason for the referral as string",
-        "definition": "String representation for the reason for the referral. In case of coded reason, use 'reasonCode'",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/ExtReasonForReferral"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.extension:problemList",
-        "path": "ServiceRequest.extension",
-        "sliceName": "problemList",
-        "short": "List of possible problems that should be analyzed",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/ExtProblemList"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "ServiceRequest.identifier",
         "path": "ServiceRequest.identifier",
         "slicing": {
@@ -393,6 +344,7 @@
       {
         "id": "ServiceRequest.reasonCode",
         "path": "ServiceRequest.reasonCode",
+        "short": "Coded representation of the reason for referral",
         "mustSupport": true
       },
       {
@@ -408,13 +360,13 @@
           "rules": "open",
           "ordered": false
         },
-        "short": "Reference to anamnesis and diagnostic data",
+        "short": "Reference to history of present illness (anamnesis), active problems and diagnostic data",
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.supportingInfo:CodedCondition",
+        "id": "ServiceRequest.supportingInfo:codedCondition",
         "path": "ServiceRequest.supportingInfo",
-        "sliceName": "CodedCondition",
+        "sliceName": "codedCondition",
         "min": 0,
         "max": "*",
         "type": [
@@ -428,9 +380,9 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.supportingInfo:Anamnesis",
+        "id": "ServiceRequest.supportingInfo:anamnesis",
         "path": "ServiceRequest.supportingInfo",
-        "sliceName": "Anamnesis",
+        "sliceName": "anamnesis",
         "min": 0,
         "max": "*",
         "type": [
@@ -438,6 +390,23 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo:activeProblems",
+        "path": "ServiceRequest.supportingInfo",
+        "sliceName": "activeProblems",
+        "short": "List of possible problems that should be analyzed",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/ActiveProblems"
             ]
           }
         ],
