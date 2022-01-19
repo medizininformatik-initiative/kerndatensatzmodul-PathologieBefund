@@ -345,8 +345,6 @@ Description: "Example for a diagnostic conclusion"
 * derivedFrom[+] = Reference(MacroGrouperB)
 * derivedFrom[+] = Reference(MicroGrouperA)
 // * derivedFrom[+] = Reference(MicroGrouperB)
-* component[+].code = $SCT#35917007 "Adenocarcinoma, no subtype (morphologic abnormality)"
-* component[=].valueString = "Fokal zirkumfentiell wachsenden und stenosierenden Adenocarcinom"
 * hasMember[+] = Reference(DiagnosticConclusion1)
 * hasMember[+] = Reference(DiagnosticConclusion2)
 * hasMember[+] = Reference(DiagnosticConclusion3)
