@@ -118,6 +118,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
     * code 1.. MS
     * code ^fixedCode = #11526-1
     * display MS 
+* category MS
 // Titel
 * title 1.. MS
 // Autor

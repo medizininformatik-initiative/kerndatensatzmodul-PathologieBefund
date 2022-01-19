@@ -97,6 +97,11 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.category",
+        "path": "Composition.category",
+        "mustSupport": true
+      },
+      {
         "id": "Composition.subject",
         "path": "Composition.subject",
         "min": 1,
