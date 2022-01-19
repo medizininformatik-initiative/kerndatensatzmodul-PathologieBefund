@@ -60,20 +60,24 @@ Description: "Order for the analysis of a sample or a group of samples."
 * performer MS
 * performer only Reference(Practitioner)
 
-// Klinische Informationen
+// Clinical Information - Pathology report relevant history $LOINC#22636-5
 * supportingInfo MS
-* supportingInfo ^short = "Reference to anamnesis and diagnostic data"
+* supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
 * supportingInfo ^slicing.discriminator.type = #pattern
 * supportingInfo ^slicing.discriminator.path = "$this"
 * supportingInfo ^slicing.rules = #open
 // * supportingInfo ^slicing.description = ""
 * supportingInfo ^slicing.ordered = false
-* supportingInfo contains CodedCondition 0.. MS 
-                      and Anamnesis 0.. MS
+* supportingInfo contains codedCondition 0.. MS 
+                      and anamnesis 0.. MS
+                      and activeProblems 0.. MS
 // Diagnose codiert
-* supportingInfo[CodedCondition] only Reference(Condition)
+* supportingInfo[codedCondition] only Reference(Condition)
 // Anamnese - Annahme: besteht zum groessten Teil aus Observations u/o Conditions
-* supportingInfo[Anamnesis] only Reference(Observation)
+* supportingInfo[anamnesis] only Reference(Observation)
+// Active Problems (Fragestellung)
+* supportingInfo[activeProblems] only Reference(ActiveProblems)
+  * ^short = "List of possible problems that should be analyzed"
 
 // Zusaetzliche Elemente
 // category for searching purposes 
@@ -93,30 +97,15 @@ Description: "Order for the analysis of a sample or a group of samples."
 * code MS
 // Ueberweisungsgrund und Fragestellung
 * reasonCode MS 
-* extension contains ExtReasonForReferral named reasonForReferral 0.. MS 
-            and ExtProblemList named problemList 0.. MS
-* extension[reasonForReferral] ^short = "Reason for the referral as string"
-* extension[reasonForReferral] ^definition = "String representation for the reason for the referral. In case of coded reason, use 'reasonCode'"
-* extension[problemList] ^short = "List of possible problems that should be analyzed"
-
-//------------------------------------------------------------------------
-// Ueberweisungsgrund (Reason for referral (Narrative) $LOINC#42349-1)
-//------------------------------------------------------------------------
-Extension: ExtensionReasonForReferral
-Id: ExtReasonForReferral
-Title: "Extension - ReasonForReferral"
-Description: "The reason for the ServiceRequest as Narrative"
-* url 1.. MS
-* value[x] only string
-* valueString 1.. MS
+  * ^short = "Coded representation of the reason for referral"
 
 //------------------------------------------------
 // Fragestellung (Problem list $LOINC#11450-4)
 //------------------------------------------------
-Profile: ProblemGrouper
+Profile: ActiveProblems
 Parent: Observation
-Id: ProblemGrouper
-Title: "ProblemGrouper"
+Id: ActiveProblems
+Title: "ActiveProblems"
 Description: "List of problems or questions concerning the reason for the ServiceRequest"
 * insert RuleSet1
 * status MS
@@ -136,16 +125,6 @@ Description: "List of problems or questions concerning the reason for the Servic
       * code 1.. MS
   * value[x] MS
   * dataAbsentReason MS
-
-//----------------------------------
-// Extension for problem list
-//----------------------------------
-Extension: ExtProblemList
-Id: ExtProblemList
-Title: "Extension - ProblemGrouper"
-Description: "Reference to a list of problems or questions concerning the reason for the ServiceRequest"
-* url 1.. MS
-* value[x] only Reference(ProblemGrouper)
 
 //---------------------------
 //Examples
