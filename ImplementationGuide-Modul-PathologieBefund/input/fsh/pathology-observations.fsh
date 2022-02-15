@@ -67,7 +67,7 @@ Title: "PathologyFinding"
 Description: "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
 * insert RuleSet1
 * category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "category.coding"
+* category ^slicing.discriminator.path = "$this.coding"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Section type"
 * category ^slicing.ordered = false
@@ -104,10 +104,12 @@ Id: IntraoperativeObservation
 Title: "IntraoperativeObservation"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert RuleSet1
-* code = $LOINC#83321-0
-  * coding.code ^fixedCode = #83321-0
-  * coding.system ^fixedUri = $LOINC
-  * coding.display = "Pathology report intraoperative observation in Specimen Document"
+* code ^fixedCodeableConcept = $LOINC##83321-0 "Pathology report intraoperative observation in Specimen Document"
+// * code.coding ^slicing.discriminator.type = #pattern
+// * code.coding ^slicing.discriminator.path = "$this"
+// * code.coding ^slicing.rules = #open
+// * code.coding contains intraoperative-obs 1..1 MS
+// * code.coding[intraoperative-obs] ^patternCoding = $LOINC##83321-0 "Pathology report intraoperative observation in Specimen Document"
 
 //--------------------------------------------
 // Macroscopic Observation
@@ -118,10 +120,12 @@ Id: MacroscopicObservation
 Title: "MacroscopicObservation"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert RuleSet1
-* code
-  * coding.code ^fixedCode = #22634-0
-  * coding.system ^fixedUri = $LOINC
-  * coding.display = "Pathology report gross observation"
+* code ^fixedCodeableConcept = $LOINC#22634-0 "Pathology report gross observation"
+  // * coding ^slicing.discriminator.type = #pattern
+  // * coding ^slicing.discriminator.path = "$this"
+  // * coding ^slicing.rules = #open
+  // * coding contains macroscopic-obs 1..1 MS
+  // * coding[macroscopic-obs] ^patternCoding = $LOINC#22634-0 "Pathology report gross observation"
 
 //-------------------------------------
 // Microscopic Observation
@@ -132,10 +136,12 @@ Id: MicroscopicObservation
 Title: "MicroscopicObservation"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert RuleSet1
-* code
-  * coding.code ^fixedCode = #22635-7
-  * coding.system ^fixedUri = $LOINC
-  * coding.display = "Pathology report microscopic observation"
+* code ^fixedCodeableConcept = $LOINC#22635-7 "Pathology report microscopic observation"
+  // * coding ^slicing.discriminator.type = #pattern
+  // * coding ^slicing.discriminator.path = "$this"
+  // * coding ^slicing.rules = #open
+  // * coding contains microscopic-obs 1..1 MS
+  // * coding[microscopic-obs] ^patternCoding = $LOINC#22635-7 "Pathology report microscopic observation"
 
 //-------------------------------------
 // Additional Specified Observations
@@ -146,10 +152,12 @@ Id: AdditionalSpecifiedObservations
 Title: "AdditionalSpecifiedObservations"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
 * insert RuleSet1
-* code  
-  * coding.code ^fixedCode = #81317-0
-  * coding.system ^fixedUri = $LOINC
-  * coding.display = "Additional pathological findings"
+* code ^fixedCodeableConcept = $LOINC#81317-0 "Additional pathological findings"  
+  // * coding ^slicing.discriminator.type = #pattern
+  // * coding ^slicing.discriminator.path = "$this"
+  // * coding ^slicing.rules = #open
+  // * coding contains additional-obs 1..1 MS
+  // * coding[additional-obs] ^patternCoding = $LOINC#81317-0 "Additional pathological findings"
 
 //--------------------------------
 // Diagnostic Conclusion
@@ -160,10 +168,12 @@ Id: DiagnosticConclusion
 Title: "DiagnosticConclusion"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
 * insert RuleSet1
-* code
-  * coding.code ^fixedCode = #22637-3
-  * coding.system ^fixedUri = $LOINC
-  * coding.display = "Pathology report diagnosis"
+* code ^fixedCodeableConcept = $LOINC#22637-3 "Pathology report diagnosis"
+  // * coding ^slicing.discriminator.type = #pattern
+  // * coding ^slicing.discriminator.path = "$this"
+  // * coding ^slicing.rules = #open
+  // * coding contains diagnostic-conclusion 1..1 MS
+  // * coding[diagnostic-conclusion] ^patternCoding = $LOINC#22637-3 "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding)
 

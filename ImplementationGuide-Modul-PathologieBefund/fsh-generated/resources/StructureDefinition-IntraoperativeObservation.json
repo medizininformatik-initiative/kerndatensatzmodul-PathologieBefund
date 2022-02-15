@@ -60,29 +60,15 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "patternCodeableConcept": {
+        "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "83321-0",
-              "system": "http://loinc.org/"
+              "code": "#83321-0",
+              "system": "http://loinc.org",
+              "display": "Pathology report intraoperative observation in Specimen Document"
             }
           ]
         }
-      },
-      {
-        "id": "Observation.code.coding.system",
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://loinc.org/"
-      },
-      {
-        "id": "Observation.code.coding.code",
-        "path": "Observation.code.coding.code",
-        "fixedCode": "83321-0"
-      },
-      {
-        "id": "Observation.code.coding.display",
-        "path": "Observation.code.coding.display",
-        "patternString": "Pathology report intraoperative observation in Specimen Document"
       }
     ]
   }

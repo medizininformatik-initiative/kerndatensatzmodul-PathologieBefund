@@ -58,19 +58,17 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code.coding.system",
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://loinc.org/"
-      },
-      {
-        "id": "Observation.code.coding.code",
-        "path": "Observation.code.coding.code",
-        "fixedCode": "22637-3"
-      },
-      {
-        "id": "Observation.code.coding.display",
-        "path": "Observation.code.coding.display",
-        "patternString": "Pathology report diagnosis"
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "22637-3",
+              "system": "http://loinc.org",
+              "display": "Pathology report diagnosis"
+            }
+          ]
+        }
       },
       {
         "id": "Observation.derivedFrom",

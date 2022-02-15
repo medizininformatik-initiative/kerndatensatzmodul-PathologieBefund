@@ -5,15 +5,15 @@
 id: Modul-PathologieBefund
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho
 name: Modul-PathologieBefund
-status: draft
+status: "draft"
 version: 0.1.0
 fhirVersion: 4.0.1
 FSHOnly: true
 # TODO: add further dependencies!
 dependencies: 
   de.basisprofil.r4:
-    uri: https://ig.fhir.de/basisprofile-de/1.0.0/
-    version: 1.0.0
+    uri: https://ig.fhir.de/basisprofile-de/1.2.0/
+    version: 1.2.0
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

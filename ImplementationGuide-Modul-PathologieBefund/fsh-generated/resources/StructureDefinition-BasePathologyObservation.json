@@ -110,7 +110,7 @@
           "coding": [
             {
               "code": "laboratory",
-              "system": "http://hl7.org/fhir/codesystem-observation-category.html"
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category"
             }
           ]
         },
@@ -126,7 +126,7 @@
         "id": "Observation.category:laboratory-category.coding.system",
         "path": "Observation.category.coding.system",
         "min": 1,
-        "fixedString": "http://hl7.org/fhir/codesystem-observation-category.html",
+        "fixedString": "http://terminology.hl7.org/CodeSystem/observation-category",
         "mustSupport": true
       },
       {

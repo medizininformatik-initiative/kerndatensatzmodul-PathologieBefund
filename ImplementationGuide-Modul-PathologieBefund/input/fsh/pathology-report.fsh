@@ -7,21 +7,19 @@ Id: PathologyReport
 Title: "PathologyReport"
 Description: "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative"
 * insert RuleSet1
-
 // ID
 * id MS
 // Identifikator
 * identifier 1.. MS
-// Identifier Slice in Set-ID und Versionsnummer
-* identifier ^slicing.discriminator[0].type = #pattern
-* identifier ^slicing.discriminator[0].path = "$this"
-* identifier ^slicing.rules = #open
-* identifier contains Set-ID 1.. MS
-* identifier[Set-ID].value 1.. MS
-* identifier[Set-ID].system 1.. MS
-* identifier[Set-ID].type 1.. MS
-* identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
-
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this.type.coding"
+  * ^slicing.rules = #open
+* identifier contains Set-ID 1..1 MS
+* identifier[Set-ID] 
+  * type 1.. MS
+  * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
+  * value 1.. MS
+  * system 1.. MS
 // Versionsnummer
 * meta MS
 * meta.versionId MS
@@ -34,16 +32,19 @@ Description: "Defines the general pathology report structure for German hospital
 * basedOn ^short = "Reference to respective PathologyServiceRequest"
 // Status
 * status MS
-
 // Code
 * code MS
 * code ^short = "Pathology report code"
-  * coding = $LOINC#60568-3 "Pathology Synoptic report"
+  * coding ^slicing.discriminator.type = #pattern
+  * coding ^slicing.discriminator.path = "$this"
+  * coding ^slicing.rules = #open
+  * coding contains pathology-report 1..1 MS
+  * coding[pathology-report] ^patternCoding = $LOINC#60568-3 "Pathology Synoptic report"
     * system 1.. MS 
     * system ^fixedUri = $LOINC
     * code 1.. MS
     * code ^fixedCode = #60568-3
-    * display MS
+    * display MS  
 
 // Referenz zu Patient:in
 * subject 1.. MS
@@ -61,25 +62,25 @@ Description: "Defines the general pathology report structure for German hospital
 // Beobachtungsabschnitte bzw. Beobachtungen
 * result 1.. MS
 // * result only Reference(PathologyGrouper)
-* result ^slicing.discriminator[+].type = #profile
-* result ^slicing.discriminator[=].path = "$this.resolve()"
-* result ^slicing.rules = #open
+* result ^slicing.discriminator[+].type = #value
+* result ^slicing.discriminator[=].path = "resolve().code"
+* result ^slicing.rules = #closed
 * result contains 
-      intraoperative-observation 0..* MS
-      and macroscopic-observation 0..* MS
-      and microscopic-observation 0..* MS
-      and additional-observation 0..* MS
+      intraoperative-grouper 0..* MS
+      and macroscopic-grouper 0..* MS
+      and microscopic-grouper 0..* MS
+      and additional-observations 0..* MS
       and diagnostic-conclusion 1..* MS
-* result[intraoperative-observation] only Reference(IntraoperativeObservation)
+* result[intraoperative-grouper] only Reference(IntraoperativeObservation)
   * reference 1.. MS
   * ^short = "Reference to intraoperative Observations"
-* result[macroscopic-observation] only Reference(MacroscopicObservation)
+* result[macroscopic-grouper] only Reference(MacroscopicObservation)
   * reference 1.. MS
   * ^short = "Reference to macroscopic Observations"
-* result[microscopic-observation] only Reference(MicroscopicObservation)
+* result[microscopic-grouper] only Reference(MicroscopicObservation)
   * reference 1.. MS
   * ^short = "Reference to microscopic Observations"
-* result[additional-observation] only Reference(AdditionalSpecifiedObservations)     
+* result[additional-observations] only Reference(AdditionalSpecifiedObservations)     
   * reference 1.. MS
   * ^short = "Reference to any additional Observation"
 * result[diagnostic-conclusion] only Reference(DiagnosticConclusion) 
@@ -96,7 +97,7 @@ Description: "Defines the general pathology report structure for German hospital
 // zugehoeriges Dokument
 * presentedForm MS
 // Diagnostische Schlussfolgerung
-* conclusion 1.. MS
+* conclusion MS
 * conclusionCode MS
 
 // -------------------------
@@ -110,13 +111,11 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * insert RuleSet1
 * status MS
 * type MS
-* type = $LOINC#11526-1 "Pathology study"
-* type ^short = "Type fixed to 'Pathology study'"
+  * ^short = "Type fixed to 'Pathology study'"
   * coding MS
+    * ^patternCoding = $LOINC#11526-1 "Pathology study"
     * system 1.. MS
-    * system ^fixedUri = $LOINC
     * code 1.. MS
-    * code ^fixedCode = #11526-1
     * display MS 
 * category MS
 // Titel
@@ -141,20 +140,18 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 // Entry referenziert nur auf PathologyReport
 * section 1.. MS
 * section ^slicing.discriminator[0].type = #pattern
-* section ^slicing.discriminator[0].path = "$this"
+* section ^slicing.discriminator[0].path = "$this.code.coding"
 * section ^slicing.rules = #open
 * section contains diagnostic-report 1..1 MS
 * section[diagnostic-report]
   * code 1.. MS
-  * code = $LOINC#22637-3 "Pathology report diagnosis"
     * coding 1.. MS
-      * system 1.. MS
-      * code 1.. MS
-  * entry 1.. MS
+    * coding ^patternCoding = $LOINC#60567-5 "Comprehensive pathology report panel"
+  * entry 1..1 MS
   * entry only Reference (PathologyReport)
-  * text MS
+  * text 0..0
   * title 1.. MS 
-  * title ^fixedString = "Diagnostische Schlussfolgerung"
+  * title ^fixedString = "Diagnostic Report"
 
 //--------------------------------
 // Example
@@ -167,6 +164,7 @@ Description: "Example for PathologyReport"
 * identifier[+].value = "E21.12345"
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * identifier[=].type = $v2-0203#ACSN "Accession ID"
+// * identifier[=].type = $LOINC#11526-1
 * basedOn = Reference(PathologyRequestExample)
 * status = #final
 * code.coding = $LOINC#60568-3 "Pathology Synoptic report"
@@ -183,7 +181,7 @@ Description: "Example for PathologyReport"
 * effectiveDateTime = "2021-06-01"
 // * issued = "2021-06-02T13:28:17.239+02:00"
 * media.link = Reference(ImageExample)
-* media.comment = "HE-Schnitt einer Prostatstanze, infiltriert durch Karzinomverbände, fotodokumentiert"
+* media.comment = "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
 
 Instance: PathologyCompositionExample
 InstanceOf: PathologyComposition
@@ -201,6 +199,6 @@ Description: "Example for a PathologyComposition"
 * attester[=].party.reference = "Practitioner/765879"
 * event.period.start = "2021-06-05"
 * event.period.end = "2021-06-08"
-* section[+].title = "Diagnostische Schlussfolgerung"
-* section[=].code = $LOINC#22637-3 "Pathology report diagnosis"
+* section[+].title = "Diagnostic Report"
+* section[=].code = $LOINC#60567-5 "Comprehensive pathology report panel"
 * section[=].entry = Reference(PathologyReportExample)

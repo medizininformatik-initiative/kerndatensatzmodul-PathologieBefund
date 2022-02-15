@@ -61,34 +61,28 @@
         "id": "Composition.type",
         "path": "Composition.type",
         "short": "Type fixed to 'Pathology study'",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "11526-1",
-              "system": "http://loinc.org/",
-              "display": "Pathology study"
-            }
-          ]
-        },
         "mustSupport": true
       },
       {
         "id": "Composition.type.coding",
         "path": "Composition.type.coding",
+        "patternCoding": {
+          "code": "11526-1",
+          "system": "http://loinc.org",
+          "display": "Pathology study"
+        },
         "mustSupport": true
       },
       {
         "id": "Composition.type.coding.system",
         "path": "Composition.type.coding.system",
         "min": 1,
-        "fixedUri": "http://loinc.org/",
         "mustSupport": true
       },
       {
         "id": "Composition.type.coding.code",
         "path": "Composition.type.coding.code",
         "min": 1,
-        "fixedCode": "11526-1",
         "mustSupport": true
       },
       {
@@ -188,7 +182,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "$this"
+              "path": "$this.code.coding"
             }
           ],
           "rules": "open"
@@ -208,51 +202,36 @@
         "id": "Composition.section:diagnostic-report.title",
         "path": "Composition.section.title",
         "min": 1,
-        "fixedString": "Diagnostische Schlussfolgerung",
+        "fixedString": "Diagnostic Report",
         "mustSupport": true
       },
       {
         "id": "Composition.section:diagnostic-report.code",
         "path": "Composition.section.code",
         "min": 1,
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "22637-3",
-              "system": "http://loinc.org/",
-              "display": "Pathology report diagnosis"
-            }
-          ]
-        },
         "mustSupport": true
       },
       {
         "id": "Composition.section:diagnostic-report.code.coding",
         "path": "Composition.section.code.coding",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Composition.section:diagnostic-report.code.coding.system",
-        "path": "Composition.section.code.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Composition.section:diagnostic-report.code.coding.code",
-        "path": "Composition.section.code.coding.code",
-        "min": 1,
+        "patternCoding": {
+          "code": "60567-5",
+          "system": "http://loinc.org",
+          "display": "Comprehensive pathology report panel"
+        },
         "mustSupport": true
       },
       {
         "id": "Composition.section:diagnostic-report.text",
         "path": "Composition.section.text",
-        "mustSupport": true
+        "max": "0"
       },
       {
         "id": "Composition.section:diagnostic-report.entry",
         "path": "Composition.section.entry",
         "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "Reference",

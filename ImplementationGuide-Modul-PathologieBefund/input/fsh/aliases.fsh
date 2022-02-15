@@ -1,11 +1,11 @@
-Alias: $LOINC = http://loinc.org/
+Alias: $LOINC = http://loinc.org
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $SCT = http://snomed.info/sct
 Alias: $DICOM = http://dicom.nema.org/resources/ontology/DCM
-Alias: $obs-category = http://hl7.org/fhir/codesystem-observation-category.html
+Alias: $obs-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $icd-o-3 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $v2-0916 = http://terminology.hl7.org/ValueSet/v2-0916
-Alias: $media-type = http://hl7.org/fhir/codesystem-media-type.html 
+Alias: $media-type = http://terminology.hl7.org/CodeSystem/media-type 
 Alias: $UCUM = http://unitsofmeasure.org
 // Biobank Terminologien
 Alias: $bio-probenart = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/probenart
