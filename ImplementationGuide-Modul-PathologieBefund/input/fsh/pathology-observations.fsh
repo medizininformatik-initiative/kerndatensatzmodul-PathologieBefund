@@ -92,7 +92,7 @@ Title: "PathologyGrouper"
 Description: "Grouper profile for pathological findings"
 * insert RuleSet1
 * code.coding from SectionTypes (required)
-* hasMember 1.. 
+* hasMember 1.. MS
 * hasMember only Reference(PathologyFinding)
 
 //--------------------------------------------
@@ -175,6 +175,7 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
   // * coding contains diagnostic-conclusion 1..1 MS
   // * coding[diagnostic-conclusion] ^patternCoding = $LOINC#22637-3 "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
+* derivedFrom MS
 * derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding)
 
 //---------------------------------
