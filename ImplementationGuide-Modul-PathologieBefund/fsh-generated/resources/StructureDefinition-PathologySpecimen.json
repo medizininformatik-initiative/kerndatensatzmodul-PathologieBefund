@@ -14,7 +14,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologySpecimen",
   "version": "0.1.0",
   "name": "PathologySpecimen",
-  "title": "PathologySpecimen - Temporary",
+  "title": "Pathology Specimen",
   "status": "draft",
   "description": "tmp",
   "fhirVersion": "4.0.1",
@@ -38,76 +38,10 @@
   "kind": "resource",
   "abstract": false,
   "type": "Specimen",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore",
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "Specimen.identifier",
-        "path": "Specimen.identifier",
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.status",
-        "path": "Specimen.status",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.type",
-        "path": "Specimen.type",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.type.coding",
-        "path": "Specimen.type.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 1
-      },
-      {
-        "id": "Specimen.type.coding:sct",
-        "path": "Specimen.type.coding",
-        "sliceName": "sct",
-        "min": 1,
-        "max": "*",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/probenart"
-        }
-      },
-      {
-        "id": "Specimen.type.coding:sct.system",
-        "path": "Specimen.type.coding.system",
-        "patternUri": "http://snomed.info/sct"
-      },
-      {
-        "id": "Specimen.subject",
-        "path": "Specimen.subject",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.parent",
-        "path": "Specimen.parent",
-        "mustSupport": true
-      },
       {
         "id": "Specimen.request",
         "path": "Specimen.request",
@@ -118,19 +52,7 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyServiceRequest"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.collection",
-        "path": "Specimen.collection",
-        "min": 1
-      },
-      {
-        "id": "Specimen.collection.collected[x]",
-        "path": "Specimen.collection.collected[x]",
-        "min": 1,
-        "mustSupport": true
+        ]
       },
       {
         "id": "Specimen.collection.method",
@@ -141,171 +63,6 @@
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/Entnahmemethode"
         }
-      },
-      {
-        "id": "Specimen.collection.bodySite",
-        "path": "Specimen.collection.bodySite",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.collection.bodySite.coding",
-        "path": "Specimen.collection.bodySite.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Specimen.collection.bodySite.coding:sct",
-        "path": "Specimen.collection.bodySite.coding",
-        "sliceName": "sct",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/sct-body-structures"
-        }
-      },
-      {
-        "id": "Specimen.collection.bodySite.coding:sct.system",
-        "path": "Specimen.collection.bodySite.coding.system",
-        "min": 1,
-        "patternUri": "http://snomed.info/sct"
-      },
-      {
-        "id": "Specimen.collection.bodySite.coding:icd-o-3",
-        "path": "Specimen.collection.bodySite.coding",
-        "sliceName": "icd-o-3",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/icd-o-3-topography"
-        }
-      },
-      {
-        "id": "Specimen.collection.bodySite.coding:icd-o-3.system",
-        "path": "Specimen.collection.bodySite.coding.system",
-        "min": 1,
-        "patternUri": "http://terminology.hl7.org/CodeSystem/icd-o-3"
-      },
-      {
-        "id": "Specimen.collection.fastingStatusCodeableConcept",
-        "path": "Specimen.collection.fastingStatusCodeableConcept",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0916"
-        }
-      },
-      {
-        "id": "Specimen.processing",
-        "path": "Specimen.processing",
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.processing.description",
-        "path": "Specimen.processing.description",
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.processing.procedure",
-        "path": "Specimen.processing.procedure",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.processing.procedure.coding",
-        "path": "Specimen.processing.procedure.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Specimen.processing.procedure.coding:sct",
-        "path": "Specimen.processing.procedure.coding",
-        "sliceName": "sct",
-        "min": 0,
-        "max": "*",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/Bearbeitungsprozedur"
-        }
-      },
-      {
-        "id": "Specimen.processing.additive",
-        "path": "Specimen.processing.additive",
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.processing.timePeriod",
-        "path": "Specimen.processing.timePeriod",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Period"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.processing.timePeriod.start",
-        "path": "Specimen.processing.timePeriod.start",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.processing.timePeriod.end",
-        "path": "Specimen.processing.timePeriod.end",
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.container",
-        "path": "Specimen.container",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.container.capacity",
-        "path": "Specimen.container.capacity",
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.container.specimenQuantity",
-        "path": "Specimen.container.specimenQuantity",
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.container.additive[x]",
-        "path": "Specimen.container.additive[x]",
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.note",
-        "path": "Specimen.note",
-        "mustSupport": true
       }
     ]
   }
