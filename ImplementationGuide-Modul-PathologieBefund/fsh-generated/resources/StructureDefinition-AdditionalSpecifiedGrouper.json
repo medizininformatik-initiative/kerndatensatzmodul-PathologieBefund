@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "DiagnosticConclusion",
+  "id": "AdditionalSpecifiedGrouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/DiagnosticConclusion",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/AdditionalSpecifiedGrouper",
   "version": "0.1.0",
-  "name": "DiagnosticConclusionGrouper",
-  "title": "DiagnosticConclusion",
+  "name": "AdditionalSpecifiedGrouper",
+  "title": "AdditionalSpecifiedGrouper",
   "status": "draft",
-  "description": "Grouper profile to collect Diagnostic Conclusion information",
+  "description": "Based on IHE PaLM APSR - Grouper for additional specified Observations",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -63,28 +63,12 @@
         "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "22637-3",
+              "code": "81317-0",
               "system": "http://loinc.org",
-              "display": "Pathology report diagnosis"
+              "display": "Additional pathological findings"
             }
           ]
         }
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeObservation",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicObservation",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyFinding"
-            ]
-          }
-        ],
-        "mustSupport": true
       }
     ]
   }

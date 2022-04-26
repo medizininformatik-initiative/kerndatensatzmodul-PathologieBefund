@@ -71,19 +71,19 @@ Description: "Defines the general pathology report structure for German hospital
       and microscopic-grouper 0..* MS
       and additional-observations 0..* MS
       and diagnostic-conclusion 1..* MS
-* result[intraoperative-grouper] only Reference(IntraoperativeObservation)
+* result[intraoperative-grouper] only Reference(IntraoperativeGrouper)
   * reference 1.. MS
   * ^short = "Reference to intraoperative Observations"
-* result[macroscopic-grouper] only Reference(MacroscopicObservation)
+* result[macroscopic-grouper] only Reference(MacroscopicGrouper)
   * reference 1.. MS
   * ^short = "Reference to macroscopic Observations"
-* result[microscopic-grouper] only Reference(MicroscopicObservation)
+* result[microscopic-grouper] only Reference(MicroscopicGrouper)
   * reference 1.. MS
   * ^short = "Reference to microscopic Observations"
-* result[additional-observations] only Reference(AdditionalSpecifiedObservations)     
+* result[additional-observations] only Reference(AdditionalSpecifiedGrouper)     
   * reference 1.. MS
   * ^short = "Reference to any additional Observation"
-* result[diagnostic-conclusion] only Reference(DiagnosticConclusion) 
+* result[diagnostic-conclusion] only Reference(DiagnosticConclusionGrouper) 
   * reference 1.. MS
   * ^short = "Reference to the 'Diagnostic Conclusion' grouper(s)"
 // Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) 

@@ -107,8 +107,8 @@ Description: "Grouper profile for pathological findings"
 //--------------------------------------------
 Profile: IntraoperativeGrouper
 Parent: PathologyGrouper
-Id: IntraoperativeObservation
-Title: "IntraoperativeObservation"
+Id: IntraoperativeGrouper
+Title: "IntraoperativeGrouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC##83321-0 "Pathology report intraoperative observation in Specimen Document"
@@ -123,8 +123,8 @@ Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 //--------------------------------------------
 Profile: MacroscopicGrouper
 Parent: PathologyGrouper
-Id: MacroscopicObservation
-Title: "MacroscopicObservation"
+Id: MacroscopicGrouper
+Title: "MacroscopicGrouper"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#22634-0 "Pathology report gross observation"
@@ -139,8 +139,8 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 //-------------------------------------
 Profile: MicroscopicGrouper
 Parent: PathologyGrouper
-Id: MicroscopicObservation
-Title: "MicroscopicObservation"
+Id: MicroscopicGrouper
+Title: "MicroscopicGrouper"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#22635-7 "Pathology report microscopic observation"
@@ -155,8 +155,8 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 //-------------------------------------
 Profile: AdditionalSpecifiedGrouper
 Parent: PathologyGrouper
-Id: AdditionalSpecifiedObservations
-Title: "AdditionalSpecifiedObservations"
+Id: AdditionalSpecifiedGrouper
+Title: "AdditionalSpecifiedGrouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#81317-0 "Additional pathological findings"  
@@ -171,8 +171,8 @@ Description: "Based on IHE PaLM APSR - Grouper for additional specified Observat
 //--------------------------------
 Profile: DiagnosticConclusionGrouper
 Parent: PathologyGrouper	
-Id: DiagnosticConclusion
-Title: "DiagnosticConclusion"
+Id: DiagnosticConclusionGrouper
+Title: "DiagnosticConclusionGrouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#22637-3 "Pathology report diagnosis"
@@ -183,7 +183,7 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
   // * coding[diagnostic-conclusion] ^patternCoding = $LOINC#22637-3 "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom MS
-* derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding)
+* derivedFrom only Reference(IntraoperativeGrouper or MacroscopicGrouper or MicroscopicGrouper or AdditionalSpecifiedGrouper)
 
 //---------------------------------
 // Examples

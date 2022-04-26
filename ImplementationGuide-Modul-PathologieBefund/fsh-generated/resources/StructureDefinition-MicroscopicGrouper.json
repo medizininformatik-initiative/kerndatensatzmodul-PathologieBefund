@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "MacroscopicObservation",
+  "id": "MicroscopicGrouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicGrouper",
   "version": "0.1.0",
-  "name": "MacroscopicGrouper",
-  "title": "MacroscopicObservation",
+  "name": "MicroscopicGrouper",
+  "title": "MicroscopicGrouper",
   "status": "draft",
-  "description": "Based on IHE PaLM APSR - Macroscopic Observation Finding",
+  "description": "Based on IHE PaLM APSR - Microscopic Observation Finding",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -63,9 +63,9 @@
         "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "22634-0",
+              "code": "22635-7",
               "system": "http://loinc.org",
-              "display": "Pathology report gross observation"
+              "display": "Pathology report microscopic observation"
             }
           ]
         }
