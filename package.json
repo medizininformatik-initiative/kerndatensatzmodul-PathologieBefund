@@ -2,9 +2,12 @@
   "name": null,
   "version": null,
   "description": null,
-  "dependencies": {
-    "de.medizininformatikinitiative.kerndatensatz.person": "2.0.0-alpha3"
-  },
   "devDependencies": null,
-  "canonicals": null
+  "canonicals": null,
+  "dependencies": {
+    "de.medizininformatikinitiative.kerndatensatz.person": "2.0.0-alpha3",
+    "de.medizininformatikinitiative.kerndatensatz.diagnose": "2.0.0-alpha3",
+    "de.medizininformatikinitiative.kerndatensatz.biobank": "1.0.0",
+    "de.basisprofil.r4": "1.3.2"
+  }
 }

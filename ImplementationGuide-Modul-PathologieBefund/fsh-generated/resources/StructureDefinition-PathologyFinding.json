@@ -64,7 +64,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "category.coding"
+              "path": "$this.coding"
             }
           ],
           "rules": "open",
@@ -94,7 +94,7 @@
         "path": "Observation.code.coding",
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://loinc.org/"
+          "valueSet": "http://loinc.org"
         }
       },
       {

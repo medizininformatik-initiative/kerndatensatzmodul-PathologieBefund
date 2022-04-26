@@ -6,8 +6,19 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyReport"
     ]
   },
+  "code": {
+    "coding": [
+      {
+        "code": "60568-3",
+        "system": "http://loinc.org",
+        "display": "Pathology Synoptic report"
+      }
+    ]
+  },
   "identifier": [
     {
+      "value": "E21.12345",
+      "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht",
       "type": {
         "coding": [
           {
@@ -16,20 +27,9 @@
             "display": "Accession ID"
           }
         ]
-      },
-      "value": "E21.12345",
-      "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+      }
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org/",
-        "code": "60568-3",
-        "display": "Pathology Synoptic report"
-      }
-    ]
-  },
   "basedOn": [
     {
       "reference": "ServiceRequest/PathologyRequestExample"
@@ -83,7 +83,7 @@
       "link": {
         "reference": "Media/ImageExample"
       },
-      "comment": "HE-Schnitt einer Prostatstanze, infiltriert durch Karzinomverbände, fotodokumentiert"
+      "comment": "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
     }
   ]
 }

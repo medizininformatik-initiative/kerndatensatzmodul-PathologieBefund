@@ -10,7 +10,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://loinc.org/",
+        "system": "http://loinc.org",
         "concept": [
           {
             "code": "22636-5",

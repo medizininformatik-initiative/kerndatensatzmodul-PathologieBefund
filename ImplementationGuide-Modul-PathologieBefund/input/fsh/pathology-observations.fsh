@@ -67,7 +67,7 @@ Title: "PathologyFinding"
 Description: "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
 * insert RuleSet1
 * category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "category.coding"
+* category ^slicing.discriminator.path = "$this.coding"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Section type"
 * category ^slicing.ordered = false
@@ -91,81 +91,99 @@ Id: PathologyGrouper
 Title: "PathologyGrouper"
 Description: "Grouper profile for pathological findings"
 * insert RuleSet1
+* ^abstract = true
 * code.coding from SectionTypes (required)
-* hasMember 1.. 
-* hasMember only Reference(PathologyFinding)
+* hasMember ^slicing.discriminator.type = #type
+* hasMember ^slicing.discriminator.path = "$this"
+* hasMember ^slicing.rules = #open
+* hasMember ^slicing.description = "Reference to pathology findings"
+* hasMember ^slicing.ordered = false
+* hasMember contains pathology-finding 1..* MS
+* hasMember[pathology-finding] only Reference(PathologyFinding)
+
 
 //--------------------------------------------
 // IntraoperativeObservation
 //--------------------------------------------
-Profile: IntraoperativeObservation
+Profile: IntraoperativeGrouper
 Parent: PathologyGrouper
-Id: IntraoperativeObservation
-Title: "IntraoperativeObservation"
+Id: IntraoperativeGrouper
+Title: "IntraoperativeGrouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert RuleSet1
-* code = $LOINC#83321-0
-  * coding.code ^fixedCode = #83321-0
-  * coding.system ^fixedUri = $LOINC
-  * coding.display = "Pathology report intraoperative observation in Specimen Document"
+* code ^fixedCodeableConcept = $LOINC##83321-0 "Pathology report intraoperative observation in Specimen Document"
+// * code.coding ^slicing.discriminator.type = #pattern
+// * code.coding ^slicing.discriminator.path = "$this"
+// * code.coding ^slicing.rules = #open
+// * code.coding contains intraoperative-obs 1..1 MS
+// * code.coding[intraoperative-obs] ^patternCoding = $LOINC##83321-0 "Pathology report intraoperative observation in Specimen Document"
 
 //--------------------------------------------
 // Macroscopic Observation
 //--------------------------------------------
-Profile: MacroscopicObservation
+Profile: MacroscopicGrouper
 Parent: PathologyGrouper
-Id: MacroscopicObservation
-Title: "MacroscopicObservation"
+Id: MacroscopicGrouper
+Title: "MacroscopicGrouper"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert RuleSet1
-* code
-  * coding.code ^fixedCode = #22634-0
-  * coding.system ^fixedUri = $LOINC
-  * coding.display = "Pathology report gross observation"
+* code ^fixedCodeableConcept = $LOINC#22634-0 "Pathology report gross observation"
+  // * coding ^slicing.discriminator.type = #pattern
+  // * coding ^slicing.discriminator.path = "$this"
+  // * coding ^slicing.rules = #open
+  // * coding contains macroscopic-obs 1..1 MS
+  // * coding[macroscopic-obs] ^patternCoding = $LOINC#22634-0 "Pathology report gross observation"
 
 //-------------------------------------
 // Microscopic Observation
 //-------------------------------------
-Profile: MicroscopicObservation
+Profile: MicroscopicGrouper
 Parent: PathologyGrouper
-Id: MicroscopicObservation
-Title: "MicroscopicObservation"
+Id: MicroscopicGrouper
+Title: "MicroscopicGrouper"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert RuleSet1
-* code
-  * coding.code ^fixedCode = #22635-7
-  * coding.system ^fixedUri = $LOINC
-  * coding.display = "Pathology report microscopic observation"
+* code ^fixedCodeableConcept = $LOINC#22635-7 "Pathology report microscopic observation"
+  // * coding ^slicing.discriminator.type = #pattern
+  // * coding ^slicing.discriminator.path = "$this"
+  // * coding ^slicing.rules = #open
+  // * coding contains microscopic-obs 1..1 MS
+  // * coding[microscopic-obs] ^patternCoding = $LOINC#22635-7 "Pathology report microscopic observation"
 
 //-------------------------------------
 // Additional Specified Observations
 //-------------------------------------
-Profile: AdditionalSpecifiedObservations
+Profile: AdditionalSpecifiedGrouper
 Parent: PathologyGrouper
-Id: AdditionalSpecifiedObservations
-Title: "AdditionalSpecifiedObservations"
+Id: AdditionalSpecifiedGrouper
+Title: "AdditionalSpecifiedGrouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
 * insert RuleSet1
-* code  
-  * coding.code ^fixedCode = #81317-0
-  * coding.system ^fixedUri = $LOINC
-  * coding.display = "Additional pathological findings"
+* code ^fixedCodeableConcept = $LOINC#81317-0 "Additional pathological findings"  
+  // * coding ^slicing.discriminator.type = #pattern
+  // * coding ^slicing.discriminator.path = "$this"
+  // * coding ^slicing.rules = #open
+  // * coding contains additional-obs 1..1 MS
+  // * coding[additional-obs] ^patternCoding = $LOINC#81317-0 "Additional pathological findings"
 
 //--------------------------------
 // Diagnostic Conclusion
 //--------------------------------
-Profile: DiagnosticConclusion
+Profile: DiagnosticConclusionGrouper
 Parent: PathologyGrouper	
-Id: DiagnosticConclusion
-Title: "DiagnosticConclusion"
+Id: DiagnosticConclusionGrouper
+Title: "DiagnosticConclusionGrouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
 * insert RuleSet1
-* code
-  * coding.code ^fixedCode = #22637-3
-  * coding.system ^fixedUri = $LOINC
-  * coding.display = "Pathology report diagnosis"
+* code ^fixedCodeableConcept = $LOINC#22637-3 "Pathology report diagnosis"
+  // * coding ^slicing.discriminator.type = #pattern
+  // * coding ^slicing.discriminator.path = "$this"
+  // * coding ^slicing.rules = #open
+  // * coding contains diagnostic-conclusion 1..1 MS
+  // * coding[diagnostic-conclusion] ^patternCoding = $LOINC#22637-3 "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
-* derivedFrom only Reference(IntraoperativeObservation or MacroscopicObservation or MicroscopicObservation or PathologyFinding)
+* derivedFrom MS
+* derivedFrom only Reference(IntraoperativeGrouper or MacroscopicGrouper or MicroscopicGrouper or AdditionalSpecifiedGrouper)
 
 //---------------------------------
 // Examples
@@ -201,7 +219,7 @@ Description: "Tissue length of Specimen A (1st punch)"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroGrouperA
-InstanceOf: MacroscopicObservation
+InstanceOf: MacroscopicGrouper
 Usage: #example
 Title: "MacroGrouperA"
 Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
@@ -240,7 +258,7 @@ Description: "Tissue length of Specimen B (2nd punch)"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroGrouperB
-InstanceOf: MacroscopicObservation
+InstanceOf: MacroscopicGrouper
 Usage: #example
 Title: "MacroGrouperB"
 Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)"
@@ -277,7 +295,7 @@ Description: "Gleason pattern.primary in prostate tumor for Specimen A"
 * valueCodeableConcept = $SCT#369772003 "Pattern 3 (staging scale)"
 
 Instance: MicroGrouperA
-InstanceOf: MicroscopicObservation
+InstanceOf: MicroscopicGrouper
 Usage: #example
 Title: "MicroGrouperA"
 Description: "Grouper for all Microscopic Observations of Specimen A"
@@ -324,7 +342,7 @@ Description: "Example for diagnostic conclusion"
 * valueCodeableConcept = $LOINC#LA9630-0 "Grade 2"
 
 Instance: DiagnosticConclusionGrouper
-InstanceOf: DiagnosticConclusion
+InstanceOf: DiagnosticConclusionGrouper
 Usage: #example
 Title: "DiagnosticConclusionGrouper"
 Description: "Example for a diagnostic conclusion"

@@ -79,7 +79,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "$this"
+              "path": "$this.type.coding"
             }
           ],
           "rules": "open"
@@ -92,23 +92,23 @@
         "path": "DiagnosticReport.identifier",
         "sliceName": "Set-ID",
         "min": 1,
-        "max": "*",
+        "max": "1",
         "mustSupport": true
       },
       {
         "id": "DiagnosticReport.identifier:Set-ID.type",
         "path": "DiagnosticReport.identifier.type",
         "min": 1,
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "ACSN",
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "display": "Accession ID"
-            }
-          ]
-        },
         "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.identifier:Set-ID.type.coding",
+        "path": "DiagnosticReport.identifier.type.coding",
+        "patternCoding": {
+          "code": "ACSN",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+          "display": "Accession ID"
+        }
       },
       {
         "id": "DiagnosticReport.identifier:Set-ID.system",
@@ -151,28 +151,46 @@
       {
         "id": "DiagnosticReport.code.coding",
         "path": "DiagnosticReport.code.coding",
-        "patternCoding": {
-          "code": "60568-3",
-          "system": "http://loinc.org/",
-          "display": "Pathology Synoptic report"
-        }
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
       },
       {
-        "id": "DiagnosticReport.code.coding.system",
-        "path": "DiagnosticReport.code.coding.system",
+        "id": "DiagnosticReport.code.coding:pathology-report",
+        "path": "DiagnosticReport.code.coding",
+        "sliceName": "pathology-report",
         "min": 1,
-        "fixedUri": "http://loinc.org/",
+        "max": "1",
+        "patternCoding": {
+          "code": "60568-3",
+          "system": "http://loinc.org",
+          "display": "Pathology Synoptic report"
+        },
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.code.coding.code",
+        "id": "DiagnosticReport.code.coding:pathology-report.system",
+        "path": "DiagnosticReport.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://loinc.org",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.code.coding:pathology-report.code",
         "path": "DiagnosticReport.code.coding.code",
         "min": 1,
         "fixedCode": "60568-3",
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.code.coding.display",
+        "id": "DiagnosticReport.code.coding:pathology-report.display",
         "path": "DiagnosticReport.code.coding.display",
         "mustSupport": true
       },
@@ -223,19 +241,19 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "profile",
-              "path": "$this.resolve()"
+              "type": "value",
+              "path": "resolve().code"
             }
           ],
-          "rules": "open"
+          "rules": "closed"
         },
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:intraoperative-observation",
+        "id": "DiagnosticReport.result:intraoperative-grouper",
         "path": "DiagnosticReport.result",
-        "sliceName": "intraoperative-observation",
+        "sliceName": "intraoperative-grouper",
         "short": "Reference to intraoperative Observations",
         "min": 0,
         "max": "*",
@@ -243,22 +261,22 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeObservation"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeGrouper"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:intraoperative-observation.reference",
+        "id": "DiagnosticReport.result:intraoperative-grouper.reference",
         "path": "DiagnosticReport.result.reference",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:macroscopic-observation",
+        "id": "DiagnosticReport.result:macroscopic-grouper",
         "path": "DiagnosticReport.result",
-        "sliceName": "macroscopic-observation",
+        "sliceName": "macroscopic-grouper",
         "short": "Reference to macroscopic Observations",
         "min": 0,
         "max": "*",
@@ -266,22 +284,22 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicGrouper"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:macroscopic-observation.reference",
+        "id": "DiagnosticReport.result:macroscopic-grouper.reference",
         "path": "DiagnosticReport.result.reference",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:microscopic-observation",
+        "id": "DiagnosticReport.result:microscopic-grouper",
         "path": "DiagnosticReport.result",
-        "sliceName": "microscopic-observation",
+        "sliceName": "microscopic-grouper",
         "short": "Reference to microscopic Observations",
         "min": 0,
         "max": "*",
@@ -289,22 +307,22 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicObservation"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicGrouper"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:microscopic-observation.reference",
+        "id": "DiagnosticReport.result:microscopic-grouper.reference",
         "path": "DiagnosticReport.result.reference",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:additional-observation",
+        "id": "DiagnosticReport.result:additional-observations",
         "path": "DiagnosticReport.result",
-        "sliceName": "additional-observation",
+        "sliceName": "additional-observations",
         "short": "Reference to any additional Observation",
         "min": 0,
         "max": "*",
@@ -312,14 +330,14 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/AdditionalSpecifiedObservations"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/AdditionalSpecifiedGrouper"
             ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:additional-observation.reference",
+        "id": "DiagnosticReport.result:additional-observations.reference",
         "path": "DiagnosticReport.result.reference",
         "min": 1,
         "mustSupport": true
@@ -335,7 +353,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/DiagnosticConclusion"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/DiagnosticConclusionGrouper"
             ]
           }
         ],
@@ -379,7 +397,6 @@
       {
         "id": "DiagnosticReport.conclusion",
         "path": "DiagnosticReport.conclusion",
-        "min": 1,
         "mustSupport": true
       },
       {

@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "MacroscopicObservation",
+  "id": "DiagnosticConclusionGrouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/DiagnosticConclusionGrouper",
   "version": "0.1.0",
-  "name": "MacroscopicObservation",
-  "title": "MacroscopicObservation",
+  "name": "DiagnosticConclusionGrouper",
+  "title": "DiagnosticConclusionGrouper",
   "status": "draft",
-  "description": "Based on IHE PaLM APSR - Macroscopic Observation Finding",
+  "description": "Grouper profile to collect Diagnostic Conclusion information",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -58,19 +58,33 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code.coding.system",
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://loinc.org/"
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "fixedCodeableConcept": {
+          "coding": [
+            {
+              "code": "22637-3",
+              "system": "http://loinc.org",
+              "display": "Pathology report diagnosis"
+            }
+          ]
+        }
       },
       {
-        "id": "Observation.code.coding.code",
-        "path": "Observation.code.coding.code",
-        "fixedCode": "22634-0"
-      },
-      {
-        "id": "Observation.code.coding.display",
-        "path": "Observation.code.coding.display",
-        "patternString": "Pathology report gross observation"
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeGrouper",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicGrouper",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicGrouper",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/AdditionalSpecifiedGrouper"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }

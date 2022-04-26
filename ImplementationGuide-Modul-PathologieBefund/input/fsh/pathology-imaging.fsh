@@ -29,5 +29,5 @@ Usage: #example
 Title: "ImageExample"
 Description: "Exemplarischer Befundbericht - 3"
 * status = #completed
-* content.contentType = #DICOM
+* content.contentType = #image/png
 * content.url = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/image"

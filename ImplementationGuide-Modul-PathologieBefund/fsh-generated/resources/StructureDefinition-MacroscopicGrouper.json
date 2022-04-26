@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "IntraoperativeObservation",
+  "id": "MacroscopicGrouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeObservation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicGrouper",
   "version": "0.1.0",
-  "name": "IntraoperativeObservation",
-  "title": "IntraoperativeObservation",
+  "name": "MacroscopicGrouper",
+  "title": "MacroscopicGrouper",
   "status": "draft",
-  "description": "Based on IHE PaLM APSR - Intraoperative Observation Section",
+  "description": "Based on IHE PaLM APSR - Macroscopic Observation Finding",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -60,29 +60,15 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "patternCodeableConcept": {
+        "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "83321-0",
-              "system": "http://loinc.org/"
+              "code": "22634-0",
+              "system": "http://loinc.org",
+              "display": "Pathology report gross observation"
             }
           ]
         }
-      },
-      {
-        "id": "Observation.code.coding.system",
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://loinc.org/"
-      },
-      {
-        "id": "Observation.code.coding.code",
-        "path": "Observation.code.coding.code",
-        "fixedCode": "83321-0"
-      },
-      {
-        "id": "Observation.code.coding.display",
-        "path": "Observation.code.coding.display",
-        "patternString": "Pathology report intraoperative observation in Specimen Document"
       }
     ]
   }
