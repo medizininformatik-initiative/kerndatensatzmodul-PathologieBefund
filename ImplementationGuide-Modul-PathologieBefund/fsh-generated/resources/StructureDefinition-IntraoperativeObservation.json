@@ -13,7 +13,7 @@
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeObservation",
   "version": "0.1.0",
-  "name": "IntraoperativeObservation",
+  "name": "IntraoperativeGrouper",
   "title": "IntraoperativeObservation",
   "status": "draft",
   "description": "Based on IHE PaLM APSR - Intraoperative Observation Section",

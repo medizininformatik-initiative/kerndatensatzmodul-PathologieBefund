@@ -13,7 +13,7 @@
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation",
   "version": "0.1.0",
-  "name": "MacroscopicObservation",
+  "name": "MacroscopicGrouper",
   "title": "MacroscopicObservation",
   "status": "draft",
   "description": "Based on IHE PaLM APSR - Macroscopic Observation Finding",
