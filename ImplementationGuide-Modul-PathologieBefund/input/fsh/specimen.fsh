@@ -1,74 +1,27 @@
 Profile: PathologySpecimen
-//Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
-Parent: Specimen
+Parent: $mii-bio-specimencore
 Id: PathologySpecimen
-Title: "PathologySpecimen - Temporary"
+Title: "Pathology Specimen"
 Description: "tmp"
 * insert RuleSet1
-// features from Biobank SpecimenCore
-* identifier MS
-* status 1.. MS // in Patho nicht verpflichtend..
-* type 1.. MS
-  * coding ^slicing.discriminator.type = #pattern
-  * coding ^slicing.discriminator.path = "$this"
-  * coding ^slicing.rules = #open
-  * coding contains sct 1..* 
-  * coding[sct] from $bio-probenart (extensible)
-    * system = $SCT
-* subject 1.. MS
-* subject only Reference(Patient)
-* parent MS
-// COLLECTION
-* collection 1.. 
-// extension nachtraeglich hinzufuegen
-/*
-  * extension ^slicing.discriminator.type = #value
-  * extension ^slicing.discriminator.path = "$this"
-  * extension ^slicing.rules = #open
-  * extension contains https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Entnahmeprozedur named entnahmeprozedur 0..1 MS
-*/
-  * collected[x] 1.. MS
-  * bodySite 1.. MS // TODO: add constraint
-    * coding ^slicing.discriminator.type = #pattern
-    * coding ^slicing.discriminator.path = "$this"
-    * coding ^slicing.rules = #open
-    * coding contains sct 0..1 MS
-    * coding[sct] from $bio-bodystructure (required)
-      * system 1.. 
-      * system = $SCT
-    * coding contains icd-o-3 0..1 MS
-    * coding[icd-o-3] from $bio-icd-o-3 (required)
-      * system 1..
-      * system = $icd-o-3
-  * fastingStatusCodeableConcept 0..1 MS 
-  * fastingStatusCodeableConcept from $v2-0916 (required)
-  // aus Patho
+* collection
   * method 1.. MS
   * method from Entnahmemethode (extensible)
-// PROCESSING
-* processing MS
-  // aus Patho
-  * description MS
-  * procedure 1.. MS
-    * coding ^slicing.discriminator.type = #pattern 
-    * coding ^slicing.discriminator.path = "$this"
-    * coding ^slicing.rules = #open
-  // Extension $bio-temperaturbedingungen nachtraeglich hinzufuegen
-    * coding contains sct 0..* 
-    * coding[sct] from Bearbeitungsprozedur (extensible)
-  * additive MS 
-  //* additive only Reference($mii-bio-additive)
-  * timePeriod 0..1 MS
-    * start 1.. MS
-    * end MS
-// CONTAINER
-* container 1.. MS
-  * capacity MS
-  * specimenQuantity MS
-  * additive[x] MS
-  // * addtive only Reference($mii-bio-additive)
-// NOTE
-* note MS 
-// Direkt aus Patho
-* request MS 
 * request only Reference(PathologyServiceRequest)
+
+Instance: SpecimenExample
+InstanceOf: PathologySpecimen
+Usage: #example
+Title: "SpecimenExample"
+Description: "Example for PathologySpecimen"
+* status = #available
+* identifier
+  * type = $v2-0203#FILL "Filler Order Number"
+  * value = "E12345_21-A"
+* type = $SCT#309134005 " Prostate tru-cut biopsy sample (specimen)"
+* subject.reference = "Patient/12345"
+* collection
+  * collector.reference = "Practitioner/36765"
+  * collectedDateTime = "2021-01-29T06:15:00Z"
+  * method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
+  * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
