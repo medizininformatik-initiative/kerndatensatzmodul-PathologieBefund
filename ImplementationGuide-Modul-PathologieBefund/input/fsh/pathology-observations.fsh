@@ -91,6 +91,7 @@ Id: PathologyGrouper
 Title: "PathologyGrouper"
 Description: "Grouper profile for pathological findings"
 * insert RuleSet1
+* ^abstract = true
 * code.coding from SectionTypes (required)
 * hasMember 1.. MS
 * hasMember only Reference(PathologyFinding)
@@ -98,7 +99,7 @@ Description: "Grouper profile for pathological findings"
 //--------------------------------------------
 // IntraoperativeObservation
 //--------------------------------------------
-Profile: IntraoperativeObservation
+Profile: IntraoperativeGrouper
 Parent: PathologyGrouper
 Id: IntraoperativeObservation
 Title: "IntraoperativeObservation"
@@ -114,7 +115,7 @@ Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 //--------------------------------------------
 // Macroscopic Observation
 //--------------------------------------------
-Profile: MacroscopicObservation
+Profile: MacroscopicGrouper
 Parent: PathologyGrouper
 Id: MacroscopicObservation
 Title: "MacroscopicObservation"
@@ -130,7 +131,7 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 //-------------------------------------
 // Microscopic Observation
 //-------------------------------------
-Profile: MicroscopicObservation
+Profile: MicroscopicGrouper
 Parent: PathologyGrouper
 Id: MicroscopicObservation
 Title: "MicroscopicObservation"
@@ -146,7 +147,7 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 //-------------------------------------
 // Additional Specified Observations
 //-------------------------------------
-Profile: AdditionalSpecifiedObservations
+Profile: AdditionalSpecifiedGrouper
 Parent: PathologyGrouper
 Id: AdditionalSpecifiedObservations
 Title: "AdditionalSpecifiedObservations"
@@ -162,7 +163,7 @@ Description: "Based on IHE PaLM APSR - Grouper for additional specified Observat
 //--------------------------------
 // Diagnostic Conclusion
 //--------------------------------
-Profile: DiagnosticConclusion
+Profile: DiagnosticConclusionGrouper
 Parent: PathologyGrouper	
 Id: DiagnosticConclusion
 Title: "DiagnosticConclusion"
@@ -212,7 +213,7 @@ Description: "Tissue length of Specimen A (1st punch)"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroGrouperA
-InstanceOf: MacroscopicObservation
+InstanceOf: MacroscopicGrouper
 Usage: #example
 Title: "MacroGrouperA"
 Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
@@ -251,7 +252,7 @@ Description: "Tissue length of Specimen B (2nd punch)"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroGrouperB
-InstanceOf: MacroscopicObservation
+InstanceOf: MacroscopicGrouper
 Usage: #example
 Title: "MacroGrouperB"
 Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)"
@@ -288,7 +289,7 @@ Description: "Gleason pattern.primary in prostate tumor for Specimen A"
 * valueCodeableConcept = $SCT#369772003 "Pattern 3 (staging scale)"
 
 Instance: MicroGrouperA
-InstanceOf: MicroscopicObservation
+InstanceOf: MicroscopicGrouper
 Usage: #example
 Title: "MicroGrouperA"
 Description: "Grouper for all Microscopic Observations of Specimen A"
@@ -335,7 +336,7 @@ Description: "Example for diagnostic conclusion"
 * valueCodeableConcept = $LOINC#LA9630-0 "Grade 2"
 
 Instance: DiagnosticConclusionGrouper
-InstanceOf: DiagnosticConclusion
+InstanceOf: DiagnosticConclusionGrouper
 Usage: #example
 Title: "DiagnosticConclusionGrouper"
 Description: "Example for a diagnostic conclusion"
