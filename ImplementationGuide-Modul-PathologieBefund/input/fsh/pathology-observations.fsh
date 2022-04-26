@@ -93,8 +93,14 @@ Description: "Grouper profile for pathological findings"
 * insert RuleSet1
 * ^abstract = true
 * code.coding from SectionTypes (required)
-* hasMember 1.. MS
-* hasMember only Reference(PathologyFinding)
+* hasMember ^slicing.discriminator.type = #type
+* hasMember ^slicing.discriminator.path = "$this"
+* hasMember ^slicing.rules = #open
+* hasMember ^slicing.description = "Reference to pathology findings"
+* hasMember ^slicing.ordered = false
+* hasMember contains pathology-finding 1..* MS
+* hasMember[pathology-finding] only Reference(PathologyFinding)
+
 
 //--------------------------------------------
 // IntraoperativeObservation
