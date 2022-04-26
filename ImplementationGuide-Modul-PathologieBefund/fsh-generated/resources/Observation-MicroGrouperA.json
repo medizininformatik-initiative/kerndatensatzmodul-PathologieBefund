@@ -3,7 +3,7 @@
   "id": "MicroGrouperA",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicObservation"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicGrouper"
     ]
   },
   "category": [

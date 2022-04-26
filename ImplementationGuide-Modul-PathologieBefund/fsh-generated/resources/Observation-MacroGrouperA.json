@@ -3,7 +3,7 @@
   "id": "MacroGrouperA",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicObservation"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicGrouper"
     ]
   },
   "category": [
