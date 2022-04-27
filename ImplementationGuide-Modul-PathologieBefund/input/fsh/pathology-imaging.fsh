@@ -19,7 +19,7 @@ Description: "Allgemeines Profil für eingebettetes Bild"
   * coding[image] = $media-type#image 
 // Referenz kann auch weg, weil die Observations schon drauf verweisen ueber .derivedFrom
 * subject MS 
-* subject only Reference(PathologySpecimen)
+* subject only Reference(SD_MII_Patho_Specimen)
 * content MS
 
 //Example
