@@ -4,16 +4,29 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: Modul-PathologieBefund
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho
+title: "IG MII Modul Pathologie Befundbericht"
 name: Modul-PathologieBefund
 status: "draft"
 version: 0.1.0
 fhirVersion: 4.0.1
-FSHOnly: true
+copyrightYear: 2021+
+releaseLabel: ci-build
+publisher: 
+  name: Medizininformatik-Initiative
+  url: https://www.medizininformatik-initiative.de/
+  email: info@medizininformatik-initiative.de
+# FSHOnly: true
 # TODO: add further dependencies!
 dependencies: 
   de.basisprofil.r4:
-    uri: https://ig.fhir.de/basisprofile-de/1.2.0/
-    version: 1.2.0
+    uri: de.basisprofil.r4
+    version: 1.3.2
+  de.medizininformatikinitiative.kerndatensatz.meta:
+    uri: https://simplifier.net/guide/medizininformatikinitiative-implementationguide-manteldokument
+    version: 1.0.3
+  de.medizininformatikinitiative.kerndatensatz.biobank:
+    uri: de.medizininformatikinitiative.kerndatensatz.biobank
+    version: 1.0.0
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

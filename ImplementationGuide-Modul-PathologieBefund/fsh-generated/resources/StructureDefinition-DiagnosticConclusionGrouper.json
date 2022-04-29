@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "IntraoperativeObservation",
+  "id": "DiagnosticConclusionGrouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeObservation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/DiagnosticConclusionGrouper",
   "version": "0.1.0",
-  "name": "IntraoperativeGrouper",
-  "title": "IntraoperativeObservation",
+  "name": "DiagnosticConclusionGrouper",
+  "title": "DiagnosticConclusionGrouper",
   "status": "draft",
-  "description": "Based on IHE PaLM APSR - Intraoperative Observation Section",
+  "description": "Grouper profile to collect Diagnostic Conclusion information",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -63,12 +63,28 @@
         "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "#83321-0",
+              "code": "22637-3",
               "system": "http://loinc.org",
-              "display": "Pathology report intraoperative observation in Specimen Document"
+              "display": "Pathology report diagnosis"
             }
           ]
         }
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeGrouper",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicGrouper",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicGrouper",
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/AdditionalSpecifiedGrouper"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }

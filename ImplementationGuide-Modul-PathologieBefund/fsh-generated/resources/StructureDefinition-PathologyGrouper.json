@@ -68,7 +68,25 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Reference to pathology findings",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.hasMember:pathology-finding",
+        "path": "Observation.hasMember",
+        "sliceName": "pathology-finding",
         "min": 1,
+        "max": "*",
         "type": [
           {
             "code": "Reference",
