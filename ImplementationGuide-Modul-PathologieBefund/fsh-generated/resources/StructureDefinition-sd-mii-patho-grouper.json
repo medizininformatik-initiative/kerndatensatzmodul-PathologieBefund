@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "DiagnosticConclusionGrouper",
+  "id": "sd-mii-patho-grouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/DiagnosticConclusionGrouper",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-grouper",
   "version": "0.1.0",
-  "name": "DiagnosticConclusionGrouper",
-  "title": "DiagnosticConclusionGrouper",
+  "name": "SD_MII_Patho_Grouper",
+  "title": "SD MII Patho Grouper",
   "status": "draft",
-  "description": "Grouper profile to collect Diagnostic Conclusion information",
+  "description": "Grouper profile for pathological findings",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -51,36 +51,47 @@
     }
   ],
   "kind": "resource",
-  "abstract": false,
+  "abstract": true,
   "type": "Observation",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyGrouper",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-base-pathology-observation",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Observation.code",
-        "path": "Observation.code",
-        "fixedCodeableConcept": {
-          "coding": [
-            {
-              "code": "22637-3",
-              "system": "http://loinc.org",
-              "display": "Pathology report diagnosis"
-            }
-          ]
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/SectionTypes"
         }
       },
       {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Reference to pathology findings",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.hasMember:pathology-finding",
+        "path": "Observation.hasMember",
+        "sliceName": "pathology-finding",
+        "min": 1,
+        "max": "*",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeGrouper",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MacroscopicGrouper",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicGrouper",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/AdditionalSpecifiedGrouper"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
             ]
           }
         ],

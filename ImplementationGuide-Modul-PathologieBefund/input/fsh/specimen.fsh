@@ -7,7 +7,7 @@ Description: "Pathology specimen"
 * collection
   * method 1.. MS
   * method from Entnahmemethode (extensible)
-* request only Reference(PathologyServiceRequest)
+* request only Reference(SD_MII_Patho_Service_Request)
 
 Instance: SpecimenExample
 InstanceOf: SD_MII_Patho_Specimen

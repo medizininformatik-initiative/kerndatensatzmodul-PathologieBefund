@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "IntraoperativeGrouper",
+  "id": "sd-mii-patho-intraoperative-grouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,10 +11,10 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/IntraoperativeGrouper",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-intraoperative-grouper",
   "version": "0.1.0",
-  "name": "IntraoperativeGrouper",
-  "title": "IntraoperativeGrouper",
+  "name": "SD_MII_Patho_Intraoperative_Grouper",
+  "title": "SD MII Patho Intraoperative Grouper",
   "status": "draft",
   "description": "Based on IHE PaLM APSR - Intraoperative Observation Section",
   "fhirVersion": "4.0.1",
@@ -53,7 +53,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyGrouper",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-grouper",
   "derivation": "constraint",
   "differential": {
     "element": [

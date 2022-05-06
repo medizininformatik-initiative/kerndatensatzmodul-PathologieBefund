@@ -49,7 +49,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyServiceRequest"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-service-request"
             ]
           }
         ]

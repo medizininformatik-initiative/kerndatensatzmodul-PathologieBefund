@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "MicroscopicGrouper",
+  "id": "sd-mii-patho-microscopic-grouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,10 +11,10 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/MicroscopicGrouper",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-microscopic-grouper",
   "version": "0.1.0",
-  "name": "MicroscopicGrouper",
-  "title": "MicroscopicGrouper",
+  "name": "SD_MII_Patho_Microscopic_Grouper",
+  "title": "SD MII Patho Microscopic Grouper",
   "status": "draft",
   "description": "Based on IHE PaLM APSR - Microscopic Observation Finding",
   "fhirVersion": "4.0.1",
@@ -53,7 +53,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyGrouper",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-grouper",
   "derivation": "constraint",
   "differential": {
     "element": [

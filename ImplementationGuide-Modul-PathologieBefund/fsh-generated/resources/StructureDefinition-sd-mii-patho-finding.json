@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "PathologyFinding",
+  "id": "sd-mii-patho-finding",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,10 +11,10 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyFinding",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding",
   "version": "0.1.0",
-  "name": "PathologyFinding",
-  "title": "PathologyFinding",
+  "name": "SD_MII_Patho_Finding",
+  "title": "SD MII Patho Finding",
   "status": "draft",
   "description": "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section",
   "fhirVersion": "4.0.1",
@@ -53,7 +53,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/BasePathologyObservation",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-base-pathology-observation",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -125,7 +125,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/AttachedImage"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-attached-image"
             ]
           }
         ],
