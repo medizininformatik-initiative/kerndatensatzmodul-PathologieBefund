@@ -92,13 +92,13 @@ Title: "SD MII Patho Grouper"
 Description: "Grouper profile for pathological findings"
 * insert RuleSet1
 * ^abstract = true
-* code.coding from SectionTypes (required)
+// * code.coding from SectionTypes (required)
 * hasMember ^slicing.discriminator.type = #type
 * hasMember ^slicing.discriminator.path = "$this"
 * hasMember ^slicing.rules = #open
 * hasMember ^slicing.description = "Reference to pathology findings"
 * hasMember ^slicing.ordered = false
-* hasMember contains pathology-finding 1..* MS
+* hasMember contains pathology-finding 0..* MS
 * hasMember[pathology-finding] only Reference(SD_MII_Patho_Finding)
 
 
@@ -111,12 +111,8 @@ Id: sd-mii-patho-intraoperative-grouper
 Title: "SD MII Patho Intraoperative Grouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert RuleSet1
-* code ^fixedCodeableConcept = $LOINC##83321-0 "Pathology report intraoperative observation in Specimen Document"
-// * code.coding ^slicing.discriminator.type = #pattern
-// * code.coding ^slicing.discriminator.path = "$this"
-// * code.coding ^slicing.rules = #open
-// * code.coding contains intraoperative-obs 1..1 MS
-// * code.coding[intraoperative-obs] ^patternCoding = $LOINC##83321-0 "Pathology report intraoperative observation in Specimen Document"
+* code ^fixedCodeableConcept = $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document"
+
 
 //--------------------------------------------
 // Macroscopic Observation
@@ -128,11 +124,7 @@ Title: "SD MII Patho Macroscopic Grouper"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#22634-0 "Pathology report gross observation"
-  // * coding ^slicing.discriminator.type = #pattern
-  // * coding ^slicing.discriminator.path = "$this"
-  // * coding ^slicing.rules = #open
-  // * coding contains macroscopic-obs 1..1 MS
-  // * coding[macroscopic-obs] ^patternCoding = $LOINC#22634-0 "Pathology report gross observation"
+
 
 //-------------------------------------
 // Microscopic Observation
@@ -144,11 +136,7 @@ Title: "SD MII Patho Microscopic Grouper"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#22635-7 "Pathology report microscopic observation"
-  // * coding ^slicing.discriminator.type = #pattern
-  // * coding ^slicing.discriminator.path = "$this"
-  // * coding ^slicing.rules = #open
-  // * coding contains microscopic-obs 1..1 MS
-  // * coding[microscopic-obs] ^patternCoding = $LOINC#22635-7 "Pathology report microscopic observation"
+
 
 //-------------------------------------
 // Additional Specified Observations
@@ -159,12 +147,8 @@ Id: sd-mii-patho-additional-specified-grouper
 Title: "SD MII Patho Additional Specified Grouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
 * insert RuleSet1
-* code ^fixedCodeableConcept = $LOINC#81317-0 "Additional pathological findings"  
-  // * coding ^slicing.discriminator.type = #pattern
-  // * coding ^slicing.discriminator.path = "$this"
-  // * coding ^slicing.rules = #open
-  // * coding contains additional-obs 1..1 MS
-  // * coding[additional-obs] ^patternCoding = $LOINC#81317-0 "Additional pathological findings"
+* code ^fixedCodeableConcept = $LOINC#77599-9 "Additional documentation"  
+
 
 //--------------------------------
 // Diagnostic Conclusion
@@ -176,14 +160,9 @@ Title: "SD MII Patho Diagnostic Conclusion Grouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#22637-3 "Pathology report diagnosis"
-  // * coding ^slicing.discriminator.type = #pattern
-  // * coding ^slicing.discriminator.path = "$this"
-  // * coding ^slicing.rules = #open
-  // * coding contains diagnostic-conclusion 1..1 MS
-  // * coding[diagnostic-conclusion] ^patternCoding = $LOINC#22637-3 "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom MS
-* derivedFrom only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper)
+* derivedFrom only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper or QuestionnaireResponse)
 
 //---------------------------------
 // Examples

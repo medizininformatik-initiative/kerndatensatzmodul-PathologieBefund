@@ -58,14 +58,6 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code.coding",
-        "path": "Observation.code.coding",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/SectionTypes"
-        }
-      },
-      {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "slicing": {
@@ -78,14 +70,13 @@
           "rules": "open",
           "description": "Reference to pathology findings",
           "ordered": false
-        },
-        "min": 1
+        }
       },
       {
         "id": "Observation.hasMember:pathology-finding",
         "path": "Observation.hasMember",
         "sliceName": "pathology-finding",
-        "min": 1,
+        "min": 0,
         "max": "*",
         "type": [
           {

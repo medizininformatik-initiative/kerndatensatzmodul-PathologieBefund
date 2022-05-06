@@ -63,9 +63,9 @@
         "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "81317-0",
+              "code": "77599-9",
               "system": "http://loinc.org",
-              "display": "Additional pathological findings"
+              "display": "Additional documentation"
             }
           ]
         }
