@@ -170,42 +170,42 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/Bearbeitungsprozedur"
-        },
-        "name": "Bearbeitungsprozedur",
-        "description": "Kodierte Prozedur der Probenbearbeitung in der Pathologie",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/Entnahmemethode"
-        },
-        "name": "Entnahmemethode",
-        "description": "Klinische Methode der Probengewinnung an Patient:in",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/Koerperstelle"
-        },
-        "name": "Koerperstelle",
-        "description": "Lokalisation der Körperstell von der die Probe stammt",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/Probenart"
-        },
-        "name": "Probenart",
-        "description": "Art der Probe",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/SectionTypes"
         },
         "name": "SectionTypes",
         "description": "ValueSet for IHE PaLM APSR's section types",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vs-mii-patho-body-site-snomed-ct"
+        },
+        "name": "VS MII Patho Body Site [SNOMED CT]",
+        "description": "Body site where the specimen comes from",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vs-mii-patho-collection-method-snomed-ct"
+        },
+        "name": "VS MII Patho Collection Method [SNOMED CT]",
+        "description": "ValueSet for the clinical collection method",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vs-mii-patho-processing-procedure-snomed-ct"
+        },
+        "name": "VS MII Patho Processing Procedure [SNOMED CT]",
+        "description": "Specimen processing procedure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vs-mii-patho-specimen-type-snomed-ct"
+        },
+        "name": "VS MII Patho Specimen Type [SNOMED CT]",
+        "description": "ValueSet for the type of specimen",
         "exampleBoolean": false
       },
       {

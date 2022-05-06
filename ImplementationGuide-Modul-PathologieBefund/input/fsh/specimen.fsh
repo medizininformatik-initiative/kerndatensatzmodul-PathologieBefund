@@ -6,7 +6,7 @@ Description: "Pathology specimen"
 * insert RuleSet1
 * collection
   * method 1.. MS
-  * method from Entnahmemethode (extensible)
+  * method from VS_MII_Patho_Collection_Method_SNOMED_CT (extensible)
 * request only Reference(SD_MII_Patho_Service_Request)
 
 Instance: SpecimenExample
