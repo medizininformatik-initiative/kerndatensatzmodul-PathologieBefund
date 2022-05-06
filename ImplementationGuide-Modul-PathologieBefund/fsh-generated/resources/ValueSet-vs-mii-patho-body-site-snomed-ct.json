@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "Koerperstelle",
-  "id": "Koerperstelle",
-  "title": "Koerperstelle",
-  "description": "Lokalisation der Körperstell von der die Probe stammt",
+  "name": "VS_MII_Patho_Body_Site_SNOMED_CT",
+  "id": "vs-mii-patho-body-site-snomed-ct",
+  "title": "VS MII Patho Body Site [SNOMED CT]",
+  "description": "Body site where the specimen comes from",
   "version": "0.1.0",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/Koerperstelle",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-body-site-snomed-ct",
   "compose": {
     "include": [
       {

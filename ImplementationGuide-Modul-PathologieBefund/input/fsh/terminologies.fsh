@@ -1,30 +1,30 @@
 // ValueSets of Specimen
-ValueSet: Probenart
-Id: Probenart
-Title: "Probenart"
-Description: "Art der Probe"
+ValueSet: VS_MII_Patho_Specimen_Type_SNOMED_CT
+Id: vs-mii-patho-specimen-type-snomed-ct
+Title: "VS MII Patho Specimen Type [SNOMED CT]"
+Description: "ValueSet for the type of specimen"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #123038009
 
-ValueSet: Entnahmemethode
-Id: Entnahmemethode
-Title: "Entnahmemethode"
-Description: "Klinische Methode der Probengewinnung an Patient:in"
+ValueSet: VS_MII_Patho_Collection_Method_SNOMED_CT
+Id: vs-mii-patho-collection-method-snomed-ct
+Title: "VS MII Patho Collection Method [SNOMED CT]"
+Description: "ValueSet for the clinical collection method"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #118292001
 // Specimen Collection 17636008 oder Removal 118292001? 
 
-ValueSet: Koerperstelle
-Id: Koerperstelle
-Title: "Koerperstelle"
-Description: "Lokalisation der Körperstell von der die Probe stammt"
+ValueSet: VS_MII_Patho_Body_Site_SNOMED_CT
+Id: vs-mii-patho-body-site-snomed-ct
+Title: "VS MII Patho Body Site [SNOMED CT]"
+Description: "Body site where the specimen comes from"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #123037004
 
-ValueSet: Bearbeitungsprozedur
-Id: Bearbeitungsprozedur
-Title: "Bearbeitungsprozedur"
-Description: "Kodierte Prozedur der Probenbearbeitung in der Pathologie"
+ValueSet: VS_MII_Patho_Processing_Procedure_SNOMED_CT
+Id: vs-mii-patho-processing-procedure-snomed-ct
+Title: "VS MII Patho Processing Procedure [SNOMED CT]"
+Description: "Specimen processing procedure"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #108252007
 

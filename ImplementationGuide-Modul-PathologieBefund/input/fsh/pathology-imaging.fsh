@@ -1,10 +1,10 @@
-// AttachedImage
+// SD_MII_Patho_Attached_Image
 // Allgemeines Profil für die eingebetteten Bilder
-Profile: AttachedImage
+Profile: SD_MII_Patho_Attached_Image
 Parent: Media
-Id: AttachedImage
-Title: "AttachedImage"
-Description: "Allgemeines Profil für eingebettetes Bild"
+Id: sd-mii-patho-attached-image
+Title: "SD MII Patho Attached Image"
+Description: "Profile for attached images"
 * insert RuleSet1
 * id MS
 * partOf MS
@@ -19,12 +19,12 @@ Description: "Allgemeines Profil für eingebettetes Bild"
   * coding[image] = $media-type#image 
 // Referenz kann auch weg, weil die Observations schon drauf verweisen ueber .derivedFrom
 * subject MS 
-* subject only Reference(PathologySpecimen)
+* subject only Reference(SD_MII_Patho_Specimen)
 * content MS
 
 //Example
 Instance: ImageExample
-InstanceOf: AttachedImage
+InstanceOf: SD_MII_Patho_Attached_Image
 Usage: #example
 Title: "ImageExample"
 Description: "Exemplarischer Befundbericht - 3"

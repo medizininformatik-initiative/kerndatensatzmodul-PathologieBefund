@@ -1,19 +1,19 @@
-Profile: PathologySpecimen
+Profile: SD_MII_Patho_Specimen
 Parent: $mii-bio-specimencore
-Id: PathologySpecimen
-Title: "Pathology Specimen"
-Description: "tmp"
+Id: sd-mii-patho-specimen
+Title: "SD MII Patho Specimen"
+Description: "Pathology specimen"
 * insert RuleSet1
 * collection
   * method 1.. MS
-  * method from Entnahmemethode (extensible)
-* request only Reference(PathologyServiceRequest)
+  * method from VS_MII_Patho_Collection_Method_SNOMED_CT (extensible)
+* request only Reference(SD_MII_Patho_Service_Request)
 
 Instance: SpecimenExample
-InstanceOf: PathologySpecimen
+InstanceOf: SD_MII_Patho_Specimen
 Usage: #example
 Title: "SpecimenExample"
-Description: "Example for PathologySpecimen"
+Description: "Example for SD_MII_Patho_Specimen"
 * status = #available
 * identifier
   * type = $v2-0203#FILL "Filler Order Number"

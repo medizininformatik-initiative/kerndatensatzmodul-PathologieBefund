@@ -1,18 +1,18 @@
 //-----------------------------------------
-// BasePathologyObservation
+// SD_MII_Patho_Base_Observation
 //-----------------------------------------
 // Entweder neue Base Observation profilieren oder wenn passend Laboruntersuchung aus Modul Labor als Base Observation nehmen
-Profile: BasePathologyObservation
+Profile: SD_MII_Patho_Base_Observation
 Parent: Observation
-Id: BasePathologyObservation
-Title: "BasePathologyObservation"
+Id: sd-mii-patho-base-pathology-observation
+Title: "SD MII Patho Base Pathology Observation"
 Description: "Abstract Observation to define common features of a main pathology observation"
 * insert RuleSet1
 * ^abstract = true
 * id MS
 * identifier MS
 * basedOn MS 
-* basedOn only Reference(PathologyServiceRequest)
+* basedOn only Reference(SD_MII_Patho_Service_Request)
 * status MS
 * category 1.. MS 
 * category ^slicing.discriminator[0].type = #pattern
@@ -58,12 +58,12 @@ Description: "Abstract Observation to define common features of a main pathology
   * dataAbsentReason MS
 
 //-------------------------------------------
-// PathologyFinding
+// SD_MII_Patho_Finding
 //-------------------------------------------
-Profile: PathologyFinding
-Parent: BasePathologyObservation
-Id: PathologyFinding
-Title: "PathologyFinding"
+Profile: SD_MII_Patho_Finding
+Parent: SD_MII_Patho_Base_Observation
+Id: sd-mii-patho-finding
+Title: "SD MII Patho Finding"
 Description: "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
 * insert RuleSet1
 * category ^slicing.discriminator.type = #pattern
@@ -80,15 +80,15 @@ Description: "Instantiable Observation to describe a generic pathology finding, 
 * hasMember MS
 // Referenz - Eingebettetes Bild
 * derivedFrom MS
-* derivedFrom only Reference(AttachedImage)
+* derivedFrom only Reference(SD_MII_Patho_Attached_Image)
 
 //--------------------------------------------
 // Grouper
 //--------------------------------------------
-Profile: PathologyGrouper
-Parent: BasePathologyObservation
-Id: PathologyGrouper
-Title: "PathologyGrouper"
+Profile: SD_MII_Patho_Grouper
+Parent: SD_MII_Patho_Base_Observation
+Id: sd-mii-patho-grouper
+Title: "SD MII Patho Grouper"
 Description: "Grouper profile for pathological findings"
 * insert RuleSet1
 * ^abstract = true
@@ -99,16 +99,16 @@ Description: "Grouper profile for pathological findings"
 * hasMember ^slicing.description = "Reference to pathology findings"
 * hasMember ^slicing.ordered = false
 * hasMember contains pathology-finding 1..* MS
-* hasMember[pathology-finding] only Reference(PathologyFinding)
+* hasMember[pathology-finding] only Reference(SD_MII_Patho_Finding)
 
 
 //--------------------------------------------
 // IntraoperativeObservation
 //--------------------------------------------
-Profile: IntraoperativeGrouper
-Parent: PathologyGrouper
-Id: IntraoperativeGrouper
-Title: "IntraoperativeGrouper"
+Profile: SD_MII_Patho_Intraoperative_Grouper
+Parent: SD_MII_Patho_Grouper
+Id: sd-mii-patho-intraoperative-grouper
+Title: "SD MII Patho Intraoperative Grouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC##83321-0 "Pathology report intraoperative observation in Specimen Document"
@@ -121,10 +121,10 @@ Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 //--------------------------------------------
 // Macroscopic Observation
 //--------------------------------------------
-Profile: MacroscopicGrouper
-Parent: PathologyGrouper
-Id: MacroscopicGrouper
-Title: "MacroscopicGrouper"
+Profile: SD_MII_Patho_Macroscopic_Grouper
+Parent: SD_MII_Patho_Grouper
+Id: sd-mii-patho-macroscopic-grouper
+Title: "SD MII Patho Macroscopic Grouper"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#22634-0 "Pathology report gross observation"
@@ -137,10 +137,10 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 //-------------------------------------
 // Microscopic Observation
 //-------------------------------------
-Profile: MicroscopicGrouper
-Parent: PathologyGrouper
-Id: MicroscopicGrouper
-Title: "MicroscopicGrouper"
+Profile: SD_MII_Patho_Microscopic_Grouper
+Parent: SD_MII_Patho_Grouper
+Id: sd-mii-patho-microscopic-grouper
+Title: "SD MII Patho Microscopic Grouper"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#22635-7 "Pathology report microscopic observation"
@@ -153,10 +153,10 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 //-------------------------------------
 // Additional Specified Observations
 //-------------------------------------
-Profile: AdditionalSpecifiedGrouper
-Parent: PathologyGrouper
-Id: AdditionalSpecifiedGrouper
-Title: "AdditionalSpecifiedGrouper"
+Profile: SD_MII_Patho_Additional_Specified_Grouper
+Parent: SD_MII_Patho_Grouper
+Id: sd-mii-patho-additional-specified-grouper
+Title: "SD MII Patho Additional Specified Grouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#81317-0 "Additional pathological findings"  
@@ -169,10 +169,10 @@ Description: "Based on IHE PaLM APSR - Grouper for additional specified Observat
 //--------------------------------
 // Diagnostic Conclusion
 //--------------------------------
-Profile: DiagnosticConclusionGrouper
-Parent: PathologyGrouper	
-Id: DiagnosticConclusionGrouper
-Title: "DiagnosticConclusionGrouper"
+Profile: SD_MII_Patho_Diagnostic_Conclusion_Grouper
+Parent: SD_MII_Patho_Grouper	
+Id: sd-mii-patho-diagnostic-conclusion-grouper
+Title: "SD MII Patho Diagnostic Conclusion Grouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
 * insert RuleSet1
 * code ^fixedCodeableConcept = $LOINC#22637-3 "Pathology report diagnosis"
@@ -183,7 +183,7 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
   // * coding[diagnostic-conclusion] ^patternCoding = $LOINC#22637-3 "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom MS
-* derivedFrom only Reference(IntraoperativeGrouper or MacroscopicGrouper or MicroscopicGrouper or AdditionalSpecifiedGrouper)
+* derivedFrom only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper)
 
 //---------------------------------
 // Examples
@@ -192,7 +192,7 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
 //---------------------------------
 // Macro Specimen A
 Instance: MacroObsBiopsySiteA
-InstanceOf: PathologyFinding
+InstanceOf: SD_MII_Patho_Finding
 Usage: #example
 Title: "MacroObsBiopsySiteA"
 Description: "Biopsy site of Specimen A (1st punch)"
@@ -204,7 +204,7 @@ Description: "Biopsy site of Specimen A (1st punch)"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroObsTissueLengthA
-InstanceOf: PathologyFinding
+InstanceOf: SD_MII_Patho_Finding
 Usage: #example
 Title: "MacroObsTissueLengthA"
 Description: "Tissue length of Specimen A (1st punch)"
@@ -219,7 +219,7 @@ Description: "Tissue length of Specimen A (1st punch)"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroGrouperA
-InstanceOf: MacroscopicGrouper
+InstanceOf: SD_MII_Patho_Macroscopic_Grouper
 Usage: #example
 Title: "MacroGrouperA"
 Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
@@ -231,7 +231,7 @@ Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)
 
 // Macro Specimen B
 Instance: MacroObsBiopsySiteB
-InstanceOf: PathologyFinding
+InstanceOf: SD_MII_Patho_Finding
 Usage: #example
 Title: "MacroObsBiopsySiteB"
 Description: "Biopsy site of Specimen B (2nd punch)"
@@ -243,7 +243,7 @@ Description: "Biopsy site of Specimen B (2nd punch)"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroObsTissueLengthB
-InstanceOf: PathologyFinding
+InstanceOf: SD_MII_Patho_Finding
 Usage: #example
 Title: "MacroObsTissueLengthB"
 Description: "Tissue length of Specimen B (2nd punch)"
@@ -258,7 +258,7 @@ Description: "Tissue length of Specimen B (2nd punch)"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroGrouperB
-InstanceOf: MacroscopicGrouper
+InstanceOf: SD_MII_Patho_Macroscopic_Grouper
 Usage: #example
 Title: "MacroGrouperB"
 Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)"
@@ -273,7 +273,7 @@ Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)
 //-------------------------------
 // Micro Specimen A
 Instance: MicroObsHistologicTypeA
-InstanceOf: PathologyFinding
+InstanceOf: SD_MII_Patho_Finding
 Usage: #example
 Title: "MicroObsHistologicTypeA"
 Description: "Histologic type of Specimen A"
@@ -284,7 +284,7 @@ Description: "Histologic type of Specimen A"
 * valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma (morphologic abnormality)"
 
 Instance: MicroObsGleasonPatternA
-InstanceOf: PathologyFinding
+InstanceOf: SD_MII_Patho_Finding
 Usage: #example
 Title: "MicroObsGleasonPatternA"
 Description: "Gleason pattern.primary in prostate tumor for Specimen A"
@@ -295,7 +295,7 @@ Description: "Gleason pattern.primary in prostate tumor for Specimen A"
 * valueCodeableConcept = $SCT#369772003 "Pattern 3 (staging scale)"
 
 Instance: MicroGrouperA
-InstanceOf: MicroscopicGrouper
+InstanceOf: SD_MII_Patho_Microscopic_Grouper
 Usage: #example
 Title: "MicroGrouperA"
 Description: "Grouper for all Microscopic Observations of Specimen A"
@@ -309,7 +309,7 @@ Description: "Grouper for all Microscopic Observations of Specimen A"
 // Diagnostic Conclusion
 //-------------------------------
 Instance: DiagnosticConclusion1
-InstanceOf: PathologyFinding
+InstanceOf: SD_MII_Patho_Finding
 Usage: #example
 Title: "DiagnosticConclusion1"
 Description: "Example for a diagnostic conclusion"
@@ -320,7 +320,7 @@ Description: "Example for a diagnostic conclusion"
 * valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom (azinär)"
 
 Instance: DiagnosticConclusion2
-InstanceOf: PathologyFinding
+InstanceOf: SD_MII_Patho_Finding
 Usage: #example
 Title: "DiagnosticConclusion2"
 Description: "Example for diagnostic conclusion"
@@ -331,7 +331,7 @@ Description: "Example for diagnostic conclusion"
 * valueCodeableConcept = $SCT#57403001 "Gleason grade 7 (staging scale)"
 
 Instance: DiagnosticConclusion3
-InstanceOf: PathologyFinding
+InstanceOf: SD_MII_Patho_Finding
 Usage: #example
 Title: "DiagnosticConclusion3"
 Description: "Example for diagnostic conclusion"
@@ -342,9 +342,9 @@ Description: "Example for diagnostic conclusion"
 * valueCodeableConcept = $LOINC#LA9630-0 "Grade 2"
 
 Instance: DiagnosticConclusionGrouper
-InstanceOf: DiagnosticConclusionGrouper
+InstanceOf: SD_MII_Patho_Diagnostic_Conclusion_Grouper
 Usage: #example
-Title: "DiagnosticConclusionGrouper"
+Title: "Diagnostic Conclusion Grouper Example"
 Description: "Example for a diagnostic conclusion"
 * status = #final
 * code.coding = $LOINC#22637-3 "Pathology report diagnosis"

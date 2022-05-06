@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "AttachedImage",
+  "id": "sd-mii-patho-attached-image",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/AttachedImage",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-attached-image",
   "version": "0.1.0",
-  "name": "AttachedImage",
-  "title": "AttachedImage",
+  "name": "SD_MII_Patho_Attached_Image",
+  "title": "SD MII Patho Attached Image",
   "status": "draft",
-  "description": "Allgemeines Profil für eingebettetes Bild",
+  "description": "Profile for attached images",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -125,7 +125,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologySpecimen"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"
             ]
           }
         ],
