@@ -1,10 +1,10 @@
 // -------------------------
 // DiagnosticReport
 // -------------------------
-Profile: PathologyReport
+Profile: SD_MII_Patho_Report
 Parent: DiagnosticReport
-Id: PathologyReport
-Title: "PathologyReport"
+Id: sd-mii-patho-report
+Title: "SD MII Patho Report"
 Description: "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative"
 * insert RuleSet1
 // ID
@@ -28,8 +28,8 @@ Description: "Defines the general pathology report structure for German hospital
 * meta.profile MS 
 // Referenz zum Untersuchungsauftrag
 * basedOn 1.. MS
-* basedOn only Reference(PathologyServiceRequest)
-* basedOn ^short = "Reference to respective PathologyServiceRequest"
+* basedOn only Reference(SD_MII_Patho_Service_Request)
+* basedOn ^short = "Reference to respective SD_MII_Patho_Service_Request"
 // Status
 * status MS
 // Code
@@ -71,19 +71,19 @@ Description: "Defines the general pathology report structure for German hospital
       and microscopic-grouper 0..* MS
       and additional-observations 0..* MS
       and diagnostic-conclusion 1..* MS
-* result[intraoperative-grouper] only Reference(IntraoperativeGrouper)
+* result[intraoperative-grouper] only Reference(SD_MII_Patho_Intraoperative_Grouper)
   * reference 1.. MS
   * ^short = "Reference to intraoperative Observations"
-* result[macroscopic-grouper] only Reference(MacroscopicGrouper)
+* result[macroscopic-grouper] only Reference(SD_MII_Patho_Macroscopic_Grouper)
   * reference 1.. MS
   * ^short = "Reference to macroscopic Observations"
-* result[microscopic-grouper] only Reference(MicroscopicGrouper)
+* result[microscopic-grouper] only Reference(SD_MII_Patho_Microscopic_Grouper)
   * reference 1.. MS
   * ^short = "Reference to microscopic Observations"
-* result[additional-observations] only Reference(AdditionalSpecifiedGrouper)     
+* result[additional-observations] only Reference(SD_MII_Patho_Additional_Specified_Grouper)     
   * reference 1.. MS
   * ^short = "Reference to any additional Observation"
-* result[diagnostic-conclusion] only Reference(DiagnosticConclusionGrouper) 
+* result[diagnostic-conclusion] only Reference(SD_MII_Patho_Diagnostic_Conclusion_Grouper) 
   * reference 1.. MS
   * ^short = "Reference to the 'Diagnostic Conclusion' grouper(s)"
 // Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) 
@@ -93,7 +93,7 @@ Description: "Defines the general pathology report structure for German hospital
 * media ^short = "Reference to single attached images"
   * comment MS
   * link MS
-  * link only Reference(AttachedImage)
+  * link only Reference(SD_MII_Patho_Attached_Image)
 // zugehoeriges Dokument
 * presentedForm MS
 // Diagnostische Schlussfolgerung
@@ -103,10 +103,10 @@ Description: "Defines the general pathology report structure for German hospital
 // -------------------------
 // Composition
 // -------------------------
-Profile: PathologyComposition
+Profile: SD_MII_Patho_Composition
 Parent: Composition
-Id: PathologyComposition
-Title: "PathologyComposition"
+Id: sd-mii-patho-composition
+Title: "SD MII Patho Composition"
 Description: "Composition als Template für Pathologiebefundbericht als FHIR Dokument"
 * insert RuleSet1
 * status MS
@@ -137,7 +137,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * subject 1.. MS
 * subject only Reference(Patient)
 * event 1.. MS
-// Entry referenziert nur auf PathologyReport
+// Entry referenziert nur auf SD_MII_Patho_Report
 * section 1.. MS
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this.code.coding"
@@ -148,7 +148,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
     * coding 1.. MS
     * coding ^patternCoding = $LOINC#60567-5 "Comprehensive pathology report panel"
   * entry 1..1 MS
-  * entry only Reference (PathologyReport)
+  * entry only Reference (SD_MII_Patho_Report)
   * text 0..0
   * title 1.. MS 
   * title ^fixedString = "Diagnostic Report"
@@ -157,10 +157,10 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 // Example
 //--------------------------------
 Instance: PathologyReportExample
-InstanceOf: PathologyReport
+InstanceOf: SD_MII_Patho_Report
 Usage: #example
-Title: "PathologyReportExample"
-Description: "Example for PathologyReport"
+Title: "Pathology Report Example"
+Description: "Example for SD_MII_Patho_Report"
 * identifier[+].value = "E21.12345"
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * identifier[=].type = $v2-0203#ACSN "Accession ID"
@@ -183,11 +183,11 @@ Description: "Example for PathologyReport"
 * media.link = Reference(ImageExample)
 * media.comment = "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
 
-Instance: PathologyCompositionExample
-InstanceOf: PathologyComposition
+Instance: CompositionExample
+InstanceOf: SD_MII_Patho_Composition
 Usage: #example
-Title: "PathologyCompositionExample"
-Description: "Example for a PathologyComposition"
+Title: "Composition Example"
+Description: "Example for a SD_MII_Patho_Composition"
 * status = #final
 * type = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"
@@ -201,4 +201,4 @@ Description: "Example for a PathologyComposition"
 * event.period.end = "2021-06-08"
 * section[+].title = "Diagnostic Report"
 * section[=].code = $LOINC#60567-5 "Comprehensive pathology report panel"
-* section[=].entry = Reference(PathologyReportExample)
+* section[=].entry = Reference(SD_MII_Patho_ReportExample)

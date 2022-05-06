@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "VS_MII_Patho_Processing_Procedure_SNOMED_CT",
+  "id": "vs-mii-patho-processing-procedure-snomed-ct",
+  "title": "VS MII Patho Processing Procedure [SNOMED CT]",
+  "description": "Specimen processing procedure",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-processing-procedure-snomed-ct",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "108252007"
+          }
+        ]
+      }
+    ]
+  }
+}

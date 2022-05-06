@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "PathologyServiceRequest",
+  "id": "sd-mii-patho-service-request",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,10 +11,10 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/PathologyServiceRequest",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-service-request",
   "version": "0.1.0",
-  "name": "PathologyServiceRequest",
-  "title": "PathologyServiceRequest",
+  "name": "SD_MII_Patho_Service_Request",
+  "title": "SD MII Patho Service Request",
   "status": "draft",
   "description": "Order for the analysis of a sample or a group of samples.",
   "fhirVersion": "4.0.1",

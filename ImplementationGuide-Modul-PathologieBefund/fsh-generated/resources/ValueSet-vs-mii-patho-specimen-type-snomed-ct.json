@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "VS_MII_Patho_Specimen_Type_SNOMED_CT",
+  "id": "vs-mii-patho-specimen-type-snomed-ct",
+  "title": "VS MII Patho Specimen Type [SNOMED CT]",
+  "description": "ValueSet for the type of specimen",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-specimen-type-snomed-ct",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "123038009"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,10 +1,10 @@
 //------------------------------------
-// PathologyServiceRequest
+// SD_MII_Patho_Service_Request
 //------------------------------------
-Profile: PathologyServiceRequest
+Profile: SD_MII_Patho_Service_Request
 Parent: ServiceRequest
-Id: PathologyServiceRequest
-Title: "PathologyServiceRequest"
+Id: sd-mii-patho-service-request
+Title: "SD MII Patho Service Request"
 Description: "Order for the analysis of a sample or a group of samples."
 * insert RuleSet1
 // Meta
@@ -129,7 +129,7 @@ Description: "List of problems or questions concerning the reason for the Servic
 //Examples
 //---------------------------
 Instance: PathologyRequestExample
-InstanceOf: PathologyServiceRequest
+InstanceOf: SD_MII_Patho_Service_Request
 Usage: #example
 Title: "PathologyRequestExample"
 Description: "Pathology Report Example "
