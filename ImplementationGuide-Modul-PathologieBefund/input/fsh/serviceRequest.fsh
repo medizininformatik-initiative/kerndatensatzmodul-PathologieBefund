@@ -75,7 +75,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Anamnese - Annahme: besteht zum groessten Teil aus Observations u/o Conditions
 * supportingInfo[anamnesis] only Reference(Observation)
 // Active Problems (Fragestellung)
-* supportingInfo[activeProblems] only Reference(ActiveProblems)
+* supportingInfo[activeProblems] only Reference(SD_MII_Patho_Active_Problems)
   * ^short = "List of possible problems that should be analyzed"
 
 // Zusaetzliche Elemente
@@ -85,7 +85,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 * category ^slicing.discriminator[0].path = "$this"
 * category ^slicing.rules = #open
 * category contains pathology 1..1 MS
-* category[pathology] = $SCT#721966001 "Pathology order (record artifact)"
+* category[pathology] = $SCT#721966001 "Pathology order (record artifact)" (exactly)
 * category[pathology] ^short = "Fixed category 'Pathology order'"
   * coding MS
     * system 1.. MS
@@ -101,21 +101,22 @@ Description: "Order for the analysis of a sample or a group of samples."
 //------------------------------------------------
 // Fragestellung (Problem list $LOINC#11450-4)
 //------------------------------------------------
-Profile: ActiveProblems
+Profile: SD_MII_Patho_Active_Problems
 Parent: Observation
-Id: ActiveProblems
-Title: "ActiveProblems"
+Id: sd-mii-patho-active-problems
+Title: "SD MII Patho Active Problems"
 Description: "List of problems or questions concerning the reason for the ServiceRequest"
 * insert RuleSet1
 * status MS
 * code MS
   * coding 1.. MS
     * code 1.. MS
-    * code ^fixedCode = #11450-4
-    * system 1.. MS
-    * system ^fixedUri = $LOINC
-    * display MS
-    * display ^fixedString = "Problem list"
+    * code = $LOINC#42349-1 "Reason for referral (narrative)" (exactly)
+    // * code ^fixedCode = #11450-4
+    // * system 1.. MS
+    // * system ^fixedUri = $LOINC
+    // * display MS
+    // * display ^fixedString = "Problem list"
 * subject 1.. MS
 * component 1.. MS
   * code MS

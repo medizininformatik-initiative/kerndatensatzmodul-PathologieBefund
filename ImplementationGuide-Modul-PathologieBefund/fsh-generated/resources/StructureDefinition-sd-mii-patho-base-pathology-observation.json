@@ -240,6 +240,54 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this.resolve()"
+            }
+          ],
+          "rules": "open",
+          "description": "tbd",
+          "ordered": false
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom:attached-image",
+        "path": "Observation.derivedFrom",
+        "sliceName": "attached-image",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-attached-image"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom:dicom-image",
+        "path": "Observation.derivedFrom",
+        "sliceName": "dicom-image",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ImagingStudy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Observation.component.code",
         "path": "Observation.component.code",
         "mustSupport": true

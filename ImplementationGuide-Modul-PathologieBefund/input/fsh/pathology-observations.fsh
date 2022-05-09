@@ -51,6 +51,16 @@ Description: "Abstract Observation to define common features of a main pathology
 * method MS
 // Referenz - Probe
 * specimen MS
+* derivedFrom MS
+* derivedFrom ^slicing.discriminator.type = #type
+* derivedFrom ^slicing.discriminator.path = "$this.resolve()"
+* derivedFrom ^slicing.rules = #open
+* derivedFrom ^slicing.description = "tbd"
+* derivedFrom ^slicing.ordered = false
+* derivedFrom contains attached-image 0..* MS 
+                   and dicom-image 0..* MS
+* derivedFrom[attached-image] only Reference(SD_MII_Patho_Attached_Image)
+* derivedFrom[dicom-image] only Reference(ImagingStudy)
 // Components fuer die Erfassung der Ergebnisse
 * component 0.. 
   * code MS
@@ -79,8 +89,17 @@ Description: "Instantiable Observation to describe a generic pathology finding, 
 // Moegliche Unterbeobachtungen
 * hasMember MS
 // Referenz - Eingebettetes Bild
-* derivedFrom MS
-* derivedFrom only Reference(SD_MII_Patho_Attached_Image)
+// * derivedFrom MS
+// * derivedFrom ^slicing.discriminator.type = #type
+// * derivedFrom ^slicing.discriminator.path = "$this.resolve()"
+// * derivedFrom ^slicing.rules = #open
+// * derivedFrom ^slicing.description = "tbd"
+// * derivedFrom ^slicing.ordered = false
+// * derivedFrom contains attached-image 0..* MS 
+//                    and dicom-image 0..* MS
+// * derivedFrom[attached-image] only Reference(SD_MII_Patho_Attached_Image)
+// * derivedFrom[dicom-image] only Reference(ImagingStudy)
+// * derivedFrom only Reference(SD_MII_Patho_Attached_Image or ImagingStudy)
 
 //--------------------------------------------
 // Grouper
@@ -162,7 +181,17 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
 * code ^fixedCodeableConcept = $LOINC#22637-3 "Pathology report diagnosis"
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom MS
-* derivedFrom only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper or QuestionnaireResponse)
+* derivedFrom ^slicing.discriminator.type = #type
+* derivedFrom ^slicing.discriminator.path = "$this.resolve()"
+* derivedFrom ^slicing.rules = #open
+* derivedFrom ^slicing.description = "tbd"
+* derivedFrom ^slicing.ordered = false
+* derivedFrom contains grouper-observation 0..* MS
+                   and questionnaire-response 0..* MS
+* derivedFrom[grouper-observation] only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper)
+* derivedFrom[questionnaire-response] only Reference(QuestionnaireResponse)
+// * derivedFrom only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper or QuestionnaireResponse)
+* note MS
 
 //---------------------------------
 // Examples
