@@ -63,18 +63,18 @@ Description: "Order for the analysis of a sample or a group of samples."
 * supportingInfo MS
 * supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
 * supportingInfo ^slicing.discriminator.type = #pattern
-* supportingInfo ^slicing.discriminator.path = "$this"
+* supportingInfo ^slicing.discriminator.path = "$this.resolve()"
 * supportingInfo ^slicing.rules = #open
 // * supportingInfo ^slicing.description = ""
 * supportingInfo ^slicing.ordered = false
 * supportingInfo contains codedCondition 0.. MS 
                       and anamnesis 0.. MS
                       and activeProblems 0.. MS
-// Diagnose codiert
+// Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
-// Anamnese - Annahme: besteht zum groessten Teil aus Observations u/o Conditions
+// History of Present Illness
 * supportingInfo[anamnesis] only Reference(Observation)
-// Active Problems (Fragestellung)
+// Active Problems (Fragestellung) - Generic AP Observation
 * supportingInfo[activeProblems] only Reference(SD_MII_Patho_Active_Problems)
   * ^short = "List of possible problems that should be analyzed"
 
@@ -94,7 +94,8 @@ Description: "Order for the analysis of a sample or a group of samples."
     * code ^fixedCode = #721966001
     * display MS
 * code MS
-// Ueberweisungsgrund und Fragestellung
+// * code = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+// Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"
 

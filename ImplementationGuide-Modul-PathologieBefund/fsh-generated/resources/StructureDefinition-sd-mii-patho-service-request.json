@@ -354,7 +354,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "$this"
+              "path": "$this.resolve()"
             }
           ],
           "rules": "open",
