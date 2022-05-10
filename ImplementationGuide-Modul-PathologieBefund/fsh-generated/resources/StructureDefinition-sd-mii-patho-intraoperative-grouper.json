@@ -63,7 +63,7 @@
         "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "#83321-0",
+              "code": "83321-0",
               "system": "http://loinc.org",
               "display": "Pathology report intraoperative observation in Specimen Document"
             }

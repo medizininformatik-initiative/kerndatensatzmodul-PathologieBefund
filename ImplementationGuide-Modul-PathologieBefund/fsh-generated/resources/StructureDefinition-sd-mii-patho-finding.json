@@ -117,19 +117,6 @@
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "mustSupport": true
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-attached-image"
-            ]
-          }
-        ],
-        "mustSupport": true
       }
     ]
   }

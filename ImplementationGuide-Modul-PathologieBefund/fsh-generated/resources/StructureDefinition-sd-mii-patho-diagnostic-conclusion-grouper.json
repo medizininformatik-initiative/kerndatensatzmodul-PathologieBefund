@@ -71,8 +71,16 @@
         }
       },
       {
-        "id": "Observation.derivedFrom",
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom:grouper-observation",
         "path": "Observation.derivedFrom",
+        "sliceName": "grouper-observation",
+        "min": 0,
+        "max": "*",
         "type": [
           {
             "code": "Reference",
@@ -81,6 +89,22 @@
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-macroscopic-grouper",
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-microscopic-grouper",
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-additional-specified-grouper"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom:questionnaire-response",
+        "path": "Observation.derivedFrom",
+        "sliceName": "questionnaire-response",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
             ]
           }
         ],

@@ -50,9 +50,9 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/ActiveProblems"
+          "reference": "StructureDefinition/sd-mii-patho-active-problems"
         },
-        "name": "ActiveProblems",
+        "name": "SD MII Patho Active Problems",
         "description": "List of problems or questions concerning the reason for the ServiceRequest",
         "exampleBoolean": false
       },

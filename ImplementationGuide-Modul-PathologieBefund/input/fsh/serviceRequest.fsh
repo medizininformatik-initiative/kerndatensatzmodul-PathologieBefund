@@ -63,19 +63,19 @@ Description: "Order for the analysis of a sample or a group of samples."
 * supportingInfo MS
 * supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
 * supportingInfo ^slicing.discriminator.type = #pattern
-* supportingInfo ^slicing.discriminator.path = "$this"
+* supportingInfo ^slicing.discriminator.path = "$this.resolve()"
 * supportingInfo ^slicing.rules = #open
 // * supportingInfo ^slicing.description = ""
 * supportingInfo ^slicing.ordered = false
 * supportingInfo contains codedCondition 0.. MS 
                       and anamnesis 0.. MS
                       and activeProblems 0.. MS
-// Diagnose codiert
+// Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
-// Anamnese - Annahme: besteht zum groessten Teil aus Observations u/o Conditions
+// History of Present Illness
 * supportingInfo[anamnesis] only Reference(Observation)
-// Active Problems (Fragestellung)
-* supportingInfo[activeProblems] only Reference(ActiveProblems)
+// Active Problems (Fragestellung) - Generic AP Observation
+* supportingInfo[activeProblems] only Reference(SD_MII_Patho_Active_Problems)
   * ^short = "List of possible problems that should be analyzed"
 
 // Zusaetzliche Elemente
@@ -85,7 +85,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 * category ^slicing.discriminator[0].path = "$this"
 * category ^slicing.rules = #open
 * category contains pathology 1..1 MS
-* category[pathology] = $SCT#721966001 "Pathology order (record artifact)"
+* category[pathology] = $SCT#721966001 "Pathology order (record artifact)" (exactly)
 * category[pathology] ^short = "Fixed category 'Pathology order'"
   * coding MS
     * system 1.. MS
@@ -94,28 +94,30 @@ Description: "Order for the analysis of a sample or a group of samples."
     * code ^fixedCode = #721966001
     * display MS
 * code MS
-// Ueberweisungsgrund und Fragestellung
+// * code = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+// Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"
 
 //------------------------------------------------
 // Fragestellung (Problem list $LOINC#11450-4)
 //------------------------------------------------
-Profile: ActiveProblems
+Profile: SD_MII_Patho_Active_Problems
 Parent: Observation
-Id: ActiveProblems
-Title: "ActiveProblems"
+Id: sd-mii-patho-active-problems
+Title: "SD MII Patho Active Problems"
 Description: "List of problems or questions concerning the reason for the ServiceRequest"
 * insert RuleSet1
 * status MS
 * code MS
   * coding 1.. MS
     * code 1.. MS
-    * code ^fixedCode = #11450-4
-    * system 1.. MS
-    * system ^fixedUri = $LOINC
-    * display MS
-    * display ^fixedString = "Problem list"
+    * code = $LOINC#42349-1 "Reason for referral (narrative)" (exactly)
+    // * code ^fixedCode = #11450-4
+    // * system 1.. MS
+    // * system ^fixedUri = $LOINC
+    // * display MS
+    // * display ^fixedString = "Problem list"
 * subject 1.. MS
 * component 1.. MS
   * code MS
