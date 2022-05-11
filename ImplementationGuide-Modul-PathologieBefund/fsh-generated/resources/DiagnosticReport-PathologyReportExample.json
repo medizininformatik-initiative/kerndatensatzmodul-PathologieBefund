@@ -9,9 +9,9 @@
   "code": {
     "coding": [
       {
-        "code": "60568-3",
+        "code": "60567-5",
         "system": "http://loinc.org",
-        "display": "Pathology Synoptic report"
+        "display": "Comprehensive pathology report panel"
       }
     ]
   },

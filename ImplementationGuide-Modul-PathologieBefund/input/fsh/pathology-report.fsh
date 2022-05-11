@@ -173,7 +173,8 @@ Description: "Example for SD_MII_Patho_Report"
 // * identifier[=].type = $LOINC#11526-1
 * basedOn = Reference(PathologyRequestExample)
 * status = #final
-* code.coding = $LOINC#60568-3 "Pathology Synoptic report"
+// * code.coding = $LOINC#60568-3 "Pathology Synoptic report"
+* code.coding = $LOINC#60567-5 "Comprehensive pathology report panel"
 * subject.reference = "Patient/12345"
 * performer.reference = "Practitioner/2346545"
 * specimen.reference = "Specimen/87689"
