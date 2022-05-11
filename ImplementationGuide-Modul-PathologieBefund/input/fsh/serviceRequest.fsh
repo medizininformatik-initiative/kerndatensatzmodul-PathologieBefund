@@ -81,18 +81,19 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Zusaetzliche Elemente
 // category for searching purposes 
 * category 1..1 MS 
-* category ^slicing.discriminator[0].type = #pattern
-* category ^slicing.discriminator[0].path = "$this"
-* category ^slicing.rules = #open
-* category contains pathology 1..1 MS
-* category[pathology] = $SCT#721966001 "Pathology order (record artifact)" (exactly)
-* category[pathology] ^short = "Fixed category 'Pathology order'"
-  * coding MS
-    * system 1.. MS
-    * system ^fixedUri = $SCT
-    * code 1.. MS
-    * code ^fixedCode = #721966001
-    * display MS
+* category = $SCT#108252007 "Laboratory procedure (procedure)" (exactly)
+// * category ^slicing.discriminator[0].type = #pattern
+// * category ^slicing.discriminator[0].path = "$this"
+// * category ^slicing.rules = #open
+// * category contains pathology 1..1 MS
+// * category[pathology] = $SCT#721966001 "Pathology order (record artifact)" (exactly)
+// * category[pathology] ^short = "Fixed category 'Pathology order'"
+//   * coding MS
+//     * system 1.. MS
+//     * system ^fixedUri = $SCT
+//     * code 1.. MS
+//     * code ^fixedCode = #721966001
+//     * display MS
 * code MS
 // * code = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
@@ -147,5 +148,5 @@ Description: "Pathology Report Example "
 * encounter.reference = "Encounter/87687"
 * requester.reference = "Practitioner/34456"
 * specimen[+].reference = "Specimen/87689"
-* category = $SCT#721966001 "Pathology order (record artifact)"
+* category = $SCT#108252007 "Laboratory procedure (procedure)"
 * code = $SCT#82619000 "Left colectomy (procedure)"

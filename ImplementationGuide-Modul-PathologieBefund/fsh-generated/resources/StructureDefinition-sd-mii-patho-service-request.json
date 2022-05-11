@@ -234,59 +234,17 @@
       {
         "id": "ServiceRequest.category",
         "path": "ServiceRequest.category",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.category:pathology",
-        "path": "ServiceRequest.category",
-        "sliceName": "pathology",
-        "short": "Fixed category 'Pathology order'",
         "min": 1,
         "max": "1",
         "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "721966001",
+              "code": "108252007",
               "system": "http://snomed.info/sct",
-              "display": "Pathology order (record artifact)"
+              "display": "Laboratory procedure (procedure)"
             }
           ]
         },
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.category:pathology.coding",
-        "path": "ServiceRequest.category.coding",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.category:pathology.coding.system",
-        "path": "ServiceRequest.category.coding.system",
-        "min": 1,
-        "fixedUri": "http://snomed.info/sct",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.category:pathology.coding.code",
-        "path": "ServiceRequest.category.coding.code",
-        "min": 1,
-        "fixedCode": "721966001",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.category:pathology.coding.display",
-        "path": "ServiceRequest.category.coding.display",
         "mustSupport": true
       },
       {

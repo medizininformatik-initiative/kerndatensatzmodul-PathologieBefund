@@ -10,9 +10,9 @@
     {
       "coding": [
         {
-          "code": "721966001",
+          "code": "108252007",
           "system": "http://snomed.info/sct",
-          "display": "Pathology order (record artifact)"
+          "display": "Laboratory procedure (procedure)"
         }
       ]
     }
