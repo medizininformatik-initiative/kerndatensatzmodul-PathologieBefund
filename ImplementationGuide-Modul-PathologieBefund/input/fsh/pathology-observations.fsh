@@ -74,7 +74,7 @@ Profile: SD_MII_Patho_Finding
 Parent: SD_MII_Patho_Base_Observation
 Id: sd-mii-patho-finding
 Title: "SD MII Patho Finding"
-Description: "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section"
+Description: "Instantiable Observation to describe a generic pathology finding"
 * insert RuleSet1
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this.coding"
