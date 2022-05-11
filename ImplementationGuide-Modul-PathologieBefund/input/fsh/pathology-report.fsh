@@ -126,12 +126,28 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * author ^short = "Author can only be of type Practitioner or Organization"
 // Legaler Authentikator 
 * attester 1.. MS
-* attester ^short = "Legal attester"
-  * mode 1.. MS
-  * mode ^fixedCode = #legal
-  * mode ^short = "Mode fixed to 'legal'"
+* attester ^slicing.discriminator.type = #pattern
+* attester ^slicing.discriminator.path = "$this.code"
+* attester ^slicing.rules = #open
+* attester ^slicing.description = "tbd"
+* attester ^slicing.ordered = false
+* attester contains legal 1.. MS 
+                and content-validator 0..* MS
+* attester[legal]
+  * mode = #legal (exactly)
   * party 1.. MS
   * party only Reference(Practitioner or Organization)
+* attester[content-validator]
+  * mode = #professional (exactly)
+  * party 1.. MS
+  * party only Reference(Practitioner or Organization)
+
+// * attester ^short = "Legal attester"
+//   * mode 1.. MS
+//   * mode ^fixedCode = #legal
+//   * mode ^short = "Mode fixed to 'legal'"
+//   * party 1.. MS
+//   * party only Reference(Practitioner or Organization)
 * custodian 1.. MS
 * date MS
 * subject 1.. MS

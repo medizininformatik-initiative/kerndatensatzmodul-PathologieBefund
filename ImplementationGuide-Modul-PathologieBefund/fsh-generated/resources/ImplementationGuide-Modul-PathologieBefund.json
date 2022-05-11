@@ -101,7 +101,7 @@
           "reference": "StructureDefinition/sd-mii-patho-finding"
         },
         "name": "SD MII Patho Finding",
-        "description": "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section",
+        "description": "Instantiable Observation to describe a generic pathology finding",
         "exampleBoolean": false
       },
       {

@@ -16,7 +16,7 @@
   "name": "SD_MII_Patho_Finding",
   "title": "SD MII Patho Finding",
   "status": "draft",
-  "description": "Instantiable Observation to describe a generic pathology finding, based on IHE PaLM APSR - Additional Specified Observation Section",
+  "description": "Instantiable Observation to describe a generic pathology finding",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
