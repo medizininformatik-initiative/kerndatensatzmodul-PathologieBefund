@@ -137,19 +137,63 @@
       {
         "id": "Composition.attester",
         "path": "Composition.attester",
-        "short": "Legal attester",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this.code"
+            }
+          ],
+          "rules": "open",
+          "description": "tbd",
+          "ordered": false
+        },
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Composition.attester.mode",
-        "path": "Composition.attester.mode",
-        "short": "Mode fixed to 'legal'",
-        "fixedCode": "legal",
+        "id": "Composition.attester:legal",
+        "path": "Composition.attester",
+        "sliceName": "legal",
+        "min": 1,
+        "max": "*",
         "mustSupport": true
       },
       {
-        "id": "Composition.attester.party",
+        "id": "Composition.attester:legal.mode",
+        "path": "Composition.attester.mode",
+        "fixedCode": "legal"
+      },
+      {
+        "id": "Composition.attester:legal.party",
+        "path": "Composition.attester.party",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.attester:content-validator",
+        "path": "Composition.attester",
+        "sliceName": "content-validator",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.attester:content-validator.mode",
+        "path": "Composition.attester.mode",
+        "fixedCode": "professional"
+      },
+      {
+        "id": "Composition.attester:content-validator.party",
         "path": "Composition.attester.party",
         "min": 1,
         "type": [

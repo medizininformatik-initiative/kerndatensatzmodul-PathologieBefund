@@ -39,18 +39,12 @@ Description: "Defines the general pathology report structure for German hospital
   * coding ^slicing.discriminator.path = "$this"
   * coding ^slicing.rules = #open
   * coding contains pathology-report 1..1 MS
-  * coding[pathology-report] ^patternCoding = $LOINC#60567-5 "Comprehensive pathology report panel"
+  * coding[pathology-report] ^patternCoding = $LOINC#60568-3 "Pathology Synoptic report"
     * system 1.. MS 
     * system ^fixedUri = $LOINC
     * code 1.. MS
-    * code ^fixedCode = #60567-5
-    * display MS 
-  // * coding[pathology-report] ^patternCoding = $LOINC#60568-3 "Pathology Synoptic report"
-  //   * system 1.. MS 
-  //   * system ^fixedUri = $LOINC
-  //   * code 1.. MS
-  //   * code ^fixedCode = #60568-3
-  //   * display MS  
+    * code ^fixedCode = #60568-3
+    * display MS  
 
 // Referenz zu Patient:in
 * subject 1.. MS
@@ -132,12 +126,28 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * author ^short = "Author can only be of type Practitioner or Organization"
 // Legaler Authentikator 
 * attester 1.. MS
-* attester ^short = "Legal attester"
-  * mode 1.. MS
-  * mode ^fixedCode = #legal
-  * mode ^short = "Mode fixed to 'legal'"
+* attester ^slicing.discriminator.type = #pattern
+* attester ^slicing.discriminator.path = "$this.code"
+* attester ^slicing.rules = #open
+* attester ^slicing.description = "tbd"
+* attester ^slicing.ordered = false
+* attester contains legal 1.. MS 
+                and content-validator 0..* MS
+* attester[legal]
+  * mode = #legal (exactly)
   * party 1.. MS
   * party only Reference(Practitioner or Organization)
+* attester[content-validator]
+  * mode = #professional (exactly)
+  * party 1.. MS
+  * party only Reference(Practitioner or Organization)
+
+// * attester ^short = "Legal attester"
+//   * mode 1.. MS
+//   * mode ^fixedCode = #legal
+//   * mode ^short = "Mode fixed to 'legal'"
+//   * party 1.. MS
+//   * party only Reference(Practitioner or Organization)
 * custodian 1.. MS
 * date MS
 * subject 1.. MS
@@ -173,8 +183,7 @@ Description: "Example for SD_MII_Patho_Report"
 // * identifier[=].type = $LOINC#11526-1
 * basedOn = Reference(PathologyRequestExample)
 * status = #final
-// * code.coding = $LOINC#60568-3 "Pathology Synoptic report"
-* code.coding = $LOINC#60567-5 "Comprehensive pathology report panel"
+* code.coding = $LOINC#60568-3 "Pathology Synoptic report"
 * subject.reference = "Patient/12345"
 * performer.reference = "Practitioner/2346545"
 * specimen.reference = "Specimen/87689"
