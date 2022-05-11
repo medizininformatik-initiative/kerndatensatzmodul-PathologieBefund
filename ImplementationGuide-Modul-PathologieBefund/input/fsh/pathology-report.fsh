@@ -39,12 +39,18 @@ Description: "Defines the general pathology report structure for German hospital
   * coding ^slicing.discriminator.path = "$this"
   * coding ^slicing.rules = #open
   * coding contains pathology-report 1..1 MS
-  * coding[pathology-report] ^patternCoding = $LOINC#60568-3 "Pathology Synoptic report"
+  * coding[pathology-report] ^patternCoding = $LOINC#60567-5 "Comprehensive pathology report panel"
     * system 1.. MS 
     * system ^fixedUri = $LOINC
     * code 1.. MS
-    * code ^fixedCode = #60568-3
-    * display MS  
+    * code ^fixedCode = #60567-5
+    * display MS 
+  // * coding[pathology-report] ^patternCoding = $LOINC#60568-3 "Pathology Synoptic report"
+  //   * system 1.. MS 
+  //   * system ^fixedUri = $LOINC
+  //   * code 1.. MS
+  //   * code ^fixedCode = #60568-3
+  //   * display MS  
 
 // Referenz zu Patient:in
 * subject 1.. MS
