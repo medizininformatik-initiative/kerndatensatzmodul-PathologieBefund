@@ -1,6 +1,6 @@
 {
   "resourceType": "DiagnosticReport",
-  "id": "PathologyReportExample",
+  "id": "example-mii-patho-report",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-report"
@@ -17,7 +17,7 @@
   },
   "identifier": [
     {
-      "value": "E21.12345",
+      "value": "H2021.14456",
       "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht",
       "type": {
         "coding": [
@@ -46,7 +46,7 @@
   ],
   "specimen": [
     {
-      "reference": "Specimen/87689"
+      "reference": "Specimen/example-mii-patho-LungeOLStanze"
     }
   ],
   "encounter": {
@@ -54,33 +54,32 @@
   },
   "result": [
     {
-      "reference": "Observation/MacroGrouperB"
+      "reference": "Observation/example-mii-patho-MacroGrouperLung"
     },
     {
-      "reference": "Observation/MicroGrouperA"
-    },
-    {
-      "reference": "Observation/DiagnosticConclusionGrouper"
+      "reference": "Observation/example-mii-patho-DiagnosticConclusionGrouper"
     }
   ],
-  "conclusion": "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2",
+  "conclusion": "Ausgedehnte Infiltrate eines acinär, lipidisch und fokal papillär wachsenden, mäßig differenzierten pulmonalen Adenocarcinoms in Stanzen vom linken Oberlappen im Bereich einer zellarmen Narbe.",
   "conclusionCode": [
     {
       "coding": [
         {
-          "code": "399490008",
-          "system": "http://snomed.info/sct"
+          "code": "1078901000119100",
+          "system": "http://snomed.info/sct",
+          "display": "Primary adenocarcinoma of upper lobe of left lung (disorder)"
         }
       ]
     }
   ],
-  "effectiveDateTime": "2021-06-01",
+  "effectiveDateTime": "2021-05-28",
+  "issued": "2021-05-20T13:28:17.239+02:00",
   "media": [
     {
       "link": {
         "reference": "Media/ImageExample"
       },
-      "comment": "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
+      "comment": "HE-Schnitt einer Lungenstanze, infiltriert durch Karzinomverbände, fotodokumentiert"
     }
   ]
 }

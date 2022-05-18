@@ -1,0 +1,64 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "Container",
+  "id": "Container",
+  "title": "Container",
+  "description": "tbd",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/Container",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "434746001",
+            "display": "Specimen vial (physical object)"
+          },
+          {
+            "code": "434464009",
+            "display": "Tissue cassette (physical object)"
+          },
+          {
+            "code": "434708008",
+            "display": "Tissue cassette for microarray (physical object)"
+          },
+          {
+            "code": "433466003",
+            "display": "Microscope slide (physical object)"
+          },
+          {
+            "code": "433453003",
+            "display": "Specimen container component (physical object)"
+          }
+        ]
+      },
+      {
+        "system": "http://dicom.nema.org/resources/ontology/DCM",
+        "concept": [
+          {
+            "code": "A-01024",
+            "display": "Specimen vial"
+          },
+          {
+            "code": "A-0101B",
+            "display": "Microscope slide"
+          },
+          {
+            "code": "A-01023",
+            "display": "Specimen container"
+          },
+          {
+            "code": "A-01021",
+            "display": "Electron microscopy grid"
+          },
+          {
+            "code": "A-01025",
+            "display": "Specimen well"
+          }
+        ]
+      }
+    ]
+  }
+}
