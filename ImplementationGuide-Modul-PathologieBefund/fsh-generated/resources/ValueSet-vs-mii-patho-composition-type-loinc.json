@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "VS_MII_Patho_Composition_Type_LOINC",
+  "id": "vs-mii-patho-composition-type-loinc",
+  "title": "VS MII Patho Composition Type",
+  "description": "tbd",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-composition-type-loinc",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "11529-5",
+            "display": "Surgical pathology study"
+          },
+          {
+            "code": "60568-3",
+            "display": "Pathology Synoptic report"
+          },
+          {
+            "code": "60570-9",
+            "display": "Pathology Consult note"
+          },
+          {
+            "code": "60571-7",
+            "display": "Pathology Consult note.synoptic"
+          },
+          {
+            "code": "35265-8",
+            "display": "Pathology report addendum in Specimen Narrative"
+          }
+        ]
+      }
+    ]
+  }
+}

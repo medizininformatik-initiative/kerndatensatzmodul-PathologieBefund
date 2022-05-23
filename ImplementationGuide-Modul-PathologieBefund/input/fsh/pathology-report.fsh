@@ -65,6 +65,7 @@ Description: "Defines the general pathology report structure for German hospital
 * result ^slicing.discriminator[+].type = #value
 * result ^slicing.discriminator[=].path = "resolve().code"
 * result ^slicing.rules = #closed
+* result ^slicing.ordered = true
 * result contains 
       intraoperative-grouper 0..* MS
       and macroscopic-grouper 0..* MS

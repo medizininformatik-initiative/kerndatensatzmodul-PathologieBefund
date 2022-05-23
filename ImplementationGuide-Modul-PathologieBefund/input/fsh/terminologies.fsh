@@ -28,6 +28,17 @@ Description: "Specimen processing procedure"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #108252007
 
+ValueSet: VS_MII_Patho_Composition_Type_LOINC
+Id: vs-mii-patho-composition-type-loinc
+Title: "VS MII Patho Composition Type"
+Description: "tbd"
+* insert RuleSet1
+* $LOINC#11529-5 "Surgical pathology study"
+* $LOINC#60568-3 "Pathology Synoptic report"
+* $LOINC#60570-9 "Pathology Consult note"
+* $LOINC#60571-7 "Pathology Consult note.synoptic"
+* $LOINC#35265-8 "Pathology report addendum in Specimen Narrative"
+
 ValueSet: SectionTypes
 Id: SectionTypes
 Title: "SectionTypes"

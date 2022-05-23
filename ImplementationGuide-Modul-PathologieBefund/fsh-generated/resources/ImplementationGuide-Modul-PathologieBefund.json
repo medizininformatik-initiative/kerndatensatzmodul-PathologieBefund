@@ -218,6 +218,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/vs-mii-patho-composition-type-loinc"
+        },
+        "name": "VS MII Patho Composition Type",
+        "description": "tbd",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/vs-mii-patho-processing-procedure-snomed-ct"
         },
         "name": "VS MII Patho Processing Procedure [SNOMED CT]",
