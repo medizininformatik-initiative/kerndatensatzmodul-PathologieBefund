@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "Faerbesubstanzen",
+  "id": "Faerbesubstanzen",
+  "title": "Faerbesubstanzen",
+  "description": "tbd",
+  "version": "0.1.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/Faerbesubstanzen",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "127790008"
+          }
+        ]
+      }
+    ]
+  }
+}

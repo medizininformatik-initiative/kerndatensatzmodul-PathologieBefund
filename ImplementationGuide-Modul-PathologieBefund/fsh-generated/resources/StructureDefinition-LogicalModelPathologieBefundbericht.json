@@ -275,6 +275,23 @@
         "isSummary": true
       },
       {
+        "id": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Probe",
+        "path": "LogicalModelPathologieBefundbericht.Untersuchungsauftrag.Probe",
+        "short": "Organ oder Organteil oder eine Sammlung derselben, die als Einsendungspräparat zusammen mit dem Untersuchungsauftrag zur Bearbeitung und Begutachtung eingesandt werden.",
+        "definition": "Organ oder Organteil oder eine Sammlung derselben, die als Einsendungspräparat zusammen mit dem Untersuchungsauftrag zur Bearbeitung und Begutachtung eingesandt werden.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen"
+            ]
+          }
+        ],
+        "isSummary": true
+      },
+      {
         "id": "LogicalModelPathologieBefundbericht.Proben",
         "path": "LogicalModelPathologieBefundbericht.Proben",
         "short": "Probe",
@@ -851,7 +868,7 @@
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.Einzelbeobachtung",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.Einzelbeobachtung",
         "short": "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung",
-        "definition": "Jede Beobachtung, die als Bestandteil einer pathologisch-anatomischen Untersuchung im Befundbericht erwähnt ist, kann zusätzlich zur textuellen Erwähnung auch semantisch annotiert, d.h. mit einem Code und einem Value in den Bericht maschinenlesbar aufgenommen werden. Die semantische Annotation kann durch beliebige Terminologiesysteme erfolgen, LOINC (für die Kodierung der Beobachtung) und SNOMED-CT (für die Kodierung des Beobachtungsergebnisses, falls es sich nicht um einen Messwert handelt), sind bevorzugt zu verwenden. Codierungsregeln für diese beiden Referenzterminologien sind unter \"Practical Guidance on Uses of SNOMED CT and LOINC\" (https://confluence.ihtsdotools.org/display/DOCLOINC/5.2+Practical+Guidance+on+Uses+of+SNOMED+CT+and+LOINC)\r\n hinterlegt.",
+        "definition": "Jede Beobachtung, die als Bestandteil einer pathologisch-anatomischen Untersuchung im Befundbericht erwähnt ist, kann zusätzlich zur textuellen Erwähnung auch semantisch annotiert, d.h. mit einem Code und einem Value in den Bericht maschinenlesbar aufgenommen werden. Die semantische Annotation kann durch beliebige Terminologiesysteme erfolgen, LOINC (für die Kodierung der Beobachtung) und SNOMED-CT (für die Kodierung des Beobachtungsergebnisses, falls es sich nicht um einen Messwert handelt), sind bevorzugt zu verwenden. Codierungsregeln für diese beiden Referenzterminologien sind unter \"Practical Guidance on Uses of SNOMED CT and LOINC\" (https://confluence.ihtsdotools.org/display/DOCLOINC/5.2+Practical+Guidance+on+Uses+of+SNOMED+CT+and+LOINC) hinterlegt.",
         "min": 0,
         "max": "*",
         "type": [
@@ -892,6 +909,20 @@
         "isSummary": true
       },
       {
+        "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.ZugehoerigesDokument",
+        "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.ZugehoerigesDokument",
+        "short": "Ein der zusätzlichen, spezifizierten Beobachtung zugehöriges Dokument, z.B. ein molekularpathologischer Befundbericht, der mittels OMICS Ressourcen aus dem Untersuchungsmaterial der Pathologisch-anatomischen Begutachtung erstellt wurde.",
+        "definition": "Ein der zusätzlichen, spezifizierten Beobachtung zugehöriges Dokument, z.B. ein molekularpathologischer Befundbericht, der mittels OMICS Ressourcen aus dem Untersuchungsmaterial der Pathologisch-anatomischen Begutachtung erstellt wurde.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": true
+      },
+      {
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung",
         "short": "Die Diagnostische Schlussfolgerungssektion enthält die Diagnose(n) an allen Materialien / Proben, die zu einem Fall eingesandt wurden",
@@ -922,7 +953,7 @@
         "id": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.Einzelbeobachtung",
         "path": "LogicalModelPathologieBefundbericht.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.Einzelbeobachtung",
         "short": "Semantisch annotierte atomare Einheit einer generischen pathologisch-anatomische Beobachtung",
-        "definition": "Jede Beobachtung, die als Bestandteil einer pathologisch-anatomischen Untersuchung im Befundbericht erwähnt ist, kann zusätzlich zur textuellen Erwähnung auch semantisch annotiert, d.h. mit einem Code und einem Value in den Bericht maschinenlesbar aufgenommen werden. Die semantische Annotation kann durch beliebige Terminologiesysteme erfolgen, LOINC (für die Kodierung der Beobachtung) und SNOMED-CT (für die Kodierung des Beobachtungsergebnisses, falls es sich nicht um einen Messwert handelt), sind bevorzugt zu verwenden. Codierungsregeln für diese beiden Referenzterminologien sind unter \"Practical Guidance on Uses of SNOMED CT and LOINC\" (https://confluence.ihtsdotools.org/display/DOCLOINC/5.2+Practical+Guidance+on+Uses+of+SNOMED+CT+and+LOINC)\r\n hinterlegt.",
+        "definition": "Jede Beobachtung, die als Bestandteil einer pathologisch-anatomischen Untersuchung im Befundbericht erwähnt ist, kann zusätzlich zur textuellen Erwähnung auch semantisch annotiert, d.h. mit einem Code und einem Value in den Bericht maschinenlesbar aufgenommen werden. Die semantische Annotation kann durch beliebige Terminologiesysteme erfolgen, LOINC (für die Kodierung der Beobachtung) und SNOMED-CT (für die Kodierung des Beobachtungsergebnisses, falls es sich nicht um einen Messwert handelt), sind bevorzugt zu verwenden. Codierungsregeln für diese beiden Referenzterminologien sind unter \"Practical Guidance on Uses of SNOMED CT and LOINC\" (https://confluence.ihtsdotools.org/display/DOCLOINC/5.2+Practical+Guidance+on+Uses+of+SNOMED+CT+and+LOINC) hinterlegt.",
         "min": 0,
         "max": "*",
         "type": [

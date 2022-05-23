@@ -170,6 +170,30 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/Additive"
+        },
+        "name": "Additive",
+        "description": "Additive bei der Probenbearbeitung (Fixationsmittel, Einbettungs- und Eindeckungsmedien, Färbungen)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Container"
+        },
+        "name": "Container",
+        "description": "tbd",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Faerbesubstanzen"
+        },
+        "name": "Faerbesubstanzen",
+        "description": "tbd",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/SectionTypes"
         },
         "name": "SectionTypes",
@@ -351,6 +375,92 @@
         "name": "SpecimenExample",
         "description": "Example for SD_MII_Patho_Specimen",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/example-mii-molgen-molekulargenetischer-befundbericht-3"
+        },
+        "name": "example-mii-molgen-molekulargenetischer-befundbericht-3",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-molgen-variante-3"
+        },
+        "name": "example-mii-molgen-variante-3",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Composition/example-mii-patho-Composition"
+        },
+        "name": "Composition Example",
+        "description": "Example for a SD_MII_Patho_Composition",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-composition"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-patho-DiagnosticConclusion-Condition"
+        },
+        "name": "DiagnosticConclusion - Condition",
+        "description": "Example for a diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-patho-DiagnosticConclusion-Grading"
+        },
+        "name": "DiagnosticConclusion - Grading",
+        "description": "Example for diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-patho-DiagnosticConclusionGrouper"
+        },
+        "name": "Diagnostic Conclusion Grouper Example",
+        "description": "Example for a diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-diagnostic-conclusion-grouper"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/example-mii-patho-LungeOLStanze"
+        },
+        "name": "LungeOLStanze",
+        "description": "tbd",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-patho-MacroGrouperLung"
+        },
+        "name": "MacroGrouperLung",
+        "description": "tbd",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-macroscopic-grouper"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/example-mii-patho-report"
+        },
+        "name": "example-mii-patho-report",
+        "description": "tbd",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-report"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-patho-stanzengroesse-dim1"
+        },
+        "name": "Macroscopic Observation - Stanzengroesse Dim 1",
+        "description": "tbd",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-mii-patho-stanzengroesse-dim2"
+        },
+        "name": "Macroscopic Observation - Stanzengroesse Dim 2",
+        "description": "tbd",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
       }
     ],
     "page": {
