@@ -149,6 +149,9 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 //   * party 1.. MS
 //   * party only Reference(Practitioner or Organization)
 * custodian 1.. MS
+* relatesTo MS 
+  * code MS
+  * targetReference MS
 * date MS
 * subject 1.. MS
 * subject only Reference(Patient)
@@ -158,8 +161,9 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this.code.coding"
 * section ^slicing.rules = #open
-* section contains diagnostic-report 1..1 MS
-* section[diagnostic-report]
+* section contains patho-diagnostic-report 1..1 MS
+          and additional-diagnostic-report 0..* MS
+* section[patho-diagnostic-report]
   * code 1.. MS
     * coding 1.. MS
     * coding ^patternCoding = $LOINC#60567-5 "Comprehensive pathology report panel"
@@ -167,7 +171,15 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * entry only Reference (SD_MII_Patho_Report)
   * text 0..0
   * title 1.. MS 
-  * title ^fixedString = "Diagnostic Report"
+  * title ^fixedString = "Pathology Diagnostic Report"
+* section[additional-diagnostic-report]
+  * code 1.. MS
+    * coding 1.. MS
+    * coding from $LOINC (required)
+  * entry 1..1 MS
+  * text 0..0
+  * title 1.. MS
+
 
 //--------------------------------
 // Example
@@ -183,15 +195,15 @@ Description: "Example for SD_MII_Patho_Report"
 // * identifier[=].type = $LOINC#11526-1
 * basedOn = Reference(PathologyRequestExample)
 * status = #final
-* code.coding = $LOINC#60568-3 "Pathology Synoptic report"
+* code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
 * subject.reference = "Patient/12345"
 * performer.reference = "Practitioner/2346545"
 * specimen.reference = "Specimen/87689"
 * encounter.reference = "Encounter/12345"
-* result[+] = Reference(MacroGrouperA)
-* result[+] = Reference(MacroGrouperB)
-* result[+] = Reference(MicroGrouperA)
-* result[+] = Reference(DiagnosticConclusionGrouper)
+* result[macroscopic-grouper] = Reference(MacroGrouperA)
+* result[macroscopic-grouper] = Reference(MacroGrouperB)
+* result[microscopic-grouper] = Reference(MicroGrouperA)
+* result[diagnostic-conclusion] = Reference(DiagnosticConclusionGrouper)
 * conclusion = "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2"
 * conclusionCode = $SCT#399490008  
 * effectiveDateTime = "2021-06-01"
@@ -211,10 +223,201 @@ Description: "Example for a SD_MII_Patho_Composition"
 * author[+].reference = "Practitioner/45756"
 * title = "Pathologie Befundbericht"
 * custodian.reference = "Organization/12345"
-* attester[+].mode = #legal
-* attester[=].party.reference = "Practitioner/765879"
+* attester[legal].mode = #legal
+* attester[legal].party.reference = "Practitioner/765879"
 * event.period.start = "2021-06-05"
 * event.period.end = "2021-06-08"
-* section[+].title = "Diagnostic Report"
-* section[=].code = $LOINC#60567-5 "Comprehensive pathology report panel"
-* section[=].entry = Reference(SD_MII_Patho_ReportExample)
+* section[patho-diagnostic-report].title = "Pathology Diagnostic Report"
+* section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"
+* section[patho-diagnostic-report].entry = Reference(SD_MII_Patho_ReportExample)
+
+//---------------------------------------------
+// Patho-Omics Examples
+//---------------------------------------------
+Instance: example-mii-patho-stanzengroesse-dim1
+InstanceOf: SD_MII_Patho_Finding
+Usage: #example
+Title: "Macroscopic Observation - Stanzengroesse Dim 1"
+Description: "tbd"
+* status = #final
+* category[laboratory-category].coding = $obs-category#laboratory
+* category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
+* code.coding = $SCT#371476002 " Specimen size, dimension 1 (observable entity)"
+* valueQuantity.value = 5.3
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $UCUM 
+* valueQuantity.code = #cm
+* derivedFrom[+] = Reference(AttachedImage)
+* specimen = Reference(example-mii-patho-LungeOLStanze)
+
+Instance: example-mii-patho-stanzengroesse-dim2
+InstanceOf: SD_MII_Patho_Finding
+Usage: #example
+Title: "Macroscopic Observation - Stanzengroesse Dim 2"
+Description: "tbd"
+* status = #final
+* category[laboratory-category].coding = $obs-category#laboratory
+* category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
+* code.coding = $SCT#371477006 " Specimen size, dimension 2 (observable entity)"
+* valueQuantity.value = 0.2
+* valueQuantity.unit = "cm"
+* valueQuantity.system = $UCUM 
+* valueQuantity.code = #cm
+* derivedFrom[+] = Reference(AttachedImage)
+* specimen = Reference(example-mii-patho-LungeOLStanze)
+
+Instance: example-mii-patho-LungeOLStanze
+InstanceOf: SD_MII_Patho_Specimen
+Usage: #example
+Title: "LungeOLStanze"
+Description: "tbd"
+* status = #available
+* identifier
+  * type = $v2-0203#FILL "Filler Order Number"
+  * value = "E12345_21-A"
+* type = $SCT#122610009 "Specimen from lung obtained by biopsy (specimen)"
+* subject.reference = "Patient/12345"
+* collection
+  * collector.reference = "Practitioner/36765"
+  * collectedDateTime = "2021-01-29T06:15:00Z"
+  * method = $SCT#78603008 "Biopsy of lung (procedure)"
+  * bodySite = $SCT#245521007 "Structure of segment of upper lobe of left lung (body structure)"
+
+Instance: example-mii-patho-MacroGrouperLung
+InstanceOf: SD_MII_Patho_Macroscopic_Grouper
+Usage: #example
+Title: "MacroGrouperLung"
+Description: "tbd"
+* status = #final
+* category[laboratory-category].coding = $obs-category#laboratory
+* code.coding = $LOINC#22634-0 "Pathology report gross observation"
+* hasMember[+] = Reference(example-mii-patho-stanzengroesse-dim1)
+* hasMember[+] = Reference(example-mii-patho-stanzengroesse-dim2)
+* specimen = Reference(example-mii-patho-LungeOLStanze)
+
+Instance: example-mii-patho-DiagnosticConclusion-Condition
+InstanceOf: SD_MII_Patho_Finding
+Usage: #example
+Title: "DiagnosticConclusion - Condition"
+Description: "Example for a diagnostic conclusion"
+* status = #final
+* category[laboratory-category].coding = $obs-category#laboratory
+* category[section-type].coding = $LOINC#22637-3 "Pathology report diagnosis"
+* code = $LOINC#59847-4 "Histology and Behavior ICD-O-3 Cancer"
+* valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom (azinär)"
+* specimen = Reference(example-mii-patho-LungeOLStanze)
+
+Instance: example-mii-patho-DiagnosticConclusion-Grading
+InstanceOf: SD_MII_Patho_Finding
+Usage: #example
+Title: "DiagnosticConclusion - Grading"
+Description: "Example for diagnostic conclusion"
+* status = #final
+* category[laboratory-category].coding = $obs-category#laboratory
+* category[section-type].coding = $LOINC#22637-3 "Pathology report diagnosis"
+* code = $LOINC#21858-6 "Grade Cancer"
+* valueCodeableConcept = $LOINC#LA3992-0 "Grade II"
+* specimen = Reference(example-mii-patho-LungeOLStanze)
+
+Instance: example-mii-patho-DiagnosticConclusionGrouper
+InstanceOf: SD_MII_Patho_Diagnostic_Conclusion_Grouper
+Usage: #example
+Title: "Diagnostic Conclusion Grouper Example"
+Description: "Example for a diagnostic conclusion"
+* status = #final
+* code.coding = $LOINC#22637-3 "Pathology report diagnosis"
+* derivedFrom[+] = Reference(example-mii-patho-MacroGrouperLung)
+// * derivedFrom[+] = Reference(MicroGrouperB)
+* hasMember[+] = Reference(example-mii-patho-DiagnosticConclusion-Condition)
+* hasMember[+] = Reference(example-mii-patho-DiagnosticConclusion-Grading)
+
+Instance: example-mii-patho-report
+InstanceOf: SD_MII_Patho_Report
+Usage: #example
+Title: "example-mii-patho-report"
+Description: "tbd"
+* identifier[+].value = "H2021.14456"
+* identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+* identifier[=].type = $v2-0203#ACSN "Accession ID"
+// * identifier[=].type = $LOINC#11526-1
+* basedOn = Reference(PathologyRequestExample)
+* status = #final
+* code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
+* subject.reference = "Patient/12345"
+* performer.reference = "Practitioner/2346545"
+* specimen = Reference(example-mii-patho-LungeOLStanze)
+* encounter.reference = "Encounter/12345"
+* result[macroscopic-grouper] = Reference(example-mii-patho-MacroGrouperLung)
+//* result[macroscopic-grouper] = Reference(MacroGrouperB)
+//* result[microscopic-grouper] = Reference(MicroGrouperA)
+* result[diagnostic-conclusion] = Reference(example-mii-patho-DiagnosticConclusionGrouper)
+* conclusion = "Ausgedehnte Infiltrate eines acinär, lipidisch und fokal papillär wachsenden, mäßig differenzierten pulmonalen Adenocarcinoms in Stanzen vom linken Oberlappen im Bereich einer zellarmen Narbe."
+* conclusionCode = $SCT#1078901000119100 "Primary adenocarcinoma of upper lobe of left lung (disorder)"  
+* effectiveDateTime = "2021-05-28"
+* issued = "2021-05-20T13:28:17.239+02:00"
+* media.link = Reference(ImageExample)
+* media.comment = "HE-Schnitt einer Lungenstanze, infiltriert durch Karzinomverbände, fotodokumentiert"
+
+Instance: example-mii-molgen-variante-3
+InstanceOf: Observation
+Usage: #example
+* meta.profile[0] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/variante"
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant"
+* code = $LOINC#69548-6 "Genetic variant assessment"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* component[0].code = $LOINC#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = http://www.genenames.org/geneId#HGNC:3236 "EGFR"
+* component[+].code = $LOINC#47999-8 "DNA region name [Identifier]"
+* component[=].valueString = "Exon #19"
+* component[+].code = $LOINC#48019-4 "DNA change type"
+* component[=].valueCodeableConcept = http://sequenceontology.org#SO:1000008 "point_mutation"
+* basedOn = Reference(ServiceRequest/example-mii-molgen-anforderung-3)
+* status = #final
+* subject = Reference(Patient/example-mii-molgen-patient)
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
+* method = $LOINC#LA26419-4 "qPCR (real-time PCR)"
+* specimen = Reference(example-mii-molgen-specimen)
+* device = Reference(Device/example-mii-molgen-device-qPCR-kit)
+* derivedFrom = Reference(Observation/example-mii-molgen-untersuchte-region-3)
+
+Instance: example-mii-molgen-molekulargenetischer-befundbericht-3
+InstanceOf: DiagnosticReport
+Usage: #example
+* meta.profile[0] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-molgen/StructureDefinition/molekulargenetischer-befundbericht"
+* meta.profile[+] = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
+* basedOn = Reference(ServiceRequest/example-mii-molgen-anforderung-3)
+* status = #final
+* code = $LOINC#51969-4 "Genetic analysis report"
+* subject = Reference(Patient/example-mii-molgen-patient)
+* performer = Reference(Practitioner/example-mii-molgen-practitioner-lab)
+* specimen = Reference(example-mii-patho-LungeOLStanze)
+* result[0] = Reference(Observation/example-mii-molgen-gruppierung-beobachtungen-3)
+* result[+] = Reference(Observation/example-mii-molgen-diagnostische-implikation-3)
+* result[+] = Reference(Observation/example-mii-molgen-therapeutische-implikation-3)
+* result[+] = Reference(Observation/example-mii-molgen-variante-3)
+* result[+] = Reference(Observation/example-mii-molgen-untersuchte-region-3)
+* conclusion = "EGFR Variante mit Exon 19 Deletion liegt vor. Therapieoption mit Tyrosinkinase Inhibitoren."
+
+Instance: example-mii-patho-Composition
+InstanceOf: SD_MII_Patho_Composition
+Usage: #example
+Title: "Composition Example"
+Description: "Example for a SD_MII_Patho_Composition"
+* status = #final
+* type = $LOINC#11526-1 "Pathology study"
+* subject.reference = "Patient/34545"
+* date = "2021-06-08"
+* author[+].reference = "Practitioner/45756"
+* title = "Pathologie Befundbericht"
+* custodian.reference = "Organization/12345"
+* attester[legal].mode = #legal
+* attester[legal].party.reference = "Practitioner/765879"
+* event.period.start = "2021-05-20"
+* event.period.end = "2021-05-28"
+* section[patho-diagnostic-report].title = "Pathology Diagnostic Report"
+* section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"
+* section[patho-diagnostic-report].entry = Reference(example-mii-patho-report) 
+* section[additional-diagnostic-report].title = "Genetic Diagnostic Report"
+* section[additional-diagnostic-report].code = $LOINC#51969-4 "Genetic analysis report"
+* section[additional-diagnostic-report].entry = Reference(example-mii-molgen-molekulargenetischer-befundbericht-3)

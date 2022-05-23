@@ -67,8 +67,8 @@ Description: "tbd"
 ValueSet: Additive
 Id: Additive
 Title: "Additive"
-* insert RuleSet1 
 Description: "Additive bei der Probenbearbeitung (Fixationsmittel, Einbettungs- und Eindeckungsmedien, Färbungen)"
+* insert RuleSet1 
 * include codes from system $SCT where concept is-a #105590001
 * $SCT#434746001 "Specimen vial (physical object)"
 * $SCT#434464009 "Tissue cassette (physical object)"

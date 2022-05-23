@@ -214,6 +214,31 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.relatesTo",
+        "path": "Composition.relatesTo",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.code",
+        "path": "Composition.relatesTo.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.relatesTo.targetReference",
+        "path": "Composition.relatesTo.targetReference",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Composition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Composition.event",
         "path": "Composition.event",
         "min": 1,
@@ -235,28 +260,28 @@
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-report",
+        "id": "Composition.section:patho-diagnostic-report",
         "path": "Composition.section",
-        "sliceName": "diagnostic-report",
+        "sliceName": "patho-diagnostic-report",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-report.title",
+        "id": "Composition.section:patho-diagnostic-report.title",
         "path": "Composition.section.title",
         "min": 1,
-        "fixedString": "Diagnostic Report",
+        "fixedString": "Pathology Diagnostic Report",
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-report.code",
+        "id": "Composition.section:patho-diagnostic-report.code",
         "path": "Composition.section.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-report.code.coding",
+        "id": "Composition.section:patho-diagnostic-report.code.coding",
         "path": "Composition.section.code.coding",
         "min": 1,
         "patternCoding": {
@@ -267,12 +292,12 @@
         "mustSupport": true
       },
       {
-        "id": "Composition.section:diagnostic-report.text",
+        "id": "Composition.section:patho-diagnostic-report.text",
         "path": "Composition.section.text",
         "max": "0"
       },
       {
-        "id": "Composition.section:diagnostic-report.entry",
+        "id": "Composition.section:patho-diagnostic-report.entry",
         "path": "Composition.section.entry",
         "min": 1,
         "max": "1",
@@ -284,6 +309,48 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-diagnostic-report",
+        "path": "Composition.section",
+        "sliceName": "additional-diagnostic-report",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-diagnostic-report.title",
+        "path": "Composition.section.title",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-diagnostic-report.code",
+        "path": "Composition.section.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:additional-diagnostic-report.code.coding",
+        "path": "Composition.section.code.coding",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://loinc.org"
+        }
+      },
+      {
+        "id": "Composition.section:additional-diagnostic-report.text",
+        "path": "Composition.section.text",
+        "max": "0"
+      },
+      {
+        "id": "Composition.section:additional-diagnostic-report.entry",
+        "path": "Composition.section.entry",
+        "min": 1,
+        "max": "1",
         "mustSupport": true
       }
     ]

@@ -1,6 +1,6 @@
 {
   "resourceType": "Composition",
-  "id": "CompositionExample",
+  "id": "example-mii-patho-Composition",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-composition"
@@ -28,7 +28,24 @@
       },
       "entry": [
         {
-          "reference": "SD_MII_Patho_ReportExample"
+          "reference": "DiagnosticReport/example-mii-patho-report"
+        }
+      ]
+    },
+    {
+      "title": "Genetic Diagnostic Report",
+      "code": {
+        "coding": [
+          {
+            "code": "51969-4",
+            "system": "http://loinc.org",
+            "display": "Genetic analysis report"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "reference": "DiagnosticReport/example-mii-molgen-molekulargenetischer-befundbericht-3"
         }
       ]
     }
@@ -59,8 +76,8 @@
   "event": [
     {
       "period": {
-        "start": "2021-06-05",
-        "end": "2021-06-08"
+        "start": "2021-05-20",
+        "end": "2021-05-28"
       }
     }
   ]
