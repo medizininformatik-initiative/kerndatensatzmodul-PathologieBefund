@@ -64,7 +64,7 @@ Description: "Abstract Observation to define common features of a main pathology
 // Components fuer die Erfassung der Ergebnisse
 * component 0.. 
   * code MS
-  * value[x] only string or Quantity or CodeableConcept
+  * value[x] only string or Quantity or CodeableConcept or Ratio // was hat MolGen hier? Stimmt es ueberein? 
   * dataAbsentReason MS
 
 //-------------------------------------------
