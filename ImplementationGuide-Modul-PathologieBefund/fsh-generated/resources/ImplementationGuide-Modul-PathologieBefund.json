@@ -74,9 +74,9 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/sd-mii-patho-base-pathology-observation"
+          "reference": "StructureDefinition/sd-mii-patho-base-observation"
         },
-        "name": "SD MII Patho Base Pathology Observation",
+        "name": "SD MII Patho Base Observation",
         "description": "Abstract Observation to define common features of a main pathology observation",
         "exampleBoolean": false
       },

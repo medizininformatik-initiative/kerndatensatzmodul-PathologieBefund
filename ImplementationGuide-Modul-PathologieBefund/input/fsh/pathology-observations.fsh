@@ -4,8 +4,8 @@
 // Entweder neue Base Observation profilieren oder wenn passend Laboruntersuchung aus Modul Labor als Base Observation nehmen
 Profile: SD_MII_Patho_Base_Observation
 Parent: Observation
-Id: sd-mii-patho-base-pathology-observation
-Title: "SD MII Patho Base Pathology Observation"
+Id: sd-mii-patho-base-observation
+Title: "SD MII Patho Base Observation"
 Description: "Abstract Observation to define common features of a main pathology observation"
 * insert RuleSet1
 * ^abstract = true
