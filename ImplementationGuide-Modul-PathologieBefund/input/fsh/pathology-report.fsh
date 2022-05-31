@@ -20,6 +20,7 @@ Description: "Defines the general pathology report structure for German hospital
   * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
   * value 1.. MS
   * system 1.. MS
+  * extension contains $fhir-original-text named original-text 0..1 MS
 // Versionsnummer
 * meta MS
 * meta.versionId MS

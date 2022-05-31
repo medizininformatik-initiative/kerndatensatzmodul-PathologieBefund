@@ -25,6 +25,10 @@
       }
     ]
   },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">The <span id=\"tissueLengthA\">tissue length of Specimen A</span></div>"
+  },
   "status": "final",
   "valueString": "Specimen A: Prostataseitenlappen rechts, lateral 1.2cm",
   "hasMember": [

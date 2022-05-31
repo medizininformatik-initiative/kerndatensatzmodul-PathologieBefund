@@ -25,8 +25,13 @@
       ]
     }
   ],
-  "status": "final",
   "code": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+        "valueString": "#tissueLengthA"
+      }
+    ],
     "coding": [
       {
         "code": "44619-5",
@@ -35,6 +40,7 @@
       }
     ]
   },
+  "status": "final",
   "valueQuantity": {
     "value": 1.2,
     "unit": "cm",

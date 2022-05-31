@@ -17,3 +17,4 @@ Alias: $mii-bio-additive = https://www.medizininformatik-initiative.de/fhir/ext/
 // Extensions
 Alias: $bio-entnahmeprozedur = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Entnahmeprozedur
 Alias: $bio-temperaturbedingungen = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen
+Alias: $fhir-original-text = http://hl7.org/fhir/StructureDefinition/originalText
