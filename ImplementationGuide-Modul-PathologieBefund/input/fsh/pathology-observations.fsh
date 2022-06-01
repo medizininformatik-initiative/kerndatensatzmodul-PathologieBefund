@@ -261,7 +261,7 @@ InstanceOf: SD_MII_Patho_Macroscopic_Grouper
 Usage: #example
 Title: "MacroGrouperA"
 Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
-* text.status = #generated
+* text.status = #additional
 * text.div = "
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
   <div id=\"macro-a-title\"><b>Makroskopie A</b></div>
