@@ -50,6 +50,12 @@
       ]
     }
   ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+      "valueString": "2"
+    }
+  ],
   "status": "final",
   "type": {
     "coding": [

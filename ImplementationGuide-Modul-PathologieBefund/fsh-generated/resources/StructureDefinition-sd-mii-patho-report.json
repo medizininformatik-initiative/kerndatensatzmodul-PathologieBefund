@@ -96,6 +96,22 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.identifier:Set-ID.extension:original-text",
+        "path": "DiagnosticReport.identifier.extension",
+        "sliceName": "original-text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/originalText"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.identifier:Set-ID.type",
         "path": "DiagnosticReport.identifier.type",
         "min": 1,
