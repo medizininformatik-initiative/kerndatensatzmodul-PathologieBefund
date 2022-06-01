@@ -248,11 +248,12 @@ Description: "Tissue length of Specimen A (1st punch)"
 * category[laboratory-category].coding = $obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
 * code.coding = $LOINC#44619-5 "Length of tissue core(s)"
-* code.extension[original-text].valueString = "#tissueLengthA"
+* code.extension[original-text].valueString = "#macro-a-tissue-length-key"
 * valueQuantity.value = 1.2
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM 
 * valueQuantity.code = #cm
+* valueQuantity.extension[original-text].valueString = "#macro-a-tissue-length-value"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroGrouperA
@@ -261,10 +262,23 @@ Usage: #example
 Title: "MacroGrouperA"
 Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
 * text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The <span id=\"tissueLengthA\">tissue length of Specimen A</span></div>"
+* text.div = "
+<div xmlns=\"http://www.w3.org/1999/xhtml\">
+  <div id=\"macro-a-title\"><b>Makroskopie A</b></div>
+  <table>
+    <tr id=\"macro-a-biosy-site\">
+      <td id=\"macro-a-biosy-site-key\">Entnahmeort lt. klin. Angabe</td>
+      <td id=\"macro-a-biosy-site-value\">Prostataseitenlappen rechts, lateral</td>
+    </tr>
+    <tr id=\"macro-a-tissue-length\">
+      <td id=\"macro-a-tissue-length-key\">Stanzzylinderlänge</td>
+      <td id=\"macro-a-tissue-length-value\">1,2 cm</td>
+    </tr>
+  </table>
+</div>"
 * status = #final
 * code.coding = $LOINC#22634-0 "Pathology report gross observation"
-* valueString = "Specimen A: Prostataseitenlappen rechts, lateral 1.2cm"
+* valueString = "Makroskopie A"
 * hasMember[+] = Reference(MacroObsBiopsySiteA)
 * hasMember[+] = Reference(MacroObsTissueLengthA)
 
@@ -395,263 +409,5 @@ Description: "Example for a diagnostic conclusion"
 * hasMember[+] = Reference(DiagnosticConclusion2)
 * hasMember[+] = Reference(DiagnosticConclusion3)
 
-//-------------------------------------------
-// German Examples
-//-------------------------------------------
-/*
-Instance: DE_PathologyReportProstatastanzen
-InstanceOf: SD_MII_Patho_Report
-Usage: #example
-Title: "DE_PathologyReportProstatastanzen"
-Description: "tbd"
-* text.status = #additional
-* text.div = "<div xmlns="http://www.w3.org/1999/xhtml">
-            <p>
-                <b>
-                    Pathologisch-anatomische Begutachtung
-                </b>
-            </p>
-            <p>
-                <b>
-                    id
-                </b>
-                : E12345_21.1
-            </p>
-            <p>
-                <b>
-                    Eingangsnummer
-                </b>
-                : E12345_21
-            </p>
-            <p>
-                <b>
-                    status
-                </b>
-                : final
-            </p>
-            <p>
-                <b>
-                    Patient
-                </b>
-                :
-                <a>
-                    Patient/12345
-                </a>
-            </p>
-            <p>
-                <b>
-                    effective
-                </b>
-                : 2021-06-01
-            </p>
-            <p>
-                <b>
-                    issued
-                </b>
-                : 2021-06-01
-            </p>
-            <p>
-                <b>
-                    performer
-                </b>
-                :
-                <a>
-                    Practitioner/2346545
-                </a>
-            </p>
-            <p>
-                <b>
-                    Technische Bearbeitung
-                </b>
-                :
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            <b/>
-                        </th>
-                        <th>
-                            <b>
-                                Entnahmeart
-                            </b>
-                        </th>
-                        <th>
-                            <b>
-                                Bearbeitungsprozedur
-                            </b>
-                        </th>
-                        <th>
-                            <b>
-                                Fixation
-                            </b>
-                        </th>
-                        <th>
-                            <b>
-                                Färbung
-                            </b>
-                        </th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>
-                        A
-                    </td>
-                    <td>
-                        transrektale Stanzbiopsie
-                    </td>
-                    <td>
-                        Einbetten, schneiden, färben
-                    </td>
-                    <td>
-                        4% gepuffertes Formalin
-                    </td>
-                    <td>
-                        HE
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        B
-                    </td>
-                    <td>
-                        transrektale Stanzbiopsie
-                    </td>
-                    <td>
-                        Einbetten, schneiden, färben
-                    </td>
-                    <td>
-                        4% gepuffertes Formalin
-                    </td>
-                    <td>
-                        HE
-                    </td>
-                </tr>
-            </table>
-            <p>
-                <b>
-                    Makroskopie
-                </b>
-            </p>
-            <table>
-                <tr>
-                    <th>
-                        <b/>
-                    </th>
-                    <th>
-                        <b>
-                            Entnahmeort
-                        </b>
-                    </th>
-                    <th>
-                        <b>
-                            Stanzzylinderlänge
-                        </b>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        A
-                    </td>
-                    <td>
-                        Prostataseitenlappen rechts, lateral
-                    </td>
-                    <td>
-                        1,2 cm
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        B
-                    </td>
-                    <td>
-                        Prostataseitenlappen rechts, apikal
-                    </td>
-                    <td>
-                        1,5 cm
-                    </td>
-                </tr>
-            </table>
-            <p>
-                <b>
-                    Mikroskopie
-                </b>
-            </p>
-            <p>
-                A. Verbände eines kleintubulär wachsenden epithelialen Tumors (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben 
-                und ca. 30% der Schnittfläche des Zylinders (4 mm der Zylinderlänge) einnehmen.
-            </p>
-            <p>
-                B. Verbände eines kleintubulär  und kribriform wachsenden epithelialen Tumors (Gleason-Muster 3 und 4 (10%)), die sich zwischen ortständige Drüsen schieben 
-                und ca. 70% der Schnittfläche des Zylinders (10 mm der Zylinderlänge) einnehmen. Herdförmige Infiltration von Nervenscheiden und herdförmig 
-                kapselüberschreitendes Wachstum mit Infiltration des periprostatischen Fettgewebes.
-            </p>
-            <p>
-                <b>
-                    Zusammenfassende Beurteilung
-                </b>
-            </p>
-            <p>
-                Mäßig differenziertes azinäres Adenokarzinom der Prostata.
-                <table>
-                    <tr>
-                        <td>
-                            ICD-O-3, 2.Rev.:
-                        </td>
-                        <td>
-                            M8140/3
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Gleason-Score:
-                        </td>
-                        <td>
-                            3+4=7a
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Gradinggruppe nach ISUP:
-                        </td>
-                        <td>
-                            II
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Anzahl positiver Stanzen:
-                        </td>
-                        <td>
-                            2
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Prozentualer Tumoranteil:
-                        </td>
-                        <td>
-                            50 %
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Gesamtlänge der Stanzzylinder:
-                        </td>
-                        <td>
-                            3,7 cm
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Lokalisation der extraprostatischen Ausbreitung:
-                        </td>
-                        <td>
-                            apical rechts
-                        </td>
-                    </tr>
-                </table>
-            </p>
-        </div>"
 
-        */
+

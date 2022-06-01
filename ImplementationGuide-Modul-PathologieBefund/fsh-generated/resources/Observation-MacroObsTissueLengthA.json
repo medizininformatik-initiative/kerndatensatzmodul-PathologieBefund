@@ -29,7 +29,7 @@
     "extension": [
       {
         "url": "http://hl7.org/fhir/StructureDefinition/originalText",
-        "valueString": "#tissueLengthA"
+        "valueString": "#macro-a-tissue-length-key"
       }
     ],
     "coding": [
@@ -40,13 +40,19 @@
       }
     ]
   },
-  "status": "final",
   "valueQuantity": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+        "valueString": "#macro-a-tissue-length-value"
+      }
+    ],
     "value": 1.2,
     "unit": "cm",
     "system": "http://unitsofmeasure.org",
     "code": "cm"
   },
+  "status": "final",
   "derivedFrom": [
     {
       "reference": "AttachedImage"
