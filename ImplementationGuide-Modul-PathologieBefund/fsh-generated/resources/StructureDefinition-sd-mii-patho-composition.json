@@ -53,6 +53,36 @@
   "differential": {
     "element": [
       {
+        "id": "Composition.extension",
+        "path": "Composition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Composition.extension:document-version",
+        "path": "Composition.extension",
+        "sliceName": "document-version",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Composition.status",
         "path": "Composition.status",
         "mustSupport": true

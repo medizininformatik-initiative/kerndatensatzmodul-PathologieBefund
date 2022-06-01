@@ -20,7 +20,8 @@ Description: "Defines the general pathology report structure for German hospital
   * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
   * value 1.. MS
   * system 1.. MS
-// Versionsnummer
+  * extension contains $fhir-original-text named original-text 0..1 MS
+// Versionsnummer der Ressourceninstanz - Entpricht nicht der Version des Befundes!!
 * meta MS
 * meta.versionId MS
 // Weitere MS Elemente aus Metadata
@@ -45,7 +46,6 @@ Description: "Defines the general pathology report structure for German hospital
     * code 1.. MS
     * code ^fixedCode = #60568-3
     * display MS  
-
 // Referenz zu Patient:in
 * subject 1.. MS
 * subject only Reference(Patient)
@@ -65,6 +65,7 @@ Description: "Defines the general pathology report structure for German hospital
 * result ^slicing.discriminator[+].type = #value
 * result ^slicing.discriminator[=].path = "resolve().code"
 * result ^slicing.rules = #closed
+* result ^slicing.ordered = true
 * result contains 
       intraoperative-grouper 0..* MS
       and macroscopic-grouper 0..* MS
@@ -109,6 +110,7 @@ Id: sd-mii-patho-composition
 Title: "SD MII Patho Composition"
 Description: "Composition als Template für Pathologiebefundbericht als FHIR Dokument"
 * insert RuleSet1
+* extension contains $fhir-version-number named document-version 0..1 MS
 * status MS
 * type MS
   * ^short = "Type fixed to 'Pathology study'"
@@ -189,10 +191,47 @@ InstanceOf: SD_MII_Patho_Report
 Usage: #example
 Title: "Pathology Report Example"
 Description: "Example for SD_MII_Patho_Report"
-* identifier[+].value = "E21.12345"
-* identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-* identifier[=].type = $v2-0203#ACSN "Accession ID"
-// * identifier[=].type = $LOINC#11526-1
+* text.status = #additional
+* text.div = "
+<div xmlns=\"http://www.w3.org/1999/xhtml\">
+  <div id=\"befund-titel\">
+    <b>Pathologisch-anatomisch Begutachtung</b>
+  </div> 
+  <table>
+    <tr id=\"befund-identifikator\">
+      <td>id</td>
+      <td>E12345_21.1</td>
+    </tr>
+    <tr id=\"befund-eingangsnummer\">
+      <td>Eingangsnummer</td>
+      <td>E12345_21</td>
+    </tr>
+    <tr id=\"befund-status\">
+      <td>Status</td>
+      <td>final</td>
+    </tr>
+    <tr id=\"befund-patient\">
+      <td>Patient</td>
+      <td>Patient/12345</td>
+    </tr>
+    <tr id=\"befund-effective\">
+      <td>Effective</td>
+      <td>2021-06-01</td>
+    </tr>
+    <tr id=\"befund-issued\">
+      <td>Issued</td>
+      <td>2021-06-01</td>
+    </tr>
+    <tr id=\"befund-performer\">
+      <td>Performer</td>
+      <td>Practitioner/2346545</td>
+    </tr>
+  </table>
+</div>"
+* identifier[Set-ID].value = "E21.12345"
+* identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+* identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
+* identifier[Set-ID].extension[original-text].valueString = "#befund-eingangsnummer"
 * basedOn = Reference(PathologyRequestExample)
 * status = #final
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
@@ -216,6 +255,7 @@ InstanceOf: SD_MII_Patho_Composition
 Usage: #example
 Title: "Composition Example"
 Description: "Example for a SD_MII_Patho_Composition"
+* extension[document-version].valueString = "1"
 * status = #final
 * type = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"
@@ -404,6 +444,7 @@ InstanceOf: SD_MII_Patho_Composition
 Usage: #example
 Title: "Composition Example"
 Description: "Example for a SD_MII_Patho_Composition"
+* extension[document-version].valueString = "2"
 * status = #final
 * type = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"

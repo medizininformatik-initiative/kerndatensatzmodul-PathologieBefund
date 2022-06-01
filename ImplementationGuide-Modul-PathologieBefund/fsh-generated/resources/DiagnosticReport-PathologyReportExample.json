@@ -17,6 +17,12 @@
   },
   "identifier": [
     {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+          "valueString": "#befund-eingangsnummer"
+        }
+      ],
       "value": "E21.12345",
       "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht",
       "type": {
@@ -30,6 +36,10 @@
       }
     }
   ],
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div id=\"befund-titel\"><b>Pathologisch-anatomisch Begutachtung</b></div><table><tr id=\"befund-identifikator\"><td>id</td><td>E12345_21.1</td></tr><tr id=\"befund-eingangsnummer\"><td>Eingangsnummer</td><td>E12345_21</td></tr><tr id=\"befund-status\"><td>Status</td><td>final</td></tr><tr id=\"befund-patient\"><td>Patient</td><td>Patient/12345</td></tr><tr id=\"befund-effective\"><td>Effective</td><td>2021-06-01</td></tr><tr id=\"befund-issued\"><td>Issued</td><td>2021-06-01</td></tr><tr id=\"befund-performer\"><td>Performer</td><td>Practitioner/2346545</td></tr></table></div>"
+  },
   "basedOn": [
     {
       "reference": "ServiceRequest/PathologyRequestExample"

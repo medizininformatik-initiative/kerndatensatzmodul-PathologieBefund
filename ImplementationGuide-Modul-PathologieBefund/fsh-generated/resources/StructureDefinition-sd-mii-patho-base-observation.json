@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "sd-mii-patho-base-pathology-observation",
+  "id": "sd-mii-patho-base-observation",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,10 +11,10 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-base-pathology-observation",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-base-observation",
   "version": "0.1.0",
   "name": "SD_MII_Patho_Base_Observation",
-  "title": "SD MII Patho Base Pathology Observation",
+  "title": "SD MII Patho Base Observation",
   "status": "draft",
   "description": "Abstract Observation to define common features of a main pathology observation",
   "fhirVersion": "4.0.1",
@@ -144,6 +144,27 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code.extension",
+        "path": "Observation.code.extension",
+        "short": "Links to original text that may have been used to retrieve coding"
+      },
+      {
+        "id": "Observation.code.extension:original-text",
+        "path": "Observation.code.extension",
+        "sliceName": "original-text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/originalText"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -293,8 +314,39 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.component.code.extension",
+        "path": "Observation.component.code.extension",
+        "short": "Links to original text that may have been used to retrieve coding"
+      },
+      {
+        "id": "Observation.component.code.extension:original-text",
+        "path": "Observation.component.code.extension",
+        "sliceName": "original-text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/originalText"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Observation.component.value[x]",
         "path": "Observation.component.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "type": [
           {
             "code": "Quantity"
@@ -304,8 +356,149 @@
           },
           {
             "code": "string"
+          },
+          {
+            "code": "Ratio"
           }
         ]
+      },
+      {
+        "id": "Observation.component.valueString",
+        "path": "Observation.component.valueString",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.valueString.extension",
+        "path": "Observation.component.valueString.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Links to original text that may have been used to retrieve value"
+      },
+      {
+        "id": "Observation.component.valueString.extension:original-text",
+        "path": "Observation.component.valueString.extension",
+        "sliceName": "original-text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/originalText"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.valueQuantity",
+        "path": "Observation.component.valueQuantity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.valueQuantity.extension",
+        "path": "Observation.component.valueQuantity.extension",
+        "short": "Links to original text that may have been used to retrieve value"
+      },
+      {
+        "id": "Observation.component.valueQuantity.extension:original-text",
+        "path": "Observation.component.valueQuantity.extension",
+        "sliceName": "original-text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/originalText"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.valueCodeableConcept.extension",
+        "path": "Observation.component.valueCodeableConcept.extension",
+        "short": "Links to original text that may have been used to retrieve value"
+      },
+      {
+        "id": "Observation.component.valueCodeableConcept.extension:original-text",
+        "path": "Observation.component.valueCodeableConcept.extension",
+        "sliceName": "original-text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/originalText"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.valueRatio",
+        "path": "Observation.component.valueRatio",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Ratio"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.valueRatio.extension",
+        "path": "Observation.component.valueRatio.extension",
+        "short": "Links to original text that may have been used to retrieve value"
+      },
+      {
+        "id": "Observation.component.valueRatio.extension:original-text",
+        "path": "Observation.component.valueRatio.extension",
+        "sliceName": "original-text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/originalText"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Observation.component.dataAbsentReason",

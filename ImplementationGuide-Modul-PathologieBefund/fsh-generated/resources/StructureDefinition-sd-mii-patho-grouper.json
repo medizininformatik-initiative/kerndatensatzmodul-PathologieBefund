@@ -53,7 +53,7 @@
   "kind": "resource",
   "abstract": true,
   "type": "Observation",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-base-pathology-observation",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-base-observation",
   "derivation": "constraint",
   "differential": {
     "element": [
