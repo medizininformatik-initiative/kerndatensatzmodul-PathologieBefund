@@ -106,14 +106,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/sd-mii-patho-grouper"
-        },
-        "name": "SD MII Patho Grouper",
-        "description": "Grouper profile for pathological findings",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/sd-mii-patho-intraoperative-grouper"
         },
         "name": "SD MII Patho Intraoperative Grouper",
@@ -142,6 +134,14 @@
         },
         "name": "SD MII Patho Report",
         "description": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/sd-mii-patho-section-grouper"
+        },
+        "name": "SD MII Patho Section Grouper",
+        "description": "Grouper profile for pathological findings",
         "exampleBoolean": false
       },
       {

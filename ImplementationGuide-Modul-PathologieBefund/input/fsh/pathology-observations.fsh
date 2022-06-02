@@ -132,10 +132,10 @@ Description: "Instantiable Observation to describe a generic pathology finding"
 //--------------------------------------------
 // Grouper
 //--------------------------------------------
-Profile: SD_MII_Patho_Grouper
+Profile: SD_MII_Patho_Section_Grouper
 Parent: SD_MII_Patho_Base_Observation
-Id: sd-mii-patho-grouper
-Title: "SD MII Patho Grouper"
+Id: sd-mii-patho-section-grouper
+Title: "SD MII Patho Section Grouper"
 Description: "Grouper profile for pathological findings"
 * insert RuleSet1
 * ^abstract = true
@@ -153,7 +153,7 @@ Description: "Grouper profile for pathological findings"
 // IntraoperativeObservation
 //--------------------------------------------
 Profile: SD_MII_Patho_Intraoperative_Grouper
-Parent: SD_MII_Patho_Grouper
+Parent: SD_MII_Patho_Section_Grouper
 Id: sd-mii-patho-intraoperative-grouper
 Title: "SD MII Patho Intraoperative Grouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
@@ -165,7 +165,7 @@ Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 // Macroscopic Observation
 //--------------------------------------------
 Profile: SD_MII_Patho_Macroscopic_Grouper
-Parent: SD_MII_Patho_Grouper
+Parent: SD_MII_Patho_Section_Grouper
 Id: sd-mii-patho-macroscopic-grouper
 Title: "SD MII Patho Macroscopic Grouper"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
@@ -177,7 +177,7 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 // Microscopic Observation
 //-------------------------------------
 Profile: SD_MII_Patho_Microscopic_Grouper
-Parent: SD_MII_Patho_Grouper
+Parent: SD_MII_Patho_Section_Grouper
 Id: sd-mii-patho-microscopic-grouper
 Title: "SD MII Patho Microscopic Grouper"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
@@ -189,7 +189,7 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 // Additional Specified Observations
 //-------------------------------------
 Profile: SD_MII_Patho_Additional_Specified_Grouper
-Parent: SD_MII_Patho_Grouper
+Parent: SD_MII_Patho_Section_Grouper
 Id: sd-mii-patho-additional-specified-grouper
 Title: "SD MII Patho Additional Specified Grouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
@@ -201,7 +201,7 @@ Description: "Based on IHE PaLM APSR - Grouper for additional specified Observat
 // Diagnostic Conclusion
 //--------------------------------
 Profile: SD_MII_Patho_Diagnostic_Conclusion_Grouper
-Parent: SD_MII_Patho_Grouper	
+Parent: SD_MII_Patho_Section_Grouper	
 Id: sd-mii-patho-diagnostic-conclusion-grouper
 Title: "SD MII Patho Diagnostic Conclusion Grouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
