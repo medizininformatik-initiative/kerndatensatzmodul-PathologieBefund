@@ -106,6 +106,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/sd-mii-patho-history-of-present-illness"
+        },
+        "name": "SD MII Patho History of Present Illness",
+        "description": "Profile for history of present illness (anamnesis)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/sd-mii-patho-intraoperative-grouper"
         },
         "name": "SD MII Patho Intraoperative Grouper",
@@ -126,6 +134,14 @@
         },
         "name": "SD MII Patho Microscopic Grouper",
         "description": "Based on IHE PaLM APSR - Microscopic Observation Finding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/sd-mii-patho-personal-history-finding"
+        },
+        "name": "SD MII Patho Personal History Finding",
+        "description": "Profile ",
         "exampleBoolean": false
       },
       {
