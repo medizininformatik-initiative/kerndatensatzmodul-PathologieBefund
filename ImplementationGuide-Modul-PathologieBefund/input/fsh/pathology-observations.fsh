@@ -140,6 +140,7 @@ Description: "Grouper profile for pathological findings"
 * insert RuleSet1
 * ^abstract = true
 // * code.coding from SectionTypes (required)
+* text MS
 * hasMember ^slicing.discriminator.type = #type
 * hasMember ^slicing.discriminator.path = "$this"
 * hasMember ^slicing.rules = #open
