@@ -116,18 +116,6 @@ Description: "Instantiable Observation to describe a generic pathology finding"
     * ^short = "Links to original text that may have been used to retrieve value"
 // Moegliche Unterbeobachtungen
 * hasMember MS
-// Referenz - Eingebettetes Bild
-// * derivedFrom MS
-// * derivedFrom ^slicing.discriminator.type = #type
-// * derivedFrom ^slicing.discriminator.path = "$this.resolve()"
-// * derivedFrom ^slicing.rules = #open
-// * derivedFrom ^slicing.description = "tbd"
-// * derivedFrom ^slicing.ordered = false
-// * derivedFrom contains attached-image 0..* MS 
-//                    and dicom-image 0..* MS
-// * derivedFrom[attached-image] only Reference(SD_MII_Patho_Attached_Image)
-// * derivedFrom[dicom-image] only Reference(ImagingStudy)
-// * derivedFrom only Reference(SD_MII_Patho_Attached_Image or ImagingStudy)
 
 //--------------------------------------------
 // Grouper
@@ -219,7 +207,6 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
                    and questionnaire-response 0..* MS
 * derivedFrom[grouper-observation] only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper)
 * derivedFrom[questionnaire-response] only Reference(QuestionnaireResponse)
-// * derivedFrom only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper or QuestionnaireResponse)
 * note MS
 
 //---------------------------------
@@ -405,7 +392,6 @@ Description: "Example for a diagnostic conclusion"
 * derivedFrom[+] = Reference(MacroGrouperA)
 * derivedFrom[+] = Reference(MacroGrouperB)
 * derivedFrom[+] = Reference(MicroGrouperA)
-// * derivedFrom[+] = Reference(MicroGrouperB)
 * hasMember[+] = Reference(DiagnosticConclusion1)
 * hasMember[+] = Reference(DiagnosticConclusion2)
 * hasMember[+] = Reference(DiagnosticConclusion3)
