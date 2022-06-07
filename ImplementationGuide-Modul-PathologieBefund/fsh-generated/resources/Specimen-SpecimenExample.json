@@ -11,11 +11,15 @@
       {
         "system": "http://snomed.info/sct",
         "code": "309134005",
-        "display": " Prostate tru-cut biopsy sample (specimen)"
+        "display": "Prostate tru-cut biopsy sample (specimen)"
       }
     ]
   },
   "status": "available",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div id=\"specimen-a-title\"><b>Probe A</b></div><table><tr><td>Entnahmeart</td><td>transrektale Stanzbiopsie</td></tr><tr><td>Bearbeitungsprozedur</td><td>Einbetten, schneiden, färben</td></tr><tr><td>Färbung</td><td>4% gepuffertes Formalin HE</td></tr></table></div>"
+  },
   "identifier": [
     {
       "type": {
@@ -30,12 +34,15 @@
       "value": "E12345_21-A"
     }
   ],
+  "accessionIdentifier": {
+    "value": "test"
+  },
   "subject": {
     "reference": "Patient/12345"
   },
   "collection": {
     "collector": {
-      "reference": "Practitioner/36765"
+      "reference": "Practitioner/2346545"
     },
     "collectedDateTime": "2021-01-29T06:15:00Z",
     "method": {

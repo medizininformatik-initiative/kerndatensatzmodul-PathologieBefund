@@ -73,7 +73,7 @@
       "reference": "Observation/DiagnosticConclusionGrouper"
     }
   ],
-  "conclusion": "M\u00e4\u00dfig differenziertes azin\u00e4res Adenokarzinom der Prostata, ISUP-Gradgruppe 2",
+  "conclusion": "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2",
   "conclusionCode": [
     {
       "coding": [
@@ -90,7 +90,7 @@
       "link": {
         "reference": "Media/ImageExample"
       },
-      "comment": "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverb\u00e4nde, fotodokumentiert"
+      "comment": "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
     }
   ]
 }

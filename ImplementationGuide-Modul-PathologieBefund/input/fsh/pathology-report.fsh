@@ -315,6 +315,8 @@ Description: "tbd"
 * identifier
   * type = $v2-0203#FILL "Filler Order Number"
   * value = "E12345_21-A"
+* accessionIdentifier
+  * value = "test"
 * type = $SCT#122610009 "Specimen from lung obtained by biopsy (specimen)"
 * subject.reference = "Patient/12345"
 * collection

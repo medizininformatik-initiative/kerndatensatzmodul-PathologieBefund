@@ -60,7 +60,7 @@
       "reference": "Observation/example-mii-patho-DiagnosticConclusionGrouper"
     }
   ],
-  "conclusion": "Ausgedehnte Infiltrate eines acin\u00e4r, lipidisch und fokal papill\u00e4r wachsenden, m\u00e4\u00dfig differenzierten pulmonalen Adenocarcinoms in Stanzen vom linken Oberlappen im Bereich einer zellarmen Narbe.",
+  "conclusion": "Ausgedehnte Infiltrate eines acinär, lipidisch und fokal papillär wachsenden, mäßig differenzierten pulmonalen Adenocarcinoms in Stanzen vom linken Oberlappen im Bereich einer zellarmen Narbe.",
   "conclusionCode": [
     {
       "coding": [
@@ -79,7 +79,7 @@
       "link": {
         "reference": "Media/ImageExample"
       },
-      "comment": "HE-Schnitt einer Lungenstanze, infiltriert durch Karzinomverb\u00e4nde, fotodokumentiert"
+      "comment": "HE-Schnitt einer Lungenstanze, infiltriert durch Karzinomverbände, fotodokumentiert"
     }
   ]
 }

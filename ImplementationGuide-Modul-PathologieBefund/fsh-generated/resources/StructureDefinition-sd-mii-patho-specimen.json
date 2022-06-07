@@ -43,6 +43,17 @@
   "differential": {
     "element": [
       {
+        "id": "Specimen.text",
+        "path": "Specimen.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.accessionIdentifier",
+        "path": "Specimen.accessionIdentifier",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Specimen.request",
         "path": "Specimen.request",
         "type": [
