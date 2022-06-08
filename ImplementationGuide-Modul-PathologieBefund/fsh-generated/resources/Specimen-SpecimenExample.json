@@ -11,11 +11,53 @@
       {
         "system": "http://snomed.info/sct",
         "code": "309134005",
-        "display": " Prostate tru-cut biopsy sample (specimen)"
+        "display": "Prostate tru-cut biopsy sample (specimen)"
       }
     ]
   },
+  "processing": [
+    {
+      "extension": [
+        {
+          "valueRange": {
+            "low": {
+              "unit": "°C",
+              "system": "http://unitsofmeasure.org",
+              "code": "Cel",
+              "value": 0
+            },
+            "high": {
+              "unit": "°C",
+              "system": "http://unitsofmeasure.org",
+              "code": "Cel",
+              "value": 30
+            }
+          },
+          "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+        }
+      ],
+      "procedure": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "40923002",
+            "display": "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+            "valueString": "#bearbeitungsprozedur"
+          }
+        ]
+      }
+    }
+  ],
   "status": "available",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div id=\"specimen-a-title\"><b>Probe A</b></div><table><tr><td>Entnahmeart</td><td>transrektale Stanzbiopsie</td></tr><tr id=\"bearbeitungsprozedur\"><td id=\"bearbeitungsprozedur-key\">Bearbeitungsprozedur</td><td id=\"bearbeitungsprozedur-value\">Einbetten, schneiden, färben</td></tr><tr><td>Färbung</td><td>4% gepuffertes Formalin HE</td></tr></table></div>"
+  },
   "identifier": [
     {
       "type": {
@@ -30,12 +72,15 @@
       "value": "E12345_21-A"
     }
   ],
+  "accessionIdentifier": {
+    "value": "test"
+  },
   "subject": {
     "reference": "Patient/12345"
   },
   "collection": {
     "collector": {
-      "reference": "Practitioner/36765"
+      "reference": "Practitioner/2346545"
     },
     "collectedDateTime": "2021-01-29T06:15:00Z",
     "method": {

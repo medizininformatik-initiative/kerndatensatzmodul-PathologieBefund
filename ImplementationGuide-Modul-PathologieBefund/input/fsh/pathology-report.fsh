@@ -112,6 +112,12 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * insert RuleSet1
 * extension contains $fhir-version-number named document-version 0..1 MS
 * status MS
+* identifier 1.. MS
+  * type 1.. MS
+  * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
+  * value 1.. MS
+  * system 1.. MS
+  * extension contains $fhir-original-text named original-text 0..1 MS
 * type MS
   * ^short = "Type fixed to 'Pathology study'"
   * coding MS
@@ -257,6 +263,10 @@ Title: "Composition Example"
 Description: "Example for a SD_MII_Patho_Composition"
 * extension[document-version].valueString = "1"
 * status = #final
+* identifier.value = "E21.12345"
+* identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+* identifier.type = $v2-0203#ACSN "Accession ID"
+* identifier.extension[original-text].valueString = "#befund-eingangsnummer"
 * type = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"
 * date = "2021-06-08"
@@ -315,6 +325,8 @@ Description: "tbd"
 * identifier
   * type = $v2-0203#FILL "Filler Order Number"
   * value = "E12345_21-A"
+* accessionIdentifier
+  * value = "test"
 * type = $SCT#122610009 "Specimen from lung obtained by biopsy (specimen)"
 * subject.reference = "Patient/12345"
 * collection
@@ -446,6 +458,9 @@ Title: "Composition Example"
 Description: "Example for a SD_MII_Patho_Composition"
 * extension[document-version].valueString = "2"
 * status = #final
+* identifier.value = "H2021.14456"
+* identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+* identifier.type = $v2-0203#ACSN "Accession ID"
 * type = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"
 * date = "2021-06-08"

@@ -73,7 +73,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
 // History of Present Illness
-* supportingInfo[anamnesis] only Reference(Observation)
+* supportingInfo[anamnesis] only Reference(sd-mii-patho-history-of-present-illness)
 // Active Problems (Fragestellung) - Generic AP Observation
 * supportingInfo[activeProblems] only Reference(SD_MII_Patho_Active_Problems)
   * ^short = "List of possible problems that should be analyzed"
@@ -81,24 +81,58 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Zusaetzliche Elemente
 // category for searching purposes 
 * category 1..1 MS 
-* category = $SCT#108252007 "Laboratory procedure (procedure)" (exactly)
-// * category ^slicing.discriminator[0].type = #pattern
-// * category ^slicing.discriminator[0].path = "$this"
-// * category ^slicing.rules = #open
-// * category contains pathology 1..1 MS
-// * category[pathology] = $SCT#721966001 "Pathology order (record artifact)" (exactly)
-// * category[pathology] ^short = "Fixed category 'Pathology order'"
-//   * coding MS
-//     * system 1.. MS
-//     * system ^fixedUri = $SCT
-//     * code 1.. MS
-//     * code ^fixedCode = #721966001
-//     * display MS
+//* category = $SCT#108252007 "Laboratory procedure (procedure)" (exactly)
+* category = $LOINC#11526-1 "Pathology Study" (exactly)
 * code MS
 // * code = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"
+
+//------------------------------------------------
+// History of Present Illness - Anamnese ($LOINC#10164-2 "History of Present Illness Narrative")
+//------------------------------------------------
+Profile: SD_MII_Patho_History_of_Present_Illness
+Parent: Observation
+Id: sd-mii-patho-history-of-present-illness
+Title: "SD MII Patho History of Present Illness"
+Description: "Profile for history of present illness (anamnesis)"
+* insert RuleSet1
+* text MS
+* status MS
+* code MS
+  * coding 1.. MS
+    * code 1.. MS
+    * system 1.. MS
+    * display MS
+    * code = $LOINC#10164-2 "History of Present Illness Narrative" (exactly)
+* subject 1.. MS
+* value[x] ..0 
+* hasMember MS
+* hasMember only Reference(sd-mii-patho-personal-history-finding)
+
+//------------------------------------------------
+// Personal History Finding - coded symptom for anamnesis
+//------------------------------------------------
+Profile: SD_MII_Patho_Personal_History_Finding
+Parent: Observation
+Id: sd-mii-patho-personal-history-finding
+Title: "SD MII Patho Personal History Finding"
+Description: "Profile "
+* insert RuleSet1
+* status MS
+* code MS
+  * coding 1.. MS 
+    * code 1.. MS
+    * system 1.. MS
+    * display MS
+    * code = $SCT#307294006 "Personal History Finding" (exactly)
+* subject 1.. MS
+* value[x] MS
+* value[x] only CodeableConcept
+* valueCodeableConcept
+  * extension contains $fhir-original-text named original-text 0..1 MS
+    * ^short = "Links to original text that may have been used to retrieve value"
 
 //------------------------------------------------
 // Fragestellung (Problem list $LOINC#11450-4)
@@ -114,11 +148,6 @@ Description: "List of problems or questions concerning the reason for the Servic
   * coding 1.. MS
     * code 1.. MS
     * code = $LOINC#42349-1 "Reason for referral (narrative)" (exactly)
-    // * code ^fixedCode = #11450-4
-    // * system 1.. MS
-    // * system ^fixedUri = $LOINC
-    // * display MS
-    // * display ^fixedString = "Problem list"
 * subject 1.. MS
 * component 1.. MS
   * code MS
@@ -128,11 +157,16 @@ Description: "List of problems or questions concerning the reason for the Servic
   * value[x] MS
   * dataAbsentReason MS
 
+//------------------------------------------------
+// Anamnesis - Symptom 
+//------------------------------------------------
+
+
 //---------------------------
 //Examples
 //---------------------------
 Instance: PathologyRequestExample
-InstanceOf: SD_MII_Patho_Service_Request
+InstanceOf: sd-mii-patho-service-request
 Usage: #example
 Title: "PathologyRequestExample"
 Description: "Pathology Report Example "
@@ -148,5 +182,6 @@ Description: "Pathology Report Example "
 * encounter.reference = "Encounter/87687"
 * requester.reference = "Practitioner/34456"
 * specimen[+].reference = "Specimen/87689"
-* category = $SCT#108252007 "Laboratory procedure (procedure)"
+* category = $LOINC#11526-1 "Pathology Study"
+//* category = $SCT#108252007 "Laboratory procedure (procedure)"
 * code = $SCT#82619000 "Left colectomy (procedure)"

@@ -239,9 +239,9 @@
         "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "108252007",
-              "system": "http://snomed.info/sct",
-              "display": "Laboratory procedure (procedure)"
+              "code": "11526-1",
+              "system": "http://loinc.org",
+              "display": "Pathology Study"
             }
           ]
         },
@@ -347,7 +347,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-history-of-present-illness"
             ]
           }
         ],

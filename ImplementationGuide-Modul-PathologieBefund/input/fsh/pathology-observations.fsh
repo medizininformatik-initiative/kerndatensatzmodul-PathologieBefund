@@ -116,30 +116,19 @@ Description: "Instantiable Observation to describe a generic pathology finding"
     * ^short = "Links to original text that may have been used to retrieve value"
 // Moegliche Unterbeobachtungen
 * hasMember MS
-// Referenz - Eingebettetes Bild
-// * derivedFrom MS
-// * derivedFrom ^slicing.discriminator.type = #type
-// * derivedFrom ^slicing.discriminator.path = "$this.resolve()"
-// * derivedFrom ^slicing.rules = #open
-// * derivedFrom ^slicing.description = "tbd"
-// * derivedFrom ^slicing.ordered = false
-// * derivedFrom contains attached-image 0..* MS 
-//                    and dicom-image 0..* MS
-// * derivedFrom[attached-image] only Reference(SD_MII_Patho_Attached_Image)
-// * derivedFrom[dicom-image] only Reference(ImagingStudy)
-// * derivedFrom only Reference(SD_MII_Patho_Attached_Image or ImagingStudy)
 
 //--------------------------------------------
 // Grouper
 //--------------------------------------------
-Profile: SD_MII_Patho_Grouper
+Profile: SD_MII_Patho_Section_Grouper
 Parent: SD_MII_Patho_Base_Observation
-Id: sd-mii-patho-grouper
-Title: "SD MII Patho Grouper"
+Id: sd-mii-patho-section-grouper
+Title: "SD MII Patho Section Grouper"
 Description: "Grouper profile for pathological findings"
 * insert RuleSet1
 * ^abstract = true
 // * code.coding from SectionTypes (required)
+* text MS
 * hasMember ^slicing.discriminator.type = #type
 * hasMember ^slicing.discriminator.path = "$this"
 * hasMember ^slicing.rules = #open
@@ -153,7 +142,7 @@ Description: "Grouper profile for pathological findings"
 // IntraoperativeObservation
 //--------------------------------------------
 Profile: SD_MII_Patho_Intraoperative_Grouper
-Parent: SD_MII_Patho_Grouper
+Parent: SD_MII_Patho_Section_Grouper
 Id: sd-mii-patho-intraoperative-grouper
 Title: "SD MII Patho Intraoperative Grouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
@@ -165,7 +154,7 @@ Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 // Macroscopic Observation
 //--------------------------------------------
 Profile: SD_MII_Patho_Macroscopic_Grouper
-Parent: SD_MII_Patho_Grouper
+Parent: SD_MII_Patho_Section_Grouper
 Id: sd-mii-patho-macroscopic-grouper
 Title: "SD MII Patho Macroscopic Grouper"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
@@ -177,7 +166,7 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 // Microscopic Observation
 //-------------------------------------
 Profile: SD_MII_Patho_Microscopic_Grouper
-Parent: SD_MII_Patho_Grouper
+Parent: SD_MII_Patho_Section_Grouper
 Id: sd-mii-patho-microscopic-grouper
 Title: "SD MII Patho Microscopic Grouper"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
@@ -189,7 +178,7 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 // Additional Specified Observations
 //-------------------------------------
 Profile: SD_MII_Patho_Additional_Specified_Grouper
-Parent: SD_MII_Patho_Grouper
+Parent: SD_MII_Patho_Section_Grouper
 Id: sd-mii-patho-additional-specified-grouper
 Title: "SD MII Patho Additional Specified Grouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
@@ -201,7 +190,7 @@ Description: "Based on IHE PaLM APSR - Grouper for additional specified Observat
 // Diagnostic Conclusion
 //--------------------------------
 Profile: SD_MII_Patho_Diagnostic_Conclusion_Grouper
-Parent: SD_MII_Patho_Grouper	
+Parent: SD_MII_Patho_Section_Grouper	
 Id: sd-mii-patho-diagnostic-conclusion-grouper
 Title: "SD MII Patho Diagnostic Conclusion Grouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
@@ -218,7 +207,6 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
                    and questionnaire-response 0..* MS
 * derivedFrom[grouper-observation] only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper)
 * derivedFrom[questionnaire-response] only Reference(QuestionnaireResponse)
-// * derivedFrom only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper or QuestionnaireResponse)
 * note MS
 
 //---------------------------------
@@ -236,7 +224,9 @@ Description: "Biopsy site of Specimen A (1st punch)"
 * category[laboratory-category].coding = $obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
 * code.coding = $LOINC#94738-2 "Biopsy site"
+* code.extension[original-text].valueString = "#macro-a-biopsy-site-key"
 * valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+* valueCodeableConcept.extension[original-text].valueString = "#macro-a-biopsy-site-value"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroObsTissueLengthA
@@ -404,7 +394,6 @@ Description: "Example for a diagnostic conclusion"
 * derivedFrom[+] = Reference(MacroGrouperA)
 * derivedFrom[+] = Reference(MacroGrouperB)
 * derivedFrom[+] = Reference(MicroGrouperA)
-// * derivedFrom[+] = Reference(MicroGrouperB)
 * hasMember[+] = Reference(DiagnosticConclusion1)
 * hasMember[+] = Reference(DiagnosticConclusion2)
 * hasMember[+] = Reference(DiagnosticConclusion3)

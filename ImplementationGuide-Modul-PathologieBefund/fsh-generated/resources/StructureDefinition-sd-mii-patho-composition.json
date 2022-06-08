@@ -83,6 +83,55 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.identifier",
+        "path": "Composition.identifier",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.identifier.extension:original-text",
+        "path": "Composition.identifier.extension",
+        "sliceName": "original-text",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/originalText"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.identifier.type",
+        "path": "Composition.identifier.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.identifier.type.coding",
+        "path": "Composition.identifier.type.coding",
+        "patternCoding": {
+          "code": "ACSN",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+          "display": "Accession ID"
+        }
+      },
+      {
+        "id": "Composition.identifier.system",
+        "path": "Composition.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.identifier.value",
+        "path": "Composition.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Composition.status",
         "path": "Composition.status",
         "mustSupport": true

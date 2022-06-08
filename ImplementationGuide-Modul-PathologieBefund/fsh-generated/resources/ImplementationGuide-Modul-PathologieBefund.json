@@ -106,10 +106,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/sd-mii-patho-grouper"
+          "reference": "StructureDefinition/sd-mii-patho-history-of-present-illness"
         },
-        "name": "SD MII Patho Grouper",
-        "description": "Grouper profile for pathological findings",
+        "name": "SD MII Patho History of Present Illness",
+        "description": "Profile for history of present illness (anamnesis)",
         "exampleBoolean": false
       },
       {
@@ -138,10 +138,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/sd-mii-patho-personal-history-finding"
+        },
+        "name": "SD MII Patho Personal History Finding",
+        "description": "Profile ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/sd-mii-patho-report"
         },
         "name": "SD MII Patho Report",
         "description": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/sd-mii-patho-section-grouper"
+        },
+        "name": "SD MII Patho Section Grouper",
+        "description": "Grouper profile for pathological findings",
         "exampleBoolean": false
       },
       {
@@ -381,7 +397,7 @@
           "reference": "Specimen/SpecimenExample"
         },
         "name": "SpecimenExample",
-        "description": "Example for SD_MII_Patho_Specimen",
+        "description": "Example for SD_MII_Patho_Specimen - Specimen A",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"
       },
       {

@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "sd-mii-patho-grouper",
+  "id": "sd-mii-patho-section-grouper",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,10 +11,10 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-grouper",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-section-grouper",
   "version": "0.1.0",
-  "name": "SD_MII_Patho_Grouper",
-  "title": "SD MII Patho Grouper",
+  "name": "SD_MII_Patho_Section_Grouper",
+  "title": "SD MII Patho Section Grouper",
   "status": "draft",
   "description": "Grouper profile for pathological findings",
   "fhirVersion": "4.0.1",
@@ -57,6 +57,11 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Observation.text",
+        "path": "Observation.text",
+        "mustSupport": true
+      },
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
