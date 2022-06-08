@@ -10,9 +10,9 @@
     {
       "coding": [
         {
-          "code": "108252007",
-          "system": "http://snomed.info/sct",
-          "display": "Laboratory procedure (procedure)"
+          "code": "11526-1",
+          "system": "http://loinc.org",
+          "display": "Pathology Study"
         }
       ]
     }

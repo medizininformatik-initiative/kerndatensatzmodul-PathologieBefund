@@ -30,6 +30,9 @@
       "value": "E12345_21-A"
     }
   ],
+  "accessionIdentifier": {
+    "value": "test"
+  },
   "subject": {
     "reference": "Patient/12345"
   },

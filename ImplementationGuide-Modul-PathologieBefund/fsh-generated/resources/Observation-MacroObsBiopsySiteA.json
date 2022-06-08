@@ -25,8 +25,13 @@
       ]
     }
   ],
-  "status": "final",
   "code": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+        "valueString": "#macro-a-biopsy-site-key"
+      }
+    ],
     "coding": [
       {
         "code": "94738-2",
@@ -36,6 +41,12 @@
     ]
   },
   "valueCodeableConcept": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+        "valueString": "#macro-a-biopsy-site-value"
+      }
+    ],
     "coding": [
       {
         "code": "716917000",
@@ -44,6 +55,7 @@
       }
     ]
   },
+  "status": "final",
   "derivedFrom": [
     {
       "reference": "AttachedImage"

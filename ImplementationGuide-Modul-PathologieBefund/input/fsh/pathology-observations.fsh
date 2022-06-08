@@ -224,7 +224,9 @@ Description: "Biopsy site of Specimen A (1st punch)"
 * category[laboratory-category].coding = $obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
 * code.coding = $LOINC#94738-2 "Biopsy site"
+* code.extension[original-text].valueString = "#macro-a-biopsy-site-key"
 * valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+* valueCodeableConcept.extension[original-text].valueString = "#macro-a-biopsy-site-value"
 * derivedFrom[+] = Reference(AttachedImage)
 
 Instance: MacroObsTissueLengthA

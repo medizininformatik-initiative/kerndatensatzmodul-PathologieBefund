@@ -57,6 +57,19 @@
     }
   ],
   "status": "final",
+  "identifier": {
+    "value": "H2021.14456",
+    "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht",
+    "type": {
+      "coding": [
+        {
+          "code": "ACSN",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+          "display": "Accession ID"
+        }
+      ]
+    }
+  },
   "type": {
     "coding": [
       {
