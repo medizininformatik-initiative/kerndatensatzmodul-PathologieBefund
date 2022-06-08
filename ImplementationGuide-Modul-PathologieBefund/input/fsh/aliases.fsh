@@ -19,3 +19,4 @@ Alias: $bio-entnahmeprozedur = https://www.medizininformatik-initiative.de/fhir/
 Alias: $bio-temperaturbedingungen = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen
 Alias: $fhir-original-text = http://hl7.org/fhir/StructureDefinition/originalText
 Alias: $fhir-version-number = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
+Alias: $fhir-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
