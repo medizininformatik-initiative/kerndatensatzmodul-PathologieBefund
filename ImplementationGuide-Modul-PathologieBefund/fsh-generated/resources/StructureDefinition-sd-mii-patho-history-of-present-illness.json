@@ -76,6 +76,11 @@
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "min": 1,
+        "fixedCoding": {
+          "code": "10164-2",
+          "system": "http://loinc.org",
+          "display": "History of Present Illness Narrative"
+        },
         "mustSupport": true
       },
       {
@@ -88,7 +93,6 @@
         "id": "Observation.code.coding.code",
         "path": "Observation.code.coding.code",
         "min": 1,
-        "fixedCode": "10164-2",
         "mustSupport": true
       },
       {
