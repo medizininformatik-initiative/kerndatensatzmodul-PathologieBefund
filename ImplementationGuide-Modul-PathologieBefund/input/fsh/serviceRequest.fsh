@@ -83,6 +83,8 @@ Description: "Order for the analysis of a sample or a group of samples."
 * category 1..1 MS 
 * category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" (exactly)
 * code MS
+  * coding
+    * system = $LOINC (exactly)
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"
@@ -154,10 +156,6 @@ Description: "List of problems or questions concerning the reason for the Servic
   * value[x] MS
   * dataAbsentReason MS
 
-//------------------------------------------------
-// Anamnesis - Symptom 
-//------------------------------------------------
-
 
 //---------------------------
 //Examples
@@ -180,5 +178,4 @@ Description: "Pathology Report Example "
 * requester.reference = "Practitioner/34456"
 * specimen[+].reference = "Specimen/87689"
 * category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
-//* category = $SCT#108252007 "Laboratory procedure (procedure)"
 * code = $LOINC#11526-1 "Pathology Study"

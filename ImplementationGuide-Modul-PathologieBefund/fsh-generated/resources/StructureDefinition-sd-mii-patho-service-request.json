@@ -253,6 +253,11 @@
         "mustSupport": true
       },
       {
+        "id": "ServiceRequest.code.coding.system",
+        "path": "ServiceRequest.code.coding.system",
+        "fixedUri": "http://loinc.org"
+      },
+      {
         "id": "ServiceRequest.subject",
         "path": "ServiceRequest.subject",
         "type": [
