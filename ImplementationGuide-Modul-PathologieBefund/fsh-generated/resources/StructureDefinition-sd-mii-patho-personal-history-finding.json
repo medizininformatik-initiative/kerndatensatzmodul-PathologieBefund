@@ -71,6 +71,11 @@
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "min": 1,
+        "fixedCoding": {
+          "code": "307294006",
+          "system": "http://snomed.info/sct",
+          "display": "Personal History Finding"
+        },
         "mustSupport": true
       },
       {
@@ -83,7 +88,6 @@
         "id": "Observation.code.coding.code",
         "path": "Observation.code.coding.code",
         "min": 1,
-        "fixedCode": "307294006",
         "mustSupport": true
       },
       {

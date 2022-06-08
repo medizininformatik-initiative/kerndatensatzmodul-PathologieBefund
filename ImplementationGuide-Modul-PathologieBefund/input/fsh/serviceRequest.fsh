@@ -102,10 +102,10 @@ Description: "Profile for history of present illness (anamnesis)"
 * status MS
 * code MS
   * coding 1.. MS
+  * coding = $LOINC#10164-2 "History of Present Illness Narrative" (exactly)
     * code 1.. MS
     * system 1.. MS
     * display MS
-    * code = $LOINC#10164-2 "History of Present Illness Narrative" (exactly)
 * subject 1.. MS
 * value[x] ..0 
 * hasMember MS
@@ -122,11 +122,11 @@ Description: "Profile "
 * insert RuleSet1
 * status MS
 * code MS
-  * coding 1.. MS 
+  * coding 1.. MS
+  * coding = $SCT#307294006 "Personal History Finding" (exactly) 
     * code 1.. MS
     * system 1.. MS
     * display MS
-    * code = $SCT#307294006 "Personal History Finding" (exactly)
 * subject 1.. MS
 * value[x] MS
 * value[x] only CodeableConcept
