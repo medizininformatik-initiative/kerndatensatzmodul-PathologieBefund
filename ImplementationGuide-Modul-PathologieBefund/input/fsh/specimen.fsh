@@ -64,3 +64,4 @@ Description: "Example for SD_MII_Patho_Specimen - Specimen A"
     * value = 30
 * processing[=].procedure.coding[sct] = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
 * processing[=].procedure.extension[original-text].valueString = "#bearbeitungsprozedur"
+// TODO: Add Additive/Faerbung

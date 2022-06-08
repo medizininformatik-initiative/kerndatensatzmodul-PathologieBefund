@@ -112,7 +112,7 @@ Description: "Profile for history of present illness (anamnesis)"
 * hasMember only Reference(sd-mii-patho-personal-history-finding)
 
 //------------------------------------------------
-// Personal History Finding
+// Personal History Finding - coded symptom for anamnesis
 //------------------------------------------------
 Profile: SD_MII_Patho_Personal_History_Finding
 Parent: Observation
