@@ -81,10 +81,8 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Zusaetzliche Elemente
 // category for searching purposes 
 * category 1..1 MS 
-//* category = $SCT#108252007 "Laboratory procedure (procedure)" (exactly)
-* category = $LOINC#11526-1 "Pathology Study" (exactly)
+* category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" (exactly)
 * code MS
-// * code = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"
@@ -181,6 +179,6 @@ Description: "Pathology Report Example "
 * encounter.reference = "Encounter/87687"
 * requester.reference = "Practitioner/34456"
 * specimen[+].reference = "Specimen/87689"
-* category = $LOINC#11526-1 "Pathology Study"
+* category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
 //* category = $SCT#108252007 "Laboratory procedure (procedure)"
-* code = $SCT#82619000 "Left colectomy (procedure)"
+* code = $LOINC#11526-1 "Pathology Study"

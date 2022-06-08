@@ -239,9 +239,9 @@
         "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "11526-1",
-              "system": "http://loinc.org",
-              "display": "Pathology Study"
+              "code": "726007",
+              "system": "http://snomed.info/sct",
+              "display": "Pathology consultation, comprehensive, records and specimen with report (procedure)"
             }
           ]
         },
