@@ -106,8 +106,7 @@ Description: "Profile for history of present illness (anamnesis)"
     * code 1.. MS
     * system 1.. MS
     * display MS
-* subject 1.. MS
-* value[x] ..0 
+* subject 1.. MS 
 * hasMember MS
 * hasMember only Reference(sd-mii-patho-personal-history-finding)
 
