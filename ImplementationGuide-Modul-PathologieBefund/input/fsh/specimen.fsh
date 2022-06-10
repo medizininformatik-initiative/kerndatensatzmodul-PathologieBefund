@@ -15,6 +15,14 @@ Description: "Pathology specimen"
 * container MS
   * type from VS_MII_Patho_Container_Type_SNOMED_DICOM (required)
 
+Profile: SD_MII_Patho_Substance
+Parent: $mii-bio-additive
+Id: sd-mii-patho-substance
+Title: "SD MII Patho Substance"
+Description: "Substance profile for pathology"
+* insert RuleSet1
+* code from vs-mii-patho-faerbesubstanzen-snomed (extensible)
+
 Instance: ex-mii-patho-specimen-a
 InstanceOf: SD_MII_Patho_Specimen
 Usage: #example

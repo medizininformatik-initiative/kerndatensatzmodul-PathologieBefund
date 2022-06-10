@@ -82,7 +82,8 @@ Description: "Order for the analysis of a sample or a group of samples."
 * category 1..1 MS 
 * category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" (exactly)
 * code MS
-* code from $LOINC-VS (required)
+// * code from $LOINC-VS (required)
+* code from vs-mii-patho-service-request-loinc (preferred)
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"

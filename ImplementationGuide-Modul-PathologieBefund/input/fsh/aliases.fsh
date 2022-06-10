@@ -12,6 +12,7 @@ Alias: $UCUM = http://unitsofmeasure.org
 Alias: $bio-probenart = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/probenart
 Alias: $bio-bodystructure = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/sct-body-structures
 Alias: $bio-icd-o-3 = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/icd-o-3-topography
+Alias: $bio-sct-additive = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/additive
 // Profile Canonicals
 Alias: $mii-bio-specimencore = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
 Alias: $mii-bio-additive = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance

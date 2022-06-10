@@ -63,13 +63,23 @@ Description: "ValueSet for IHE PaLM APSR's section types"
 * $LOINC#22637-3 "Pathology report diagnosis" //Diagnostic Conclusion Section
 * $LOINC#77599-9 "Additional documentation" //Additional Observation Section
 
-ValueSet: Faerbesubstanzen
-Id: Faerbesubstanzen
-Title: "Faerbesubstanzen"
-Description: "tbd"
+ValueSet: VS_MII_Patho_Service_Request_LOINC
+Id: vs-mii-patho-service-request-loinc
+Title: "VS MII Patho Service Request LOINC"
+Description: "ValueSet for a preferred set of ServiceRequest codes"
+* insert RuleSet1
+* $LOINC#18743-5 "Autopsy report"	
+* $LOINC#11526-1 "Pathology study"
+* $LOINC#11529-5 "Surgical pathology study"
+
+ValueSet: VS_MII_Patho_Faerbesubstanzen_SNOMED
+Id: vs-mii-patho-faerbesubstanzen-snomed
+Title: "VS MII Patho Faerbesubstanzen SNOMED"
+Description: "ValueSet for staining substances"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #45389009 "Tissue stain (substance)"
 * include codes from system $SCT where concept is-a #397165007 "Stain (substance)"
+* include codes from system $bio-sct-additive
 
 
 ValueSet: VS_MII_Patho_Container_Type_SNOMED_DICOM

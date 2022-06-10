@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "Faerbesubstanzen",
-  "id": "Faerbesubstanzen",
-  "title": "Faerbesubstanzen",
-  "description": "tbd",
+  "name": "VS_MII_Patho_Faerbesubstanzen_SNOMED",
+  "id": "vs-mii-patho-faerbesubstanzen-snomed",
+  "title": "VS MII Patho Faerbesubstanzen SNOMED",
+  "description": "ValueSet for staining substances",
   "version": "0.1.0",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/Faerbesubstanzen",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-faerbesubstanzen-snomed",
   "compose": {
     "include": [
       {
@@ -28,6 +28,9 @@
             "value": "397165007"
           }
         ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/additive"
       }
     ]
   }
