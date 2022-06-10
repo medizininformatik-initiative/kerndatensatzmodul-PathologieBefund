@@ -28,10 +28,10 @@
   "status": "final",
   "derivedFrom": [
     {
-      "reference": "Observation/MacroGrouperA"
+      "reference": "Observation/ex-mii-patho-macro-grouper-a"
     },
     {
-      "reference": "Observation/MacroGrouperB"
+      "reference": "Observation/ex-mii-patho-macro-grouper-b"
     },
     {
       "reference": "Observation/MicroGrouperA"

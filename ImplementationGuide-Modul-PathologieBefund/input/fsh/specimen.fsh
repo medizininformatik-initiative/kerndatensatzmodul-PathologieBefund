@@ -18,7 +18,7 @@ Description: "Pathology specimen"
 Instance: ex-mii-patho-specimen-a
 InstanceOf: SD_MII_Patho_Specimen
 Usage: #example
-Title: "Ex MII Patho Specimen A"
+Title: "EX MII Patho Specimen A"
 Description: "Example for SD_MII_Patho_Specimen - Specimen A"
 * status = #available
 * text.status = #additional

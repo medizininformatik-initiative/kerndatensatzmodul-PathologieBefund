@@ -215,10 +215,10 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
 // Macroscopic Report
 //---------------------------------
 // Macro Specimen A
-Instance: MacroObsBiopsySiteA
+Instance: ex-mii-patho-biopsy-site-a
 InstanceOf: SD_MII_Patho_Finding
 Usage: #example
-Title: "MacroObsBiopsySiteA"
+Title: "EX MII Patho Biopsy Site A"
 Description: "Biopsy site of Specimen A (1st punch)"
 * status = #final
 * category[laboratory-category].coding = $obs-category#laboratory
@@ -230,10 +230,10 @@ Description: "Biopsy site of Specimen A (1st punch)"
 * derivedFrom[+] = Reference(AttachedImage)
 * specimen = Reference(ex-mii-patho-specimen-a)
 
-Instance: MacroObsTissueLengthA
+Instance: ex-mii-patho-tissue-length-a
 InstanceOf: SD_MII_Patho_Finding
 Usage: #example
-Title: "MacroObsTissueLengthA"
+Title: "EX MII Patho Tissue Length A"
 Description: "Tissue length of Specimen A (1st punch)"
 * status = #final
 * category[laboratory-category].coding = $obs-category#laboratory
@@ -248,10 +248,10 @@ Description: "Tissue length of Specimen A (1st punch)"
 * derivedFrom[+] = Reference(AttachedImage)
 * specimen = Reference(ex-mii-patho-specimen-a)
 
-Instance: MacroGrouperA
+Instance: ex-mii-patho-macro-grouper-a
 InstanceOf: SD_MII_Patho_Macroscopic_Grouper
 Usage: #example
-Title: "MacroGrouperA"
+Title: "EX MII Patho Macro Grouper A"
 Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
 * text.status = #additional
 * text.div = "
@@ -271,15 +271,15 @@ Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)
 * status = #final
 * code.coding = $LOINC#22634-0 "Pathology report gross observation"
 * valueString = "Makroskopie A"
-* hasMember[+] = Reference(MacroObsBiopsySiteA)
-* hasMember[+] = Reference(MacroObsTissueLengthA)
+* hasMember[+] = Reference(ex-mii-patho-biopsy-site-a)
+* hasMember[+] = Reference(ex-mii-patho-tissue-length-a)
 * specimen = Reference(ex-mii-patho-specimen-a)
 
 // Macro Specimen B
-Instance: MacroObsBiopsySiteB
+Instance: ex-mii-patho-biopsy-site-b
 InstanceOf: SD_MII_Patho_Finding
 Usage: #example
-Title: "MacroObsBiopsySiteB"
+Title: "EX MII Patho Biopsy Site B"
 Description: "Biopsy site of Specimen B (2nd punch)"
 * status = #final
 * category[laboratory-category].coding = $obs-category#laboratory
@@ -288,10 +288,10 @@ Description: "Biopsy site of Specimen B (2nd punch)"
 * valueCodeableConcept = $SCT#716934008 "Structure of apical part of peripheral zone of right half prostate (body structure)"
 * derivedFrom[+] = Reference(AttachedImage)
 
-Instance: MacroObsTissueLengthB
+Instance: ex-mii-patho-tissue-length-b
 InstanceOf: SD_MII_Patho_Finding
 Usage: #example
-Title: "MacroObsTissueLengthB"
+Title: "EX MII Patho Tissue Length B"
 Description: "Tissue length of Specimen B (2nd punch)"
 * status = #final
 * category[laboratory-category].coding = $obs-category#laboratory
@@ -303,16 +303,16 @@ Description: "Tissue length of Specimen B (2nd punch)"
 * valueQuantity.code = #cm 
 * derivedFrom[+] = Reference(AttachedImage)
 
-Instance: MacroGrouperB
+Instance: ex-mii-patho-macro-grouper-b
 InstanceOf: SD_MII_Patho_Macroscopic_Grouper
 Usage: #example
-Title: "MacroGrouperB"
+Title: "EX MII Patho Macro Grouper B"
 Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)"
 * status = #final
 * code.coding = $LOINC#22634-0 "Pathology report gross observation"
 * valueString = "Specimen B: Prostataseitenlappen rechts, apikal 1.5cm"
-* hasMember[+] = Reference(MacroObsBiopsySiteB)
-* hasMember[+] = Reference(MacroObsTissueLengthB)
+* hasMember[+] = Reference(ex-mii-patho-biopsy-site-b)
+* hasMember[+] = Reference(ex-mii-patho-tissue-length-b)
 
 //-------------------------------
 // Microscopic Report
@@ -397,8 +397,8 @@ Title: "Diagnostic Conclusion Grouper Example"
 Description: "Example for a diagnostic conclusion"
 * status = #final
 * code.coding = $LOINC#22637-3 "Pathology report diagnosis"
-* derivedFrom[+] = Reference(MacroGrouperA)
-* derivedFrom[+] = Reference(MacroGrouperB)
+* derivedFrom[+] = Reference(ex-mii-patho-macro-grouper-a)
+* derivedFrom[+] = Reference(ex-mii-patho-macro-grouper-b)
 * derivedFrom[+] = Reference(MicroGrouperA)
 * hasMember[+] = Reference(DiagnosticConclusion1)
 * hasMember[+] = Reference(DiagnosticConclusion2)
