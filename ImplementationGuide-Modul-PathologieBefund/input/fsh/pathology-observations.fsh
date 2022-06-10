@@ -228,6 +228,7 @@ Description: "Biopsy site of Specimen A (1st punch)"
 * valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
 * valueCodeableConcept.extension[original-text].valueString = "#macro-a-biopsy-site-value"
 * derivedFrom[+] = Reference(AttachedImage)
+* specimen = Reference(ex-mii-patho-specimen-a)
 
 Instance: MacroObsTissueLengthA
 InstanceOf: SD_MII_Patho_Finding
@@ -245,6 +246,7 @@ Description: "Tissue length of Specimen A (1st punch)"
 * valueQuantity.code = #cm
 * valueQuantity.extension[original-text].valueString = "#macro-a-tissue-length-value"
 * derivedFrom[+] = Reference(AttachedImage)
+* specimen = Reference(ex-mii-patho-specimen-a)
 
 Instance: MacroGrouperA
 InstanceOf: SD_MII_Patho_Macroscopic_Grouper
@@ -271,6 +273,7 @@ Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)
 * valueString = "Makroskopie A"
 * hasMember[+] = Reference(MacroObsBiopsySiteA)
 * hasMember[+] = Reference(MacroObsTissueLengthA)
+* specimen = Reference(ex-mii-patho-specimen-a)
 
 // Macro Specimen B
 Instance: MacroObsBiopsySiteB
@@ -325,6 +328,7 @@ Description: "Histologic type of Specimen A"
 * category[section-type].coding = $LOINC#22635-7 "Pathology report microscopic observation"
 * code = $SCT#371441004 "Histologic type (observable entity)"
 * valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma (morphologic abnormality)"
+* specimen = Reference(ex-mii-patho-specimen-a)
 
 Instance: MicroObsGleasonPatternA
 InstanceOf: SD_MII_Patho_Finding
@@ -336,6 +340,7 @@ Description: "Gleason pattern.primary in prostate tumor for Specimen A"
 * category[section-type].coding = $LOINC#22635-7 "Pathology report microscopic observation"
 * code = $LOINC#44641-9 "Gleason pattern.primary in prostate tumor"
 * valueCodeableConcept = $SCT#369772003 "Pattern 3 (staging scale)"
+* specimen = Reference(ex-mii-patho-specimen-a)
 
 Instance: MicroGrouperA
 InstanceOf: SD_MII_Patho_Microscopic_Grouper
@@ -347,6 +352,7 @@ Description: "Grouper for all Microscopic Observations of Specimen A"
 * valueString = "Specimen A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders..."
 * hasMember[+] = Reference(MicroObsHistologicTypeA)
 * hasMember[+] = Reference(MicroObsGleasonPatternA)
+* specimen = Reference(ex-mii-patho-specimen-a)
 
 //-------------------------------
 // Diagnostic Conclusion

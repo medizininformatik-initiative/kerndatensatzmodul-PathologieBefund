@@ -34,5 +34,8 @@
     {
       "reference": "Observation/MicroObsGleasonPatternA"
     }
-  ]
+  ],
+  "specimen": {
+    "reference": "Specimen/ex-mii-patho-specimen-a"
+  }
 }

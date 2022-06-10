@@ -38,5 +38,8 @@
     {
       "reference": "Observation/MacroObsTissueLengthA"
     }
-  ]
+  ],
+  "specimen": {
+    "reference": "Specimen/ex-mii-patho-specimen-a"
+  }
 }

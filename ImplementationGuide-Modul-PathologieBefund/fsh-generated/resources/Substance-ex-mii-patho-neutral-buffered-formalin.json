@@ -1,0 +1,108 @@
+{
+  "resourceType": "Substance",
+  "id": "ex-mii-patho-neutral-buffered-formalin",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "434162003",
+        "system": "http://snomed.info/sct",
+        "display": "Neutral buffered formalin (substance)"
+      }
+    ]
+  },
+  "ingredient": [
+    {
+      "quantity": {
+        "numerator": {
+          "value": 100,
+          "system": "http://unitsofmeasure.org",
+          "code": "mL",
+          "unit": "ml"
+        },
+        "denominator": {
+          "value": 1
+        }
+      },
+      "substanceCodeableConcept": {
+        "coding": [
+          {
+            "code": "111095003",
+            "system": "http://snomed.info/sct",
+            "display": "Formaldehyde (substance)"
+          }
+        ]
+      }
+    },
+    {
+      "quantity": {
+        "numerator": {
+          "value": 900,
+          "system": "http://unitsofmeasure.org",
+          "code": "mL",
+          "unit": "ml"
+        },
+        "denominator": {
+          "value": 1
+        }
+      },
+      "substanceCodeableConcept": {
+        "coding": [
+          {
+            "code": "444883009",
+            "system": "http://snomed.info/sct",
+            "display": "Distilled water (substance)"
+          }
+        ]
+      }
+    },
+    {
+      "quantity": {
+        "numerator": {
+          "value": 4,
+          "system": "http://unitsofmeasure.org",
+          "code": "g",
+          "unit": "g"
+        },
+        "denominator": {
+          "value": 1
+        }
+      },
+      "substanceCodeableConcept": {
+        "coding": [
+          {
+            "code": "116124008",
+            "system": "http://snomed.info/sct",
+            "display": "Monobasic sodium phosphate (substance)"
+          }
+        ]
+      }
+    },
+    {
+      "quantity": {
+        "numerator": {
+          "value": 6.5,
+          "system": "http://unitsofmeasure.org",
+          "code": "g",
+          "unit": "g"
+        },
+        "denominator": {
+          "value": 1
+        }
+      },
+      "substanceCodeableConcept": {
+        "coding": [
+          {
+            "code": "768971002",
+            "system": "http://snomed.info/sct",
+            "display": "Monobasic sodium phosphate anhydrous (substance)"
+          }
+        ]
+      }
+    }
+  ]
+}

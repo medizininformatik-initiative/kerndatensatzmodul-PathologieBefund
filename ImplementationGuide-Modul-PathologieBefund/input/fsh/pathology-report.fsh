@@ -243,7 +243,7 @@ Description: "Example for SD_MII_Patho_Report"
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
 * subject.reference = "Patient/12345"
 * performer.reference = "Practitioner/2346545"
-* specimen.reference = "Specimen/87689"
+* specimen = Reference(ex-mii-patho-specimen-a)
 * encounter.reference = "Encounter/12345"
 * result[macroscopic-grouper] = Reference(MacroGrouperA)
 * result[macroscopic-grouper] = Reference(MacroGrouperB)

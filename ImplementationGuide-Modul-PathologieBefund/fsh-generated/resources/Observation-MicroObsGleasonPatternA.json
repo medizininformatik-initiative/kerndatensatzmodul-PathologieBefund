@@ -43,5 +43,8 @@
         "display": "Pattern 3 (staging scale)"
       }
     ]
+  },
+  "specimen": {
+    "reference": "Specimen/ex-mii-patho-specimen-a"
   }
 }
