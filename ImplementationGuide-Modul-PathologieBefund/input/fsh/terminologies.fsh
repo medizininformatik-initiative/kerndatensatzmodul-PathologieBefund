@@ -31,7 +31,7 @@ Description: "Specimen processing procedure"
 ValueSet: VS_MII_Patho_Composition_Type_LOINC
 Id: vs-mii-patho-composition-type-loinc
 Title: "VS MII Patho Composition Type"
-Description: "tbd"
+Description: "ValueSet for the types a pathology Composition can have"
 * insert RuleSet1
 * $LOINC#11529-5 "Surgical pathology study"
 * $LOINC#60568-3 "Pathology Synoptic report"
@@ -39,17 +39,29 @@ Description: "tbd"
 * $LOINC#60571-7 "Pathology Consult note.synoptic"
 * $LOINC#35265-8 "Pathology report addendum in Specimen Narrative"
 
-ValueSet: SectionTypes
-Id: SectionTypes
-Title: "SectionTypes"
-Description: "ValueSet for IHE PaLM APSR's section types"
+ValueSet: VS_MII_Patho_Problem_List_SNOMED
+Id: vs-mii-patho-problem-list-snomed
+Title: "VS MII Patho Problem List SNOMED"
+Description: "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)"
 * insert RuleSet1
-// TODO: Include further observation codes from LOINC and SCT? 
-* $LOINC#22636-5 "Pathology report relevant history"
-* $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document"
-* $LOINC#22634-0 "Pathology report gross observation"
-* $LOINC#22635-7 "Pathology report microscopic observation"
-* $LOINC#22637-3 "Pathology report diagnosis"
+* include codes from system $SCT where concept is-a #64572001 "Disease (disorder)" // Condition
+* include codes from system $SCT where concept is-a #418799008 "Finding reported by subject or history provider (finding)" // Symptom
+* include codes from system $SCT where concept is-a #404684003 "Clinical finding (finding)" //Finding
+* include codes from system $SCT where concept is-a #409586006 "Complaint (finding)" //Complaint
+* include codes from system $SCT where concept is-a #248536006 "Finding of functional performance and activity (finding)" //Functional limitation
+* include codes from system $SCT where concept is-a #55607006 "Problem (finding)" //Problem
+* include codes from system $SCT where concept is-a #282291009 "Diagnosis interpretation (observable entity)" //Diagnosis
+
+ValueSet: VS_MII_Patho_Section_Types_LOINC
+Id: vs-mii-patho-section-types-loinc
+Title: "VS MII Patho Section Types LOINC"
+Description: "ValueSet for IHE PaLM APSR's section types"
+* insert RuleSet1 
+* $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document" //Intraoperative Observation Section
+* $LOINC#22634-0 "Pathology report gross observation" //Macroscopic Observation Section
+* $LOINC#22635-7 "Pathology report microscopic observation" //Microscopic Observation Section
+* $LOINC#22637-3 "Pathology report diagnosis" //Diagnostic Conclusion Section
+* $LOINC#77599-9 "Additional documentation" //Additional Observation Section
 
 ValueSet: Faerbesubstanzen
 Id: Faerbesubstanzen

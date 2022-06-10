@@ -73,7 +73,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
 // History of Present Illness
-* supportingInfo[anamnesis] only Reference(sd-mii-patho-history-of-present-illness)
+* supportingInfo[anamnesis] only Reference(sd-mii-patho-personal-history-finding)
 // Active Problems (Fragestellung) - Generic AP Observation
 * supportingInfo[activeProblems] only Reference(SD_MII_Patho_Active_Problems)
   * ^short = "List of possible problems that should be analyzed"
@@ -83,8 +83,8 @@ Description: "Order for the analysis of a sample or a group of samples."
 * category 1..1 MS 
 * category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" (exactly)
 * code MS
-  * coding
-    * system = $LOINC (exactly)
+* code from $LOINC-VS (required)
+    // * system = $LOINC (exactly)
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"
@@ -146,10 +146,13 @@ Description: "List of problems or questions concerning the reason for the Servic
 * code MS
   * coding 1.. MS
     * code 1.. MS
-    * code = $LOINC#42349-1 "Reason for referral (narrative)" (exactly)
+    // * code = $LOINC#42349-1 "Reason for referral (narrative)" (exactly)
+    * code = $LOINC#11450-4 "Problem list - Reported"
 * subject 1.. MS
 * component 1.. MS
+  * ^short = "List of problem entries"
   * code MS
+  * code from vs-mii-patho-problem-list-snomed (extensible)
     * coding MS
       * system 1.. MS
       * code 1.. MS

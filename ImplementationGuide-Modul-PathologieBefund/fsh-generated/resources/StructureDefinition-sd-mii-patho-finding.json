@@ -86,7 +86,7 @@
         "path": "Observation.category.coding",
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/SectionTypes"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-section-types-loinc"
         }
       },
       {

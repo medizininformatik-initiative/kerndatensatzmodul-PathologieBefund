@@ -210,14 +210,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/SectionTypes"
-        },
-        "name": "SectionTypes",
-        "description": "ValueSet for IHE PaLM APSR's section types",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/vs-mii-patho-body-site-snomed-ct"
         },
         "name": "VS MII Patho Body Site [SNOMED CT]",
@@ -237,7 +229,15 @@
           "reference": "ValueSet/vs-mii-patho-composition-type-loinc"
         },
         "name": "VS MII Patho Composition Type",
-        "description": "tbd",
+        "description": "ValueSet for the types a pathology Composition can have",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vs-mii-patho-problem-list-snomed"
+        },
+        "name": "VS MII Patho Problem List SNOMED",
+        "description": "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)",
         "exampleBoolean": false
       },
       {
@@ -246,6 +246,14 @@
         },
         "name": "VS MII Patho Processing Procedure [SNOMED CT]",
         "description": "Specimen processing procedure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vs-mii-patho-section-types-loinc"
+        },
+        "name": "VS MII Patho Section Types LOINC",
+        "description": "ValueSet for IHE PaLM APSR's section types",
         "exampleBoolean": false
       },
       {

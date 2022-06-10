@@ -98,7 +98,7 @@ Description: "Instantiable Observation to describe a generic pathology finding"
 * category ^slicing.description = "Section type"
 * category ^slicing.ordered = false
 * category contains section-type 1..1 MS
-* category[section-type].coding from SectionTypes (required)
+* category[section-type].coding from VS_MII_Patho_Section_Types_LOINC (required)
 * code.coding from $LOINC (preferred)
 * value[x] MS
 * value[x] only string or Quantity or CodeableConcept or Ratio
@@ -142,7 +142,7 @@ Description: "Grouper profile for pathological findings"
 // IntraoperativeObservation
 //--------------------------------------------
 Profile: SD_MII_Patho_Intraoperative_Grouper
-Parent: SD_MII_Patho_Section_Grouper
+Parent: sd-mii-patho-section-grouper
 Id: sd-mii-patho-intraoperative-grouper
 Title: "SD MII Patho Intraoperative Grouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
