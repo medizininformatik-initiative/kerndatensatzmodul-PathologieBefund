@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "Container",
-  "id": "Container",
-  "title": "Container",
-  "description": "tbd",
+  "name": "VS_MII_Patho_Container_Type_SNOMED_DICOM",
+  "id": "vs-mii-patho-container-type-snomed-dicom",
+  "title": "VS MII Patho Container Type SNOMED DICOM",
+  "description": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet",
   "version": "0.1.0",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/Container",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-container-type-snomed-dicom",
   "compose": {
     "include": [
       {
@@ -31,6 +31,18 @@
           {
             "code": "433453003",
             "display": "Specimen container component (physical object)"
+          },
+          {
+            "code": "430863003",
+            "display": "Tissue embedding medium (substance)"
+          },
+          {
+            "code": "433472003",
+            "display": "Microscope slide coverslip (physical object)"
+          },
+          {
+            "code": "430862008",
+            "display": "Microscope slide mounting medium (substance)"
           }
         ]
       },
@@ -56,6 +68,18 @@
           {
             "code": "A-01025",
             "display": "Specimen well"
+          },
+          {
+            "code": "CID8114",
+            "display": "Fixatives"
+          },
+          {
+            "code": "CID8102",
+            "display": "Container Component Types"
+          },
+          {
+            "code": "CID8115",
+            "display": "Specimen Embedding"
           }
         ]
       }

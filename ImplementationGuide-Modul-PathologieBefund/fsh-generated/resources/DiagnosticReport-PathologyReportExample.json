@@ -42,7 +42,7 @@
   },
   "basedOn": [
     {
-      "reference": "ServiceRequest/PathologyRequestExample"
+      "reference": "sd-mii-patho-service-request"
     }
   ],
   "status": "final",
@@ -56,7 +56,7 @@
   ],
   "specimen": [
     {
-      "reference": "Specimen/87689"
+      "reference": "Specimen/ex-mii-patho-specimen-a"
     }
   ],
   "encounter": {
@@ -64,7 +64,7 @@
   },
   "result": [
     {
-      "reference": "Observation/MacroGrouperB"
+      "reference": "Observation/ex-mii-patho-macro-grouper-b"
     },
     {
       "reference": "Observation/MicroGrouperA"

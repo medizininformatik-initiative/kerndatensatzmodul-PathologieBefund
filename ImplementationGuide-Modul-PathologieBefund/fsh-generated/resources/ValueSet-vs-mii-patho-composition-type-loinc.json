@@ -4,7 +4,7 @@
   "name": "VS_MII_Patho_Composition_Type_LOINC",
   "id": "vs-mii-patho-composition-type-loinc",
   "title": "VS MII Patho Composition Type",
-  "description": "tbd",
+  "description": "ValueSet for the types a pathology Composition can have",
   "version": "0.1.0",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-composition-type-loinc",
   "compose": {

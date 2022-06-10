@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MacroObsTissueLengthA",
+  "id": "ex-mii-patho-biopsy-site-a",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
@@ -29,33 +29,39 @@
     "extension": [
       {
         "url": "http://hl7.org/fhir/StructureDefinition/originalText",
-        "valueString": "#macro-a-tissue-length-key"
+        "valueString": "#macro-a-biopsy-site-key"
       }
     ],
     "coding": [
       {
-        "code": "44619-5",
+        "code": "94738-2",
         "system": "http://loinc.org",
-        "display": "Length of tissue core(s)"
+        "display": "Biopsy site"
       }
     ]
   },
-  "valueQuantity": {
+  "valueCodeableConcept": {
     "extension": [
       {
         "url": "http://hl7.org/fhir/StructureDefinition/originalText",
-        "valueString": "#macro-a-tissue-length-value"
+        "valueString": "#macro-a-biopsy-site-value"
       }
     ],
-    "value": 1.2,
-    "unit": "cm",
-    "system": "http://unitsofmeasure.org",
-    "code": "cm"
+    "coding": [
+      {
+        "code": "716917000",
+        "system": "http://snomed.info/sct",
+        "display": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+      }
+    ]
   },
   "status": "final",
   "derivedFrom": [
     {
       "reference": "AttachedImage"
     }
-  ]
+  ],
+  "specimen": {
+    "reference": "Specimen/ex-mii-patho-specimen-a"
+  }
 }

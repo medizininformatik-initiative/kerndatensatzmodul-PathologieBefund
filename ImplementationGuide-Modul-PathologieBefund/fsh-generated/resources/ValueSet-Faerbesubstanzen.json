@@ -15,7 +15,17 @@
           {
             "property": "concept",
             "op": "is-a",
-            "value": "127790008"
+            "value": "45389009"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "397165007"
           }
         ]
       }

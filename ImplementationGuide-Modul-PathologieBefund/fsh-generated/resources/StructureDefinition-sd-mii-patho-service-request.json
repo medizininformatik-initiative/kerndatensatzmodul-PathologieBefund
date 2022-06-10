@@ -250,12 +250,11 @@
       {
         "id": "ServiceRequest.code",
         "path": "ServiceRequest.code",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.code.coding.system",
-        "path": "ServiceRequest.code.coding.system",
-        "fixedUri": "http://loinc.org"
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://loinc.org/vs"
+        }
       },
       {
         "id": "ServiceRequest.subject",
@@ -352,7 +351,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-history-of-present-illness"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-personal-history-finding"
             ]
           }
         ],

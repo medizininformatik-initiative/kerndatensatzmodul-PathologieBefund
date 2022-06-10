@@ -12,11 +12,13 @@ Description: "Pathology specimen"
 * request only Reference(SD_MII_Patho_Service_Request)
 * processing.procedure 
   * extension contains $fhir-original-text named original-text 0..1 MS
+* container MS
+  * type from VS_MII_Patho_Container_Type_SNOMED_DICOM (required)
 
-Instance: SpecimenExample
+Instance: ex-mii-patho-specimen-a
 InstanceOf: SD_MII_Patho_Specimen
 Usage: #example
-Title: "SpecimenExample"
+Title: "EX MII Patho Specimen A"
 Description: "Example for SD_MII_Patho_Specimen - Specimen A"
 * status = #available
 * text.status = #additional
@@ -64,4 +66,61 @@ Description: "Example for SD_MII_Patho_Specimen - Specimen A"
     * value = 30
 * processing[=].procedure.coding[sct] = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
 * processing[=].procedure.extension[original-text].valueString = "#bearbeitungsprozedur"
-// TODO: Add Additive/Faerbung
+* processing[+].extension[temperaturbedingungen].valueRange
+  * low
+    * unit = "°C"
+    * system = $UCUM
+    * code = #Cel
+    * value = 0
+  * high 
+    * unit = "°C"
+    * system = $UCUM
+    * code = #Cel
+    * value = 30
+* processing[=].procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method (procedure)"
+* processing[=].procedure.extension[original-text].valueString = "#faerbung"
+* processing[=].additive = Reference(ex-mii-patho-neutral-buffered-formalin)
+
+Instance: ex-mii-patho-neutral-buffered-formalin
+InstanceOf: $mii-bio-additive
+Usage: #example
+Title: "EX MII Patho Neutral Buffered Formalin"
+Description: "tbd"
+* code.coding = $SCT#434162003 "Neutral buffered formalin (substance)"
+* ingredient[+].quantity
+  * numerator
+    * value = 100
+    * system = $UCUM
+    * code = #mL
+    * unit = "ml"
+  * denominator 
+    * value = 1
+* ingredient[=].substanceCodeableConcept = $SCT#111095003 "Formaldehyde (substance)"
+* ingredient[+].quantity
+  * numerator
+    * value = 900
+    * system = $UCUM
+    * code = #mL
+    * unit = "ml"
+  * denominator 
+    * value = 1
+* ingredient[=].substanceCodeableConcept = $SCT#444883009 "Distilled water (substance)"
+* ingredient[+].quantity
+  * numerator
+    * value = 4
+    * system = $UCUM
+    * code = #g
+    * unit = "g"
+  * denominator 
+    * value = 1
+* ingredient[=].substanceCodeableConcept = $SCT#116124008 "Monobasic sodium phosphate (substance)"
+* ingredient[+].quantity
+  * numerator
+    * value = 6.5
+    * system = $UCUM
+    * code = #g
+    * unit = "g"
+  * denominator 
+    * value = 1
+* ingredient[=].substanceCodeableConcept = $SCT#768971002 "Monobasic sodium phosphate anhydrous (substance)"
+

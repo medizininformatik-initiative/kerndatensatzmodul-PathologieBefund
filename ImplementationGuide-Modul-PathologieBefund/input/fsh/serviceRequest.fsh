@@ -73,18 +73,16 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
 // History of Present Illness
-* supportingInfo[anamnesis] only Reference(sd-mii-patho-history-of-present-illness)
-// Active Problems (Fragestellung) - Generic AP Observation
+* supportingInfo[anamnesis] only Reference(sd-mii-patho-personal-history-finding)
+// Active Problems (Fragestellung) 
 * supportingInfo[activeProblems] only Reference(SD_MII_Patho_Active_Problems)
   * ^short = "List of possible problems that should be analyzed"
-
 // Zusaetzliche Elemente
 // category for searching purposes 
 * category 1..1 MS 
 * category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" (exactly)
 * code MS
-  * coding
-    * system = $LOINC (exactly)
+* code from $LOINC-VS (required)
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"
@@ -92,23 +90,23 @@ Description: "Order for the analysis of a sample or a group of samples."
 //------------------------------------------------
 // History of Present Illness - Anamnese ($LOINC#10164-2 "History of Present Illness Narrative")
 //------------------------------------------------
-Profile: SD_MII_Patho_History_of_Present_Illness
-Parent: Observation
-Id: sd-mii-patho-history-of-present-illness
-Title: "SD MII Patho History of Present Illness"
-Description: "Profile for history of present illness (anamnesis)"
-* insert RuleSet1
-* text MS
-* status MS
-* code MS
-  * coding 1.. MS
-  * coding = $LOINC#10164-2 "History of Present Illness Narrative" (exactly)
-    * code 1.. MS
-    * system 1.. MS
-    * display MS
-* subject 1.. MS 
-* hasMember MS
-* hasMember only Reference(sd-mii-patho-personal-history-finding)
+// Profile: SD_MII_Patho_History_of_Present_Illness
+// Parent: Observation
+// Id: sd-mii-patho-history-of-present-illness
+// Title: "SD MII Patho History of Present Illness"
+// Description: "Profile for history of present illness (anamnesis)"
+// * insert RuleSet1
+// * text MS
+// * status MS
+// * code MS
+//   * coding 1.. MS
+//   * coding = $LOINC#10164-2 "History of Present Illness Narrative" (exactly)
+//     * code 1.. MS
+//     * system 1.. MS
+//     * display MS
+// * subject 1.. MS 
+// * hasMember MS
+// * hasMember only Reference(sd-mii-patho-personal-history-finding)
 
 //------------------------------------------------
 // Personal History Finding - coded symptom for anamnesis
@@ -146,10 +144,12 @@ Description: "List of problems or questions concerning the reason for the Servic
 * code MS
   * coding 1.. MS
     * code 1.. MS
-    * code = $LOINC#42349-1 "Reason for referral (narrative)" (exactly)
+    * code = $LOINC#11450-4 "Problem list - Reported"
 * subject 1.. MS
 * component 1.. MS
+  * ^short = "List of problem entries"
   * code MS
+  * code from vs-mii-patho-problem-list-snomed (extensible)
     * coding MS
       * system 1.. MS
       * code 1.. MS
@@ -160,10 +160,10 @@ Description: "List of problems or questions concerning the reason for the Servic
 //---------------------------
 //Examples
 //---------------------------
-Instance: PathologyRequestExample
+Instance: ex-mii-patho-request
 InstanceOf: sd-mii-patho-service-request
 Usage: #example
-Title: "PathologyRequestExample"
+Title: "EX MII Patho Request"
 Description: "Pathology Report Example "
 * identifier[+].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[=].value = "KHXX_ENDO_18.123451"

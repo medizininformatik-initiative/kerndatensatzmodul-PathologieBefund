@@ -43,5 +43,8 @@
         "display": "Acinar adenocarcinoma (morphologic abnormality)"
       }
     ]
+  },
+  "specimen": {
+    "reference": "Specimen/ex-mii-patho-specimen-a"
   }
 }

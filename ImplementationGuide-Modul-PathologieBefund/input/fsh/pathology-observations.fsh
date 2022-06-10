@@ -98,7 +98,7 @@ Description: "Instantiable Observation to describe a generic pathology finding"
 * category ^slicing.description = "Section type"
 * category ^slicing.ordered = false
 * category contains section-type 1..1 MS
-* category[section-type].coding from SectionTypes (required)
+* category[section-type].coding from VS_MII_Patho_Section_Types_LOINC (required)
 * code.coding from $LOINC (preferred)
 * value[x] MS
 * value[x] only string or Quantity or CodeableConcept or Ratio
@@ -142,7 +142,7 @@ Description: "Grouper profile for pathological findings"
 // IntraoperativeObservation
 //--------------------------------------------
 Profile: SD_MII_Patho_Intraoperative_Grouper
-Parent: SD_MII_Patho_Section_Grouper
+Parent: sd-mii-patho-section-grouper
 Id: sd-mii-patho-intraoperative-grouper
 Title: "SD MII Patho Intraoperative Grouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
@@ -215,10 +215,10 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
 // Macroscopic Report
 //---------------------------------
 // Macro Specimen A
-Instance: MacroObsBiopsySiteA
+Instance: ex-mii-patho-biopsy-site-a
 InstanceOf: SD_MII_Patho_Finding
 Usage: #example
-Title: "MacroObsBiopsySiteA"
+Title: "EX MII Patho Biopsy Site A"
 Description: "Biopsy site of Specimen A (1st punch)"
 * status = #final
 * category[laboratory-category].coding = $obs-category#laboratory
@@ -228,11 +228,12 @@ Description: "Biopsy site of Specimen A (1st punch)"
 * valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
 * valueCodeableConcept.extension[original-text].valueString = "#macro-a-biopsy-site-value"
 * derivedFrom[+] = Reference(AttachedImage)
+* specimen = Reference(ex-mii-patho-specimen-a)
 
-Instance: MacroObsTissueLengthA
+Instance: ex-mii-patho-tissue-length-a
 InstanceOf: SD_MII_Patho_Finding
 Usage: #example
-Title: "MacroObsTissueLengthA"
+Title: "EX MII Patho Tissue Length A"
 Description: "Tissue length of Specimen A (1st punch)"
 * status = #final
 * category[laboratory-category].coding = $obs-category#laboratory
@@ -245,11 +246,12 @@ Description: "Tissue length of Specimen A (1st punch)"
 * valueQuantity.code = #cm
 * valueQuantity.extension[original-text].valueString = "#macro-a-tissue-length-value"
 * derivedFrom[+] = Reference(AttachedImage)
+* specimen = Reference(ex-mii-patho-specimen-a)
 
-Instance: MacroGrouperA
+Instance: ex-mii-patho-macro-grouper-a
 InstanceOf: SD_MII_Patho_Macroscopic_Grouper
 Usage: #example
-Title: "MacroGrouperA"
+Title: "EX MII Patho Macro Grouper A"
 Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
 * text.status = #additional
 * text.div = "
@@ -269,14 +271,15 @@ Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)
 * status = #final
 * code.coding = $LOINC#22634-0 "Pathology report gross observation"
 * valueString = "Makroskopie A"
-* hasMember[+] = Reference(MacroObsBiopsySiteA)
-* hasMember[+] = Reference(MacroObsTissueLengthA)
+* hasMember[+] = Reference(ex-mii-patho-biopsy-site-a)
+* hasMember[+] = Reference(ex-mii-patho-tissue-length-a)
+* specimen = Reference(ex-mii-patho-specimen-a)
 
 // Macro Specimen B
-Instance: MacroObsBiopsySiteB
+Instance: ex-mii-patho-biopsy-site-b
 InstanceOf: SD_MII_Patho_Finding
 Usage: #example
-Title: "MacroObsBiopsySiteB"
+Title: "EX MII Patho Biopsy Site B"
 Description: "Biopsy site of Specimen B (2nd punch)"
 * status = #final
 * category[laboratory-category].coding = $obs-category#laboratory
@@ -285,10 +288,10 @@ Description: "Biopsy site of Specimen B (2nd punch)"
 * valueCodeableConcept = $SCT#716934008 "Structure of apical part of peripheral zone of right half prostate (body structure)"
 * derivedFrom[+] = Reference(AttachedImage)
 
-Instance: MacroObsTissueLengthB
+Instance: ex-mii-patho-tissue-length-b
 InstanceOf: SD_MII_Patho_Finding
 Usage: #example
-Title: "MacroObsTissueLengthB"
+Title: "EX MII Patho Tissue Length B"
 Description: "Tissue length of Specimen B (2nd punch)"
 * status = #final
 * category[laboratory-category].coding = $obs-category#laboratory
@@ -300,16 +303,16 @@ Description: "Tissue length of Specimen B (2nd punch)"
 * valueQuantity.code = #cm 
 * derivedFrom[+] = Reference(AttachedImage)
 
-Instance: MacroGrouperB
+Instance: ex-mii-patho-macro-grouper-b
 InstanceOf: SD_MII_Patho_Macroscopic_Grouper
 Usage: #example
-Title: "MacroGrouperB"
+Title: "EX MII Patho Macro Grouper B"
 Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)"
 * status = #final
 * code.coding = $LOINC#22634-0 "Pathology report gross observation"
 * valueString = "Specimen B: Prostataseitenlappen rechts, apikal 1.5cm"
-* hasMember[+] = Reference(MacroObsBiopsySiteB)
-* hasMember[+] = Reference(MacroObsTissueLengthB)
+* hasMember[+] = Reference(ex-mii-patho-biopsy-site-b)
+* hasMember[+] = Reference(ex-mii-patho-tissue-length-b)
 
 //-------------------------------
 // Microscopic Report
@@ -325,6 +328,7 @@ Description: "Histologic type of Specimen A"
 * category[section-type].coding = $LOINC#22635-7 "Pathology report microscopic observation"
 * code = $SCT#371441004 "Histologic type (observable entity)"
 * valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma (morphologic abnormality)"
+* specimen = Reference(ex-mii-patho-specimen-a)
 
 Instance: MicroObsGleasonPatternA
 InstanceOf: SD_MII_Patho_Finding
@@ -336,6 +340,7 @@ Description: "Gleason pattern.primary in prostate tumor for Specimen A"
 * category[section-type].coding = $LOINC#22635-7 "Pathology report microscopic observation"
 * code = $LOINC#44641-9 "Gleason pattern.primary in prostate tumor"
 * valueCodeableConcept = $SCT#369772003 "Pattern 3 (staging scale)"
+* specimen = Reference(ex-mii-patho-specimen-a)
 
 Instance: MicroGrouperA
 InstanceOf: SD_MII_Patho_Microscopic_Grouper
@@ -347,6 +352,7 @@ Description: "Grouper for all Microscopic Observations of Specimen A"
 * valueString = "Specimen A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders..."
 * hasMember[+] = Reference(MicroObsHistologicTypeA)
 * hasMember[+] = Reference(MicroObsGleasonPatternA)
+* specimen = Reference(ex-mii-patho-specimen-a)
 
 //-------------------------------
 // Diagnostic Conclusion
@@ -391,8 +397,8 @@ Title: "Diagnostic Conclusion Grouper Example"
 Description: "Example for a diagnostic conclusion"
 * status = #final
 * code.coding = $LOINC#22637-3 "Pathology report diagnosis"
-* derivedFrom[+] = Reference(MacroGrouperA)
-* derivedFrom[+] = Reference(MacroGrouperB)
+* derivedFrom[+] = Reference(ex-mii-patho-macro-grouper-a)
+* derivedFrom[+] = Reference(ex-mii-patho-macro-grouper-b)
 * derivedFrom[+] = Reference(MicroGrouperA)
 * hasMember[+] = Reference(DiagnosticConclusion1)
 * hasMember[+] = Reference(DiagnosticConclusion2)

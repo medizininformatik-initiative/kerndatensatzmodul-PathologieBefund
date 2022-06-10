@@ -104,6 +104,14 @@
         "id": "Specimen.processing:lagerprozess.procedure.extension",
         "path": "Specimen.processing.procedure.extension",
         "mustSupport": true
+      },
+      {
+        "id": "Specimen.container.type",
+        "path": "Specimen.container.type",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-container-type-snomed-dicom"
+        }
       }
     ]
   }

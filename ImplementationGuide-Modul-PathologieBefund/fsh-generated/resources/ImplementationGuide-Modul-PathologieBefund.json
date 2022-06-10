@@ -106,14 +106,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/sd-mii-patho-history-of-present-illness"
-        },
-        "name": "SD MII Patho History of Present Illness",
-        "description": "Profile for history of present illness (anamnesis)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/sd-mii-patho-intraoperative-grouper"
         },
         "name": "SD MII Patho Intraoperative Grouper",
@@ -194,26 +186,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/Container"
-        },
-        "name": "Container",
-        "description": "tbd",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/Faerbesubstanzen"
         },
         "name": "Faerbesubstanzen",
         "description": "tbd",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/SectionTypes"
-        },
-        "name": "SectionTypes",
-        "description": "ValueSet for IHE PaLM APSR's section types",
         "exampleBoolean": false
       },
       {
@@ -237,7 +213,23 @@
           "reference": "ValueSet/vs-mii-patho-composition-type-loinc"
         },
         "name": "VS MII Patho Composition Type",
-        "description": "tbd",
+        "description": "ValueSet for the types a pathology Composition can have",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vs-mii-patho-container-type-snomed-dicom"
+        },
+        "name": "VS MII Patho Container Type SNOMED DICOM",
+        "description": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vs-mii-patho-problem-list-snomed"
+        },
+        "name": "VS MII Patho Problem List SNOMED",
+        "description": "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)",
         "exampleBoolean": false
       },
       {
@@ -246,6 +238,14 @@
         },
         "name": "VS MII Patho Processing Procedure [SNOMED CT]",
         "description": "Specimen processing procedure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vs-mii-patho-section-types-loinc"
+        },
+        "name": "VS MII Patho Section Types LOINC",
+        "description": "ValueSet for IHE PaLM APSR's section types",
         "exampleBoolean": false
       },
       {
@@ -306,54 +306,6 @@
       },
       {
         "reference": {
-          "reference": "Observation/MacroGrouperA"
-        },
-        "name": "MacroGrouperA",
-        "description": "Grouper for all Macroscopic Observations of Specimen A (1st punch)",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-macroscopic-grouper"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MacroGrouperB"
-        },
-        "name": "MacroGrouperB",
-        "description": "Grouper for all Macroscopic Observations of Specimen B (2nd punch)",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-macroscopic-grouper"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MacroObsBiopsySiteA"
-        },
-        "name": "MacroObsBiopsySiteA",
-        "description": "Biopsy site of Specimen A (1st punch)",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MacroObsBiopsySiteB"
-        },
-        "name": "MacroObsBiopsySiteB",
-        "description": "Biopsy site of Specimen B (2nd punch)",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MacroObsTissueLengthA"
-        },
-        "name": "MacroObsTissueLengthA",
-        "description": "Tissue length of Specimen A (1st punch)",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MacroObsTissueLengthB"
-        },
-        "name": "MacroObsTissueLengthB",
-        "description": "Tissue length of Specimen B (2nd punch)",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
-      },
-      {
-        "reference": {
           "reference": "Observation/MicroGrouperA"
         },
         "name": "MicroGrouperA",
@@ -386,19 +338,75 @@
       },
       {
         "reference": {
-          "reference": "ServiceRequest/PathologyRequestExample"
+          "reference": "Observation/ex-mii-patho-biopsy-site-a"
         },
-        "name": "PathologyRequestExample",
+        "name": "EX MII Patho Biopsy Site A",
+        "description": "Biopsy site of Specimen A (1st punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-biopsy-site-b"
+        },
+        "name": "EX MII Patho Biopsy Site B",
+        "description": "Biopsy site of Specimen B (2nd punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-macro-grouper-a"
+        },
+        "name": "EX MII Patho Macro Grouper A",
+        "description": "Grouper for all Macroscopic Observations of Specimen A (1st punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-macroscopic-grouper"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-macro-grouper-b"
+        },
+        "name": "EX MII Patho Macro Grouper B",
+        "description": "Grouper for all Macroscopic Observations of Specimen B (2nd punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-macroscopic-grouper"
+      },
+      {
+        "reference": {
+          "reference": "Substance/ex-mii-patho-neutral-buffered-formalin"
+        },
+        "name": "EX MII Patho Neutral Buffered Formalin",
+        "description": "tbd",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/ex-mii-patho-request"
+        },
+        "name": "EX MII Patho Request",
         "description": "Pathology Report Example ",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-service-request"
       },
       {
         "reference": {
-          "reference": "Specimen/SpecimenExample"
+          "reference": "Specimen/ex-mii-patho-specimen-a"
         },
-        "name": "SpecimenExample",
+        "name": "EX MII Patho Specimen A",
         "description": "Example for SD_MII_Patho_Specimen - Specimen A",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-tissue-length-a"
+        },
+        "name": "EX MII Patho Tissue Length A",
+        "description": "Tissue length of Specimen A (1st punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-tissue-length-b"
+        },
+        "name": "EX MII Patho Tissue Length B",
+        "description": "Tissue length of Specimen B (2nd punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
       },
       {
         "reference": {
