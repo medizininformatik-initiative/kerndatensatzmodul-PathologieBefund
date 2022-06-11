@@ -170,10 +170,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/sd-mii-patho-substance"
+          "reference": "StructureDefinition/sd-mii-patho-staining"
         },
-        "name": "SD MII Patho Substance",
-        "description": "Substance profile for pathology",
+        "name": "SD MII Patho Staining",
+        "description": "Substance profile for staining",
         "exampleBoolean": false
       },
       {
@@ -186,9 +186,9 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/Additive"
+          "reference": "ValueSet/vs-mii-patho-additive-snomed"
         },
-        "name": "Additive",
+        "name": "VS MII Patho Additive SNOMED",
         "description": "Additive bei der Probenbearbeitung (Fixationsmittel, Einbettungs- und Eindeckungsmedien, Färbungen)",
         "exampleBoolean": false
       },
@@ -222,14 +222,6 @@
         },
         "name": "VS MII Patho Container Type SNOMED DICOM",
         "description": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/vs-mii-patho-faerbesubstanzen-snomed"
-        },
-        "name": "VS MII Patho Faerbesubstanzen SNOMED",
-        "description": "ValueSet for staining substances",
         "exampleBoolean": false
       },
       {
@@ -274,6 +266,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/vs-mii-patho-staining-snomed"
+        },
+        "name": "VS MII Patho Staining SNOMED",
+        "description": "ValueSet for staining substances",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "Composition/CompositionExample"
         },
         "name": "Composition Example",
@@ -282,75 +282,19 @@
       },
       {
         "reference": {
-          "reference": "Observation/DiagnosticConclusion1"
-        },
-        "name": "DiagnosticConclusion1",
-        "description": "Example for a diagnostic conclusion",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
-      },
-      {
-        "reference": {
-          "reference": "Observation/DiagnosticConclusion2"
-        },
-        "name": "DiagnosticConclusion2",
-        "description": "Example for diagnostic conclusion",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
-      },
-      {
-        "reference": {
-          "reference": "Observation/DiagnosticConclusion3"
-        },
-        "name": "DiagnosticConclusion3",
-        "description": "Example for diagnostic conclusion",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
-      },
-      {
-        "reference": {
-          "reference": "Observation/DiagnosticConclusionGrouper"
-        },
-        "name": "Diagnostic Conclusion Grouper Example",
-        "description": "Example for a diagnostic conclusion",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-diagnostic-conclusion-grouper"
-      },
-      {
-        "reference": {
-          "reference": "Media/ImageExample"
-        },
-        "name": "ImageExample",
-        "description": "Exemplarischer Befundbericht - 3",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-attached-image"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MicroGrouperA"
-        },
-        "name": "MicroGrouperA",
-        "description": "Grouper for all Microscopic Observations of Specimen A",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-microscopic-grouper"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MicroObsGleasonPatternA"
-        },
-        "name": "MicroObsGleasonPatternA",
-        "description": "Gleason pattern.primary in prostate tumor for Specimen A",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MicroObsHistologicTypeA"
-        },
-        "name": "MicroObsHistologicTypeA",
-        "description": "Histologic type of Specimen A",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
-      },
-      {
-        "reference": {
           "reference": "DiagnosticReport/PathologyReportExample"
         },
         "name": "Pathology Report Example",
         "description": "Example for SD_MII_Patho_Report",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-report"
+      },
+      {
+        "reference": {
+          "reference": "Media/ex-mii-patho-attached-image"
+        },
+        "name": "EX MII Patho Attached Image",
+        "description": "Example for Attached Image",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-attached-image"
       },
       {
         "reference": {
@@ -370,6 +314,54 @@
       },
       {
         "reference": {
+          "reference": "Observation/ex-mii-patho-diagnostic-conclusion-1"
+        },
+        "name": "EX MII Patho Diagnostic Conclusion 1",
+        "description": "Example for a diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-diagnostic-conclusion-2"
+        },
+        "name": "EX MII Patho Diagnostic Conclusion 2",
+        "description": "Example for diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-diagnostic-conclusion-3"
+        },
+        "name": "EX MII Patho Diagnostic Conclusion 3",
+        "description": "Example for diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-diagnostic-conclusion-grouper"
+        },
+        "name": "EX MII Patho Diagnostic Conclusion Grouper",
+        "description": "Example for a diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-diagnostic-conclusion-grouper"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-gleason-pattern-a"
+        },
+        "name": "EX MII Patho Gleason Pattern A",
+        "description": "[Microscopic Finding] Gleason pattern.primary in prostate tumor for Specimen A",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-histologic-type-a"
+        },
+        "name": "EX MII Patho Histologic Type A",
+        "description": "[Microscopic Finding] Histologic type of Specimen A",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
           "reference": "Observation/ex-mii-patho-macro-grouper-a"
         },
         "name": "EX MII Patho Macro Grouper A",
@@ -383,6 +375,14 @@
         "name": "EX MII Patho Macro Grouper B",
         "description": "Grouper for all Macroscopic Observations of Specimen B (2nd punch)",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-macroscopic-grouper"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ex-mii-patho-micro-grouper-a"
+        },
+        "name": "EX MII Patho Micro Grouper A",
+        "description": "Grouper for all Microscopic Observations of Specimen A",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-microscopic-grouper"
       },
       {
         "reference": {

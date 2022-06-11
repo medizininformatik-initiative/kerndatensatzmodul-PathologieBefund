@@ -10,18 +10,30 @@ Description: "Pathology specimen"
   * method 1.. MS
   * method from VS_MII_Patho_Collection_Method_SNOMED_CT (extensible)
 * request only Reference(SD_MII_Patho_Service_Request)
-* processing.procedure 
-  * extension contains $fhir-original-text named original-text 0..1 MS
+* processing
+  * procedure 
+    * extension contains $fhir-original-text named original-text 0..1 MS
+  * additive ^slicing.discriminator.type = #profile
+  * additive ^slicing.discriminator.path = "$this"
+  * additive ^slicing.rules = #open
+  // * additive ^slicing.description = "tbd"
+  * additive ^slicing.ordered = false
+  * additive contains additive 0..* MS 
+                  and staining 0..* MS
+  * additive[additive] only Reference($mii-bio-additive)
+  * additive[staining] only Reference(sd-mii-patho-staining)
+    
+
 * container MS
   * type from VS_MII_Patho_Container_Type_SNOMED_DICOM (required)
 
-Profile: SD_MII_Patho_Substance
+Profile: SD_MII_Patho_Staining
 Parent: $mii-bio-additive
-Id: sd-mii-patho-substance
-Title: "SD MII Patho Substance"
-Description: "Substance profile for pathology"
+Id: sd-mii-patho-staining
+Title: "SD MII Patho Staining"
+Description: "Substance profile for staining"
 * insert RuleSet1
-* code from vs-mii-patho-faerbesubstanzen-snomed (extensible)
+* code from vs-mii-patho-staining-snomed (extensible)
 
 Instance: ex-mii-patho-specimen-a
 InstanceOf: SD_MII_Patho_Specimen

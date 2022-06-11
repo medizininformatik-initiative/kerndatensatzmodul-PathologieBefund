@@ -67,10 +67,10 @@
       "reference": "Observation/ex-mii-patho-macro-grouper-b"
     },
     {
-      "reference": "Observation/MicroGrouperA"
+      "reference": "Observation/ex-mii-patho-micro-grouper-a"
     },
     {
-      "reference": "Observation/DiagnosticConclusionGrouper"
+      "reference": "Observation/ex-mii-patho-diagnostic-conclusion-grouper"
     }
   ],
   "conclusion": "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2",
@@ -88,7 +88,7 @@
   "media": [
     {
       "link": {
-        "reference": "Media/ImageExample"
+        "reference": "Media/ex-mii-patho-attached-image"
       },
       "comment": "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
     }

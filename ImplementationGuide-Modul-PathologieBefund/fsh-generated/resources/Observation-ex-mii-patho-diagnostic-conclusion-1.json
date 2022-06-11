@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MicroObsHistologicTypeA",
+  "id": "ex-mii-patho-diagnostic-conclusion-1",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
@@ -18,9 +18,9 @@
     {
       "coding": [
         {
-          "code": "22635-7",
+          "code": "22637-3",
           "system": "http://loinc.org",
-          "display": "Pathology report microscopic observation"
+          "display": "Pathology report diagnosis"
         }
       ]
     }
@@ -29,22 +29,19 @@
   "code": {
     "coding": [
       {
-        "code": "371441004",
-        "system": "http://snomed.info/sct",
-        "display": "Histologic type (observable entity)"
+        "code": "59847-4",
+        "system": "http://loinc.org",
+        "display": "Histology and Behavior ICD-O-3 Cancer"
       }
     ]
   },
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "45410002",
-        "system": "http://snomed.info/sct",
-        "display": "Acinar adenocarcinoma (morphologic abnormality)"
+        "code": "8140/3",
+        "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+        "display": "Adenokarzinom (azinär)"
       }
     ]
-  },
-  "specimen": {
-    "reference": "Specimen/ex-mii-patho-specimen-a"
   }
 }

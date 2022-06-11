@@ -72,14 +72,14 @@ Description: "ValueSet for a preferred set of ServiceRequest codes"
 * $LOINC#11526-1 "Pathology study"
 * $LOINC#11529-5 "Surgical pathology study"
 
-ValueSet: VS_MII_Patho_Faerbesubstanzen_SNOMED
-Id: vs-mii-patho-faerbesubstanzen-snomed
-Title: "VS MII Patho Faerbesubstanzen SNOMED"
+ValueSet: VS_MII_Patho_Staining_SNOMED
+Id: vs-mii-patho-staining-snomed
+Title: "VS MII Patho Staining SNOMED"
 Description: "ValueSet for staining substances"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #45389009 "Tissue stain (substance)"
 * include codes from system $SCT where concept is-a #397165007 "Stain (substance)"
-* include codes from system $bio-sct-additive
+// * include codes from valueset $bio-sct-additive
 
 
 ValueSet: VS_MII_Patho_Container_Type_SNOMED_DICOM
@@ -111,9 +111,9 @@ Description: "ValueSet for container type based on IHE PaLM's ContainerEntityCla
 * $DICOM#CID8102 "Container Component Types"
 * $DICOM#CID8115 "Specimen Embedding"
 
-ValueSet: Additive
-Id: Additive
-Title: "Additive"
+ValueSet: VS_MII_Patho_Additive_SNOMED
+Id: vs-mii-patho-additive-snomed
+Title: "VS MII Patho Additive SNOMED"
 Description: "Additive bei der Probenbearbeitung (Fixationsmittel, Einbettungs- und Eindeckungsmedien, Färbungen)"
 * insert RuleSet1 
 * include codes from system $SCT where concept is-a #430863003 "Tissue embedding medium (substance)"

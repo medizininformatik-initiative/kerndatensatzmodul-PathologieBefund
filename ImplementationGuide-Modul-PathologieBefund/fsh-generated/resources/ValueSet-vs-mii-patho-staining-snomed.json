@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "Additive",
-  "id": "Additive",
-  "title": "Additive",
-  "description": "Additive bei der Probenbearbeitung (Fixationsmittel, Einbettungs- und Eindeckungsmedien, Färbungen)",
+  "name": "VS_MII_Patho_Staining_SNOMED",
+  "id": "vs-mii-patho-staining-snomed",
+  "title": "VS MII Patho Staining SNOMED",
+  "description": "ValueSet for staining substances",
   "version": "0.1.0",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/Additive",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-staining-snomed",
   "compose": {
     "include": [
       {
@@ -15,7 +15,7 @@
           {
             "property": "concept",
             "op": "is-a",
-            "value": "430863003"
+            "value": "45389009"
           }
         ]
       },
@@ -25,7 +25,7 @@
           {
             "property": "concept",
             "op": "is-a",
-            "value": "430864009"
+            "value": "397165007"
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MicroGrouperA",
+  "id": "ex-mii-patho-micro-grouper-a",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-microscopic-grouper"
@@ -29,10 +29,10 @@
   "valueString": "Specimen A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders...",
   "hasMember": [
     {
-      "reference": "Observation/MicroObsHistologicTypeA"
+      "reference": "Observation/ex-mii-patho-histologic-type-a"
     },
     {
-      "reference": "Observation/MicroObsGleasonPatternA"
+      "reference": "Observation/ex-mii-patho-gleason-pattern-a"
     }
   ],
   "specimen": {
