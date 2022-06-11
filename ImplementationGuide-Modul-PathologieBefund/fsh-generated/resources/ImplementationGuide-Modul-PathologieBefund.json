@@ -282,14 +282,6 @@
       },
       {
         "reference": {
-          "reference": "DiagnosticReport/PathologyReportExample"
-        },
-        "name": "Pathology Report Example",
-        "description": "Example for SD_MII_Patho_Report",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-report"
-      },
-      {
-        "reference": {
           "reference": "Media/ex-mii-patho-attached-image"
         },
         "name": "EX MII Patho Attached Image",
@@ -391,6 +383,14 @@
         "name": "EX MII Patho Neutral Buffered Formalin",
         "description": "tbd",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/ex-mii-patho-report"
+        },
+        "name": "Pathology Report Example",
+        "description": "Example for SD_MII_Patho_Report",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-report"
       },
       {
         "reference": {

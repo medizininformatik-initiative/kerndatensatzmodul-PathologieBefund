@@ -32,7 +32,7 @@
   ],
   "basedOn": [
     {
-      "reference": "PathologyRequestExample"
+      "reference": "ServiceRequest/ex-mii-patho-request"
     }
   ],
   "status": "final",

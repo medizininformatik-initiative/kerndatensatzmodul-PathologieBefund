@@ -192,7 +192,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 //--------------------------------
 // Example
 //--------------------------------
-Instance: PathologyReportExample
+Instance: ex-mii-patho-report
 InstanceOf: SD_MII_Patho_Report
 Usage: #example
 Title: "Pathology Report Example"
@@ -238,7 +238,7 @@ Description: "Example for SD_MII_Patho_Report"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].extension[original-text].valueString = "#befund-eingangsnummer"
-* basedOn = Reference(sd-mii-patho-service-request)
+* basedOn = Reference(ex-mii-patho-request)
 * status = #final
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
 * subject.reference = "Patient/12345"
@@ -392,7 +392,7 @@ Description: "tbd"
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * identifier[=].type = $v2-0203#ACSN "Accession ID"
 // * identifier[=].type = $LOINC#11526-1
-* basedOn = Reference(PathologyRequestExample)
+* basedOn = Reference(ex-mii-patho-request)
 * status = #final
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
 * subject.reference = "Patient/12345"
