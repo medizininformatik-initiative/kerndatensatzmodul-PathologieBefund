@@ -23,11 +23,11 @@ Description: "Profile for attached images"
 * content MS
 
 //Example
-Instance: ImageExample
+Instance: ex-mii-patho-attached-image
 InstanceOf: SD_MII_Patho_Attached_Image
 Usage: #example
-Title: "ImageExample"
-Description: "Exemplarischer Befundbericht - 3"
+Title: "EX MII Patho Attached Image"
+Description: "Example for Attached Image"
 * status = #completed
 * content.contentType = #image/png
 * content.url = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/image"

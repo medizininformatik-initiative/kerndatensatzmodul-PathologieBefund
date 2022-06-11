@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "DiagnosticConclusion2",
+  "id": "ex-mii-patho-diagnostic-conclusion-3",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
@@ -29,18 +29,18 @@
   "code": {
     "coding": [
       {
-        "code": "35266-6",
+        "code": "94734-1",
         "system": "http://loinc.org",
-        "display": "Gleason score in Specimen Qualitative"
+        "display": "Prostate cancer grade group"
       }
     ]
   },
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "57403001",
-        "system": "http://snomed.info/sct",
-        "display": "Gleason grade 7 (staging scale)"
+        "code": "LA9630-0",
+        "system": "http://loinc.org",
+        "display": "Grade 2"
       }
     ]
   }

@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "DiagnosticConclusion3",
+  "id": "ex-mii-patho-gleason-pattern-a",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
@@ -18,9 +18,9 @@
     {
       "coding": [
         {
-          "code": "22637-3",
+          "code": "22635-7",
           "system": "http://loinc.org",
-          "display": "Pathology report diagnosis"
+          "display": "Pathology report microscopic observation"
         }
       ]
     }
@@ -29,19 +29,22 @@
   "code": {
     "coding": [
       {
-        "code": "94734-1",
+        "code": "44641-9",
         "system": "http://loinc.org",
-        "display": "Prostate cancer grade group"
+        "display": "Gleason pattern.primary in prostate tumor"
       }
     ]
   },
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "LA9630-0",
-        "system": "http://loinc.org",
-        "display": "Grade 2"
+        "code": "369772003",
+        "system": "http://snomed.info/sct",
+        "display": "Pattern 3 (staging scale)"
       }
     ]
+  },
+  "specimen": {
+    "reference": "Specimen/ex-mii-patho-specimen-a"
   }
 }

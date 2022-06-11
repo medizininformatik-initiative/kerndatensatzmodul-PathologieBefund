@@ -247,13 +247,13 @@ Description: "Example for SD_MII_Patho_Report"
 * encounter.reference = "Encounter/12345"
 * result[macroscopic-grouper] = Reference(ex-mii-patho-macro-grouper-a)
 * result[macroscopic-grouper] = Reference(ex-mii-patho-macro-grouper-b)
-* result[microscopic-grouper] = Reference(MicroGrouperA)
-* result[diagnostic-conclusion] = Reference(DiagnosticConclusionGrouper)
+* result[microscopic-grouper] = Reference(ex-mii-patho-micro-grouper-a)
+* result[diagnostic-conclusion] = Reference(ex-mii-patho-diagnostic-conclusion-grouper)
 * conclusion = "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2"
 * conclusionCode = $SCT#399490008  
 * effectiveDateTime = "2021-06-01"
 // * issued = "2021-06-02T13:28:17.239+02:00"
-* media.link = Reference(ImageExample)
+* media.link = Reference(ex-mii-patho-attached-image)
 * media.comment = "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
 
 Instance: CompositionExample
@@ -407,7 +407,7 @@ Description: "tbd"
 * conclusionCode = $SCT#1078901000119100 "Primary adenocarcinoma of upper lobe of left lung (disorder)"  
 * effectiveDateTime = "2021-05-28"
 * issued = "2021-05-20T13:28:17.239+02:00"
-* media.link = Reference(ImageExample)
+* media.link = Reference(ex-mii-patho-attached-image)
 * media.comment = "HE-Schnitt einer Lungenstanze, infiltriert durch Karzinomverbände, fotodokumentiert"
 
 Instance: example-mii-molgen-variante-3
