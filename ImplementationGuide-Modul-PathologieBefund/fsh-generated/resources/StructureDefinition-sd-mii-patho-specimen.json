@@ -118,16 +118,16 @@
         "mustSupport": true
       },
       {
-        "id": "Specimen.processing.additive:staining",
+        "id": "Specimen.processing.additive:stain",
         "path": "Specimen.processing.additive",
-        "sliceName": "staining",
+        "sliceName": "stain",
         "min": 0,
         "max": "*",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-staining"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-stain"
             ]
           }
         ],
@@ -150,7 +150,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-staining"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-stain"
             ]
           }
         ],

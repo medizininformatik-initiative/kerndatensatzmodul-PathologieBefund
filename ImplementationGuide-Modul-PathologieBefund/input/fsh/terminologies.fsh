@@ -72,12 +72,11 @@ Description: "ValueSet for a preferred set of ServiceRequest codes"
 * $LOINC#11526-1 "Pathology study"
 * $LOINC#11529-5 "Surgical pathology study"
 
-ValueSet: VS_MII_Patho_Staining_SNOMED
-Id: vs-mii-patho-staining-snomed
+ValueSet: VS_MII_Patho_Stain_SNOMED
+Id: vs-mii-patho-stain-snomed
 Title: "VS MII Patho Staining SNOMED"
 Description: "ValueSet for staining substances"
 * insert RuleSet1
-* include codes from system $SCT where concept is-a #45389009 "Tissue stain (substance)"
 * include codes from system $SCT where concept is-a #397165007 "Stain (substance)"
 // * include codes from valueset $bio-sct-additive
 
