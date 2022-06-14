@@ -19,21 +19,21 @@ Description: "Pathology specimen"
   // * additive ^slicing.description = "tbd"
   * additive ^slicing.ordered = false
   * additive contains additive 0..* MS 
-                  and staining 0..* MS
+                  and stain 0..* MS
   * additive[additive] only Reference($mii-bio-additive)
-  * additive[staining] only Reference(sd-mii-patho-staining)
+  * additive[stain] only Reference(sd-mii-patho-stain)
     
 
 * container MS
   * type from VS_MII_Patho_Container_Type_SNOMED_DICOM (required)
 
-Profile: SD_MII_Patho_Staining
+Profile: SD_MII_Patho_Stain
 Parent: $mii-bio-additive
-Id: sd-mii-patho-staining
-Title: "SD MII Patho Staining"
-Description: "Substance profile for staining"
+Id: sd-mii-patho-stain
+Title: "SD MII Patho Stain"
+Description: "Substance profile for stains"
 * insert RuleSet1
-* code from vs-mii-patho-staining-snomed (extensible)
+* code from vs-mii-patho-stain-snomed (extensible)
 
 Instance: ex-mii-patho-specimen-a
 InstanceOf: SD_MII_Patho_Specimen

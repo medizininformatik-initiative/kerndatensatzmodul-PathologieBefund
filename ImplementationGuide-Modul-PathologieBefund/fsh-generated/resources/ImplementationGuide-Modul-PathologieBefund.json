@@ -170,10 +170,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/sd-mii-patho-staining"
+          "reference": "StructureDefinition/sd-mii-patho-stain"
         },
-        "name": "SD MII Patho Staining",
-        "description": "Substance profile for staining",
+        "name": "SD MII Patho Stain",
+        "description": "Substance profile for stains",
         "exampleBoolean": false
       },
       {
@@ -266,7 +266,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/vs-mii-patho-staining-snomed"
+          "reference": "ValueSet/vs-mii-patho-stain-snomed"
         },
         "name": "VS MII Patho Staining SNOMED",
         "description": "ValueSet for staining substances",
