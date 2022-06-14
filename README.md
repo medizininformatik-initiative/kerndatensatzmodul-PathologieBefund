@@ -19,13 +19,14 @@ Profile mit dem Status 'Draft' wurden noch nicht ballotiert und können noch div
 * [Datenmodellbeschreibung des MII-Kerndatensatzes in ART-DECOR](https://art-decor.org/art-decor/decor-project--mide-)
 * [Simplifier Projekt](https://simplifier.net/medizininformatikinitiative-modulpathologie)
 
-### Autoren und Ansprechpartner
+### Autoren und Ansprechpartner:innen
 
 Leitung des Moduls:
 * Sylvia Thun
 
-Definition der Inhalte:
-* 
+Definition der Inhalte & Terminologien:
+* Gunter Haroske
+* Thomas Rüdiger
 
 Technische Umsetzung (in alphabetischer Reihenfolge): 
 * [Alexander Bartschke](https://github.com/Kosmos3) (Modellierung in Art-Decor)
