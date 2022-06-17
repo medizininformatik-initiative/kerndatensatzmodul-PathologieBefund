@@ -1,12 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "draft",
-  "name": "VS_MII_Patho_Container_Type_SNOMED_DICOM",
-  "id": "vs-mii-patho-container-type-snomed-dicom",
+  "name": "VS_MII_Patho_Container_Type_SNOMED",
+  "id": "vs-mii-patho-container-type-snomed",
   "title": "VS MII Patho Container Type SNOMED DICOM",
   "description": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet",
   "version": "0.1.0",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-container-type-snomed-dicom",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-container-type-snomed",
   "compose": {
     "include": [
       {

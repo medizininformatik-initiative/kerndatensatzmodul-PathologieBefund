@@ -170,14 +170,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/sd-mii-patho-stain"
-        },
-        "name": "SD MII Patho Stain",
-        "description": "Substance profile for stains",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/sd-mii-patho-logical-model"
         },
         "name": "SD MII Patho Logical Model",
@@ -202,7 +194,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/vs-mii-patho-container-type-snomed-dicom"
+          "reference": "ValueSet/vs-mii-patho-container-type-snomed"
         },
         "name": "VS MII Patho Container Type SNOMED DICOM",
         "description": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet",
@@ -230,14 +222,6 @@
         },
         "name": "VS MII Patho Service Request LOINC",
         "description": "ValueSet for a preferred set of ServiceRequest codes",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/vs-mii-patho-stain-snomed"
-        },
-        "name": "VS MII Patho Staining SNOMED",
-        "description": "ValueSet for staining substances",
         "exampleBoolean": false
       },
       {
