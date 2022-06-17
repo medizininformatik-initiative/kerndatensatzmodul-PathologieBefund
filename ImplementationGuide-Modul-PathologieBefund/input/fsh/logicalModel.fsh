@@ -1,7 +1,9 @@
  // LogicalModel definition
-Logical: LogicalModelPathologieBefundbericht
-Title: "LogicalModel Pathologie Befundbericht"
-Description: "Logical Model zur grafischen Darstellung des Art-Decor Modells zum Pathologiebefundbericht"
+Logical: SD_MII_Patho_Logical_Model
+Parent: Base
+Id: sd-mii-patho-logical-model
+Title: "SD MII Patho Logical Model"
+Description: "Logical Model for the graphical reprensentation of the respective Art-Decor Model"
 
 * insert RuleSet1
 
@@ -13,7 +15,7 @@ Description: "Logical Model zur grafischen Darstellung des Art-Decor Modells zum
     * Fragestellung 0..1 SU string "Fragestellung zum Fall"
     * Anamnese 0..* SU string "Anamnestische Angaben zum Fall"
     * Ueberweisungsgrund 0..* SU string "Überweisungsgrund"
-    * DiagnoseKodiert 0..* SU Reference(Condition) "Diagnose nach gültiger ICD-10-GM " // setze MII Diagnoseprofil?
+    * DiagnoseKodiert 0..* SU Reference(Condition) "Diagnose nach gültiger ICD-10-GM " 
   * AuftragsID 1..* BackboneElement "AuftragsID" "ID des Untersuchungsauftrags."
     * AuftragsgruppenID 0..1 SU Identifier "ID einer Auftragsgruppe, bestehend aus mehreren Untersuchungsaufträgen"
     * AuftragsIDAuftraggeber 0..1 SU Identifier "Auftrags-ID vom Auftraggeber vergeben"
