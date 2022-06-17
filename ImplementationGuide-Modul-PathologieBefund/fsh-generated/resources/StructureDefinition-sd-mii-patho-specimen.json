@@ -96,44 +96,6 @@
         "mustSupport": true
       },
       {
-        "id": "Specimen.processing.additive",
-        "path": "Specimen.processing.additive",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "profile",
-              "path": "$this"
-            }
-          ],
-          "rules": "open",
-          "ordered": false
-        }
-      },
-      {
-        "id": "Specimen.processing.additive:additive",
-        "path": "Specimen.processing.additive",
-        "sliceName": "additive",
-        "min": 0,
-        "max": "*",
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.processing.additive:stain",
-        "path": "Specimen.processing.additive",
-        "sliceName": "stain",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-stain"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Specimen.processing:lagerprozess",
         "path": "Specimen.processing",
         "sliceName": "lagerprozess"
@@ -150,18 +112,17 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-stain"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Specimen.container.type",
         "path": "Specimen.container.type",
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-container-type-snomed-dicom"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-container-type-snomed"
         }
       }
     ]
