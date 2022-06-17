@@ -37,49 +37,24 @@
             "display": "Tissue embedding medium (substance)"
           },
           {
+            "code": "434533009",
+            "display": "Electron microscopy grid (physical object)"
+          },
+          {
+            "code": "434822004",
+            "display": "Specimen well (physical object)"
+          },
+          {
             "code": "433472003",
             "display": "Microscope slide coverslip (physical object)"
           },
           {
             "code": "430862008",
             "display": "Microscope slide mounting medium (substance)"
-          }
-        ]
-      },
-      {
-        "system": "http://dicom.nema.org/resources/ontology/DCM",
-        "concept": [
-          {
-            "code": "A-01024",
-            "display": "Specimen vial"
           },
           {
-            "code": "A-0101B",
-            "display": "Microscope slide"
-          },
-          {
-            "code": "A-01023",
-            "display": "Specimen container"
-          },
-          {
-            "code": "A-01021",
-            "display": "Electron microscopy grid"
-          },
-          {
-            "code": "A-01025",
-            "display": "Specimen well"
-          },
-          {
-            "code": "CID8114",
-            "display": "Fixatives"
-          },
-          {
-            "code": "CID8102",
-            "display": "Container Component Types"
-          },
-          {
-            "code": "CID8115",
-            "display": "Specimen Embedding"
+            "code": "434473001",
+            "display": "Specimen container lid (physical object)"
           }
         ]
       }
