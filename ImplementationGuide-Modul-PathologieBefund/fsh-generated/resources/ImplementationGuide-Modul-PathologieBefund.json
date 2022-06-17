@@ -178,26 +178,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/LogicalModelPathologieBefundbericht"
+          "reference": "StructureDefinition/sd-mii-patho-logical-model"
         },
-        "name": "LogicalModel Pathologie Befundbericht",
-        "description": "Logical Model zur grafischen Darstellung des Art-Decor Modells zum Pathologiebefundbericht",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/vs-mii-patho-additive-snomed"
-        },
-        "name": "VS MII Patho Additive SNOMED",
-        "description": "Additive bei der Probenbearbeitung (Fixationsmittel, Einbettungs- und Eindeckungsmedien, Färbungen)",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/vs-mii-patho-body-site-snomed-ct"
-        },
-        "name": "VS MII Patho Body Site [SNOMED CT]",
-        "description": "Body site where the specimen comes from",
+        "name": "SD MII Patho Logical Model",
+        "description": "Logical Model for the graphical reprensentation of the respective Art-Decor Model",
         "exampleBoolean": false
       },
       {
@@ -234,14 +218,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/vs-mii-patho-processing-procedure-snomed-ct"
-        },
-        "name": "VS MII Patho Processing Procedure [SNOMED CT]",
-        "description": "Specimen processing procedure",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/vs-mii-patho-section-types-loinc"
         },
         "name": "VS MII Patho Section Types LOINC",
@@ -254,14 +230,6 @@
         },
         "name": "VS MII Patho Service Request LOINC",
         "description": "ValueSet for a preferred set of ServiceRequest codes",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/vs-mii-patho-specimen-type-snomed-ct"
-        },
-        "name": "VS MII Patho Specimen Type [SNOMED CT]",
-        "description": "ValueSet for the type of specimen",
         "exampleBoolean": false
       },
       {
