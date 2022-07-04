@@ -54,7 +54,7 @@ Description: "Defines the general pathology report structure for German hospital
 // Dokumentationsdatum
 * effective[x] MS
 * effective[x] only dateTime
-//* issued MS // nur fuer maschinell erstellte Zeitstempel, fuer manuell eingetragene Zeiten effective[x] dateTime nutzen
+* issued MS // nur fuer maschinell erstellte Zeitstempel, fuer manuell eingetragene Zeiten effective[x] dateTime nutzen
 // Autor 
 * performer 1.. MS
 // Referenz zur Probe

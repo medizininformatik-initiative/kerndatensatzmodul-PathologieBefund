@@ -240,6 +240,11 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.issued",
+        "path": "DiagnosticReport.issued",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "min": 1,
