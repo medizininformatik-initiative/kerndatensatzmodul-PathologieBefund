@@ -201,9 +201,9 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "PLAC",
+              "code": "PGN",
               "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "display": "Placer Identifier"
+              "display": "Placer Group Number"
             }
           ]
         },

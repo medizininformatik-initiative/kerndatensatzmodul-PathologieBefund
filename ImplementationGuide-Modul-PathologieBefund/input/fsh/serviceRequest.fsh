@@ -42,7 +42,7 @@ Description: "Order for the analysis of a sample or a group of samples."
   * system 1.. MS
   * value 1.. MS
   * type 1.. MS
-  * type = $v2-0203#PLAC "Placer Identifier"
+  * type = $v2-0203#PGN "Placer Group Number"
 //Status
 * status MS
 * intent MS
