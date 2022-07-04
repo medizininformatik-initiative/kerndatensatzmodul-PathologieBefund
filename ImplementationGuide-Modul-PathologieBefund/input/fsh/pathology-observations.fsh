@@ -63,6 +63,7 @@ Description: "Abstract Observation to define common features of a main pathology
                    and dicom-image 0..* MS
 * derivedFrom[attached-image] only Reference(SD_MII_Patho_Attached_Image)
 * derivedFrom[dicom-image] only Reference(ImagingStudy)
+* hasMember MS
 // Components fuer die Erfassung der Ergebnisse
 * component 0.. 
   * code MS
@@ -114,8 +115,7 @@ Description: "Instantiable Observation to describe a generic pathology finding"
 * valueRatio
   * extension contains $fhir-original-text named original-text 0..1 MS
     * ^short = "Links to original text that may have been used to retrieve value"
-// Moegliche Unterbeobachtungen
-* hasMember MS
+
 
 //--------------------------------------------
 // Grouper

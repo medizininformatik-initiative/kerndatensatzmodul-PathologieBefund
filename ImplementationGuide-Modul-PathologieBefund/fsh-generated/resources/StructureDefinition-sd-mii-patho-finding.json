@@ -263,11 +263,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Observation.hasMember",
-        "path": "Observation.hasMember",
-        "mustSupport": true
       }
     ]
   }

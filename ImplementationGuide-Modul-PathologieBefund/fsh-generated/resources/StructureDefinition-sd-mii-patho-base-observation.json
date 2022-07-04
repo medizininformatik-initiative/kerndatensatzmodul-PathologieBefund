@@ -261,6 +261,11 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "slicing": {
