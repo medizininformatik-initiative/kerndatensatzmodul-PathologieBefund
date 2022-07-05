@@ -33,6 +33,7 @@ Description: "Defines the general pathology report structure for German hospital
 * basedOn ^short = "Reference to respective SD_MII_Patho_Service_Request"
 // Status
 * status MS
+* category MS // Code Wahl wird erstmal offen gelassen
 // Code
 * code MS
 * code ^short = "Pathology report code"

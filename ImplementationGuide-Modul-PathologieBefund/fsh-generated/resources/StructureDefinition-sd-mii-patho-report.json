@@ -159,6 +159,11 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
         "short": "Pathology report code",
