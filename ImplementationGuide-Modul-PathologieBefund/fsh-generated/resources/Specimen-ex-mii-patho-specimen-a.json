@@ -117,7 +117,7 @@
     }
   ],
   "accessionIdentifier": {
-    "value": "test"
+    "value": "E12345_21"
   },
   "subject": {
     "reference": "Patient/12345"

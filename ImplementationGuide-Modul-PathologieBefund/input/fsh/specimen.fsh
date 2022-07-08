@@ -47,7 +47,7 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
   * type = $v2-0203#FILL "Filler Order Number"
   * value = "E12345_21-A1-1HE"
 * accessionIdentifier
-  * value = "test"
+  * value = "E12345_21"
 * type = $SCT#787150001 "Stained slide of tissue section (specimen)"
 * subject.reference = "Patient/12345"
 * parent.reference = "Specimen/E12345_21-A1"
