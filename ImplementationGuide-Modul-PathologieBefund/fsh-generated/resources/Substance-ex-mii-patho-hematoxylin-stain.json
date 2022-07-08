@@ -1,0 +1,18 @@
+{
+  "resourceType": "Substance",
+  "id": "ex-mii-patho-hematoxylin-stain",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "12710003",
+        "system": "http://snomed.info/sct",
+        "display": "Hematoxylin stain (substance)"
+      }
+    ]
+  }
+}

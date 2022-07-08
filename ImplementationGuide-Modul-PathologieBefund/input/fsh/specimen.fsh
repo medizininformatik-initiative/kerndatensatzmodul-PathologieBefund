@@ -21,7 +21,7 @@ Instance: ex-mii-patho-specimen-a
 InstanceOf: SD_MII_Patho_Specimen
 Usage: #example
 Title: "EX MII Patho Specimen A"
-Description: "Example for SD_MII_Patho_Specimen - Specimen A"
+Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 * status = #available
 * text.status = #additional
 * text.div = "
@@ -45,11 +45,12 @@ Description: "Example for SD_MII_Patho_Specimen - Specimen A"
 "
 * identifier
   * type = $v2-0203#FILL "Filler Order Number"
-  * value = "E12345_21-A"
+  * value = "E12345_21-A1-1HE"
 * accessionIdentifier
   * value = "test"
-* type = $SCT#309134005 "Prostate tru-cut biopsy sample (specimen)"
+* type = $SCT#787150001 "Stained slide of tissue section (specimen)"
 * subject.reference = "Patient/12345"
+* parent.reference = "Specimen/E12345_21-A1"
 * collection
   * collector.reference = "Practitioner/2346545"
   * collectedDateTime = "2021-01-29T06:15:00Z"
@@ -81,7 +82,22 @@ Description: "Example for SD_MII_Patho_Specimen - Specimen A"
     * value = 30
 * processing[=].procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method (procedure)"
 * processing[=].procedure.extension[original-text].valueString = "#faerbung"
-* processing[=].additive = Reference(ex-mii-patho-neutral-buffered-formalin)
+* processing[=].additive[+] = Reference(ex-mii-patho-hematoxylin-stain)
+* processing[=].additive[+] = Reference(ex-mii-patho-eosin-y)
+
+Instance: ex-mii-patho-hematoxylin-stain
+InstanceOf: $mii-bio-additive
+Usage: #example
+Title: "ex-mii-patho-hematoxylin-stain"
+Description: "Hematoxylin stain (substance)"
+* code.coding = $SCT#12710003 "Hematoxylin stain (substance)"
+
+Instance: ex-mii-patho-eosin-y
+InstanceOf: $mii-bio-additive
+Usage: #example
+Title: "ex-mii-patho-eosin-y"
+Description: "Eosin Y (substance)"
+* code.coding = $SCT#763042003 "Eosin Y (substance)"
 
 Instance: ex-mii-patho-neutral-buffered-formalin
 InstanceOf: $mii-bio-additive

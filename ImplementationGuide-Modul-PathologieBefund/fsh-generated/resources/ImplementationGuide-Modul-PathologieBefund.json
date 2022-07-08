@@ -290,11 +290,27 @@
       },
       {
         "reference": {
+          "reference": "Substance/ex-mii-patho-eosin-y"
+        },
+        "name": "ex-mii-patho-eosin-y",
+        "description": "Eosin Y (substance)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/ex-mii-patho-gleason-pattern-a"
         },
         "name": "EX MII Patho Gleason Pattern A",
         "description": "[Microscopic Finding] Gleason pattern.primary in prostate tumor for Specimen A",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Substance/ex-mii-patho-hematoxylin-stain"
+        },
+        "name": "ex-mii-patho-hematoxylin-stain",
+        "description": "Hematoxylin stain (substance)",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -357,7 +373,7 @@
           "reference": "Specimen/ex-mii-patho-specimen-a"
         },
         "name": "EX MII Patho Specimen A",
-        "description": "Example for SD_MII_Patho_Specimen - Specimen A",
+        "description": "HE-stained slide from Prostate tru-cut biopsy sample (specimen)",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"
       },
       {
