@@ -17,10 +17,11 @@ Description: "Pathology specimen"
 * container MS
   * type from VS_MII_Patho_Container_Type_SNOMED (required)
 
-Instance: ex-mii-patho-specimen-a
+// Examples
+Instance: ex-mii-patho-he-stained-slide-prostate
 InstanceOf: SD_MII_Patho_Specimen
 Usage: #example
-Title: "EX MII Patho Specimen A"
+Title: "EX MII Patho HE-stained slide from Prostate tru-cut biopsy sample"
 Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 * status = #available
 * text.status = #additional
@@ -88,17 +89,20 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 Instance: ex-mii-patho-hematoxylin-stain
 InstanceOf: $mii-bio-additive
 Usage: #example
-Title: "ex-mii-patho-hematoxylin-stain"
+Title: "EX MII Patho Hematoxylin-stain"
 Description: "Hematoxylin stain (substance)"
 * code.coding = $SCT#12710003 "Hematoxylin stain (substance)"
 
 Instance: ex-mii-patho-eosin-y
 InstanceOf: $mii-bio-additive
 Usage: #example
-Title: "ex-mii-patho-eosin-y"
+Title: "EX MII Patho Eosin Y"
 Description: "Eosin Y (substance)"
 * code.coding = $SCT#763042003 "Eosin Y (substance)"
 
+
+
+// not needed anymore..
 Instance: ex-mii-patho-neutral-buffered-formalin
 InstanceOf: $mii-bio-additive
 Usage: #example
