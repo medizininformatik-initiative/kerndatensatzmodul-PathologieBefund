@@ -120,9 +120,9 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * system 1.. MS
   * extension contains $fhir-original-text named original-text 0..1 MS
 * type MS
-  * ^short = "Type fixed to 'Pathology study'"
+  * ^short = "The type for the pathology report Composition is 'Pathology study'"
   * coding MS
-    * ^patternCoding = $LOINC#11526-1 "Pathology study"
+  * coding = $LOINC#11526-1 "Pathology study"
     * system 1.. MS
     * code 1.. MS
     * display MS 

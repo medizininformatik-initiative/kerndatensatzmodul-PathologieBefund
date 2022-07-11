@@ -139,7 +139,7 @@
       {
         "id": "Composition.type",
         "path": "Composition.type",
-        "short": "Type fixed to 'Pathology study'",
+        "short": "The type for the pathology report Composition is 'Pathology study'",
         "mustSupport": true
       },
       {
