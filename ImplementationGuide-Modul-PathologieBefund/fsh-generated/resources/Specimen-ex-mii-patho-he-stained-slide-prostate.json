@@ -1,6 +1,6 @@
 {
   "resourceType": "Specimen",
-  "id": "ex-mii-patho-specimen-a",
+  "id": "ex-mii-patho-he-stained-slide-prostate",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"

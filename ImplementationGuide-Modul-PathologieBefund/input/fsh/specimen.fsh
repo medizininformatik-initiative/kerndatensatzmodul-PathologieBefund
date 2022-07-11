@@ -11,13 +11,45 @@ Description: "Pathology specimen"
   * method from VS_MII_Patho_Collection_Method_SNOMED_CT (extensible)
 * request only Reference(SD_MII_Patho_Service_Request)
 * processing
-  * procedure 
+  * procedure from vs-mii-patho-processing-procedure-snomed-ct (extensible)
     * extension contains $fhir-original-text named original-text 0..1 MS
   * additive only Reference($mii-bio-additive)
 * container MS
   * type from VS_MII_Patho_Container_Type_SNOMED (required)
 
 // Examples
+Instance: ex-mii-patho-prostate-tru-cut-biopsy-sample
+InstanceOf: sd-mii-patho-specimen
+Usage: #example
+Title: "ex-mii-patho-prostate-tru-cut-biopsy sample"
+Description: "Prostate tru-cut biopsy sample (specimen)"
+* status = #available
+* text.status = #additional
+* text.div = "
+<div xmlns=\"http://www.w3.org/1999/xhtml\">
+  <div id=\"specimen-a-title\"><b>Probe A</b></div>
+  <table>
+    <tr>
+      <td>Entnahmeart</td>
+      <td>transrektale Stanzbiopsie</td>
+    </tr>
+  </table>
+</div>
+"
+* identifier
+  * type = $v2-0203#FILL "Filler Order Number"
+  * value = "E12345_21-A1"
+* accessionIdentifier
+  * value = "E12345_21"
+* type = $SCT#309134005 "Prostate tru-cut biopsy sample (specimen)"
+* subject.reference = "Patient/12345"
+* collection
+  * collector.reference = "Practitioner/2346545"
+  * collectedDateTime = "2021-01-29T06:15:00Z"
+  * method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
+  * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+
+
 Instance: ex-mii-patho-he-stained-slide-prostate
 InstanceOf: SD_MII_Patho_Specimen
 Usage: #example

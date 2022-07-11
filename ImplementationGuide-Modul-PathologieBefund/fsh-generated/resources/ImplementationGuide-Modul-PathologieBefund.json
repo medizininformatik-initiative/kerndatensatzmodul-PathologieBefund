@@ -210,6 +210,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/vs-mii-patho-processing-procedure-snomed-ct"
+        },
+        "name": "VS MII Patho Processing Procedure [SNOMED CT]",
+        "description": "Specimen processing procedure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/vs-mii-patho-section-types-loinc"
         },
         "name": "VS MII Patho Section Types LOINC",
@@ -292,7 +300,7 @@
         "reference": {
           "reference": "Substance/ex-mii-patho-eosin-y"
         },
-        "name": "ex-mii-patho-eosin-y",
+        "name": "EX MII Patho Eosin Y",
         "description": "Eosin Y (substance)",
         "exampleBoolean": true
       },
@@ -306,9 +314,17 @@
       },
       {
         "reference": {
+          "reference": "Specimen/ex-mii-patho-he-stained-slide-prostate"
+        },
+        "name": "EX MII Patho HE-stained slide from Prostate tru-cut biopsy sample",
+        "description": "HE-stained slide from Prostate tru-cut biopsy sample (specimen)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"
+      },
+      {
+        "reference": {
           "reference": "Substance/ex-mii-patho-hematoxylin-stain"
         },
-        "name": "ex-mii-patho-hematoxylin-stain",
+        "name": "EX MII Patho Hematoxylin-stain",
         "description": "Hematoxylin stain (substance)",
         "exampleBoolean": true
       },
@@ -354,6 +370,14 @@
       },
       {
         "reference": {
+          "reference": "Specimen/ex-mii-patho-prostate-tru-cut-biopsy-sample"
+        },
+        "name": "ex-mii-patho-prostate-tru-cut-biopsy sample",
+        "description": "Prostate tru-cut biopsy sample (specimen)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"
+      },
+      {
+        "reference": {
           "reference": "DiagnosticReport/ex-mii-patho-report"
         },
         "name": "Pathology Report Example",
@@ -367,14 +391,6 @@
         "name": "EX MII Patho Request",
         "description": "Pathology Report Example ",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-service-request"
-      },
-      {
-        "reference": {
-          "reference": "Specimen/ex-mii-patho-specimen-a"
-        },
-        "name": "EX MII Patho Specimen A",
-        "description": "HE-stained slide from Prostate tru-cut biopsy sample (specimen)",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"
       },
       {
         "reference": {
