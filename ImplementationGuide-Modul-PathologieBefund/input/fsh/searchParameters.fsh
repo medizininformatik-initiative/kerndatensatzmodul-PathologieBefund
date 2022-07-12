@@ -1,6 +1,6 @@
-//-------------------------------
+//----------------------------------
 // SearchParameters for Specimen
-//-------------------------------
+//----------------------------------
 Instance: sd-mii-patho-request
 InstanceOf: SearchParameter
 Usage: #definition
@@ -91,3 +91,19 @@ Description: "SearchParameter for Specimen.container.additive"
 * base = #Specimen
 * type = #reference
 * expression = "Specimen.container.additive"
+
+//-----------------------------------
+// SearchParameters for Observation
+//-----------------------------------
+Instance: sd-mii-patho-body-site
+InstanceOf: SearchParameter
+Usage: #definition
+Title: "SD MII Patho Body-Site"
+Description: "SearchParameter for Observation.bodySite"
+* name = "SD MII Patho Body Site"
+* description = "SearchParameter for Observation.bodySite"
+* status = #draft
+* code = #body-site
+* base = #Observation
+* type = #token
+* expression = "Observation.bodySite"
