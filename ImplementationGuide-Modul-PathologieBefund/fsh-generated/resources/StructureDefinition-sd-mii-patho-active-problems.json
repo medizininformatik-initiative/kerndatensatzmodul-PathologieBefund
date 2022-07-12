@@ -12,10 +12,12 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-active-problems",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot1",
   "name": "SD_MII_Patho_Active_Problems",
   "title": "SD MII Patho Active Problems",
   "status": "draft",
+  "experimental": false,
+  "date": "2022-07-18",
   "description": "List of problems or questions concerning the reason for the ServiceRequest",
   "fhirVersion": "4.0.1",
   "mapping": [

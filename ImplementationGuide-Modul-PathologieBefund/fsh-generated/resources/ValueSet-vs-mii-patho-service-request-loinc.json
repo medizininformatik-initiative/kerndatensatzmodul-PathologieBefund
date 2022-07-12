@@ -5,8 +5,10 @@
   "id": "vs-mii-patho-service-request-loinc",
   "title": "VS MII Patho Service Request LOINC",
   "description": "ValueSet for a preferred set of ServiceRequest codes",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot1",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-service-request-loinc",
+  "experimental": false,
+  "date": "2022-07-18",
   "compose": {
     "include": [
       {

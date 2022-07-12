@@ -12,10 +12,12 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-report",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot1",
   "name": "SD_MII_Patho_Report",
   "title": "SD MII Patho Report",
   "status": "draft",
+  "experimental": false,
+  "date": "2022-07-18",
   "description": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative",
   "fhirVersion": "4.0.1",
   "mapping": [
