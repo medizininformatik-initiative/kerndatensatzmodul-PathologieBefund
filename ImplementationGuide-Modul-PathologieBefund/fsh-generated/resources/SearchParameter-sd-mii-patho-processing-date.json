@@ -1,0 +1,14 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "sd-mii-patho-processing-date",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/sd-mii-patho-processing-date",
+  "name": "SD MII Patho Processing Date",
+  "description": "SearchParameter for Specimen.processing.time",
+  "status": "draft",
+  "code": "processing-date",
+  "base": [
+    "Specimen"
+  ],
+  "type": "date",
+  "expression": "Specimen.processing.time"
+}
