@@ -1,0 +1,14 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "sd-mii-patho-part-of",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/sd-mii-patho-part-of",
+  "name": "SD MII Patho Part Of",
+  "code": "atte",
+  "description": "SearchParameter for Media.partOf",
+  "status": "draft",
+  "base": [
+    "Media"
+  ],
+  "type": "reference",
+  "expression": "Media.partOf"
+}

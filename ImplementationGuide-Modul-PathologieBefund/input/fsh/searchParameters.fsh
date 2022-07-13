@@ -1,6 +1,6 @@
-//----------------------------------
+//----------------------------------------
 // SearchParameters for Specimen
-//----------------------------------
+//----------------------------------------
 Instance: sd-mii-patho-request
 InstanceOf: SearchParameter
 Usage: #definition
@@ -92,9 +92,9 @@ Description: "SearchParameter for Specimen.container.additive"
 * type = #reference
 * expression = "Specimen.container.additive"
 
-//-----------------------------------
+//-----------------------------------------
 // SearchParameters for Observation
-//-----------------------------------
+//-----------------------------------------
 Instance: sd-mii-patho-body-site
 InstanceOf: SearchParameter
 Usage: #definition
@@ -107,3 +107,106 @@ Description: "SearchParameter for Observation.bodySite"
 * base = #Observation
 * type = #token
 * expression = "Observation.bodySite"
+
+//-----------------------------------------
+// SearchParameters for ServiceRequest
+//-----------------------------------------
+Instance: sd-mii-patho-reason-code
+InstanceOf: SearchParameter
+Usage: #definition
+Title: "SD MII Patho Reason Code"
+Description: "SearchParameter for ServiceRequest.reasonCode"
+* name = "SD MII Patho Reason Code"
+* description = "SearchParameter for ServiceRequest.reasonCode"
+* status = #draft
+* code = #reason-code
+* base = #ServiceRequest
+* type = #token
+* expression = "ServiceRequest.reasonCode"
+
+Instance: sd-mii-patho-supporting-info
+InstanceOf: SearchParameter
+Usage: #definition
+Title: "SD MII Patho Supporting Info"
+Description: "SearchParameter for ServiceRequest.supportingInfo"
+* name = "SD MII Patho Reason Code"
+* description = "SearchParameter for ServiceRequest.supportingInfo"
+* status = #draft
+* code = #supporting-info
+* base = #ServiceRequest
+* type = #reference
+* expression = "ServiceRequest.supportingInfo"
+
+//-----------------------------------------
+// SearchParameters for DiagnosticReport
+//-----------------------------------------
+Instance: sd-mii-patho-imaging-study
+InstanceOf: SearchParameter
+Usage: #definition
+Title: "SD MII Patho Imaging Study"
+Description: "SearchParameter for DiagnosticReport.imagingStudy"
+* name = "SD MII Patho Imaging Study"
+* description = "SearchParameter for DiagnosticReport.imagingStudy"
+* status = #draft
+* code = #imaging-study
+* base = #DiagnosticReport
+* type = #reference
+* expression = "DiagnosticReport.imagingStudy"
+
+//-----------------------------------------
+// SearchParameters for Composition
+//-----------------------------------------
+Instance: sd-mii-patho-attester-mode
+InstanceOf: SearchParameter
+Usage: #definition
+Title: "SD MII Patho Attester Mode"
+Description: "SearchParameter for Composition.attester.mode"
+* name = "SD MII Patho Attester Mode"
+* code = #attester-mode
+* description = "SearchParameter for Composition.attester.mode"
+* status = #draft
+* base = #Composition
+* type = #token
+* expression = "Composition.attester.mode"
+
+Instance: sd-mii-patho-custodian
+InstanceOf: SearchParameter
+Usage: #definition
+Title: "SD MII Patho Custodian"
+Description: "SearchParameter for Composition.custodian"
+* name = "SD MII Patho Custodian"
+* description = "SearchParameter for Composition.custodian"
+* status = #draft
+* code = #custodian
+* base = #Composition
+* type = #reference
+* expression = "Composition.custodian"
+
+Instance: sd-mii-patho-relates-to-code
+InstanceOf: SearchParameter
+Usage: #definition
+Title: "SD MII Patho Relates-To Code"
+Description: "SearchParameter for Composition.relatesTo.code"
+* name = "SD MII Patho Relates-To Code"
+* description = "SearchParameter for Composition.relatesTo.code"
+* status = #draft
+* code = #relates-to-code
+* base = #Composition
+* type = #token
+* expression = "Composition.relatesTo.code"
+
+//-----------------------------------------
+// SearchParameters for Media
+//-----------------------------------------
+Instance: sd-mii-patho-part-of
+InstanceOf: SearchParameter
+Usage: #definition
+Title: "SD MII Patho Part Of"
+Description: "SearchParameter for Media.partOf"
+* name = "SD MII Patho Part Of"
+* code = #atte
+* description = "SearchParameter for Media.partOf"
+* status = #draft
+* base = #Media
+* type = #reference
+* expression = "Media.partOf"
