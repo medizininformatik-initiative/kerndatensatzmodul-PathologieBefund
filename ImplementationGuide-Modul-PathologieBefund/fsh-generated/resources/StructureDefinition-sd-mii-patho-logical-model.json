@@ -2,10 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "sd-mii-patho-logical-model",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-logical-model",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot1",
   "name": "SD_MII_Patho_Logical_Model",
   "title": "SD MII Patho Logical Model",
   "status": "draft",
+  "experimental": false,
+  "date": "2022-07-18",
   "description": "Logical Model for the graphical reprensentation of the respective Art-Decor Model",
   "fhirVersion": "4.0.1",
   "mapping": [

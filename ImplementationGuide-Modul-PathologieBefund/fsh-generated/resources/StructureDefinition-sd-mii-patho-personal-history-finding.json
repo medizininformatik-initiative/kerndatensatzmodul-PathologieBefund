@@ -12,10 +12,12 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-personal-history-finding",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot1",
   "name": "SD_MII_Patho_Personal_History_Finding",
   "title": "SD MII Patho Personal History Finding",
   "status": "draft",
+  "experimental": false,
+  "date": "2022-07-18",
   "description": "Profile ",
   "fhirVersion": "4.0.1",
   "mapping": [

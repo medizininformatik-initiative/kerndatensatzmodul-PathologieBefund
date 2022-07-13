@@ -1,0 +1,14 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "sd-mii-patho-processing-additive",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/sd-mii-patho-processing-additive",
+  "name": "SD MII Patho Processing Additive",
+  "description": "SearchParameter for Specimen.processing.additive",
+  "status": "draft",
+  "code": "processing-additive",
+  "base": [
+    "Specimen"
+  ],
+  "type": "reference",
+  "expression": "Specimen.processing.additive"
+}
