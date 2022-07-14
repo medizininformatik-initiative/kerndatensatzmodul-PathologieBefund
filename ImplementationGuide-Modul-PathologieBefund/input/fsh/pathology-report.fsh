@@ -9,6 +9,8 @@ Description: "Defines the general pathology report structure for German hospital
 * insert RuleSet1
 // ID
 * id MS
+* meta.lastUpdated MS
+* meta.profile MS
 // Identifikator
 * identifier 1.. MS
   * ^slicing.discriminator.type = #pattern
@@ -33,6 +35,7 @@ Description: "Defines the general pathology report structure for German hospital
 * basedOn ^short = "Reference to respective SD_MII_Patho_Service_Request"
 // Status
 * status MS
+* category MS // Code Wahl wird erstmal offen gelassen
 // Code
 * code MS
 * code ^short = "Pathology report code"
@@ -54,7 +57,7 @@ Description: "Defines the general pathology report structure for German hospital
 // Dokumentationsdatum
 * effective[x] MS
 * effective[x] only dateTime
-//* issued MS // nur fuer maschinell erstellte Zeitstempel, fuer manuell eingetragene Zeiten effective[x] dateTime nutzen
+* issued MS // nur fuer maschinell erstellte Zeitstempel, fuer manuell eingetragene Zeiten effective[x] dateTime nutzen
 // Autor 
 * performer 1.. MS
 // Referenz zur Probe
@@ -110,6 +113,9 @@ Id: sd-mii-patho-composition
 Title: "SD MII Patho Composition"
 Description: "Composition als Template für Pathologiebefundbericht als FHIR Dokument"
 * insert RuleSet1
+* id MS
+* meta.lastUpdated MS
+* meta.profile MS
 * extension contains $fhir-version-number named document-version 0..1 MS
 * status MS
 * identifier 1.. MS
@@ -119,9 +125,9 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * system 1.. MS
   * extension contains $fhir-original-text named original-text 0..1 MS
 * type MS
-  * ^short = "Type fixed to 'Pathology study'"
+  * ^short = "The type for the pathology report Composition is 'Pathology study'"
   * coding MS
-    * ^patternCoding = $LOINC#11526-1 "Pathology study"
+  * coding = $LOINC#11526-1 "Pathology study"
     * system 1.. MS
     * code 1.. MS
     * display MS 

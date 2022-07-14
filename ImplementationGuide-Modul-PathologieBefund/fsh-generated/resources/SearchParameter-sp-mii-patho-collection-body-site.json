@@ -1,0 +1,14 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "sp-mii-patho-collection-body-site",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/sp-mii-patho-collection-body-site",
+  "name": "SP_MII_Patho_Collection_Body_Site",
+  "description": "SearchParameter for Specimen.collection.bodySite",
+  "status": "draft",
+  "code": "collection-body-site",
+  "base": [
+    "Specimen"
+  ],
+  "type": "token",
+  "expression": "Specimen.collection.bodySite"
+}

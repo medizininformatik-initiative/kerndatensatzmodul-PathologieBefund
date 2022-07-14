@@ -1,0 +1,14 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "sp-mii-patho-imaging-study",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/sp-mii-patho-imaging-study",
+  "name": "SP_MII_Patho_Imaging_Study",
+  "description": "SearchParameter for DiagnosticReport.imagingStudy",
+  "status": "draft",
+  "code": "imaging-study",
+  "base": [
+    "DiagnosticReport"
+  ],
+  "type": "reference",
+  "expression": "DiagnosticReport.imagingStudy"
+}

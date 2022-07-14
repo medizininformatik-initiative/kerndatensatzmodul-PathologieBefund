@@ -4,6 +4,9 @@ Id: sd-mii-patho-specimen
 Title: "SD MII Patho Specimen"
 Description: "Pathology specimen"
 * insert RuleSet1
+* id MS
+* meta.lastUpdated MS
+* meta.profile MS
 * text MS
 * accessionIdentifier 1.. MS
 * collection
@@ -11,17 +14,50 @@ Description: "Pathology specimen"
   * method from VS_MII_Patho_Collection_Method_SNOMED_CT (extensible)
 * request only Reference(SD_MII_Patho_Service_Request)
 * processing
-  * procedure 
+  * procedure from vs-mii-patho-processing-procedure-snomed-ct (extensible)
     * extension contains $fhir-original-text named original-text 0..1 MS
   * additive only Reference($mii-bio-additive)
 * container MS
   * type from VS_MII_Patho_Container_Type_SNOMED (required)
 
-Instance: ex-mii-patho-specimen-a
+// Examples
+Instance: ex-mii-patho-prostate-tru-cut-biopsy-sample
+InstanceOf: sd-mii-patho-specimen
+Usage: #example
+Title: "ex-mii-patho-prostate-tru-cut-biopsy sample"
+Description: "Prostate tru-cut biopsy sample (specimen)"
+* status = #available
+* text.status = #additional
+* text.div = "
+<div xmlns=\"http://www.w3.org/1999/xhtml\">
+  <div id=\"specimen-a-title\"><b>Probe A</b></div>
+  <table>
+    <tr>
+      <td>Entnahmeart</td>
+      <td>transrektale Stanzbiopsie</td>
+    </tr>
+  </table>
+</div>
+"
+* identifier
+  * type = $v2-0203#FILL "Filler Order Number"
+  * value = "E12345_21-A1"
+* accessionIdentifier
+  * value = "E12345_21"
+* type = $SCT#309134005 "Prostate tru-cut biopsy sample (specimen)"
+* subject.reference = "Patient/12345"
+* collection
+  * collector.reference = "Practitioner/2346545"
+  * collectedDateTime = "2021-01-29T06:15:00Z"
+  * method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
+  * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+
+
+Instance: ex-mii-patho-he-stained-slide-prostate
 InstanceOf: SD_MII_Patho_Specimen
 Usage: #example
-Title: "EX MII Patho Specimen A"
-Description: "Example for SD_MII_Patho_Specimen - Specimen A"
+Title: "EX MII Patho HE-stained slide from Prostate tru-cut biopsy sample"
+Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 * status = #available
 * text.status = #additional
 * text.div = "
@@ -45,11 +81,12 @@ Description: "Example for SD_MII_Patho_Specimen - Specimen A"
 "
 * identifier
   * type = $v2-0203#FILL "Filler Order Number"
-  * value = "E12345_21-A"
+  * value = "E12345_21-A1-1HE"
 * accessionIdentifier
-  * value = "test"
-* type = $SCT#309134005 "Prostate tru-cut biopsy sample (specimen)"
+  * value = "E12345_21"
+* type = $SCT#787150001 "Stained slide of tissue section (specimen)"
 * subject.reference = "Patient/12345"
+* parent.reference = "Specimen/E12345_21-A1"
 * collection
   * collector.reference = "Practitioner/2346545"
   * collectedDateTime = "2021-01-29T06:15:00Z"
@@ -81,8 +118,26 @@ Description: "Example for SD_MII_Patho_Specimen - Specimen A"
     * value = 30
 * processing[=].procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method (procedure)"
 * processing[=].procedure.extension[original-text].valueString = "#faerbung"
-* processing[=].additive = Reference(ex-mii-patho-neutral-buffered-formalin)
+* processing[=].additive[+] = Reference(ex-mii-patho-hematoxylin-stain)
+* processing[=].additive[+] = Reference(ex-mii-patho-eosin-y)
 
+Instance: ex-mii-patho-hematoxylin-stain
+InstanceOf: $mii-bio-additive
+Usage: #example
+Title: "EX MII Patho Hematoxylin-stain"
+Description: "Hematoxylin stain (substance)"
+* code.coding = $SCT#12710003 "Hematoxylin stain (substance)"
+
+Instance: ex-mii-patho-eosin-y
+InstanceOf: $mii-bio-additive
+Usage: #example
+Title: "EX MII Patho Eosin Y"
+Description: "Eosin Y (substance)"
+* code.coding = $SCT#763042003 "Eosin Y (substance)"
+
+
+
+// not needed anymore..
 Instance: ex-mii-patho-neutral-buffered-formalin
 InstanceOf: $mii-bio-additive
 Usage: #example

@@ -5,8 +5,10 @@
   "id": "vs-mii-patho-composition-type-loinc",
   "title": "VS MII Patho Composition Type",
   "description": "ValueSet for the types a pathology Composition can have",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot1",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-composition-type-loinc",
+  "experimental": false,
+  "date": "2022-07-18",
   "compose": {
     "include": [
       {

@@ -7,6 +7,8 @@ Title: "SD MII Patho Attached Image"
 Description: "Profile for attached images"
 * insert RuleSet1
 * id MS
+* meta.lastUpdated MS
+* meta.profile MS
 * partOf MS
 * partOf only Reference(Media)
 * status MS

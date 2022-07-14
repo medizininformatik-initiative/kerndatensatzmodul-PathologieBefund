@@ -12,10 +12,12 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-base-observation",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot1",
   "name": "SD_MII_Patho_Base_Observation",
   "title": "SD MII Patho Base Observation",
   "status": "draft",
+  "experimental": false,
+  "date": "2022-07-18",
   "description": "Abstract Observation to define common features of a main pathology observation",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -60,6 +62,16 @@
       {
         "id": "Observation.id",
         "path": "Observation.id",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.lastUpdated",
+        "path": "Observation.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
         "mustSupport": true
       },
       {
@@ -258,6 +270,11 @@
       {
         "id": "Observation.specimen",
         "path": "Observation.specimen",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
         "mustSupport": true
       },
       {

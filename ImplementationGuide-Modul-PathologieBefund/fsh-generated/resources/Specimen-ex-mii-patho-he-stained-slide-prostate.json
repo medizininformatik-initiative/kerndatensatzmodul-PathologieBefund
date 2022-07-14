@@ -1,6 +1,6 @@
 {
   "resourceType": "Specimen",
-  "id": "ex-mii-patho-specimen-a",
+  "id": "ex-mii-patho-he-stained-slide-prostate",
   "meta": {
     "profile": [
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-specimen"
@@ -10,8 +10,8 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "309134005",
-        "display": "Prostate tru-cut biopsy sample (specimen)"
+        "code": "787150001",
+        "display": "Stained slide of tissue section (specimen)"
       }
     ]
   },
@@ -89,7 +89,10 @@
       },
       "additive": [
         {
-          "reference": "Substance/ex-mii-patho-neutral-buffered-formalin"
+          "reference": "Substance/ex-mii-patho-hematoxylin-stain"
+        },
+        {
+          "reference": "Substance/ex-mii-patho-eosin-y"
         }
       ]
     }
@@ -110,15 +113,20 @@
           }
         ]
       },
-      "value": "E12345_21-A"
+      "value": "E12345_21-A1-1HE"
     }
   ],
   "accessionIdentifier": {
-    "value": "test"
+    "value": "E12345_21"
   },
   "subject": {
     "reference": "Patient/12345"
   },
+  "parent": [
+    {
+      "reference": "Specimen/E12345_21-A1"
+    }
+  ],
   "collection": {
     "collector": {
       "reference": "Practitioner/2346545"

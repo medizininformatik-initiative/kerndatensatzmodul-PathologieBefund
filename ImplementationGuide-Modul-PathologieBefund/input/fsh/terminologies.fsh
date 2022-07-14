@@ -27,6 +27,13 @@ Description: "ValueSet for container type based on IHE PaLM's ContainerEntityCla
 * $SCT#430862008 "Microscope slide mounting medium (substance)"
 * $SCT#434473001 "Specimen container lid (physical object)"
 
+ValueSet: VS_MII_Patho_Processing_Procedure_SNOMED_CT
+Id: vs-mii-patho-processing-procedure-snomed-ct
+Title: "VS MII Patho Processing Procedure [SNOMED CT]"
+Description: "Specimen processing procedure"
+* insert RuleSet1
+* include codes from system $SCT where concept is-a #108252007
+
 //----------------------------------
 // Composition
 //----------------------------------
