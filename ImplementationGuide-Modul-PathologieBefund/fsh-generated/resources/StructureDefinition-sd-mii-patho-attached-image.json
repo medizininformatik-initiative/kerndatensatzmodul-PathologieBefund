@@ -80,6 +80,11 @@
         "mustSupport": true
       },
       {
+        "id": "Media.text",
+        "path": "Media.text",
+        "mustSupport": true
+      },
+      {
         "id": "Media.partOf",
         "path": "Media.partOf",
         "type": [
