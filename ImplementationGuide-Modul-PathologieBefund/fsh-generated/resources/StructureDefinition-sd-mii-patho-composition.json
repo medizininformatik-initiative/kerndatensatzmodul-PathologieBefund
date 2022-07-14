@@ -55,6 +55,21 @@
   "differential": {
     "element": [
       {
+        "id": "Composition.id",
+        "path": "Composition.id",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.meta.lastUpdated",
+        "path": "Composition.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.meta.profile",
+        "path": "Composition.meta.profile",
+        "mustSupport": true
+      },
+      {
         "id": "Composition.extension",
         "path": "Composition.extension",
         "slicing": {

@@ -65,6 +65,16 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.meta.lastUpdated",
+        "path": "Observation.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.meta.profile",
+        "path": "Observation.meta.profile",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.identifier",
         "path": "Observation.identifier",
         "mustSupport": true

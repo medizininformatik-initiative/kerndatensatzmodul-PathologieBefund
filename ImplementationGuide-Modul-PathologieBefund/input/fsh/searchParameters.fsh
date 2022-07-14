@@ -1,12 +1,10 @@
 //----------------------------------------
 // SearchParameters for Specimen
 //----------------------------------------
-Instance: sd-mii-patho-request
+Instance: sp-mii-patho-request
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Request"
-Description: "SearchParameter for Specimen.request"
-* name = "SD_MII_Patho_Request"
+* name = "SP_MII_Patho_Request"
 * description = "SearchParameter for Specimen.request"
 * status = #active
 * code = #request
@@ -14,12 +12,10 @@ Description: "SearchParameter for Specimen.request"
 * type = #reference
 * expression = "Specimen.request"
 
-Instance: sd-mii-patho-collection-method
+Instance: sp-mii-patho-collection-method
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Collection Method"
-Description: "SearchParameter for Specimen.collection.method"
-* name = "SD_MII_Patho_Collection_Method"
+* name = "SP_MII_Patho_Collection_Method"
 * description = "SearchParameter for Specimen.collection.method"
 * status = #draft 
 * code = #collection-method
@@ -27,12 +23,10 @@ Description: "SearchParameter for Specimen.collection.method"
 * type = #token
 * expression = "Specimen.collection.method"
 
-Instance: sd-mii-patho-collection-body-site
+Instance: sp-mii-patho-collection-body-site
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Collection Body-Site"
-Description: "SearchParameter for Specimen.collection.bodySite"
-* name = "SD MII Patho Collection Body Site"
+* name = "SP_MII_Patho_Collection_Body_Site"
 * description = "SearchParameter for Specimen.collection.bodySite"
 * status = #draft
 * code = #collection-body-site
@@ -40,12 +34,10 @@ Description: "SearchParameter for Specimen.collection.bodySite"
 * type = #token
 * expression = "Specimen.collection.bodySite"
 
-Instance: sd-mii-patho-processing-procedure
+Instance: sp-mii-patho-processing-procedure
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Processing Procedure"
-Description: "SearchParameter for Specimen.processing.procedure"
-* name = "SD MII Patho Processing Procedure"
+* name = "SP_MII_Patho_Processing_Procedure"
 * description = "SearchParameter for Specimen.processing.procedure"
 * status = #draft
 * code = #processing-procedure
@@ -53,12 +45,10 @@ Description: "SearchParameter for Specimen.processing.procedure"
 * type = #token
 * expression = "Specimen.processing.procedure"
 
-Instance: sd-mii-patho-processing-additive
+Instance: sp-mii-patho-processing-additive
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Processing Additive"
-Description: "SearchParameter for Specimen.processing.additive"
-* name = "SD MII Patho Processing Additive"
+* name = "SP_MII_Patho_Processing_Additive"
 * description = "SearchParameter for Specimen.processing.additive"
 * status = #draft
 * code = #processing-additive
@@ -66,12 +56,10 @@ Description: "SearchParameter for Specimen.processing.additive"
 * type = #reference
 * expression = "Specimen.processing.additive"
 
-Instance: sd-mii-patho-processing-date
+Instance: sp-mii-patho-processing-date
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Processing Date"
-Description: "SearchParameter for Specimen.processing.time"
-* name = "SD MII Patho Processing Date"
+* name = "SP_MII_Patho_Processing_Date"
 * description = "SearchParameter for Specimen.processing.time"
 * status = #draft
 * code = #processing-date
@@ -79,12 +67,10 @@ Description: "SearchParameter for Specimen.processing.time"
 * type = #date
 * expression = "Specimen.processing.time"
 
-Instance: sd-mii-patho-container-additive
+Instance: sp-mii-patho-container-additive
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Container Additive"
-Description: "SearchParameter for Specimen.container.additive"
-* name = "SD MII Patho Container Additive"
+* name = "SP_MII_Patho_Container_Additive"
 * description = "SearchParameter for Specimen.container.additive"
 * status = #draft
 * code = #container-additive
@@ -95,12 +81,10 @@ Description: "SearchParameter for Specimen.container.additive"
 //-----------------------------------------
 // SearchParameters for Observation
 //-----------------------------------------
-Instance: sd-mii-patho-body-site
+Instance: sp-mii-patho-body-site
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Body-Site"
-Description: "SearchParameter for Observation.bodySite"
-* name = "SD MII Patho Body Site"
+* name = "SP_MII_Patho_Body_Site"
 * description = "SearchParameter for Observation.bodySite"
 * status = #draft
 * code = #body-site
@@ -108,15 +92,24 @@ Description: "SearchParameter for Observation.bodySite"
 * type = #token
 * expression = "Observation.bodySite"
 
+Instance: sp-mii-patho-value-ratio
+InstanceOf: SearchParameter
+Usage: #definition
+* name = "SP_MII_Patho_Value_Ratio"
+* description = "SearchParameter for Observation.valueRatio"
+* status = #draft
+* code = #value-ratio
+* base = #Observation
+* type = #quantity
+* expression = "(Observation.value as Quantity) | (Observation.value as Ratio)"
+
 //-----------------------------------------
 // SearchParameters for ServiceRequest
 //-----------------------------------------
-Instance: sd-mii-patho-reason-code
+Instance: sp-mii-patho-reason-code
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Reason Code"
-Description: "SearchParameter for ServiceRequest.reasonCode"
-* name = "SD MII Patho Reason Code"
+* name = "SP_MII_Patho_Reason_Code"
 * description = "SearchParameter for ServiceRequest.reasonCode"
 * status = #draft
 * code = #reason-code
@@ -124,12 +117,10 @@ Description: "SearchParameter for ServiceRequest.reasonCode"
 * type = #token
 * expression = "ServiceRequest.reasonCode"
 
-Instance: sd-mii-patho-supporting-info
+Instance: sp-mii-patho-supporting-info
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Supporting Info"
-Description: "SearchParameter for ServiceRequest.supportingInfo"
-* name = "SD MII Patho Reason Code"
+* name = "SP_MII_Patho_Reason_Code"
 * description = "SearchParameter for ServiceRequest.supportingInfo"
 * status = #draft
 * code = #supporting-info
@@ -140,12 +131,10 @@ Description: "SearchParameter for ServiceRequest.supportingInfo"
 //-----------------------------------------
 // SearchParameters for DiagnosticReport
 //-----------------------------------------
-Instance: sd-mii-patho-imaging-study
+Instance: sp-mii-patho-imaging-study
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Imaging Study"
-Description: "SearchParameter for DiagnosticReport.imagingStudy"
-* name = "SD MII Patho Imaging Study"
+* name = "SP_MII_Patho_Imaging_Study"
 * description = "SearchParameter for DiagnosticReport.imagingStudy"
 * status = #draft
 * code = #imaging-study
@@ -156,12 +145,10 @@ Description: "SearchParameter for DiagnosticReport.imagingStudy"
 //-----------------------------------------
 // SearchParameters for Composition
 //-----------------------------------------
-Instance: sd-mii-patho-attester-mode
+Instance: sp-mii-patho-attester-mode
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Attester Mode"
-Description: "SearchParameter for Composition.attester.mode"
-* name = "SD MII Patho Attester Mode"
+* name = "SP_MII_Patho_Attester_Mode"
 * code = #attester-mode
 * description = "SearchParameter for Composition.attester.mode"
 * status = #draft
@@ -169,12 +156,10 @@ Description: "SearchParameter for Composition.attester.mode"
 * type = #token
 * expression = "Composition.attester.mode"
 
-Instance: sd-mii-patho-custodian
+Instance: sp-mii-patho-custodian
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Custodian"
-Description: "SearchParameter for Composition.custodian"
-* name = "SD MII Patho Custodian"
+* name = "SP_MII_Patho_Custodian"
 * description = "SearchParameter for Composition.custodian"
 * status = #draft
 * code = #custodian
@@ -182,12 +167,10 @@ Description: "SearchParameter for Composition.custodian"
 * type = #reference
 * expression = "Composition.custodian"
 
-Instance: sd-mii-patho-relates-to-code
+Instance: sp-mii-patho-relates-to-code
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Relates-To Code"
-Description: "SearchParameter for Composition.relatesTo.code"
-* name = "SD MII Patho Relates-To Code"
+* name = "SP_MII_Patho_Relates_To_Code"
 * description = "SearchParameter for Composition.relatesTo.code"
 * status = #draft
 * code = #relates-to-code
@@ -198,13 +181,11 @@ Description: "SearchParameter for Composition.relatesTo.code"
 //-----------------------------------------
 // SearchParameters for Media
 //-----------------------------------------
-Instance: sd-mii-patho-part-of
+Instance: sp-mii-patho-part-of
 InstanceOf: SearchParameter
 Usage: #definition
-Title: "SD MII Patho Part Of"
-Description: "SearchParameter for Media.partOf"
-* name = "SD MII Patho Part Of"
-* code = #atte
+* name = "SP_MII_Patho_Part_Of"
+* code = #part-of
 * description = "SearchParameter for Media.partOf"
 * status = #draft
 * base = #Media

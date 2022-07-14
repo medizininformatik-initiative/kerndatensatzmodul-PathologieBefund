@@ -10,6 +10,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Meta
 * meta.profile MS
 * meta.source MS
+* meta.lastUpdated MS
 // Identifikation - Auftrags-ID: Auftrags-ID des Auftraggebers (Placer) || Auftrags-ID des Auftragnehmers (Filler)
 * identifier 1.. MS
 * identifier ^slicing.discriminator[0].type = #pattern

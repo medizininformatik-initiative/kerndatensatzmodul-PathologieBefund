@@ -4,6 +4,9 @@ Id: sd-mii-patho-specimen
 Title: "SD MII Patho Specimen"
 Description: "Pathology specimen"
 * insert RuleSet1
+* id MS
+* meta.lastUpdated MS
+* meta.profile MS
 * text MS
 * accessionIdentifier 1.. MS
 * collection

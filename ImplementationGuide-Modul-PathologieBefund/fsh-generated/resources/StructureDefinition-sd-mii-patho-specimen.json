@@ -45,6 +45,21 @@
   "differential": {
     "element": [
       {
+        "id": "Specimen.id",
+        "path": "Specimen.id",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.meta.lastUpdated",
+        "path": "Specimen.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.meta.profile",
+        "path": "Specimen.meta.profile",
+        "mustSupport": true
+      },
+      {
         "id": "Specimen.text",
         "path": "Specimen.text",
         "mustSupport": true
