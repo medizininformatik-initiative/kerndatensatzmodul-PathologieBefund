@@ -9,6 +9,7 @@ Description: "Profile for attached images"
 * id MS
 * meta.lastUpdated MS
 * meta.profile MS
+* text MS
 * partOf MS
 * partOf only Reference(Media)
 * status MS

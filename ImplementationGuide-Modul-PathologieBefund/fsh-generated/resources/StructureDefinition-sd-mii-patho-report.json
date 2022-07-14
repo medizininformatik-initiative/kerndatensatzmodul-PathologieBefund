@@ -80,6 +80,11 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.text",
+        "path": "DiagnosticReport.text",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
         "slicing": {

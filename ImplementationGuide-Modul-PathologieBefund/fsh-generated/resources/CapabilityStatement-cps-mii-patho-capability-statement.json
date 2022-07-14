@@ -797,34 +797,10 @@
               ]
             },
             {
-              "name": "device",
-              "definition": "http://hl7.org/fhir/SearchParameter/Observation-device",
-              "type": "reference",
-              "documentation": "The Device that generated the observation data",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "encounter",
               "definition": "http://hl7.org/fhir/SearchParameter/clinical-encounter",
               "type": "reference",
               "documentation": "Encounter related to the observation",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "focus",
-              "definition": "http://hl7.org/fhir/SearchParameter/Observation-focus",
-              "type": "reference",
-              "documentation": "The focus of an observation when the focus is not the patient of record",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -861,18 +837,6 @@
               "definition": "http://hl7.org/fhir/SearchParameter/Observation-method",
               "type": "token",
               "documentation": "The method used for the observation",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "part-of",
-              "definition": "http://hl7.org/fhir/SearchParameter/Observation-part-of",
-              "type": "reference",
-              "documentation": "Part of referenced event",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1078,18 +1042,6 @@
               ]
             },
             {
-              "name": "_id",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
-              "type": "token",
-              "documentation": "Logical id of this artifact",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "_lastUpdated",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
               "type": "date",
@@ -1130,30 +1082,6 @@
               "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-authored",
               "type": "date",
               "documentation": "Date request signed",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "based-on",
-              "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-based-on",
-              "type": "reference",
-              "documentation": "What request fulfills",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "body-site",
-              "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-body-site",
-              "type": "token",
-              "documentation": "Where procedure is going to be done",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1210,46 +1138,10 @@
               ]
             },
             {
-              "name": "instantiates-canonical",
-              "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-instantiates-canonical",
-              "type": "reference",
-              "documentation": "Instantiates FHIR protocol or definition",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "instantiates-uri",
-              "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-instantiates-uri",
-              "type": "uri",
-              "documentation": "Instantiates external protocol or definition",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "intent",
               "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-intent",
               "type": "token",
               "documentation": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "occurrence",
-              "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-occurrence",
-              "type": "date",
-              "documentation": "When service should occur",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1286,30 +1178,6 @@
               "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-performer-type",
               "type": "token",
               "documentation": "Performer role",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "priority",
-              "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-priority",
-              "type": "token",
-              "documentation": "routine | urgent | asap | stat",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "replaces",
-              "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-replaces",
-              "type": "reference",
-              "documentation": "What request replaces",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1454,18 +1322,6 @@
             }
           ],
           "searchParam": [
-            {
-              "name": "_id",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
-              "type": "token",
-              "documentation": "Logical id of this artifact",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
             {
               "name": "_id",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
@@ -1659,18 +1515,6 @@
               ]
             },
             {
-              "name": "results-interpreter",
-              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-results-interpreter",
-              "type": "reference",
-              "documentation": "Who was the source of the report",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "specimen",
               "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen",
               "type": "reference",
@@ -1784,18 +1628,6 @@
               ]
             },
             {
-              "name": "_id",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
-              "type": "token",
-              "documentation": "Logical id of this artifact",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "_lastUpdated",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
               "type": "date",
@@ -1860,18 +1692,6 @@
               "definition": "http://hl7.org/fhir/SearchParameter/Composition-category",
               "type": "token",
               "documentation": "Categorization of Composition",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "confidentiality",
-              "definition": "http://hl7.org/fhir/SearchParameter/Composition-confidentiality",
-              "type": "token",
-              "documentation": "As defined by affinity domain",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -2149,18 +1969,6 @@
               ]
             },
             {
-              "name": "_id",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
-              "type": "token",
-              "documentation": "Logical id of this artifact",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "_lastUpdated",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
               "type": "date",
@@ -2197,18 +2005,6 @@
               ]
             },
             {
-              "name": "based-on",
-              "definition": "http://hl7.org/fhir/SearchParameter/Media-based-on",
-              "type": "reference",
-              "documentation": "Procedure that caused this media to be created",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "created",
               "definition": "http://hl7.org/fhir/SearchParameter/Media-created",
               "type": "date",
@@ -2221,82 +2017,10 @@
               ]
             },
             {
-              "name": "device",
-              "definition": "http://hl7.org/fhir/SearchParameter/Media-device",
-              "type": "reference",
-              "documentation": "Observing Device",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "encounter",
-              "definition": "http://hl7.org/fhir/SearchParameter/Media-encounter",
-              "type": "reference",
-              "documentation": "Encounter associated with media",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "identifier",
-              "definition": "http://hl7.org/fhir/SearchParameter/Media-identifier",
-              "type": "token",
-              "documentation": "Identifier(s) for the image",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "modality",
-              "definition": "http://hl7.org/fhir/SearchParameter/Media-modality",
-              "type": "token",
-              "documentation": "The type of acquisition equipment/process",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "operator",
-              "definition": "http://hl7.org/fhir/SearchParameter/Media-operator",
-              "type": "reference",
-              "documentation": "The person who generated the image",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "patient",
               "definition": "http://hl7.org/fhir/SearchParameter/Media-patient",
               "type": "reference",
               "documentation": "Who/What this Media is a record of",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "site",
-              "definition": "http://hl7.org/fhir/SearchParameter/Media-site",
-              "type": "token",
-              "documentation": "Observed body part",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -2333,18 +2057,6 @@
               "definition": "http://hl7.org/fhir/SearchParameter/Media-type",
               "type": "token",
               "documentation": "Classification of media as image, video, or audio",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "view",
-              "definition": "http://hl7.org/fhir/SearchParameter/Media-view",
-              "type": "token",
-              "documentation": "Imaging view, e.g. Lateral or Antero-posterior",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",

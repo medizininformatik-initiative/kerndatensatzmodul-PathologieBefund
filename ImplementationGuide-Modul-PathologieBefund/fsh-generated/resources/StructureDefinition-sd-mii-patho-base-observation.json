@@ -75,6 +75,11 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.text",
+        "path": "Observation.text",
+        "mustSupport": true
+      },
+      {
         "id": "Observation.identifier",
         "path": "Observation.identifier",
         "mustSupport": true

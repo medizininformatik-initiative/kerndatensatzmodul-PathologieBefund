@@ -11,6 +11,7 @@ Description: "Defines the general pathology report structure for German hospital
 * id MS
 * meta.lastUpdated MS
 * meta.profile MS
+* text MS
 // Identifikator
 * identifier 1.. MS
   * ^slicing.discriminator.type = #pattern

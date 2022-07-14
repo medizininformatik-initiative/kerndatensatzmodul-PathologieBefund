@@ -60,11 +60,6 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.text",
-        "path": "Observation.text",
-        "mustSupport": true
-      },
-      {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "slicing": {

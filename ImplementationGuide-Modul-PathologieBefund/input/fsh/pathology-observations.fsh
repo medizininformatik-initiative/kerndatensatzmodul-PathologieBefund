@@ -12,6 +12,7 @@ Description: "Abstract Observation to define common features of a main pathology
 * id MS
 * meta.lastUpdated MS
 * meta.profile MS
+* text MS
 * identifier MS
 * basedOn MS 
 * basedOn only Reference(SD_MII_Patho_Service_Request)
