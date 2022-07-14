@@ -9,6 +9,8 @@ Description: "Defines the general pathology report structure for German hospital
 * insert RuleSet1
 // ID
 * id MS
+* meta.lastUpdated MS
+* meta.profile MS
 // Identifikator
 * identifier 1.. MS
   * ^slicing.discriminator.type = #pattern
@@ -111,6 +113,9 @@ Id: sd-mii-patho-composition
 Title: "SD MII Patho Composition"
 Description: "Composition als Template für Pathologiebefundbericht als FHIR Dokument"
 * insert RuleSet1
+* id MS
+* meta.lastUpdated MS
+* meta.profile MS
 * extension contains $fhir-version-number named document-version 0..1 MS
 * status MS
 * identifier 1.. MS

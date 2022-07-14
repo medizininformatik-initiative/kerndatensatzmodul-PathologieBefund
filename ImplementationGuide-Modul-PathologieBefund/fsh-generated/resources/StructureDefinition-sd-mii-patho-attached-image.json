@@ -70,6 +70,16 @@
         "mustSupport": true
       },
       {
+        "id": "Media.meta.lastUpdated",
+        "path": "Media.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "Media.meta.profile",
+        "path": "Media.meta.profile",
+        "mustSupport": true
+      },
+      {
         "id": "Media.partOf",
         "path": "Media.partOf",
         "type": [

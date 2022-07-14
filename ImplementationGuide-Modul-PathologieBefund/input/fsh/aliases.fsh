@@ -22,3 +22,4 @@ Alias: $bio-temperaturbedingungen = https://www.medizininformatik-initiative.de/
 Alias: $fhir-original-text = http://hl7.org/fhir/StructureDefinition/originalText
 Alias: $fhir-version-number = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
 Alias: $fhir-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+Alias: $fhir-capabilitystatement-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation

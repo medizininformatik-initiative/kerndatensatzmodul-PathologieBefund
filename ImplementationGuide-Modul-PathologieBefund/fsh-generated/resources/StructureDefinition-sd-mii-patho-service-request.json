@@ -55,6 +55,11 @@
   "differential": {
     "element": [
       {
+        "id": "ServiceRequest.meta.lastUpdated",
+        "path": "ServiceRequest.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
         "id": "ServiceRequest.meta.source",
         "path": "ServiceRequest.meta.source",
         "mustSupport": true

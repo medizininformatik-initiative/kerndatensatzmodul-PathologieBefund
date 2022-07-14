@@ -65,6 +65,11 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.meta.lastUpdated",
+        "path": "DiagnosticReport.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.meta.source",
         "path": "DiagnosticReport.meta.source",
         "mustSupport": true
