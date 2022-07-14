@@ -19,10 +19,9 @@ Description: "The CapabilityStatement describes all mandatory interactions for a
 * rest[=].resource[+]
   * insert InitResource(#Specimen, #SHALL, Specimen, #SHALL)
   * insert AddSupportedProfile(sd-mii-patho-specimen, #SHALL)
-  * insert AddInteraction(#SHALL, #read)
-  * insert AddInteraction(#SHALL, #search-type)
+  * insert AddInteraction(#read, #SHALL)
+  * insert AddInteraction(#search-type, #SHALL)
   // CORE
-  * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
   * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
   * insert AddSearchParameter(#SHALL, "_lastUpdated", Resource-lastUpdated, #date, "When the resource version last changed")
   * insert AddSearchParameter(#SHALL, "_profile", Resource-profile, #uri, "Profiles this resource claims to conform to")
@@ -60,8 +59,8 @@ Description: "The CapabilityStatement describes all mandatory interactions for a
   * insert AddSupportedProfile(sd-mii-patho-diagnostic-conclusion-grouper, #SHALL)
   * insert AddSupportedProfile(sd-mii-patho-section-grouper, #SHALL)
   * insert AddSupportedProfile(sd-mii-patho-additional-specified-grouper, #SHALL)
-  * insert AddInteraction(#SHALL, #read)
-  * insert AddInteraction(#SHALL, #search-type)
+  * insert AddInteraction(#read, #SHALL)
+  * insert AddInteraction(#search-type, #SHALL)
   // CORE
   * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
   * insert AddSearchParameter(#SHALL, "_lastUpdated", Resource-lastUpdated, #date, "When the resource version last changed")
@@ -115,8 +114,8 @@ Related resource that belongs to the Observation group")
 * rest[=].resource[+]
   * insert InitResource(#ServiceRequest, #SHALL, ServiceRequest, #SHALL)
   * insert AddSupportedProfile(sd-mii-patho-service-request, #SHALL)
-  * insert AddInteraction(#SHALL, #read)
-  * insert AddInteraction(#SHALL, #search-type)
+  * insert AddInteraction(#read, #SHALL)
+  * insert AddInteraction(#search-type, #SHALL)
   // CORE
   * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
   * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
@@ -153,8 +152,8 @@ Related resource that belongs to the Observation group")
 * rest[=].resource[+]
   * insert InitResource(#DiagnosticReport, #SHALL, DiagnosticReport, #SHALL)
   * insert AddSupportedProfile(sd-mii-patho-report, #SHALL)
-  * insert AddInteraction(#SHALL, #read)
-  * insert AddInteraction(#SHALL, #search-type)
+  * insert AddInteraction(#read, #SHALL)
+  * insert AddInteraction(#search-type, #SHALL)
   // CORE
   * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
   * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
@@ -185,8 +184,8 @@ Related resource that belongs to the Observation group")
 * rest[=].resource[+]
   * insert InitResource(#Composition, #SHALL, Composition, #SHALL)
   * insert AddSupportedProfile(sd-mii-patho-composition, #SHALL)
-  * insert AddInteraction(#SHALL, #read)
-  * insert AddInteraction(#SHALL, #search-type)
+  * insert AddInteraction(#read, #SHALL)
+  * insert AddInteraction(#search-type, #SHALL)
   // CORE
   * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
   * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
@@ -221,8 +220,8 @@ Related resource that belongs to the Observation group")
 * rest[=].resource[+]
   * insert InitResource(#Media, #SHALL, Media, #SHALL)
   * insert AddSupportedProfile(sd-mii-patho-attached-image, #SHALL)
-  * insert AddInteraction(#SHALL, #read)
-  * insert AddInteraction(#SHALL, #search-type)
+  * insert AddInteraction(#read, #SHALL)
+  * insert AddInteraction(#search-type, #SHALL)
   // CORE
   * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
   * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
