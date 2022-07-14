@@ -6,7 +6,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 * name = "SP_MII_Patho_Request"
 * description = "SearchParameter for Specimen.request"
-* status = #active
+* status = #draft
 * code = #request
 * base = #Specimen
 * type = #reference

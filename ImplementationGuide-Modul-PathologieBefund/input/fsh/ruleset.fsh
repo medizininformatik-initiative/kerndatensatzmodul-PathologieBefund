@@ -28,18 +28,18 @@ RuleSet: AddSupportedProfile(profile, expectation)
 * supportedProfile[=].extension.valueCode = {expectation}
 
 RuleSet: AddSearchParameter(expectation, name, parameter-id, type, documentation)
-* searchParam[+].extension.url = $fhir-capabilitystatement-expectation
-* searchParam[=].extension.valueCode = {expectation}
-* searchParam[=].name = {name}
+* searchParam[+].name = {name}
 * searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/{parameter-id}"
 * searchParam[=].type = {type}
 * searchParam[=].documentation = {documentation}
+* searchParam[=].extension.url = $fhir-capabilitystatement-expectation
+* searchParam[=].extension.valueCode = {expectation}
 
 RuleSet: AddMIISearchParameter(expectation, name, parameter-id, type, documentation)
-* searchParam[+].extension.url = $fhir-capabilitystatement-expectation
-* searchParam[=].extension.valueCode = {expectation}
-* searchParam[=].name = {name}
+* searchParam[+].name = {name}
 * searchParam[=].definition = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/{parameter-id}"
 * searchParam[=].type = {type}
 * searchParam[=].documentation = {documentation}
+* searchParam[=].extension.url = $fhir-capabilitystatement-expectation
+* searchParam[=].extension.valueCode = {expectation}
 
