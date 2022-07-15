@@ -237,18 +237,6 @@
               ]
             },
             {
-              "name": "container-id",
-              "definition": "http://hl7.org/fhir/SearchParameter/Specimen-container-id",
-              "type": "token",
-              "documentation": "The unique identifier associated with the specimen container",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "container",
               "definition": "http://hl7.org/fhir/SearchParameter/Specimen-container",
               "type": "token",
@@ -1895,18 +1883,6 @@
               "definition": "http://hl7.org/fhir/SearchParameter/Media-created",
               "type": "date",
               "documentation": "When Media was collected",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "patient",
-              "definition": "http://hl7.org/fhir/SearchParameter/Media-patient",
-              "type": "reference",
-              "documentation": "Who/What this Media is a record of",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",

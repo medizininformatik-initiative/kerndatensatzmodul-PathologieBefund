@@ -190,4 +190,4 @@ Usage: #definition
 * status = #draft
 * base = #Media
 * type = #reference
-* expression = "Media.partOf"
+* expression = "(Media.partOf as Media)"

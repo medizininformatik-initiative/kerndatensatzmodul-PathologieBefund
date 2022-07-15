@@ -42,6 +42,11 @@
   "subject": {
     "reference": "Patient/12345"
   },
+  "request": [
+    {
+      "reference": "ServiceRequest/ex-mii-patho-request"
+    }
+  ],
   "collection": {
     "collector": {
       "reference": "Practitioner/2346545"

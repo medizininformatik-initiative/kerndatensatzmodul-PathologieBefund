@@ -129,6 +129,11 @@
       "reference": "Specimen/ex-mii-patho-prostate-tru-cut-biopsy-sample"
     }
   ],
+  "request": [
+    {
+      "reference": "ServiceRequest/ex-mii-patho-request"
+    }
+  ],
   "collection": {
     "collector": {
       "reference": "Practitioner/2346545"
