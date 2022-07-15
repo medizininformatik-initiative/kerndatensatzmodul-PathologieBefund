@@ -200,7 +200,7 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 // Example
 //--------------------------------
 Instance: ex-mii-patho-report
-InstanceOf: SD_MII_Patho_Report
+InstanceOf: sd-mii-patho-report
 Usage: #example
 Title: "Pathology Report Example"
 Description: "Example for SD_MII_Patho_Report"
@@ -263,10 +263,10 @@ Description: "Example for SD_MII_Patho_Report"
 * media.link = Reference(ex-mii-patho-attached-image)
 * media.comment = "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
 
-Instance: CompositionExample
-InstanceOf: SD_MII_Patho_Composition
+Instance: ex-mii-patho-composition
+InstanceOf: sd-mii-patho-composition
 Usage: #example
-Title: "Composition Example"
+Title: "EX MII Patho Composition"
 Description: "Example for a SD_MII_Patho_Composition"
 * extension[document-version].valueString = "1"
 * status = #final
@@ -288,6 +288,7 @@ Description: "Example for a SD_MII_Patho_Composition"
 * section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"
 * section[patho-diagnostic-report].entry = Reference(SD_MII_Patho_ReportExample)
 
+/*
 //---------------------------------------------
 // Patho-Omics Examples
 //---------------------------------------------
@@ -484,3 +485,4 @@ Description: "Example for a SD_MII_Patho_Composition"
 * section[additional-diagnostic-report].title = "Genetic Diagnostic Report"
 * section[additional-diagnostic-report].code = $LOINC#51969-4 "Genetic analysis report"
 * section[additional-diagnostic-report].entry = Reference(example-mii-molgen-molekulargenetischer-befundbericht-3)
+*/
