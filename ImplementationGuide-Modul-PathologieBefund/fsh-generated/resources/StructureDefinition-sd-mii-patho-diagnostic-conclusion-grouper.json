@@ -60,8 +60,16 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code",
-        "path": "Observation.code",
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "min": 2
+      },
+      {
+        "id": "Observation.category:section-type",
+        "path": "Observation.category",
+        "sliceName": "section-type",
+        "min": 1,
+        "max": "1",
         "fixedCodeableConcept": {
           "coding": [
             {
