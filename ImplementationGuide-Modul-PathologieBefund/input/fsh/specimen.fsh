@@ -54,7 +54,9 @@ Description: "Prostate tru-cut biopsy sample (specimen)"
   * collectedDateTime = "2021-01-29T06:15:00Z"
   * method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
   * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
-
+* container[+] 
+  * type = $SCT#434746001 "Specimen vial (physical object)"
+  * additiveReference = Reference(ex-mii-patho-neutral-buffered-formalin)
 
 Instance: ex-mii-patho-he-stained-slide-prostate
 InstanceOf: SD_MII_Patho_Specimen
@@ -126,6 +128,13 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 * processing[=].procedure.extension[original-text].valueString = "#faerbung"
 * processing[=].additive[+] = Reference(ex-mii-patho-hematoxylin-stain)
 * processing[=].additive[+] = Reference(ex-mii-patho-eosin-y)
+* container[+] 
+  * type = $SCT#433466003 "Microscope slide (physical object)"
+  * additiveReference = Reference(ex-mii-patho-microscope-slide-mounting-medium)
+* container[+]
+  * type = $SCT#433472003 "Microscope slide coverslip (physical object)"
+  * additiveReference = Reference(ex-mii-patho-microscope-slide-mounting-medium)
+
 
 Instance: ex-mii-patho-hematoxylin-stain
 InstanceOf: $mii-bio-additive
@@ -141,6 +150,19 @@ Title: "EX MII Patho Eosin Y"
 Description: "Eosin Y (substance)"
 * code.coding = $SCT#763042003 "Eosin Y (substance)"
 
+Instance: ex-mii-patho-neutral-buffered-formalin
+InstanceOf: $mii-bio-additive
+Usage: #example
+Title: "EX MII Patho Neutral Buffered Formalin"
+Description: "Neutral buffered formalin (substance)"
+* code.coding = $SCT#434162003 "Neutral buffered formalin (substance)"
+
+Instance: ex-mii-patho-microscope-slide-mounting-medium
+InstanceOf: $mii-bio-additive
+Usage: #example
+Title: "EX MII Patho Microscope Slide Mounting Medium"
+Description: "Microscope slide mounting medium (substance)"
+* code.coding = $SCT#430862008 "Microscope slide mounting medium (substance)"
 
 /*
 // not needed anymore..
