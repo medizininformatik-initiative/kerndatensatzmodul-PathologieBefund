@@ -129,18 +129,6 @@
               ]
             },
             {
-              "name": "_text",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-text",
-              "type": "string",
-              "documentation": "Search on the narrative of the resource",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "identifier",
               "definition": "http://hl7.org/fhir/SearchParameter/Specimen-identifier",
               "type": "token",
@@ -388,40 +376,13 @@
             ]
           },
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-base-observation",
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-intraoperative-grouper",
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-macroscopic-grouper",
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-microscopic-grouper",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding",
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-diagnostic-conclusion-grouper",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-section-grouper",
             "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-additional-specified-grouper"
           ],
           "_supportedProfile": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
             {
               "extension": [
                 {
@@ -521,10 +482,519 @@
               ]
             },
             {
-              "name": "_text",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-text",
+              "name": "based-on",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-based-on",
+              "type": "reference",
+              "documentation": "Reference to the service request",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "category",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-category",
+              "type": "token",
+              "documentation": "The classification of the type of observation",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "code",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type": "token",
+              "documentation": "The code of the observation type",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "code-value-concept",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-code-value-concept",
+              "type": "composite",
+              "documentation": "Code and coded value parameter pair",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "code-value-date",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-code-value-date",
+              "type": "composite",
+              "documentation": "Code and date/time value parameter pair",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "code-value-quantity",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-code-value-quantity",
+              "type": "composite",
+              "documentation": "Code and quantity value parameter pair",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "code-value-string",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-code-value-string",
+              "type": "composite",
+              "documentation": "Code and string value parameter pair",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "combo-code",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-combo-code",
+              "type": "token",
+              "documentation": "The code of the observation type or component type",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "combo-code-value-concept",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-combo-code-value-concept",
+              "type": "composite",
+              "documentation": "Code and coded value parameter pair, including in components",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "combo-code-value-quantity",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-combo-code-value-quantity",
+              "type": "composite",
+              "documentation": "Code and quantity value parameter pair, including in components",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "combo-data-absent-reason",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-combo-data-absent-reason",
+              "type": "token",
+              "documentation": "The reason why the expected value in the element Observation.value[x] or Observation.component.value[x] is missing",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "combo-value-concept",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-combo-value-concept",
+              "type": "token",
+              "documentation": "The value or component value of the observation, if the value is a CodeableConcept",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "combo-value-quantity",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-combo-value-quantity",
+              "type": "quantity",
+              "documentation": "The value or component value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "component-code",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-component-code",
+              "type": "token",
+              "documentation": "The component code of the observation type",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "component-code-value-concept",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-component-code-value-concept",
+              "type": "composite",
+              "documentation": "Component code and component coded value parameter pair",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "component-code-value-quantity",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-component-code-value-quantity",
+              "type": "composite",
+              "documentation": "Component code and component quantity value parameter pair",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "component-data-absent-reason",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason",
+              "type": "token",
+              "documentation": "The reason why the expected value in the element Observation.component.value[x] is missing",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "component-value-concept",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-component-value-concept",
+              "type": "token",
+              "documentation": "The value of the component observation, if the value is a CodeableConcept",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "component-value-quantity",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-component-value-quantity",
+              "type": "quantity",
+              "documentation": "The value of the component observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "data-absent-reason",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason",
+              "type": "token",
+              "documentation": "The reason why the expected value in the element Observation.value[x] is missing",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "date",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type": "date",
+              "documentation": "Obtained datetime. If the obtained element is a period, a date that falls in the period",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "encounter",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-encounter",
+              "type": "reference",
+              "documentation": "Encounter related to the observation",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "has-member",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-has-member",
+              "type": "reference",
+              "documentation": "\t\r\nRelated resource that belongs to the Observation group",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+              "type": "token",
+              "documentation": "The unique id for a particular observation",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "method",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-method",
+              "type": "token",
+              "documentation": "The method used for the observation",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "patient",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-subject",
+              "type": "reference",
+              "documentation": "The subject that the observation is about (if patient)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "performer",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-performer",
+              "type": "reference",
+              "documentation": "Who performed the observation",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "specimen",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-specimen",
+              "type": "reference",
+              "documentation": "Specimen used for this observation",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "status",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-status",
+              "type": "token",
+              "documentation": "The status of the observation",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "subject",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-subject",
+              "type": "reference",
+              "documentation": "The subject that the observation is about",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "value-concept",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-value-concept",
+              "type": "token",
+              "documentation": "The value of the observation, if the value is a CodeableConcept",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "value-date",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-value-date",
+              "type": "date",
+              "documentation": "The value of the observation, if the value is a date or period of time",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "value-quantity",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-value-quantity",
+              "type": "quantity",
+              "documentation": "The value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "value-string",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-value-string",
               "type": "string",
-              "documentation": "Search on the narrative of the resource",
+              "documentation": "The value of the observation, if the value is a string, and also searches in CodeableConcept.text",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "body-site",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/sp-mii-patho-body-site",
+              "type": "token",
+              "documentation": "SearchParameter for Observation.bodySite",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "value-ratio",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/sp-mii-patho-value-ratio",
+              "type": "quantity",
+              "documentation": "SearchParameter for Observation.valueRatio",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Observation",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "profile": "http://hl7.org/fhir/StructureDefinition/Observation",
+          "_profile": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "SHALL"
+              }
+            ]
+          },
+          "supportedProfile": [
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-finding"
+          ],
+          "_supportedProfile": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            }
+          ],
+          "interaction": [
+            {
+              "code": "read",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "code": "search-type",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "_id",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
+              "type": "token",
+              "documentation": "Logical id of this artifact",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "_lastUpdated",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+              "type": "date",
+              "documentation": "When the resource version last changed",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "_profile",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-profile",
+              "type": "uri",
+              "documentation": "Profiles this resource claims to conform to",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1066,18 +1536,6 @@
               ]
             },
             {
-              "name": "_text",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-text",
-              "type": "string",
-              "documentation": "Search on the narrative of the resource",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "authored",
               "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-authored",
               "type": "date",
@@ -1359,18 +1817,6 @@
               ]
             },
             {
-              "name": "_text",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-text",
-              "type": "string",
-              "documentation": "Search on the narrative of the resource",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "based-on",
               "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-based-on",
               "type": "reference",
@@ -1644,18 +2090,6 @@
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-profile",
               "type": "uri",
               "documentation": "Profiles this resource claims to conform to",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "_text",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-text",
-              "type": "string",
-              "documentation": "Search on the narrative of the resource",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1985,18 +2419,6 @@
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-profile",
               "type": "uri",
               "documentation": "Profiles this resource claims to conform to",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
-              "name": "_text",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-text",
-              "type": "string",
-              "documentation": "Search on the narrative of the resource",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",

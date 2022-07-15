@@ -367,7 +367,7 @@ Title: "EX MII Patho Diagnostic Conclusion 1"
 Description: "Example for a diagnostic conclusion"
 * status = #final
 * category[laboratory-category].coding = $obs-category#laboratory
-* category[section-type].coding = $LOINC#22637-3 "Pathology report diagnosis"
+* category[section-type].coding = $LOINC#22637-3 "Pathology report diagnosis" 
 * code = $LOINC#59847-4 "Histology and Behavior ICD-O-3 Cancer"
 * valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom (azinär)"
 
