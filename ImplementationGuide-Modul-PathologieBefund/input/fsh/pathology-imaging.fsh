@@ -22,7 +22,7 @@ Description: "Profile for attached images"
   * coding[image] = $media-type#image 
 // Referenz kann auch weg, weil die Observations schon drauf verweisen ueber .derivedFrom
 * subject MS 
-* subject only Reference(SD_MII_Patho_Specimen)
+* subject only Reference(sd-mii-patho-specimen)
 * content MS
 
 //Example
@@ -32,5 +32,6 @@ Usage: #example
 Title: "EX MII Patho Attached Image"
 Description: "Example for Attached Image"
 * status = #completed
+* subject = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
 * content.contentType = #image/png
 * content.url = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/image"

@@ -28,7 +28,7 @@
       },
       "entry": [
         {
-          "reference": "SD_MII_Patho_ReportExample"
+          "reference": "DiagnosticReport/ex-mii-patho-report"
         }
       ]
     }

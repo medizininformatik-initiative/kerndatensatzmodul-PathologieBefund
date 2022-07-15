@@ -250,7 +250,7 @@ Description: "Example for SD_MII_Patho_Report"
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
 * subject.reference = "Patient/12345"
 * performer.reference = "Practitioner/2346545"
-* specimen = Reference(ex-mii-patho-specimen-a)
+* specimen = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
 * encounter.reference = "Encounter/12345"
 * result[macroscopic-grouper] = Reference(ex-mii-patho-macro-grouper-a)
 * result[macroscopic-grouper] = Reference(ex-mii-patho-macro-grouper-b)
@@ -286,7 +286,7 @@ Description: "Example for a SD_MII_Patho_Composition"
 * event.period.end = "2021-06-08"
 * section[patho-diagnostic-report].title = "Pathology Diagnostic Report"
 * section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"
-* section[patho-diagnostic-report].entry = Reference(SD_MII_Patho_ReportExample)
+* section[patho-diagnostic-report].entry = Reference(ex-mii-patho-report)
 
 /*
 //---------------------------------------------

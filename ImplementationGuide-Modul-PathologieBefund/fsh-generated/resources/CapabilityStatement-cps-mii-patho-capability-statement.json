@@ -1706,18 +1706,6 @@
               ]
             },
             {
-              "name": "related-id",
-              "definition": "http://hl7.org/fhir/SearchParameter/Composition-related-id",
-              "type": "token",
-              "documentation": "Target of the relationship",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "related-ref",
               "definition": "http://hl7.org/fhir/SearchParameter/Composition-related-ref",
               "type": "reference",
