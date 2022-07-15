@@ -82,8 +82,10 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 * identifier
   * type = $v2-0203#FILL "Filler Order Number"
   * value = "E12345_21-A1-1HE"
+  * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht" 
 * accessionIdentifier
   * value = "E12345_21"
+  * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#787150001 "Stained slide of tissue section (specimen)"
 * subject.reference = "Patient/12345"
 * parent = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)

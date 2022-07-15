@@ -1120,18 +1120,6 @@
               ]
             },
             {
-              "name": "performer-type",
-              "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-performer-type",
-              "type": "token",
-              "documentation": "Performer role",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ]
-            },
-            {
               "name": "requester",
               "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-requester",
               "type": "reference",
