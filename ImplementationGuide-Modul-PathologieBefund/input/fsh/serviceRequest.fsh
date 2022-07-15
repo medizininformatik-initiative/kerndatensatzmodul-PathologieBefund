@@ -178,6 +178,6 @@ Description: "Pathology Report Example "
 * subject.reference = "Patient/12345"
 * encounter.reference = "Encounter/87687"
 * requester.reference = "Practitioner/34456"
-* specimen[+].reference = "Specimen/87689"
+* specimen[+] = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
 // * category[+] = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
 * code = $LOINC#11526-1 "Pathology Study"

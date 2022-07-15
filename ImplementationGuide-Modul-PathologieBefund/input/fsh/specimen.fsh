@@ -86,7 +86,7 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
   * value = "E12345_21"
 * type = $SCT#787150001 "Stained slide of tissue section (specimen)"
 * subject.reference = "Patient/12345"
-* parent.reference = "Specimen/E12345_21-A1"
+* parent = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
 * collection
   * collector.reference = "Practitioner/2346545"
   * collectedDateTime = "2021-01-29T06:15:00Z"
