@@ -42,10 +42,13 @@ Description: "Prostate tru-cut biopsy sample (specimen)"
 * identifier
   * type = $v2-0203#FILL "Filler Order Number"
   * value = "E12345_21-A1"
+  * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * accessionIdentifier
   * value = "E12345_21"
+  * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#309134005 "Prostate tru-cut biopsy sample (specimen)"
 * subject.reference = "Patient/12345"
+* request = Reference(ex-mii-patho-request)
 * collection
   * collector.reference = "Practitioner/2346545"
   * collectedDateTime = "2021-01-29T06:15:00Z"
@@ -82,11 +85,14 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 * identifier
   * type = $v2-0203#FILL "Filler Order Number"
   * value = "E12345_21-A1-1HE"
+  * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht" 
 * accessionIdentifier
   * value = "E12345_21"
+  * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#787150001 "Stained slide of tissue section (specimen)"
 * subject.reference = "Patient/12345"
 * parent = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
+* request = Reference(ex-mii-patho-request)
 * collection
   * collector.reference = "Practitioner/2346545"
   * collectedDateTime = "2021-01-29T06:15:00Z"
