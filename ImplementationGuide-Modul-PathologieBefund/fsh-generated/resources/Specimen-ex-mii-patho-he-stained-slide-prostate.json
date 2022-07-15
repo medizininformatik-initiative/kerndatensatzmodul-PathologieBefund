@@ -157,5 +157,35 @@
         }
       ]
     }
-  }
+  },
+  "container": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "433466003",
+            "system": "http://snomed.info/sct",
+            "display": "Microscope slide (physical object)"
+          }
+        ]
+      },
+      "additiveReference": {
+        "reference": "Substance/ex-mii-patho-microscope-slide-mounting-medium"
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "433472003",
+            "system": "http://snomed.info/sct",
+            "display": "Microscope slide coverslip (physical object)"
+          }
+        ]
+      },
+      "additiveReference": {
+        "reference": "Substance/ex-mii-patho-microscope-slide-mounting-medium"
+      }
+    }
+  ]
 }

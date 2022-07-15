@@ -70,5 +70,21 @@
         }
       ]
     }
-  }
+  },
+  "container": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "434746001",
+            "system": "http://snomed.info/sct",
+            "display": "Specimen vial (physical object)"
+          }
+        ]
+      },
+      "additiveReference": {
+        "reference": "Substance/ex-mii-patho-neutral-buffered-formalin"
+      }
+    }
+  ]
 }
