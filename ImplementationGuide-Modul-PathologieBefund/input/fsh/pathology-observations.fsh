@@ -198,7 +198,9 @@ Id: sd-mii-patho-diagnostic-conclusion-grouper
 Title: "SD MII Patho Diagnostic Conclusion Grouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
 * insert RuleSet1
-* code ^fixedCodeableConcept = $LOINC#22637-3 "Pathology report diagnosis"
+// * code ^fixedCodeableConcept = $LOINC#22637-3 "Pathology report diagnosis"
+* category contains section-type 1..1
+* category[section-type] = $LOINC#22637-3 "Pathology report diagnosis" (exactly)
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom MS
 * derivedFrom ^slicing.discriminator.type = #type
@@ -272,6 +274,7 @@ Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)
   </table>
 </div>"
 * status = #final
+* category[laboratory-category].coding = $obs-category#laboratory
 * code.coding = $LOINC#22634-0 "Pathology report gross observation"
 * valueString = "Makroskopie A"
 * hasMember[+] = Reference(ex-mii-patho-biopsy-site-a)
@@ -312,6 +315,7 @@ Usage: #example
 Title: "EX MII Patho Macro Grouper B"
 Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)"
 * status = #final
+* category[laboratory-category].coding = $obs-category#laboratory
 * code.coding = $LOINC#22634-0 "Pathology report gross observation"
 * valueString = "Specimen B: Prostataseitenlappen rechts, apikal 1.5cm"
 * hasMember[+] = Reference(ex-mii-patho-biopsy-site-b)
@@ -351,6 +355,7 @@ Usage: #example
 Title: "EX MII Patho Micro Grouper A"
 Description: "Grouper for all Microscopic Observations of Specimen A"
 * status = #final
+* category[laboratory-category].coding = $obs-category#laboratory
 * code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
 * valueString = "Specimen A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders..."
 * hasMember[+] = Reference(ex-mii-patho-histologic-type-a)
@@ -399,6 +404,7 @@ Usage: #example
 Title: "EX MII Patho Diagnostic Conclusion Grouper"
 Description: "Example for a diagnostic conclusion"
 * status = #final
+* category[laboratory-category].coding = $obs-category#laboratory
 * code.coding = $LOINC#22637-3 "Pathology report diagnosis"
 * derivedFrom[+] = Reference(ex-mii-patho-macro-grouper-a)
 * derivedFrom[+] = Reference(ex-mii-patho-macro-grouper-b)
