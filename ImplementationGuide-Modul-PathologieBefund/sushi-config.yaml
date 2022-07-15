@@ -26,7 +26,7 @@ dependencies:
     version: 1.0.3
   de.medizininformatikinitiative.kerndatensatz.biobank:
     uri: de.medizininformatikinitiative.kerndatensatz.biobank
-    version: 1.0.0
+    version: 1.0.2
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
