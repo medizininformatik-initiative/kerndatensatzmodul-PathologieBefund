@@ -42,8 +42,10 @@ Description: "Prostate tru-cut biopsy sample (specimen)"
 * identifier
   * type = $v2-0203#FILL "Filler Order Number"
   * value = "E12345_21-A1"
+  * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * accessionIdentifier
   * value = "E12345_21"
+  * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#309134005 "Prostate tru-cut biopsy sample (specimen)"
 * subject.reference = "Patient/12345"
 * collection

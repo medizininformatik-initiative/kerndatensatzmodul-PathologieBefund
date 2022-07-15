@@ -31,11 +31,13 @@
           }
         ]
       },
-      "value": "E12345_21-A1"
+      "value": "E12345_21-A1",
+      "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
     }
   ],
   "accessionIdentifier": {
-    "value": "E12345_21"
+    "value": "E12345_21",
+    "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
   },
   "subject": {
     "reference": "Patient/12345"
