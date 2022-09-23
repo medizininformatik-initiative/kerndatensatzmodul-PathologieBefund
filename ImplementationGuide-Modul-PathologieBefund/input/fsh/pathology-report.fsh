@@ -23,7 +23,6 @@ Description: "Defines the general pathology report structure for German hospital
   * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
   * value 1.. MS
   * system 1.. MS
-  * extension contains $fhir-original-text named original-text 0..1 MS
 // Versionsnummer der Ressourceninstanz - Entpricht nicht der Version des Befundes!!
 * meta MS
 * meta.versionId MS
@@ -124,7 +123,6 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
   * value 1.. MS
   * system 1.. MS
-  * extension contains $fhir-original-text named original-text 0..1 MS
 * type MS
   * ^short = "The type for the pathology report Composition is 'Pathology study'"
   * coding MS
@@ -244,7 +242,8 @@ Description: "Example for SD_MII_Patho_Report"
 * identifier[Set-ID].value = "E21.12345"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
-* identifier[Set-ID].extension[original-text].valueString = "#befund-eingangsnummer"
+* identifier[Set-ID].extension.url = $fhir-narrative-link
+* identifier[Set-ID].extension.valueUrl = "#befund-eingangsnummer"
 * basedOn = Reference(ex-mii-patho-request)
 * status = #final
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
@@ -273,7 +272,8 @@ Description: "Example for a SD_MII_Patho_Composition"
 * identifier.value = "E21.12345"
 * identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * identifier.type = $v2-0203#ACSN "Accession ID"
-* identifier.extension[original-text].valueString = "#befund-eingangsnummer"
+* identifier.extension.url = $fhir-narrative-link
+* identifier.extension.valueUrl = "#befund-eingangsnummer"
 * type = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"
 * date = "2021-06-08"

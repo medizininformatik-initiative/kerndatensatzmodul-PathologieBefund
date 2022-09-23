@@ -39,13 +39,8 @@
       "valueString": "1"
     }
   ],
+  "status": "final",
   "identifier": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/originalText",
-        "valueString": "#befund-eingangsnummer"
-      }
-    ],
     "value": "E21.12345",
     "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht",
     "type": {
@@ -56,9 +51,14 @@
           "display": "Accession ID"
         }
       ]
-    }
+    },
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+        "valueUrl": "#befund-eingangsnummer"
+      }
+    ]
   },
-  "status": "final",
   "type": {
     "coding": [
       {
