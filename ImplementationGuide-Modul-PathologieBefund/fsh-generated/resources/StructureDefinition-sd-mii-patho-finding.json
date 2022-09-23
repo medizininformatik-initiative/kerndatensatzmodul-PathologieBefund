@@ -129,8 +129,9 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.valueQuantity",
-        "path": "Observation.valueQuantity",
+        "id": "Observation.value[x]:valueQuantity",
+        "path": "Observation.value[x]",
+        "sliceName": "valueQuantity",
         "min": 0,
         "max": "1",
         "type": [
@@ -140,13 +141,13 @@
         ]
       },
       {
-        "id": "Observation.valueQuantity.extension",
-        "path": "Observation.valueQuantity.extension",
+        "id": "Observation.value[x]:valueQuantity.extension",
+        "path": "Observation.value[x].extension",
         "short": "Links to original text that may have been used to retrieve value"
       },
       {
-        "id": "Observation.valueQuantity.extension:original-text",
-        "path": "Observation.valueQuantity.extension",
+        "id": "Observation.value[x]:valueQuantity.extension:original-text",
+        "path": "Observation.value[x].extension",
         "sliceName": "original-text",
         "min": 0,
         "max": "1",
@@ -161,8 +162,9 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.valueString",
-        "path": "Observation.valueString",
+        "id": "Observation.value[x]:valueString",
+        "path": "Observation.value[x]",
+        "sliceName": "valueString",
         "min": 0,
         "max": "1",
         "type": [
@@ -172,8 +174,8 @@
         ]
       },
       {
-        "id": "Observation.valueString.extension",
-        "path": "Observation.valueString.extension",
+        "id": "Observation.value[x]:valueString.extension",
+        "path": "Observation.value[x].extension",
         "slicing": {
           "discriminator": [
             {
@@ -187,8 +189,8 @@
         "short": "Links to original text that may have been used to retrieve value"
       },
       {
-        "id": "Observation.valueString.extension:original-text",
-        "path": "Observation.valueString.extension",
+        "id": "Observation.value[x]:valueString.extension:original-text",
+        "path": "Observation.value[x].extension",
         "sliceName": "original-text",
         "min": 0,
         "max": "1",
@@ -203,8 +205,9 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.valueCodeableConcept",
-        "path": "Observation.valueCodeableConcept",
+        "id": "Observation.value[x]:valueCodeableConcept",
+        "path": "Observation.value[x]",
+        "sliceName": "valueCodeableConcept",
         "min": 0,
         "max": "1",
         "type": [
@@ -214,13 +217,13 @@
         ]
       },
       {
-        "id": "Observation.valueCodeableConcept.extension",
-        "path": "Observation.valueCodeableConcept.extension",
+        "id": "Observation.value[x]:valueCodeableConcept.extension",
+        "path": "Observation.value[x].extension",
         "short": "Links to original text that may have been used to retrieve value"
       },
       {
-        "id": "Observation.valueCodeableConcept.extension:original-text",
-        "path": "Observation.valueCodeableConcept.extension",
+        "id": "Observation.value[x]:valueCodeableConcept.extension:original-text",
+        "path": "Observation.value[x].extension",
         "sliceName": "original-text",
         "min": 0,
         "max": "1",
@@ -235,8 +238,9 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.valueRatio",
-        "path": "Observation.valueRatio",
+        "id": "Observation.value[x]:valueRatio",
+        "path": "Observation.value[x]",
+        "sliceName": "valueRatio",
         "min": 0,
         "max": "1",
         "type": [
@@ -246,13 +250,13 @@
         ]
       },
       {
-        "id": "Observation.valueRatio.extension",
-        "path": "Observation.valueRatio.extension",
+        "id": "Observation.value[x]:valueRatio.extension",
+        "path": "Observation.value[x].extension",
         "short": "Links to original text that may have been used to retrieve value"
       },
       {
-        "id": "Observation.valueRatio.extension:original-text",
-        "path": "Observation.valueRatio.extension",
+        "id": "Observation.value[x]:valueRatio.extension:original-text",
+        "path": "Observation.value[x].extension",
         "sliceName": "original-text",
         "min": 0,
         "max": "1",

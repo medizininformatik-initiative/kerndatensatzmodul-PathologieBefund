@@ -14,11 +14,11 @@ Description: "Profile for attached images"
 * partOf only Reference(Media)
 * status MS
 * type 1.. MS
-  * coding 1.. MS
+  * coding 1..
   * coding ^slicing.discriminator[0].type = #value
   * coding ^slicing.discriminator[0].path = "$this"
   * coding ^slicing.rules = #open
-  * coding contains image 1..1 MS
+  * coding contains image 1..1
   * coding[image] = $media-type#image 
 // Referenz kann auch weg, weil die Observations schon drauf verweisen ueber .derivedFrom
 * subject MS 

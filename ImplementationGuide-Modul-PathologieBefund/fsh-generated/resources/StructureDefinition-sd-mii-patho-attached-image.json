@@ -120,8 +120,7 @@
           ],
           "rules": "open"
         },
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Media.type.coding:image",
@@ -132,8 +131,7 @@
         "patternCoding": {
           "code": "image",
           "system": "http://terminology.hl7.org/CodeSystem/media-type"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Media.subject",

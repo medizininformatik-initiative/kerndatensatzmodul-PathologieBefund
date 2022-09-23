@@ -123,9 +123,9 @@ Description: "Profile "
 * code MS
   * coding 1.. MS
   * coding = $SCT#307294006 "Personal History Finding" (exactly) 
-    * code 1.. MS
-    * system 1.. MS
-    * display MS
+    * code 1.. 
+    * system 1.. 
+    * display 
 * subject 1.. MS
 * value[x] MS
 * value[x] only CodeableConcept
@@ -145,7 +145,7 @@ Description: "List of problems or questions concerning the reason for the Servic
 * status MS
 * code MS
   * coding 1.. MS
-    * code 1.. MS
+    * code 1.. 
     * code = $LOINC#11450-4 "Problem list - Reported"
 * subject 1.. MS
 * component 1.. MS
@@ -153,8 +153,8 @@ Description: "List of problems or questions concerning the reason for the Servic
   * code MS
   * code from vs-mii-patho-problem-list-snomed (extensible)
     * coding MS
-      * system 1.. MS
-      * code 1.. MS
+      * system 1..
+      * code 1..
   * value[x] MS
   * dataAbsentReason MS
 

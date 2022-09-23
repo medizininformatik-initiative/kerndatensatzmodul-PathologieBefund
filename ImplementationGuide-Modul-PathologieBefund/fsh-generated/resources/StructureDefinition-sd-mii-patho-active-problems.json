@@ -79,8 +79,7 @@
         "id": "Observation.code.coding.code",
         "path": "Observation.code.coding.code",
         "min": 1,
-        "patternCode": "11450-4",
-        "mustSupport": true
+        "patternCode": "11450-4"
       },
       {
         "id": "Observation.subject",
@@ -112,14 +111,12 @@
       {
         "id": "Observation.component.code.coding.system",
         "path": "Observation.component.code.coding.system",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Observation.component.code.coding.code",
         "path": "Observation.component.code.coding.code",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
         "id": "Observation.component.value[x]",

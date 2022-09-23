@@ -320,8 +320,9 @@
         "mustSupport": true
       },
       {
-        "id": "Composition.relatesTo.targetReference",
-        "path": "Composition.relatesTo.targetReference",
+        "id": "Composition.relatesTo.target[x]:targetReference",
+        "path": "Composition.relatesTo.target[x]",
+        "sliceName": "targetReference",
         "min": 0,
         "max": "1",
         "type": [
