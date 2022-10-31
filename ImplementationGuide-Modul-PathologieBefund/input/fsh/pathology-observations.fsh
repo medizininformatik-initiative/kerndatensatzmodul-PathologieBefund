@@ -31,6 +31,7 @@ Description: "Abstract Observation to define common features of a main pathology
     * display MS
 // Code
 * code MS
+  * coding from $LOINC (preferred)
   * coding 1.. MS
     * code 1.. MS
     * system 1.. MS
@@ -103,7 +104,6 @@ Description: "Instantiable Observation to describe a generic pathology finding"
 * category ^slicing.ordered = false
 * category contains section-type 1..1 MS
 * category[section-type].coding from VS_MII_Patho_Section_Types_LOINC (required)
-* code.coding from $LOINC (preferred)
 * value[x] MS
 * value[x] only string or Quantity or CodeableConcept or Ratio
 * valueQuantity

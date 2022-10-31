@@ -92,14 +92,6 @@
         }
       },
       {
-        "id": "Observation.code.coding",
-        "path": "Observation.code.coding",
-        "binding": {
-          "strength": "preferred",
-          "valueSet": "http://loinc.org"
-        }
-      },
-      {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "slicing": {
