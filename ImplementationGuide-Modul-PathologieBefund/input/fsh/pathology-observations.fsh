@@ -36,8 +36,6 @@ Description: "Abstract Observation to define common features of a main pathology
     * code 1.. MS
     * system 1.. MS
     * display MS
-  * extension contains $fhir-original-text named original-text 0..1 MS
-    * ^short = "Links to original text that may have been used to retrieve coding"
 // Referenz - Patient:in
 * subject MS
 * subject only Reference(Patient)
@@ -71,21 +69,7 @@ Description: "Abstract Observation to define common features of a main pathology
 // Components fuer die Erfassung der Ergebnisse
 * component 0.. 
   * code MS
-    * extension contains $fhir-original-text named original-text 0..1 MS
-      * ^short = "Links to original text that may have been used to retrieve coding"
   * value[x] only string or Quantity or CodeableConcept or Ratio // was hat MolGen hier? Stimmt es ueberein? 
-  * valueString
-    * extension contains $fhir-original-text named original-text 0..1 MS
-      * ^short = "Links to original text that may have been used to retrieve value" 
-  * valueQuantity
-    * extension contains $fhir-original-text named original-text 0..1 MS
-      * ^short = "Links to original text that may have been used to retrieve value"
-  * valueCodeableConcept
-    * extension contains $fhir-original-text named original-text 0..1 MS
-      * ^short = "Links to original text that may have been used to retrieve value"
-  * valueRatio
-    * extension contains $fhir-original-text named original-text 0..1 MS
-      * ^short = "Links to original text that may have been used to retrieve value"
   * dataAbsentReason MS
 
 //-------------------------------------------
@@ -106,18 +90,6 @@ Description: "Instantiable Observation to describe a generic pathology finding"
 * category[section-type].coding from VS_MII_Patho_Section_Types_LOINC (required)
 * value[x] MS
 * value[x] only string or Quantity or CodeableConcept or Ratio
-* valueQuantity
-  * extension contains $fhir-original-text named original-text 0..1 MS
-    * ^short = "Links to original text that may have been used to retrieve value"
-* valueString	
-  * extension contains $fhir-original-text named original-text 0..1 MS
-    * ^short = "Links to original text that may have been used to retrieve value"
-* valueCodeableConcept
-  * extension contains $fhir-original-text named original-text 0..1 MS
-    * ^short = "Links to original text that may have been used to retrieve value"
-* valueRatio
-  * extension contains $fhir-original-text named original-text 0..1 MS
-    * ^short = "Links to original text that may have been used to retrieve value"
 
 
 //--------------------------------------------
@@ -229,9 +201,11 @@ Description: "Biopsy site of Specimen A (1st punch)"
 * category[laboratory-category].coding = $obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
 * code.coding = $LOINC#94738-2 "Biopsy site"
-* code.extension[original-text].valueString = "#macro-a-biopsy-site-key"
+* code.extension.url = $fhir-narrative-link
+* code.extension.valueUrl = "#macro-a-biopsy-site-key"
 * valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
-* valueCodeableConcept.extension[original-text].valueString = "#macro-a-biopsy-site-value"
+* valueCodeableConcept.extension.url = $fhir-narrative-link
+* valueCodeableConcept.extension.valueUrl = "#macro-a-biopsy-site-value"
 * derivedFrom[+] = Reference(ex-mii-patho-attached-image)
 * specimen = Reference(ex-mii-patho-he-stained-slide-prostate)
 
@@ -244,12 +218,14 @@ Description: "Tissue length of Specimen A (1st punch)"
 * category[laboratory-category].coding = $obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
 * code.coding = $LOINC#44619-5 "Length of tissue core(s)"
-* code.extension[original-text].valueString = "#macro-a-tissue-length-key"
+* code.extension.url = $fhir-narrative-link
+* code.extension.valueUrl = "#macro-a-tissue-length-key"
 * valueQuantity.value = 1.2
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM 
 * valueQuantity.code = #cm
-* valueQuantity.extension[original-text].valueString = "#macro-a-tissue-length-value"
+* valueQuantity.extension.url = $fhir-narrative-link
+* valueQuantity.extension.valueUrl = "#macro-a-tissue-length-value"
 * derivedFrom[+] = Reference(ex-mii-patho-attached-image)
 * specimen = Reference(ex-mii-patho-he-stained-slide-prostate)
 

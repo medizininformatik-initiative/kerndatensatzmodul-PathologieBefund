@@ -164,27 +164,6 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.code.extension",
-        "path": "Observation.code.extension",
-        "short": "Links to original text that may have been used to retrieve coding"
-      },
-      {
-        "id": "Observation.code.extension:original-text",
-        "path": "Observation.code.extension",
-        "sliceName": "original-text",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/originalText"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "min": 1,
@@ -340,39 +319,8 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.component.code.extension",
-        "path": "Observation.component.code.extension",
-        "short": "Links to original text that may have been used to retrieve coding"
-      },
-      {
-        "id": "Observation.component.code.extension:original-text",
-        "path": "Observation.component.code.extension",
-        "sliceName": "original-text",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/originalText"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Observation.component.value[x]",
         "path": "Observation.component.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "type": [
           {
             "code": "Quantity"
@@ -387,148 +335,6 @@
             "code": "Ratio"
           }
         ]
-      },
-      {
-        "id": "Observation.component.value[x]:valueString",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueString",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component.value[x]:valueString.extension",
-        "path": "Observation.component.value[x].extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "short": "Links to original text that may have been used to retrieve value"
-      },
-      {
-        "id": "Observation.component.value[x]:valueString.extension:original-text",
-        "path": "Observation.component.value[x].extension",
-        "sliceName": "original-text",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/originalText"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component.value[x]:valueQuantity",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueQuantity",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component.value[x]:valueQuantity.extension",
-        "path": "Observation.component.value[x].extension",
-        "short": "Links to original text that may have been used to retrieve value"
-      },
-      {
-        "id": "Observation.component.value[x]:valueQuantity.extension:original-text",
-        "path": "Observation.component.value[x].extension",
-        "sliceName": "original-text",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/originalText"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component.value[x]:valueCodeableConcept",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component.value[x]:valueCodeableConcept.extension",
-        "path": "Observation.component.value[x].extension",
-        "short": "Links to original text that may have been used to retrieve value"
-      },
-      {
-        "id": "Observation.component.value[x]:valueCodeableConcept.extension:original-text",
-        "path": "Observation.component.value[x].extension",
-        "sliceName": "original-text",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/originalText"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component.value[x]:valueRatio",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueRatio",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Ratio"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component.value[x]:valueRatio.extension",
-        "path": "Observation.component.value[x].extension",
-        "short": "Links to original text that may have been used to retrieve value"
-      },
-      {
-        "id": "Observation.component.value[x]:valueRatio.extension:original-text",
-        "path": "Observation.component.value[x].extension",
-        "sliceName": "original-text",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/originalText"
-            ]
-          }
-        ],
-        "mustSupport": true
       },
       {
         "id": "Observation.component.dataAbsentReason",

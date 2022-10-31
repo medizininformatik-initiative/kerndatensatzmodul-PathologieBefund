@@ -25,37 +25,37 @@
       ]
     }
   ],
+  "status": "final",
   "code": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/originalText",
-        "valueString": "#macro-a-biopsy-site-key"
-      }
-    ],
     "coding": [
       {
         "code": "94738-2",
         "system": "http://loinc.org",
         "display": "Biopsy site"
       }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+        "valueUrl": "#macro-a-biopsy-site-key"
+      }
     ]
   },
   "valueCodeableConcept": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/originalText",
-        "valueString": "#macro-a-biopsy-site-value"
-      }
-    ],
     "coding": [
       {
         "code": "716917000",
         "system": "http://snomed.info/sct",
         "display": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
       }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+        "valueUrl": "#macro-a-biopsy-site-value"
+      }
     ]
   },
-  "status": "final",
   "derivedFrom": [
     {
       "reference": "Media/ex-mii-patho-attached-image"

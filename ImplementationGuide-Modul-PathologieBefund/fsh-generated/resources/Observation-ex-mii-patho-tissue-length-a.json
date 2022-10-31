@@ -25,34 +25,34 @@
       ]
     }
   ],
+  "status": "final",
   "code": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/originalText",
-        "valueString": "#macro-a-tissue-length-key"
-      }
-    ],
     "coding": [
       {
         "code": "44619-5",
         "system": "http://loinc.org",
         "display": "Length of tissue core(s)"
       }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+        "valueUrl": "#macro-a-tissue-length-key"
+      }
     ]
   },
   "valueQuantity": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/originalText",
-        "valueString": "#macro-a-tissue-length-value"
-      }
-    ],
     "value": 1.2,
     "unit": "cm",
     "system": "http://unitsofmeasure.org",
-    "code": "cm"
+    "code": "cm",
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+        "valueUrl": "#macro-a-tissue-length-value"
+      }
+    ]
   },
-  "status": "final",
   "derivedFrom": [
     {
       "reference": "Media/ex-mii-patho-attached-image"
