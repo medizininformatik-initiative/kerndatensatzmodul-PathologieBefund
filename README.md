@@ -1,7 +1,7 @@
 ## Medizininformatik Initiative - Kerndatensatz - Modul Pathologiebefund
 
 ### Übersicht
-Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Erweiterungsmoduls 'Pathologiebefund', welches einen Teil des Kerndatensatzes der Medizininformatik-Initative darstellt. Die hier veröffentlichten [FHIR Profile](https://simplifier.net/medizininformatikinitiative-modulpathologie/~resources?category=Profile) und [ImplemenationGuides](https://simplifier.net/guide/medizininformatikinitiative-modulpathologie-implementationguide2?version=current) dienen als zentrale und verbindliche Spezifikation für die syntaktische und semantische Kodierung der Modulinhalte.
+Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Erweiterungsmoduls 'Pathologiebefund', welches einen Teil des Kerndatensatzes der Medizininformatik-Initative darstellt. Die hier veröffentlichten [FHIR Profile](https://simplifier.net/medizininformatikinitiative-modulpathologie/~resources?category=Profile) und [Implemenation Guides](https://simplifier.net/guide/medizininformatikinitiative-modulpathologie-implementationguide2?version=current) dienen als zentrale und verbindliche Spezifikation für die syntaktische und semantische Kodierung der Modulinhalte.
 
 ### Status:
 Alle veröffentlichten FHIR Artefakte innerhalb des Projektes verfügen über einen Status durch welchen der jeweilige Reifegard abgeleitet werden kann.
@@ -31,4 +31,4 @@ Definition der Inhalte & Terminologien:
 Technische Umsetzung (in alphabetischer Reihenfolge): 
 * [Alexander Bartschke](https://github.com/Kosmos3) (Modellierung in Art-Decor)
 * [Andrea Essenwanger](https://github.com/ByteGnome) (Technische Umsetzung FHIR Profile, Implementation Guide und Logical Models)
-* [Thimo Andre Hölter](https://github.com/ThimoHoelter) (Technische Umsetzung FHIR Profile)
+* [Thimo Andre Hölter](https://github.com/ThimoHoelter) (Technische Umsetzung FHIR Profile, Implementation Guide)
