@@ -105,27 +105,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x].extension",
-        "path": "Observation.value[x].extension",
-        "short": "Links to original text that may have been used to retrieve value"
-      },
-      {
-        "id": "Observation.value[x].extension:original-text",
-        "path": "Observation.value[x].extension",
-        "sliceName": "original-text",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/originalText"
-            ]
-          }
-        ],
-        "mustSupport": true
       }
     ]
   }

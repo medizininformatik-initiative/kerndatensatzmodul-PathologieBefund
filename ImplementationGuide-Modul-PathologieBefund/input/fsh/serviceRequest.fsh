@@ -76,7 +76,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 // History of Present Illness
 * supportingInfo[anamnesis] only Reference(sd-mii-patho-personal-history-finding)
 // Active Problems (Fragestellung) 
-* supportingInfo[activeProblems] only Reference(SD_MII_Patho_Active_Problems)
+* supportingInfo[activeProblems] only Reference(sd-mii-patho-active-problems-list)
   * ^short = "List of possible problems that should be analyzed"
 // Zusaetzliche Elemente
 // category for searching purposes 
@@ -90,25 +90,46 @@ Description: "Order for the analysis of a sample or a group of samples."
   * ^short = "Coded representation of the reason for referral"
 
 //------------------------------------------------
-// History of Present Illness - Anamnese ($LOINC#10164-2 "History of Present Illness Narrative")
+// Active Problems Section ($LOINC#11450-4 "Problem list - Reported")
 //------------------------------------------------
-// Profile: SD_MII_Patho_History_of_Present_Illness
-// Parent: Observation
-// Id: sd-mii-patho-history-of-present-illness
-// Title: "SD MII Patho History of Present Illness"
-// Description: "Profile for history of present illness (anamnesis)"
-// * insert RuleSet1
-// * text MS
-// * status MS
-// * code MS
-//   * coding 1.. MS
-//   * coding = $LOINC#10164-2 "History of Present Illness Narrative" (exactly)
-//     * code 1.. MS
-//     * system 1.. MS
-//     * display MS
-// * subject 1.. MS 
-// * hasMember MS
-// * hasMember only Reference(sd-mii-patho-personal-history-finding)
+Profile: SD_MII_Patho_Active_Problems_List
+Parent: List
+Id: sd-mii-patho-active-problems-list
+Title: "SD MII Patho Active Problems List"
+Description: "List of conditions currently being monitored for the patient"
+* meta.profile MS
+* status MS
+* mode MS
+* mode = #snapshot (exactly)
+* code 1.. MS
+  * coding 1.. MS
+  * coding = $LOINC#11450-4 "Problem list - Reported" (exactly)
+    * code 1..
+    * system 1..
+* subject 1.. MS
+* entry MS
+  * item only Reference(sd-mii-patho-problem-list-item)
+
+//------------------------------------------------
+// Problem List Item 
+//------------------------------------------------
+Profile: SD_MII_Patho_Problem_List_Item
+Parent: Condition
+Id: sd-mii-patho-problem-list-item
+Title: "SD MII Patho Problem List Item"
+Description: "Condition profile for problem list item"
+* meta.profile MS
+* category 1.. MS
+  * coding 1.. MS
+  * coding = $cs-hl7-condition-category#problem-list-item "Problem List Item" (exactly)
+    * code 1..
+    * system 1..
+* code MS
+* code from vs-mii-patho-problem-list-snomed (extensible)
+  * coding MS
+    * code 1.. MS
+    * system 1.. MS
+* subject MS
 
 //------------------------------------------------
 // Personal History Finding - coded symptom for anamnesis
@@ -129,35 +150,6 @@ Description: "Profile "
 * subject 1.. MS
 * value[x] MS
 * value[x] only CodeableConcept
-* valueCodeableConcept
-  * extension contains $fhir-original-text named original-text 0..1 MS
-    * ^short = "Links to original text that may have been used to retrieve value"
-
-//------------------------------------------------
-// Fragestellung (Problem list $LOINC#11450-4)
-//------------------------------------------------
-Profile: SD_MII_Patho_Active_Problems
-Parent: Observation
-Id: sd-mii-patho-active-problems
-Title: "SD MII Patho Active Problems"
-Description: "List of problems or questions concerning the reason for the ServiceRequest"
-* insert RuleSet1
-* status MS
-* code MS
-  * coding 1.. MS
-    * code 1.. 
-    * code = $LOINC#11450-4 "Problem list - Reported"
-* subject 1.. MS
-* component 1.. MS
-  * ^short = "List of problem entries"
-  * code MS
-  * code from vs-mii-patho-problem-list-snomed (extensible)
-    * coding MS
-      * system 1..
-      * code 1..
-  * value[x] MS
-  * dataAbsentReason MS
-
 
 //---------------------------
 //Examples
@@ -181,3 +173,49 @@ Description: "Pathology Report Example "
 * specimen[+] = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
 // * category[+] = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
 * code = $LOINC#11526-1 "Pathology Study"
+
+//------------------------------------------------
+// History of Present Illness - Anamnese ($LOINC#10164-2 "History of Present Illness Narrative")
+//------------------------------------------------
+// Profile: SD_MII_Patho_History_of_Present_Illness
+// Parent: Observation
+// Id: sd-mii-patho-history-of-present-illness
+// Title: "SD MII Patho History of Present Illness"
+// Description: "Profile for history of present illness (anamnesis)"
+// * insert RuleSet1
+// * text MS
+// * status MS
+// * code MS
+//   * coding 1.. MS
+//   * coding = $LOINC#10164-2 "History of Present Illness Narrative" (exactly)
+//     * code 1.. MS
+//     * system 1.. MS
+//     * display MS
+// * subject 1.. MS 
+// * hasMember MS
+// * hasMember only Reference(sd-mii-patho-personal-history-finding)
+
+//------------------------------------------------
+// Fragestellung (Problem list $LOINC#11450-4)
+//------------------------------------------------
+// Profile: SD_MII_Patho_Active_Problems
+// Parent: Observation
+// Id: sd-mii-patho-active-problems
+// Title: "SD MII Patho Active Problems"
+// Description: "List of problems or questions concerning the reason for the ServiceRequest"
+// * insert RuleSet1
+// * status MS
+// * code MS
+//   * coding 1.. MS
+//     * code 1.. 
+//     * code = $LOINC#11450-4 "Problem list - Reported"
+// * subject 1.. MS
+// * component 1.. MS
+//   * ^short = "List of problem entries"
+//   * code MS
+//   * code from vs-mii-patho-problem-list-snomed (extensible)
+//     * coding MS
+//       * system 1..
+//       * code 1..
+//   * value[x] MS
+//   * dataAbsentReason MS
