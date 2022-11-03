@@ -132,6 +132,27 @@ Description: "Condition profile for problem list item"
 * subject MS
 
 //------------------------------------------------
+// History of Present illness
+//------------------------------------------------
+Profile: SD_MII_Patho_History_Of_Present_Illness
+Parent: List
+Id: sd-mii-patho-history-of-present-illness
+Title: "SD MII Patho History Of Present Illness"
+Description: "List profile for 'History of Present Illness'"
+* meta.profile MS
+* status MS
+* mode MS
+* mode = #snapshot (exactly)
+* code 1.. MS
+  * coding 1.. MS
+  * coding = $LOINC#8684-3 "History of Present illness"
+    * code 1.. 
+    * system 1.. 
+* subject 1.. MS
+* entry MS
+  * item only Reference(sd-mii-patho-problem-list-item)
+
+//------------------------------------------------
 // Personal History Finding - coded symptom for anamnesis
 //------------------------------------------------
 Profile: SD_MII_Patho_Personal_History_Finding
