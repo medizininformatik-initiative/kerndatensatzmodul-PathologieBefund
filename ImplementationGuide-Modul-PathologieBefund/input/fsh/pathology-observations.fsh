@@ -170,9 +170,7 @@ Id: sd-mii-patho-diagnostic-conclusion-grouper
 Title: "SD MII Patho Diagnostic Conclusion Grouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
 * insert RuleSet1
-// * code ^fixedCodeableConcept = $LOINC#22637-3 "Pathology report diagnosis"
-* category contains section-type 1..1
-* category[section-type] = $LOINC#22637-3 "Pathology report diagnosis" (exactly)
+* code = $LOINC#22637-3 "Pathology report diagnosis" (exactly)
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom MS
 * derivedFrom ^slicing.discriminator.type = #type

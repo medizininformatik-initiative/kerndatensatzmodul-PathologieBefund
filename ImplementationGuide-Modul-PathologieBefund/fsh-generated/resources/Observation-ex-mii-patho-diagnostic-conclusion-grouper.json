@@ -14,18 +14,8 @@
           "system": "http://terminology.hl7.org/CodeSystem/observation-category"
         }
       ]
-    },
-    {
-      "coding": [
-        {
-          "code": "22637-3",
-          "system": "http://loinc.org",
-          "display": "Pathology report diagnosis"
-        }
-      ]
     }
   ],
-  "status": "final",
   "code": {
     "coding": [
       {
@@ -35,6 +25,7 @@
       }
     ]
   },
+  "status": "final",
   "derivedFrom": [
     {
       "reference": "Observation/ex-mii-patho-macro-grouper-a"
