@@ -51,17 +51,15 @@ Description: "ValueSet for the types a pathology Composition can have"
 //-----------------------------------
 // ServiceRequest
 //-----------------------------------
-ValueSet: VS_MII_Patho_Service_Request_LOINC
-Id: vs-mii-patho-service-request-loinc
-Title: "VS MII Patho Service Request LOINC"
+ValueSet: VS_MII_Patho_Service_Request_SNOMED_CT
+Id: vs-mii-patho-service-request-snomed-ct
+Title: "VS MII Patho Service Request SNOMED CT"
 Description: "ValueSet for a preferred set of ServiceRequest codes"
 * insert RuleSet1
-* $LOINC#18743-5 "Autopsy report"	
-* $LOINC#11526-1 "Pathology study"
-* $LOINC#11529-5 "Surgical pathology study"
+* include codes from system $SCT where concept descendent-of #108252007 "Laboratory procedure (procedure)"
 
 //------------------------------------
-// Observation - Active Problems
+// Active Problems
 //------------------------------------
 ValueSet: VS_MII_Patho_Problem_List_SNOMED
 Id: vs-mii-patho-problem-list-snomed
@@ -77,7 +75,7 @@ Description: "ValueSet containing the recommended vocabulary for describing prob
 * include codes from system $SCT where concept is-a #282291009 "Diagnosis interpretation (observable entity)" //Diagnosis
 
 //---------------------------------------
-// Observation - Pathology Finding
+// Pathology Finding
 //---------------------------------------
 ValueSet: VS_MII_Patho_Section_Types_LOINC
 Id: vs-mii-patho-section-types-loinc

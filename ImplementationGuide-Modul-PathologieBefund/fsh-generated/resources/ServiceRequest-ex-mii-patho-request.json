@@ -64,9 +64,9 @@
   "code": {
     "coding": [
       {
-        "code": "11526-1",
-        "system": "http://loinc.org",
-        "display": "Pathology Study"
+        "code": "44977009",
+        "system": "http://snomed.info/sct",
+        "display": "Cytopathology procedure, cell block preparation (procedure)"
       }
     ]
   }
