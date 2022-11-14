@@ -158,7 +158,7 @@ Id: sd-mii-patho-additional-specified-grouper
 Title: "SD MII Patho Additional Specified Grouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
 * insert RuleSet1
-* code ^fixedCodeableConcept = $LOINC#77599-9 "Additional documentation"  
+* code ^fixedCodeableConcept = $LOINC#100969-5 "Pathology report additional specified observation"  
 
 
 //--------------------------------

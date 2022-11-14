@@ -65,9 +65,9 @@
         "fixedCodeableConcept": {
           "coding": [
             {
-              "code": "77599-9",
+              "code": "100969-5",
               "system": "http://loinc.org",
-              "display": "Additional documentation"
+              "display": "Pathology report additional specified observation"
             }
           ]
         }
