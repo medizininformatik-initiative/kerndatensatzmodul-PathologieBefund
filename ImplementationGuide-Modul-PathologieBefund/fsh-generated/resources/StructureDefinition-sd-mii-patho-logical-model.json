@@ -41,8 +41,7 @@
           {
             "code": "Identifier"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Status",
@@ -55,8 +54,7 @@
           {
             "code": "code"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Dokumentationsdatum",
@@ -69,8 +67,7 @@
           {
             "code": "dateTime"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag",
@@ -109,8 +106,7 @@
           {
             "code": "string"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.klinischeInformation.Anamnese",
@@ -123,8 +119,7 @@
           {
             "code": "string"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.klinischeInformation.Ueberweisungsgrund",
@@ -137,8 +132,7 @@
           {
             "code": "string"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.klinischeInformation.DiagnoseKodiert",
@@ -154,8 +148,7 @@
               "http://hl7.org/fhir/StructureDefinition/Condition"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.AuftragsID",
@@ -181,8 +174,7 @@
           {
             "code": "Identifier"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.AuftragsID.AuftragsIDAuftraggeber",
@@ -195,8 +187,7 @@
           {
             "code": "Identifier"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.AuftragsID.AuftragsIDAuftragnehmer",
@@ -209,8 +200,7 @@
           {
             "code": "Identifier"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.Status",
@@ -223,8 +213,7 @@
           {
             "code": "code"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.Untersuchung",
@@ -237,8 +226,7 @@
           {
             "code": "CodeableConcept"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.Einsender",
@@ -255,8 +243,7 @@
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.Probenentnehmer",
@@ -273,8 +260,7 @@
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Untersuchungsauftrag.Probe",
@@ -290,8 +276,7 @@
               "http://hl7.org/fhir/StructureDefinition/Specimen"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben",
@@ -317,8 +302,7 @@
           {
             "code": "Identifier"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Status",
@@ -331,8 +315,7 @@
           {
             "code": "code"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Probenart",
@@ -345,8 +328,7 @@
           {
             "code": "CodeableConcept"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Laboreingangszeitpunkt",
@@ -359,8 +341,7 @@
           {
             "code": "dateTime"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Entnahme",
@@ -386,8 +367,7 @@
           {
             "code": "CodeableConcept"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Entnahme.Herkunft",
@@ -400,8 +380,7 @@
           {
             "code": "CodeableConcept"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Entnahme.EntnahmeZeitpunkt",
@@ -414,8 +393,7 @@
           {
             "code": "dateTime"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Entnahme.Eigenschaften",
@@ -428,8 +406,7 @@
           {
             "code": "CodeableConcept"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Bearbeitung",
@@ -455,8 +432,7 @@
           {
             "code": "CodeableConcept"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Bearbeitung.Elternprobe",
@@ -472,8 +448,7 @@
               "http://hl7.org/fhir/StructureDefinition/Specimen"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Bearbeitung.Additive",
@@ -489,8 +464,7 @@
               "http://hl7.org/fhir/StructureDefinition/Substance"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Bearbeitung.Beschreibung",
@@ -503,8 +477,7 @@
           {
             "code": "string"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Container",
@@ -530,8 +503,7 @@
           {
             "code": "Identifier"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Container.ContainerTyp",
@@ -544,8 +516,7 @@
           {
             "code": "CodeableConcept"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Proben.Container.Additive[x]",
@@ -564,8 +535,7 @@
               "http://hl7.org/fhir/StructureDefinition/Substance"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt",
@@ -604,8 +574,7 @@
           {
             "code": "string"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung.Einzelbeobachtung",
@@ -621,8 +590,7 @@
               "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.IntraoperativeBegutachtung.EingebettetesBild",
@@ -638,8 +606,7 @@
               "http://hl7.org/fhir/StructureDefinition/Media"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung",
@@ -665,8 +632,7 @@
           {
             "code": "string"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.Einzelbeobachtung",
@@ -682,8 +648,7 @@
               "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild",
@@ -709,8 +674,7 @@
           {
             "code": "id"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.MakroBild",
@@ -723,8 +687,7 @@
           {
             "code": "Attachment"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.MakrokopischeBeurteilung.EingebettetesBild.Skizze",
@@ -737,8 +700,7 @@
           {
             "code": "Attachment"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung",
@@ -764,8 +726,7 @@
           {
             "code": "string"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.Einzelbeobachtung",
@@ -781,8 +742,7 @@
               "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild",
@@ -808,8 +768,7 @@
           {
             "code": "id"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.MikroBild",
@@ -822,8 +781,7 @@
           {
             "code": "Attachment"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.MikroskopischeBeurteilung.EingebettetesBild.ROI",
@@ -836,8 +794,7 @@
           {
             "code": "Attachment"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung",
@@ -863,8 +820,7 @@
           {
             "code": "string"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.Einzelbeobachtung",
@@ -880,8 +836,7 @@
               "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.EingebettetesBild",
@@ -907,8 +862,7 @@
           {
             "code": "id"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.ZustaetzlicheBeobachtung.ZugehoerigesDokument",
@@ -921,8 +875,7 @@
           {
             "code": "Attachment"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung",
@@ -948,8 +901,7 @@
           {
             "code": "string"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.Einzelbeobachtung",
@@ -965,8 +917,7 @@
               "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild",
@@ -992,8 +943,7 @@
           {
             "code": "id"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.Skizze",
@@ -1006,8 +956,7 @@
           {
             "code": "Attachment"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.MakroBild",
@@ -1020,8 +969,7 @@
           {
             "code": "Attachment"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.MikroBild",
@@ -1034,8 +982,7 @@
           {
             "code": "Attachment"
           }
-        ],
-        "isSummary": true
+        ]
       },
       {
         "id": "sd-mii-patho-logical-model.Beobachtungsberichtabschnitt.DiagnostischeSchlussfolgerung.EingebettetesBild.ROI",
@@ -1048,8 +995,7 @@
           {
             "code": "Attachment"
           }
-        ],
-        "isSummary": true
+        ]
       }
     ]
   }
