@@ -12,7 +12,6 @@ Description: "Abstract Observation to define common features of a main pathology
 * id MS
 * meta.lastUpdated MS
 * meta.profile MS
-* text MS
 * identifier MS
 * basedOn MS 
 * basedOn only Reference(SD_MII_Patho_Service_Request)
@@ -232,21 +231,6 @@ InstanceOf: SD_MII_Patho_Macroscopic_Grouper
 Usage: #example
 Title: "EX MII Patho Macro Grouper A"
 Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
-* text.status = #additional
-* text.div = "
-<div xmlns=\"http://www.w3.org/1999/xhtml\">
-  <div id=\"macro-a-title\"><b>Makroskopie A</b></div>
-  <table>
-    <tr id=\"macro-a-biosy-site\">
-      <td id=\"macro-a-biosy-site-key\">Entnahmeort lt. klin. Angabe</td>
-      <td id=\"macro-a-biosy-site-value\">Prostataseitenlappen rechts, lateral</td>
-    </tr>
-    <tr id=\"macro-a-tissue-length\">
-      <td id=\"macro-a-tissue-length-key\">Stanzzylinderlänge</td>
-      <td id=\"macro-a-tissue-length-value\">1,2 cm</td>
-    </tr>
-  </table>
-</div>"
 * status = #final
 * category[laboratory-category].coding = $obs-category#laboratory
 * code.coding = $LOINC#22634-0 "Pathology report gross observation"

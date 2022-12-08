@@ -111,13 +111,18 @@ Profile: SD_MII_Patho_Composition
 Parent: Composition
 Id: sd-mii-patho-composition
 Title: "SD MII Patho Composition"
-Description: "Composition als Template für Pathologiebefundbericht als FHIR Dokument"
+Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert RuleSet1
 * id MS
 * meta.lastUpdated MS
 * meta.profile MS
+* text 1.. MS
+  * status MS
+  * status = #extensions (exactly)
+  * div MS
 * extension contains $fhir-version-number named document-version 0..1 MS
 * status MS
+* status = #final (exactly)
 * identifier 1.. MS
   * type 1.. MS
   * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
@@ -125,18 +130,24 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
   * system 1.. MS
 * type MS
   * ^short = "The type for the pathology report Composition is 'Pathology study'"
-  * coding MS
+  * coding 1.. MS
   * coding = $LOINC#11526-1 "Pathology study"
     * system 1.. MS
     * code 1.. MS
     * display MS 
 * category MS
-// Titel
-* title 1.. MS
+  * coding MS
+* subject 1.. MS
+* subject only Reference(Patient)
+* encounter 1.. MS
+* date MS
 // Autor
 * author 1.. MS
 * author only Reference(Practitioner or Organization)
 * author ^short = "Author can only be of type Practitioner or Organization"
+  * display 1.. MS
+// Titel
+* title 1.. MS
 // Legaler Authentikator 
 * attester 1.. MS
 * attester ^slicing.discriminator.type = #pattern
@@ -165,9 +176,6 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * relatesTo MS 
   * code MS
   * targetReference MS
-* date MS
-* subject 1.. MS
-* subject only Reference(Patient)
 * event 1.. MS
 // Entry referenziert nur auf SD_MII_Patho_Report
 * section 1.. MS
@@ -177,21 +185,23 @@ Description: "Composition als Template für Pathologiebefundbericht als FHIR Dok
 * section contains patho-diagnostic-report 1..1 MS
           and additional-diagnostic-report 0..* MS
 * section[patho-diagnostic-report]
+  * title 1.. MS 
+  * title ^fixedString = "Pathology Diagnostic Report"
   * code 1.. MS
     * coding 1.. MS
     * coding ^patternCoding = $LOINC#60567-5 "Comprehensive pathology report panel"
+  * text 1.. MS
   * entry 1..1 MS
   * entry only Reference (SD_MII_Patho_Report)
-  * text 0..0
-  * title 1.. MS 
-  * title ^fixedString = "Pathology Diagnostic Report"
+  * section MS
 * section[additional-diagnostic-report]
+  * title 1.. MS
   * code 1.. MS
     * coding 1.. MS
     * coding from $LOINC (required)
+  * text 1.. MS
   * entry 1..1 MS
-  * text 0..0
-  * title 1.. MS
+  * section MS
 
 
 //--------------------------------
@@ -202,7 +212,34 @@ InstanceOf: sd-mii-patho-report
 Usage: #example
 Title: "Pathology Report Example"
 Description: "Example for SD_MII_Patho_Report"
-* text.status = #additional
+* identifier[Set-ID].value = "E21.12345"
+* identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+* identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
+* identifier[Set-ID].extension.url = $fhir-narrative-link
+* identifier[Set-ID].extension.valueUrl = "#befund-eingangsnummer"
+* basedOn = Reference(ex-mii-patho-request)
+* status = #final
+* code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
+* subject.reference = "Patient/12345"
+* performer.reference = "Practitioner/2346545"
+* specimen = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
+* encounter.reference = "Encounter/12345"
+* result[macroscopic-grouper] = Reference(ex-mii-patho-macro-grouper-a)
+* result[macroscopic-grouper] = Reference(ex-mii-patho-macro-grouper-b)
+* result[microscopic-grouper] = Reference(ex-mii-patho-micro-grouper-a)
+* result[diagnostic-conclusion] = Reference(ex-mii-patho-diagnostic-conclusion-grouper)
+* conclusion = "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2"
+* conclusionCode = $SCT#399490008  
+* effectiveDateTime = "2021-06-01"
+// * issued = "2021-06-02T13:28:17.239+02:00"
+* media.link = Reference(ex-mii-patho-attached-image)
+* media.comment = "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
+
+Instance: ex-mii-patho-composition
+InstanceOf: sd-mii-patho-composition
+Usage: #example
+Title: "EX MII Patho Composition"
+Description: "Example for an SD_MII_Patho_Composition"
 * text.div = "
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
   <div id=\"befund-titel\">
@@ -239,34 +276,6 @@ Description: "Example for SD_MII_Patho_Report"
     </tr>
   </table>
 </div>"
-* identifier[Set-ID].value = "E21.12345"
-* identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-* identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
-* identifier[Set-ID].extension.url = $fhir-narrative-link
-* identifier[Set-ID].extension.valueUrl = "#befund-eingangsnummer"
-* basedOn = Reference(ex-mii-patho-request)
-* status = #final
-* code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
-* subject.reference = "Patient/12345"
-* performer.reference = "Practitioner/2346545"
-* specimen = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
-* encounter.reference = "Encounter/12345"
-* result[macroscopic-grouper] = Reference(ex-mii-patho-macro-grouper-a)
-* result[macroscopic-grouper] = Reference(ex-mii-patho-macro-grouper-b)
-* result[microscopic-grouper] = Reference(ex-mii-patho-micro-grouper-a)
-* result[diagnostic-conclusion] = Reference(ex-mii-patho-diagnostic-conclusion-grouper)
-* conclusion = "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2"
-* conclusionCode = $SCT#399490008  
-* effectiveDateTime = "2021-06-01"
-// * issued = "2021-06-02T13:28:17.239+02:00"
-* media.link = Reference(ex-mii-patho-attached-image)
-* media.comment = "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
-
-Instance: ex-mii-patho-composition
-InstanceOf: sd-mii-patho-composition
-Usage: #example
-Title: "EX MII Patho Composition"
-Description: "Example for a SD_MII_Patho_Composition"
 * extension[document-version].valueString = "1"
 * status = #final
 * identifier.value = "E21.12345"
@@ -276,17 +285,35 @@ Description: "Example for a SD_MII_Patho_Composition"
 * identifier.extension.valueUrl = "#befund-eingangsnummer"
 * type = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"
+* encounter.reference = "Encounter/34555"
 * date = "2021-06-08"
-* author[+].reference = "Practitioner/45756"
+* author[+].reference = "Practitioner/2346545"
+* author[=].display = "Dr. Name"
 * title = "Pathologie Befundbericht"
 * custodian.reference = "Organization/12345"
 * attester[legal].mode = #legal
 * attester[legal].party.reference = "Practitioner/765879"
 * event.period.start = "2021-06-05"
 * event.period.end = "2021-06-08"
-* section[patho-diagnostic-report].title = "Pathology Diagnostic Report"
-* section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"
-* section[patho-diagnostic-report].entry = Reference(ex-mii-patho-report)
+* section[patho-diagnostic-report]
+  * title = "Pathology Diagnostic Report"
+  * code = $LOINC#60567-5 "Comprehensive pathology report panel"
+  * text.status = #additional	
+  * text.div = "
+  <div xmlns=\"http://www.w3.org/1999/xhtml\">
+    <div id=\"macro-a-title\"><b>Makroskopie A</b></div>
+    <table>
+      <tr id=\"macro-a-biosy-site\">
+        <td id=\"macro-a-biosy-site-key\">Entnahmeort lt. klin. Angabe</td>
+        <td id=\"macro-a-biosy-site-value\">Prostataseitenlappen rechts, lateral</td>
+      </tr>
+      <tr id=\"macro-a-tissue-length\">
+        <td id=\"macro-a-tissue-length-key\">Stanzzylinderlänge</td>
+        <td id=\"macro-a-tissue-length-value\">1,2 cm</td>
+      </tr>
+    </table>
+  </div>"
+  * entry = Reference(ex-mii-patho-report)
 
 /*
 //---------------------------------------------
