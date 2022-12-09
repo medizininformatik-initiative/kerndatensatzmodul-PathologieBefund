@@ -74,7 +74,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
 // History of Present Illness
-* supportingInfo[anamnesis] only Reference(sd-mii-patho-personal-history-finding)
+* supportingInfo[anamnesis] only Reference(sd-mii-patho-history-of-present-illness)
 // Active Problems (Fragestellung) 
 * supportingInfo[activeProblems] only Reference(sd-mii-patho-active-problems-list)
   * ^short = "List of possible problems that should be analyzed"
@@ -86,6 +86,28 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"
+
+//------------------------------------------------
+// Problem List Item 
+//------------------------------------------------
+Profile: SD_MII_Patho_Problem_List_Item
+Parent: Condition
+Id: sd-mii-patho-problem-list-item
+Title: "SD MII Patho Problem List Item"
+Description: "Condition profile for problem list item"
+* meta.profile MS
+* category 1.. MS
+  * coding 1.. MS
+  * coding = $cs-hl7-condition-category#problem-list-item "Problem List Item" (exactly)
+    * code 1..
+    * system 1..
+* code MS
+* code from vs-mii-patho-problem-list-snomed (extensible)
+  * coding MS
+    * code 1.. MS
+    * system 1.. MS
+* subject MS
+* subject only Reference(Patient)
 
 //------------------------------------------------
 // Active Problems Section ($LOINC#11450-4 "Problem list - Reported")
@@ -109,27 +131,6 @@ Description: "List of conditions currently being monitored for the patient"
   * item only Reference(sd-mii-patho-problem-list-item)
 
 //------------------------------------------------
-// Problem List Item 
-//------------------------------------------------
-Profile: SD_MII_Patho_Problem_List_Item
-Parent: Condition
-Id: sd-mii-patho-problem-list-item
-Title: "SD MII Patho Problem List Item"
-Description: "Condition profile for problem list item"
-* meta.profile MS
-* category 1.. MS
-  * coding 1.. MS
-  * coding = $cs-hl7-condition-category#problem-list-item "Problem List Item" (exactly)
-    * code 1..
-    * system 1..
-* code MS
-* code from vs-mii-patho-problem-list-snomed (extensible)
-  * coding MS
-    * code 1.. MS
-    * system 1.. MS
-* subject MS
-
-//------------------------------------------------
 // History of Present illness
 //------------------------------------------------
 Profile: SD_MII_Patho_History_Of_Present_Illness
@@ -150,25 +151,26 @@ Description: "List profile for 'History of Present Illness'"
 * entry MS
   * item only Reference(sd-mii-patho-problem-list-item)
 
-//------------------------------------------------
-// Personal History Finding - coded symptom for anamnesis
-//------------------------------------------------
-Profile: SD_MII_Patho_Personal_History_Finding
-Parent: Observation
-Id: sd-mii-patho-personal-history-finding
-Title: "SD MII Patho Personal History Finding"
-Description: "Profile "
-* insert RuleSet1
-* status MS
-* code MS
-  * coding 1.. MS
-  * coding = $SCT#307294006 "Personal History Finding" (exactly) 
-    * code 1.. 
-    * system 1.. 
-    * display 
-* subject 1.. MS
-* value[x] MS
-* value[x] only CodeableConcept
+// //------------------------------------------------
+// // Personal History Finding - coded symptom for anamnesis
+// // *should be replaced by Module Symptomes profile later on
+// //------------------------------------------------
+// Profile: SD_MII_Patho_Personal_History_Finding
+// Parent: Observation
+// Id: sd-mii-patho-personal-history-finding
+// Title: "SD MII Patho Personal History Finding"
+// Description: "Profile "
+// * insert RuleSet1
+// * status MS
+// * code MS
+//   * coding 1.. MS
+//   * coding = $SCT#307294006 "Personal History Finding" (exactly) 
+//     * code 1.. 
+//     * system 1.. 
+//     * display 
+// * subject 1.. MS
+// * value[x] MS
+// * value[x] only CodeableConcept
 
 //---------------------------
 //Examples
