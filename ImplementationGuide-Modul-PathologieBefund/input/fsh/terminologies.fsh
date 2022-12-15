@@ -42,11 +42,22 @@ Id: vs-mii-patho-composition-type-loinc
 Title: "VS MII Patho Composition Type"
 Description: "ValueSet for the types a pathology Composition can have"
 * insert RuleSet1
+* $LOINC#18743-5 "Autopsy report"
+* $LOINC#11526-1 "Pathology study"
 * $LOINC#11529-5 "Surgical pathology study"
-* $LOINC#60568-3 "Pathology Synoptic report"
-* $LOINC#60570-9 "Pathology Consult note"
-* $LOINC#60571-7 "Pathology Consult note.synoptic"
-* $LOINC#35265-8 "Pathology report addendum in Specimen Narrative"
+// * $LOINC#11529-5 "Surgical pathology study"
+// * $LOINC#60568-3 "Pathology Synoptic report"
+// * $LOINC#60570-9 "Pathology Consult note"
+// * $LOINC#60571-7 "Pathology Consult note.synoptic"
+// * $LOINC#35265-8 "Pathology report addendum in Specimen Narrative"
+
+ValueSet: VS_MII_Patho_Report_Category_HL7
+Id: vs-mii-patho-report-category-hl7
+Title: "VS MII Patho Report Category HL7"
+Description: "ValueSet for the categorization of Pathology Report documents"
+* insert RuleSet1
+* $v2-0074#CP "Cytopathology"
+* $v2-0074#SP "Surgical Pathology"
 
 //-----------------------------------
 // ServiceRequest
