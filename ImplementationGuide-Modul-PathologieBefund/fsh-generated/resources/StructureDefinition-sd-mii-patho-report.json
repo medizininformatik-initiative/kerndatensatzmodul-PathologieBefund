@@ -274,9 +274,9 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:intraoperative-grouper",
+        "id": "DiagnosticReport.result:intraoperative-observations",
         "path": "DiagnosticReport.result",
-        "sliceName": "intraoperative-grouper",
+        "sliceName": "intraoperative-observations",
         "short": "Reference to intraoperative Observations",
         "min": 0,
         "max": "*",
@@ -291,15 +291,15 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:intraoperative-grouper.reference",
+        "id": "DiagnosticReport.result:intraoperative-observations.reference",
         "path": "DiagnosticReport.result.reference",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:macroscopic-grouper",
+        "id": "DiagnosticReport.result:macroscopic-observations",
         "path": "DiagnosticReport.result",
-        "sliceName": "macroscopic-grouper",
+        "sliceName": "macroscopic-observations",
         "short": "Reference to macroscopic Observations",
         "min": 0,
         "max": "*",
@@ -314,15 +314,15 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:macroscopic-grouper.reference",
+        "id": "DiagnosticReport.result:macroscopic-observations.reference",
         "path": "DiagnosticReport.result.reference",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:microscopic-grouper",
+        "id": "DiagnosticReport.result:microscopic-observations",
         "path": "DiagnosticReport.result",
-        "sliceName": "microscopic-grouper",
+        "sliceName": "microscopic-observations",
         "short": "Reference to microscopic Observations",
         "min": 0,
         "max": "*",
@@ -337,7 +337,7 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:microscopic-grouper.reference",
+        "id": "DiagnosticReport.result:microscopic-observations.reference",
         "path": "DiagnosticReport.result.reference",
         "min": 1,
         "mustSupport": true

@@ -70,18 +70,18 @@ Description: "Defines the general pathology report structure for German hospital
 * result ^slicing.rules = #closed
 * result ^slicing.ordered = true
 * result contains 
-      intraoperative-grouper 0..* MS
-      and macroscopic-grouper 0..* MS
-      and microscopic-grouper 0..* MS
+      intraoperative-observations 0..* MS
+      and macroscopic-observations 0..* MS
+      and microscopic-observations 0..* MS
       and additional-observations 0..* MS
       and diagnostic-conclusion 1..* MS
-* result[intraoperative-grouper] only Reference(SD_MII_Patho_Intraoperative_Grouper)
+* result[intraoperative-observations] only Reference(SD_MII_Patho_Intraoperative_Grouper)
   * reference 1.. MS
   * ^short = "Reference to intraoperative Observations"
-* result[macroscopic-grouper] only Reference(SD_MII_Patho_Macroscopic_Grouper)
+* result[macroscopic-observations] only Reference(SD_MII_Patho_Macroscopic_Grouper)
   * reference 1.. MS
   * ^short = "Reference to macroscopic Observations"
-* result[microscopic-grouper] only Reference(SD_MII_Patho_Microscopic_Grouper)
+* result[microscopic-observations] only Reference(SD_MII_Patho_Microscopic_Grouper)
   * reference 1.. MS
   * ^short = "Reference to microscopic Observations"
 * result[additional-observations] only Reference(SD_MII_Patho_Additional_Specified_Grouper)     
@@ -224,9 +224,9 @@ Description: "Example for SD_MII_Patho_Report"
 * performer.reference = "Practitioner/2346545"
 * specimen = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
 * encounter.reference = "Encounter/12345"
-* result[macroscopic-grouper] = Reference(ex-mii-patho-macro-grouper-a)
-* result[macroscopic-grouper] = Reference(ex-mii-patho-macro-grouper-b)
-* result[microscopic-grouper] = Reference(ex-mii-patho-micro-grouper-a)
+* result[macroscopic-observations] = Reference(ex-mii-patho-macro-grouper-a)
+* result[macroscopic-observations] = Reference(ex-mii-patho-macro-grouper-b)
+* result[microscopic-observations] = Reference(ex-mii-patho-micro-grouper-a)
 * result[diagnostic-conclusion] = Reference(ex-mii-patho-diagnostic-conclusion-grouper)
 * conclusion = "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2"
 * conclusionCode = $SCT#399490008  
@@ -434,9 +434,9 @@ Description: "tbd"
 * performer.reference = "Practitioner/2346545"
 * specimen = Reference(example-mii-patho-LungeOLStanze)
 * encounter.reference = "Encounter/12345"
-* result[macroscopic-grouper] = Reference(example-mii-patho-MacroGrouperLung)
-//* result[macroscopic-grouper] = Reference(MacroGrouperB)
-//* result[microscopic-grouper] = Reference(MicroGrouperA)
+* result[macroscopic-observations] = Reference(example-mii-patho-MacroGrouperLung)
+//* result[macroscopic-observations] = Reference(MacroGrouperB)
+//* result[microscopic-observations] = Reference(MicroGrouperA)
 * result[diagnostic-conclusion] = Reference(example-mii-patho-DiagnosticConclusionGrouper)
 * conclusion = "Ausgedehnte Infiltrate eines acinär, lipidisch und fokal papillär wachsenden, mäßig differenzierten pulmonalen Adenocarcinoms in Stanzen vom linken Oberlappen im Bereich einer zellarmen Narbe."
 * conclusionCode = $SCT#1078901000119100 "Primary adenocarcinoma of upper lobe of left lung (disorder)"  
