@@ -35,7 +35,8 @@ Description: "Defines the general pathology report structure for German hospital
 * basedOn ^short = "Reference to respective SD_MII_Patho_Service_Request"
 // Status
 * status MS
-* category MS // Code Wahl wird erstmal offen gelassen
+* category MS 
+* category from vs-mii-patho-report-category-hl7 (extensible)
 // Code
 * code MS
 * code ^short = "Pathology report code"
@@ -129,14 +130,16 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
   * value 1.. MS
   * system 1.. MS
 * type MS
-  * ^short = "The type for the pathology report Composition is 'Pathology study'"
+  // * ^short = "The type for the pathology report Composition is 'Pathology study'"
   * coding 1.. MS
-  * coding = $LOINC#11526-1 "Pathology study"
+  * coding from vs-mii-patho-composition-type-loinc (extensible)
+  // * coding = $LOINC#11526-1 "Pathology study"
     * system 1.. MS
     * code 1.. MS
     * display MS 
 * category MS
   * coding MS
+  * coding from vs-mii-patho-report-category-hl7 (extensible)
 * subject 1.. MS
 * subject only Reference(Patient)
 * encounter 1.. MS
@@ -165,13 +168,6 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
   * mode = #professional (exactly)
   * party 1.. MS
   * party only Reference(Practitioner or Organization)
-
-// * attester ^short = "Legal attester"
-//   * mode 1.. MS
-//   * mode ^fixedCode = #legal
-//   * mode ^short = "Mode fixed to 'legal'"
-//   * party 1.. MS
-//   * party only Reference(Practitioner or Organization)
 * custodian 1.. MS
 * relatesTo MS 
   * code MS

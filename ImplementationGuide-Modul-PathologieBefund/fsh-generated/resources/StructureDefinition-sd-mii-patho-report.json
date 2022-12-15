@@ -157,7 +157,11 @@
       {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-report-category-hl7"
+        }
       },
       {
         "id": "DiagnosticReport.code",
