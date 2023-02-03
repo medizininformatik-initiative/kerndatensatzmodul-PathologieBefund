@@ -138,14 +138,12 @@
         "id": "Observation.category:laboratory-category.coding.system",
         "path": "Observation.category.coding.system",
         "min": 1,
-        "fixedString": "http://terminology.hl7.org/CodeSystem/observation-category",
         "mustSupport": true
       },
       {
         "id": "Observation.category:laboratory-category.coding.code",
         "path": "Observation.category.coding.code",
         "min": 1,
-        "fixedCode": "laboratory",
         "mustSupport": true
       },
       {
@@ -165,7 +163,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://loinc.org"
+          "valueSet": "http://loinc.org/vs"
         }
       },
       {

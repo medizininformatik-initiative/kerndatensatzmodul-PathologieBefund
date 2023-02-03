@@ -24,13 +24,11 @@ Description: "Abstract Observation to define common features of a main pathology
 * category[laboratory-category] = $obs-category#laboratory
   * coding 1.. MS
     * system 1.. MS 
-    * system ^fixedString = $obs-category
     * code 1.. MS
-    * code ^fixedCode = #laboratory
     * display MS
 // Code
 * code MS
-  * coding from $LOINC (preferred)
+  * coding from $LOINC-VS (preferred)
   * coding 1.. MS
     * code 1.. MS
     * system 1.. MS
@@ -80,11 +78,11 @@ Id: sd-mii-patho-finding
 Title: "SD MII Patho Finding"
 Description: "Instantiable Observation to describe a generic pathology finding"
 * insert RuleSet1
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this.coding"
-* category ^slicing.rules = #open
-* category ^slicing.description = "Section type"
-* category ^slicing.ordered = false
+// * category ^slicing.discriminator.type = #pattern
+// * category ^slicing.discriminator.path = "$this"
+// * category ^slicing.rules = #open
+// * category ^slicing.description = "Section type"
+// * category ^slicing.ordered = false
 * category contains section-type 1..1 MS
 * category[section-type].coding from VS_MII_Patho_Section_Types_LOINC (required)
 * value[x] MS
@@ -121,7 +119,7 @@ Id: sd-mii-patho-intraoperative-grouper
 Title: "SD MII Patho Intraoperative Grouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert RuleSet1
-* code ^fixedCodeableConcept = $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document"
+* code = $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document" (exactly)
 
 
 //--------------------------------------------
@@ -133,7 +131,7 @@ Id: sd-mii-patho-macroscopic-grouper
 Title: "SD MII Patho Macroscopic Grouper"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert RuleSet1
-* code ^fixedCodeableConcept = $LOINC#22634-0 "Pathology report gross observation"
+* code = $LOINC#22634-0 "Pathology report gross observation" (exactly)
 
 
 //-------------------------------------
@@ -145,7 +143,7 @@ Id: sd-mii-patho-microscopic-grouper
 Title: "SD MII Patho Microscopic Grouper"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert RuleSet1
-* code ^fixedCodeableConcept = $LOINC#22635-7 "Pathology report microscopic observation"
+* code = $LOINC#22635-7 "Pathology report microscopic observation" (exactly)
 
 
 //-------------------------------------
@@ -157,7 +155,7 @@ Id: sd-mii-patho-additional-specified-grouper
 Title: "SD MII Patho Additional Specified Grouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
 * insert RuleSet1
-* code ^fixedCodeableConcept = $LOINC#100969-5 "Pathology report additional specified observation"  
+* code = $LOINC#100969-5 "Pathology report additional specified observation" (exactly) // not able to validate code yet, should come with next LOINC release
 
 
 //--------------------------------

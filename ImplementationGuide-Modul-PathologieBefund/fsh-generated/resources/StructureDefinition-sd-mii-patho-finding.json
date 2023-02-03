@@ -62,17 +62,6 @@
       {
         "id": "Observation.category",
         "path": "Observation.category",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this.coding"
-            }
-          ],
-          "rules": "open",
-          "description": "Section type",
-          "ordered": false
-        },
         "min": 2
       },
       {
