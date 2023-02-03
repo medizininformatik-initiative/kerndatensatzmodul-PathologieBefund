@@ -5,7 +5,7 @@ Usage: #definition
 * status = #draft
 * name = "CpS_MII_Patho_Capability_Statement"
 * title = "CpS MII Patho Capability Statement"
-* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata"
+// * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata"
 * description = "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative"
 * experimental = false
 * date = "2022-07-18"
@@ -101,7 +101,7 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "identifier", clinical-identifier, #token, "The unique id for a particular observation")
   * insert AddSearchParameter(#SHALL, "method", Observation-method, #token, "The method used for the observation")
   //* insert AddSearchParameter(#SHALL, "part-of", Observation-part-of, #reference, "Part of referenced event")
-  * insert AddSearchParameter(#SHALL, "patient", clinical-subject, #reference, "The subject that the observation is about (if patient\)")
+  * insert AddSearchParameter(#SHALL, "patient", Observation-subject, #reference, "The subject that the observation is about (if patient\)")
   * insert AddSearchParameter(#SHALL, "performer", Observation-performer, #reference, "Who performed the observation")
   * insert AddSearchParameter(#SHALL, "specimen", Observation-specimen, #reference, "Specimen used for this observation")
   * insert AddSearchParameter(#SHALL, "status", Observation-status, #token, "The status of the observation")
@@ -146,7 +146,7 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "requisition", ServiceRequest-requisition, #token, "Composite Request ID")
   * insert AddSearchParameter(#SHALL, "specimen", ServiceRequest-specimen, #reference, "Specimen to be tested")
   * insert AddSearchParameter(#SHALL, "status", ServiceRequest-status, #token, "draft | active | on-hold | revoked | completed | entered-in-error | unknown")
-  * insert AddSearchParameter(#SHALL, "subject", clinical-subject, #reference, "Search by subject")
+  * insert AddSearchParameter(#SHALL, "subject", ServiceRequest-subject, #reference, "Search by subject")
   // CUSTOM
   * insert AddMIISearchParameter(#SHALL, "reason-code", sp-mii-patho-reason-code, #token, "SearchParameter for ServiceRequest.reasonCode")
   * insert AddMIISearchParameter(#SHALL, "supporting-info", sp-mii-patho-supporting-info, #reference, "SearchParameter for ServiceRequest.supportingInfo")

@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "cps-mii-patho-capability-statement",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/cps-mii-patho-capability-statement",
   "version": "0.9.0",
   "status": "draft",
   "name": "CpS_MII_Patho_Capability_Statement",
@@ -792,7 +792,7 @@
             },
             {
               "name": "patient",
-              "definition": "http://hl7.org/fhir/SearchParameter/clinical-subject",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-subject",
               "type": "reference",
               "documentation": "The subject that the observation is about (if patient)",
               "extension": [
@@ -1157,7 +1157,7 @@
             },
             {
               "name": "subject",
-              "definition": "http://hl7.org/fhir/SearchParameter/clinical-subject",
+              "definition": "http://hl7.org/fhir/SearchParameter/ServiceRequest-subject",
               "type": "reference",
               "documentation": "Search by subject",
               "extension": [
