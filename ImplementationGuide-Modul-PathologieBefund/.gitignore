@@ -6,3 +6,4 @@ Thumbs.db
 /temp
 /template
 validator_cli.jar
+.devcontainer/
