@@ -46,7 +46,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+            "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
             "valueString": "#bearbeitungsprozedur"
           }
         ]
@@ -82,7 +82,7 @@
         ],
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/originalText",
+            "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
             "valueString": "#faerbung"
           }
         ]

@@ -19,8 +19,7 @@
       "coding": [
         {
           "code": "22634-0",
-          "system": "http://loinc.org",
-          "display": "Pathology report gross observation"
+          "system": "http://loinc.org"
         }
       ]
     }
@@ -31,7 +30,7 @@
       {
         "code": "94738-2",
         "system": "http://loinc.org",
-        "display": "Biopsy site"
+        "display": "Biopsy site Patient"
       }
     ],
     "extension": [

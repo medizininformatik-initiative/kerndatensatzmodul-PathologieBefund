@@ -19,8 +19,7 @@
       "coding": [
         {
           "code": "22637-3",
-          "system": "http://loinc.org",
-          "display": "Pathology report diagnosis"
+          "system": "http://loinc.org"
         }
       ]
     }
@@ -31,7 +30,7 @@
       {
         "code": "94734-1",
         "system": "http://loinc.org",
-        "display": "Prostate cancer grade group"
+        "display": "Prostate cancer grade group [Score] in Prostate tumor Qualitative"
       }
     ]
   },

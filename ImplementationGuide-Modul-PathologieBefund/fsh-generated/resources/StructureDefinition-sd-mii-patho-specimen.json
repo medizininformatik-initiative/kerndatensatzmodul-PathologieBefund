@@ -105,30 +105,9 @@
         }
       },
       {
-        "id": "Specimen.processing.procedure.extension:original-text",
-        "path": "Specimen.processing.procedure.extension",
-        "sliceName": "original-text",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/originalText"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Specimen.processing:lagerprozess",
         "path": "Specimen.processing",
         "sliceName": "lagerprozess"
-      },
-      {
-        "id": "Specimen.processing:lagerprozess.procedure.extension",
-        "path": "Specimen.processing.procedure.extension",
-        "mustSupport": true
       },
       {
         "id": "Specimen.processing:lagerprozess.additive",

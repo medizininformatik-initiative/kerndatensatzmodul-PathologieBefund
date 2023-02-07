@@ -60,11 +60,6 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.meta.versionId",
-        "path": "DiagnosticReport.meta.versionId",
-        "mustSupport": true
-      },
-      {
         "id": "DiagnosticReport.meta.lastUpdated",
         "path": "DiagnosticReport.meta.lastUpdated",
         "mustSupport": true
@@ -200,14 +195,12 @@
         "id": "DiagnosticReport.code.coding:pathology-report.system",
         "path": "DiagnosticReport.code.coding.system",
         "min": 1,
-        "fixedUri": "http://loinc.org",
         "mustSupport": true
       },
       {
         "id": "DiagnosticReport.code.coding:pathology-report.code",
         "path": "DiagnosticReport.code.coding.code",
         "min": 1,
-        "fixedCode": "60568-3",
         "mustSupport": true
       },
       {

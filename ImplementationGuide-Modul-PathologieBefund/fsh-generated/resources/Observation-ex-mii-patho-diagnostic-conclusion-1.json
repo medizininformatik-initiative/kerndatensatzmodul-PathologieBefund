@@ -19,8 +19,7 @@
       "coding": [
         {
           "code": "22637-3",
-          "system": "http://loinc.org",
-          "display": "Pathology report diagnosis"
+          "system": "http://loinc.org"
         }
       ]
     }

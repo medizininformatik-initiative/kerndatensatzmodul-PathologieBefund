@@ -104,12 +104,35 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "$this"
+              "path": "$this.coding"
             }
           ],
           "rules": "open"
         },
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding",
+        "path": "Observation.category.coding",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding.system",
+        "path": "Observation.category.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding.code",
+        "path": "Observation.category.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category.coding.display",
+        "path": "Observation.category.coding.display",
         "mustSupport": true
       },
       {
@@ -126,29 +149,6 @@
             }
           ]
         },
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category:laboratory-category.coding",
-        "path": "Observation.category.coding",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category:laboratory-category.coding.system",
-        "path": "Observation.category.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category:laboratory-category.coding.code",
-        "path": "Observation.category.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category:laboratory-category.coding.display",
-        "path": "Observation.category.coding.display",
         "mustSupport": true
       },
       {

@@ -15,7 +15,6 @@ Description: "Pathology specimen"
 * request only Reference(SD_MII_Patho_Service_Request)
 * processing
   * procedure from vs-mii-patho-processing-procedure-snomed-ct (extensible)
-    * extension contains $fhir-original-text named original-text 0..1 MS
   * additive only Reference($mii-bio-additive)
 * container MS
   * type from VS_MII_Patho_Container_Type_SNOMED (required)
@@ -112,7 +111,8 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
     * code = #Cel
     * value = 30
 * processing[=].procedure.coding[sct] = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
-* processing[=].procedure.extension[original-text].valueString = "#bearbeitungsprozedur"
+* processing[=].procedure.extension.url = $fhir-narrative-link
+* processing[=].procedure.extension.valueString = "#bearbeitungsprozedur"
 * processing[+].extension[temperaturbedingungen].valueRange
   * low
     * unit = "°C"
@@ -125,7 +125,8 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
     * code = #Cel
     * value = 30
 * processing[=].procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method (procedure)"
-* processing[=].procedure.extension[original-text].valueString = "#faerbung"
+* processing[=].procedure.extension.url = $fhir-narrative-link
+* processing[=].procedure.extension.valueString = "#faerbung"
 * processing[=].additive[+] = Reference(ex-mii-patho-hematoxylin-stain)
 * processing[=].additive[+] = Reference(ex-mii-patho-eosin-y)
 * container[+] 

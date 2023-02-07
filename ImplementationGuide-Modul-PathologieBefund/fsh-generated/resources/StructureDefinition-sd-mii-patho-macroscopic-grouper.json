@@ -66,8 +66,7 @@
           "coding": [
             {
               "code": "22634-0",
-              "system": "http://loinc.org",
-              "display": "Pathology report gross observation"
+              "system": "http://loinc.org"
             }
           ]
         }

@@ -20,12 +20,11 @@ Description: "Defines the general pathology report structure for German hospital
 * identifier contains Set-ID 1..1 MS
 * identifier[Set-ID] 
   * type 1.. MS
-  * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
+  * type.coding = $v2-0203#ACSN "Accession ID"
   * value 1.. MS
   * system 1.. MS
 // Versionsnummer der Ressourceninstanz - Entpricht nicht der Version des Befundes!!
 * meta MS
-* meta.versionId MS
 // Weitere MS Elemente aus Metadata
 * meta.source MS
 * meta.profile MS 
@@ -44,11 +43,9 @@ Description: "Defines the general pathology report structure for German hospital
   * coding ^slicing.discriminator.path = "$this"
   * coding ^slicing.rules = #open
   * coding contains pathology-report 1..1 MS
-  * coding[pathology-report] ^patternCoding = $LOINC#60568-3 "Pathology Synoptic report"
+  * coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
     * system 1.. MS 
-    * system ^fixedUri = $LOINC
     * code 1.. MS
-    * code ^fixedCode = #60568-3
     * display MS  
 // Referenz zu Patient:in
 * subject 1.. MS
@@ -126,14 +123,12 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * status = #final (exactly)
 * identifier 1.. MS
   * type 1.. MS
-  * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
+  * type.coding = $v2-0203#ACSN "Accession ID"
   * value 1.. MS
   * system 1.. MS
 * type MS
-  // * ^short = "The type for the pathology report Composition is 'Pathology study'"
   * coding 1.. MS
   * coding from vs-mii-patho-composition-type-loinc (extensible)
-  // * coding = $LOINC#11526-1 "Pathology study"
     * system 1.. MS
     * code 1.. MS
     * display MS 
@@ -153,8 +148,8 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * title 1.. MS
 // Legaler Authentikator 
 * attester 1.. MS
-* attester ^slicing.discriminator.type = #pattern
-* attester ^slicing.discriminator.path = "$this.code"
+* attester ^slicing.discriminator.type = #value
+* attester ^slicing.discriminator.path = "$this.mode"
 * attester ^slicing.rules = #open
 * attester ^slicing.description = "tbd"
 * attester ^slicing.ordered = false
@@ -194,7 +189,7 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
   * title 1.. MS
   * code 1.. MS
     * coding 1.. MS
-    * coding from $LOINC (required)
+    * coding from $LOINC-VS (required)
   * text 1.. MS
   * entry 1..1 MS
   * section MS

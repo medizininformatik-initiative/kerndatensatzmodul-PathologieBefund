@@ -66,8 +66,7 @@
           "coding": [
             {
               "code": "22637-3",
-              "system": "http://loinc.org",
-              "display": "Pathology report diagnosis"
+              "system": "http://loinc.org"
             }
           ]
         }
@@ -87,10 +86,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-intraoperative-grouper",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-macroscopic-grouper",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-microscopic-grouper",
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-additional-specified-grouper"
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-section-grouper"
             ]
           }
         ],

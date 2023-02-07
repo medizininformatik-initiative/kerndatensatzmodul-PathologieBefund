@@ -17,15 +17,15 @@ Description: "Abstract Observation to define common features of a main pathology
 * basedOn only Reference(SD_MII_Patho_Service_Request)
 * status MS
 * category 1.. MS 
-* category ^slicing.discriminator[0].type = #pattern
-* category ^slicing.discriminator[0].path = "$this"
-* category ^slicing.rules = #open
-* category contains laboratory-category 1..1 MS
-* category[laboratory-category] = $obs-category#laboratory
   * coding 1.. MS
     * system 1.. MS 
     * code 1.. MS
     * display MS
+* category ^slicing.discriminator[0].type = #pattern
+* category ^slicing.discriminator[0].path = "$this.coding"
+* category ^slicing.rules = #open
+* category contains laboratory-category 1..1 MS
+* category[laboratory-category] = $cs-obs-category#laboratory
 // Code
 * code MS
   * coding from $LOINC-VS (preferred)
@@ -78,11 +78,6 @@ Id: sd-mii-patho-finding
 Title: "SD MII Patho Finding"
 Description: "Instantiable Observation to describe a generic pathology finding"
 * insert RuleSet1
-// * category ^slicing.discriminator.type = #pattern
-// * category ^slicing.discriminator.path = "$this"
-// * category ^slicing.rules = #open
-// * category ^slicing.description = "Section type"
-// * category ^slicing.ordered = false
 * category contains section-type 1..1 MS
 * category[section-type].coding from VS_MII_Patho_Section_Types_LOINC (required)
 * value[x] MS
@@ -99,7 +94,6 @@ Title: "SD MII Patho Section Grouper"
 Description: "Grouper profile for pathological findings"
 * insert RuleSet1
 * ^abstract = true
-// * code.coding from SectionTypes (required)
 * text MS
 * hasMember ^slicing.discriminator.type = #type
 * hasMember ^slicing.discriminator.path = "$this"
@@ -119,7 +113,7 @@ Id: sd-mii-patho-intraoperative-grouper
 Title: "SD MII Patho Intraoperative Grouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert RuleSet1
-* code = $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document" (exactly)
+* code = $LOINC#83321-0 (exactly)
 
 
 //--------------------------------------------
@@ -131,7 +125,7 @@ Id: sd-mii-patho-macroscopic-grouper
 Title: "SD MII Patho Macroscopic Grouper"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert RuleSet1
-* code = $LOINC#22634-0 "Pathology report gross observation" (exactly)
+* code = $LOINC#22634-0 (exactly)
 
 
 //-------------------------------------
@@ -143,7 +137,7 @@ Id: sd-mii-patho-microscopic-grouper
 Title: "SD MII Patho Microscopic Grouper"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert RuleSet1
-* code = $LOINC#22635-7 "Pathology report microscopic observation" (exactly)
+* code = $LOINC#22635-7 (exactly)
 
 
 //-------------------------------------
@@ -155,7 +149,7 @@ Id: sd-mii-patho-additional-specified-grouper
 Title: "SD MII Patho Additional Specified Grouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
 * insert RuleSet1
-* code = $LOINC#100969-5 "Pathology report additional specified observation" (exactly) // not able to validate code yet, should come with next LOINC release
+* code = $LOINC#100969-5 (exactly) // not able to validate code yet, should come with next LOINC release
 
 
 //--------------------------------
@@ -167,17 +161,26 @@ Id: sd-mii-patho-diagnostic-conclusion-grouper
 Title: "SD MII Patho Diagnostic Conclusion Grouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
 * insert RuleSet1
-* code = $LOINC#22637-3 "Pathology report diagnosis" (exactly)
+* code = $LOINC#22637-3 (exactly)
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom MS
 * derivedFrom ^slicing.discriminator.type = #type
 * derivedFrom ^slicing.discriminator.path = "$this.resolve()"
 * derivedFrom ^slicing.rules = #open
-* derivedFrom ^slicing.description = "tbd"
 * derivedFrom ^slicing.ordered = false
 * derivedFrom contains grouper-observation 0..* MS
                    and questionnaire-response 0..* MS
-* derivedFrom[grouper-observation] only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper)
+* derivedFrom[grouper-observation] only Reference(sd-mii-patho-section-grouper)
+// * derivedFrom[grouper-observation] only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper)
+// * derivedFrom contains macroscopic-grouper 0..* MS
+//                   and microscopic-grouper 0..* MS
+//                   and intraoperative-grouper 0..* MS
+//                   and additional-specified-grouper 0..* MS
+//                   and questionnaire-response 0..* MS
+// * derivedFrom[macroscopic-grouper] only Reference(sd-mii-patho-macroscopic-grouper)
+// * derivedFrom[microscopic-grouper] only Reference(sd-mii-patho-microscopic-grouper)
+// * derivedFrom[intraoperative-grouper] only Reference(sd-mii-patho-intraoperative-grouper)
+// * derivedFrom[additional-specified-grouper] only Reference(sd-mii-patho-additional-specified-grouper)
 * derivedFrom[questionnaire-response] only Reference(QuestionnaireResponse)
 * note MS
 
@@ -193,9 +196,9 @@ Usage: #example
 Title: "EX MII Patho Biopsy Site A"
 Description: "Biopsy site of Specimen A (1st punch)"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
-* code.coding = $LOINC#94738-2 "Biopsy site"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* category[section-type].coding = $LOINC#22634-0 
+* code.coding = $LOINC#94738-2 "Biopsy site Patient"
 * code.extension.url = $fhir-narrative-link
 * code.extension.valueUrl = "#macro-a-biopsy-site-key"
 * valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -210,8 +213,8 @@ Usage: #example
 Title: "EX MII Patho Tissue Length A"
 Description: "Tissue length of Specimen A (1st punch)"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* category[section-type].coding = $LOINC#22634-0 
 * code.coding = $LOINC#44619-5 "Length of tissue core(s)"
 * code.extension.url = $fhir-narrative-link
 * code.extension.valueUrl = "#macro-a-tissue-length-key"
@@ -230,9 +233,8 @@ Usage: #example
 Title: "EX MII Patho Macro Grouper A"
 Description: "Grouper for all Macroscopic Observations of Specimen A (1st punch)"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* code.coding = $LOINC#22634-0 "Pathology report gross observation"
-* valueString = "Makroskopie A"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* code.coding = $LOINC#22634-0 
 * hasMember[+] = Reference(ex-mii-patho-biopsy-site-a)
 * hasMember[+] = Reference(ex-mii-patho-tissue-length-a)
 * specimen = Reference(ex-mii-patho-he-stained-slide-prostate)
@@ -244,9 +246,9 @@ Usage: #example
 Title: "EX MII Patho Biopsy Site B"
 Description: "Biopsy site of Specimen B (2nd punch)"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
-* code.coding = $LOINC#94738-2 "Biopsy site"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* category[section-type].coding = $LOINC#22634-0
+* code.coding = $LOINC#94738-2 "Biopsy site Patient"
 * valueCodeableConcept = $SCT#716934008 "Structure of apical part of peripheral zone of right half prostate (body structure)"
 * derivedFrom[+] = Reference(ex-mii-patho-attached-image)
 
@@ -256,8 +258,8 @@ Usage: #example
 Title: "EX MII Patho Tissue Length B"
 Description: "Tissue length of Specimen B (2nd punch)"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* category[section-type].coding = $LOINC#22634-0 "Pathology report gross observation"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* category[section-type].coding = $LOINC#22634-0 
 * code.coding = $LOINC#44619-5 "Length of tissue core(s)"
 * valueQuantity.value = 1.5
 * valueQuantity.unit = "cm"
@@ -271,8 +273,8 @@ Usage: #example
 Title: "EX MII Patho Macro Grouper B"
 Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* code.coding = $LOINC#22634-0 "Pathology report gross observation"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* code.coding = $LOINC#22634-0 
 * valueString = "Specimen B: Prostataseitenlappen rechts, apikal 1.5cm"
 * hasMember[+] = Reference(ex-mii-patho-biopsy-site-b)
 * hasMember[+] = Reference(ex-mii-patho-tissue-length-b)
@@ -287,8 +289,8 @@ Usage: #example
 Title: "EX MII Patho Histologic Type A"
 Description: "[Microscopic Finding] Histologic type of Specimen A"
 * status = #final 
-* category[laboratory-category].coding = $obs-category#laboratory
-* category[section-type].coding = $LOINC#22635-7 "Pathology report microscopic observation"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* category[section-type].coding = $LOINC#22635-7
 * code = $SCT#371441004 "Histologic type (observable entity)"
 * valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma (morphologic abnormality)"
 * specimen = Reference(ex-mii-patho-he-stained-slide-prostate)
@@ -299,8 +301,8 @@ Usage: #example
 Title: "EX MII Patho Gleason Pattern A"
 Description: "[Microscopic Finding] Gleason pattern.primary in prostate tumor for Specimen A"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* category[section-type].coding = $LOINC#22635-7 "Pathology report microscopic observation"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* category[section-type].coding = $LOINC#22635-7
 * code = $LOINC#44641-9 "Gleason pattern.primary in prostate tumor"
 * valueCodeableConcept = $SCT#369772003 "Pattern 3 (staging scale)"
 * specimen = Reference(ex-mii-patho-he-stained-slide-prostate)
@@ -311,8 +313,8 @@ Usage: #example
 Title: "EX MII Patho Micro Grouper A"
 Description: "Grouper for all Microscopic Observations of Specimen A"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* code.coding = $LOINC#22635-7 "Pathology report microscopic observation"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* code.coding = $LOINC#22635-7 
 * valueString = "Specimen A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders..."
 * hasMember[+] = Reference(ex-mii-patho-histologic-type-a)
 * hasMember[+] = Reference(ex-mii-patho-gleason-pattern-a)
@@ -327,8 +329,8 @@ Usage: #example
 Title: "EX MII Patho Diagnostic Conclusion 1"
 Description: "Example for a diagnostic conclusion"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* category[section-type].coding = $LOINC#22637-3 "Pathology report diagnosis" 
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* category[section-type].coding = $LOINC#22637-3
 * code = $LOINC#59847-4 "Histology and Behavior ICD-O-3 Cancer"
 * valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom (azinär)"
 
@@ -338,8 +340,8 @@ Usage: #example
 Title: "EX MII Patho Diagnostic Conclusion 2"
 Description: "Example for diagnostic conclusion"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* category[section-type].coding = $LOINC#22637-3 "Pathology report diagnosis"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* category[section-type].coding = $LOINC#22637-3 
 * code = $LOINC#35266-6 "Gleason score in Specimen Qualitative"
 * valueCodeableConcept = $SCT#57403001 "Gleason grade 7 (staging scale)"
 
@@ -349,9 +351,9 @@ Usage: #example
 Title: "EX MII Patho Diagnostic Conclusion 3"
 Description: "Example for diagnostic conclusion"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* category[section-type].coding = $LOINC#22637-3 "Pathology report diagnosis"
-* code = $LOINC#94734-1 "Prostate cancer grade group"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* category[section-type].coding = $LOINC#22637-3 
+* code = $LOINC#94734-1 "Prostate cancer grade group [Score] in Prostate tumor Qualitative"
 * valueCodeableConcept = $LOINC#LA9630-0 "Grade 2"
 
 Instance: ex-mii-patho-diagnostic-conclusion-grouper
@@ -360,8 +362,8 @@ Usage: #example
 Title: "EX MII Patho Diagnostic Conclusion Grouper"
 Description: "Example for a diagnostic conclusion"
 * status = #final
-* category[laboratory-category].coding = $obs-category#laboratory
-* code.coding = $LOINC#22637-3 "Pathology report diagnosis"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* code.coding = $LOINC#22637-3 
 * derivedFrom[+] = Reference(ex-mii-patho-macro-grouper-a)
 * derivedFrom[+] = Reference(ex-mii-patho-macro-grouper-b)
 * derivedFrom[+] = Reference(ex-mii-patho-micro-grouper-a)

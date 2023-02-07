@@ -1,10 +1,12 @@
 Alias: $LOINC = http://loinc.org
 Alias: $LOINC-VS = http://loinc.org/vs
+// Alias: $LOINC-VS = https://fhir.loinc.org/ValueSet
 Alias: $SCT = http://snomed.info/sct
 Alias: $DICOM = http://dicom.nema.org/resources/ontology/DCM
 Alias: $UCUM = http://unitsofmeasure.org
 // HL7 Terminology
-Alias: $obs-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $cs-obs-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $vs-obs-category = http://terminology.hl7.org/ValueSet/observation-category
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v2-0916 = http://terminology.hl7.org/ValueSet/v2-0916
 Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074

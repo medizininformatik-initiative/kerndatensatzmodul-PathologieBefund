@@ -258,8 +258,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this.code"
+              "type": "value",
+              "path": "$this.mode"
             }
           ],
           "rules": "open",
@@ -463,7 +463,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://loinc.org"
+          "valueSet": "http://loinc.org/vs"
         }
       },
       {

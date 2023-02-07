@@ -66,8 +66,7 @@
           "coding": [
             {
               "code": "100969-5",
-              "system": "http://loinc.org",
-              "display": "Pathology report additional specified observation"
+              "system": "http://loinc.org"
             }
           ]
         }
