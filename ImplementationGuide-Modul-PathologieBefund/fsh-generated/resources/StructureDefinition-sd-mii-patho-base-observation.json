@@ -385,8 +385,9 @@
         ]
       },
       {
-        "id": "Observation.component.valueString",
-        "path": "Observation.component.valueString",
+        "id": "Observation.component.value[x]:valueString",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueString",
         "min": 0,
         "max": "1",
         "type": [
@@ -396,8 +397,8 @@
         ]
       },
       {
-        "id": "Observation.component.valueString.extension",
-        "path": "Observation.component.valueString.extension",
+        "id": "Observation.component.value[x]:valueString.extension",
+        "path": "Observation.component.value[x].extension",
         "slicing": {
           "discriminator": [
             {
@@ -411,8 +412,8 @@
         "short": "Links to original text that may have been used to retrieve value"
       },
       {
-        "id": "Observation.component.valueString.extension:original-text",
-        "path": "Observation.component.valueString.extension",
+        "id": "Observation.component.value[x]:valueString.extension:original-text",
+        "path": "Observation.component.value[x].extension",
         "sliceName": "original-text",
         "min": 0,
         "max": "1",
@@ -427,8 +428,9 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.component.valueQuantity",
-        "path": "Observation.component.valueQuantity",
+        "id": "Observation.component.value[x]:valueQuantity",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueQuantity",
         "min": 0,
         "max": "1",
         "type": [
@@ -438,13 +440,13 @@
         ]
       },
       {
-        "id": "Observation.component.valueQuantity.extension",
-        "path": "Observation.component.valueQuantity.extension",
+        "id": "Observation.component.value[x]:valueQuantity.extension",
+        "path": "Observation.component.value[x].extension",
         "short": "Links to original text that may have been used to retrieve value"
       },
       {
-        "id": "Observation.component.valueQuantity.extension:original-text",
-        "path": "Observation.component.valueQuantity.extension",
+        "id": "Observation.component.value[x]:valueQuantity.extension:original-text",
+        "path": "Observation.component.value[x].extension",
         "sliceName": "original-text",
         "min": 0,
         "max": "1",
@@ -459,8 +461,9 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.component.valueCodeableConcept",
-        "path": "Observation.component.valueCodeableConcept",
+        "id": "Observation.component.value[x]:valueCodeableConcept",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueCodeableConcept",
         "min": 0,
         "max": "1",
         "type": [
@@ -470,13 +473,13 @@
         ]
       },
       {
-        "id": "Observation.component.valueCodeableConcept.extension",
-        "path": "Observation.component.valueCodeableConcept.extension",
+        "id": "Observation.component.value[x]:valueCodeableConcept.extension",
+        "path": "Observation.component.value[x].extension",
         "short": "Links to original text that may have been used to retrieve value"
       },
       {
-        "id": "Observation.component.valueCodeableConcept.extension:original-text",
-        "path": "Observation.component.valueCodeableConcept.extension",
+        "id": "Observation.component.value[x]:valueCodeableConcept.extension:original-text",
+        "path": "Observation.component.value[x].extension",
         "sliceName": "original-text",
         "min": 0,
         "max": "1",
@@ -491,8 +494,9 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.component.valueRatio",
-        "path": "Observation.component.valueRatio",
+        "id": "Observation.component.value[x]:valueRatio",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueRatio",
         "min": 0,
         "max": "1",
         "type": [
@@ -502,13 +506,13 @@
         ]
       },
       {
-        "id": "Observation.component.valueRatio.extension",
-        "path": "Observation.component.valueRatio.extension",
+        "id": "Observation.component.value[x]:valueRatio.extension",
+        "path": "Observation.component.value[x].extension",
         "short": "Links to original text that may have been used to retrieve value"
       },
       {
-        "id": "Observation.component.valueRatio.extension:original-text",
-        "path": "Observation.component.valueRatio.extension",
+        "id": "Observation.component.value[x]:valueRatio.extension:original-text",
+        "path": "Observation.component.value[x].extension",
         "sliceName": "original-text",
         "min": 0,
         "max": "1",

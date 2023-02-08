@@ -31,7 +31,7 @@
           }
         ]
       },
-      "value": "E12345_21-A1",
+      "value": "E12345_21-A1-1HE",
       "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
     }
   ],
@@ -42,6 +42,11 @@
   "subject": {
     "reference": "Patient/12345"
   },
+  "parent": [
+    {
+      "reference": "Specimen/E12345_21"
+    }
+  ],
   "request": [
     {
       "reference": "ServiceRequest/ex-mii-patho-request"

@@ -106,16 +106,6 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "type": [
           {
             "code": "CodeableConcept"
@@ -124,19 +114,13 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.valueCodeableConcept",
-        "path": "Observation.valueCodeableConcept",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Observation.valueCodeableConcept.extension",
-        "path": "Observation.valueCodeableConcept.extension",
+        "id": "Observation.value[x].extension",
+        "path": "Observation.value[x].extension",
         "short": "Links to original text that may have been used to retrieve value"
       },
       {
-        "id": "Observation.valueCodeableConcept.extension:original-text",
-        "path": "Observation.valueCodeableConcept.extension",
+        "id": "Observation.value[x].extension:original-text",
+        "path": "Observation.value[x].extension",
         "sliceName": "original-text",
         "min": 0,
         "max": "1",
