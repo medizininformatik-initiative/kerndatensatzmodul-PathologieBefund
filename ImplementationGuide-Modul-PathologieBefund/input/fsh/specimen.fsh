@@ -22,7 +22,7 @@ Description: "Pathology specimen"
 
 // Examples
 Instance: ex-mii-patho-prostate-tru-cut-biopsy-sample
-InstanceOf: sd-mii-patho-specimen
+InstanceOf: SD_MII_Patho_Specimen
 Usage: #example
 Title: "ex-mii-patho-prostate-tru-cut-biopsy sample"
 Description: "Prostate tru-cut biopsy sample (specimen)"
