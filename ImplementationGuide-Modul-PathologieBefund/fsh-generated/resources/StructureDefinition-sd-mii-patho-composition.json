@@ -390,7 +390,6 @@
         "id": "Composition.section:patho-diagnostic-report.title",
         "path": "Composition.section.title",
         "min": 1,
-        "fixedString": "Pathology Diagnostic Report",
         "mustSupport": true
       },
       {
@@ -405,8 +404,7 @@
         "min": 1,
         "patternCoding": {
           "code": "60567-5",
-          "system": "http://loinc.org",
-          "display": "Comprehensive pathology report panel"
+          "system": "http://loinc.org"
         },
         "mustSupport": true
       },
@@ -463,7 +461,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://loinc.org/vs"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-all-loinc"
         }
       },
       {

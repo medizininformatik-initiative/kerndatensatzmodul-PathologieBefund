@@ -15,12 +15,12 @@ Description: "Defines the general pathology report structure for German hospital
 // Identifikator
 * identifier 1.. MS
   * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this.type.coding"
+  * ^slicing.discriminator.path = "$this.type"
   * ^slicing.rules = #open
 * identifier contains Set-ID 1..1 MS
 * identifier[Set-ID] 
   * type 1.. MS
-  * type.coding = $v2-0203#ACSN "Accession ID"
+  * type = $v2-0203#ACSN "Accession ID"
   * value 1.. MS
   * system 1.. MS
 // Versionsnummer der Ressourceninstanz - Entpricht nicht der Version des Befundes!!
@@ -177,10 +177,9 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
           and additional-diagnostic-report 0..* MS
 * section[patho-diagnostic-report]
   * title 1.. MS 
-  * title ^fixedString = "Pathology Diagnostic Report"
   * code 1.. MS
     * coding 1.. MS
-    * coding ^patternCoding = $LOINC#60567-5 "Comprehensive pathology report panel"
+    * coding = $LOINC#60567-5
   * text 1.. MS
   * entry 1..1 MS
   * entry only Reference (SD_MII_Patho_Report)
@@ -189,7 +188,7 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
   * title 1.. MS
   * code 1.. MS
     * coding 1.. MS
-    * coding from $LOINC-VS (required)
+    * coding from vs-mii-patho-all-loinc (required)
   * text 1.. MS
   * entry 1..1 MS
   * section MS

@@ -14,7 +14,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Identifikation - Auftrags-ID: Auftrags-ID des Auftraggebers (Placer) || Auftrags-ID des Auftragnehmers (Filler)
 * identifier 1.. MS
 * identifier ^slicing.discriminator[0].type = #pattern
-* identifier ^slicing.discriminator[0].path = "type.coding"
+* identifier ^slicing.discriminator[0].path = "$this.type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Contains slices for the request's placer- and filler IDs based on type.coding pattern"
 * identifier contains Placer-ID 0..1 MS 
@@ -24,19 +24,19 @@ Description: "Order for the analysis of a sample or a group of samples."
   * value 1.. MS
   * system 1.. MS
   * type 1.. MS
-    * coding = $v2-0203#PLAC "Placer identifier"
+  * type = $v2-0203#PLAC
+    * coding MS
       * system 1..1 MS
       * code 1..1 MS
-      * display MS
 * identifier[Filler-ID] ^short = "Filler Identifier"
 * identifier[Filler-ID] ^definition = "Identifier for the filler of the pathology request"
   * value 1.. MS
   * system 1.. MS
   * type 1.. MS
-    * coding = $v2-0203#FILL "Filler"
+  * type = $v2-0203#FILL
+    * coding MS
       * system 1..1 MS
       * code 1..1 MS
-      * display MS
 // Auftragsgruppen-ID
 * requisition MS
 * requisition ^short = "Composite or group identifier"
@@ -98,7 +98,7 @@ Description: "Condition profile for problem list item"
 * meta.profile MS
 * category 1.. MS
   * coding 1.. MS
-  * coding = $cs-hl7-condition-category#problem-list-item "Problem List Item" (exactly)
+  * coding = $cs-hl7-condition-category#problem-list-item
     * code 1..
     * system 1..
 * code MS
@@ -123,7 +123,7 @@ Description: "List of conditions currently being monitored for the patient"
 * mode = #snapshot (exactly)
 * code 1.. MS
   * coding 1.. MS
-  * coding = $LOINC#11450-4 "Problem list - Reported" (exactly)
+  * coding = $LOINC#11450-4
     * code 1..
     * system 1..
 * subject 1.. MS
@@ -151,26 +151,6 @@ Description: "List profile for 'History of Present Illness'"
 * entry MS
   * item only Reference(sd-mii-patho-problem-list-item)
 
-// //------------------------------------------------
-// // Personal History Finding - coded symptom for anamnesis
-// // *should be replaced by Module Symptomes profile later on
-// //------------------------------------------------
-// Profile: SD_MII_Patho_Personal_History_Finding
-// Parent: Observation
-// Id: sd-mii-patho-personal-history-finding
-// Title: "SD MII Patho Personal History Finding"
-// Description: "Profile "
-// * insert RuleSet1
-// * status MS
-// * code MS
-//   * coding 1.. MS
-//   * coding = $SCT#307294006 "Personal History Finding" (exactly) 
-//     * code 1.. 
-//     * system 1.. 
-//     * display 
-// * subject 1.. MS
-// * value[x] MS
-// * value[x] only CodeableConcept
 
 //---------------------------
 //Examples
@@ -179,11 +159,11 @@ Instance: ex-mii-patho-request
 InstanceOf: sd-mii-patho-service-request
 Usage: #example
 Title: "EX MII Patho Request"
-Description: "Pathology Report Example "
-* identifier[+].type = $v2-0203#PLAC "Placer Identifier"
+Description: "Pathology Service Request Example"
+* identifier[+].type = $v2-0203#PLAC
 * identifier[=].value = "KHXX_ENDO_18.123451"
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
-* identifier[+].type = $v2-0203#FILL "Filler"
+* identifier[+].type = $v2-0203#FILL 
 * identifier[=].value = "E18-321654"
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
 * status = #completed

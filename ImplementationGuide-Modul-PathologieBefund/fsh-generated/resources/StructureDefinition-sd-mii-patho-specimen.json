@@ -40,7 +40,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Specimen",
-  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/SpecimenCore",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -103,23 +103,6 @@
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/vs-mii-patho-processing-procedure-snomed-ct"
         }
-      },
-      {
-        "id": "Specimen.processing:lagerprozess",
-        "path": "Specimen.processing",
-        "sliceName": "lagerprozess"
-      },
-      {
-        "id": "Specimen.processing:lagerprozess.additive",
-        "path": "Specimen.processing.additive",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance"
-            ]
-          }
-        ]
       },
       {
         "id": "Specimen.container.type",

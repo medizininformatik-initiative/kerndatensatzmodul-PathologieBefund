@@ -72,10 +72,9 @@
         "id": "Condition.category.coding",
         "path": "Condition.category.coding",
         "min": 1,
-        "fixedCoding": {
+        "patternCoding": {
           "code": "problem-list-item",
-          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
-          "display": "Problem List Item"
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category"
         },
         "mustSupport": true
       },

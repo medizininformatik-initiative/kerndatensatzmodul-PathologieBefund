@@ -63,10 +63,9 @@
         "id": "List.code.coding",
         "path": "List.code.coding",
         "min": 1,
-        "fixedCoding": {
+        "patternCoding": {
           "code": "11450-4",
-          "system": "http://loinc.org",
-          "display": "Problem list - Reported"
+          "system": "http://loinc.org"
         },
         "mustSupport": true
       },

@@ -41,7 +41,7 @@
     },
     {
       "packageId": "de.medizininformatikinitiative.kerndatensatz.biobank",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
       "id": "de_medizininformatikinitiative_kerndatensatz_biobank"
     },
@@ -54,6 +54,14 @@
   ],
   "definition": {
     "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/SpecimenCore"
+        },
+        "name": "Profile - Specimen - Bioprobe - Core",
+        "description": "Basisiprofil zur Abbildung einer MII Bioprobe. Nicht zur direkten Implementierung gedacht, Module leiten bei Bedarf eigene Profile von diesem Profil ab.",
+        "exampleBoolean": false
+      },
       {
         "reference": {
           "reference": "StructureDefinition/sd-mii-patho-active-problems-list"
@@ -192,6 +200,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/vs-mii-patho-all-loinc"
+        },
+        "name": "VS MII Patho All LOINC",
+        "description": "ValueSet for general LOINC VS binding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/vs-mii-patho-collection-method-snomed-ct"
         },
         "name": "VS MII Patho Collection Method [SNOMED CT]",
@@ -253,6 +269,13 @@
         "name": "VS MII Patho Service Request SNOMED CT",
         "description": "ValueSet for a preferred set of ServiceRequest codes",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Specimen/MusterprobeFluessig"
+        },
+        "name": "Musterprobe flüssig",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/SpecimenCore"
       },
       {
         "reference": {
@@ -426,7 +449,7 @@
           "reference": "ServiceRequest/ex-mii-patho-request"
         },
         "name": "EX MII Patho Request",
-        "description": "Pathology Report Example ",
+        "description": "Pathology Service Request Example",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-service-request"
       },
       {

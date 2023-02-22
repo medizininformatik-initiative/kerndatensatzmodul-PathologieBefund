@@ -23,8 +23,7 @@
         "coding": [
           {
             "code": "PLAC",
-            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "display": "Placer Identifier"
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
           }
         ]
       },
@@ -36,8 +35,7 @@
         "coding": [
           {
             "code": "FILL",
-            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "display": "Filler"
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
           }
         ]
       },

@@ -22,13 +22,13 @@ Description: "Abstract Observation to define common features of a main pathology
     * code 1.. MS
     * display MS
 * category ^slicing.discriminator[0].type = #pattern
-* category ^slicing.discriminator[0].path = "$this.coding"
+* category ^slicing.discriminator[0].path = "$this"
 * category ^slicing.rules = #open
 * category contains laboratory-category 1..1 MS
 * category[laboratory-category] = $cs-obs-category#laboratory
 // Code
 * code MS
-  * coding from $LOINC-VS (preferred)
+  * coding from vs-mii-patho-all-loinc (preferred)
   * coding 1.. MS
     * code 1.. MS
     * system 1.. MS
@@ -79,7 +79,7 @@ Title: "SD MII Patho Finding"
 Description: "Instantiable Observation to describe a generic pathology finding"
 * insert RuleSet1
 * category contains section-type 1..1 MS
-* category[section-type].coding from VS_MII_Patho_Section_Types_LOINC (required)
+* category[section-type] from VS_MII_Patho_Section_Types_LOINC (required)
 * value[x] MS
 * value[x] only string or Quantity or CodeableConcept or Ratio
 
@@ -171,16 +171,6 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
 * derivedFrom contains grouper-observation 0..* MS
                    and questionnaire-response 0..* MS
 * derivedFrom[grouper-observation] only Reference(sd-mii-patho-section-grouper)
-// * derivedFrom[grouper-observation] only Reference(SD_MII_Patho_Intraoperative_Grouper or SD_MII_Patho_Macroscopic_Grouper or SD_MII_Patho_Microscopic_Grouper or SD_MII_Patho_Additional_Specified_Grouper)
-// * derivedFrom contains macroscopic-grouper 0..* MS
-//                   and microscopic-grouper 0..* MS
-//                   and intraoperative-grouper 0..* MS
-//                   and additional-specified-grouper 0..* MS
-//                   and questionnaire-response 0..* MS
-// * derivedFrom[macroscopic-grouper] only Reference(sd-mii-patho-macroscopic-grouper)
-// * derivedFrom[microscopic-grouper] only Reference(sd-mii-patho-microscopic-grouper)
-// * derivedFrom[intraoperative-grouper] only Reference(sd-mii-patho-intraoperative-grouper)
-// * derivedFrom[additional-specified-grouper] only Reference(sd-mii-patho-additional-specified-grouper)
 * derivedFrom[questionnaire-response] only Reference(QuestionnaireResponse)
 * note MS
 

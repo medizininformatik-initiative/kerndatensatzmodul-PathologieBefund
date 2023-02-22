@@ -22,6 +22,7 @@ Alias: $bio-sct-additive = https://www.medizininformatik-initiative.de/fhir/ext/
 Alias: $mii-bio-specimencore = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
 Alias: $mii-bio-additive = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance
 Alias: $mii-diag-condition = https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose
+Alias: $isik-basis-bericht-subsysteme = https://gematik.de/fhir/isik/v2/Basismodul/StructureDefinition/ISiKBerichtSubSysteme
 // Extensions
 Alias: $bio-entnahmeprozedur = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Entnahmeprozedur
 Alias: $bio-temperaturbedingungen = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen

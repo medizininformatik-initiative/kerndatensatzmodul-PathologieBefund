@@ -20,7 +20,7 @@ publisher:
 dependencies: 
   de.basisprofil.r4: 1.4.0
   de.medizininformatikinitiative.kerndatensatz.meta: 1.0.3
-  de.medizininformatikinitiative.kerndatensatz.biobank: 1.0.2
+  de.medizininformatikinitiative.kerndatensatz.biobank: 1.0.3
   de.medizininformatikinitiative.kerndatensatz.diagnose: 2.0.0-alpha3
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

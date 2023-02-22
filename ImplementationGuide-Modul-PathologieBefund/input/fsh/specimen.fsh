@@ -1,5 +1,6 @@
 Profile: SD_MII_Patho_Specimen
-Parent: $mii-bio-specimencore
+// Parent: $mii-bio-specimencore
+Parent: SpecimenCore
 Id: sd-mii-patho-specimen
 Title: "SD MII Patho Specimen"
 Description: "Pathology specimen"
@@ -13,7 +14,7 @@ Description: "Pathology specimen"
   * method 1.. MS
   * method from VS_MII_Patho_Collection_Method_SNOMED_CT (extensible)
 * request only Reference(SD_MII_Patho_Service_Request)
-* processing
+* processing 
   * procedure from vs-mii-patho-processing-procedure-snomed-ct (extensible)
   * additive only Reference($mii-bio-additive)
 * container MS
@@ -39,7 +40,7 @@ Description: "Prostate tru-cut biopsy sample (specimen)"
 </div>
 "
 * identifier
-  * type = $v2-0203#FILL "Filler Order Number"
+  * type = $v2-0203#FILL
   * value = "E12345_21-A1"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * accessionIdentifier
@@ -84,7 +85,7 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 </div>
 "
 * identifier
-  * type = $v2-0203#FILL "Filler Order Number"
+  * type = $v2-0203#FILL
   * value = "E12345_21-A1-1HE"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht" 
 * accessionIdentifier
@@ -112,7 +113,7 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
     * value = 30
 * processing[=].procedure.coding[sct] = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
 * processing[=].procedure.extension.url = $fhir-narrative-link
-* processing[=].procedure.extension.valueString = "#bearbeitungsprozedur"
+* processing[=].procedure.extension.valueUrl = "#bearbeitungsprozedur"
 * processing[+].extension[temperaturbedingungen].valueRange
   * low
     * unit = "°C"
@@ -126,7 +127,7 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
     * value = 30
 * processing[=].procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method (procedure)"
 * processing[=].procedure.extension.url = $fhir-narrative-link
-* processing[=].procedure.extension.valueString = "#faerbung"
+* processing[=].procedure.extension.valueUrl = "#faerbung"
 * processing[=].additive[+] = Reference(ex-mii-patho-hematoxylin-stain)
 * processing[=].additive[+] = Reference(ex-mii-patho-eosin-y)
 * container[+] 
@@ -165,48 +166,41 @@ Title: "EX MII Patho Microscope Slide Mounting Medium"
 Description: "Microscope slide mounting medium (substance)"
 * code.coding = $SCT#430862008 "Microscope slide mounting medium (substance)"
 
-/*
-// not needed anymore..
-Instance: ex-mii-patho-neutral-buffered-formalin
-InstanceOf: $mii-bio-additive
+// Example Biobank
+Instance: MusterprobeFluessig
+// InstanceOf: $mii-bio-specimencore
+InstanceOf: SpecimenCore
+Title: "Musterprobe flüssig"
 Usage: #example
-Title: "EX MII Patho Neutral Buffered Formalin"
-Description: "tbd"
-* code.coding = $SCT#434162003 "Neutral buffered formalin (substance)"
-* ingredient[+].quantity
-  * numerator
-    * value = 100
-    * system = $UCUM
-    * code = #mL
-    * unit = "ml"
-  * denominator 
-    * value = 1
-* ingredient[=].substanceCodeableConcept = $SCT#111095003 "Formaldehyde (substance)"
-* ingredient[+].quantity
-  * numerator
-    * value = 900
-    * system = $UCUM
-    * code = #mL
-    * unit = "ml"
-  * denominator 
-    * value = 1
-* ingredient[=].substanceCodeableConcept = $SCT#444883009 "Distilled water (substance)"
-* ingredient[+].quantity
-  * numerator
-    * value = 4
-    * system = $UCUM
-    * code = #g
-    * unit = "g"
-  * denominator 
-    * value = 1
-* ingredient[=].substanceCodeableConcept = $SCT#116124008 "Monobasic sodium phosphate (substance)"
-* ingredient[+].quantity
-  * numerator
-    * value = 6.5
-    * system = $UCUM
-    * code = #g
-    * unit = "g"
-  * denominator 
-    * value = 1
-* ingredient[=].substanceCodeableConcept = $SCT#768971002 "Monobasic sodium phosphate anhydrous (substance)"
-*/
+
+* identifier.system = "https://biobank.uk-musterstadt.de/fhir/sid/proben"
+* identifier.value = "12345"
+* status = #available
+* type = http://snomed.info/sct#122555007 "Venous blood specimen (specimen)"
+* subject.reference = "Patient/12345"
+* collection.collectedDateTime = "2018-06-07T15:54:00+01:00"
+* collection.fastingStatusCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0916#NG "Not Given - Patient was not asked at the time of the procedure."
+
+* processing[+].extension[temperaturbedingungen].valueRange.low.value = 15
+* processing[=].extension[temperaturbedingungen].valueRange.high.value = 25
+* processing[=].procedure =  $SCT#1186936003 "Storage of specimen (procedure)"
+* processing[=].timePeriod.start = "2018-06-07T15:54:00+01:00"
+* processing[=].timePeriod.end = "2018-06-07T16:27:00+01:00"
+
+* processing[+].extension[temperaturbedingungen].valueRange.low.value = 15
+* processing[=].extension[temperaturbedingungen].valueRange.high.value = 25
+* processing[=].procedure.coding =  $SCT#73373003 //"Specimen centrifugation (procedure)"
+* processing[=].timePeriod.start = "2018-06-07T16:27:00+01:00"
+* processing[=].timePeriod.end = "2018-06-07T16:37:00+01:00"
+
+* processing[+].extension[temperaturbedingungen].valueRange.low.value = 15
+* processing[=].extension[temperaturbedingungen].valueRange.high.value = 25
+* processing[=].procedure =  $SCT#1186936003 "Storage of specimen (procedure)"
+* processing[=].timePeriod.start = "2018-06-07T16:37:00+01:00"
+* processing[=].timePeriod.end = "2018-06-07T16:51:00+01:00"
+
+* processing[+].extension[temperaturbedingungen].valueRange.low.value = -85
+* processing[=].extension[temperaturbedingungen].valueRange.high.value = -60
+* processing[=].procedure.coding[sct] =  $SCT#1186936003 //"Storage of specimen (procedure)"
+* processing[=].procedure.coding[sct] =  $SCT#27872000 //"Specimen freezing (procedure)"
+* processing[=].timePeriod.start = "2018-06-07T16:51:00+01:00"
