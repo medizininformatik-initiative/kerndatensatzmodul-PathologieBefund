@@ -50,6 +50,12 @@
       "version": "2.0.0-alpha3",
       "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.diagnose/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.diagnose",
       "id": "de_medizininformatikinitiative_kerndatensatz_diagnose"
+    },
+    {
+      "packageId": "de.gematik.isik-basismodul",
+      "version": "2.0.4",
+      "uri": "http://fhir.org/packages/de.gematik.isik-basismodul/ImplementationGuide/de.gematik.isik-basismodul",
+      "id": "de_gematik_isik_basismodul"
     }
   ],
   "definition": {

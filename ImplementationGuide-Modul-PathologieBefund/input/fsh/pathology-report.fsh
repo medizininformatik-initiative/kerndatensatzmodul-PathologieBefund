@@ -130,6 +130,7 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * type
   * coding contains LOINC-patho 1.. MS
   * coding[LOINC-patho] from vs-mii-patho-composition-type-loinc (extensible)  
+  * coding[LOINC-patho] ^patternCoding.system = $LOINC
   // * coding 1.. MS
   // * coding from vs-mii-patho-composition-type-loinc (extensible)
   // * coding = $LOINC#11526-1 "Pathology study"
@@ -173,28 +174,33 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * event 1.. MS
 // Entry referenziert nur auf SD_MII_Patho_Report
 // * section 1.. MS
+* section 
+  * code 1.. MS
+    * coding 1.. MS
+    * coding from vs-mii-patho-all-loinc (required)
+  * entry 1.. MS
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this.code.coding"
 * section ^slicing.rules = #open
 * section contains patho-diagnostic-report 1..* MS
-          and additional-diagnostic-report 0..* MS
+          // and additional-diagnostic-report 0..* MS
 * section[patho-diagnostic-report]
   // * title 1.. MS 
   * code 1.. MS
     * coding 1.. MS
-    * coding = $LOINC#60567-5 "Comprehensive pathology report panel"
+    * coding = $LOINC#60567-5
   // * text 1.. MS
   * entry 1.. MS
   * entry only Reference (sd-mii-patho-report)
   // * section MS
-* section[additional-diagnostic-report]
-  // * title 1.. MS
-  * code 1.. MS
-    * coding 1.. MS
-    * coding from $LOINC (required)
-  // * text 1.. MS
-  * entry 1.. MS
-  // * section MS
+// * section[additional-diagnostic-report]
+//   // * title 1.. MS
+//   * code 1.. MS
+//     * coding 1.. MS
+//     * coding from vs-mii-patho-all-loinc (required)
+//   // * text 1.. MS
+//   * entry 1.. MS
+//   // * section MS
 
 
 //--------------------------------
@@ -276,7 +282,8 @@ Description: "Example for an SD_MII_Patho_Composition"
 * identifier.type = $v2-0203#ACSN "Accession ID"
 * identifier.extension.url = $fhir-narrative-link
 * identifier.extension.valueUrl = "#befund-eingangsnummer"
-* type.coding[LOINC-patho] = $LOINC#11526-1 "Pathology study"
+// * type.coding[LOINC-patho] = $LOINC#11526-1 "Pathology study"
+* type = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"
 * encounter.reference = "Encounter/34555"
 * date = "2021-06-08"
@@ -307,6 +314,8 @@ Description: "Example for an SD_MII_Patho_Composition"
     </table>
   </div>"
   * entry = Reference(ex-mii-patho-report)
+
+
 
 /*
 //---------------------------------------------
