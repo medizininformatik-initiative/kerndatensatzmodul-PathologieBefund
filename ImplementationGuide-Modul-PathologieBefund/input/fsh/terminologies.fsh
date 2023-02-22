@@ -98,3 +98,11 @@ Description: "ValueSet for IHE PaLM APSR's section types"
 * $LOINC#22635-7 "Pathology report microscopic observation" //Microscopic Observation Section
 * $LOINC#22637-3 "Pathology report diagnosis" //Diagnostic Conclusion Section
 * $LOINC#77599-9 "Additional documentation" //Additional Observation Section
+
+// LOINC All
+ValueSet: VS_MII_Patho_All_LOINC	
+Id: vs-mii-patho-all-loinc	
+Title: "VS MII Patho All LOINC"
+Description: "ValueSet for general LOINC VS binding"
+* insert RuleSet1
+* include codes from system $LOINC
