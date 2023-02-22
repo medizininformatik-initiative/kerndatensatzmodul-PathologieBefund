@@ -106,52 +106,55 @@ Description: "Defines the general pathology report structure for German hospital
 // Composition
 // -------------------------
 Profile: SD_MII_Patho_Composition
-Parent: Composition
+Parent: $isik-basis-bericht-subsysteme
 Id: sd-mii-patho-composition
 Title: "SD MII Patho Composition"
 Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert RuleSet1
-* id MS
+// * id MS
 * meta.lastUpdated MS
 * meta.profile MS
-* text 1.. MS
-  * status MS
-  * status = #extensions (exactly)
-  * div MS
+// * text 1.. MS
+  // * status MS
+  // * status = #extensions (exactly)
+  // * div MS
 * extension contains $fhir-version-number named document-version 0..1 MS
-* status MS
-* status = #final (exactly)
+// * status MS
+// * status = #final (exactly)
 * identifier 1.. MS
   * type 1.. MS
   * type.coding = $v2-0203#ACSN "Accession ID"
-  * value 1.. MS
-  * system 1.. MS
-* type MS
-  * coding 1.. MS
-  * coding from vs-mii-patho-composition-type-loinc (extensible)
+  // * value 1.. MS
+  // * system 1.. MS
+// * type MS
+* type
+  * coding contains LOINC-patho 1.. MS
+  * coding[LOINC-patho] from vs-mii-patho-composition-type-loinc (extensible)  
+  // * coding 1.. MS
+  // * coding from vs-mii-patho-composition-type-loinc (extensible)
+  // * coding = $LOINC#11526-1 "Pathology study"
     * system 1.. MS
     * code 1.. MS
-    * display MS 
-* category MS
-  * coding MS
-  * coding from vs-mii-patho-report-category-hl7 (extensible)
-* subject 1.. MS
-* subject only Reference(Patient)
-* encounter 1.. MS
-* date MS
+* category 
+  * coding contains HL7-patho ..1 MS
+  * coding[HL7-patho] from vs-mii-patho-report-category-hl7 (extensible)
+// * subject 1.. MS
+// * subject only Reference(Patient)
+* encounter 1..
+// * date MS
 // Autor
-* author 1.. MS
-* author only Reference(Practitioner or Organization)
+// * author 1.. MS
+* author only Reference($isik-person-im-gesundheitsberuf or Organization)
 * author ^short = "Author can only be of type Practitioner or Organization"
-  * display 1.. MS
+  // * display 1.. MS
 // Titel
-* title 1.. MS
+// * title 1.. MS
 // Legaler Authentikator 
 * attester 1.. MS
 * attester ^slicing.discriminator.type = #value
 * attester ^slicing.discriminator.path = "$this.mode"
 * attester ^slicing.rules = #open
-* attester ^slicing.description = "tbd"
+// * attester ^slicing.description = "tbd"
 * attester ^slicing.ordered = false
 * attester contains legal 1.. MS 
                 and content-validator 0..* MS
@@ -169,29 +172,29 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
   * targetReference MS
 * event 1.. MS
 // Entry referenziert nur auf SD_MII_Patho_Report
-* section 1.. MS
+// * section 1.. MS
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this.code.coding"
 * section ^slicing.rules = #open
-* section contains patho-diagnostic-report 1..1 MS
+* section contains patho-diagnostic-report 1..* MS
           and additional-diagnostic-report 0..* MS
 * section[patho-diagnostic-report]
-  * title 1.. MS 
+  // * title 1.. MS 
   * code 1.. MS
     * coding 1.. MS
-    * coding = $LOINC#60567-5
-  * text 1.. MS
-  * entry 1..1 MS
-  * entry only Reference (SD_MII_Patho_Report)
-  * section MS
+    * coding = $LOINC#60567-5 "Comprehensive pathology report panel"
+  // * text 1.. MS
+  * entry 1.. MS
+  * entry only Reference (sd-mii-patho-report)
+  // * section MS
 * section[additional-diagnostic-report]
-  * title 1.. MS
+  // * title 1.. MS
   * code 1.. MS
     * coding 1.. MS
-    * coding from vs-mii-patho-all-loinc (required)
-  * text 1.. MS
-  * entry 1..1 MS
-  * section MS
+    * coding from $LOINC (required)
+  // * text 1.. MS
+  * entry 1.. MS
+  // * section MS
 
 
 //--------------------------------
@@ -273,7 +276,7 @@ Description: "Example for an SD_MII_Patho_Composition"
 * identifier.type = $v2-0203#ACSN "Accession ID"
 * identifier.extension.url = $fhir-narrative-link
 * identifier.extension.valueUrl = "#befund-eingangsnummer"
-* type = $LOINC#11526-1 "Pathology study"
+* type.coding[LOINC-patho] = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"
 * encounter.reference = "Encounter/34555"
 * date = "2021-06-08"
