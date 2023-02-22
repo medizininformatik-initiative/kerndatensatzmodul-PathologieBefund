@@ -30,6 +30,9 @@ dependencies:
   de.medizininformatikinitiative.kerndatensatz.diagnose:
     uri: de.medizininformatikinitiative.kerndatensatz.diagnose
     version: 2.0.0-alpha3
+  de.gematik.isik-basismodul:
+    uri: de.gematik.isik-basismodul
+    version: 2.0.4
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
