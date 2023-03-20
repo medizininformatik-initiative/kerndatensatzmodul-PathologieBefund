@@ -1,10 +1,10 @@
 // -------------------------
 // DiagnosticReport
 // -------------------------
-Profile: SD_MII_Patho_Report
+Profile: MII_PR_Patho_Report
 Parent: DiagnosticReport
-Id: sd-mii-patho-report
-Title: "SD MII Patho Report"
+Id: mii-pr-patho-report
+Title: "MII PR Patho Report"
 Description: "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative"
 * insert RuleSet1
 // ID
@@ -15,28 +15,26 @@ Description: "Defines the general pathology report structure for German hospital
 // Identifikator
 * identifier 1.. MS
   * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this.type.coding"
+  * ^slicing.discriminator.path = "$this.type"
   * ^slicing.rules = #open
 * identifier contains Set-ID 1..1 MS
 * identifier[Set-ID] 
   * type 1.. MS
-  * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
+  * type = $v2-0203#ACSN "Accession ID"
   * value 1.. MS
   * system 1.. MS
-// Versionsnummer der Ressourceninstanz - Entpricht nicht der Version des Befundes!!
 * meta MS
-* meta.versionId MS
 // Weitere MS Elemente aus Metadata
 * meta.source MS
 * meta.profile MS 
 // Referenz zum Untersuchungsauftrag
 * basedOn 1.. MS
-* basedOn only Reference(SD_MII_Patho_Service_Request)
-* basedOn ^short = "Reference to respective SD_MII_Patho_Service_Request"
+* basedOn only Reference(mii-pr-patho-service-request)
+* basedOn ^short = "Reference to respective MII_PR_Patho_Service_Request"
 // Status
 * status MS
 * category MS 
-* category from vs-mii-patho-report-category-hl7 (extensible)
+* category from mii-vs-patho-report-category-hl7 (extensible)
 // Code
 * code MS
 * code ^short = "Pathology report code"
@@ -44,12 +42,9 @@ Description: "Defines the general pathology report structure for German hospital
   * coding ^slicing.discriminator.path = "$this"
   * coding ^slicing.rules = #open
   * coding contains pathology-report 1..1 MS
-  * coding[pathology-report] ^patternCoding = $LOINC#60568-3 "Pathology Synoptic report"
+  * coding[pathology-report] = $LOINC#60568-3 
     * system 1.. MS 
-    * system ^fixedUri = $LOINC
     * code 1.. MS
-    * code ^fixedCode = #60568-3
-    * display MS  
 // Referenz zu Patient:in
 * subject 1.. MS
 * subject only Reference(Patient)
@@ -76,19 +71,19 @@ Description: "Defines the general pathology report structure for German hospital
       and microscopic-observations 0..* MS
       and additional-observations 0..* MS
       and diagnostic-conclusion 1..* MS
-* result[intraoperative-observations] only Reference(SD_MII_Patho_Intraoperative_Grouper)
+* result[intraoperative-observations] only Reference(mii-pr-patho-intraoperative-grouper)
   * reference 1.. MS
   * ^short = "Reference to intraoperative Observations"
-* result[macroscopic-observations] only Reference(SD_MII_Patho_Macroscopic_Grouper)
+* result[macroscopic-observations] only Reference(mii-pr-patho-macroscopic-grouper)
   * reference 1.. MS
   * ^short = "Reference to macroscopic Observations"
-* result[microscopic-observations] only Reference(SD_MII_Patho_Microscopic_Grouper)
+* result[microscopic-observations] only Reference(mii-pr-patho-microscopic-grouper)
   * reference 1.. MS
   * ^short = "Reference to microscopic Observations"
-* result[additional-observations] only Reference(SD_MII_Patho_Additional_Specified_Grouper)     
+* result[additional-observations] only Reference(mii-pr-patho-additional-specified-grouper)     
   * reference 1.. MS
   * ^short = "Reference to any additional Observation"
-* result[diagnostic-conclusion] only Reference(SD_MII_Patho_Diagnostic_Conclusion_Grouper) 
+* result[diagnostic-conclusion] only Reference(mii-pr-patho-diagnostic-conclusion-grouper) 
   * reference 1.. MS
   * ^short = "Reference to the 'Diagnostic Conclusion' grouper(s)"
 // Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) 
@@ -98,7 +93,7 @@ Description: "Defines the general pathology report structure for German hospital
 * media ^short = "Reference to single attached images"
   * comment MS
   * link MS
-  * link only Reference(SD_MII_Patho_Attached_Image)
+  * link only Reference(mii-pr-patho-attached-image)
 // zugehoeriges Dokument
 * presentedForm MS
 // Diagnostische Schlussfolgerung
@@ -108,55 +103,58 @@ Description: "Defines the general pathology report structure for German hospital
 // -------------------------
 // Composition
 // -------------------------
-Profile: SD_MII_Patho_Composition
-Parent: Composition
-Id: sd-mii-patho-composition
-Title: "SD MII Patho Composition"
+Profile: MII_PR_Patho_Composition
+Parent: $isik-basis-bericht-subsysteme
+Id: mii-pr-patho-composition
+Title: "MII PR Patho Composition"
 Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert RuleSet1
-* id MS
+// * id MS
 * meta.lastUpdated MS
 * meta.profile MS
-* text 1.. MS
-  * status MS
-  * status = #extensions (exactly)
-  * div MS
+// * text 1.. MS
+  // * status MS
+  // * status = #extensions (exactly)
+  // * div MS
 * extension contains $fhir-version-number named document-version 0..1 MS
-* status MS
-* status = #final (exactly)
+// Versionsnummer der Ressourceninstanz - Entpricht nicht der Version des Befundes!!
+// * status MS
+// * status = #final (exactly)
 * identifier 1.. MS
   * type 1.. MS
-  * type.coding ^patternCoding = $v2-0203#ACSN "Accession ID"
-  * value 1.. MS
-  * system 1.. MS
-* type MS
-  // * ^short = "The type for the pathology report Composition is 'Pathology study'"
-  * coding 1.. MS
-  * coding from vs-mii-patho-composition-type-loinc (extensible)
+  * type.coding = $v2-0203#ACSN "Accession ID"
+  // * value 1.. MS
+  // * system 1.. MS
+// * type MS
+* type
+  * coding contains LOINC-patho 1.. MS
+  * coding[LOINC-patho] from mii-vs-patho-composition-type-loinc (extensible)  
+  * coding[LOINC-patho] ^patternCoding.system = $LOINC
+  // * coding 1.. MS
+  // * coding from mii-pr-patho-composition-type-loinc (extensible)
   // * coding = $LOINC#11526-1 "Pathology study"
     * system 1.. MS
     * code 1.. MS
-    * display MS 
-* category MS
-  * coding MS
-  * coding from vs-mii-patho-report-category-hl7 (extensible)
-* subject 1.. MS
-* subject only Reference(Patient)
-* encounter 1.. MS
-* date MS
+* category 
+  * coding contains HL7-patho ..1 MS
+  * coding[HL7-patho] from mii-vs-patho-report-category-hl7 (extensible)
+// * subject 1.. MS
+// * subject only Reference(Patient)
+* encounter 1..
+// * date MS
 // Autor
-* author 1.. MS
-* author only Reference(Practitioner or Organization)
+// * author 1.. MS
+* author only Reference($isik-person-im-gesundheitsberuf or Organization)
 * author ^short = "Author can only be of type Practitioner or Organization"
-  * display 1.. MS
+  // * display 1.. MS
 // Titel
-* title 1.. MS
+// * title 1.. MS
 // Legaler Authentikator 
 * attester 1.. MS
-* attester ^slicing.discriminator.type = #pattern
-* attester ^slicing.discriminator.path = "$this.code"
+* attester ^slicing.discriminator.type = #value
+* attester ^slicing.discriminator.path = "$this.mode"
 * attester ^slicing.rules = #open
-* attester ^slicing.description = "tbd"
+// * attester ^slicing.description = "tbd"
 * attester ^slicing.ordered = false
 * attester contains legal 1.. MS 
                 and content-validator 0..* MS
@@ -173,69 +171,73 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
   * code MS
   * targetReference MS
 * event 1.. MS
-// Entry referenziert nur auf SD_MII_Patho_Report
-* section 1.. MS
+// Entry referenziert nur auf MII_PR_Patho_Report
+// * section 1.. MS
+* section 
+  * code 1.. MS
+    * coding 1.. MS
+    * coding from mii-vs-patho-all-loinc (required)
+  * entry 1.. MS
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this.code.coding"
 * section ^slicing.rules = #open
-* section contains patho-diagnostic-report 1..1 MS
-          and additional-diagnostic-report 0..* MS
+* section contains patho-diagnostic-report 1..* MS
+          // and additional-diagnostic-report 0..* MS
 * section[patho-diagnostic-report]
-  * title 1.. MS 
-  * title ^fixedString = "Pathology Diagnostic Report"
+  // * title 1.. MS 
   * code 1.. MS
     * coding 1.. MS
-    * coding ^patternCoding = $LOINC#60567-5 "Comprehensive pathology report panel"
-  * text 1.. MS
-  * entry 1..1 MS
-  * entry only Reference (SD_MII_Patho_Report)
-  * section MS
-* section[additional-diagnostic-report]
-  * title 1.. MS
-  * code 1.. MS
-    * coding 1.. MS
-    * coding from $LOINC (required)
-  * text 1.. MS
-  * entry 1..1 MS
-  * section MS
+    * coding = $LOINC#60567-5
+  // * text 1.. MS
+  * entry 1.. MS
+  * entry only Reference (mii-pr-patho-report)
+  // * section MS
+// * section[additional-diagnostic-report]
+//   // * title 1.. MS
+//   * code 1.. MS
+//     * coding 1.. MS
+//     * coding from mii-vs-patho-all-loinc (required)
+//   // * text 1.. MS
+//   * entry 1.. MS
+//   // * section MS
 
 
 //--------------------------------
 // Example
 //--------------------------------
-Instance: ex-mii-patho-report
-InstanceOf: sd-mii-patho-report
+Instance: mii-exa-patho-report
+InstanceOf: mii-pr-patho-report
 Usage: #example
-Title: "Pathology Report Example"
-Description: "Example for SD_MII_Patho_Report"
+Title: "MII EXA Patho Report"
+Description: "Example for MII_PR_Patho_Report"
 * identifier[Set-ID].value = "E21.12345"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].extension.url = $fhir-narrative-link
 * identifier[Set-ID].extension.valueUrl = "#befund-eingangsnummer"
-* basedOn = Reference(ex-mii-patho-request)
+* basedOn = Reference(mii-exa-patho-request)
 * status = #final
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
 * subject.reference = "Patient/12345"
 * performer.reference = "Practitioner/2346545"
-* specimen = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
+* specimen = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
 * encounter.reference = "Encounter/12345"
-* result[macroscopic-observations] = Reference(ex-mii-patho-macro-grouper-a)
-* result[macroscopic-observations] = Reference(ex-mii-patho-macro-grouper-b)
-* result[microscopic-observations] = Reference(ex-mii-patho-micro-grouper-a)
-* result[diagnostic-conclusion] = Reference(ex-mii-patho-diagnostic-conclusion-grouper)
+* result[macroscopic-observations] = Reference(mii-exa-patho-macro-grouper-a)
+* result[macroscopic-observations] = Reference(mii-exa-patho-macro-grouper-b)
+* result[microscopic-observations] = Reference(mii-exa-patho-micro-grouper-a)
+* result[diagnostic-conclusion] = Reference(mii-exa-patho-diagnostic-conclusion-grouper)
 * conclusion = "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2"
 * conclusionCode = $SCT#399490008  
 * effectiveDateTime = "2021-06-01"
 // * issued = "2021-06-02T13:28:17.239+02:00"
-* media.link = Reference(ex-mii-patho-attached-image)
+* media.link = Reference(mii-exa-patho-attached-image)
 * media.comment = "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
 
-Instance: ex-mii-patho-composition
-InstanceOf: sd-mii-patho-composition
+Instance: mii-exa-patho-composition
+InstanceOf: mii-pr-patho-composition
 Usage: #example
-Title: "EX MII Patho Composition"
-Description: "Example for an SD_MII_Patho_Composition"
+Title: "MII EXA Patho Composition"
+Description: "Example for an MII_PR_Patho_Composition"
 * text.div = "
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
   <div id=\"befund-titel\">
@@ -279,6 +281,7 @@ Description: "Example for an SD_MII_Patho_Composition"
 * identifier.type = $v2-0203#ACSN "Accession ID"
 * identifier.extension.url = $fhir-narrative-link
 * identifier.extension.valueUrl = "#befund-eingangsnummer"
+// * type.coding[LOINC-patho] = $LOINC#11526-1 "Pathology study"
 * type = $LOINC#11526-1 "Pathology study"
 * subject.reference = "Patient/34545"
 * encounter.reference = "Encounter/34555"
@@ -309,14 +312,16 @@ Description: "Example for an SD_MII_Patho_Composition"
       </tr>
     </table>
   </div>"
-  * entry = Reference(ex-mii-patho-report)
+  * entry = Reference(mii-exa-patho-report)
+
+
 
 /*
 //---------------------------------------------
 // Patho-Omics Examples
 //---------------------------------------------
 Instance: example-mii-patho-stanzengroesse-dim1
-InstanceOf: SD_MII_Patho_Finding
+InstanceOf: MII_PR_Patho_Finding
 Usage: #example
 Title: "Macroscopic Observation - Stanzengroesse Dim 1"
 Description: "tbd"
@@ -332,7 +337,7 @@ Description: "tbd"
 * specimen = Reference(example-mii-patho-LungeOLStanze)
 
 Instance: example-mii-patho-stanzengroesse-dim2
-InstanceOf: SD_MII_Patho_Finding
+InstanceOf: MII_PR_Patho_Finding
 Usage: #example
 Title: "Macroscopic Observation - Stanzengroesse Dim 2"
 Description: "tbd"
@@ -348,7 +353,7 @@ Description: "tbd"
 * specimen = Reference(example-mii-patho-LungeOLStanze)
 
 Instance: example-mii-patho-LungeOLStanze
-InstanceOf: SD_MII_Patho_Specimen
+InstanceOf: MII_PR_Patho_Specimen
 Usage: #example
 Title: "LungeOLStanze"
 Description: "tbd"
@@ -367,7 +372,7 @@ Description: "tbd"
   * bodySite = $SCT#245521007 "Structure of segment of upper lobe of left lung (body structure)"
 
 Instance: example-mii-patho-MacroGrouperLung
-InstanceOf: SD_MII_Patho_Macroscopic_Grouper
+InstanceOf: MII_PR_Patho_Macroscopic_Grouper
 Usage: #example
 Title: "MacroGrouperLung"
 Description: "tbd"
@@ -379,7 +384,7 @@ Description: "tbd"
 * specimen = Reference(example-mii-patho-LungeOLStanze)
 
 Instance: example-mii-patho-DiagnosticConclusion-Condition
-InstanceOf: SD_MII_Patho_Finding
+InstanceOf: MII_PR_Patho_Finding
 Usage: #example
 Title: "DiagnosticConclusion - Condition"
 Description: "Example for a diagnostic conclusion"
@@ -391,7 +396,7 @@ Description: "Example for a diagnostic conclusion"
 * specimen = Reference(example-mii-patho-LungeOLStanze)
 
 Instance: example-mii-patho-DiagnosticConclusion-Grading
-InstanceOf: SD_MII_Patho_Finding
+InstanceOf: MII_PR_Patho_Finding
 Usage: #example
 Title: "DiagnosticConclusion - Grading"
 Description: "Example for diagnostic conclusion"
@@ -403,7 +408,7 @@ Description: "Example for diagnostic conclusion"
 * specimen = Reference(example-mii-patho-LungeOLStanze)
 
 Instance: example-mii-patho-DiagnosticConclusionGrouper
-InstanceOf: SD_MII_Patho_Diagnostic_Conclusion_Grouper
+InstanceOf: MII_PR_Patho_Diagnostic_Conclusion_Grouper
 Usage: #example
 Title: "Diagnostic Conclusion Grouper Example"
 Description: "Example for a diagnostic conclusion"
@@ -415,7 +420,7 @@ Description: "Example for a diagnostic conclusion"
 * hasMember[+] = Reference(example-mii-patho-DiagnosticConclusion-Grading)
 
 Instance: example-mii-patho-report
-InstanceOf: SD_MII_Patho_Report
+InstanceOf: MII_PR_Patho_Report
 Usage: #example
 Title: "example-mii-patho-report"
 Description: "tbd"
@@ -483,10 +488,10 @@ Usage: #example
 * conclusion = "EGFR Variante mit Exon 19 Deletion liegt vor. Therapieoption mit Tyrosinkinase Inhibitoren."
 
 Instance: example-mii-patho-Composition
-InstanceOf: SD_MII_Patho_Composition
+InstanceOf: MII_PR_Patho_Composition
 Usage: #example
 Title: "Composition Example"
-Description: "Example for a SD_MII_Patho_Composition"
+Description: "Example for a MII_PR_Patho_Composition"
 * extension[document-version].valueString = "2"
 * status = #final
 * identifier.value = "H2021.14456"

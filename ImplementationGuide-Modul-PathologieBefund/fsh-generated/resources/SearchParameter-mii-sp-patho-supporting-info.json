@@ -1,0 +1,14 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "mii-sp-patho-supporting-info",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-supporting-info",
+  "name": "MII_SP_Patho_Reason_Code",
+  "description": "SearchParameter for ServiceRequest.supportingInfo",
+  "status": "draft",
+  "code": "supporting-info",
+  "base": [
+    "ServiceRequest"
+  ],
+  "type": "reference",
+  "expression": "ServiceRequest.supportingInfo"
+}

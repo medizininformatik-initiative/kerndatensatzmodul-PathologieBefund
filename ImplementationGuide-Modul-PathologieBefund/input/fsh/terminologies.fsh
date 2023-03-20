@@ -1,17 +1,17 @@
 //--------------------------------
 // Specimen
 //--------------------------------
-ValueSet: VS_MII_Patho_Collection_Method_SNOMED_CT
-Id: vs-mii-patho-collection-method-snomed-ct
-Title: "VS MII Patho Collection Method [SNOMED CT]"
+ValueSet: MII_VS_Patho_Collection_Method_SNOMED_CT
+Id: mii-vs-patho-collection-method-snomed-ct
+Title: "MII VS Patho Collection Method [SNOMED CT]"
 Description: "ValueSet for the clinical collection method"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #118292001
 // Specimen Collection 17636008 or Removal 118292001? 
 
-ValueSet: VS_MII_Patho_Container_Type_SNOMED
-Id: vs-mii-patho-container-type-snomed
-Title: "VS MII Patho Container Type SNOMED DICOM"
+ValueSet: MII_VS_Patho_Container_Type_SNOMED_CT
+Id: mii-vs-patho-container-type-snomed-ct
+Title: "MII VS Patho Container Type [SNOMED CT]"
 Description: "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet"
 * insert RuleSet1 
 * $SCT#434746001 "Specimen vial (physical object)"
@@ -27,9 +27,9 @@ Description: "ValueSet for container type based on IHE PaLM's ContainerEntityCla
 * $SCT#430862008 "Microscope slide mounting medium (substance)"
 * $SCT#434473001 "Specimen container lid (physical object)"
 
-ValueSet: VS_MII_Patho_Processing_Procedure_SNOMED_CT
-Id: vs-mii-patho-processing-procedure-snomed-ct
-Title: "VS MII Patho Processing Procedure [SNOMED CT]"
+ValueSet: MII_VS_Patho_Processing_Procedure_SNOMED_CT
+Id: mii-vs-patho-processing-procedure-snomed-ct
+Title: "MII VS Patho Processing Procedure [SNOMED CT]"
 Description: "Specimen processing procedure"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #108252007
@@ -37,9 +37,9 @@ Description: "Specimen processing procedure"
 //----------------------------------
 // Composition
 //----------------------------------
-ValueSet: VS_MII_Patho_Composition_Type_LOINC
-Id: vs-mii-patho-composition-type-loinc
-Title: "VS MII Patho Composition Type"
+ValueSet: MII_VS_Patho_Composition_Type_LOINC
+Id: mii-vs-patho-composition-type-loinc
+Title: "MII VS Patho Composition Type [LOINC]"
 Description: "ValueSet for the types a pathology Composition can have"
 * insert RuleSet1
 * $LOINC#18743-5 "Autopsy report"
@@ -51,9 +51,9 @@ Description: "ValueSet for the types a pathology Composition can have"
 // * $LOINC#60571-7 "Pathology Consult note.synoptic"
 // * $LOINC#35265-8 "Pathology report addendum in Specimen Narrative"
 
-ValueSet: VS_MII_Patho_Report_Category_HL7
-Id: vs-mii-patho-report-category-hl7
-Title: "VS MII Patho Report Category HL7"
+ValueSet: MII_VS_Patho_Report_Category_HL7
+Id: mii-vs-patho-report-category-hl7
+Title: "MII VS Patho Report Category HL7"
 Description: "ValueSet for the categorization of Pathology Report documents"
 * insert RuleSet1
 * $v2-0074#CP "Cytopathology"
@@ -62,9 +62,9 @@ Description: "ValueSet for the categorization of Pathology Report documents"
 //-----------------------------------
 // ServiceRequest
 //-----------------------------------
-ValueSet: VS_MII_Patho_Service_Request_SNOMED_CT
-Id: vs-mii-patho-service-request-snomed-ct
-Title: "VS MII Patho Service Request SNOMED CT"
+ValueSet: MII_VS_Patho_Service_Request_SNOMED_CT
+Id: mii-vs-patho-service-request-snomed-ct
+Title: "MII VS Patho Service Request [SNOMED CT]"
 Description: "ValueSet for a preferred set of ServiceRequest codes"
 * insert RuleSet1
 * include codes from system $SCT where concept descendent-of #108252007 "Laboratory procedure (procedure)"
@@ -72,9 +72,9 @@ Description: "ValueSet for a preferred set of ServiceRequest codes"
 //------------------------------------
 // Active Problems
 //------------------------------------
-ValueSet: VS_MII_Patho_Problem_List_SNOMED
-Id: vs-mii-patho-problem-list-snomed
-Title: "VS MII Patho Problem List SNOMED"
+ValueSet: MII_VS_Patho_Problem_List_SNOMED_CT
+Id: mii-vs-patho-problem-list-snomed-ct
+Title: "MII VS Patho Problem List [SNOMED CT]"
 Description: "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)"
 * insert RuleSet1
 * include codes from system $SCT where concept is-a #64572001 "Disease (disorder)" // Condition
@@ -88,9 +88,9 @@ Description: "ValueSet containing the recommended vocabulary for describing prob
 //---------------------------------------
 // Pathology Finding
 //---------------------------------------
-ValueSet: VS_MII_Patho_Section_Types_LOINC
-Id: vs-mii-patho-section-types-loinc
-Title: "VS MII Patho Section Types LOINC"
+ValueSet: MII_VS_Patho_Section_Types_LOINC
+Id: mii-vs-patho-section-types-loinc
+Title: "MII VS Patho Section Types [LOINC]"
 Description: "ValueSet for IHE PaLM APSR's section types"
 * insert RuleSet1 
 * $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document" //Intraoperative Observation Section
@@ -98,3 +98,11 @@ Description: "ValueSet for IHE PaLM APSR's section types"
 * $LOINC#22635-7 "Pathology report microscopic observation" //Microscopic Observation Section
 * $LOINC#22637-3 "Pathology report diagnosis" //Diagnostic Conclusion Section
 * $LOINC#77599-9 "Additional documentation" //Additional Observation Section
+
+// LOINC All
+ValueSet: MII_VS_Patho_All_LOINC	
+Id: mii-vs-patho-all-loinc	
+Title: "MII VS Patho All [LOINC]"
+Description: "ValueSet for general LOINC VS binding"
+* insert RuleSet1
+* include codes from system $LOINC

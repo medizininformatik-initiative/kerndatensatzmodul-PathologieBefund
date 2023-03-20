@@ -1,10 +1,10 @@
 //------------------------------------
-// SD_MII_Patho_Service_Request
+// MII_PR_Patho_Service_Request
 //------------------------------------
-Profile: SD_MII_Patho_Service_Request
+Profile: MII_PR_Patho_Service_Request
 Parent: ServiceRequest
-Id: sd-mii-patho-service-request
-Title: "SD MII Patho Service Request"
+Id: mii-pr-patho-service-request
+Title: "MII PR Patho Service Request"
 Description: "Order for the analysis of a sample or a group of samples."
 * insert RuleSet1
 // Meta
@@ -14,7 +14,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Identifikation - Auftrags-ID: Auftrags-ID des Auftraggebers (Placer) || Auftrags-ID des Auftragnehmers (Filler)
 * identifier 1.. MS
 * identifier ^slicing.discriminator[0].type = #pattern
-* identifier ^slicing.discriminator[0].path = "type.coding"
+* identifier ^slicing.discriminator[0].path = "$this.type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Contains slices for the request's placer- and filler IDs based on type.coding pattern"
 * identifier contains Placer-ID 0..1 MS 
@@ -24,19 +24,19 @@ Description: "Order for the analysis of a sample or a group of samples."
   * value 1.. MS
   * system 1.. MS
   * type 1.. MS
-    * coding = $v2-0203#PLAC "Placer identifier"
+  * type = $v2-0203#PLAC
+    * coding MS
       * system 1..1 MS
       * code 1..1 MS
-      * display MS
 * identifier[Filler-ID] ^short = "Filler Identifier"
 * identifier[Filler-ID] ^definition = "Identifier for the filler of the pathology request"
   * value 1.. MS
   * system 1.. MS
   * type 1.. MS
-    * coding = $v2-0203#FILL "Filler"
+  * type = $v2-0203#FILL
+    * coding MS
       * system 1..1 MS
       * code 1..1 MS
-      * display MS
 // Auftragsgruppen-ID
 * requisition MS
 * requisition ^short = "Composite or group identifier"
@@ -48,8 +48,8 @@ Description: "Order for the analysis of a sample or a group of samples."
 * status MS
 * intent MS
 // Referenz zur Probe
-* specimen 1.. MS
-// Referenz zum Patienten
+* specimen MS
+// Referenz zu Patient:in
 * subject MS
 * subject only Reference(Patient)
 // Referenz für Einsender
@@ -74,15 +74,15 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
 // History of Present Illness
-* supportingInfo[anamnesis] only Reference(sd-mii-patho-history-of-present-illness)
+* supportingInfo[anamnesis] only Reference(mii-pr-patho-history-of-present-illness)
 // Active Problems (Fragestellung) 
-* supportingInfo[activeProblems] only Reference(sd-mii-patho-active-problems-list)
+* supportingInfo[activeProblems] only Reference(mii-pr-patho-active-problems-list)
   * ^short = "List of possible problems that should be analyzed"
 // category for searching purposes 
 * category 1..1 MS 
-* category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" (exactly)
+* category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" 
 * code MS
-* code from vs-mii-patho-service-request-snomed-ct (preferred)
+* code from mii-vs-patho-service-request-snomed-ct (preferred)
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"
@@ -90,19 +90,19 @@ Description: "Order for the analysis of a sample or a group of samples."
 //------------------------------------------------
 // Problem List Item 
 //------------------------------------------------
-Profile: SD_MII_Patho_Problem_List_Item
+Profile: MII_PR_Patho_Problem_List_Item
 Parent: Condition
-Id: sd-mii-patho-problem-list-item
-Title: "SD MII Patho Problem List Item"
+Id: mii-pr-patho-problem-list-item
+Title: "MII PR Patho Problem List Item"
 Description: "Condition profile for problem list item"
 * meta.profile MS
 * category 1.. MS
   * coding 1.. MS
-  * coding = $cs-hl7-condition-category#problem-list-item "Problem List Item" (exactly)
+  * coding = $cs-hl7-condition-category#problem-list-item
     * code 1..
     * system 1..
 * code MS
-* code from vs-mii-patho-problem-list-snomed (extensible)
+* code from mii-vs-patho-problem-list-snomed-ct (extensible)
   * coding MS
     * code 1.. MS
     * system 1.. MS
@@ -112,10 +112,10 @@ Description: "Condition profile for problem list item"
 //------------------------------------------------
 // Active Problems Section ($LOINC#11450-4 "Problem list - Reported")
 //------------------------------------------------
-Profile: SD_MII_Patho_Active_Problems_List
+Profile: MII_PR_Patho_Active_Problems_List
 Parent: List
-Id: sd-mii-patho-active-problems-list
-Title: "SD MII Patho Active Problems List"
+Id: mii-pr-patho-active-problems-list
+Title: "MII PR Patho Active Problems List"
 Description: "List of conditions currently being monitored for the patient"
 * meta.profile MS
 * status MS
@@ -123,20 +123,20 @@ Description: "List of conditions currently being monitored for the patient"
 * mode = #snapshot (exactly)
 * code 1.. MS
   * coding 1.. MS
-  * coding = $LOINC#11450-4 "Problem list - Reported" (exactly)
+  * coding = $LOINC#11450-4
     * code 1..
     * system 1..
 * subject 1.. MS
 * entry MS
-  * item only Reference(sd-mii-patho-problem-list-item)
+  * item only Reference(mii-pr-patho-problem-list-item)
 
 //------------------------------------------------
 // History of Present illness
 //------------------------------------------------
-Profile: SD_MII_Patho_History_Of_Present_Illness
+Profile: MII_PR_Patho_History_Of_Present_Illness
 Parent: List
-Id: sd-mii-patho-history-of-present-illness
-Title: "SD MII Patho History Of Present Illness"
+Id: mii-pr-patho-history-of-present-illness
+Title: "MII PR Patho History Of Present Illness"
 Description: "List profile for 'History of Present Illness'"
 * meta.profile MS
 * status MS
@@ -149,41 +149,21 @@ Description: "List profile for 'History of Present Illness'"
     * system 1.. 
 * subject 1.. MS
 * entry MS
-  * item only Reference(sd-mii-patho-problem-list-item)
+  * item only Reference(mii-pr-patho-problem-list-item)
 
-// //------------------------------------------------
-// // Personal History Finding - coded symptom for anamnesis
-// // *should be replaced by Module Symptomes profile later on
-// //------------------------------------------------
-// Profile: SD_MII_Patho_Personal_History_Finding
-// Parent: Observation
-// Id: sd-mii-patho-personal-history-finding
-// Title: "SD MII Patho Personal History Finding"
-// Description: "Profile "
-// * insert RuleSet1
-// * status MS
-// * code MS
-//   * coding 1.. MS
-//   * coding = $SCT#307294006 "Personal History Finding" (exactly) 
-//     * code 1.. 
-//     * system 1.. 
-//     * display 
-// * subject 1.. MS
-// * value[x] MS
-// * value[x] only CodeableConcept
 
 //---------------------------
 //Examples
 //---------------------------
-Instance: ex-mii-patho-request
-InstanceOf: sd-mii-patho-service-request
+Instance: mii-exa-patho-request
+InstanceOf: mii-pr-patho-service-request
 Usage: #example
-Title: "EX MII Patho Request"
-Description: "Pathology Report Example "
-* identifier[+].type = $v2-0203#PLAC "Placer Identifier"
+Title: "MII EXA Patho Request"
+Description: "Pathology Service Request Example"
+* identifier[+].type = $v2-0203#PLAC
 * identifier[=].value = "KHXX_ENDO_18.123451"
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
-* identifier[+].type = $v2-0203#FILL "Filler"
+* identifier[+].type = $v2-0203#FILL 
 * identifier[=].value = "E18-321654"
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
 * status = #completed
@@ -191,5 +171,4 @@ Description: "Pathology Report Example "
 * subject.reference = "Patient/12345"
 * encounter.reference = "Encounter/87687"
 * requester.reference = "Practitioner/34456"
-* specimen[+] = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
 * code = $SCT#44977009 "Cytopathology procedure, cell block preparation (procedure)"

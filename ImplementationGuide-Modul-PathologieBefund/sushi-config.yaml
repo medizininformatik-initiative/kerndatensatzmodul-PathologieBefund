@@ -2,37 +2,30 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# id: Modul-PathologieBefund
+id: Modul-PathologieBefund
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho
-# title: "IG MII Modul Pathologie Befundbericht"
-# name: Modul-PathologieBefund
-# status: "draft"
+title: "IG MII Modul Pathologie Befundbericht"
+name: Modul-PathologieBefund
+status: "draft"
 version: 0.9.0
 fhirVersion: 4.0.1
-# copyrightYear: 2021+
-# releaseLabel: ci-build
-# publisher: 
-  # name: Medizininformatik-Initiative
-  # url: https://www.medizininformatik-initiative.de/
-  # email: info@medizininformatik-initiative.de
-FSHOnly: true
+copyrightYear: 2021+
+releaseLabel: ci-build
+publisher: 
+  name: Medizininformatik-Initiative
+  url: https://www.medizininformatik-initiative.de/
+  email: info@medizininformatik-initiative.de
+# FSHOnly: true
 # Don't forget to add further dependencies if necessary!
 dependencies: 
-  de.basisprofil.r4:
-    uri: de.basisprofil.r4
-    version: 1.4.0
-  de.medizininformatikinitiative.kerndatensatz.meta:
-    uri: https://simplifier.net/guide/medizininformatikinitiative-implementationguide-manteldokument
-    version: 1.0.3
-  de.medizininformatikinitiative.kerndatensatz.biobank:
-    uri: de.medizininformatikinitiative.kerndatensatz.biobank
-    version: 1.0.2
-  de.medizininformatikinitiative.kerndatensatz.diagnose:
-    uri: de.medizininformatikinitiative.kerndatensatz.diagnose
-    version: 2.0.0-alpha3
+  de.basisprofil.r4: 1.4.0
+  de.medizininformatikinitiative.kerndatensatz.meta: 1.0.3
+  de.medizininformatikinitiative.kerndatensatz.biobank: 1.0.7
+  de.medizininformatikinitiative.kerndatensatz.diagnose: 2.0.0-alpha3
+  de.gematik.isik-basismodul: 2.0.4
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-#menu:
-#  Home: index.html
-#  Artifacts: artifacts.html
+menu:
+ Home: index.html
+ Artifacts: artifacts.html

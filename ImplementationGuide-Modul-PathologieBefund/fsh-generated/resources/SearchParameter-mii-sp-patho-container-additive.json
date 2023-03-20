@@ -1,0 +1,14 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "mii-sp-patho-container-additive",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-container-additive",
+  "name": "MII_SP_Patho_Container_Additive",
+  "description": "SearchParameter for Specimen.container.additive",
+  "status": "draft",
+  "code": "container-additive",
+  "base": [
+    "Specimen"
+  ],
+  "type": "reference",
+  "expression": "Specimen.container.additive"
+}
