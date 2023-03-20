@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Patho_Collection_Method_SNOMED_CT",
+  "id": "mii-vs-patho-collection-method-snomed-ct",
+  "title": "MII VS Patho Collection Method [SNOMED CT]",
+  "description": "ValueSet for the clinical collection method",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct",
+  "version": "1.0.0-ballot1",
+  "experimental": false,
+  "date": "2022-07-18",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "118292001"
+          }
+        ]
+      }
+    ]
+  }
+}

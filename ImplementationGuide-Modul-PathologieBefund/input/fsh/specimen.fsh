@@ -1,8 +1,7 @@
-Profile: SD_MII_Patho_Specimen
-// Parent: $mii-bio-specimencore
-Parent: SpecimenCore
-Id: sd-mii-patho-specimen
-Title: "SD MII Patho Specimen"
+Profile: MII_PR_Patho_Specimen
+Parent: $mii-bio-specimencore
+Id: mii-pr-patho-specimen
+Title: "PR MII Patho Specimen"
 Description: "Pathology specimen"
 * insert RuleSet1
 * id MS
@@ -12,19 +11,19 @@ Description: "Pathology specimen"
 * accessionIdentifier 1.. MS
 * collection
   * method 1.. MS
-  * method from VS_MII_Patho_Collection_Method_SNOMED_CT (extensible)
-* request only Reference(SD_MII_Patho_Service_Request)
+  * method from mii-vs-patho-collection-method-snomed-ct (extensible)
+* request only Reference(mii-pr-patho-service-request)
 * processing 
-  * procedure from vs-mii-patho-processing-procedure-snomed-ct (extensible)
+  * procedure from mii-vs-patho-processing-procedure-snomed-ct (extensible)
   * additive only Reference($mii-bio-additive)
 * container MS
-  * type from VS_MII_Patho_Container_Type_SNOMED (required)
+  * type from mii-vs-patho-container-type-snomed-ct (required)
 
 // Examples
-Instance: ex-mii-patho-prostate-tru-cut-biopsy-sample
-InstanceOf: sd-mii-patho-specimen
+Instance: mii-exa-patho-prostate-tru-cut-biopsy-sample
+InstanceOf: mii-pr-patho-specimen
 Usage: #example
-Title: "ex-mii-patho-prostate-tru-cut-biopsy sample"
+Title: "EXA MII Patho Prostate Tru-cut Biopsy Sample"
 Description: "Prostate tru-cut biopsy sample (specimen)"
 * status = #available
 * text.status = #additional
@@ -46,9 +45,9 @@ Description: "Prostate tru-cut biopsy sample (specimen)"
 * accessionIdentifier
   * value = "E12345_21"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-* type = $SCT#309134005 "Prostate tru-cut biopsy sample (specimen)"
+* type = $SCT#309134005 "Prostate tru-cut biopsy sample"
 * subject.reference = "Patient/12345"
-* request = Reference(ex-mii-patho-request)
+* request = Reference(mii-exa-patho-request)
 * collection
   * collector.reference = "Practitioner/2346545"
   * collectedDateTime = "2021-01-29T06:15:00Z"
@@ -56,12 +55,12 @@ Description: "Prostate tru-cut biopsy sample (specimen)"
   * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
 * container[+] 
   * type = $SCT#434746001 "Specimen vial (physical object)"
-  * additiveReference = Reference(ex-mii-patho-neutral-buffered-formalin)
+  * additiveReference = Reference(mii-exa-patho-neutral-buffered-formalin)
 
-Instance: ex-mii-patho-he-stained-slide-prostate
-InstanceOf: SD_MII_Patho_Specimen
+Instance: mii-exa-patho-he-stained-slide-prostate
+InstanceOf: mii-pr-patho-specimen
 Usage: #example
-Title: "EX MII Patho HE-stained slide from Prostate tru-cut biopsy sample"
+Title: "EXA MII Patho HE-stained slide from Prostate tru-cut biopsy sample"
 Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 * status = #available
 * text.status = #additional
@@ -93,8 +92,8 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#787150001 "Stained slide of tissue section (specimen)"
 * subject.reference = "Patient/12345"
-* parent = Reference(ex-mii-patho-prostate-tru-cut-biopsy-sample)
-* request = Reference(ex-mii-patho-request)
+* parent = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
+* request = Reference(mii-exa-patho-request)
 * collection
   * collector.reference = "Practitioner/2346545"
   * collectedDateTime = "2021-01-29T06:15:00Z"
@@ -128,79 +127,40 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 * processing[=].procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method (procedure)"
 * processing[=].procedure.extension.url = $fhir-narrative-link
 * processing[=].procedure.extension.valueUrl = "#faerbung"
-* processing[=].additive[+] = Reference(ex-mii-patho-hematoxylin-stain)
-* processing[=].additive[+] = Reference(ex-mii-patho-eosin-y)
+* processing[=].additive[+] = Reference(mii-exa-patho-hematoxylin-stain)
+* processing[=].additive[+] = Reference(mii-exa-patho-eosin-y)
 * container[+] 
   * type = $SCT#433466003 "Microscope slide (physical object)"
-  * additiveReference = Reference(ex-mii-patho-microscope-slide-mounting-medium)
+  * additiveReference = Reference(mii-exa-patho-microscope-slide-mounting-medium)
 * container[+]
   * type = $SCT#433472003 "Microscope slide coverslip (physical object)"
-  * additiveReference = Reference(ex-mii-patho-microscope-slide-mounting-medium)
+  * additiveReference = Reference(mii-exa-patho-microscope-slide-mounting-medium)
 
 
-Instance: ex-mii-patho-hematoxylin-stain
+Instance: mii-exa-patho-hematoxylin-stain
 InstanceOf: $mii-bio-additive
 Usage: #example
-Title: "EX MII Patho Hematoxylin-stain"
+Title: "EXA MII Patho Hematoxylin-stain"
 Description: "Hematoxylin stain (substance)"
 * code.coding = $SCT#12710003 "Hematoxylin stain (substance)"
 
-Instance: ex-mii-patho-eosin-y
+Instance: mii-exa-patho-eosin-y
 InstanceOf: $mii-bio-additive
 Usage: #example
-Title: "EX MII Patho Eosin Y"
+Title: "EXA MII Patho Eosin Y"
 Description: "Eosin Y (substance)"
 * code.coding = $SCT#763042003 "Eosin Y (substance)"
 
-Instance: ex-mii-patho-neutral-buffered-formalin
+Instance: mii-exa-patho-neutral-buffered-formalin
 InstanceOf: $mii-bio-additive
 Usage: #example
-Title: "EX MII Patho Neutral Buffered Formalin"
+Title: "EXA MII Patho Neutral Buffered Formalin"
 Description: "Neutral buffered formalin (substance)"
 * code.coding = $SCT#434162003 "Neutral buffered formalin (substance)"
 
-Instance: ex-mii-patho-microscope-slide-mounting-medium
+Instance: mii-exa-patho-microscope-slide-mounting-medium
 InstanceOf: $mii-bio-additive
 Usage: #example
-Title: "EX MII Patho Microscope Slide Mounting Medium"
+Title: "EXA MII Patho Microscope Slide Mounting Medium"
 Description: "Microscope slide mounting medium (substance)"
 * code.coding = $SCT#430862008 "Microscope slide mounting medium (substance)"
-
-// Example Biobank
-Instance: MusterprobeFluessig
-// InstanceOf: $mii-bio-specimencore
-InstanceOf: SpecimenCore
-Title: "Musterprobe flüssig"
-Usage: #example
-
-* identifier.system = "https://biobank.uk-musterstadt.de/fhir/sid/proben"
-* identifier.value = "12345"
-* status = #available
-* type = http://snomed.info/sct#122555007 "Venous blood specimen (specimen)"
-* subject.reference = "Patient/12345"
-* collection.collectedDateTime = "2018-06-07T15:54:00+01:00"
-* collection.fastingStatusCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0916#NG "Not Given - Patient was not asked at the time of the procedure."
-
-* processing[+].extension[temperaturbedingungen].valueRange.low.value = 15
-* processing[=].extension[temperaturbedingungen].valueRange.high.value = 25
-* processing[=].procedure =  $SCT#1186936003 "Storage of specimen (procedure)"
-* processing[=].timePeriod.start = "2018-06-07T15:54:00+01:00"
-* processing[=].timePeriod.end = "2018-06-07T16:27:00+01:00"
-
-* processing[+].extension[temperaturbedingungen].valueRange.low.value = 15
-* processing[=].extension[temperaturbedingungen].valueRange.high.value = 25
-* processing[=].procedure.coding =  $SCT#73373003 //"Specimen centrifugation (procedure)"
-* processing[=].timePeriod.start = "2018-06-07T16:27:00+01:00"
-* processing[=].timePeriod.end = "2018-06-07T16:37:00+01:00"
-
-* processing[+].extension[temperaturbedingungen].valueRange.low.value = 15
-* processing[=].extension[temperaturbedingungen].valueRange.high.value = 25
-* processing[=].procedure =  $SCT#1186936003 "Storage of specimen (procedure)"
-* processing[=].timePeriod.start = "2018-06-07T16:37:00+01:00"
-* processing[=].timePeriod.end = "2018-06-07T16:51:00+01:00"
-
-* processing[+].extension[temperaturbedingungen].valueRange.low.value = -85
-* processing[=].extension[temperaturbedingungen].valueRange.high.value = -60
-* processing[=].procedure.coding[sct] =  $SCT#1186936003 //"Storage of specimen (procedure)"
-* processing[=].procedure.coding[sct] =  $SCT#27872000 //"Specimen freezing (procedure)"
-* processing[=].timePeriod.start = "2018-06-07T16:51:00+01:00"

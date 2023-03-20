@@ -1,8 +1,8 @@
  // LogicalModel definition
-Logical: SD_MII_Patho_Logical_Model
+Logical: PR_MII_Patho_Logical_Model
 Parent: Base
-Id: sd-mii-patho-logical-model
-Title: "SD MII Patho Logical Model"
+Id: pr-mii-patho-logical-model
+Title: "PR MII Patho Logical Model"
 Description: "Logical Model for the graphical reprensentation of the respective Art-Decor Model"
 
 * insert RuleSet1
@@ -15,7 +15,7 @@ Description: "Logical Model for the graphical reprensentation of the respective 
     * Fragestellung 0..1 string "Fragestellung zum Fall"
     * Anamnese 0..* string "Anamnestische Angaben zum Fall"
     * Ueberweisungsgrund 0..* string "Überweisungsgrund"
-    * DiagnoseKodiert 0..* Reference(Condition) "Diagnose nach gültiger ICD-10-GM " 
+    * DiagnoseKodiert 0..* Reference(Condition) "Diagnose nach gültiger ICD-10-GM" 
   * AuftragsID 1..* BackboneElement "AuftragsID" "ID des Untersuchungsauftrags."
     * AuftragsgruppenID 0..1 Identifier "ID einer Auftragsgruppe, bestehend aus mehreren Untersuchungsaufträgen"
     * AuftragsIDAuftraggeber 0..1 Identifier "Auftrags-ID vom Auftraggeber vergeben"
