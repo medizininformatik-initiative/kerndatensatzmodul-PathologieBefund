@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Patho_All_LOINC",
+  "id": "mii-vs-patho-all-loinc",
+  "title": "MII VS Patho All [LOINC]",
+  "description": "ValueSet for general LOINC VS binding",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org"
+      }
+    ]
+  }
+}

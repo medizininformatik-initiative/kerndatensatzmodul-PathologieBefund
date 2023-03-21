@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Patho_Service_Request_SNOMED_CT",
+  "id": "mii-vs-patho-service-request-snomed-ct",
+  "title": "MII VS Patho Service Request [SNOMED CT]",
+  "description": "ValueSet for a preferred set of ServiceRequest codes",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-snomed-ct",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "108252007"
+          }
+        ]
+      }
+    ]
+  }
+}
