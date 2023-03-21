@@ -12,6 +12,8 @@ Description: "Pathology specimen"
 * collection
   * method 1.. MS
   * method from mii-vs-patho-collection-method-snomed-ct (extensible)
+  * bodySite.extension contains $us-mcode-body-location-qualifier named locationQualifier 0..* MS
+                       and $us-mcode-laterality-qualifier named lateralityQualifier 0..1 MS
 * request only Reference(mii-pr-patho-service-request)
 * processing 
   * procedure from mii-vs-patho-processing-procedure-snomed-ct (extensible)

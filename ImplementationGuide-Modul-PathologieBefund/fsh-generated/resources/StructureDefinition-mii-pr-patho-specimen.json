@@ -83,6 +83,38 @@
         }
       },
       {
+        "id": "Specimen.collection.bodySite.extension:locationQualifier",
+        "path": "Specimen.collection.bodySite.extension",
+        "sliceName": "locationQualifier",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-body-location-qualifier"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.bodySite.extension:lateralityQualifier",
+        "path": "Specimen.collection.bodySite.extension",
+        "sliceName": "lateralityQualifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality-qualifier"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Specimen.processing",
         "path": "Specimen.processing"
       },
