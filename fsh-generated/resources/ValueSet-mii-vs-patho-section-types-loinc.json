@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Patho_Section_Types_LOINC",
+  "id": "mii-vs-patho-section-types-loinc",
+  "title": "MII VS Patho Section Types [LOINC]",
+  "description": "ValueSet for IHE PaLM APSR's section types",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "83321-0",
+            "display": "Pathology report intraoperative observation in Specimen Document"
+          },
+          {
+            "code": "22634-0",
+            "display": "Pathology report gross observation"
+          },
+          {
+            "code": "22635-7",
+            "display": "Pathology report microscopic observation"
+          },
+          {
+            "code": "22637-3",
+            "display": "Pathology report diagnosis"
+          },
+          {
+            "code": "77599-9",
+            "display": "Additional documentation"
+          }
+        ]
+      }
+    ]
+  }
+}

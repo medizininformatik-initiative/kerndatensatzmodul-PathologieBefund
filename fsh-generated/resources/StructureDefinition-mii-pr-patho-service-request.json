@@ -1,0 +1,374 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-patho-service-request",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request",
+  "name": "MII_PR_Patho_Service_Request",
+  "title": "MII PR Patho Service Request",
+  "status": "draft",
+  "description": "Order for the analysis of a sample or a group of samples.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "quick",
+      "uri": "http://siframework.org/cqf",
+      "name": "Quality Improvement and Clinical Knowledge (QUICK)"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.meta.lastUpdated",
+        "path": "ServiceRequest.meta.lastUpdated",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.meta.source",
+        "path": "ServiceRequest.meta.source",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.meta.profile",
+        "path": "ServiceRequest.meta.profile",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier",
+        "path": "ServiceRequest.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this.type"
+            }
+          ],
+          "rules": "open",
+          "description": "Contains slices for the request's placer- and filler IDs based on type.coding pattern"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Placer-ID",
+        "path": "ServiceRequest.identifier",
+        "sliceName": "Placer-ID",
+        "short": "Placer identifier",
+        "definition": "Identifier for the placer of the pathology request",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Placer-ID.type",
+        "path": "ServiceRequest.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "PLAC",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Placer-ID.type.coding",
+        "path": "ServiceRequest.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Placer-ID.type.coding.system",
+        "path": "ServiceRequest.identifier.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Placer-ID.type.coding.code",
+        "path": "ServiceRequest.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Placer-ID.system",
+        "path": "ServiceRequest.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Placer-ID.value",
+        "path": "ServiceRequest.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Filler-ID",
+        "path": "ServiceRequest.identifier",
+        "sliceName": "Filler-ID",
+        "short": "Filler Identifier",
+        "definition": "Identifier for the filler of the pathology request",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Filler-ID.type",
+        "path": "ServiceRequest.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "FILL",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Filler-ID.type.coding",
+        "path": "ServiceRequest.identifier.type.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Filler-ID.type.coding.system",
+        "path": "ServiceRequest.identifier.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Filler-ID.type.coding.code",
+        "path": "ServiceRequest.identifier.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Filler-ID.system",
+        "path": "ServiceRequest.identifier.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.identifier:Filler-ID.value",
+        "path": "ServiceRequest.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requisition",
+        "path": "ServiceRequest.requisition",
+        "short": "Composite or group identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requisition.type",
+        "path": "ServiceRequest.requisition.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "PGN",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "display": "Placer Group Number"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requisition.system",
+        "path": "ServiceRequest.requisition.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requisition.value",
+        "path": "ServiceRequest.requisition.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "726007",
+              "system": "http://snomed.info/sct",
+              "display": "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-snomed-ct"
+        }
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.encounter",
+        "path": "ServiceRequest.encounter",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.performer",
+        "path": "ServiceRequest.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.reasonCode",
+        "path": "ServiceRequest.reasonCode",
+        "short": "Coded representation of the reason for referral",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo",
+        "path": "ServiceRequest.supportingInfo",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this.resolve()"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "short": "Reference to history of present illness (anamnesis), active problems and diagnostic data",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo:codedCondition",
+        "path": "ServiceRequest.supportingInfo",
+        "sliceName": "codedCondition",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Condition"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo:anamnesis",
+        "path": "ServiceRequest.supportingInfo",
+        "sliceName": "anamnesis",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo:activeProblems",
+        "path": "ServiceRequest.supportingInfo",
+        "sliceName": "activeProblems",
+        "short": "List of possible problems that should be analyzed",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.specimen",
+        "path": "ServiceRequest.specimen",
+        "mustSupport": true
+      }
+    ]
+  }
+}

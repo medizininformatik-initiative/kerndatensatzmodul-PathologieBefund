@@ -1,3 +1,13 @@
 # VS-Code files
 .history/
 .devcontainer/
+
+.DS_Store
+Thumbs.db
+# /fsh-generated
+/input-cache
+/output
+/temp
+/template
+validator_cli.jar
+_gencontinuous.*
