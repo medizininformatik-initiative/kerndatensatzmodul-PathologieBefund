@@ -1,0 +1,592 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "mii-ig-modul-patho",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho",
+  "version": "0.9.0",
+  "name": "MII_IG_Modul_Patho",
+  "title": "MII IG Modul Patho",
+  "status": "draft",
+  "publisher": "Medizininformatik-Initiative",
+  "contact": [
+    {
+      "name": "Medizininformatik-Initiative",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de/"
+        },
+        {
+          "system": "email",
+          "value": "info@medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "packageId": "mii-ig-modul-patho",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.biobank",
+      "version": "1.0.8",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
+      "id": "de_medizininformatikinitiative_kerndatensatz_biobank"
+    },
+    {
+      "packageId": "de.medizininformatikinitiative.kerndatensatz.diagnose",
+      "version": "2.0.0-alpha3",
+      "uri": "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.diagnose/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.diagnose",
+      "id": "de_medizininformatikinitiative_kerndatensatz_diagnose"
+    },
+    {
+      "packageId": "de.gematik.isik-basismodul",
+      "version": "2.0.4",
+      "uri": "http://fhir.org/packages/de.gematik.isik-basismodul/ImplementationGuide/de.gematik.isik-basismodul",
+      "id": "de_gematik_isik_basismodul"
+    },
+    {
+      "packageId": "hl7.fhir.us.mcode",
+      "version": "2.1.0",
+      "uri": "http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode",
+      "id": "hl7_fhir_us_mcode"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "Substance/mii-exa-patho-eosin-y"
+        },
+        "name": "EXA MII Patho Eosin Y",
+        "description": "Eosin Y (substance)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-patho-he-stained-slide-prostate"
+        },
+        "name": "EXA MII Patho HE-stained slide from Prostate tru-cut biopsy sample",
+        "description": "HE-stained slide from Prostate tru-cut biopsy sample (specimen)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen"
+      },
+      {
+        "reference": {
+          "reference": "Substance/mii-exa-patho-hematoxylin-stain"
+        },
+        "name": "EXA MII Patho Hematoxylin-stain",
+        "description": "Hematoxylin stain (substance)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Substance/mii-exa-patho-microscope-slide-mounting-medium"
+        },
+        "name": "EXA MII Patho Microscope Slide Mounting Medium",
+        "description": "Microscope slide mounting medium (substance)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Substance/mii-exa-patho-neutral-buffered-formalin"
+        },
+        "name": "EXA MII Patho Neutral Buffered Formalin",
+        "description": "Neutral buffered formalin (substance)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"
+        },
+        "name": "EXA MII Patho Prostate Tru-cut Biopsy Sample",
+        "description": "Prostate tru-cut biopsy sample (specimen)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen"
+      },
+      {
+        "reference": {
+          "reference": "Media/mii-exa-patho-attached-image"
+        },
+        "name": "MII EXA Patho Attached Image",
+        "description": "Example for Attached Image",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-biopsy-site-a"
+        },
+        "name": "MII EXA Patho Biopsy Site A",
+        "description": "Biopsy site of Specimen A (1st punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-biopsy-site-b"
+        },
+        "name": "MII EXA Patho Biopsy Site B",
+        "description": "Biopsy site of Specimen B (2nd punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Composition/mii-exa-patho-composition"
+        },
+        "name": "MII EXA Patho Composition",
+        "description": "Example for an MII_PR_Patho_Composition",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-diagnostic-conclusion-1"
+        },
+        "name": "MII EXA Patho Diagnostic Conclusion 1",
+        "description": "Example for a diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-diagnostic-conclusion-2"
+        },
+        "name": "MII EXA Patho Diagnostic Conclusion 2",
+        "description": "Example for diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-diagnostic-conclusion-3"
+        },
+        "name": "MII EXA Patho Diagnostic Conclusion 3",
+        "description": "Example for diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-diagnostic-conclusion-grouper"
+        },
+        "name": "MII EXA Patho Diagnostic Conclusion Grouper",
+        "description": "Example for a diagnostic conclusion",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-gleason-pattern-a"
+        },
+        "name": "MII EXA Patho Gleason Pattern A",
+        "description": "[Microscopic Finding] Gleason pattern.primary in prostate tumor for Specimen A",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-histologic-type-a"
+        },
+        "name": "MII EXA Patho Histologic Type A",
+        "description": "[Microscopic Finding] Histologic type of Specimen A",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-macro-grouper-a"
+        },
+        "name": "MII EXA Patho Macro Grouper A",
+        "description": "Grouper for all Macroscopic Observations of Specimen A (1st punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-macro-grouper-b"
+        },
+        "name": "MII EXA Patho Macro Grouper B",
+        "description": "Grouper for all Macroscopic Observations of Specimen B (2nd punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-micro-grouper-a"
+        },
+        "name": "MII EXA Patho Micro Grouper A",
+        "description": "Grouper for all Microscopic Observations of Specimen A",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-patho-report"
+        },
+        "name": "MII EXA Patho Report",
+        "description": "Example for MII_PR_Patho_Report",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/mii-exa-patho-request"
+        },
+        "name": "MII EXA Patho Request",
+        "description": "Pathology Service Request Example",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-tissue-length-a"
+        },
+        "name": "MII EXA Patho Tissue Length A",
+        "description": "Tissue length of Specimen A (1st punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-patho-tissue-length-b"
+        },
+        "name": "MII EXA Patho Tissue Length B",
+        "description": "Tissue length of Specimen B (2nd punch)",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-lm-patho-logical-model"
+        },
+        "name": "MII LM Patho Logical Model",
+        "description": "Logical Model for the graphical reprensentation of the respective Art-Decor Model",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-active-problems-list"
+        },
+        "name": "MII PR Patho Active Problems List",
+        "description": "List of conditions currently being monitored for the patient",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-additional-specified-grouper"
+        },
+        "name": "MII PR Patho Additional Specified Grouper",
+        "description": "Based on IHE PaLM APSR - Grouper for additional specified Observations",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-attached-image"
+        },
+        "name": "MII PR Patho Attached Image",
+        "description": "Profile for attached images",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-base-observation"
+        },
+        "name": "MII PR Patho Base Observation",
+        "description": "Abstract Observation to define common features of a main pathology observation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-composition"
+        },
+        "name": "MII PR Patho Composition",
+        "description": "Composition as a template for pathology report as a FHIR-Document",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper"
+        },
+        "name": "MII PR Patho Diagnostic Conclusion Grouper",
+        "description": "Grouper profile to collect Diagnostic Conclusion information",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-finding"
+        },
+        "name": "MII PR Patho Finding",
+        "description": "Instantiable Observation to describe a generic pathology finding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-history-of-present-illness"
+        },
+        "name": "MII PR Patho History Of Present Illness",
+        "description": "List profile for 'History of Present Illness'",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-intraoperative-grouper"
+        },
+        "name": "MII PR Patho Intraoperative Grouper",
+        "description": "Based on IHE PaLM APSR - Intraoperative Observation Section",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-macroscopic-grouper"
+        },
+        "name": "MII PR Patho Macroscopic Grouper",
+        "description": "Based on IHE PaLM APSR - Macroscopic Observation Finding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-microscopic-grouper"
+        },
+        "name": "MII PR Patho Microscopic Grouper",
+        "description": "Based on IHE PaLM APSR - Microscopic Observation Finding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-problem-list-item"
+        },
+        "name": "MII PR Patho Problem List Item",
+        "description": "Condition profile for problem list item",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-report"
+        },
+        "name": "MII PR Patho Report",
+        "description": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-section-grouper"
+        },
+        "name": "MII PR Patho Section Grouper",
+        "description": "Grouper profile for pathological findings",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-service-request"
+        },
+        "name": "MII PR Patho Service Request",
+        "description": "Order for the analysis of a sample or a group of samples.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-patho-all-loinc"
+        },
+        "name": "MII VS Patho All [LOINC]",
+        "description": "ValueSet for general LOINC VS binding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-patho-collection-method-snomed-ct"
+        },
+        "name": "MII VS Patho Collection Method [SNOMED CT]",
+        "description": "ValueSet for the clinical collection method",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-patho-composition-type-loinc"
+        },
+        "name": "MII VS Patho Composition Type [LOINC]",
+        "description": "ValueSet for the types a pathology Composition can have",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-patho-container-type-snomed-ct"
+        },
+        "name": "MII VS Patho Container Type [SNOMED CT]",
+        "description": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-patho-problem-list-snomed-ct"
+        },
+        "name": "MII VS Patho Problem List [SNOMED CT]",
+        "description": "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-patho-processing-procedure-snomed-ct"
+        },
+        "name": "MII VS Patho Processing Procedure [SNOMED CT]",
+        "description": "Specimen processing procedure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-patho-report-category-hl7"
+        },
+        "name": "MII VS Patho Report Category HL7",
+        "description": "ValueSet for the categorization of Pathology Report documents",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-patho-section-types-loinc"
+        },
+        "name": "MII VS Patho Section Types [LOINC]",
+        "description": "ValueSet for IHE PaLM APSR's section types",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-patho-service-request-snomed-ct"
+        },
+        "name": "MII VS Patho Service Request [SNOMED CT]",
+        "description": "ValueSet for a preferred set of ServiceRequest codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/mii-cps-patho-capability-statement"
+        },
+        "name": "mii-cps-patho-capability-statement",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-attester-mode"
+        },
+        "name": "mii-sp-patho-attester-mode",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-body-site"
+        },
+        "name": "mii-sp-patho-body-site",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-collection-body-site"
+        },
+        "name": "mii-sp-patho-collection-body-site",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-collection-method"
+        },
+        "name": "mii-sp-patho-collection-method",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-container-additive"
+        },
+        "name": "mii-sp-patho-container-additive",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-custodian"
+        },
+        "name": "mii-sp-patho-custodian",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-imaging-study"
+        },
+        "name": "mii-sp-patho-imaging-study",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-part-of"
+        },
+        "name": "mii-sp-patho-part-of",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-processing-additive"
+        },
+        "name": "mii-sp-patho-processing-additive",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-processing-date"
+        },
+        "name": "mii-sp-patho-processing-date",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-processing-procedure"
+        },
+        "name": "mii-sp-patho-processing-procedure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-reason-code"
+        },
+        "name": "mii-sp-patho-reason-code",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-relates-to-code"
+        },
+        "name": "mii-sp-patho-relates-to-code",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-request"
+        },
+        "name": "mii-sp-patho-request",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-supporting-info"
+        },
+        "name": "mii-sp-patho-supporting-info",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-patho-value-ratio"
+        },
+        "name": "mii-sp-patho-value-ratio",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-specimen"
+        },
+        "name": "PR MII Patho Specimen",
+        "description": "Pathology specimen",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2021+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}
