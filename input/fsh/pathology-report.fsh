@@ -9,8 +9,9 @@ Description: "Defines the general pathology report structure for German hospital
 * insert RuleSet-Metadata
 // ID
 * id MS
-* meta.lastUpdated MS
-* meta.profile MS
+* meta
+  * lastUpdated MS
+  * profile MS
 * text MS
 // Identifikator
 * identifier 1.. MS
@@ -23,10 +24,6 @@ Description: "Defines the general pathology report structure for German hospital
   * type = $v2-0203#ACSN "Accession ID"
   * value 1.. MS
   * system 1.. MS
-* meta MS
-// Weitere MS Elemente aus Metadata
-* meta.source MS
-* meta.profile MS 
 // Referenz zum Untersuchungsauftrag
 * basedOn 1.. MS
 * basedOn only Reference(mii-pr-patho-service-request)
@@ -51,9 +48,8 @@ Description: "Defines the general pathology report structure for German hospital
 // Referenz zu Fall 
 * encounter MS
 // Dokumentationsdatum
-* effective[x] MS
 * effective[x] only dateTime
-* issued MS // nur fuer maschinell erstellte Zeitstempel, fuer manuell eingetragene Zeiten effective[x] dateTime nutzen
+* effectiveDateTime MS
 // Autor 
 * performer 1.. MS
 // Referenz zur Probe
@@ -73,16 +69,16 @@ Description: "Defines the general pathology report structure for German hospital
       and diagnostic-conclusion 1..* MS
 * result[intraoperative-observations] only Reference(mii-pr-patho-intraoperative-grouper)
   * reference 1.. MS
-  * ^short = "Reference to intraoperative Observations"
+  * ^short = "Reference to intraoperative Observation grouper(s)"
 * result[macroscopic-observations] only Reference(mii-pr-patho-macroscopic-grouper)
   * reference 1.. MS
-  * ^short = "Reference to macroscopic Observations"
+  * ^short = "Reference to macroscopic Observation grouper(s)"
 * result[microscopic-observations] only Reference(mii-pr-patho-microscopic-grouper)
   * reference 1.. MS
-  * ^short = "Reference to microscopic Observations"
+  * ^short = "Reference to microscopic Observation grouper(s)"
 * result[additional-observations] only Reference(mii-pr-patho-additional-specified-grouper)     
   * reference 1.. MS
-  * ^short = "Reference to any additional Observation"
+  * ^short = "Reference to any additional Observation grouper(s)"
 * result[diagnostic-conclusion] only Reference(mii-pr-patho-diagnostic-conclusion-grouper) 
   * reference 1.. MS
   * ^short = "Reference to the 'Diagnostic Conclusion' grouper(s)"
@@ -91,13 +87,11 @@ Description: "Defines the general pathology report structure for German hospital
 // Referenz zu angehaengten Bildern
 * media MS
 * media ^short = "Reference to single attached images"
-  * comment MS
   * link MS
   * link only Reference(mii-pr-patho-attached-image)
 // zugehoeriges Dokument
 * presentedForm MS
 // Diagnostische Schlussfolgerung
-* conclusion MS
 * conclusionCode MS
 
 // -------------------------
