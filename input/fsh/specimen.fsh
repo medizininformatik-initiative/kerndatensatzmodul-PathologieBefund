@@ -48,6 +48,7 @@ Description: "Prostate tru-cut biopsy sample (specimen)"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#309134005 "Prostate tru-cut biopsy sample"
 * subject.reference = "Patient/12345"
+* parent.reference = "Specimen/E12345_21"
 * request = Reference(mii-exa-patho-request)
 * collection
   * collector.reference = "Practitioner/2346545"

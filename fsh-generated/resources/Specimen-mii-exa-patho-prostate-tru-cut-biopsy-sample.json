@@ -41,6 +41,11 @@
   "subject": {
     "reference": "Patient/12345"
   },
+  "parent": [
+    {
+      "reference": "Specimen/E12345_21"
+    }
+  ],
   "request": [
     {
       "reference": "ServiceRequest/mii-exa-patho-request"
