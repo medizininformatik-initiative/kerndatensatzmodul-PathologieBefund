@@ -6,6 +6,7 @@ Parent: DiagnosticReport
 Id: mii-pr-patho-report
 Title: "MII PR Patho Report"
 Description: "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative"
+* insert RuleSet-Metadata
 // ID
 * id MS
 * meta.lastUpdated MS
@@ -107,6 +108,7 @@ Parent: $isik-basis-bericht-subsysteme
 Id: mii-pr-patho-composition
 Title: "MII PR Patho Composition"
 Description: "Composition as a template for pathology report as a FHIR-Document"
+* insert RuleSet-Metadata
 // * id MS
 * meta.lastUpdated MS
 * meta.profile MS

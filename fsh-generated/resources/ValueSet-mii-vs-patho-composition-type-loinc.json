@@ -6,6 +6,9 @@
   "title": "MII VS Patho Composition Type [LOINC]",
   "description": "ValueSet for the types a pathology Composition can have",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-loinc",
+  "version": "1.0.0-ballot1",
+  "experimental": false,
+  "date": "2022-07-18",
   "compose": {
     "include": [
       {
@@ -20,8 +23,8 @@
             "display": "Pathology study"
           },
           {
-            "code": "11529-5",
-            "display": "Surgical pathology study"
+            "code": "26435-8",
+            "display": "Molecular pathology studies (set)"
           }
         ]
       }

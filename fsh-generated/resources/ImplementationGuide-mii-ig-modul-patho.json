@@ -2,10 +2,11 @@
   "resourceType": "ImplementationGuide",
   "id": "mii-ig-modul-patho",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho",
-  "version": "0.9.0",
+  "version": "1.0.0-ballot1",
   "name": "MII_IG_Modul_Patho",
   "title": "MII IG Modul Patho",
   "status": "draft",
+  "experimental": false,
   "publisher": "Medizininformatik-Initiative",
   "contact": [
     {
