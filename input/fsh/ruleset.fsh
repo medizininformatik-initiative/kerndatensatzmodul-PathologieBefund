@@ -1,4 +1,4 @@
-RuleSet: RuleSet1
+RuleSet: RuleSet-Metadata
 * ^status = #draft
 * ^version = "1.0.0-ballot1"
 * ^experimental = false

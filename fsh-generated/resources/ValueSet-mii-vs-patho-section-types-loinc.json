@@ -6,6 +6,9 @@
   "title": "MII VS Patho Section Types [LOINC]",
   "description": "ValueSet for IHE PaLM APSR's section types",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc",
+  "version": "1.0.0-ballot1",
+  "experimental": false,
+  "date": "2022-07-18",
   "compose": {
     "include": [
       {

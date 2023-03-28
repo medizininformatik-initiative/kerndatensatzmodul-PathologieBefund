@@ -2,9 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-composition",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition",
+  "version": "1.0.0-ballot1",
   "name": "MII_PR_Patho_Composition",
   "title": "MII PR Patho Composition",
   "status": "draft",
+  "experimental": false,
+  "date": "2022-07-18",
   "description": "Composition as a template for pathology report as a FHIR-Document",
   "fhirVersion": "4.0.1",
   "mapping": [
