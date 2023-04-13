@@ -45,18 +45,8 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.meta",
-        "path": "DiagnosticReport.meta",
-        "mustSupport": true
-      },
-      {
         "id": "DiagnosticReport.meta.lastUpdated",
         "path": "DiagnosticReport.meta.lastUpdated",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.meta.source",
-        "path": "DiagnosticReport.meta.source",
         "mustSupport": true
       },
       {
@@ -222,11 +212,6 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.issued",
-        "path": "DiagnosticReport.issued",
-        "mustSupport": true
-      },
-      {
         "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "min": 1,
@@ -258,7 +243,7 @@
         "id": "DiagnosticReport.result:intraoperative-observations",
         "path": "DiagnosticReport.result",
         "sliceName": "intraoperative-observations",
-        "short": "Reference to intraoperative Observations",
+        "short": "Reference to intraoperative Observation grouper(s)",
         "min": 0,
         "max": "*",
         "type": [
@@ -281,7 +266,7 @@
         "id": "DiagnosticReport.result:macroscopic-observations",
         "path": "DiagnosticReport.result",
         "sliceName": "macroscopic-observations",
-        "short": "Reference to macroscopic Observations",
+        "short": "Reference to macroscopic Observation grouper(s)",
         "min": 0,
         "max": "*",
         "type": [
@@ -304,7 +289,7 @@
         "id": "DiagnosticReport.result:microscopic-observations",
         "path": "DiagnosticReport.result",
         "sliceName": "microscopic-observations",
-        "short": "Reference to microscopic Observations",
+        "short": "Reference to microscopic Observation grouper(s)",
         "min": 0,
         "max": "*",
         "type": [
@@ -327,7 +312,7 @@
         "id": "DiagnosticReport.result:additional-observations",
         "path": "DiagnosticReport.result",
         "sliceName": "additional-observations",
-        "short": "Reference to any additional Observation",
+        "short": "Reference to any additional Observation grouper(s)",
         "min": 0,
         "max": "*",
         "type": [
@@ -381,11 +366,6 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.media.comment",
-        "path": "DiagnosticReport.media.comment",
-        "mustSupport": true
-      },
-      {
         "id": "DiagnosticReport.media.link",
         "path": "DiagnosticReport.media.link",
         "type": [
@@ -396,11 +376,6 @@
             ]
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.conclusion",
-        "path": "DiagnosticReport.conclusion",
         "mustSupport": true
       },
       {

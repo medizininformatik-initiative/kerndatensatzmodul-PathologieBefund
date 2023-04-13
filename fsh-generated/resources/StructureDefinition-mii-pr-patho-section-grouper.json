@@ -58,7 +58,7 @@
           "discriminator": [
             {
               "type": "type",
-              "path": "$this"
+              "path": "$this.resolve()"
             }
           ],
           "rules": "open",

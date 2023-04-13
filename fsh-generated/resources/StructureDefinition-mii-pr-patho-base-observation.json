@@ -73,7 +73,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request"
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
             ]
           }
         ],
@@ -118,11 +118,6 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.category.coding.display",
-        "path": "Observation.category.coding.display",
-        "mustSupport": true
-      },
-      {
         "id": "Observation.category:laboratory-category",
         "path": "Observation.category",
         "sliceName": "laboratory-category",
@@ -163,11 +158,6 @@
         "id": "Observation.code.coding.code",
         "path": "Observation.code.coding.code",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.code.coding.display",
-        "path": "Observation.code.coding.display",
         "mustSupport": true
       },
       {
@@ -217,6 +207,9 @@
         "sliceName": "sct",
         "min": 0,
         "max": "1",
+        "patternIdentifier": {
+          "system": "http://snomed.info/sct"
+        },
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -227,7 +220,6 @@
         "id": "Observation.bodySite.coding:sct.system",
         "path": "Observation.bodySite.coding.system",
         "min": 1,
-        "patternUri": "http://snomed.info/sct",
         "mustSupport": true
       },
       {
