@@ -125,7 +125,6 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
   * coding[LOINC-patho] from mii-vs-patho-composition-type-loinc (extensible)  
   * coding[LOINC-patho] ^patternCoding.system = $LOINC
   // * coding 1.. MS
-  // * coding from mii-pr-patho-composition-type-loinc (extensible)
   // * coding = $LOINC#11526-1 "Pathology study"
     * system 1.. MS
     * code 1.. MS
