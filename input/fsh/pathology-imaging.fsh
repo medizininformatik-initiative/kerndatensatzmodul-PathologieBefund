@@ -20,6 +20,8 @@ Description: "Profile for attached images"
   * coding contains image 1..1
   * coding[image] = $media-type#image 
 // Referenz kann auch weg, weil die Observations schon drauf verweisen ueber .derivedFrom
+* modality MS
+* modality from mii-vs-patho-media-modality-snomed-ct (extensible)
 * subject MS 
 * subject only Reference(mii-pr-patho-specimen)
 * content MS

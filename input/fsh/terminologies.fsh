@@ -22,7 +22,6 @@ Description: "ValueSet for container type based on IHE PaLM's ContainerEntityCla
 * $SCT#430863003 "Tissue embedding medium (substance)"
 * $SCT#434533009 "Electron microscopy grid (physical object)"
 * $SCT#434822004 "Specimen well (physical object)"
-// CID 8102
 * $SCT#433472003 "Microscope slide coverslip (physical object)"
 * $SCT#430862008 "Microscope slide mounting medium (substance)"
 * $SCT#434473001 "Specimen container lid (physical object)"
@@ -33,6 +32,21 @@ Title: "MII VS Patho Processing Procedure [SNOMED CT]"
 Description: "Specimen processing procedure"
 * insert RuleSet-Metadata
 * include codes from system $SCT where concept is-a #108252007
+
+//----------------------------------
+// Media
+//----------------------------------
+ValueSet: MII_VS_Patho_Media_Modality_SNOMED_CT
+Id: mii-vs-patho-media-modality-snomed-ct
+Title: "MII VS Patho Media Modality [SNOMED CT]"
+Description: "ValueSet with some of the main Media.modalities needed in the pathological scope"
+* insert RuleSet-Metadata
+* $SCT#706821004 "Scanner (physical object)"
+* $SCT#706582001 "Microscope camera (physical object)"
+* $SCT#14364002 "Camera, device (physical object)"
+* $SCT#701627004 "Multi-purpose digital medical camera (physical object)"
+* $SCT#409903006 "External camera (physical object)"
+
 
 //----------------------------------
 // Composition

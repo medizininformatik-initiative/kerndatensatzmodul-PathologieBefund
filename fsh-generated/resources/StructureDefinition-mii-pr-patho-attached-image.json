@@ -121,6 +121,15 @@
         }
       },
       {
+        "id": "Media.modality",
+        "path": "Media.modality",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct"
+        }
+      },
+      {
         "id": "Media.subject",
         "path": "Media.subject",
         "type": [
