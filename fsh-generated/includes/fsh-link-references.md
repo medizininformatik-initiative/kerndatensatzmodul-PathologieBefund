@@ -41,6 +41,7 @@
 [MII_VS_Patho_Collection_Method_SNOMED_CT]: ValueSet-mii-vs-patho-collection-method-snomed-ct.html
 [MII_VS_Patho_Composition_Type_LOINC]: ValueSet-mii-vs-patho-composition-type-loinc.html
 [MII_VS_Patho_Container_Type_SNOMED_CT]: ValueSet-mii-vs-patho-container-type-snomed-ct.html
+[MII_VS_Patho_Media_Modality_SNOMED_CT]: ValueSet-mii-vs-patho-media-modality-snomed-ct.html
 [MII_VS_Patho_Problem_List_SNOMED_CT]: ValueSet-mii-vs-patho-problem-list-snomed-ct.html
 [MII_VS_Patho_Processing_Procedure_SNOMED_CT]: ValueSet-mii-vs-patho-processing-procedure-snomed-ct.html
 [MII_VS_Patho_Report_Category_HL7]: ValueSet-mii-vs-patho-report-category-hl7.html

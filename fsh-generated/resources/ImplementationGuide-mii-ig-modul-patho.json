@@ -401,6 +401,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-patho-media-modality-snomed-ct"
+        },
+        "name": "MII VS Patho Media Modality [SNOMED CT]",
+        "description": "ValueSet with some of the main Media.modalities needed in the pathological scope",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-patho-problem-list-snomed-ct"
         },
         "name": "MII VS Patho Problem List [SNOMED CT]",
