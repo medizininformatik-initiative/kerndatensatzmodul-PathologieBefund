@@ -25,6 +25,26 @@
           {
             "code": "26435-8",
             "display": "Molecular pathology studies (set)"
+          },
+          {
+            "code": "11529-5",
+            "display": "Surgical pathology study"
+          },
+          {
+            "code": "60568-3",
+            "display": "Pathology Synoptic report"
+          },
+          {
+            "code": "47527-7",
+            "display": "Cytology Cvx/Vag Doc Thin Prep"
+          },
+          {
+            "code": "33717-0",
+            "display": "Cytology Cvx/Vag study"
+          },
+          {
+            "code": "33716-2",
+            "display": "Non-gynecological cytology study"
           }
         ]
       }
