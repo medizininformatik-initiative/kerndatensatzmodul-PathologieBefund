@@ -47,7 +47,6 @@ Description: "ValueSet with some of the main Media.modalities needed in the path
 * $SCT#701627004 "Multi-purpose digital medical camera (physical object)"
 * $SCT#409903006 "External camera (physical object)"
 
-
 //----------------------------------
 // Composition
 //----------------------------------
@@ -59,12 +58,11 @@ Description: "ValueSet for the types a pathology Composition can have"
 * $LOINC#18743-5 "Autopsy report"
 * $LOINC#11526-1 "Pathology study"
 * $LOINC#26435-8 "Molecular pathology studies (set)"
-// * $LOINC#11529-5 "Surgical pathology study"
-// * $LOINC#11529-5 "Surgical pathology study"
-// * $LOINC#60568-3 "Pathology Synoptic report"
-// * $LOINC#60570-9 "Pathology Consult note"
-// * $LOINC#60571-7 "Pathology Consult note.synoptic"
-// * $LOINC#35265-8 "Pathology report addendum in Specimen Narrative"
+* $LOINC#11529-5 "Surgical pathology study"
+* $LOINC#60568-3 "Pathology Synoptic report"
+* $LOINC#47527-7 "Cytology Cvx/Vag Doc Thin Prep"
+* $LOINC#33717-0 "Cytology Cvx/Vag study"
+* $LOINC#33716-2 "Non-gynecological cytology study"
 
 ValueSet: MII_VS_Patho_Report_Category_HL7
 Id: mii-vs-patho-report-category-hl7
