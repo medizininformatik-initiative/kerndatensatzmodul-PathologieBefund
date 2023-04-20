@@ -1,0 +1,148 @@
+@startuml "Patho"
+
+skinparam Linetype ortho
+skinparam Nodesep 170
+skinparam Ranksep 80
+
+together {
+  class "Patient:in" as Patient <<from Person>> #PeachPuff 
+  class "Gesundheitseinrichtung" as Organization <<from Strukturdaten>> #LightPink
+  class "Versorgungsstellenkontakt" as Encounter <<from Fall>> #PaleGreen
+}
+
+class "Diagnose" as Condition <<from Diagnose>> #MediumSlateBlue
+
+Patient -[hidden]- Encounter
+Organization -[hidden]- Patient
+Patient "1" <- "0..*" PathoReport
+PathoReport "0..*" -> "0..1" Encounter
+PathoReport "0..*" -> "1" Organization
+ServiceRequest "0..*" -> "1" Encounter
+Condition -> "0..*" PathoReport 
+ServiceRequest -l-> "0..*" Condition : KlinischeAngaben
+
+together {
+  class "Pathologiebefundbericht" as PathoReport #MediumTurquoise 
+  class "Untersuchungsauftrag" as ServiceRequest #PaleTurquoise
+}
+
+together {
+  class "Beobachtungsabschnitt" as Section #PaleTurquoise 
+  class "GenerischeBeobachtung" as PathoFinding #PaleTurquoise 
+
+}
+
+Section "1..*" -l-o "1" PathoReport
+Section "0..*" - "1" Section : enthaelt Unterabschnitte
+
+together {
+  class "Probe" as Specimen #PaleTurquoise 
+  class "Entnahme" as Collection #PaleTurquoise 
+
+}
+
+
+class "Pathologiebefundbericht" as PathoReport #MediumTurquoise {
+  +Identifikator : id
+  +SetID : identifier
+  +Versionsnummer : int
+  +Titel : String
+  +Code : code
+  +Status : code
+  +Dokumentationsdatum : datetime
+  +Autor : Reference
+  +LegalerAuthetikator : Reference
+  +ServiceEvent : Reference
+  +zugehoerigesDokument : Reference
+  +Kommentar : String
+}
+
+class "Beobachtungsabschnitt" as Section #PaleTurquoise {
+  +Identifikation : identifier
+  +Code : code
+  +Title : String
+  +Text : String
+}
+
+
+class "Untersuchungsauftrag" as ServiceRequest #PaleTurquoise {
+  +AuftragsgruppenID : identifier
+  +AuftraggeberAuftragsID : identifier
+  +AuftragnehmerAuftragsID : identifier
+  +Status : code
+  +KlinischeAngaben : Reference
+  +Patient : Reference
+  +Einsender : Reference
+  +Probenentnehmer : Reference
+}
+
+ServiceRequest "1..*" <-u- "0..1" PathoReport : ServiceEvent
+
+class "GenerischeBeobachtung" as PathoFinding #PaleTurquoise {
+  +Identifikation : id
+  +Code : code 
+  +Status : code
+  +Text : String
+  +Befundzeit : datetime
+  +Prioritaet : code
+  +Wert : Quantity
+  +Untersuchungsmethode : code
+}
+
+PathoFinding "0..*" -l-o "1" Section
+
+class "Probe" as Specimen #PaleTurquoise {
+  +Identifikator : id
+  +Status : code
+  +Probenart : code
+  +Laboreingangszeitpunkt : datetime
+  +Kommentar : String
+  +Eigenschaften : code
+}
+
+Specimen "0..*" <-u- "1..*" PathoFinding
+Specimen "0..*" -l- "1" Section
+Specimen "0..*" <-l- "0..1" ServiceRequest
+Specimen "0..*" - "0..1" Specimen : gewonnen||bearbeitet aus
+
+class "Entnahme" as Collection #PaleTurquoise {
+  +Entnahmezeitpunkt : datetime
+  +Herkunft : code
+  +Gewinnungsmethode : code
+}
+
+Collection "1" -u- "1..*" Specimen
+
+class "Bearbeitung" as Processing #PaleTurquoise {
+  +Bearbeitungsprozedur : code 
+  +Elternprobe : identifier
+  +Additive : code
+  +Beschreibung : String
+}
+
+Processing "0..*" -u- "0..*" Specimen
+
+class "Container" as Container #PaleTurquoise {
+  +ContainerID : identifier
+  +Additive : code
+  +ContainerTyp : code
+}
+
+Container "1..*" -l- "0..*" Specimen
+
+class "EingebettetesBild" as Media #PaleTurquoise {
+  +Identifikator : identifier
+  +Wert : String
+}
+
+Media "0..*" -d- "1" PathoFinding
+
+class "RegionOfInterest" as ROI #PaleTurquoise {
+  +Identifikator : identifier
+  +Code : code
+  +Wert : List
+}
+
+ROI "0..*" - "1" Media
+
+@enduml
