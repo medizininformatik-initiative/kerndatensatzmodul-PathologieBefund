@@ -13,6 +13,8 @@ Description: "Defines the general pathology report structure for German hospital
   * lastUpdated MS
   * profile MS
 * text MS
+// Extension for parent report
+* extension contains $fhir-workflow-related-artifact named parent-report 0..* MS
 // Identifikator
 * identifier 1.. MS
   * ^slicing.discriminator.type = #pattern
