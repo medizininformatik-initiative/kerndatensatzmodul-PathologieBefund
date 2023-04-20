@@ -32,5 +32,6 @@ Alias: $fhir-narrative-link = http://hl7.org/fhir/StructureDefinition/narrativeL
 Alias: $fhir-version-number = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
 Alias: $fhir-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $fhir-capabilitystatement-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
+Alias: $fhir-workflow-related-artifact = http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact
 Alias: $us-mcode-body-location-qualifier = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-body-location-qualifier
 Alias: $us-mcode-laterality-qualifier = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality-qualifier

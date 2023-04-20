@@ -60,6 +60,36 @@
         "mustSupport": true
       },
       {
+        "id": "DiagnosticReport.extension",
+        "path": "DiagnosticReport.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "DiagnosticReport.extension:parent-report",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "parent-report",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
         "slicing": {
