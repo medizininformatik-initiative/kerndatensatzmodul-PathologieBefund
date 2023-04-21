@@ -1,0 +1,14 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "mii-sp-patho-custodian",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-custodian",
+  "name": "MII_SP_Patho_Custodian",
+  "description": "SearchParameter for Composition.custodian",
+  "status": "draft",
+  "code": "custodian",
+  "base": [
+    "Composition"
+  ],
+  "type": "reference",
+  "expression": "Composition.custodian"
+}

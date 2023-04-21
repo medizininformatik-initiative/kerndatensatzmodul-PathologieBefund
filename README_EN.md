@@ -1,7 +1,7 @@
 ## Medizininformatik Initiative - Kerndatensatz - Modul Pathologiebefund
 
 ### Overview
-This project describes the FHIR specification of the extension module 'Pathology Findings', which is part of the core dataset of the Medical Informatics Initiative. The [FHIR Profiles](https://simplifier.net/medizininformatikinitiative-modulpathologie/~resources?category=Profile) and [Implementation Guides](https://simplifier.net/guide/medizininformatikinitiative-modulpathologie-implementationguide2/igkdsmodulpathologie-befund) published here serve as the main and binding specification for the syntactic and semantic coding of the module's contents. 
+This project describes the FHIR specification of the extension module 'Pathology Findings', which is part of the core dataset of the Medical Informatics Initiative. The [FHIR Profiles](https://simplifier.net/medizininformatikinitiative-modulpathologie/~resources?category=Profile) and [Implementation Guides](https://simplifier.net/guide/medizininformatikinitiative-modulpathologie-implementationguide2?version=current) published here serve as the main and binding specification for the syntactic and semantic coding of the module's contents. 
 
 ### Status:
 All published FHIR artifacts within this project have a status by which the respective maturity standard can be derived. Profiles with the status 'Draft' have not yet been balloted and may still be subject to various and substantial changes. Mandatory and balloted results can be found under the tab 'Packages'.
@@ -28,6 +28,6 @@ Content definition and Terminologies (in alphabetical order):
 * Thomas Rüdiger
 
 Technical specification (in alphabetical order): 
-* [Alexander Bartschke](https://github.com/Kosmos3) (Modellierung in Art-Decor)
-* [Andrea Essenwanger](https://github.com/ByteGnome) (Technische Umsetzung FHIR Profile, Implementation Guide und Logical Models)
-* [Thimo Andre Hölter](https://github.com/ThimoHoelter) (Technische Umsetzung FHIR Profile)
+* [Alexander Bartschke](https://github.com/Kosmos3) (Modeling in Art-Decor)
+* [Andrea Essenwanger](https://github.com/ByteGnome) (FHIR profiling, Implementation Guide and Logical Models)
+* [Thimo Andre Hölter](https://github.com/ThimoHoelter) (FHIR profiling, Implementation Guide and Logical Models)
