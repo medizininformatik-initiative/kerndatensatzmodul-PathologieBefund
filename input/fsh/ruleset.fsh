@@ -1,8 +1,8 @@
 RuleSet: RuleSet-Metadata
-* ^status = #draft
-* ^version = "1.0.0-ballot1"
+* ^status = #active
+* ^version = "1.0.0"
 * ^experimental = false
-* ^date = "2022-07-18"
+* ^date = "2023-04-21"
 
 RuleSet: AddInteraction(interaction, expectation)
 * interaction[+].code = {interaction}

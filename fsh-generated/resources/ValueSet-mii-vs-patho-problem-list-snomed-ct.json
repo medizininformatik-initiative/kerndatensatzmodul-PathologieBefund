@@ -1,14 +1,14 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "MII_VS_Patho_Problem_List_SNOMED_CT",
   "id": "mii-vs-patho-problem-list-snomed-ct",
   "title": "MII VS Patho Problem List [SNOMED CT]",
   "description": "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct",
-  "version": "1.0.0-ballot1",
+  "version": "1.0.0",
   "experimental": false,
-  "date": "2022-07-18",
+  "date": "2023-04-21",
   "compose": {
     "include": [
       {

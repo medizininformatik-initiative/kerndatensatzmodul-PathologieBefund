@@ -1,14 +1,14 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "MII_VS_Patho_Container_Type_SNOMED_CT",
   "id": "mii-vs-patho-container-type-snomed-ct",
   "title": "MII VS Patho Container Type [SNOMED CT]",
   "description": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct",
-  "version": "1.0.0-ballot1",
+  "version": "1.0.0",
   "experimental": false,
-  "date": "2022-07-18",
+  "date": "2023-04-21",
   "compose": {
     "include": [
       {

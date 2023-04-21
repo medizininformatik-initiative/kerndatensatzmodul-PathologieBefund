@@ -1,14 +1,14 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "MII_VS_Patho_Media_Modality_SNOMED_CT",
   "id": "mii-vs-patho-media-modality-snomed-ct",
   "title": "MII VS Patho Media Modality [SNOMED CT]",
   "description": "ValueSet with some of the main Media.modalities needed in the pathological scope",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct",
-  "version": "1.0.0-ballot1",
+  "version": "1.0.0",
   "experimental": false,
-  "date": "2022-07-18",
+  "date": "2023-04-21",
   "compose": {
     "include": [
       {

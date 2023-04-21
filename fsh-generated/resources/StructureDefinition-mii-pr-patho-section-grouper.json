@@ -4,7 +4,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-section-grouper",
   "name": "MII_PR_Patho_Section_Grouper",
   "title": "MII PR Patho Section Grouper",
-  "status": "draft",
+  "status": "active",
   "description": "Grouper profile for pathological findings",
   "fhirVersion": "4.0.1",
   "mapping": [
