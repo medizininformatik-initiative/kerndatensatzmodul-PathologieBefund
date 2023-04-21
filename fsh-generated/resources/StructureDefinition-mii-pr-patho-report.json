@@ -74,9 +74,9 @@
         }
       },
       {
-        "id": "DiagnosticReport.extension:parent-report",
+        "id": "DiagnosticReport.extension:related-report",
         "path": "DiagnosticReport.extension",
-        "sliceName": "parent-report",
+        "sliceName": "related-report",
         "min": 0,
         "max": "*",
         "type": [
