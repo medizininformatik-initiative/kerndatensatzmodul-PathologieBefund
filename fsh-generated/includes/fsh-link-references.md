@@ -37,6 +37,7 @@
 [MII_PR_Patho_Report]: StructureDefinition-mii-pr-patho-report.html
 [MII_PR_Patho_Section_Grouper]: StructureDefinition-mii-pr-patho-section-grouper.html
 [MII_PR_Patho_Service_Request]: StructureDefinition-mii-pr-patho-service-request.html
+[MII_PR_Patho_Specimen]: StructureDefinition-mii-pr-patho-specimen.html
 [MII_VS_Patho_All_LOINC]: ValueSet-mii-vs-patho-all-loinc.html
 [MII_VS_Patho_Collection_Method_SNOMED_CT]: ValueSet-mii-vs-patho-collection-method-snomed-ct.html
 [MII_VS_Patho_Composition_Type_LOINC]: ValueSet-mii-vs-patho-composition-type-loinc.html
@@ -64,4 +65,3 @@
 [mii-sp-patho-request]: SearchParameter-mii-sp-patho-request.html
 [mii-sp-patho-supporting-info]: SearchParameter-mii-sp-patho-supporting-info.html
 [mii-sp-patho-value-ratio]: SearchParameter-mii-sp-patho-value-ratio.html
-[MII_PR_Patho_Specimen]: StructureDefinition-mii-pr-patho-specimen.html
