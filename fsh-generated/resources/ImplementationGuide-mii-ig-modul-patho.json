@@ -43,7 +43,7 @@
     },
     {
       "packageId": "de.gematik.isik-basismodul",
-      "version": "2.0.4",
+      "version": "2.0.5",
       "uri": "http://fhir.org/packages/de.gematik.isik-basismodul/ImplementationGuide/de.gematik.isik-basismodul",
       "id": "de_gematik_isik_basismodul"
     },
