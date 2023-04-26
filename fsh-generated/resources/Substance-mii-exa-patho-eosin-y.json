@@ -1,0 +1,18 @@
+{
+  "resourceType": "Substance",
+  "id": "mii-exa-patho-eosin-y",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "763042003",
+        "system": "http://snomed.info/sct",
+        "display": "Eosin Y (substance)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Patho_Container_Type_SNOMED_CT",
+  "id": "mii-vs-patho-container-type-snomed-ct",
+  "title": "MII VS Patho Container Type [SNOMED CT]",
+  "description": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct",
+  "version": "1.0.0",
+  "experimental": false,
+  "date": "2023-04-21",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "434746001",
+            "display": "Specimen vial (physical object)"
+          },
+          {
+            "code": "434464009",
+            "display": "Tissue cassette (physical object)"
+          },
+          {
+            "code": "434708008",
+            "display": "Tissue cassette for microarray (physical object)"
+          },
+          {
+            "code": "433466003",
+            "display": "Microscope slide (physical object)"
+          },
+          {
+            "code": "433453003",
+            "display": "Specimen container component (physical object)"
+          },
+          {
+            "code": "430863003",
+            "display": "Tissue embedding medium (substance)"
+          },
+          {
+            "code": "434533009",
+            "display": "Electron microscopy grid (physical object)"
+          },
+          {
+            "code": "434822004",
+            "display": "Specimen well (physical object)"
+          },
+          {
+            "code": "433472003",
+            "display": "Microscope slide coverslip (physical object)"
+          },
+          {
+            "code": "430862008",
+            "display": "Microscope slide mounting medium (substance)"
+          },
+          {
+            "code": "434473001",
+            "display": "Specimen container lid (physical object)"
+          }
+        ]
+      }
+    ]
+  }
+}
