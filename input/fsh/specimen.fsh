@@ -1,8 +1,8 @@
 Profile: MII_PR_Patho_Specimen
 Parent: $mii-bio-specimencore
 Id: mii-pr-patho-specimen
-Title: "PR MII Patho Specimen"
-Description: "Pathology specimen"
+Title: "MII PR Patho Specimen"
+Description: "Pathology specimen (based on Biobank module)"
 * id MS
 * meta.lastUpdated MS
 * meta.profile MS

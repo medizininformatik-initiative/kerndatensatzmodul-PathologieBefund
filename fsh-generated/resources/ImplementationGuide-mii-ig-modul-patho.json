@@ -370,6 +370,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mii-pr-patho-specimen"
+        },
+        "name": "MII PR Patho Specimen",
+        "description": "Pathology specimen (based on Biobank module)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-patho-all-loinc"
         },
         "name": "MII VS Patho All [LOINC]",
@@ -565,14 +573,6 @@
           "reference": "SearchParameter/mii-sp-patho-value-ratio"
         },
         "name": "mii-sp-patho-value-ratio",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-patho-specimen"
-        },
-        "name": "PR MII Patho Specimen",
-        "description": "Pathology specimen",
         "exampleBoolean": false
       }
     ],
