@@ -18,8 +18,8 @@ Patient "1" <- "0..*" PathoReport
 PathoReport "0..*" -> "0..1" Encounter
 PathoReport "0..*" -> "1" Organization
 ServiceRequest "0..*" -> "1" Encounter
-Condition -> "0..*" PathoReport 
-ServiceRequest -l-> "0..*" Condition : KlinischeAngaben
+Condition "0..*" -> "0..*" PathoReport 
+ServiceRequest "0..*" -l-> "0..*" Condition : KlinischeAngaben
 
 together {
   class "Pathologiebefundbericht" as PathoReport #MediumTurquoise 
@@ -51,7 +51,7 @@ class "Pathologiebefundbericht" as PathoReport #MediumTurquoise {
   +Status : code
   +Dokumentationsdatum : datetime
   +Autor : Reference
-  +LegalerAuthetikator : Reference
+  +LegalerAuthentikator : Reference
   +ServiceEvent : Reference
   +zugehoerigesDokument : Reference
   +Kommentar : String
