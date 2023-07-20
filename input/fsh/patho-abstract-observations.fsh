@@ -7,6 +7,8 @@ Parent: Observation
 Id: mii-pr-patho-base-observation
 Title: "MII PR Patho Base Observation"
 Description: "Abstract Observation to define common features of a main pathology observation"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^abstract = true
 * id MS
 * meta.lastUpdated MS

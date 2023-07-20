@@ -3,6 +3,8 @@ Parent: $mii-bio-specimencore
 Id: mii-pr-patho-specimen
 Title: "MII PR Patho Specimen"
 Description: "Pathology specimen (based on Biobank module)"
+* insert PR_CS_VS_Version
+* insert Publisher
 * id MS
 * meta.lastUpdated MS
 * meta.profile MS

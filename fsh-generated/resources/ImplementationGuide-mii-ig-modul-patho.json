@@ -7,7 +7,7 @@
   "title": "MII IG Modul Patho",
   "status": "active",
   "experimental": false,
-  "date": "2023-04-21",
+  "date": "2023-07-20",
   "publisher": "Medizininformatik-Initiative",
   "contact": [
     {
@@ -24,7 +24,7 @@
       ]
     }
   ],
-  "packageId": "mii-ig-modul-patho",
+  "packageId": "de.medizininformatikinitiative.kerndatensatz.patho",
   "fhirVersion": [
     "4.0.1"
   ],
@@ -580,13 +580,7 @@
       "nameUrl": "toc.html",
       "title": "Table of Contents",
       "generation": "html",
-      "page": [
-        {
-          "nameUrl": "index.html",
-          "title": "Home",
-          "generation": "markdown"
-        }
-      ]
+      "page": []
     },
     "parameter": [
       {

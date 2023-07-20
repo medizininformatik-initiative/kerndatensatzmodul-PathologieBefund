@@ -4,9 +4,11 @@
 Instance: mii-sp-patho-request
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Request"
 * description = "SearchParameter for Specimen.request"
-* status = #draft
+* status = #active
 * code = #request
 * base = #Specimen
 * type = #reference
@@ -15,9 +17,11 @@ Usage: #definition
 Instance: mii-sp-patho-collection-method
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Collection_Method"
 * description = "SearchParameter for Specimen.collection.method"
-* status = #draft 
+* status = #active 
 * code = #collection-method
 * base = #Specimen 
 * type = #token
@@ -26,9 +30,11 @@ Usage: #definition
 Instance: mii-sp-patho-collection-body-site
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Collection_Body_Site"
 * description = "SearchParameter for Specimen.collection.bodySite"
-* status = #draft
+* status = #active
 * code = #collection-body-site
 * base = #Specimen
 * type = #token
@@ -37,9 +43,11 @@ Usage: #definition
 Instance: mii-sp-patho-processing-procedure
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Processing_Procedure"
 * description = "SearchParameter for Specimen.processing.procedure"
-* status = #draft
+* status = #active
 * code = #processing-procedure
 * base = #Specimen
 * type = #token
@@ -48,9 +56,11 @@ Usage: #definition
 Instance: mii-sp-patho-processing-additive
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Processing_Additive"
 * description = "SearchParameter for Specimen.processing.additive"
-* status = #draft
+* status = #active
 * code = #processing-additive
 * base = #Specimen
 * type = #reference
@@ -59,9 +69,11 @@ Usage: #definition
 Instance: mii-sp-patho-processing-date
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Processing_Date"
 * description = "SearchParameter for Specimen.processing.time"
-* status = #draft
+* status = #active
 * code = #processing-date
 * base = #Specimen
 * type = #date
@@ -70,9 +82,11 @@ Usage: #definition
 Instance: mii-sp-patho-container-additive
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Container_Additive"
 * description = "SearchParameter for Specimen.container.additive"
-* status = #draft
+* status = #active
 * code = #container-additive
 * base = #Specimen
 * type = #reference
@@ -84,9 +98,11 @@ Usage: #definition
 Instance: mii-sp-patho-body-site
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Body_Site"
 * description = "SearchParameter for Observation.bodySite"
-* status = #draft
+* status = #active
 * code = #body-site
 * base = #Observation
 * type = #token
@@ -95,9 +111,11 @@ Usage: #definition
 Instance: mii-sp-patho-value-ratio
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Value_Ratio"
 * description = "SearchParameter for Observation.valueRatio"
-* status = #draft
+* status = #active
 * code = #value-ratio
 * base = #Observation
 * type = #quantity
@@ -109,9 +127,11 @@ Usage: #definition
 Instance: mii-sp-patho-reason-code
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Reason_Code"
 * description = "SearchParameter for ServiceRequest.reasonCode"
-* status = #draft
+* status = #active
 * code = #reason-code
 * base = #ServiceRequest
 * type = #token
@@ -120,9 +140,11 @@ Usage: #definition
 Instance: mii-sp-patho-supporting-info
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Reason_Code"
 * description = "SearchParameter for ServiceRequest.supportingInfo"
-* status = #draft
+* status = #active
 * code = #supporting-info
 * base = #ServiceRequest
 * type = #reference
@@ -134,9 +156,11 @@ Usage: #definition
 Instance: mii-sp-patho-imaging-study
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Imaging_Study"
 * description = "SearchParameter for DiagnosticReport.imagingStudy"
-* status = #draft
+* status = #active
 * code = #imaging-study
 * base = #DiagnosticReport
 * type = #reference
@@ -148,10 +172,12 @@ Usage: #definition
 Instance: mii-sp-patho-attester-mode
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Attester_Mode"
 * code = #attester-mode
 * description = "SearchParameter for Composition.attester.mode"
-* status = #draft
+* status = #active
 * base = #Composition
 * type = #token
 * expression = "Composition.attester.mode"
@@ -159,9 +185,11 @@ Usage: #definition
 Instance: mii-sp-patho-custodian
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Custodian"
 * description = "SearchParameter for Composition.custodian"
-* status = #draft
+* status = #active
 * code = #custodian
 * base = #Composition
 * type = #reference
@@ -170,9 +198,11 @@ Usage: #definition
 Instance: mii-sp-patho-relates-to-code
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Relates_To_Code"
 * description = "SearchParameter for Composition.relatesTo.code"
-* status = #draft
+* status = #active
 * code = #relates-to-code
 * base = #Composition
 * type = #token
@@ -184,10 +214,12 @@ Usage: #definition
 Instance: mii-sp-patho-part-of
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
+* insert Version
 * name = "MII_SP_Patho_Part_Of"
 * code = #part-of
 * description = "SearchParameter for Media.partOf"
-* status = #draft
+* status = #active
 * base = #Media
 * type = #reference
 * expression = "(Media.partOf as Media)"

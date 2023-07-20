@@ -5,6 +5,8 @@ Parent: Media
 Id: mii-pr-patho-attached-image
 Title: "MII PR Patho Attached Image"
 Description: "Profile for attached images"
+* insert PR_CS_VS_Version
+* insert Publisher
 * id MS
 * meta.lastUpdated MS
 * meta.profile MS
