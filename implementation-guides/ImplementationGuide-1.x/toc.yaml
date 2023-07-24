@@ -1,12 +1,2 @@
-- name: Index
-  filename: Index.guide.md
-- name: Beschreibung Modul Pathologie-Befund
-  filename: BeschreibungModulPathologie-Befund.guide.md
-- name: Kontext im Gesamtprojekt / Bezüge aus anderen Modulen
-  filename: KontextimGesamtprojektBezgeausanderenModulen.guide.md
-- name: Referenzen
-  filename: Referenzen.guide.md
-- name: Anwendungsfälle / Informationsmodell
-  filename: AnwendungsflleInformationsmodell
-- name: Technische Implementierung
-  filename: TechnischeImplementierung
+- name: IG MII KDS Modul Pathologie-Befund
+  filename: IG-MII-KDS-Modul-Pathologie-Befund
