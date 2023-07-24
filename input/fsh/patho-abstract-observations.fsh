@@ -75,6 +75,8 @@ Parent: mii-pr-patho-base-observation
 Id: mii-pr-patho-section-grouper
 Title: "MII PR Patho Section Grouper"
 Description: "Grouper profile for pathological findings"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^abstract = true
 * text MS
 * hasMember ^slicing.discriminator.type = #type

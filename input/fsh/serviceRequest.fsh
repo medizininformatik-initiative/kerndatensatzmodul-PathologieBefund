@@ -96,6 +96,8 @@ Parent: Condition
 Id: mii-pr-patho-problem-list-item
 Title: "MII PR Patho Problem List Item"
 Description: "Condition profile for problem list item"
+* insert PR_CS_VS_Version
+* insert Publisher
 * meta.profile MS
 * category 1.. MS
   * coding 1.. MS
@@ -118,6 +120,8 @@ Parent: List
 Id: mii-pr-patho-active-problems-list
 Title: "MII PR Patho Active Problems List"
 Description: "List of conditions currently being monitored for the patient"
+* insert PR_CS_VS_Version
+* insert Publisher
 * meta.profile MS
 * status MS
 * mode MS
@@ -139,6 +143,8 @@ Parent: List
 Id: mii-pr-patho-history-of-present-illness
 Title: "MII PR Patho History Of Present Illness"
 Description: "List profile for 'History of Present Illness'"
+* insert PR_CS_VS_Version
+* insert Publisher
 * meta.profile MS
 * status MS
 * mode MS

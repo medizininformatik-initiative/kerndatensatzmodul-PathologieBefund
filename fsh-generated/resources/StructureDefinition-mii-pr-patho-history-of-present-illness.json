@@ -2,9 +2,21 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-history-of-present-illness",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness",
+  "version": "1.0.0",
   "name": "MII_PR_Patho_History_Of_Present_Illness",
   "title": "MII PR Patho History Of Present Illness",
   "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "description": "List profile for 'History of Present Illness'",
   "fhirVersion": "4.0.1",
   "mapping": [
