@@ -3,7 +3,8 @@ Logical: MII_LM_Patho_Logical_Model
 Id: mii-lm-patho-logical-model
 Title: "MII LM Patho Logical Model"
 Description: "Logical Model for the graphical reprensentation of the respective Art-Decor Model"
-
+* insert PR_CS_VS_Version
+* insert Publisher
 * Identifikation 1..* Identifier "Der Identifikator eines Pathologiebefundberichts (z.B. E/20/12345.1) ist eineindeutig und wird meist aus der Eingangsnummer (Fall-Nummer) abgeleitet. Er sollte zusammengesetzt werden aus der Set-ID (z.B. E/20/12345), unter der alle Versionen eines Befundberichts erfasst werden, und der Versionsnummer (z.B. 1). Es ist allerdings auch möglich, einen UID (Unique identifier) oder GUID (Global Unique Identifier) zu verwenden, der keine Ableitung aus der Fallnummer darstellt. Üblicherweise wird die Fall-Nummer als Set-ID verwendet."
 * Status 1..1 code "Status des Pathologiebefundberichts."
 * Dokumentationsdatum 1..1 dateTime "Zeitpunkt, an dem der Pathologiebefundbericht  dokumentiert (verifiziert und freigegeben) wurde."

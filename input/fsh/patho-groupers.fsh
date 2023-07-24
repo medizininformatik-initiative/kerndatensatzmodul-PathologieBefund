@@ -6,6 +6,8 @@ Parent: mii-pr-patho-section-grouper
 Id: mii-pr-patho-intraoperative-grouper
 Title: "MII PR Patho Intraoperative Grouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
+* insert PR_CS_VS_Version
+* insert Publisher
 * code = $LOINC#83321-0
 
 // Example(s) TODO

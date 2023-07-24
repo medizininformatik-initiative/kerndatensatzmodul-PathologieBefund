@@ -6,6 +6,8 @@ Parent: ServiceRequest
 Id: mii-pr-patho-service-request
 Title: "MII PR Patho Service Request"
 Description: "Order for the analysis of a sample or a group of samples."
+* insert PR_CS_VS_Version
+* insert Publisher
 // Meta
 * meta.profile MS
 * meta.source MS

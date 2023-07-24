@@ -6,8 +6,17 @@
   "name": "MII_PR_Patho_Report",
   "title": "MII PR Patho Report",
   "status": "active",
-  "experimental": false,
-  "date": "2023-04-21",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "description": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -58,20 +67,6 @@
         "id": "DiagnosticReport.text",
         "path": "DiagnosticReport.text",
         "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.extension",
-        "path": "DiagnosticReport.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       },
       {
         "id": "DiagnosticReport.extension:related-report",

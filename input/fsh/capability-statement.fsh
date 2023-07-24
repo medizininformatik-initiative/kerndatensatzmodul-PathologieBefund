@@ -1,17 +1,15 @@
 Instance: mii-cps-patho-capability-statement
 InstanceOf: CapabilityStatement
 Usage: #definition
-* version = "0.9.0"
-* status = #draft
-* name = "MII_CpS_Patho_Capability_Statement"
-* title = "MII CpS Patho Capability Statement"
-// * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata"
+* insert SP_Publisher
+* insert Version
+* name = "MII_CPS_Patho_Capability_Statement"
+* title = "MII CPS Patho Capability Statement"
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata"
 * description = "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative"
 * experimental = false
 * date = "2022-07-18"
-* publisher = "Medizininformatik Initiative"
-* contact.telecom.system = #url
-* contact.telecom.value = "https://www.medizininformatik-initiative.de"
+* status = #active
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
 * fhirVersion = #4.0.1

@@ -1,13 +1,35 @@
 {
-  "name": null,
-  "version": null,
-  "description": null,
-  "devDependencies": null,
-  "canonicals": null,
+  "name": "de.medizininformatikinitiative.kerndatensatz.patho",
+  "version": "1.0.0",
+  "description": "Medizininformatik Initiative - Modul Pathologie",
+  "author": "juliansass",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "keywords": [
+    "MII",
+    "KDS",
+    "Pathologie"
+  ],
+  "license": "CC0-1.0",
+  "homepage": "https://www.medizininformatik-initiative.de/",
+  "directories" : {
+    "lib" : "package",
+    "example" : "examples"
+  },
+  "title": "MII IG Pathologie",
+  "maintainers" : [
+    {
+      "name" : "Medizininformatik Initiative",
+      "url" : "https://www.medizininformatik-initiative.de/"
+    }
+  ],
+  "canonicals": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho",
+  "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
   "dependencies": {
-    "de.medizininformatikinitiative.kerndatensatz.person": "2.0.0-alpha3",
+    "de.gematik.isik-basismodul": "2.0.5",
     "de.medizininformatikinitiative.kerndatensatz.diagnose": "2.0.0-alpha3",
-    "de.medizininformatikinitiative.kerndatensatz.biobank": "1.0.0",
-    "de.basisprofil.r4": "1.3.2"
+    "de.medizininformatikinitiative.kerndatensatz.biobank": "1.0.8",
+    "hl7.fhir.us.mcode": "2.1.0"
   }
 }

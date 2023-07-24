@@ -6,18 +6,19 @@ id: mii-ig-modul-patho
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho
 title: "MII IG Modul Patho"
 name: MII_IG_Modul_Patho
-status: "active"
+status: active
 experimental: false
 version: 1.0.0
-date: "2023-04-21"
+date: "2023-07-20"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
+packageId: de.medizininformatikinitiative.kerndatensatz.patho
 releaseLabel: ci-build
 publisher: 
   name: Medizininformatik-Initiative
   url: https://www.medizininformatik-initiative.de/
   email: info@medizininformatik-initiative.de
-# FSHOnly: true
+FSHOnly: false
 # Don't forget to add further dependencies if necessary!
 dependencies: 
   # de.basisprofil.r4: 1.4.0
@@ -29,6 +30,6 @@ dependencies:
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
- Home: index.html
- Artifacts: artifacts.html
+# menu:
+#  Home: index.html
+#  Artifacts: artifacts.html

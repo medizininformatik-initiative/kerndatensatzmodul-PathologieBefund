@@ -6,6 +6,8 @@ Parent: mii-pr-patho-base-observation
 Id: mii-pr-patho-finding
 Title: "MII PR Patho Finding"
 Description: "Instantiable Observation to describe a generic pathology finding"
+* insert PR_CS_VS_Version
+* insert Publisher
 * category contains section-type 1..1 MS
 * category[section-type] from mii-vs-patho-section-types-loinc (required)
 * value[x] MS

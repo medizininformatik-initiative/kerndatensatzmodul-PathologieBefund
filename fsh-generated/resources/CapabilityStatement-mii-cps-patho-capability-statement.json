@@ -1,14 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "mii-cps-patho-capability-statement",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/mii-cps-patho-capability-statement",
-  "version": "0.9.0",
-  "status": "draft",
-  "name": "MII_CpS_Patho_Capability_Statement",
-  "title": "MII CpS Patho Capability Statement",
-  "description": "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative",
-  "experimental": false,
-  "date": "2022-07-18",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -20,6 +13,13 @@
       ]
     }
   ],
+  "version": "1.0.0",
+  "name": "MII_CPS_Patho_Capability_Statement",
+  "title": "MII CPS Patho Capability Statement",
+  "description": "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative",
+  "experimental": false,
+  "date": "2022-07-18",
+  "status": "active",
   "jurisdiction": [
     {
       "coding": [

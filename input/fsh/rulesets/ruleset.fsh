@@ -1,9 +1,3 @@
-RuleSet: RuleSet-Metadata
-* ^status = #active
-* ^version = "1.0.0"
-* ^experimental = false
-* ^date = "2023-04-21"
-
 RuleSet: AddInteraction(interaction, expectation)
 * interaction[+].code = {interaction}
 * interaction[=].extension.url = $fhir-capabilitystatement-expectation

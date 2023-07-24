@@ -7,8 +7,17 @@
   "description": "ValueSet for the types a pathology Composition can have",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-loinc",
   "version": "1.0.0",
-  "experimental": false,
-  "date": "2023-04-21",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {
