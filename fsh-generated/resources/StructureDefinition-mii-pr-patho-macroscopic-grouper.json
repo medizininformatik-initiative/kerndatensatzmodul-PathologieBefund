@@ -2,9 +2,21 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-macroscopic-grouper",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper",
+  "version": "1.0.0",
   "name": "MII_PR_Patho_Macroscopic_Grouper",
   "title": "MII PR Patho Macroscopic Grouper",
   "status": "active",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "description": "Based on IHE PaLM APSR - Macroscopic Observation Finding",
   "fhirVersion": "4.0.1",
   "mapping": [

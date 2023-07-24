@@ -21,6 +21,8 @@ Parent: mii-pr-patho-section-grouper
 Id: mii-pr-patho-macroscopic-grouper
 Title: "MII PR Patho Macroscopic Grouper"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
+* insert PR_CS_VS_Version
+* insert Publisher
 * code = $LOINC#22634-0
 
 // Example(s)
@@ -57,6 +59,8 @@ Parent: mii-pr-patho-section-grouper
 Id: mii-pr-patho-microscopic-grouper
 Title: "MII PR Patho Microscopic Grouper"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
+* insert PR_CS_VS_Version
+* insert Publisher
 * code = $LOINC#22635-7
 
 // Example(s)
@@ -82,6 +86,8 @@ Parent: mii-pr-patho-section-grouper
 Id: mii-pr-patho-additional-specified-grouper
 Title: "MII PR Patho Additional Specified Grouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
+* insert PR_CS_VS_Version
+* insert Publisher
 * code = $LOINC#100969-5 // not able to validate code yet, should come with next LOINC release & update of FHIR term-server
 
 // Example(s) TODO
@@ -95,6 +101,8 @@ Parent: mii-pr-patho-section-grouper
 Id: mii-pr-patho-diagnostic-conclusion-grouper
 Title: "MII PR Patho Diagnostic Conclusion Grouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
+* insert PR_CS_VS_Version
+* insert Publisher
 * code = $LOINC#22637-3
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom MS

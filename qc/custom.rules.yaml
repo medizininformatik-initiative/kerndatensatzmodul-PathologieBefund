@@ -19,7 +19,7 @@
 
 - name: naming-convention-id
   status: "Checking if all resource ids follow the naming convention"
-  predicate: id.matches('^mii-(pr|ex|lm|vs|cs|cm|sm|ns|sp|cps|od|ig|exa)-Patho')
+  predicate: id.matches('^mii-(pr|ex|lm|vs|cs|cm|sm|ns|sp|cps|od|ig|exa)-patho')
   error-message: "resource id naming convention mismatch"
   files:
     - /**/*.xml
@@ -37,7 +37,7 @@
 
 - name: naming-convention-title
   status: "Checking if all resource titles follow the naming convention"
-  predicate: title.exists() implies title.matches('^MII_(PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA)_Patho')
+  predicate: title.exists() implies title.matches('^MII (PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA) Patho')
   error-message: "resource name naming convention mismatch"
   files:
     - /**/*.xml
