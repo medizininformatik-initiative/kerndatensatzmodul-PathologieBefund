@@ -10,15 +10,15 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 Das Profil **MII PR Patho Intraoperative Grouper** der Resource Observation stellt als `DiagnosticReport.result:intraoperative-grouper` für einen **MII PR Patho Report** den jeweiligen Beobachtungsberichtsabschnitt "Intraoperative Beobachtung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von **MII PR Patho Finding**.
 
-@```
-from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-intraoperative-grouper' select Name: name, Canonical: url
-```
-
 Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu **MII PR Patho Finding** eingebunden werden.
 
 Falls dieser Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so sollte jeweils ein **MII PR Patho Intraoperative Grouper** pro Präparat vorhanden sein.
 
 Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
+
+@```
+from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-intraoperative-grouper' select Name: name, Canonical: url
+```
 
 ---------------------
 

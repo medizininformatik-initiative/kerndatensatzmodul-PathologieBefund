@@ -45,7 +45,7 @@ Für die Datensätze *Patient*, *Fall* und *Verwaltende Organisation* werden die
 ------
 
 ### Probe
-Als Basis für die Spezifikation der *Probe* wird das MII-Profil [Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/profilespecimenbioprobecore), aus dem Modul [Biobank](https://simplifier.net/medizininformatikinitiative-modulbiobank) genutzt.
+Als Basis für die Spezifikation der *Probe* wird das MII-Profil [Bioprobe - Core](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.biobank/1.0.8/files/1972743), aus dem Modul [Biobank](https://simplifier.net/medizininformatikinitiative-modulbiobank) genutzt.
 
 | Logisches Datenmodell | Beschreibung |
 |--|--|
@@ -120,4 +120,3 @@ Generische Pathologisch-anatomische Einzelbeobachtungen können in verschachtelt
 | Generische Pathologisch-anatomische Einzelbeobachtung.RegionOfInterest | Region of Interest, auf die sich die Beobachtung bezieht (z.B. Tumoranteil im Gewebsschnitt für den z.B. Ki-67 bestimmt wurde |
 | Generische Pathologisch-anatomische Einzelbeobachtung.Kommentar | Kommentar zur Beobachtung |
 | Generische Pathologisch-anatomische Einzelbeobachtung.Referenz | Referenz auf ein externes Dokument oder eine externe Beobachtung, z.B. Molekularpathologie |
-
