@@ -1,27 +1,45 @@
+---
+topic: PathoReport
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report
+---
+
 <a id="PathoReport"></a>
 ## {{page-title}}
 
 
 ### Beschreibung
 
-Das Profil [MII PR Patho Report](https://simplifier.net/medizininformatikinitiative-modulpathologie/pathologyreport) der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe {{pagelink:IG-MII-KDS-Modul-Pathologie-Befund/TechnischeImplementierung/FHIRProfile/MII-PR-Patho-Composition.guide.md}} ). 
+Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). 
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report' select Name: name, Canonical: url
 ```
 
-Es stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des SD MII Patho Report sein.
+Es stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein.
  
-Die wichtigsten Besonderheiten des SD MII Patho Report sind: 
+Die wichtigsten Besonderheiten des **MII PR Patho Report** sind: 
 - die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden, 
-- die Möglichkeit, Informationen zu mehreren Präparaten / Proben zu organisieren, was im Profil {{pagelink:IG-MII-KDS-Modul-Pathologie-Befund/TechnischeImplementierung/FHIRProfile/MII-PR-Patho-Finding.guide.md}} bisher nicht möglich ist,  
-- und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.    
+- die Möglichkeit, Informationen zu mehreren Präparaten / Proben zu organisieren, was im Profil **MII PR Patho Finding** bisher nicht möglich ist,  
+- und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.  
  
-Das SD MII Patho Report bildet als Entry in der Section “diagnostic-report” des Profils {{pagelink:IG-MII-KDS-Modul-Pathologie-Befund/TechnischeImplementierung/FHIRProfile/MII-PR-Patho-Composition.guide.md}} den Kern eines persistenten Dokuments "Pathologiebefundbericht".
+Das **MII PR Patho Report** bildet als Entry in der Section “diagnostic-report” des Profils **MII PR Patho Composition** den Kern eines persistenten Dokuments "Pathologiebefundbericht".
 
 ---------------------
-### Differential
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report, diff}}
+
+<tabs>
+    <tab title="snap" active="true">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report, snap}}
+    </tab>
+    <tab title="diff">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report, diff}}
+    </tab>
+    <tab title="hybrid">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report, hybrid}}
+    </tab>
+    <tab title="JSON">
+      {{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report}}
+    </tab>
+</tabs>
  
 ----------------------
 In untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Patho Composition dupliziert werden.
@@ -74,10 +92,6 @@ In untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Pat
 |DiagnosticReport.presentedForm | Befundbericht.PDF |
 
 -----
-### Snapshot
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report, snapshot}}
-
----
 
 ### Suchparameter
 
@@ -250,3 +264,4 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
 ### Beispiele
 
 {{json:mii-exa-patho-report}}
+

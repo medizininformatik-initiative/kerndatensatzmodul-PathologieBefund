@@ -9,7 +9,7 @@ Zentrales Dokument und Gegenstand dieses Erweiterungsmoduls ist dabei der **Befu
 
 ### Abbildung in Art-Decor
 
-{{render:ArtDecorGanz}}
+{{render:implementation-guides-ImplementationGuide-Common-images-ArtDecor-ganz}}
 
 **Pathologiebefundberichte** sind als klinische Dokumente zusammengefasste, überwiegend in Textform vorliegende Ergebnisse einer klinisch beauftragten, in einer Pathologieeinrichtung durchgeführten histo- und zytomorphologischen sowie molekularen Untersuchung oder Gruppen derartiger Untersuchungen mit einer synoptischen Bewertung. Im Sinne der [ISO/IEC-Norm 17020](https://www.din.de/de/mitwirken/normenausschuesse/nqsz/veroeffentlichungen/wdc-beuth:din21:146320816) handelt es sich dabei um Inspektionsberichte, den **"Pathologisch-anatomischen Begutachtungen"**. Die freitextlich formulierten Untersuchungsergebnisse können zusätzlich durch strukturierte Kodierungen ergänzt (semantisch annotiert) werden. Dabei gilt: **Jede strukturierte Kodierung muss auch als Text lesbar sein, aber nicht jede Textinformation muss kodiert werden.**  
 
@@ -35,7 +35,7 @@ Der Pathologiebefundbericht gliedert sich in mehrere Abschnitte, die jeweils die
 
 ### Abbildung der Beobachtungsberichtabschnitte 
 
-{{render:ArtDecorBeobachtungsabschnitt}}
+{{render:ImplementationGuide-Common-images-ArtDecor-Beobachtungsberichtabschnitt}}
 
 ## Untersuchungsauftrag
 
@@ -45,7 +45,7 @@ Aus einem (oder mehreren) Untersuchungsaufträgen zu einer Patientin wird mit de
 
 ### Abbildung des Untersuchungsauftrags
 
-{{render:ArtDecorUntersuchungsauftrag}}
+{{render:guides-ImplementationGuide-Common-images-ArtDecor-Untersuchungsauftrag}}
 
 
 ## Proben
@@ -54,4 +54,4 @@ Als Einsendung (Probe) wird das vom Einsender von Patient:in während einer diag
 
 ### Abbildung der Probe 
 
-{{render:ArtDecorProbe}}
+{{render:implementation-guides-ImplementationGuide-Common-images-ArtDecor-Probe}}

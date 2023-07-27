@@ -1,16 +1,34 @@
+---
+topic: PathoAttachedImage
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image
+---
+
 ## {{page-title}}
 
 ### Beschreibung
 
-Mit dem Profil [MII PR Patho Attached Image](https://simplifier.net/medizininformatikinitiative-modulpathologie/mii_pr_patho_attached_image) der Ressource Media wird  die Beschreibung von in den Befund, d.h. den MII PR Patho Report, eingebetteten Bildern vorgenommen. Um Bilder in MII PR Patho Findings einzubinden, muss auf eine Referenz zu einer ImagingStudy zurückgegriffen werden. Das vorliegende Profil sollte vorzugsweise nur zur "Illustration" eines Pathologiebefundberichts verwendet werden.
+Mit dem Profil **MII PR Patho Attached Image** der Ressource Media wird  die Beschreibung von in den Befund, d.h. den **MII PR Patho Report**, eingebetteten Bildern vorgenommen. Um Bilder in **MII PR Patho Finding** einzubinden, muss auf eine Referenz zu einer ImagingStudy zurückgegriffen werden. Das vorliegende Profil sollte vorzugsweise nur zur "Illustration" eines Pathologiebefundberichts verwendet werden.
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image' select Name: name, Canonical: url
 ```
 
 ---------------------
-### Differential
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image, diff}}
+
+<tabs>
+    <tab title="snap" active="true">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image, snap}}
+    </tab>
+    <tab title="diff">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image, diff}}
+    </tab>
+    <tab title="hybrid">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image, hybrid}}
+    </tab>
+    <tab title="JSON">
+      {{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image}}
+    </tab>
+</tabs>
 
 ------------------------------------------------------
 ### Liste aller Must-Support Datenelemente
@@ -36,11 +54,6 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 |Media.type| EingebettetesBild.Typ |
 |Media.subject| Probe |
 |Media.content| EingebettetesBild.Kontent |
-
----
-
-### Snapshot
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image}}
 
 ---
 

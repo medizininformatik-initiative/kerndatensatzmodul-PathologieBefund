@@ -1,30 +1,42 @@
+---
+topic: DiagnosticConclusion
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper
+---
+
 <a id="DiagnosticConclusion"></a>
 ## {{page-title}}
 
 ### Beschreibung
 
-Das Profil {{pagelink:IG-MII-KDS-Modul-Pathologie-Befund/TechnischeImplementierung/FHIRProfile/MII-PR-Patho-Diagnostic-Conclusion-Grouper.page.md}}
- der Resource Observation stellt als `DiagnosticReport.result:diagnostic-conclusion-grouper` für einen {{pagelink:IG-MII-KDS-Modul-Pathologie-Befund/TechnischeImplementierung/FHIRProfile/MII-PR-Patho-Report.guide.md}} den jeweiligen Beobachtungsberichtsabschnitt "Diagnostische Schlussfolgerung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von 
-{{pagelink:IG-MII-KDS-Modul-Pathologie-Befund/TechnischeImplementierung/FHIRProfile/MII-PR-Patho-Finding.guide.md}}.
+Das Profil **MII PR Patho Diagnostic Conclusion Grouper** der Resource Observation stellt als `DiagnosticReport.result:diagnostic-conclusion-grouper` für einen **MII PR Patho Report** den jeweiligen Beobachtungsberichtsabschnitt "Diagnostische Schlussfolgerung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von **MII PR Patho Finding**.
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper' select Name: name, Canonical: url
 ```
 
-Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu {{pagelink:IG-MII-KDS-Modul-Pathologie-Befund/TechnischeImplementierung/FHIRProfile/MII-PR-Patho-Finding.guide.md}} eingebunden werden.
+Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu **MII PR Patho Finding** eingebunden werden.
 
-Falls dieser Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so kann jeweils ein [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/medizininformatikinitiative-modulpathologie/proceduresteps) pro Präparat vorhanden sein.
+Falls dieser Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so kann jeweils ein **MII PR Patho Diagnostic Conclusion Grouper** pro Präparat vorhanden sein.
 
-(Auflistung und Erklärung der FHIR-Elemente siehe  {{pagelink:IG-MII-KDS-Modul-Pathologie-Befund/TechnischeImplementierung/FHIRProfile/abstract--MII-PR-Patho-Section-Grouper.guide.md}}).
+Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
 
 
 ---------------------
-### Differential
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper, diff}}
 
----
-### Snapshot
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper}}
+<tabs>
+    <tab title="snap" active="true">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper, snap}}
+    </tab>
+    <tab title="diff">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper, diff}}
+    </tab>
+    <tab title="hybrid">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper, hybrid}}
+    </tab>
+    <tab title="JSON">
+      {{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper}}
+    </tab>
+</tabs>
 
 ---
 

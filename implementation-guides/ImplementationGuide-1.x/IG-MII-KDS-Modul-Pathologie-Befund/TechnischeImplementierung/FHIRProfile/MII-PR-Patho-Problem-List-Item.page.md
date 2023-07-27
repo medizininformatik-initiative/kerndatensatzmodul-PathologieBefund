@@ -1,17 +1,34 @@
+---
+topic: PathoProblemListItem
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item
+---
+
 ## {{page-title}}
 
 ### Beschreibung
 
-Das Profil [MII PR Patho Problem List Item](https://simplifier.net/medizininformatikinitiative-modulpathologie/mii_pr_patho_problem_list_item) der Resource Condition stellt die einzelnen Listeneinträge der Profile [MII PR Patho Active Problems]() und [MII PR Patho History of Present Illness]() dar. 
+Das Profil **MII PR Patho Problem List Item** der Resource Condition stellt die einzelnen Listeneinträge der Profile **MII PR Patho Active Problems** und **MII PR Patho History of Present Illness** dar. 
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item' select Name: name, Canonical: url
 ```
 
 ---------------------
-### Differential
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item, diff}}
 
+<tabs>
+    <tab title="snap" active="true">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item, snap}}
+    </tab>
+    <tab title="diff">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item, diff}}
+    </tab>
+    <tab title="hybrid">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item, hybrid}}
+    </tab>
+    <tab title="JSON">
+      {{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item}}
+    </tab>
+</tabs>
 
 -----------------------------------------------
 ### Liste aller Must-Support Datenelemente
@@ -26,12 +43,6 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 
 | FHIR-Element | Logisches Datenmodell |
 |--|--|
-
----
-
-### Snapshot
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item}}
 
 --------------------------------
 ### Beispiele

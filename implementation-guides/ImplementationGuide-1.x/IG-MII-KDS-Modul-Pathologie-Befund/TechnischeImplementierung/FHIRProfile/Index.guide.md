@@ -16,8 +16,8 @@ Alle Elemente des Kerndatensatzes, angepasst an die Details und Anforderungen f√
 
 Alle Observations im Modul Patholgie-Befund haben das abstrakte Observation Profil [SD MII Base Observation](https://simplifier.net/medizininformatikinitiative-modulpathologie/basepathologyobservation) als gemeinsame Basis. 
 
-{{render:ig-bilder-patho-observation-dependencies-v1.0.0}}
+{{render:ImplementationGuide-Common-images-patho-observation-dependencies-v1.0.0}}
 
 ## Gesamt√ºbersicht aller Profile und Referenzen
 
-{{render:ig-bilder-patho-profile-relationships-v1.0.0}}
+{{render:guides-ImplementationGuide-Common-images-patho-profile-relationships-v1.0.0}}
