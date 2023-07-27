@@ -33,5 +33,6 @@ Anmerkungen und Kritik werden in Form von 'Issues' im [GitHub Repository](https:
 * Thimo Hölter              (Berlin Institute of Health at Charité)
 * Marlon Kazmierczak        (Bundesverband Deutscher Pathologen)
 * Thomas Rüdiger            (Klinikum Karlsruhe)
+* Julian Saß                (Berlin Institute of Health at Charité)
 * Sylvia Thun               (Berlin Institute of Health at Charité)
 
