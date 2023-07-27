@@ -64,10 +64,19 @@ Außerdem werden mehrere Datenelemente in den FHIR Resourcen durch HL7 V2.x -Kod
 
 | Profile | Value-Sets | Binding-Strength |
 |--|--|
-| [MII PR Patho Specimen](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen) | [MII_VS_Patho_Collection_Method_SNOMED_CT](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct) <br> [MII_VS_Patho_Container_Type_SNOMED](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed) | Extensible <br> Required
-| [MII PR Patho Service Request](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request) | [MII_VS_Patho_Service_Request_LOINC](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-loinc) | Preferred |
-|[MII PR Patho Active Problems](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems) | [MII_VS_Patho_Problem_List_SNOMED](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed) | Extensible |
-| [MII PR Patho Finding](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding) | [MII_VS_Patho_Section_Types_LOINC](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc) | Required |
+| MII PR Patho Specimen | MII_VS_Patho_Collection_Method_SNOMED_CT <br> MII_VS_Patho_Container_Type_SNOMED | Extensible <br> Required
+| MII PR Patho Service Request | MII_VS_Patho_Service_Request_LOINC | Preferred |
+| MII PR Patho Active Problems | MII_VS_Patho_Problem_List_SNOMED | Extensible |
+| MII PR Patho Finding | MII_VS_Patho_Section_Types_LOINC | Required |
 
-
- 
+---
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct}}
+---
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed}}
+---
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-loinc}}
+---
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed}}
+---
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc}}
+---

@@ -1,16 +1,12 @@
 # Kerndatensatz Modul Pathologie-Befund
 
-| Hinweis | Under Construction! |
-|---------|---------------------|
-| {{render:Warning}} | Dieser Implementation Guide stellt die aktuelle Arbeitsversion des Moduls Pathologie-Befund dar. Die jeweils für den produktiven Einsatz veröffentlichte Version wird über die Seite der Medizininformatik-Initiative sobald verfügbar bereitgestellt|
-
 Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz-Moduls Pathologie-Befund der Medizininformatik-Initiative. 
 
 Im Folgenden werden die Use-Cases des Moduls, sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 21.04.2023  |
+| Datum   | 24.07.2023  |
 | Version | 1.0.0         |
 | Status  | Active       |
 | Realm   | DE          | 

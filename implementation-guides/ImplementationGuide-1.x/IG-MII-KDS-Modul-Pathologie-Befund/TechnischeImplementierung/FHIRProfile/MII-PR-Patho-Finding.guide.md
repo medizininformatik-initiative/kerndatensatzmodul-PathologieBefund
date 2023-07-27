@@ -1,10 +1,15 @@
+---
+topic: PathoFinding
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding
+---
+
 <a id="PathoFinding"></a>
 ## {{page-title}}
 
 ### Beschreibung
 
 
-Das Profil [MII PR Patho Finding](https://simplifier.net/medizininformatikinitiative-modulpathologie/pathologyfinding) der Ressource Observation bildet als `hasMember`- oder `derivedFrom`-Referenz für ein Profil vom Typ [MII PR Patho Section Grouper](https://simplifier.net/medizininformatikinitiative-modulpathologie/mii-pr-patho-section-grouper) atomare kodierte Untersuchungsergebnisse ab. Dieses Profil kann verschachtelte Konstrukte bilden, um „Child Observations“ zu erfassen, die eine einzelne Observation weiter spezifizieren. PathoFindings können vom Pathologie-Informationssystem über Questionnaire- / QuestionnaireResponse-Resourcen (siehe [HL7-Implementation Guide Structured Data Capture](https://build.fhir.org/ig/HL7/sdc/index.html)) bereitgestellt werden, bzw. werden QuestionnaireResponse Ressourcen referenziert. Jedes [MII PR Patho Finding](https://simplifier.net/medizininformatikinitiative-modulpathologie/pathologyfinding) sollte die Probe referenzieren, an der die Beobachtung vorgenommen wurde.
+Das Profil **MII PR Patho Finding** der Ressource Observation bildet als `hasMember`- oder `derivedFrom`-Referenz für ein Profil vom Typ **MII PR Patho Section Grouper** atomare kodierte Untersuchungsergebnisse ab. Dieses Profil kann verschachtelte Konstrukte bilden, um „Child Observations“ zu erfassen, die eine einzelne Observation weiter spezifizieren. PathoFindings können vom Pathologie-Informationssystem über Questionnaire- / QuestionnaireResponse-Resourcen (siehe [HL7-Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/)) bereitgestellt werden, bzw. werden QuestionnaireResponse Ressourcen referenziert. Jedes **MII PR Patho Finding** sollte die Probe referenzieren, an der die Beobachtung vorgenommen wurde.
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding' select Name: name, Canonical: url
@@ -12,19 +17,28 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 
 **Sonderfall:**
 
-- Im Falle eines **Befundupdates** dient ein [MII PR Patho Finding](https://simplifier.net/medizininformatikinitiative-modulpathologie/pathologyfinding) mit dem LOINC-Code [90004-3 - 
-Clinical significance of updated information](https://loinc.org/90004-3/) als Organizer für die Update-Informationen, die im [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/medizininformatikinitiative-modulpathologie/proceduresteps) abgebildet werden. Hierzu wird die focus-Referenz genutzt, um auf den betroffenen MII PR Patho Grouper (Beobachtungsabschnitt) hinzuweisen. Der Observation.value wird durch einen ValueSet "ClinicalSignificance" (z.B. LOINC LL4770-5) dargestellt.
+- Im Falle eines **Befundupdates** dient ein **MII PR Patho Finding**] mit dem LOINC-Code [90004-3 - 
+Clinical significance of updated information](https://loinc.org/90004-3/) als Organizer für die Update-Informationen, die im **MII PR Patho Diagnostic Conclusion Grouper** abgebildet werden. Hierzu wird die focus-Referenz genutzt, um auf den betroffenen **MII PR Patho Grouper** (Beobachtungsabschnitt) hinzuweisen. Der `Observation.value` wird durch einen ValueSet "ClinicalSignificance" (z.B. LOINC LL4770-5) dargestellt.
 
 Für spezifische Observation-Konstrukte, speziell bei onkologischen Fragestellungen (TNM, Histologischer Tumortyp, etc.), kann auch auf Observation-Profile des [MII Erweiterungsmoduls Onkologie](https://simplifier.net/medizininformatikinitiative-modulonkologie) (sofern vorhanden) oder [HL7 DE Basis Onkologie](https://simplifier.net/basisprofileonkologie) zurückgegriffen werden. 
 
 
 ---------------------
-### Differential
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding, diff}}
 
----
-### Snapshot
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding}}
+<tabs>
+    <tab title="snap" active="true">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding, snap}}
+    </tab>
+    <tab title="diff">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding, diff}}
+    </tab>
+    <tab title="hybrid">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding, hybrid}}
+    </tab>
+    <tab title="JSON">
+      {{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding}}
+    </tab>
+</tabs>
 
 ---------------------------------
 ### Liste aller Must-Support Datenelemente

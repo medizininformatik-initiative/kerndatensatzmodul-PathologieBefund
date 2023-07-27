@@ -1,10 +1,15 @@
+---
+topic: PathoComposition
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition
+---
+
 ## {{page-title}}
 
 ### Beschreibung
 
-Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://gematik.de/fhir/isik/v2/Basismodul/StructureDefinition/ISiKBerichtSubSysteme) aus dem deutschen HL7-Basisprofil ISiK - Basis (Stufe 2). 
+Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/packages/de.gematik.isik-basismodul/2.0.5/files/1973955) aus der Spezifikation [ISiK - Basis (Stufe 2)](https://simplifier.net/isik-basis-v2). 
 
-Das Profil [MII PR Patho Composition](https://simplifier.net/medizininformatikinitiative-modulpathologie/pathologycomposition) fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines Klinischen Dokuments zusammen. 
+Das Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. 
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition' select Name: name, Canonical: url
@@ -12,12 +17,24 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 
 Dieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”, der persistierende eindeutige `Bundle.identifier` sollte dem der Composition (Composition.identifier, s.u.), z.B. Eingangsnummer einschließlich Versionsnummer entsprechen.  Optional können weitere Entries enthalten sein. Das Bundle enthält eine Signatur. 
 
-Lediglich zwei Sections, der Diagnostische Report (`patho-diagnostic-report`) sowie ein oder mehrere zusätzliche komplette Reports, z.B. aus einer molekulargenetischen Untersuchung (`additional-diagnostic-report`), können in der Composition vorhanden sein. Die im Datensatz beschriebenen Beobachtungsberichtabschnitte werden im {{pagelink:IG-MII-KDS-Modul-Pathologie-Befund/TechnischeImplementierung/FHIRProfile/MII-PR-Patho-Report.guide.md}}, einem Profil der Ressource DiagnosticReport, als spezielle Grouper-Observations mit Text und atomaren Einzelbeobachtungen ([MII PR Patho Finding](https://simplifier.net/medizininformatikinitiative-modulpathologie/pathologyfinding)) dargestellt. 
-
+Lediglich zwei Sections, der Diagnostische Report (`patho-diagnostic-report`) sowie ein oder mehrere zusätzliche komplette Reports, z.B. aus einer molekulargenetischen Untersuchung (`additional-diagnostic-report`), können in der Composition vorhanden sein. Die im Datensatz beschriebenen Beobachtungsberichtabschnitte werden im **MII PR Patho Report**, einem Profil der Ressource DiagnosticReport, als spezielle Grouper-Observations mit Text und atomaren Einzelbeobachtungen (**MII PR Patho Finding**) dargestellt. 
 
 ---------------------
-### Differential
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition, diff}}
+
+<tabs>
+    <tab title="snap" active="true">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition, snap}}
+    </tab>
+    <tab title="diff">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition, diff}}
+    </tab>
+    <tab title="hybrid">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition, hybrid}}
+    </tab>
+    <tab title="JSON">
+      {{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition}}
+    </tab>
+</tabs>
 
 ---------------------------------------------
 ### Liste aller Must-Support Datenelement
@@ -67,10 +84,6 @@ Lediglich zwei Sections, der Diagnostische Report (`patho-diagnostic-report`) so
 |Composition.custodian | Für den Befundbericht Verantwortlicher  |
 |Composition.relatesTo |Befundbericht.ZugehörigesDokument  |
 |Composition.section | Beobachtungsberichtabschnitte im SD MII Patho Report |
-
----
-### Snapshot
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition}}
 
 ---
 

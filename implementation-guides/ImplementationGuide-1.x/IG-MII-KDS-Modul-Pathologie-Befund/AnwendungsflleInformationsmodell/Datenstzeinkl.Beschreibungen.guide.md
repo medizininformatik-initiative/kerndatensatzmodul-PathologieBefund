@@ -2,7 +2,7 @@
 
 Die offizielle Version des Informationsmodells für das Erweiterungsmodul Pathologiebefundbericht findet sich auf [Art-Decor](https://art-decor.org/art-decor/decor-datasets--mide-?id=2.16.840.1.113883.3.1937.777.24.1.1&effectiveDate=2018-06-05T12%3A44%3A12&conceptId=2.16.840.1.113883.3.1937.777.24.2.1113&conceptEffectiveDate=2020-01-06T11%3A50%3A48&language=de-DE). Zur Vereinheitlichung der Repräsentation wurde das Informationsmodell zusätzlich als FHIR Logical Model abgebildet: 
 
-{{tree:medizininformatikinitiative-modulpathologie/logicalmodelpathologiebefundbericht}}
+{{tree:MII-LM-Patho-Logical-Model}}
 
 ### Datensatz Art-Decor
 

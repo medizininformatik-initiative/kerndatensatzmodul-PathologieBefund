@@ -1,3 +1,8 @@
+---
+topic: PathoBaseObservation
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation
+---
+
 ## {{page-title}}
 
 ### Beschreibung
@@ -9,9 +14,21 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 ```
 
 -------------------------
-### Differential
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation, diff}}
 
+<tabs>
+    <tab title="snap" active="true">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation, snap}}
+    </tab>
+    <tab title="diff">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation, diff}}
+    </tab>
+    <tab title="hybrid">
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation, hybrid}}
+    </tab>
+    <tab title="JSON">
+      {{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation}}
+    </tab>
+</tabs>
 
 ----------------------------------
 ### Liste aller Must-Support Datenelemente
@@ -63,5 +80,3 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 |Observation.component |Generische Pathologisch-anatomische Einzelbeobachtung.Unterbeobachtung |
 
 -----------------------------------------------
-### Snapshot
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation}}
