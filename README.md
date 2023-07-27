@@ -1,14 +1,14 @@
 ## Medizininformatik Initiative - Kerndatensatz - Modul Pathologiebefund
 
 ### Übersicht
-Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Erweiterungsmoduls 'Pathologiebefund', welches einen Teil des Kerndatensatzes der Medizininformatik-Initative darstellt. Die hier veröffentlichten [FHIR Profile](https://simplifier.net/medizininformatikinitiative-modulpathologie/~resources?category=Profile) und [Implemenation Guides](https://simplifier.net/guide/medizininformatikinitiative-modulpathologie-implementationguide2?version=current) dienen als zentrale und verbindliche Spezifikation für die syntaktische und semantische Kodierung der Modulinhalte.
+Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Erweiterungsmoduls 'Pathologiebefund', welches einen Teil des Kerndatensatzes der Medizininformatik-Initative darstellt. Die hier veröffentlichten [FHIR Profile](https://simplifier.net/medizininformatikinitiative-modulpathologie/~resources?category=Profile) und Implemenation Guides dienen als zentrale und verbindliche Spezifikation für die syntaktische und semantische Kodierung der Modulinhalte.
 
 ### Status:
 Alle veröffentlichten FHIR Artefakte innerhalb des Projektes verfügen über einen Status durch welchen der jeweilige Reifegard abgeleitet werden kann.
 Profile mit dem Status 'Draft' wurden noch nicht ballotiert und können noch diversen und substantiellen Änderungen unterliegen. Verpflichtende und ballotierte Ergebnisse sind unter dem Tab 'Packages' zu finden.
 
 ### Mitwirkungs- und Kommentierungsmöglichkeiten
-* Kommentareinreichung via [GitHub](https://github.com/medizininformatik-initiative/kerndatensatzmodul-PathologieBefund) oder [Simplifiers Issue-Tracker](https://simplifier.net/medizininformatikinitiative-modulpathologie#issues)
+* Kommentareinreichung via [GitHub](https://github.com/medizininformatik-initiative/kerndatensatzmodul-PathologieBefund)
 * Diskussionsforum im int. [FHIR-Chat](https://chat.fhir.org/#narrow/stream/179307-german.2Fmi-initiative)
 * Teilnahme am [Interoperabilitätsforum](https://wiki.hl7.de/index.php?title=Interoperabilit%C3%A4tsforum)
 
@@ -31,4 +31,5 @@ Definition der Inhalte & Terminologien:
 Technische Umsetzung (in alphabetischer Reihenfolge): 
 * [Alexander Bartschke](https://github.com/Kosmos3) (Modellierung in Art-Decor)
 * [Andrea Essenwanger](https://github.com/ByteGnome) (Technische Umsetzung FHIR Profile, Implementation Guide und Logical Models)
+* [Julian Saß](https://github.com/julsas) (Technische Umsetzung FHIR Profile, Implementation Guide)
 * [Thimo Andre Hölter](https://github.com/ThimoHoelter) (Technische Umsetzung FHIR Profile, Implementation Guide)
