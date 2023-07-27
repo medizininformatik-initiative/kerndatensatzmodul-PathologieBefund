@@ -8,21 +8,20 @@ Die zahlreichen Möglichkeiten, Beobachtungen mit Code-Value-Paaren zu beschreib
 
 1. der Observation.code repräsentiert die Art der Beobachtung und der `Observation.value` den nichtnumerischen Beobachtungswert.
 
-        `Observation.code`: Ausmaß einer Extraprostatischen Tumorausbreitung
-        `Observation.valueCodebleConcept`: fokal
+- `Observation.code`: Ausmaß einer Extraprostatischen Tumorausbreitung
+- `Observation.valueCodebleConcept`: fokal
 
 
-2. der Observation.code wird durch eine Möglichkeit ausgedrückt, die nicht die Aktion der Beobachtung kodiert, sondern ein Statement zu einem Befund darstellt. Auf diese Weise ist der Observation.value ein Qualifier, der das Vorhandensein oder Nichtvorhandensein des Befundes kodiert.
+2. der `Observation.code` wird durch eine Möglichkeit ausgedrückt, die nicht die Aktion der Beobachtung kodiert, sondern ein Statement zu einem Befund darstellt. Auf diese Weise ist der `Observation.value` ein Qualifier, der das Vorhandensein oder Nichtvorhandensein des Befundes kodiert.
 
-        `Observation.code`: Perineuralscheideninvasion
-        `Observation.valueCodebleConcept`: Ja/Nein Indikator 
-        oder `Observation.valueBoolean`
+- `Observation.code`: Perineuralscheideninvasion
+- `Observation.valueCodebleConcept`: Ja/Nein Indikator oder `Observation.valueBoolean`
 
 3. der `Observation.code` wird wie in 2. durch ein Statement zu einem Befund dargestellt, der `Observation.value` wird weggelassen.     
 
-        `Observation.code`: Perineuralscheideninvasion
-        `Observation.valueCodebleConcept`: 
-        `Observation.dataAbsentReason`: not-applicable
+- `Observation.code`: Perineuralscheideninvasion
+- `Observation.valueCodebleConcept`: 
+- `Observation.dataAbsentReason`: not-applicable
 
 Für die erstgenannte Möglichkeit stehen alle [LOINC](https://www.loinc.org/)-Terme der Typen "Lab" und "Clinical" zur Verfügung. Falls kein passender LOINC-Code zur Verfügung steht, wird ein [SNOMED-CT](http://www.snomed.org/)-Code verwendet, der aus der Hierarchie-Achse |363787002 (Observable entity)| oder |386053000 (Evaluation procedure)| stammt. Die Observation.values sind vorzugsweise SNOMED-CT-Codes oder zugehörige LOINC-Answer-Codes.
 
