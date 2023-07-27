@@ -6,6 +6,7 @@
   "name": "MII_IG_Modul_Patho",
   "title": "MII IG Modul Patho",
   "status": "active",
+  "description": "Medizininformatik Initiative - Modul Pathologie - ImplementationGuide Version 1.0",
   "experimental": false,
   "date": "2023-07-20",
   "publisher": "Medizininformatik-Initiative",
