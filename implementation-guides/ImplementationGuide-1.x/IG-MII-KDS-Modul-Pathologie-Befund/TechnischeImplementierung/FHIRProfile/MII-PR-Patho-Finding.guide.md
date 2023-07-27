@@ -11,10 +11,6 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 Das Profil **MII PR Patho Finding** der Ressource Observation bildet als `hasMember`- oder `derivedFrom`-Referenz für ein Profil vom Typ **MII PR Patho Section Grouper** atomare kodierte Untersuchungsergebnisse ab. Dieses Profil kann verschachtelte Konstrukte bilden, um „Child Observations“ zu erfassen, die eine einzelne Observation weiter spezifizieren. PathoFindings können vom Pathologie-Informationssystem über Questionnaire- / QuestionnaireResponse-Resourcen (siehe [HL7-Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/)) bereitgestellt werden, bzw. werden QuestionnaireResponse Ressourcen referenziert. Jedes **MII PR Patho Finding** sollte die Probe referenzieren, an der die Beobachtung vorgenommen wurde.
 
-@```
-from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding' select Name: name, Canonical: url
-```
-
 **Sonderfall:**
 
 - Im Falle eines **Befundupdates** dient ein **MII PR Patho Finding**] mit dem LOINC-Code [90004-3 - 
@@ -22,6 +18,9 @@ Clinical significance of updated information](https://loinc.org/90004-3/) als Or
 
 Für spezifische Observation-Konstrukte, speziell bei onkologischen Fragestellungen (TNM, Histologischer Tumortyp, etc.), kann auch auf Observation-Profile des [MII Erweiterungsmoduls Onkologie](https://simplifier.net/medizininformatikinitiative-modulonkologie) (sofern vorhanden) oder [HL7 DE Basis Onkologie](https://simplifier.net/basisprofileonkologie) zurückgegriffen werden. 
 
+@```
+from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding' select Name: name, Canonical: url
+```
 
 ---------------------
 

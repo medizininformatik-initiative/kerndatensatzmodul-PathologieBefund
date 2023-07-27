@@ -16,6 +16,6 @@ Weiterhin kann eine Beziehung zum Modul [Diagnose](https://simplifier.net/medizi
 
 ### Bezüge außerhalb der MII
 
-Da es sich bei Pathologie Systeme um sogenannte Subsysteme im Krankenhaus handeln kann, ist eine Kompatibilität zu [ISiK](https://simplifier.net/isik) essenziell für die Umsetzung der Pathologie Profile der Medizininformatik Initiative. So wird für die Bündelung der Pathologie Ressourceninstanzen eine Composition/Bundle verwendet, welche vom ISiK Profil [ISiKBerichtSubsysteme](https://simplifier.net/isik/isikberichtsubsysteme) erbt. 
+Da es sich bei Pathologie Systeme um sogenannte Subsysteme im Krankenhaus handeln kann, ist eine Kompatibilität zu [ISiK](https://simplifier.net/packages/de.gematik.isik-basismodul/2.0.5) essenziell für die Umsetzung der Pathologie Profile der Medizininformatik Initiative. So wird für die Bündelung der Pathologie Ressourceninstanzen eine Composition/Bundle verwendet, welche vom ISiK Profil [ISiKBerichtSubsysteme](https://simplifier.net/packages/de.gematik.isik-basismodul/2.0.5/files/1973955) erbt. 
 
  

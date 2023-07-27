@@ -12,4 +12,4 @@ Außerdem baut das Modul auf die Version R4 der [Kernspezifikation von HL7 FHIR]
 
 Die vorliegende Spezifikation wurde gestaltet auf Basis der Beschreibung des MII-Kerndatensatzes in der [Version vom 10.03.2017](https://www.medizininformatik-initiative.de/sites/default/files/inline-files/MII_04_Kerndatensatz_1-0.pdf) sowie der Datensatzbeschreibung in [Art-Decor](https://art-decor.org/art-decor/decor-project--mide\-). 
 
-Hinzu kommt es aufgrund der Nähe zu den Versorgungsstrukturen im Krankenhaus zu Referenzen von und zur [ISiK Spezifikation](https://simplifier.net/isik).
+Hinzu kommt es aufgrund der Nähe zu den Versorgungsstrukturen im Krankenhaus zu Referenzen von und zur [ISiK Spezifikation](https://simplifier.net/packages/de.gematik.isik-basismodul/2.0.5).

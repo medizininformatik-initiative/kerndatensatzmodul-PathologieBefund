@@ -11,10 +11,6 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). 
 
-@```
-from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report' select Name: name, Canonical: url
-```
-
 Es stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein.
  
 Die wichtigsten Besonderheiten des **MII PR Patho Report** sind: 
@@ -23,6 +19,10 @@ Die wichtigsten Besonderheiten des **MII PR Patho Report** sind:
 - und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.  
  
 Das **MII PR Patho Report** bildet als Entry in der Section “diagnostic-report” des Profils **MII PR Patho Composition** den Kern eines persistenten Dokuments "Pathologiebefundbericht".
+
+@```
+from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report' select Name: name, Canonical: url
+```
 
 ---------------------
 
@@ -42,6 +42,7 @@ Das **MII PR Patho Report** bildet als Entry in der Section “diagnostic-report
 </tabs>
  
 ----------------------
+
 In untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Patho Composition dupliziert werden.
 
 ### Liste aller Must-Support Datenelemente

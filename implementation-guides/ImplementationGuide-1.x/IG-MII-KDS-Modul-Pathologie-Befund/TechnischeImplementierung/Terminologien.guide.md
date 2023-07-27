@@ -6,23 +6,23 @@ Die **generischen Einzelbeobachtungen** selbst sollten möglichst genau so kodie
 
 Die zahlreichen Möglichkeiten, Beobachtungen mit Code-Value-Paaren zu beschreiben, werden für nichtnumerische Beobachtungsergebnisse auf zwei (drei) prinzipielle Möglichkeiten beschränkt: 
 
-1. der Observation.code repräsentiert die Art der Beobachtung und der Observation.value den nichtnumerischen Beobachtungswert.
+1. der Observation.code repräsentiert die Art der Beobachtung und der `Observation.value` den nichtnumerischen Beobachtungswert.
 
-        *Observation.code*: Ausmaß einer Extraprostatischen Tumorausbreitung
-        *Observation.valueCodebleConcept*: fokal
+        `Observation.code`: Ausmaß einer Extraprostatischen Tumorausbreitung
+        `Observation.valueCodebleConcept`: fokal
 
 
 2. der Observation.code wird durch eine Möglichkeit ausgedrückt, die nicht die Aktion der Beobachtung kodiert, sondern ein Statement zu einem Befund darstellt. Auf diese Weise ist der Observation.value ein Qualifier, der das Vorhandensein oder Nichtvorhandensein des Befundes kodiert.
 
-        *Observation.code*: Perineuralscheideninvasion
-        *Observation.valueCodebleConcept*: Ja/Nein Indikator 
-        *oder Observation.valueBoolean*
+        `Observation.code`: Perineuralscheideninvasion
+        `Observation.valueCodebleConcept`: Ja/Nein Indikator 
+        oder `Observation.valueBoolean`
 
-3. der Observation.code wird wie in 2. durch ein Statement zu einem Befund dargestellt, der Observation.value wird weggelassen.     
+3. der `Observation.code` wird wie in 2. durch ein Statement zu einem Befund dargestellt, der `Observation.value` wird weggelassen.     
 
-        *Observation.code*: Perineuralscheideninvasion
-        *Observation.valueCodebleConcept*: 
-        *Observation.dataAbsentReason*: not-applicable
+        `Observation.code`: Perineuralscheideninvasion
+        `Observation.valueCodebleConcept`: 
+        `Observation.dataAbsentReason`: not-applicable
 
 Für die erstgenannte Möglichkeit stehen alle [LOINC](https://www.loinc.org/)-Terme der Typen "Lab" und "Clinical" zur Verfügung. Falls kein passender LOINC-Code zur Verfügung steht, wird ein [SNOMED-CT](http://www.snomed.org/)-Code verwendet, der aus der Hierarchie-Achse |363787002 (Observable entity)| oder |386053000 (Evaluation procedure)| stammt. Die Observation.values sind vorzugsweise SNOMED-CT-Codes oder zugehörige LOINC-Answer-Codes.
 
@@ -32,7 +32,7 @@ Für die drittgenannte Möglichkeit sollte vorzugsweise ein SNOMED-CT-Code aus d
 
 Wenn sich keine passenden LOINC-Terme oder SNOMED-CT-Codes finden lassen, sind weitere standardisierte Code-Systeme (z.B. HL7 V2.x oder V3, ICD-10, ICD-11, ICD-O-3, ADT/GEKID) Kodes aus lokalen Kodesystemen vorzuziehen.  
 
-TODO: Abbildung (Prinzip der gemeinsamen Nutzung von LOINC und SNOMED-CT, https://https://confluence.ihtsdotools.org/display/DOCLOINC/5.2.7+Practical+Uses+of+Part+Maps+and+Expression+Associations, Kap. 5.2.7) hinzufügen
+TODO: Abbildung (Prinzip der gemeinsamen Nutzung von LOINC und SNOMED-CT, https://confluence.ihtsdotools.org/display/DOCLOINC/5.2.7+Practical+Uses+of+Part+Maps+and+Expression+Associations, Kap. 5.2.7) hinzufügen
 
 Die **Maßeinheiten bei Messwerten** müssen zwingend in [UCUM](http://unitsofmeasure.org/ucum.html)-Einheiten angegeben werden, damit sich die Ergebnisse ineinander umrechnen lassen. Mittels [Validatoren](https://ucum.nlm.nih.gov/ucum-lhc/demo.html) kann sichergestellt werden, dass die verwendeten Einheiten zulässig sind. 
 
@@ -65,18 +65,18 @@ Außerdem werden mehrere Datenelemente in den FHIR Resourcen durch HL7 V2.x -Kod
 | Profile | Value-Sets | Binding-Strength |
 |--|--|
 | MII PR Patho Specimen | MII_VS_Patho_Collection_Method_SNOMED_CT <br> MII_VS_Patho_Container_Type_SNOMED | Extensible <br> Required
-| MII PR Patho Service Request | MII_VS_Patho_Service_Request_LOINC | Preferred |
-| MII PR Patho Active Problems | MII_VS_Patho_Problem_List_SNOMED | Extensible |
+| MII PR Patho Service Request | MII_VS_Patho_Service_Request_SNOMED_CT | Preferred |
+| MII PR Patho Active Problems | MII_VS_Patho_Problem_List_SNOMED_CT | Extensible |
 | MII PR Patho Finding | MII_VS_Patho_Section_Types_LOINC | Required |
 
 ---
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct}}
 ---
-{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed}}
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct}}
 ---
-{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-loinc}}
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-snomed-ct}}
 ---
-{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed}}
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct}}
 ---
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc}}
 ---

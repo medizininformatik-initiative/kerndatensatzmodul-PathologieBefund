@@ -1,7 +1,7 @@
 ## Beschreibung Modul Pathologie-Befund
 
 
-{{render:ig-bilder-MII-KDS-de-Pathologie-Befund-2022-07-14}}
+{{render:guides-ImplementationGuide-Common-images-19-Abbildung-Pathologie-Befund-de}}
 
 Histologische und zytologische Untersuchungen spielen bei einem Großteil von schwerwiegenden medizinischen Diagnosen eine entscheidende Rolle. Autoptische Untersuchungen sind sowohl wertvolle Quelle für neue medizinische Erkenntnisse (siehe COVID-19), als auch zentrale Elemente einer klinischen Qualitätskontrolle.  
 
