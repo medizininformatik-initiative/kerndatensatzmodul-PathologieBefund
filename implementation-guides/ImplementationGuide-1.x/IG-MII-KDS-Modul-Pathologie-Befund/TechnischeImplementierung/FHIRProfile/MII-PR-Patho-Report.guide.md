@@ -40,7 +40,7 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
       {{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report}}
     </tab>
 </tabs>
- 
+
 ----------------------
 
 In untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Patho Composition dupliziert werden.
