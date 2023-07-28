@@ -63,10 +63,15 @@ Außerdem werden mehrere Datenelemente in den FHIR Resourcen durch HL7 V2.x -Kod
 
 | Profile | Value-Sets | Binding-Strength |
 |--|--|
-| MII PR Patho Specimen | MII_VS_Patho_Collection_Method_SNOMED_CT <br> MII_VS_Patho_Container_Type_SNOMED | Extensible <br> Required
-| MII PR Patho Service Request | MII_VS_Patho_Service_Request_SNOMED_CT | Preferred |
-| MII PR Patho Active Problems | MII_VS_Patho_Problem_List_SNOMED_CT | Extensible |
-| MII PR Patho Finding | MII_VS_Patho_Section_Types_LOINC | Required |
+| MII PR Patho Specimen | MII_VS_Patho_Collection_Method_SNOMED_CT <br> MII_VS_Patho_Container_Type_SNOMED | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) <br> [Required](http://hl7.org/fhir/r4/terminologies.html#required)
+| MII PR Patho Service Request | MII_VS_Patho_Service_Request_SNOMED_CT | [Preferred](http://hl7.org/fhir/r4/terminologies.html#preferred) |
+| MII PR Patho Active Problems | MII_VS_Patho_Problem_List_SNOMED_CT | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) |
+| MII PR Patho Finding | MII_VS_Patho_Section_Types_LOINC | [Required](http://hl7.org/fhir/r4/terminologies.html#required) |
+| MII PR Patho Report | MII_VS_Patho_Report_Category_HL7 | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) | 
+| MII PR Patho Specimen | MII_VS_Patho_Processing_Procedure_SNOMED_CT <br> MII_VS_Patho_Collection_Method_SNOMED_CT | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) | 
+| MII PR Patho Attached Image | MII_VS_Patho_Media_Modality_SNOMED_CT | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) | 
+| MII PR Patho Composition | MII_VS_Patho_Composition_Type_LOINC <br> MII_VS_Patho_All_LOINC | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) <br> [Required](http://hl7.org/fhir/r4/terminologies.html#required) | 
+| MII PR Patho Base Observation | MII_VS_Patho_All_LOINC | [Preferred](http://hl7.org/fhir/r4/terminologies.html#preferred) |
 
 ---
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct}}
@@ -78,4 +83,12 @@ Außerdem werden mehrere Datenelemente in den FHIR Resourcen durch HL7 V2.x -Kod
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct}}
 ---
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc}}
+---
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7}}
+---
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct}}
+---
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition}}
+---
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc}}
 ---
