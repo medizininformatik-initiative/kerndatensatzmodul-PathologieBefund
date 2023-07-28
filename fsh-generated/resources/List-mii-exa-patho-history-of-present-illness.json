@@ -1,0 +1,30 @@
+{
+  "resourceType": "List",
+  "id": "mii-exa-patho-history-of-present-illness",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness"
+    ]
+  },
+  "mode": "snapshot",
+  "code": {
+    "coding": [
+      {
+        "code": "8684-3",
+        "system": "http://loinc.org",
+        "display": "History of Present illness"
+      }
+    ]
+  },
+  "status": "current",
+  "subject": {
+    "reference": "Patient/12345"
+  },
+  "entry": [
+    {
+      "item": {
+        "reference": "Condition/mii-exa-patho-problem-list-item-2"
+      }
+    }
+  ]
+}

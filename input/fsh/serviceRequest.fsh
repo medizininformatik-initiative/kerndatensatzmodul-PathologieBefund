@@ -151,7 +151,7 @@ Description: "List profile for 'History of Present Illness'"
 * mode = #snapshot (exactly)
 * code 1.. MS
   * coding 1.. MS
-  * coding = $LOINC#8684-3 "History of Present illness"
+  * coding = $LOINC#8684-3
     * code 1.. 
     * system 1.. 
 * subject 1.. MS
@@ -179,3 +179,45 @@ Description: "Pathology Service Request Example"
 * encounter.reference = "Encounter/87687"
 * requester.reference = "Practitioner/34456"
 * code = $SCT#44977009 "Cytopathology procedure, cell block preparation (procedure)"
+* supportingInfo[anamnesis] = Reference(mii-exa-patho-history-of-present-illness)
+* supportingInfo[activeProblems] = Reference(mii-exa-patho-active-problems-list)
+
+Instance: mii-exa-patho-problem-list-item-1
+InstanceOf: mii-pr-patho-problem-list-item
+Usage: #example
+Title: "MII EXA Patho Problem List Item 1"
+Description: "Pathology Problem List Item Example"
+* category = $cs-hl7-condition-category#problem-list-item
+* code = $SCT#363346000 "Malignant neoplastic disease (disorder)"
+* subject.reference = "Patient/12345"
+
+Instance: mii-exa-patho-problem-list-item-2
+InstanceOf: mii-pr-patho-problem-list-item
+Usage: #example
+Title: "MII EXA Patho Problem List Item 2"
+Description: "Pathology Problem List Item Example"
+* category = $cs-hl7-condition-category#problem-list-item
+* code = $SCT#266987004 "History of malignant neoplasm (situation)"
+* subject.reference = "Patient/12345"
+
+Instance: mii-exa-patho-history-of-present-illness
+InstanceOf: mii-pr-patho-history-of-present-illness
+Usage: #example
+Title: "MII EXA Patho History Of Present Illness"
+Description: "Pathology History of Present Illness List Example"
+* status = #current 
+* mode = #snapshot
+* code = $LOINC#8684-3 "History of Present illness"
+* subject.reference = "Patient/12345"
+* entry.item = Reference(mii-exa-patho-problem-list-item-2)
+
+Instance: mii-exa-patho-active-problems-list
+InstanceOf: mii-pr-patho-active-problems-list
+Usage: #example
+Title: "MII EXA Patho Active Problems List"
+Description: "Pathology Active Problems List List Example"
+* status = #current 
+* mode = #snapshot
+* code = $LOINC#11450-4 "Problem list - Reported"
+* subject.reference = "Patient/12345"
+* entry.item = Reference(mii-exa-patho-problem-list-item-1)

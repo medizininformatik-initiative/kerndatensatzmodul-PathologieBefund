@@ -66,8 +66,7 @@
         "min": 1,
         "patternCoding": {
           "code": "8684-3",
-          "system": "http://loinc.org",
-          "display": "History of Present illness"
+          "system": "http://loinc.org"
         },
         "mustSupport": true
       },

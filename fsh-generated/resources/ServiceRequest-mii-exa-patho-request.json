@@ -62,5 +62,13 @@
         "display": "Cytopathology procedure, cell block preparation (procedure)"
       }
     ]
-  }
+  },
+  "supportingInfo": [
+    {
+      "reference": "List/mii-exa-patho-history-of-present-illness"
+    },
+    {
+      "reference": "List/mii-exa-patho-active-problems-list"
+    }
+  ]
 }

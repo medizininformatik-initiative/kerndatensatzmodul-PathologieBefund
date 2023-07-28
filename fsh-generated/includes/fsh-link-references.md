@@ -4,6 +4,7 @@
 [mii-exa-patho-microscope-slide-mounting-medium]: Substance-mii-exa-patho-microscope-slide-mounting-medium.html
 [mii-exa-patho-neutral-buffered-formalin]: Substance-mii-exa-patho-neutral-buffered-formalin.html
 [mii-exa-patho-prostate-tru-cut-biopsy-sample]: Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html
+[mii-exa-patho-active-problems-list]: List-mii-exa-patho-active-problems-list.html
 [mii-exa-patho-attached-image]: Media-mii-exa-patho-attached-image.html
 [mii-exa-patho-biopsy-site-a]: Observation-mii-exa-patho-biopsy-site-a.html
 [mii-exa-patho-biopsy-site-b]: Observation-mii-exa-patho-biopsy-site-b.html
@@ -14,9 +15,12 @@
 [mii-exa-patho-diagnostic-conclusion-grouper]: Observation-mii-exa-patho-diagnostic-conclusion-grouper.html
 [mii-exa-patho-gleason-pattern-a]: Observation-mii-exa-patho-gleason-pattern-a.html
 [mii-exa-patho-histologic-type-a]: Observation-mii-exa-patho-histologic-type-a.html
+[mii-exa-patho-history-of-present-illness]: List-mii-exa-patho-history-of-present-illness.html
 [mii-exa-patho-macro-grouper-a]: Observation-mii-exa-patho-macro-grouper-a.html
 [mii-exa-patho-macro-grouper-b]: Observation-mii-exa-patho-macro-grouper-b.html
 [mii-exa-patho-micro-grouper-a]: Observation-mii-exa-patho-micro-grouper-a.html
+[mii-exa-patho-problem-list-item-1]: Condition-mii-exa-patho-problem-list-item-1.html
+[mii-exa-patho-problem-list-item-2]: Condition-mii-exa-patho-problem-list-item-2.html
 [mii-exa-patho-report]: DiagnosticReport-mii-exa-patho-report.html
 [mii-exa-patho-request]: ServiceRequest-mii-exa-patho-request.html
 [mii-exa-patho-tissue-length-a]: Observation-mii-exa-patho-tissue-length-a.html

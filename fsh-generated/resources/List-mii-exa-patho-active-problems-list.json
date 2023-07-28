@@ -1,0 +1,30 @@
+{
+  "resourceType": "List",
+  "id": "mii-exa-patho-active-problems-list",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list"
+    ]
+  },
+  "mode": "snapshot",
+  "code": {
+    "coding": [
+      {
+        "code": "11450-4",
+        "system": "http://loinc.org",
+        "display": "Problem list - Reported"
+      }
+    ]
+  },
+  "status": "current",
+  "subject": {
+    "reference": "Patient/12345"
+  },
+  "entry": [
+    {
+      "item": {
+        "reference": "Condition/mii-exa-patho-problem-list-item-1"
+      }
+    }
+  ]
+}

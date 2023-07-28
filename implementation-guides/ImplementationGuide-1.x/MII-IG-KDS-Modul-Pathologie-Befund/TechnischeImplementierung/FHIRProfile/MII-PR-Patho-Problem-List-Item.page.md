@@ -46,3 +46,9 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 
 --------------------------------
 ### Beispiele
+
+{{json:mii-exa-patho-problem-list-item-1}}
+
+---
+
+{{json:mii-exa-patho-problem-list-item-2}}
