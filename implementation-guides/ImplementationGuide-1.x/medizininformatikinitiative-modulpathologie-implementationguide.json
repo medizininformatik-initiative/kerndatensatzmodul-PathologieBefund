@@ -107,6 +107,14 @@
       },
       {
         "reference": {
+          "reference": "List/mii-exa-patho-active-problems-list"
+        },
+        "name": "MII EXA Patho Active Problems List",
+        "description": "Pathology Active Problems List List Example",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list"
+      },
+      {
+        "reference": {
           "reference": "Media/mii-exa-patho-attached-image"
         },
         "name": "MII EXA Patho Attached Image",
@@ -187,6 +195,14 @@
       },
       {
         "reference": {
+          "reference": "List/mii-exa-patho-history-of-present-illness"
+        },
+        "name": "MII EXA Patho History Of Present Illness",
+        "description": "Pathology History of Present Illness List Example",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-patho-macro-grouper-a"
         },
         "name": "MII EXA Patho Macro Grouper A",
@@ -208,6 +224,22 @@
         "name": "MII EXA Patho Micro Grouper A",
         "description": "Grouper for all Microscopic Observations of Specimen A",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-patho-problem-list-item-1"
+        },
+        "name": "MII EXA Patho Problem List Item 1",
+        "description": "Pathology Problem List Item Example",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item"
+      },
+      {
+        "reference": {
+          "reference": "Condition/mii-exa-patho-problem-list-item-2"
+        },
+        "name": "MII EXA Patho Problem List Item 2",
+        "description": "Pathology Problem List Item Example",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item"
       },
       {
         "reference": {
