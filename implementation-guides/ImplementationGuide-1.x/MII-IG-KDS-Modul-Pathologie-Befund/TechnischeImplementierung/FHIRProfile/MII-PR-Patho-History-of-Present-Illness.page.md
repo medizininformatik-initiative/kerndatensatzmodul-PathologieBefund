@@ -48,10 +48,7 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 | FHIR-Element | Logisches Datenmodell |
 |--|--|
 
----
-
-### Snapshot
-{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness}}
-
 --------------------------------
 ### Beispiele
+
+{{json:mii-exa-patho-history-of-present-illness}}
