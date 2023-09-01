@@ -45,7 +45,7 @@ Description: "Abstract Observation to define common features of a main pathology
   * coding ^slicing.rules = #open
   * coding contains sct 0..1 MS
   * coding[sct] from $bio-bodystructure (required)
-    * ^patternIdentifier.system = $SCT
+    * ^patternCoding.system = $SCT
     * system 1.. MS
 // Untersuchungsmethode
 * method MS
