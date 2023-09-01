@@ -42,7 +42,7 @@ jobs:
       - name: Firely.Terminal (GitHub Actions)
         uses: FirelyTeam/firely-terminal-pipeline@v0.4.0
         with:
-          PATH_TO_CONFORMANCE_RESOURCES: terminologie/CodeSystem fsh-generated/resources
+          PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/resources
           PATH_TO_EXAMPLES: fsh-generated/resources
           PATH_TO_QUALITY_CONTROL_RULES: qc/custom
           DOTNET_VALIDATION_ENABLED: true
