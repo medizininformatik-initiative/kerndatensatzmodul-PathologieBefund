@@ -9,7 +9,7 @@ name: MII_IG_Modul_Patho
 status: active
 experimental: false
 version: 1.0.0
-date: "2023-07-20"
+date: "2023-07-10"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 packageId: de.medizininformatikinitiative.kerndatensatz.patho
