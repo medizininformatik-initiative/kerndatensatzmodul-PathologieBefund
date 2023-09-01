@@ -21,7 +21,7 @@ Usage: #definition
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#Specimen, #SHALL, Specimen, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-specimen, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-specimen|1.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -55,13 +55,13 @@ Usage: #definition
 * rest[=].resource[+]
   * insert InitResource(#Observation, #SHALL, Observation, #SHALL)
   // * insert AddSupportedProfile(mii-pr-patho-base-observation, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-intraoperative-grouper, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-macroscopic-grouper, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-microscopic-grouper, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-finding, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-diagnostic-conclusion-grouper, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-intraoperative-grouper|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-macroscopic-grouper|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-microscopic-grouper|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-finding|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-diagnostic-conclusion-grouper|1.0.0, #SHALL)
   // * insert AddSupportedProfile(mii-pr-patho-section-grouper, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-additional-specified-grouper, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-additional-specified-grouper|1.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -116,7 +116,7 @@ Related resource that belongs to the Observation group")
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#ServiceRequest, #SHALL, ServiceRequest, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-service-request, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-service-request|1.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -153,7 +153,7 @@ Related resource that belongs to the Observation group")
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#DiagnosticReport, #SHALL, DiagnosticReport, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-report, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-report|1.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -184,7 +184,7 @@ Related resource that belongs to the Observation group")
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#Composition, #SHALL, Composition, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-composition, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-composition|1.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -219,7 +219,7 @@ Related resource that belongs to the Observation group")
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#Media, #SHALL, Media, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-attached-image, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-attached-image|1.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
