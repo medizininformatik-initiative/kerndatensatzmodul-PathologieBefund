@@ -1,14 +1,14 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "mii-ig-modul-patho",
-  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho",
+  "id": "mii-ig-patho",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-patho",
   "version": "1.0.0",
-  "name": "MII_IG_Modul_Patho",
-  "title": "MII IG Modul Patho",
+  "name": "MII_IG_Patho",
+  "title": "MII IG Patho",
   "status": "active",
   "description": "Medizininformatik Initiative - Modul Pathologie - ImplementationGuide Version 1.0",
   "experimental": false,
-  "date": "2023-07-20",
+  "date": "2023-07-10",
   "publisher": "Medizininformatik-Initiative",
   "contact": [
     {

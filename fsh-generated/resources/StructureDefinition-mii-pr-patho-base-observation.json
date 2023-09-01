@@ -219,7 +219,7 @@
         "sliceName": "sct",
         "min": 0,
         "max": "1",
-        "patternIdentifier": {
+        "patternCoding": {
           "system": "http://snomed.info/sct"
         },
         "mustSupport": true,
