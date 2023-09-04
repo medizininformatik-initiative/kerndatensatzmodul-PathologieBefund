@@ -118,8 +118,42 @@ Usage: #definition
 * status = #active
 * code = #value-ratio
 * base = #Observation
+* type = #composite
+* expression = "Observation.value.ofType(Ratio)"
+* component[0].definition = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-value-ratio-numerator"
+* component[=].expression = "numerator"
+* component[+].definition = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-value-ratio-denominator"
+* component[=].expression = "denominator"
+
+Instance: mii-sp-patho-value-ratio-numerator
+InstanceOf: SearchParameter
+Usage: #definition
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-value-ratio-numerator"
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Patho_Value_Ratio_Numerator"
+* status = #active
+* experimental = false
+* description = "SearchParameter for Observation.valueRatio.numerator"
+* code = #value-ratio-numerator
+* base = #Observation
 * type = #quantity
-* expression = "(Observation.value as Quantity) | (Observation.value as Ratio)"
+* expression = "Observation.value.ofType(Ratio).numerator"
+
+Instance: mii-sp-patho-value-ratio-denominator
+InstanceOf: SearchParameter
+Usage: #definition
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-value-ratio-denominator"
+* insert SP_Publisher
+* insert Version
+* name = "MII_SP_Patho_Value_Ratio_Denominator"
+* status = #active
+* experimental = false
+* description = "SearchParameter for Observation.valueRatio.denominator"
+* code = #value-ratio-denominator
+* base = #Observation
+* type = #quantity
+* expression = "Observation.value.ofType(Ratio).denominator"
 
 //-----------------------------------------
 // SearchParameters for ServiceRequest
