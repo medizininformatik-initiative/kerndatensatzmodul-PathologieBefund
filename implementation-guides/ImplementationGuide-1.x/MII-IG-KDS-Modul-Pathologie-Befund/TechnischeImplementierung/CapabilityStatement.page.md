@@ -11,7 +11,7 @@ Nachfolgend wird aufgelistet welche Inhalte verpflichtend im CapabilityStatement
 
 Canonical: ```https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata```
 
-[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata&fhirVersion=R4)
+[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.patho@1.0.0)
 
 
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata}}
