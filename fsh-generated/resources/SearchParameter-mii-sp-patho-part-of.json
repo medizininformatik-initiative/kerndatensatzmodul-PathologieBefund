@@ -22,5 +22,5 @@
     "Media"
   ],
   "type": "reference",
-  "expression": "(Media.partOf as Media)"
+  "expression": "Media.partOf"
 }
