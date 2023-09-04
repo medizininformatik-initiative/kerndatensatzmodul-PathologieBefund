@@ -64,7 +64,7 @@ Usage: #definition
 * code = #processing-additive
 * base = #Specimen
 * type = #reference
-* expression = "Specimen.processing.additive"
+* expression = "Specimen.processing.additive as Reference"
 
 Instance: mii-sp-patho-processing-date
 InstanceOf: SearchParameter
