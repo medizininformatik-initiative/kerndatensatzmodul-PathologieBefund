@@ -90,7 +90,7 @@ Usage: #definition
 * code = #container-additive
 * base = #Specimen
 * type = #reference
-* expression = "Specimen.container.additive"
+* expression = "Specimen.container.additive as Reference"
 
 //-----------------------------------------
 // SearchParameters for Observation
