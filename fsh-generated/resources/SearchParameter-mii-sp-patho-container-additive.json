@@ -22,5 +22,5 @@
     "Specimen"
   ],
   "type": "reference",
-  "expression": "Specimen.container.additive"
+  "expression": "Specimen.container.additive as Reference"
 }
