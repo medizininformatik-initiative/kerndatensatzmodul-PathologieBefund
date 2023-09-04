@@ -110,7 +110,9 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "value-string", Observation-value-string, #string, "The value of the observation\, if the value is a string\, and also searches in CodeableConcept.text")  
   // CUSTOM
   * insert AddMIISearchParameter(#SHALL, "body-site", mii-sp-patho-body-site, #token, "SearchParameter for Observation.bodySite")
-  * insert AddMIISearchParameter(#SHALL, "value-ratio", mii-sp-patho-value-ratio, #quantity, "SearchParameter for Observation.valueRatio")
+  * insert AddMIISearchParameter(#SHALL, "value-ratio", mii-sp-patho-value-ratio, #composite, "SearchParameter for Observation.valueRatio")
+  * insert AddMIISearchParameter(#SHALL, "value-ratio-numerator", mii-sp-patho-value-ratio-numerator, #quantity, "SearchParameter for Observation.valueRatio.numerator")
+  * insert AddMIISearchParameter(#SHALL, "value-ratio-denominator", mii-sp-patho-value-ratio-denominator, #quantity, "SearchParameter for Observation.valueRatio.denominator")
 //-------------------
 // ServiceRequest
 //-------------------

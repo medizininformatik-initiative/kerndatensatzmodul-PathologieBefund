@@ -69,3 +69,5 @@
 [mii-sp-patho-request]: SearchParameter-mii-sp-patho-request.html
 [mii-sp-patho-supporting-info]: SearchParameter-mii-sp-patho-supporting-info.html
 [mii-sp-patho-value-ratio]: SearchParameter-mii-sp-patho-value-ratio.html
+[mii-sp-patho-value-ratio-denominator]: SearchParameter-mii-sp-patho-value-ratio-denominator.html
+[mii-sp-patho-value-ratio-numerator]: SearchParameter-mii-sp-patho-value-ratio-numerator.html

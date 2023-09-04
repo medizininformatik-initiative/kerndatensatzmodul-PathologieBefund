@@ -913,8 +913,32 @@
             {
               "name": "value-ratio",
               "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-value-ratio",
-              "type": "quantity",
+              "type": "composite",
               "documentation": "SearchParameter for Observation.valueRatio",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "value-ratio-numerator",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-value-ratio-numerator",
+              "type": "quantity",
+              "documentation": "SearchParameter for Observation.valueRatio.numerator",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            },
+            {
+              "name": "value-ratio-denominator",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-value-ratio-denominator",
+              "type": "quantity",
+              "documentation": "SearchParameter for Observation.valueRatio.denominator",
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
