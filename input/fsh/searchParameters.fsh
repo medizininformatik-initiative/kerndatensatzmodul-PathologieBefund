@@ -222,4 +222,4 @@ Usage: #definition
 * status = #active
 * base = #Media
 * type = #reference
-* expression = "(Media.partOf as Media)"
+* expression = "Media.partOf"
