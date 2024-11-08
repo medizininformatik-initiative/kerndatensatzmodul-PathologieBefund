@@ -59,7 +59,7 @@
             ]
           },
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|1.0.0"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2025.0.0"
           ],
           "_supportedProfile": [
             {
@@ -262,7 +262,7 @@
             },
             {
               "name": "request",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-request",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-specimen-request",
               "type": "reference",
               "documentation": "SearchParameter for Specimen.request",
               "extension": [
@@ -274,7 +274,7 @@
             },
             {
               "name": "collection-method",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-collection-method",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-specimen-collection-method",
               "type": "token",
               "documentation": "SearchParameter for Specimen.collection.method",
               "extension": [
@@ -286,7 +286,7 @@
             },
             {
               "name": "collection-body-site",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-collection-body-site",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-specimen-collection-body-site",
               "type": "token",
               "documentation": "SearchParameter for Specimen.collection.bodySite",
               "extension": [
@@ -298,7 +298,7 @@
             },
             {
               "name": "processing-procedure",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-processing-procedure",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-specimen-processing-procedure",
               "type": "token",
               "documentation": "SearchParameter for Specimen.processing.procedure",
               "extension": [
@@ -310,7 +310,7 @@
             },
             {
               "name": "processing-additive",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-processing-additive",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-specimen-processing-additive",
               "type": "reference",
               "documentation": "SearchParameter for Specimen.processing.additive",
               "extension": [
@@ -322,7 +322,7 @@
             },
             {
               "name": "processing-date",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-processing-date",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-specimen-processing-date",
               "type": "date",
               "documentation": "SearchParameter for Specimen.processing.time",
               "extension": [
@@ -334,7 +334,7 @@
             },
             {
               "name": "container-additive",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-container-additive",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-specimen-container-additive",
               "type": "reference",
               "documentation": "SearchParameter for Specimen.container.additive",
               "extension": [
@@ -364,12 +364,12 @@
             ]
           },
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-intraoperative-grouper|1.0.0",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|1.0.0",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper|1.0.0",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|1.0.0",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|1.0.0",
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper|1.0.0"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-intraoperative-grouper|2025.0.0",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2025.0.0",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper|2025.0.0",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2025.0.0",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2025.0.0",
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper|2025.0.0"
           ],
           "_supportedProfile": [
             {
@@ -900,7 +900,7 @@
             },
             {
               "name": "body-site",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-body-site",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-body-site",
               "type": "token",
               "documentation": "SearchParameter for Observation.bodySite",
               "extension": [
@@ -912,7 +912,7 @@
             },
             {
               "name": "value-ratio",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-value-ratio",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-value-ratio",
               "type": "composite",
               "documentation": "SearchParameter for Observation.valueRatio",
               "extension": [
@@ -924,7 +924,7 @@
             },
             {
               "name": "value-ratio-numerator",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-value-ratio-numerator",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-value-ratio-numerator",
               "type": "quantity",
               "documentation": "SearchParameter for Observation.valueRatio.numerator",
               "extension": [
@@ -936,7 +936,7 @@
             },
             {
               "name": "value-ratio-denominator",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-value-ratio-denominator",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-value-ratio-denominator",
               "type": "quantity",
               "documentation": "SearchParameter for Observation.valueRatio.denominator",
               "extension": [
@@ -966,7 +966,7 @@
             ]
           },
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|1.0.0"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2025.0.0"
           ],
           "_supportedProfile": [
             {
@@ -1193,7 +1193,7 @@
             },
             {
               "name": "reason-code",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-reason-code",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-servicerequest-reason-code",
               "type": "token",
               "documentation": "SearchParameter for ServiceRequest.reasonCode",
               "extension": [
@@ -1205,7 +1205,7 @@
             },
             {
               "name": "supporting-info",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-supporting-info",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-servicerequest-supporting-info",
               "type": "reference",
               "documentation": "SearchParameter for ServiceRequest.supportingInfo",
               "extension": [
@@ -1235,7 +1235,7 @@
             ]
           },
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|1.0.0"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2025.0.0"
           ],
           "_supportedProfile": [
             {
@@ -1486,7 +1486,7 @@
             },
             {
               "name": "imaging-study",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-imaging-study",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-diagnosticreport-imaging-study",
               "type": "reference",
               "documentation": "SearchParameter for DiagnosticReport.imagingStudy",
               "extension": [
@@ -1516,7 +1516,7 @@
             ]
           },
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|1.0.0"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2025.0.0"
           ],
           "_supportedProfile": [
             {
@@ -1779,7 +1779,7 @@
             },
             {
               "name": "attester-mode",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-attester-mode",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-composition-attester-mode",
               "type": "token",
               "documentation": "SearchParameter for Composition.attester.mode",
               "extension": [
@@ -1791,7 +1791,7 @@
             },
             {
               "name": "custodian",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-custodian",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-composition-custodian",
               "type": "reference",
               "documentation": "SearchParameter for Composition.custodian",
               "extension": [
@@ -1803,7 +1803,7 @@
             },
             {
               "name": "relates-to-code",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-relates-to-code",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-composition-relates-to-code",
               "type": "token",
               "documentation": "SearchParameter for Composition.relatesTo.code",
               "extension": [
@@ -1833,7 +1833,7 @@
             ]
           },
           "supportedProfile": [
-            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|1.0.0"
+            "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|2025.0.0"
           ],
           "_supportedProfile": [
             {
@@ -1952,7 +1952,7 @@
             },
             {
               "name": "part-of",
-              "definition": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/mii-sp-patho-part-of",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-media-part-of",
               "type": "reference",
               "documentation": "SearchParameter for Media.partOf",
               "extension": [

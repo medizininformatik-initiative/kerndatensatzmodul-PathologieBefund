@@ -1,6 +1,7 @@
 //----------------------------------------
 // SearchParameters for Specimen
 //----------------------------------------
+/*
 Instance: mii-sp-patho-request
 InstanceOf: SearchParameter
 Usage: #definition
@@ -257,3 +258,4 @@ Usage: #definition
 * base = #Media
 * type = #reference
 * expression = "Media.partOf"
+*/
