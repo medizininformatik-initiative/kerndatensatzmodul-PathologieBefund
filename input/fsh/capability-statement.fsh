@@ -8,7 +8,7 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata"
 * description = "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative"
 * experimental = false
-* date = "2022-07-18"
+* date = "2024-11-08"
 * status = #active
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
@@ -21,7 +21,7 @@ Usage: #definition
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#Specimen, #SHALL, Specimen, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-specimen|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-specimen|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -42,26 +42,26 @@ Usage: #definition
   * insert AddSearchParameter(#SHALL, "container", Specimen-container, #token, "The kind of specimen container")
   * insert AddSearchParameter(#SHALL, "patient", Specimen-patient, #reference, "The patient the specimen comes from")
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "request", mii-sp-patho-request, #reference, "SearchParameter for Specimen.request")
-  * insert AddMIISearchParameter(#SHALL, "collection-method", mii-sp-patho-collection-method, #token, "SearchParameter for Specimen.collection.method")
-  * insert AddMIISearchParameter(#SHALL, "collection-body-site", mii-sp-patho-collection-body-site, #token, "SearchParameter for Specimen.collection.bodySite")
-  * insert AddMIISearchParameter(#SHALL, "processing-procedure", mii-sp-patho-processing-procedure, #token, "SearchParameter for Specimen.processing.procedure")
-  * insert AddMIISearchParameter(#SHALL, "processing-additive", mii-sp-patho-processing-additive, #reference, "SearchParameter for Specimen.processing.additive")
-  * insert AddMIISearchParameter(#SHALL, "processing-date", mii-sp-patho-processing-date, #date, "SearchParameter for Specimen.processing.time")
-  * insert AddMIISearchParameter(#SHALL, "container-additive", mii-sp-patho-container-additive, #reference, "SearchParameter for Specimen.container.additive")
+  * insert AddMIISearchParameter(#SHALL, "request", mii-sp-meta-specimen-request, #reference, "SearchParameter for Specimen.request") // done
+  * insert AddMIISearchParameter(#SHALL, "collection-method", mii-sp-meta-specimen-collection-method, #token, "SearchParameter for Specimen.collection.method")
+  * insert AddMIISearchParameter(#SHALL, "collection-body-site", mii-sp-meta-specimen-collection-body-site, #token, "SearchParameter for Specimen.collection.bodySite")
+  * insert AddMIISearchParameter(#SHALL, "processing-procedure", mii-sp-meta-specimen-processing-procedure, #token, "SearchParameter for Specimen.processing.procedure")
+  * insert AddMIISearchParameter(#SHALL, "processing-additive", mii-sp-meta-specimen-processing-additive, #reference, "SearchParameter for Specimen.processing.additive")
+  * insert AddMIISearchParameter(#SHALL, "processing-date", mii-sp-meta-specimen-processing-date, #date, "SearchParameter for Specimen.processing.time")
+  * insert AddMIISearchParameter(#SHALL, "container-additive", mii-sp-meta-specimen-container-additive, #reference, "SearchParameter for Specimen.container.additive")
 //-------------------
 // Observation
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#Observation, #SHALL, Observation, #SHALL)
   // * insert AddSupportedProfile(mii-pr-patho-base-observation, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-intraoperative-grouper|1.0.0, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-macroscopic-grouper|1.0.0, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-microscopic-grouper|1.0.0, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-finding|1.0.0, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-diagnostic-conclusion-grouper|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-intraoperative-grouper|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-macroscopic-grouper|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-microscopic-grouper|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-finding|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-diagnostic-conclusion-grouper|2025.0.0, #SHALL)
   // * insert AddSupportedProfile(mii-pr-patho-section-grouper, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-additional-specified-grouper|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-additional-specified-grouper|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -109,16 +109,16 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "value-quantity", Observation-value-quantity, #quantity, "The value of the observation\, if the value is a Quantity\, or a SampledData (just search on the bounds of the values in sampled data\)")
   * insert AddSearchParameter(#SHALL, "value-string", Observation-value-string, #string, "The value of the observation\, if the value is a string\, and also searches in CodeableConcept.text")  
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "body-site", mii-sp-patho-body-site, #token, "SearchParameter for Observation.bodySite")
-  * insert AddMIISearchParameter(#SHALL, "value-ratio", mii-sp-patho-value-ratio, #composite, "SearchParameter for Observation.valueRatio")
-  * insert AddMIISearchParameter(#SHALL, "value-ratio-numerator", mii-sp-patho-value-ratio-numerator, #quantity, "SearchParameter for Observation.valueRatio.numerator")
-  * insert AddMIISearchParameter(#SHALL, "value-ratio-denominator", mii-sp-patho-value-ratio-denominator, #quantity, "SearchParameter for Observation.valueRatio.denominator")
+  * insert AddMIISearchParameter(#SHALL, "body-site", mii-sp-meta-observation-body-site, #token, "SearchParameter for Observation.bodySite")
+  * insert AddMIISearchParameter(#SHALL, "value-ratio", mii-sp-meta-observation-value-ratio, #composite, "SearchParameter for Observation.valueRatio")
+  * insert AddMIISearchParameter(#SHALL, "value-ratio-numerator", mii-sp-meta-observation-value-ratio-numerator, #quantity, "SearchParameter for Observation.valueRatio.numerator")
+  * insert AddMIISearchParameter(#SHALL, "value-ratio-denominator", mii-sp-meta-observation-value-ratio-denominator, #quantity, "SearchParameter for Observation.valueRatio.denominator")
 //-------------------
 // ServiceRequest
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#ServiceRequest, #SHALL, ServiceRequest, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-service-request|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-service-request|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -148,14 +148,14 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "status", ServiceRequest-status, #token, "draft | active | on-hold | revoked | completed | entered-in-error | unknown")
   * insert AddSearchParameter(#SHALL, "subject", ServiceRequest-subject, #reference, "Search by subject")
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "reason-code", mii-sp-patho-reason-code, #token, "SearchParameter for ServiceRequest.reasonCode")
-  * insert AddMIISearchParameter(#SHALL, "supporting-info", mii-sp-patho-supporting-info, #reference, "SearchParameter for ServiceRequest.supportingInfo")
+  * insert AddMIISearchParameter(#SHALL, "reason-code", mii-sp-meta-servicerequest-reason-code, #token, "SearchParameter for ServiceRequest.reasonCode")
+  * insert AddMIISearchParameter(#SHALL, "supporting-info", mii-sp-meta-servicerequest-supporting-info, #reference, "SearchParameter for ServiceRequest.supportingInfo")
 //-------------------
 // DiagnosticReport
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#DiagnosticReport, #SHALL, DiagnosticReport, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-report|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-report|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -180,13 +180,13 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "status", DiagnosticReport-status, #token, "The status of the report")
   * insert AddSearchParameter(#SHALL, "subject", DiagnosticReport-subject, #reference, "The subject of the report")
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "imaging-study", mii-sp-patho-imaging-study, #reference, "SearchParameter for DiagnosticReport.imagingStudy")
+  * insert AddMIISearchParameter(#SHALL, "imaging-study", mii-sp-meta-diagnosticreport-imaging-study, #reference, "SearchParameter for DiagnosticReport.imagingStudy")
 //-------------------
 // Composition
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#Composition, #SHALL, Composition, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-composition|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-composition|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -213,15 +213,15 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "title", Composition-title, #string, "Human Readable name/title")
   * insert AddSearchParameter(#SHALL, "type", clinical-type, #token, "Kind of composition (LOINC if possible\)")
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "attester-mode", mii-sp-patho-attester-mode, #token, "SearchParameter for Composition.attester.mode")
-  * insert AddMIISearchParameter(#SHALL, "custodian", mii-sp-patho-custodian, #reference, "SearchParameter for Composition.custodian")
-  * insert AddMIISearchParameter(#SHALL, "relates-to-code", mii-sp-patho-relates-to-code, #token, "SearchParameter for Composition.relatesTo.code")
+  * insert AddMIISearchParameter(#SHALL, "attester-mode", mii-sp-meta-composition-attester-mode, #token, "SearchParameter for Composition.attester.mode")
+  * insert AddMIISearchParameter(#SHALL, "custodian", mii-sp-meta-composition-custodian, #reference, "SearchParameter for Composition.custodian")
+  * insert AddMIISearchParameter(#SHALL, "relates-to-code", mii-sp-meta-composition-relates-to-code, #token, "SearchParameter for Composition.relatesTo.code")
 //-------------------
 // Media
 //-------------------
 * rest[=].resource[+]
   * insert InitResource(#Media, #SHALL, Media, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-attached-image|1.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-attached-image|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -243,5 +243,5 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "type", Media-type, #token, "Classification of media as image\, video\, or audio")
   //* insert AddSearchParameter(#SHALL, "view", Media-view, #token, "Imaging view\, e.g. Lateral or Antero-posterior")
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "part-of", mii-sp-patho-part-of, #reference, "SearchParameter for Media.partOf")
+  * insert AddMIISearchParameter(#SHALL, "part-of", mii-sp-meta-media-part-of, #reference, "SearchParameter for Media.partOf")
   

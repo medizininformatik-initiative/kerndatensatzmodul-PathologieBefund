@@ -4,6 +4,7 @@
 [mii-exa-patho-microscope-slide-mounting-medium]: Substance-mii-exa-patho-microscope-slide-mounting-medium.html
 [mii-exa-patho-neutral-buffered-formalin]: Substance-mii-exa-patho-neutral-buffered-formalin.html
 [mii-exa-patho-prostate-tru-cut-biopsy-sample]: Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html
+[mii-cps-patho-capability-statement]: CapabilityStatement-mii-cps-patho-capability-statement.html
 [mii-exa-patho-active-problems-list]: List-mii-exa-patho-active-problems-list.html
 [mii-exa-patho-attached-image]: Media-mii-exa-patho-attached-image.html
 [mii-exa-patho-biopsy-site-a]: Observation-mii-exa-patho-biopsy-site-a.html
@@ -52,7 +53,6 @@
 [MII_VS_Patho_Report_Category_HL7]: ValueSet-mii-vs-patho-report-category-hl7.html
 [MII_VS_Patho_Section_Types_LOINC]: ValueSet-mii-vs-patho-section-types-loinc.html
 [MII_VS_Patho_Service_Request_SNOMED_CT]: ValueSet-mii-vs-patho-service-request-snomed-ct.html
-[mii-cps-patho-capability-statement]: CapabilityStatement-mii-cps-patho-capability-statement.html
 [mii-sp-patho-attester-mode]: SearchParameter-mii-sp-patho-attester-mode.html
 [mii-sp-patho-body-site]: SearchParameter-mii-sp-patho-body-site.html
 [mii-sp-patho-collection-body-site]: SearchParameter-mii-sp-patho-collection-body-site.html

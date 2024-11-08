@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-history-of-present-illness",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness",
-  "version": "1.0.0",
+  "version": "2025.0.0",
   "name": "MII_PR_Patho_History_Of_Present_Illness",
   "title": "MII PR Patho History Of Present Illness",
   "status": "active",
@@ -19,18 +19,6 @@
   ],
   "description": "List profile for 'History of Present Illness'",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    }
-  ],
   "kind": "resource",
   "abstract": false,
   "type": "List",

@@ -9,7 +9,7 @@ name: MII_IG_Modul_Patho
 status: active
 experimental: false
 version: 1.0.0
-date: "2023-07-10"
+date: "2024-11-08"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 packageId: de.medizininformatikinitiative.kerndatensatz.patho
@@ -21,11 +21,11 @@ publisher:
 FSHOnly: false
 # Don't forget to add further dependencies if necessary!
 dependencies: 
-  # de.basisprofil.r4: 1.4.0
-  # de.medizininformatikinitiative.kerndatensatz.meta: 1.0.3
-  de.medizininformatikinitiative.kerndatensatz.biobank: 1.0.8
-  de.medizininformatikinitiative.kerndatensatz.diagnose: 2.0.0-alpha3
-  de.gematik.isik-basismodul: 2.0.5
+  # de.basisprofil.r4: 1.5.0
+  de.medizininformatikinitiative.kerndatensatz.meta: 2025.0.0-alpha1
+  de.medizininformatikinitiative.kerndatensatz.biobank: 2025.0.0-rc
+  de.medizininformatikinitiative.kerndatensatz.diagnose: 2025.0.0-alpha1
+  de.gematik.isik-basismodul: 4.0.0
   hl7.fhir.us.mcode: 2.1.0
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

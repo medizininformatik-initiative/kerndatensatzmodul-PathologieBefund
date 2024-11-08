@@ -31,7 +31,7 @@ RuleSet: AddSearchParameter(expectation, name, parameter-id, type, documentation
 
 RuleSet: AddMIISearchParameter(expectation, name, parameter-id, type, documentation)
 * searchParam[+].name = {name}
-* searchParam[=].definition = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/SearchParameter/{parameter-id}"
+* searchParam[=].definition = "https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/{parameter-id}"
 * searchParam[=].type = {type}
 * searchParam[=].documentation = {documentation}
 * searchParam[=].extension.url = $fhir-capabilitystatement-expectation

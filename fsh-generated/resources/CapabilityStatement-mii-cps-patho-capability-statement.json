@@ -13,12 +13,12 @@
       ]
     }
   ],
-  "version": "1.0.0",
+  "version": "2025.0.0",
   "name": "MII_CPS_Patho_Capability_Statement",
   "title": "MII CPS Patho Capability Statement",
   "description": "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative",
   "experimental": false,
-  "date": "2022-07-18",
+  "date": "2024-11-08",
   "status": "active",
   "jurisdiction": [
     {
