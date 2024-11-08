@@ -43,12 +43,12 @@ Usage: #definition
   * insert AddSearchParameter(#SHALL, "patient", Specimen-patient, #reference, "The patient the specimen comes from")
   // CUSTOM
   * insert AddMIISearchParameter(#SHALL, "request", mii-sp-meta-specimen-request, #reference, "SearchParameter for Specimen.request") // done
-  * insert AddMIISearchParameter(#SHALL, "collection-method", mii-sp-patho-collection-method, #token, "SearchParameter for Specimen.collection.method")
-  * insert AddMIISearchParameter(#SHALL, "collection-body-site", mii-sp-patho-collection-body-site, #token, "SearchParameter for Specimen.collection.bodySite")
-  * insert AddMIISearchParameter(#SHALL, "processing-procedure", mii-sp-patho-processing-procedure, #token, "SearchParameter for Specimen.processing.procedure")
-  * insert AddMIISearchParameter(#SHALL, "processing-additive", mii-sp-patho-processing-additive, #reference, "SearchParameter for Specimen.processing.additive")
-  * insert AddMIISearchParameter(#SHALL, "processing-date", mii-sp-patho-processing-date, #date, "SearchParameter for Specimen.processing.time")
-  * insert AddMIISearchParameter(#SHALL, "container-additive", mii-sp-patho-container-additive, #reference, "SearchParameter for Specimen.container.additive")
+  * insert AddMIISearchParameter(#SHALL, "collection-method", mii-sp-meta-specimen-collection-method, #token, "SearchParameter for Specimen.collection.method")
+  * insert AddMIISearchParameter(#SHALL, "collection-body-site", mii-sp-meta-specimen-collection-body-site, #token, "SearchParameter for Specimen.collection.bodySite")
+  * insert AddMIISearchParameter(#SHALL, "processing-procedure", mii-sp-meta-specimen-processing-procedure, #token, "SearchParameter for Specimen.processing.procedure")
+  * insert AddMIISearchParameter(#SHALL, "processing-additive", mii-sp-meta-specimen-processing-additive, #reference, "SearchParameter for Specimen.processing.additive")
+  * insert AddMIISearchParameter(#SHALL, "processing-date", mii-sp-meta-specimen-processing-date, #date, "SearchParameter for Specimen.processing.time")
+  * insert AddMIISearchParameter(#SHALL, "container-additive", mii-sp-meta-specimen-container-additive, #reference, "SearchParameter for Specimen.container.additive")
 //-------------------
 // Observation
 //-------------------
@@ -109,10 +109,10 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "value-quantity", Observation-value-quantity, #quantity, "The value of the observation\, if the value is a Quantity\, or a SampledData (just search on the bounds of the values in sampled data\)")
   * insert AddSearchParameter(#SHALL, "value-string", Observation-value-string, #string, "The value of the observation\, if the value is a string\, and also searches in CodeableConcept.text")  
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "body-site", mii-sp-patho-body-site, #token, "SearchParameter for Observation.bodySite")
-  * insert AddMIISearchParameter(#SHALL, "value-ratio", mii-sp-patho-value-ratio, #composite, "SearchParameter for Observation.valueRatio")
-  * insert AddMIISearchParameter(#SHALL, "value-ratio-numerator", mii-sp-patho-value-ratio-numerator, #quantity, "SearchParameter for Observation.valueRatio.numerator")
-  * insert AddMIISearchParameter(#SHALL, "value-ratio-denominator", mii-sp-patho-value-ratio-denominator, #quantity, "SearchParameter for Observation.valueRatio.denominator")
+  * insert AddMIISearchParameter(#SHALL, "body-site", mii-sp-meta-observation-body-site, #token, "SearchParameter for Observation.bodySite")
+  * insert AddMIISearchParameter(#SHALL, "value-ratio", mii-sp-meta-observation-value-ratio, #composite, "SearchParameter for Observation.valueRatio")
+  * insert AddMIISearchParameter(#SHALL, "value-ratio-numerator", mii-sp-meta-observation-value-ratio-numerator, #quantity, "SearchParameter for Observation.valueRatio.numerator")
+  * insert AddMIISearchParameter(#SHALL, "value-ratio-denominator", mii-sp-meta-observation-value-ratio-denominator, #quantity, "SearchParameter for Observation.valueRatio.denominator")
 //-------------------
 // ServiceRequest
 //-------------------
@@ -148,8 +148,8 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "status", ServiceRequest-status, #token, "draft | active | on-hold | revoked | completed | entered-in-error | unknown")
   * insert AddSearchParameter(#SHALL, "subject", ServiceRequest-subject, #reference, "Search by subject")
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "reason-code", mii-sp-patho-reason-code, #token, "SearchParameter for ServiceRequest.reasonCode")
-  * insert AddMIISearchParameter(#SHALL, "supporting-info", mii-sp-patho-supporting-info, #reference, "SearchParameter for ServiceRequest.supportingInfo")
+  * insert AddMIISearchParameter(#SHALL, "reason-code", mii-sp-meta-servicerequest-reason-code, #token, "SearchParameter for ServiceRequest.reasonCode")
+  * insert AddMIISearchParameter(#SHALL, "supporting-info", mii-sp-meta-servicerequest-supporting-info, #reference, "SearchParameter for ServiceRequest.supportingInfo")
 //-------------------
 // DiagnosticReport
 //-------------------
@@ -180,7 +180,7 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "status", DiagnosticReport-status, #token, "The status of the report")
   * insert AddSearchParameter(#SHALL, "subject", DiagnosticReport-subject, #reference, "The subject of the report")
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "imaging-study", mii-sp-patho-imaging-study, #reference, "SearchParameter for DiagnosticReport.imagingStudy")
+  * insert AddMIISearchParameter(#SHALL, "imaging-study", mii-sp-meta-diagnosticreport-imaging-study, #reference, "SearchParameter for DiagnosticReport.imagingStudy")
 //-------------------
 // Composition
 //-------------------
@@ -213,9 +213,9 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "title", Composition-title, #string, "Human Readable name/title")
   * insert AddSearchParameter(#SHALL, "type", clinical-type, #token, "Kind of composition (LOINC if possible\)")
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "attester-mode", mii-sp-patho-attester-mode, #token, "SearchParameter for Composition.attester.mode")
-  * insert AddMIISearchParameter(#SHALL, "custodian", mii-sp-patho-custodian, #reference, "SearchParameter for Composition.custodian")
-  * insert AddMIISearchParameter(#SHALL, "relates-to-code", mii-sp-patho-relates-to-code, #token, "SearchParameter for Composition.relatesTo.code")
+  * insert AddMIISearchParameter(#SHALL, "attester-mode", mii-sp-meta-composition-attester-mode, #token, "SearchParameter for Composition.attester.mode")
+  * insert AddMIISearchParameter(#SHALL, "custodian", mii-sp-meta-composition-custodian, #reference, "SearchParameter for Composition.custodian")
+  * insert AddMIISearchParameter(#SHALL, "relates-to-code", mii-sp-meta-composition-relates-to-code, #token, "SearchParameter for Composition.relatesTo.code")
 //-------------------
 // Media
 //-------------------
@@ -243,5 +243,5 @@ Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "type", Media-type, #token, "Classification of media as image\, video\, or audio")
   //* insert AddSearchParameter(#SHALL, "view", Media-view, #token, "Imaging view\, e.g. Lateral or Antero-posterior")
   // CUSTOM
-  * insert AddMIISearchParameter(#SHALL, "part-of", mii-sp-patho-part-of, #reference, "SearchParameter for Media.partOf")
+  * insert AddMIISearchParameter(#SHALL, "part-of", mii-sp-meta-media-part-of, #reference, "SearchParameter for Media.partOf")
   
