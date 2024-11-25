@@ -20,6 +20,12 @@ Fragen zu der vorliegenden Publikation können jederzeit unter [chat.fhir.org](h
 
 Anmerkungen und Kritik werden in Form von 'Issues' im [GitHub Repository](https://github.com/medizininformatik-initiative/kerndatensatzmodul-PathologieBefund) oder im [Simplifier-Projekt](https://simplifier.net/medizininformatikinitiative-modulpathologie) stets gern entgegengenommen.
 
+## Ansprechpartner
+
+* Thimo Hölter              (Berlin Institute of Health at Charité)
+* Sylvia Thun               (Berlin Institute of Health at Charité)
+
+
 ## Autoren (in alphabetischer Reihenfolge)
 
 * Alexander Bartschke       (Berlin Institute of Health at Charité)
@@ -27,9 +33,10 @@ Anmerkungen und Kritik werden in Form von 'Issues' im [GitHub Repository](https:
 * Martin Boeker             (TU München)
 * Melanie Börries           (Uniklinikum Freiburg)
 * Andrea Essenwanger        (Berlin Institute of Health at Charité)
-* Gunter Haroske            (Bundesverband Deutscher Pathologen)
+* Gunter Haroske            (Berufsverband Deutscher Pathologinnen und Pathologen)
 * Thimo Hölter              (Berlin Institute of Health at Charité)
-* Marlon Kazmierczak        (Bundesverband Deutscher Pathologen)
+* Marlon Kazmierczak        (Berufsverband Deutscher Pathologinnen und Pathologen)
+* Thomas Debertshäuser      (Berlin Institute of Health at Charité)
 * Thomas Rüdiger            (Klinikum Karlsruhe)
 * Julian Saß                (Berlin Institute of Health at Charité)
 * Sylvia Thun               (Berlin Institute of Health at Charité)
