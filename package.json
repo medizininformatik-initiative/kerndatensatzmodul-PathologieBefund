@@ -28,9 +28,9 @@
   "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
   "dependencies": {
     "de.gematik.isik-basismodul": "4.0.0",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.0-alpha1",
-    "de.medizininformatikinitiative.kerndatensatz.diagnose": "2025.0.0-alpha1",
-    "de.medizininformatikinitiative.kerndatensatz.biobank": "2025.0.0-rc",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.0",
+    "de.medizininformatikinitiative.kerndatensatz.diagnose": "2025.0.0",
+    "de.medizininformatikinitiative.kerndatensatz.biobank": "2025.0.1",
     "hl7.fhir.us.mcode": "2.1.0"
   }
 }

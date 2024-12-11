@@ -4,8 +4,8 @@ Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatens
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 25.11.2024  |
-| Version | 2025.0.0         |
+| Datum   | 10.12.2024  |
+| Version | 2025.0.2         |
 | Status  | Active       |
 | Realm   | DE          | 
 
