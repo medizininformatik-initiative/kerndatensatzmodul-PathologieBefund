@@ -4,8 +4,8 @@ Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatens
 
 | Veröffentlichung   |   |
 |---------|---|
-| Datum   | 25.11.2024  |
-| Version | 2025.0.0         |
+| Datum   | 10.12.2024  |
+| Version | 2025.0.2         |
 | Status  | Active       |
 | Realm   | DE          | 
 
@@ -32,11 +32,11 @@ Anmerkungen und Kritik werden in Form von 'Issues' im [GitHub Repository](https:
 * Karl-Friedrich Becker     (TU München)
 * Martin Boeker             (TU München)
 * Melanie Börries           (Uniklinikum Freiburg)
+* Thomas Debertshäuser      (Berlin Institute of Health at Charité)
 * Andrea Essenwanger        (Berlin Institute of Health at Charité)
 * Gunter Haroske            (Berufsverband Deutscher Pathologinnen und Pathologen)
 * Thimo Hölter              (Berlin Institute of Health at Charité)
 * Marlon Kazmierczak        (Berufsverband Deutscher Pathologinnen und Pathologen)
-* Thomas Debertshäuser      (Berlin Institute of Health at Charité)
 * Thomas Rüdiger            (Klinikum Karlsruhe)
 * Julian Saß                (Berlin Institute of Health at Charité)
 * Sylvia Thun               (Berlin Institute of Health at Charité)
