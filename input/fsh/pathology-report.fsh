@@ -244,6 +244,7 @@ Description: "Example for an MII_PR_Patho_Composition"
 * identifier.extension.url = $fhir-narrative-link
 * identifier.extension.valueUrl = "#befund-eingangsnummer"
 * type = $LOINC#11526-1 "Pathology study"
+* type.text = "Pathologie-Befundbericht"
 * subject.reference = "Patient/34545"
 * encounter.reference = "Encounter/34555"
 * date = "2021-06-08"

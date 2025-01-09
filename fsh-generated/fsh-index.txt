@@ -1,6 +1,6 @@
 Output File                                                          Name                                            Type      FSH File                         Lines
 CapabilityStatement-mii-cps-patho-capability-statement.json          mii-cps-patho-capability-statement              Instance  capability-statement.fsh         1 - 246
-Composition-mii-exa-patho-composition.json                           mii-exa-patho-composition                       Instance  pathology-report.fsh             198 - 276
+Composition-mii-exa-patho-composition.json                           mii-exa-patho-composition                       Instance  pathology-report.fsh             198 - 277
 Condition-mii-exa-patho-problem-list-item-1.json                     mii-exa-patho-problem-list-item-1               Instance  serviceRequest.fsh               185 - 192
 Condition-mii-exa-patho-problem-list-item-2.json                     mii-exa-patho-problem-list-item-2               Instance  serviceRequest.fsh               194 - 201
 DiagnosticReport-mii-exa-patho-report.json                           mii-exa-patho-report                            Instance  pathology-report.fsh             170 - 196
