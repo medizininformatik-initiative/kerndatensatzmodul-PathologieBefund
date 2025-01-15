@@ -8,7 +8,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 ### Beschreibung
 
 
-Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.biobank/1.0.8/files/1972743) aus dem Modul Biobanken. 
+Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/profilespecimenbioprobecore) aus dem Modul Biobanken. 
 
 Ihm liegt das Domänen-Analyse-Modell von HL7 (HL7_DAM_SPECIMEN_R2_INFORM_2019APR) zugrunde. Dieses berücksichtigt insbesondere für die Pathologie das Rollenmodell von Specimen, welche sowohl Gegenstand als auch Produkt von Laborprozessen sind. Das Rootelement ist jeweils die in der Klinik entnommene Bioprobe. Tochterelemente sind Part, Block und Schnitt.
 

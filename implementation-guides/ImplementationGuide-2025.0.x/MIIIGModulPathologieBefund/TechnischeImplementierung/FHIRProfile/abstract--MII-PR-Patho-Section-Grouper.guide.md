@@ -36,7 +36,7 @@ Ein Grouper für "Clinical Information", [22636-5](https://loinc.org/22636-5/) (
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-section-grouper' select Name: name, Canonical: url
-
+```
 ------------------------------------------------------------------
 
 <tabs>
