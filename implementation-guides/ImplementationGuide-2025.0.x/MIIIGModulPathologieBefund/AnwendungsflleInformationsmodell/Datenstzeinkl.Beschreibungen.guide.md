@@ -2,7 +2,7 @@
 
 Die offizielle Version des Informationsmodells für das Erweiterungsmodul Pathologiebefundbericht findet sich auf [Art-Decor](https://art-decor.org/art-decor/decor-datasets--mide-?id=2.16.840.1.113883.3.1937.777.24.1.1&effectiveDate=2018-06-05T12%3A44%3A12&conceptId=2.16.840.1.113883.3.1937.777.24.2.1113&conceptEffectiveDate=2020-01-06T11%3A50%3A48&language=de-DE). Zur Vereinheitlichung der Repräsentation wurde das Informationsmodell zusätzlich als FHIR Logical Model abgebildet: 
 
-{{tree:MII-LM-Patho-Logical-Model}}
+{{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-lm-patho-logical-model}}
 
 ### Datensatz Art-Decor
 
@@ -26,7 +26,7 @@ Es ist zu beachten, dass das Logical Model rein auf die Abbildung der Dateneleme
 | Befundbericht.Freigebender | Gesetzlich Verantwortlicher (Legal Authenticator) für den Befundbericht |
 | Befundbericht.ZugehörigesDokument | Ältere Version des Befundberichts |
 
-Für die Datensätze *Patient*, *Fall* und *Verwaltende Organisation* werden die MII-Module [Person](https://simplifier.net/medizininformatikinitiative-modulperson), [Fall](https://simplifier.net/medizininformatikinitiative-modulfall) und [Strukturdaten](https://simplifier.net/medizininformatikinitiative-modulstrukturdaten) genutzt. Sie werden daher hier nicht weiter spezifiert. 
+Für die Datensätze *Patient*, *Fall* und *Verwaltende Organisation* werden die MII-Module [Person](https://simplifier.net/mii-basismodul-person-2024), [Fall](https://simplifier.net/medizininformatikinitiative-modulfall) und [Strukturdaten](https://simplifier.net/medizininformatikinitiative-modulstrukturdaten) genutzt. Sie werden daher hier nicht weiter spezifiert. 
 
 ------
 
@@ -45,7 +45,7 @@ Für die Datensätze *Patient*, *Fall* und *Verwaltende Organisation* werden die
 ------
 
 ### Probe
-Als Basis für die Spezifikation der *Probe* wird das MII-Profil [Bioprobe - Core](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.biobank/1.0.8/files/1972743), aus dem Modul [Biobank](https://simplifier.net/medizininformatikinitiative-modulbiobank) genutzt.
+Als Basis für die Spezifikation der *Probe* wird das MII-Profil [Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/profilespecimenbioprobecore), aus dem Modul [Biobank](https://simplifier.net/medizininformatikinitiative-modulbiobank) genutzt.
 
 | Logisches Datenmodell | Beschreibung |
 |--|--|

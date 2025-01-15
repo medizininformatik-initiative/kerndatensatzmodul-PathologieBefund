@@ -1,39 +1,39 @@
 ---
-topic: MicroGrouper
-subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper
+topic: DiagnosticConclusion
+subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper
 ---
 
-<a id="MicroGrouper"></a>
+<a id="DiagnosticConclusion"></a>
 ## {{page-title}}
 
 ### Beschreibung
 
-Das Profil **MII PR Patho Microscopic Grouper** der Resource Observation stellt als `DiagnosticReport.result:microscopic-grouper` für einen **MII PR Patho Report** den jeweiligen Beobachtungsberichtsabschnitt "Mikroskopische Beurteilung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von **MII PR Patho Finding**.
+Das Profil **MII PR Patho Diagnostic Conclusion Grouper** der Ressource Observation stellt als `DiagnosticReport.result:diagnostic-conclusion-grouper` für einen **MII PR Patho Report** den jeweiligen Beobachtungsberichtsabschnitt "Diagnostische Schlussfolgerung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von **MII PR Patho Finding**.
 
-Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu *MII PR Patho Finding** eingebunden werden.
+Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu **MII PR Patho Finding** eingebunden werden.
 
-Falls dieser Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so sollte jeweils ein **MII PR Patho Microscopic Grouper** pro Präparat vorhanden sein.
+Falls dieser Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so kann jeweils ein **MII PR Patho Diagnostic Conclusion Grouper** pro Präparat vorhanden sein.
 
-Auflistung und Erklärung der FHIR-Elemente siehe **MII PR Patho Section Grouper**.
+Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
 
 @```
-from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper' select Name: name, Canonical: url
+from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper' select Name: name, Canonical: url
 ```
 
 ---------------------
 
 <tabs>
     <tab title="snap" active="true">
-      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper, snap}}
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper, snap}}
     </tab>
     <tab title="diff">
-      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper, diff}}
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper, diff}}
     </tab>
     <tab title="hybrid">
-      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper, hybrid}}
+      {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper, hybrid}}
     </tab>
     <tab title="JSON">
-      {{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper}}
+      {{json:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper}}
     </tab>
 </tabs>
 
@@ -89,9 +89,9 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
 
     Beispiele:
 
-    ```GET [base]/Observation?code=http://loinc.org|22635-7```
+    ```GET [base]/Observation?code=http://loinc.org|22637-3```
     
-    ```GET [base]/Observation?code=22635-7```
+    ```GET [base]/Observation?code=22637-3```
 
     Anwendungshinweise:  Weitere Informationen zur Suche nach ```Observation.code``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
 
@@ -183,7 +183,7 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
 
     Beispiele:
 
-    ```GET [base]/Observation?value-string:contains=Mikroskopie```
+    ```GET [base]/Observation?value-string:contains=Diagnostische```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.value``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "string"](http://hl7.org/fhir/R4/search.html#string).
 
@@ -197,7 +197,6 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
 
     Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.bodySite``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
 
-
 --------------------------------
 ### Beispiele
-{{json:mii-exa-patho-micro-grouper-a}}
+{{json:mii-exa-patho-diagnostic-conclusion-grouper}}

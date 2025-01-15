@@ -8,7 +8,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 ### Beschreibung
 
-Das Profil **MII PR Patho Macroscopic Grouper** der Resource Observation stellt als `DiagnosticReport.result:macroscopic-grouper` für einen **MII PR Patho Report** den jeweiligen Beobachtungsberichtsabschnitt "Makroskopische Beurteilung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von **MII-PR-Patho Finding**.
+Das Profil **MII PR Patho Macroscopic Grouper** der Resource Observation stellt als `DiagnosticReport.result:macroscopic-grouper` für einen **MII PR Patho Report** den jeweiligen Beobachtungsberichtsabschnitt "Makroskopische Beurteilung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von **MII PR Patho Finding**.
 
 Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu **MII PR Patho Finding** eingebunden werden.
 

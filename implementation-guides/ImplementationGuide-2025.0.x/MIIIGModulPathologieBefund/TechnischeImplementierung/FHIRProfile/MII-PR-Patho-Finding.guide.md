@@ -13,7 +13,7 @@ Das Profil **MII PR Patho Finding** der Ressource Observation bildet als `hasMem
 
 **Sonderfall:**
 
-- Im Falle eines **Befundupdates** dient ein **MII PR Patho Finding**] mit dem LOINC-Code [90004-3 - 
+- Im Falle eines **Befundupdates** dient ein **MII PR Patho Finding** mit dem LOINC-Code [90004-3 - 
 Clinical significance of updated information](https://loinc.org/90004-3/) als Organizer für die Update-Informationen, die im **MII PR Patho Diagnostic Conclusion Grouper** abgebildet werden. Hierzu wird die focus-Referenz genutzt, um auf den betroffenen **MII PR Patho Grouper** (Beobachtungsabschnitt) hinzuweisen. Der `Observation.value` wird durch einen ValueSet "ClinicalSignificance" (z.B. LOINC LL4770-5) dargestellt.
 
 Für spezifische Observation-Konstrukte, speziell bei onkologischen Fragestellungen (TNM, Histologischer Tumortyp, etc.), kann auch auf Observation-Profile des [MII Erweiterungsmoduls Onkologie](https://simplifier.net/medizininformatikinitiative-modulonkologie) (sofern vorhanden) oder [HL7 DE Basis Onkologie](https://simplifier.net/basisprofileonkologie) zurückgegriffen werden. 
