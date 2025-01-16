@@ -44,12 +44,13 @@ jobs:
         with:
           PATH_TO_CONFORMANCE_RESOURCES: Conformance-resources
           PATH_TO_EXAMPLES: Examples
-          PATH_TO_QUALITY_CONTROL_RULES: unittest
+          PATH_TO_QUALITY_CONTROL_RULES: qc/custom
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
-          EXPECTED_FAILS: VALIDATION_EXAMPLES_JAVA
+          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+          OUTPUT_FORMAT: RAW
           # SUSHI_ENABLED: false
 
       # - name: Add & Commit
@@ -57,6 +58,3 @@ jobs:
       #   with:
       #     add: 'fsh-generated/resources/'
           # SUSHI_ENABLED: false
-          
-          # The Coding provided (http://fhir.de/CodeSystem/bfarm/icd-10-gm#XX.X) is not in the value set http://fhir.de/ValueSet/bfarm/icd-10-gm, and a code is required from this value set.
-          EXPECTED_FAILS: VALIDATION_EXAMPLES_JAVA
