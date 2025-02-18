@@ -95,11 +95,19 @@
         ]
       },
       {
-        "id": "Bundle.entry:Finding",
+        "id": "Bundle.entry:Observation",
         "path": "Bundle.entry",
-        "sliceName": "Finding",
+        "sliceName": "Observation",
         "min": 1,
         "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:Patient",
+        "path": "Bundle.entry",
+        "sliceName": "Patient",
+        "min": 0,
+        "max": "1",
         "mustSupport": true
       },
       {

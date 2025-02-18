@@ -237,7 +237,7 @@
     "fshType": "Profile",
     "fshFile": "patho-bundle.fsh",
     "startLine": 1,
-    "endLine": 23
+    "endLine": 22
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-composition.json",
