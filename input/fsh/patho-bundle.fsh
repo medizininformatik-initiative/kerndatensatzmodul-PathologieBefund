@@ -3,6 +3,8 @@ Parent: $isik-basis-bericht-bundle
 Id: mii-pr-patho-bundle
 Title: "MII PR Patho Bundle"
 Description: "A Document-Bundle to wrap the composition and other patho-instances into an official document."
+* insert PR_CS_VS_Version
+* insert Publisher
 * id MS
 * meta
   * lastUpdated MS
