@@ -31,6 +31,7 @@
 [MII_PR_Patho_Additional_Specified_Grouper]: StructureDefinition-mii-pr-patho-additional-specified-grouper.html
 [MII_PR_Patho_Attached_Image]: StructureDefinition-mii-pr-patho-attached-image.html
 [MII_PR_Patho_Base_Observation]: StructureDefinition-mii-pr-patho-base-observation.html
+[MII_PR_Patho_Bundle]: StructureDefinition-mii-pr-patho-bundle.html
 [MII_PR_Patho_Composition]: StructureDefinition-mii-pr-patho-composition.html
 [MII_PR_Patho_Diagnostic_Conclusion_Grouper]: StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.html
 [MII_PR_Patho_Finding]: StructureDefinition-mii-pr-patho-finding.html
