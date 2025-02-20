@@ -18,17 +18,15 @@ Description: "A Document-Bundle to wrap the composition and other patho-instance
         and Specimen 1..* MS 
         and DiagnosticReport 1..* MS 
         and Observations 1..* MS
-        and Patient 0..1 MS // Mehr als ein Patient? TODO - Definition/Comment 
+        and Patient 0..1 MS
 
 * entry[Composition] ^comment = "Already defined in the parent profile isik-basis-bericht-bundle - mandatory 1..1"
-* entry[Composition].resource ^definition = "Contraint on isik-basis-bericht-subsysteme"
+* entry[Composition].resource ^definition = "Constraint on isik-basis-bericht-subsysteme"
 * entry[ServiceRequest].resource only MII_PR_Patho_Service_Request 
 * entry[Specimen].resource only MII_PR_Patho_Specimen 
 * entry[DiagnosticReport].resource only MII_PR_Patho_Report
 * entry[Observations].resource only MII_PR_Patho_Base_Observation
 * entry[Observations] ^definition = "For Patho-Grouper and -Findings"
-* entry[Patient] ^comment = "To attach a patient is optional"
+* entry[Patient] ^comment = "To attach a patient is optional, may very with local dataflows and data protection"
 
 * signature 1..1 MS
-
-// Profil für ein "Startbundle"?
