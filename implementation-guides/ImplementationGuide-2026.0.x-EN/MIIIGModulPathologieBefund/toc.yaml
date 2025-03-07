@@ -1,7 +1,7 @@
 - name: Index
   filename: Index.guide.md
-- name: Beschreibung Modul Pathologie-Befund
-  filename: BeschreibungModulPathologie-Befund.guide.md
+- name: Modul description "Pathologie-Befund"
+  filename: ModuledescriptionPathologie-Befund.guide.md
 - name: Kontext im Gesamtprojekt / Bezüge aus anderen Modulen
   filename: KontextimGesamtprojektBezgeausanderenModulen.guide.md
 - name: Referenzen

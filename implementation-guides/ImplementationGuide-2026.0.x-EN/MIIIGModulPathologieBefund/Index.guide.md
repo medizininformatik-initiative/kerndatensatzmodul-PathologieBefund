@@ -1,32 +1,33 @@
-# Kerndatensatz Modul Pathologie-Befund
+# Core data set module Pathologie-Befund
 
-Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz Erweiterungsmoduls 'Diagnostik | Pathologie-Befund' der Medizininformatik-Initiative. Im Folgenden werden die Use-Cases des Moduls sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
+This specification describes the FHIR representation of the core data set extension module 'Diaknostik | Pathologie-Befund' of the Medical Informatics Initiative. The use cases of the module and the associated FHIR profiles and terminology resources are described below in their binding form.
 
-| Veröffentlichung   |   |
+| Publication   |   |
 |---------|---|
 | Datum   | TODO - Datum der Veröffentlichung nachtragen  |
 | Version | 2026.0.0         |
 | Status  | Active       |
 | Realm   | DE          | 
 
-## Inhaltsverzeichnis
+## Table of contents
 
 {{index:root}}
 
 ## Impressum
-Dieser Leitfaden ist im Rahmen der Medizininformatik-Initative erstellt worden und unterliegt per Governance Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees von HL7 Deutschland e. V..
 
-Fragen zu der vorliegenden Publikation können jederzeit unter [chat.fhir.org](https://chat.fhir.org) im Stream 'german/mi-initiative' gestellt werden.
+This guide was created as part of the medical informatics initiative and is subject to the governance process of the voting procedure of the Interoperability Forum and the Technical Committees of HL7 Deutschland e. V..
 
-Anmerkungen und Kritik werden in Form von 'Issues' im [GitHub Repository](https://github.com/medizininformatik-initiative/kerndatensatzmodul-PathologieBefund) oder im [Simplifier-Projekt](https://simplifier.net/medizininformatikinitiative-modulpathologie) stets gern entgegengenommen.
+Questions about this publication can be asked at any time at [chat.fhir.org](https://chat.fhir.org) in the stream 'german/mi-initiative'.
 
-## Ansprechpartner
+Comments and criticism are always welcome in the form of 'issues' in the [GitHub Repository](https://github.com/medizininformatik-initiative/kerndatensatzmodul-PathologieBefund) or in the [Simplifier project](https://simplifier.net/medizininformatikinitiative-modulpathologie).
+
+## Contacts
 
 * Thimo Hölter              (Berlin Institute of Health at Charité)
 * Sylvia Thun               (Berlin Institute of Health at Charité)
 
 
-## Autoren (in alphabetischer Reihenfolge)
+## Authors (in alphabetical order)
 
 * Alexander Bartschke       (Berlin Institute of Health at Charité)
 * Karl-Friedrich Becker     (TU München)
