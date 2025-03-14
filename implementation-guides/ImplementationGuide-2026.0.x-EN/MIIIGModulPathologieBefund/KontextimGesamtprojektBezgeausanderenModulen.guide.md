@@ -1,21 +1,19 @@
-## Kontext im Gesamtprojekt / Bezüge aus anderen Modulen
+## Context in the overall project / references from other modules
 
-Das Erweiterungsmodul **Pathologie-Befund** bildet Pathologiebefunde ab, die typischerweise in einer Pathologieeinrichtung eines Klinikums erhoben werden. Diese Befunde spielen in einigen Use Cases der MII eine zentrale Rolle: 
+The extension module **Pathologie-Befund** maps pathology findings that are typically collected in a pathology facility in a hospital. These reports play a central role in some use cases of the MII:
 
-* Pathologiebefundberichte aus Routineuntersuchungen sind essentiell für Diagnosefindung und Therapieüberwachung bei den meisten Erkrankungen 
+Pathology reports from routine examinations are essential for diagnosing and monitoring therapy for most diseases
 
-* Pathologiebefundberichte sind ein wichtiger Bestandteil vieler klinischer Studien 
+Pathology reports are an important base for many clinical studies
 
-### Bezüge innerhalb der MII
+### References within the MII
 
-Ein Pathologiebefundbericht ist dabei immer der [Person](https://simplifier.net/mii-basismodul-person-2024) zugeordnet, von welcher die *Proben* entnommen wurden und auf einen [Versorgungsstellenkontakt](https://simplifier.net/medizininformatikinitiative-modulfall) bezogen. Bei dem *Versorgungsstellenkontakt* handelt es sich um einen pathologieeinrichtungspezifischen *(Abteilungs)kontakt*, die sogenannte Einsendung, der alle Untersuchungsaufträge zu Proben einer Person, die in einem zeitlichen und fachlichen Zusammenhang entnommen wurden, zusammenfasst. Dieser *Versorgungsstellenkontakt* muss nicht identisch mit dem Untersuchungsauftrag sein. Wenn eine Probe eines Falles in einer Biobank für weitere Untersuchungen verwahrt wird, kann diese Probe mit den Profilen im Erweiterungsmodul [Bioproben](https://simplifier.net/medizininformatikinitiative-modulbiobank) abgebildet werden. Die Ergebnisse aus einem Pathologiebefundbericht können als einzelne Elemente in verschiedenen anderen Modulen, z.B. zur Tumordokumentation, wieder eingebunden sein. 
+A pathology report is always assigned to the [person](https://simplifier.net/mii-basismodul-person-2024) from whom the *specimen* were taken and related to a [Versorgungsstellenkontakt](https://simplifier.net/medizininformatikinitiative-modulfall). The *Versorgungsstellenkontakt* is a pathology facility-specific *(Abteilungs)kontakt*, the so-called submission, which summarizes all examination orders for samples from a person that were taken in a temporal and specialist context. This *Versorgungsstellenkontakt* does not have to be identical to the examination order. If a sample from a case is kept in a biobank for further examination, this sample can be mapped with the profiles in the extension module [Bioproben](https://simplifier.net/medizininformatikinitiative-modulbiobank). The results from a pathology report can be integrated as individual elements in various other modules, e.g. for tumor documentation.
 
-Andererseits können Befundberichte aus anderen Disziplinen (z.B. aus den Modulen [Molekulargenetischer Befundbericht](https://simplifier.net/medizininformatikinitiative-modulomics) oder [Labor](https://simplifier.net/medizininformatikinitiative-modullabor) ganz oder auszugsweise in Pathologiebefundberichte aufgenommen und im Sinne einer synoptischen Bewertung interpretiert werden.
+On the other hand, reports from other disciplines (e.g. from the modules [Molekulargenetischer Befundbericht](https://simplifier.net/medizininformatikinitiative-modulomics) or [Labor](https://simplifier.net/medizininformatikinitiative-modullabor) can be included in pathology reports in whole or in part and interpreted in the sense of a synoptic evaluation.
 
-Weiterhin kann eine Beziehung zum Modul [Diagnose](https://simplifier.net/medizininformatikinitiative-moduldiagnosen) bestehen. Eine Diagnose kann von einem Untersuchungsauftrag (z.B. als Teil der klinischen Angaben/Anamnese) referenziert werden. Diese kann aber auch selber auf einen Befund referenzieren, wenn dieser als Evidenz z.B. zum Staging der gestellten Diagnose dienen soll. 
+Furthermore, a relationship to the module [Diagnose](https://simplifier.net/medizininformatikinitiative-moduldiagnosen) can exist. A diagnosis can be referenced by an examination order (e.g. as part of the clinical information/anamnesis). However, this can also refer to a finding itself if it is to serve as evidence, e.g. for staging the diagnosis made.
 
-### Bezüge außerhalb der MII
+### References outside the MII
 
-Da es sich bei Pathologie Systeme um sogenannte Subsysteme im Krankenhaus handeln kann, ist eine Kompatibilität zu [ISiK](https://simplifier.net/packages/de.gematik.isik-basismodul/4.0.1) essenziell für die Umsetzung der Pathologie Profile der Medizininformatik Initiative. So wird für die Bündelung der Pathologie Ressourceninstanzen eine Composition/Bundle verwendet, welche vom ISiK Profil [ISiKBerichtSubsysteme](https://simplifier.net/isik-basis-v4/isikberichtsubsysteme) erbt. 
-
- 
+Since pathology systems can be so-called subsystems in the hospital, compatibility with [ISiK](https://simplifier.net/packages/de.gematik.isik-basismodul/4.0.1) is essential for the implementation of the pathology profiles of the Medical Informatics Initiative. For example, a composition/bundle is used to bundle the pathology resource instances, which inherits from the ISiK profile [ISiKBerichtSubsysteme](https://simplifier.net/isik-basis-v4/isikberichtsubsysteme).

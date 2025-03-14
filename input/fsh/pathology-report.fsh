@@ -107,10 +107,12 @@ Title: "MII PR Patho Composition"
 Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert PR_CS_VS_Version
 * insert Publisher
+* text ^short = "Header-Informationen"
 * meta.lastUpdated MS
 * meta.profile MS
 * extension contains $fhir-version-number named document-version 0..1 MS
-* identifier 1.. MS
+* identifier ^comment = ""
+* identifier 1.. MS 
   * type 1.. MS
   * type.coding = $v2-0203#ACSN "Accession ID"
 * type
@@ -119,6 +121,7 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
   * coding[LOINC-patho] ^patternCoding.system = $LOINC
     * system 1.. MS
     * code 1.. MS
+* status ^comment = "Bereits in Subsysteme auf 1..1 & Fixed Value auf final"
 * category 
   * coding contains HL7-patho ..1 MS
   * coding[HL7-patho] from mii-vs-patho-report-category-hl7 (extensible)

@@ -37,6 +37,11 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.text",
+        "path": "Composition.text",
+        "short": "Header-Informationen"
+      },
+      {
         "id": "Composition.extension:document-version",
         "path": "Composition.extension",
         "sliceName": "document-version",
@@ -53,6 +58,11 @@
         "mustSupport": true
       },
       {
+        "id": "Composition.identifier",
+        "path": "Composition.identifier",
+        "comment": ""
+      },
+      {
         "id": "Composition.identifier.type",
         "path": "Composition.identifier.type",
         "min": 1,
@@ -66,6 +76,11 @@
           "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
           "display": "Accession ID"
         }
+      },
+      {
+        "id": "Composition.status",
+        "path": "Composition.status",
+        "comment": "Bereits in Subsysteme auf 1..1 & Fixed Value auf final"
       },
       {
         "id": "Composition.type.coding:LOINC-patho",
