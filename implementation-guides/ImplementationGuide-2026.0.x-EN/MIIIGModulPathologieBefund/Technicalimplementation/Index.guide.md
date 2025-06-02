@@ -1,3 +1,3 @@
-## Technische Implementierung
+## Technical implementation
 
 {{index:current}}

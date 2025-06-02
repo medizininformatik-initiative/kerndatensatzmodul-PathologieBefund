@@ -1,4 +1,3 @@
-<a id="UseCases"></a>
-## Anwendungsfälle / Informationsmodell
+## Use Cases / Information Model
 
 {{index:current}}
