@@ -51,7 +51,7 @@ Außerdem ist in ein Postkoordinierter Färbeprozess kodierbar:
 
 Bei postkoordinierten Codes sei allerdings zu beachten, dass diese ohne einen dafür geeigneten Terminologieserver kaum auswertbar sind. Aus diesem Grund wäre unsere Empfehlung erstmal die Zusammenhänge von Färbeprozessen und deren jeweiligen Färbesubstanzen auf das FHIR Informationsmodell zu übertragen, und diese mithilfe von .processing.procedure und .processing.additive abzubilden.
 
-Für in-situ-Hybridisierungen sollte eine terminologische Harmonisierung mit dem KDS „Molekulargenetischer Befundbericht“ erreicht werden.
+Für in-situ-Hybridisierungen, PCR-Tests, Methylierungstests und NGS-Untersuchungen sollte eine terminologische Harmonisierung durch die entsprechenden Profile des KDS [„Molekulares Tumorboard“](https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard/~introduction) erreicht werden.
 
 -------------------------
 ### Modul ValueSets
