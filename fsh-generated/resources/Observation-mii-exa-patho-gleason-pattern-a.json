@@ -32,6 +32,12 @@
         "system": "http://loinc.org",
         "display": "Gleason pattern.primary in prostate tumor"
       }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+        "valueUrl": "#micro-a-gleason-pattern-key"
+      }
     ]
   },
   "valueCodeableConcept": {
@@ -44,6 +50,6 @@
     ]
   },
   "specimen": {
-    "reference": "Specimen/mii-exa-patho-he-stained-slide-prostate"
+    "reference": "Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE"
   }
 }

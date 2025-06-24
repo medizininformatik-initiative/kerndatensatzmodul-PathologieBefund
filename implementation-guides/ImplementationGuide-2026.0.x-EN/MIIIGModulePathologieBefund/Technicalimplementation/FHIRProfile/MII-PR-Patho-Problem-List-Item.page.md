@@ -5,9 +5,9 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 ## {{page-title}}
 
-### Beschreibung
+### Description
 
-Das Profil **MII PR Patho Problem List Item** der Resource Condition stellt die einzelnen Listeneinträge der Profile **MII PR Patho Active Problems** und **MII PR Patho History of Present Illness** dar. 
+The **MII PR Patho Problem List Item** profile of the Resource Condition represents the individual list entries of the **MII PR Patho Active Problems** and **MII PR Patho History of Present Illness** profiles.
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item' select Name: name, Canonical: url
@@ -31,21 +31,21 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 </tabs>
 
 -----------------------------------------------
-### Liste aller Must-Support Datenelemente
-| FHIR-Element | Erklärung |
+### List of all must-support data elements
+| FHIR element | Explanation |
 |--|--|
-|Condition.category| Pattern-Coding auf ["problem-list-item"](http://terminology.hl7.org/CodeSystem/condition-category) |
-|Condition.code| Extensible Binding auf [MII VS Patho Problem List SNOMED CT](https://simplifier.net/medizininformatikinitiative-modulpathologie/vs-mii-patho-problem-list-snomed)|
-|Condition.subject| Referenz auf Patient:in |
+|Condition.category| Pattern coding on ["problem-list-item"](http://terminology.hl7.org/CodeSystem/condition-category) |
+|Condition.code| Extensible binding on [MII VS Patho Problem List SNOMED CT](https://simplifier.net/medizininformatikinitiative-modulpathologie/vs-mii-patho-problem-list-snomed)|
+|Condition.subject| Reference to patient |
 
 ---------------------------------------------
-### Referenz zum Logical Model
+### Logical Model Reference
 
-| FHIR-Element | Logisches Datenmodell |
+| FHIR Element | Logical Data Model |
 |--|--|
 
 --------------------------------
-### Beispiele
+### Examples
 
 {{json:mii-exa-patho-problem-list-item-1}}
 

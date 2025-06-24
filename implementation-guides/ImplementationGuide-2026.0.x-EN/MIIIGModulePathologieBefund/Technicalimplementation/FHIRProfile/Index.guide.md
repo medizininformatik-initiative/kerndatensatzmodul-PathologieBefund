@@ -2,9 +2,7 @@
 
 | Note | Mandatory / must-support elements |
 |---------|---------------------|
-| {{render:Warning}} |
-For mandatory or must-support elements, please refer to the corresponding [IPS rules](http://hl7.org/fhir/uv/ips/STU1/design.html#must-support), which also apply to this Implementation Guide.|
-rofile wird in textueller Form unterhalb der jeweiligen Profile erläutert. 
+| {{render:Warning}} |For mandatory or must-support elements, please refer to the corresponding [IPS rules](http://hl7.org/fhir/uv/ips/STU1/design.html#must-support), which also apply to this Implementation Guide.|
 
 The work of the core dataset specifications is based, where possible, on international standards and terminologies. In particular, the [Anatomic Pathology Structured Report (APSR)](https://art-decor.org/art-decor/decor-templates--psr-?section=templates&id=1.3.6.1.4.1.19376.1.8.1.1.1&effectiveDate=2014-05-13T11:57:57&language=de-DE) and the [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/history.html) are highlighted. Adaptation to the general conditions of the German healthcare system is achieved through the use of the [Deutschen Basisprofile von HL7 Deutschland](https://simplifier.net/basisprofil-de-r4).
 

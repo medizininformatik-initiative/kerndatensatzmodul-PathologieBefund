@@ -162,6 +162,7 @@ Description: "List profile for 'History of Present Illness'"
 //---------------------------
 //Examples
 //---------------------------
+/*
 Instance: mii-exa-patho-request
 InstanceOf: mii-pr-patho-service-request
 Usage: #example
@@ -181,6 +182,26 @@ Description: "Pathology Service Request Example"
 * code = $SCT#44977009 "Cytopathology procedure, cell block preparation (procedure)"
 * supportingInfo[anamnesis] = Reference(mii-exa-patho-history-of-present-illness)
 * supportingInfo[activeProblems] = Reference(mii-exa-patho-active-problems-list)
+*/
+Instance: mii-exa-patho-request
+InstanceOf: mii-pr-patho-service-request
+Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request"
+//* category = $sct#108252007 "Laboratory procedure (procedure" - Ist fixed auf einen anderen Code
+* identifier.type = $v2-0203#PLAC
+* identifier.value = "KHXX_ENDO_18.123451"
+* identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
+// Kein Filler?
+* status = #completed
+* intent = #order
+* subject.reference = "Patient/12345"
+* encounter.reference = "Encounter/87687"
+* requester.reference = "Practitioner/34456"
+* code = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+* supportingInfo[anamnesis] = Reference(List/mii-exa-patho-history-of-present-illness)
+* supportingInfo[activeProblems] = Reference(List/mii-exa-patho-active-problems-list)
+* specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
+
 
 Instance: mii-exa-patho-problem-list-item-1
 InstanceOf: mii-pr-patho-problem-list-item

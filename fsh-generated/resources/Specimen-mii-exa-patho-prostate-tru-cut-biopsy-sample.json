@@ -9,9 +9,21 @@
   "status": "available",
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div id=\"specimen-a-title\"><b>Probe A</b></div><table><tr><td>Entnahmeart</td><td>transrektale Stanzbiopsie</td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
   },
   "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "PLAC",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "value": "KHXX_ENDO_18.123451_A",
+      "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
+    },
     {
       "type": {
         "coding": [
@@ -21,7 +33,7 @@
           }
         ]
       },
-      "value": "E12345_21-A1",
+      "value": "E12345_21-A",
       "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
     }
   ],
@@ -41,11 +53,6 @@
   "subject": {
     "reference": "Patient/12345"
   },
-  "parent": [
-    {
-      "reference": "Specimen/E12345_21"
-    }
-  ],
   "request": [
     {
       "reference": "ServiceRequest/mii-exa-patho-request"

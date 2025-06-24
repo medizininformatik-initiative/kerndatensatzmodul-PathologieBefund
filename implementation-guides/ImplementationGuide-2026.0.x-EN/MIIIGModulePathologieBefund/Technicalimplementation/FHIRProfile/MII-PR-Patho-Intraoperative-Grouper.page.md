@@ -6,15 +6,15 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 <a id="IntraoperativeGrouper"></a>
 ## {{page-title}}
 
-### Beschreibung
+### Description
 
-Das Profil **MII PR Patho Intraoperative Grouper** der Resource Observation stellt als `DiagnosticReport.result:intraoperative-grouper` für einen **MII PR Patho Report** den jeweiligen Beobachtungsberichtsabschnitt "Intraoperative Beobachtung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von **MII PR Patho Finding**.
+The **MII PR Patho Intraoperative Grouper** profile of the Resource Observation represents the respective observation report section "Intraoperative Observation" (corresponding to this CDA section) for an **MII PR Patho Report** as `DiagnosticReport.result:intraoperative-grouper` and acts as an organizer for the corresponding groupings of **MII PR Patho Finding**.
 
-Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu **MII PR Patho Finding** eingebunden werden.
+This special Grouper Observation element must be placed before all other Observation elements, which are then included as `hasMember` or `derivedFrom` references to **MII PR Patho Finding**.
 
-Falls dieser Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so sollte jeweils ein **MII PR Patho Intraoperative Grouper** pro Präparat vorhanden sein.
+If this observation report section contains multiple input specimens, there should only be one **MII PR Patho Intraoperative Grouper**. The organisation of the **MII PR Patho Findings** according to the different samples is done by the specimen references of those findings, especially regarding the "parts".
 
-Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
+For a list and explanation of the FHIR elements, see **(abstract) MII PR Patho Section Grouper**.
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-intraoperative-grouper' select Name: name, Canonical: url
@@ -39,162 +39,160 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 
 ---
 
-### Suchparameter
+### Search Parameters
 
-Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in Kombination:
+The following search parameters are relevant for the Pathology Findings module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id`` MUST be supported:
 
-    Beispiele:
-    
-    ```GET [base]/Observation?_id=103270```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_id``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+```GET [base]/Observation?_id=103270```
 
-1. Der Suchparameter ```_lastUpdated``` MUSS unterstützt werden:
+Usage Notes: Further information on searching for ```_id`` can be found in the [FHIR Base Specification - Section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-    Beispiele:
-    
-    ```GET [base]/Observation?_lastUpdated=2021-12-08```
+1. The search parameter ```_lastUpdated``` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_lastUpdated``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+Examples:
 
-1. Der Suchparameter ```_profile``` MUSS unterstützt werden:
+```GET [base]/Observation?_lastUpdated=2021-12-08```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```_lastUpdated```, see the [FHIR Base Specification - Section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-    ```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report```
+1. The search parameter ```_profile`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_profile``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+Examples:
 
-1. Der Suchparameter ```based-on``` MUSS unterstützt werden:
+```GET [base]/Observation?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```_profile`` can be found in the [FHIR Base Specification - Section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-    ```GET [base]/Observation?based-on=ServiceRequest/124455```
+1. The search parameter ```based-on``` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.basedOn``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Examples:
 
-1. Der Suchparameter ```category``` MUSS unterstützt werden:
+```GET [base]/Observation?based-on=ServiceRequest/124455```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```Observation.basedOn``, see the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-    ```GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory```
+1. The search parameter ```category``` MUST be supported:
 
-    ```GET [base]/Observation?category=laboratory```
+Examples:
 
-    Anwendungshinweise:  Weitere Informationen zur Suche nach ```Observation.category``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/Observation?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory```
 
-1. Der Suchparameter ```code``` MUSS unterstützt werden:
+```GET [base]/Observation?category=laboratory```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```Observation.category``, see the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/Observation?code=http://loinc.org|83321-0```
-    
-    ```GET [base]/Observation?code=83321-0```
+1. The search parameter ```code`` MUST be supported:
 
-    Anwendungshinweise:  Weitere Informationen zur Suche nach ```Observation.code``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+Examples:
 
-1. Der Suchparameter ```data-absent-reason``` MUSS unterstützt werden:
+```GET [base]/Observation?code=http://loinc.org|83321-0```
 
-    Beispiele:
+````GET [base]/Observation?code=83321-0```
 
-    ```GET [base]/Observation?data-absent-reason=http://hl7.org/fhir/codesystem-data-absent-reason.html|unknown```
-    
-    ```GET [base]/Observation?data-absent-reason=unknown```
+Usage Notes: For more information on searching for ```Observation.code``, see the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    Anwendungshinweise:  Weitere Informationen zur Suche nach ```Observation.data-absent-reason``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+1. The search parameter ```data-absent-reason``` MUST be supported:
 
-1. Der Suchparameter ```date``` MUSS unterstützt werden:
+Examples:
 
-    Beispiele:
+```GET [base]/Observation?data-absent-reason=http://hl7.org/fhir/codesystem-data-absent-reason.html|unknown```
 
-    ```GET [base]/Observation?date=2021-06-01```
+````GET [base]/Observation?data-absent-reason=unknown```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.date``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
+Usage Notes: For more information on searching for ```Observation.data-absent-reason``, see the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter ```encounter``` MUSS unterstützt werden:
+1. The search parameter ```date`` MUST be supported:
 
-    Beispiele:
+Example:
 
-    ```GET [base]/Observation?encounter=Encounter/769808```
+```GET [base]/Observation?date=2021-06-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.encounter``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Usage Notes: For more information on searching for ```Observation.date``, see the [FHIR Base Specification - "date" section](http://hl7.org/fhir/R4/search.html#date).
 
-1. Der Suchparameter ```has-member``` MUSS unterstützt werden:
+1. The search parameter ```encounter`` MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/Observation?has-member=Observation/ex-mii-patho-biopsy-site-a```
+```GET [base]/Observation?encounter=Encounter/769808```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.hasMember``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Usage Notes: For more information on searching for ```Observation.encounter``, see the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```identifier``` MUSS unterstützt werden:
+1. The search parameter ```has-member`` MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/Observation?identifier=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|12345```
+``GET [base]/Observation?has-member=Observation/ex-mii-patho-biopsy-site-a```
 
-    ```GET [base]/Observation?identifier=12345```
+Usage Notes: For more information on searching for ```Observation.hasMember``, see the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.identifier``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+1. The search parameter "identifier" MUST be supported:
 
-1. Der Suchparameter ```patient``` MUSS unterstützt werden:
+Examples:
 
-    Beispiele:
+GET [base]/Observation?identifier=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|12345
 
-    ```GET [base]/Observation?patient=Patient/12345```
+GET [base]/Observation?identifier=12345
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.subject.​where(resolve() is Patient)``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Usage Notes: Further information on searching for "Observation.identifier" can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter ```performer``` MUSS unterstützt werden:
+1. The search parameter ```patient`` MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/Observation?performer=Practitioner/2346545```
+``GET [base]/Observation?patient=Patient/12345```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.performer``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Usage Notes: Further information on searching for ```Observation.subject.​where(resolve() is Patient)``` can be found in the [FHIR Base Specification - Reference Section](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```specimen``` MUSS unterstützt werden:
+1. The search parameter ```performer`` MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/DiagnosticReport?specimen=Specimen/987976```
+```GET [base]/Observation?performer=Practitioner/2346545```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.specimen``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Usage Notes: Further information on searching for ```Observation.performer`` can be found in the [FHIR Base Specification - Reference Section](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```status``` MUSS unterstützt werden:
+1. The search parameter ```specimen`` MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/Observation?status=final```
+``GET [base]/DiagnosticReport?specimen=Specimen/987976```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.status``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+Usage Notes: Further information on searching for ```Observation.specimen`` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```subject``` MUSS unterstützt werden:
+1. The search parameter ```status`` MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/Observation?subject=Patient/12345```
+```GET [base]/Observation?status=final```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.subject``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Usage Notes: Further information on searching for ```Observation.status`` can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter ```value-string``` MUSS unterstützt werden:
+1. The search parameter ```subject`` MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/Observation?value-string:contains=Intraoperativ```
+``GET [base]/Observation?subject=Patient/12345```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.value``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "string"](http://hl7.org/fhir/R4/search.html#string).
+Usage Notes: Further information on searching for ```Observation.subject`` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```body-site``` MUSS unterstützt werden:
+1. The search parameter ```value-string`` MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/Observation?body-site=716917000```
+```GET [base]/Observation?value-string:contains=Intraoperative```
 
-    ```GET [base]/Observation?body-site=http://snomed.info/sct|716917000```
+Usage Notes: Further information on searching for ```Observation.value`` can be found in the [FHIR Base Specification - "string" section](http://hl7.org/fhir/R4/search.html#string).
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.bodySite``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+1. The search parameter ```body-site`` MUST be supported:
 
-    
+Examples:
+
+```GET [base]/Observation?body-site=716917000```
+
+````GET [base]/Observation?body-site=http://snomed.info/sct|716917000```
+
+Usage Notes: For more information on searching for ```Observation.bodySite``, see the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).

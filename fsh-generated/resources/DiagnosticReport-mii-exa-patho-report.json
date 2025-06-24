@@ -60,7 +60,7 @@
   },
   "result": [
     {
-      "reference": "Observation/mii-exa-patho-macro-grouper-b"
+      "reference": "Observation/mii-exa-patho-macro-grouper-a"
     },
     {
       "reference": "Observation/mii-exa-patho-micro-grouper-a"
@@ -69,12 +69,12 @@
       "reference": "Observation/mii-exa-patho-diagnostic-conclusion-grouper"
     }
   ],
-  "conclusion": "Mäßig differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 2",
+  "conclusion": "Gut differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 1",
   "conclusionCode": [
     {
       "coding": [
         {
-          "code": "399490008",
+          "code": "1525761000004109",
           "system": "http://snomed.info/sct"
         }
       ]

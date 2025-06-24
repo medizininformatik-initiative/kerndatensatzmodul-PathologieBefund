@@ -24,6 +24,10 @@
       }
     ]
   },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Mikroskopische Beurteilung</h1><p><b>Probe A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders einnehmen</b></p></div>"
+  },
   "status": "final",
   "valueString": "Specimen A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders...",
   "hasMember": [
@@ -32,9 +36,9 @@
     },
     {
       "reference": "Observation/mii-exa-patho-gleason-pattern-a"
+    },
+    {
+      "reference": "Observation/mii-exa-patho-p63-a"
     }
-  ],
-  "specimen": {
-    "reference": "Specimen/mii-exa-patho-he-stained-slide-prostate"
-  }
+  ]
 }

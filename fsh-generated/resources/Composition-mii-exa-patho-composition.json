@@ -43,7 +43,7 @@
       "title": "Pathology Diagnostic Report",
       "text": {
         "status": "additional",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div id=\"macro-a-title\"><b>Makroskopie A</b></div><table><tr id=\"macro-a-biosy-site\"><td id=\"macro-a-biosy-site-key\">Entnahmeort lt. klin. Angabe</td><td id=\"macro-a-biosy-site-value\">Prostataseitenlappen rechts, lateral</td></tr><tr id=\"macro-a-tissue-length\"><td id=\"macro-a-tissue-length-key\">Stanzzylinderlänge</td><td id=\"macro-a-tissue-length-value\">1,2 cm</td></tr></table></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Gesamter Textkörper des Befundberichts, z.B. beginnend mit Makroskopie:</b></p><div id=\"macro-a-title\"><b>Makroskopie A</b></div><table><tr id=\"macro-a-biosy-site\"><td id=\"macro-a-biosy-site-key\">Entnahmeort lt. klin. Angabe</td><td id=\"macro-a-biosy-site-value\">Prostataseitenlappen rechts, lateral</td></tr><tr id=\"macro-a-tissue-length\"><td id=\"macro-a-tissue-length-key\">Stanzzylinderlänge</td><td id=\"macro-a-tissue-length-value\">1,2 cm</td></tr></table></div>"
       },
       "entry": [
         {

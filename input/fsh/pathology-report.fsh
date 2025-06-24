@@ -170,6 +170,7 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 //--------------------------------
 // Example
 //--------------------------------
+/*
 Instance: mii-exa-patho-report
 InstanceOf: mii-pr-patho-report
 Usage: #example
@@ -197,7 +198,34 @@ Description: "Example for MII_PR_Patho_Report"
 // * issued = "2021-06-02T13:28:17.239+02:00"
 * media.link = Reference(mii-exa-patho-attached-image)
 * media.comment = "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
+*/
 
+Instance: mii-exa-patho-report
+InstanceOf: mii-pr-patho-report
+Usage: #example
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report"
+* identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
+* identifier[Set-ID].value = "E21.12345"
+* identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+* identifier[Set-ID].extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+* identifier[Set-ID].extension.valueUrl = "#befund-eingangsnummer"
+* code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
+* basedOn = Reference(ServiceRequest/mii-exa-patho-request)
+* status = #final
+* subject.reference = "Patient/12345"
+* performer.reference = "Practitioner/2346545"
+* specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
+* encounter.reference = "Encounter/12345"
+* result[macroscopic-observations] = Reference(Observation/mii-exa-patho-macro-grouper-a)
+* result[microscopic-observations] = Reference(Observation/mii-exa-patho-micro-grouper-a)
+* result[diagnostic-conclusion] = Reference(Observation/mii-exa-patho-diagnostic-conclusion-grouper)
+* conclusion = "Gut differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 1"
+* conclusionCode = $SCT#1525761000004109
+* effectiveDateTime = "2021-06-01"
+* media.link = Reference(Media/mii-exa-patho-attached-image)
+* media.comment = "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
+
+/*
 Instance: mii-exa-patho-composition
 InstanceOf: mii-pr-patho-composition
 Usage: #example
@@ -278,3 +306,70 @@ Description: "Example for an MII_PR_Patho_Composition"
     </table>
   </div>"
   * entry = Reference(mii-exa-patho-report)
+*/
+
+Instance: mii-exa-patho-composition
+InstanceOf: mii-pr-patho-composition
+Usage: #example
+* text.div = "
+<div xmlns=\"http://www.w3.org/1999/xhtml\">
+  <div id=\"befund-titel\">
+    <b>Pathologisch-anatomisch Begutachtung</b>
+  </div> 
+  <table>
+    <tr id=\"befund-identifikator\">
+      <td>id</td>
+      <td>E12345_21.1</td>
+    </tr>
+    <tr id=\"befund-eingangsnummer\">
+      <td>Eingangsnummer</td>
+      <td>E12345_21</td>
+    </tr>
+    <tr id=\"befund-status\">
+      <td>Status</td>
+      <td>final</td>
+    </tr>
+    <tr id=\"befund-patient\">
+      <td>Patient</td>
+      <td>Patient/12345</td>
+    </tr>
+    <tr id=\"befund-effective\">
+      <td>Effective</td>
+      <td>2021-06-01</td>
+    </tr>
+    <tr id=\"befund-issued\">
+      <td>Issued</td>
+      <td>2021-06-01</td>
+    </tr>
+    <tr id=\"befund-performer\">
+      <td>Performer</td>
+      <td>Practitioner/2346545</td>
+    </tr>
+  </table>
+</div>"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition"
+* extension[document-version].valueString = "1"
+* status = #final
+* type = $LOINC#11526-1 "Pathology study"
+* type.text = "Pathologie-Befundbericht"
+* attester[legal].mode = #legal
+* attester[legal].party.reference = "Practitioner/765879"
+* section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"
+* section[patho-diagnostic-report].title = "Pathology Diagnostic Report"
+* section[patho-diagnostic-report].text.status = #additional
+* section[patho-diagnostic-report].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Gesamter Textkörper des Befundberichts, z.B. beginnend mit Makroskopie:</b></p><div id=\"macro-a-title\"><b>Makroskopie A</b></div><table><tr id=\"macro-a-biosy-site\"><td id=\"macro-a-biosy-site-key\">Entnahmeort lt. klin. Angabe</td><td id=\"macro-a-biosy-site-value\">Prostataseitenlappen rechts, lateral</td></tr><tr id=\"macro-a-tissue-length\"><td id=\"macro-a-tissue-length-key\">Stanzzylinderlänge</td><td id=\"macro-a-tissue-length-value\">1,2 cm</td></tr></table></div>"
+* section[patho-diagnostic-report].entry = Reference(DiagnosticReport/mii-exa-patho-report)
+* identifier.value = "E21.12345"
+* identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
+* identifier.type = $v2-0203#ACSN "Accession ID"
+* identifier.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+* identifier.extension.valueUrl = "#befund-eingangsnummer"
+* subject.reference = "Patient/34545"
+* encounter.reference = "Encounter/34555"
+* date = "2021-06-08"
+* author[+].reference = "Practitioner/2346545"
+* author[=].display = "Dr. Name"
+* title = "Pathologie Befundbericht"
+* custodian.reference = "Organization/12345"
+* event.period.start = "2021-06-05"
+* event.period.end = "2021-06-08"

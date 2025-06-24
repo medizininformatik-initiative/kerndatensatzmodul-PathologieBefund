@@ -32,14 +32,20 @@
         "system": "http://loinc.org",
         "display": "Gleason score in Specimen Qualitative"
       }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+        "valueUrl": "#diagnostic-conclusion-gleason-score-key"
+      }
     ]
   },
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "57403001",
+        "code": "84556003",
         "system": "http://snomed.info/sct",
-        "display": "Gleason grade score 7"
+        "display": "Gleason grade score 6 out of 10 (finding)"
       }
     ]
   }

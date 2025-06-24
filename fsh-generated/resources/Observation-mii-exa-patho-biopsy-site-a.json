@@ -55,12 +55,7 @@
       }
     ]
   },
-  "derivedFrom": [
-    {
-      "reference": "Media/mii-exa-patho-attached-image"
-    }
-  ],
   "specimen": {
-    "reference": "Specimen/mii-exa-patho-he-stained-slide-prostate"
+    "reference": "Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"
   }
 }

@@ -7,18 +7,18 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 ## {{page-title}}
 
 
-### Beschreibung
+### Description
 
-Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). 
+The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) resource represents the complete findings report without document properties (see **MII-PR-Patho-Composition**).
 
-Es stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein.
- 
-Die wichtigsten Besonderheiten des **MII PR Patho Report** sind: 
-- die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden, 
-- die Möglichkeit, Informationen zu mehreren Präparaten / Proben zu organisieren, was im Profil **MII PR Patho Finding** bisher nicht möglich ist,  
-- und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.  
- 
-Das **MII PR Patho Report** bildet als Entry in der Section “diagnostic-report” des Profils **MII PR Patho Composition** den Kern eines persistenten Dokuments "Pathologiebefundbericht".
+It presents highly structured examination results, including human-readable texts (narratives), that belong to "panels" of individual examinations. It collects and organizes pathology findings for even complex individual results and can reference additional information about the examination panel, e.g., clinical information and sample information. A complete, formatted finding text should be part of the **MII PR Patho Report**.
+
+The most important features of the **MII PR Patho Report** are:
+- the ability to include additional clinical context, e.g., a mix of results from individual observations, images, text, and formatted representations.
+- the ability to organize information on multiple specimens/samples, which is not currently possible in the **MII PR Patho Finding** profile.
+- and the ability to display a summary assessment, the Conclusion, as well as one or more Conclusion codes that are not identical to Pathology Findings.
+
+The **MII PR Patho Report**, as an entry in the "diagnostic-report" section of the **MII PR Patho Composition** profile, forms the core of a persistent "Pathology Finding Report" document.
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report' select Name: name, Canonical: url
@@ -43,32 +43,32 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 
 ----------------------
 
-In untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Patho Composition dupliziert werden.
+In the table below, elements marked with * are duplicated in the MII PR Patho Composition profile.
 
-### Liste aller Must-Support Datenelemente
-| FHIR-Element | Erklärung |
+### List of all must-support data elements
+| FHIR element | Explanation |
 |--|--|
-|DiagnosticReport.id | Must-support, jedoch optional |
-|DiagnosticReport.meta | Must-support, jedoch optional |
-|DiagnosticReport.text| Nicht empfohlenes optionales Narrativ, kompiliert aus den Texten der Grouper-Observations u./ o. der Observations (siehe Composition.text und Composition.section.text) |
-|DiagnosticReport.extension:related-report | Verweis auf Vorbefund(e), die mit dem aktuellen Befund in sachlichem Zusammenhang stehen |
-|DiagnosticReport.identifier | Befundnummer (Eingangsnummer, Fallnummer, Filler order number, Accession number) |
-|*DiagnosticReport.basedOn | Bezug zum initialen ServiceRequest, muss stets gegeben sein |
-|DiagnosticReport.status | Keine Vorgaben, vorläufige Befunde sind erlaubt |
-|DiagnosticReport.category | Extensible Binding auf ValueSet [MII VS Patho Report Category HL7](https://simplifier.net/medizininformatikinitiative-modulpathologie/mii-vs-patho-report-category-hl7) |
+|DiagnosticReport.id | Must-support, but optional |
+|DiagnosticReport.meta | Must-support, but optional |
+|DiagnosticReport.text| Not recommended optional narrative, compiled from the texts of the grouper observations and/or the observations (see Composition.text and Composition.section.text) |
+|DiagnosticReport.extension:related-report | Reference to previous finding(s) that are factually related to the current finding |
+|DiagnosticReport.identifier | Finding number (incoming number, case number, filler order number, accession number) |
+|*DiagnosticReport.basedOn | Reference to the initial ServiceRequest, must always be given |
+|DiagnosticReport.status | No specifications, preliminary findings are permitted |
+|DiagnosticReport.category | Extensible binding to ValueSet [MII VS Patho Report Category HL7](https://simplifier.net/medizininformatikinitiative-modulpathologie/mii-vs-patho-report-category-hl7) |
 |DiagnosticReport.code | LOINC 60568-3 “Pathology Synoptic Report” |
-|*DiagnosticReport.subject | Patient (erbt von Modul Person der MII https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient) | 
-|DiagnosticReport.encounter | Must-support, jedoch optional |
-|*DiagnosticReport.effective[x] | Zeitpunkt der Probenentnahme (Zeitpunkt zu dem die gemessene Eigenschaft im Probenmaterial (e.g. Analytkonzentration)mutmaßlich der Eigenschaft im Patienten entsprach). Falls nicht dokumentiert, Laboreingangszeitpunkt als am nächsten liegender Zeitpunkt. Muss identisch sein zu Observation.effective[x].extension: KlinischerBezugszeitpunkt. Die Information wird sowohl im DiagnosticReport als auch in der Observation gespeichert um anschließend Datenauswertungen zu erleichtern. |
-|*DiagnosticReport.issued | Zeitpunkt der Freigabe des Befundes |
-|*DiagnosticReport.performer | Referenz zur Einrichtung (custodian), die den Report verantwortet. |
-|DiagnosticReport.specimen | Referenzen zu allen Proben (Präparat vom Patienten, Proben im Pathologielabor) Zukünftige Spezifikationen weiterer Kerndatensatzmodule können diesbezüglich Vorgaben ausgestalten.|
-|DiagnosticReport.result | Der DiagnosticReport sollte mind. ein Ergebnis in Form einer Grouper-Observation DiagnosticConclusion (22637-3 (Pathology report diagnosis)) enthalten. |
-|DiagnosticReport.imagingStudy | Eingebundene Bilder |
-|DiagnosticReport.media | Eingebundene Bilder |
-|DiagnosticReport.conclusion | Textuelle Beschreibung der abschließenden ärztlichen Bewertung des Befundes| 
-|DiagnosticReport.conclusionCode | Kodierte abschließende Bewertung(en) |
-|DiagnosticReport.presentedForm | PDF des Pathologiebefundberichts |
+|*DiagnosticReport.subject | Patient (inherited from the Person module of the MII https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient) |
+|DiagnosticReport.encounter | Must support, but optional |
+|*DiagnosticReport.effective[x] | Time of sample collection (time at which the measured property in the sample material (e.g., analyte concentration) presumably corresponded to the property in the patient). If not documented, the laboratory receipt time is the closest time point. Must be identical to Observation.effective[x].extension: Clinical reference time point. This information is stored in both the DiagnosticReport and the Observation to facilitate subsequent data evaluation. |
+|*DiagnosticReport.issued | Time of release of the finding |
+|*DiagnosticReport.performer | Reference to the institution (custodian) responsible for the report. |
+|DiagnosticReport.specimen | References to all samples (parts), sent by the clinician to the pathology laboratory. Future specifications for additional core dataset modules may define requirements in this regard.|
+|DiagnosticReport.result | The DiagnosticReport should contain at least one result in the form of a Grouper Observation DiagnosticConclusion (22637-3 (Pathology report diagnosis)). |
+|DiagnosticReport.imagingStudy | Embedded images |
+|DiagnosticReport.media | Embedded images |
+|DiagnosticReport.conclusion | Textual description of the final medical assessment of the findings |
+|DiagnosticReport.conclusionCode | Coded final assessment(s) |
+|DiagnosticReport.presentedForm | PDF of the pathology report |
 
 ----------------------------------
 ### Mapping zum Logical Model
