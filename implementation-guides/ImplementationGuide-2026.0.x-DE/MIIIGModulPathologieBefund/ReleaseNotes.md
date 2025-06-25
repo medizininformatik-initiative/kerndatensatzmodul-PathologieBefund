@@ -4,12 +4,16 @@
 ## 2026.0.0-alpha
     - Grouperkardinalität auf ..1 beschnitten. Somit ist nur noch jeweils ein Grouper innerhalb eines Befundberichtes zu verwenden (TODO)
     - Entsprechende Veränderung innerhalb der Grouperprofile und des DiagnosticReports (TODO)
-    - Profil PathoBundle hinzugefügt
+    - Profil PathoBundle hinzugefügt        
     - Beispiele aktualisiert, damit die Hierachie der Specimen klarer wird
     - Aktualisierung des IG
         - Bezeichnungen der Profilseiten im IG wurden angepasst
+        - neue Seite für Patho-Bundle 
         - Englische Übersetzung des IG (TODO)
-        
+    - Anpassung Beispieldaten
+    - Update MII Dependiceis
+    - Update externe Dependencies ( z.B. ISIK)
+    - Formatierung ggfs. analog https://simplifier.net/guide/isik-basis-403/Einfuehrung/ReleaseNotes?version=4.0.3
 
 ### Impressum
 Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt worden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees (TCs) von HL7 Deutschland e. V.  
