@@ -7,7 +7,7 @@
     - Profil PathoBundle hinzugefügt
     - Englische Übersetzung des IGs (TODO)
     - Beispiele aktualisiert, damit die Hierachie der Specimen klarer wird
-    - Bezeichnung der Profilseiten im IG wurde angepasst
+    - Bezeichnungen der Profilseiten im IG wurden angepasst
 
 ### Impressum
 Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt worden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees (TCs) von HL7 Deutschland e. V.  

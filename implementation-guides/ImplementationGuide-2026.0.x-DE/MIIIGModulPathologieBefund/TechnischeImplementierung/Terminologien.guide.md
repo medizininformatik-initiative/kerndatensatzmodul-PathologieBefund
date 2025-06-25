@@ -31,7 +31,7 @@ Für die drittgenannte Möglichkeit sollte vorzugsweise ein SNOMED-CT-Code aus d
 
 Wenn sich keine passenden LOINC-Terme oder SNOMED-CT-Codes finden lassen, sind weitere standardisierte Code-Systeme (z.B. HL7 V2.x oder V3, ICD-10, ICD-11, ICD-O-3, ADT/GEKID) Kodes aus lokalen Kodesystemen vorzuziehen.  
 
-TODO: Abbildung (Prinzip der gemeinsamen Nutzung von LOINC und SNOMED-CT, https://confluence.ihtsdotools.org/display/DOCLOINC/5.2.7+Practical+Uses+of+Part+Maps+and+Expression+Associations, Kap. 5.2.7) hinzufügen
+Für Synoptische Befundberichte zu Tumoren sollte der SNOMED CT Clinical Implementation Guide for Cancer Synoptic Reporting (https://confluence.ihtsdotools.org/display/DOCCANSIG/SNOMED+CT+Clinical+Implementation+Guide+for+Cancer+Synoptic+Reporting) berücksichtigt werden.
 
 Die **Maßeinheiten bei Messwerten** müssen zwingend in [UCUM](http://unitsofmeasure.org/ucum.html)-Einheiten angegeben werden, damit sich die Ergebnisse ineinander umrechnen lassen. Mittels [Validatoren](https://ucum.nlm.nih.gov/ucum-lhc/demo.html) kann sichergestellt werden, dass die verwendeten Einheiten zulässig sind. 
 

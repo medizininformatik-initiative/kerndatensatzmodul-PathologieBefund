@@ -1,34 +1,36 @@
 - name: Index
   filename: Index.guide.md
-- name: MII PR Patho Report
-  filename: MII-PR-Patho-Report.guide.md
-- name: (abstract) MII PR Patho Base Observation
-  filename: abstract--MII-PR-Patho-Base-Observation.page.md
-- name: (abstract) MII PR Patho Section Grouper
-  filename: abstract--MII-PR-Patho-Section-Grouper.guide.md
-- name: MII PR Patho Macroscopic Grouper
-  filename: MII-PR-Patho-Macroscopic-Grouper.page.md
+- name: Pathologie-Befund (DiagnosticReport)
+  filename: Pathologie-Befund(DiagnosticReport).guide.md
+- name: Beobachtung (abstrakte Observation)
+  filename: Beobachtung(abstrakteObservation).page.md
+- name: Beobachtungsberichtabschnitt (abstrakte Observation)
+  filename: Beobachtungsberichtabschnitt(abstrakteObservation).guide.md
+- name: Makrokopische Beurteilung (Observation)
+  filename: MakrokopischeBeurteilung(Observation).page.md
 - name: MII PR Patho Microscopic Grouper
   filename: MII-PR-Patho-Microscopic-Grouper.page.md
-- name: MII PR Patho Intraoperative Grouper
-  filename: MII-PR-Patho-Intraoperative-Grouper.page.md
-- name: MII PR Patho Diagnostic Conclusion Grouper
-  filename: MII-PR-Patho-Diagnostic-Conclusion-Grouper.page.md
-- name: MII PR Patho Additional Specified Grouper
-  filename: MII-PR-Patho-Additional-Specified-Grouper.page.md
-- name: MII PR Patho Finding
-  filename: MII-PR-Patho-Finding.guide.md
-- name: MII PR Patho Composition
-  filename: MII-PR-Patho-Composition.guide.md
-- name: MII PR Patho Service Request
-  filename: MII-PR-Patho-Service-Request.guide.md
-- name: MII PR Patho Specimen
-  filename: MII-PR-Patho-Specimen.page.md
-- name: MII PR Patho Active Problems
-  filename: MII-PR-Patho-Active-Problems.page.md
-- name: MII PR Patho History of Present Illness
-  filename: MII-PR-Patho-History-of-Present-Illness.page.md
-- name: MII PR Patho Problem List Item
-  filename: MII-PR-Patho-Problem-List-Item.page.md
-- name: MII PR Patho Attached Image
-  filename: MII-PR-Patho-Attached-Image.page.md
+- name: Intraoperative Beurteilung (Observation)
+  filename: IntraoperativeBeurteilung(Observation).page.md
+- name: Diagnostische Schlussfolgerung (Observation)
+  filename: DiagnostischeSchlussfolgerung(Observation).page.md
+- name: Zusätzlicher Beobachtung (Observation)
+  filename: ZusätzlicherBeobachtung(Observation).page.md
+- name: Einzelbeobachtung (Observation)
+  filename: Einzelbeobachtung(Observation).guide.md
+- name: Befundzusammenfassung (Composition)
+  filename: Befundzusammenfassung(Composition).guide.md
+- name: MUntersuchungsauftrag (ServiceRequest)
+  filename: Untersuchungsauftrag(ServiceRequest).guide.md
+- name: Probe (Specimen)
+  filename: Probe(Specimen).page.md
+- name: Fragestellung (List)
+  filename: Fragestellung(List).page.md
+- name: Anamnese (List)
+  filename: Anamnese(List).page.md
+- name: Problem (Condition)
+  filename: MProblem(Condition).page.md
+- name: Eingebettetes Bild (Media)
+  filename: EingebettetesBild(Media).page.md
+- name: Befunddokument (Bundle)
+  filename: Befunddokument(Bundle).page.md
