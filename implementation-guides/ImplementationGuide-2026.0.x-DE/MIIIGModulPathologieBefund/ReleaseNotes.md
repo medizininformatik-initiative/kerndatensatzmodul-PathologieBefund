@@ -5,9 +5,11 @@
     - Grouperkardinalität auf ..1 beschnitten. Somit ist nur noch jeweils ein Grouper innerhalb eines Befundberichtes zu verwenden (TODO)
     - Entsprechende Veränderung innerhalb der Grouperprofile und des DiagnosticReports (TODO)
     - Profil PathoBundle hinzugefügt
-    - Englische Übersetzung des IGs (TODO)
     - Beispiele aktualisiert, damit die Hierachie der Specimen klarer wird
-    - Bezeichnungen der Profilseiten im IG wurden angepasst
+    - Aktualisierung des IG
+        - Bezeichnungen der Profilseiten im IG wurden angepasst
+        - Englische Übersetzung des IG (TODO)
+        
 
 ### Impressum
 Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt worden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees (TCs) von HL7 Deutschland e. V.  

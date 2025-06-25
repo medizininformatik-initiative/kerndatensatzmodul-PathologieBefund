@@ -15,10 +15,10 @@ Es stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesb
  
 Die wichtigsten Besonderheiten des **MII PR Patho Report** sind: 
 - die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden, 
-- die Möglichkeit, Informationen zu mehreren Präparaten / Proben zu organisieren, was im Profil **MII PR Patho Finding** bisher nicht möglich ist,  
+- die Möglichkeit, Informationen zu mehreren Proben (hier die klinischerseits eingesandten Proben) zu einzubinden,
 - und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.  
  
-Das **MII PR Patho Report** bildet als Entry in der Section “diagnostic-report” des Profils **MII PR Patho Composition** den Kern eines persistenten Dokuments "Pathologiebefundbericht".
+Das **MII PR Patho Report** bildet als Entry in der Section "patho-diagnostic-report" des Profils **MII PR Patho Composition** den Kern eines persistenten Dokuments "Pathologiebefundbericht".
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report' select Name: name, Canonical: url

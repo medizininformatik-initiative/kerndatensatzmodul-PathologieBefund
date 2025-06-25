@@ -30,5 +30,3 @@ Description: "A Document-Bundle to wrap the composition and other patho-instance
 * entry[Patient] ^comment = "To attach a patient is optional"
 
 * signature 1..1 MS
-
-// Profil für ein "Startbundle"?
