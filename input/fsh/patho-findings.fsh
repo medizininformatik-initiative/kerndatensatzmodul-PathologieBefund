@@ -175,6 +175,9 @@ Usage: #example
 * valueCodeableConcept = $SCT#369772003 "Gleason Pattern 3"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE)
 
+// hier fehlt secodnary Gleason Pattern - kann sein dass es bei drei redudnatn ist, trotzdem
+
+
 Instance: mii-exa-patho-histologic-type-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
@@ -185,8 +188,10 @@ Usage: #example
 * code = $SCT#371441004 "Histologic type"
 * code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 * code.extension.valueUrl = "#micro-a-histologic-type-key"
-* valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma"
+* valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma" // hier icd-0-3 morphology?
 * specimen = Reference(Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE)
+
+// Negativbesipiel von unauffälliger Stanze!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //-------------------------------
 // Diagnostic Conclusion

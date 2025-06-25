@@ -52,7 +52,7 @@ Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)
 * hasMember[+] = Reference(mii-exa-patho-tissue-length-b)
 */
 Instance: mii-exa-patho-macro-grouper-a
-InstanceOf: Observation
+InstanceOf: Observation // THIMO!! TODO correction
 Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper"
 * text.status = #additional
