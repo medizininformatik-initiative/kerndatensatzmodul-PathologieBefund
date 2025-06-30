@@ -240,6 +240,7 @@ Usage: #example
 * code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"  // ?
 * code.extension.valueUrl = "#diagnostic-conclusion-icdo-3-key"
 * valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom (azinär)"
+//Specimen fehlt
 
 Instance: mii-exa-patho-diagnostic-conclusion-2
 InstanceOf: mii-pr-patho-finding

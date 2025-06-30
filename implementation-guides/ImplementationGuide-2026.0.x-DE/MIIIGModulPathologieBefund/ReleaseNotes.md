@@ -8,11 +8,12 @@
     - Beispiele aktualisiert, damit die Hierachie der Specimen klarer wird
     - Aktualisierung des IG
         - Bezeichnungen der Profilseiten im IG wurden angepasst
-        - neue Seite für Patho-Bundle 
+        - neue Seite für Patho-Bundle (TODO)
+        - neue Seite für Hierachien (TODO)
         - Englische Übersetzung des IG (TODO)
     - Anpassung Beispieldaten
-    - Update MII Dependiceis
-    - Update externe Dependencies ( z.B. ISIK)
+    - Update MII Dependencies
+    - Update externe Dependencies (z.B. ISIK)
     - Formatierung ggfs. analog https://simplifier.net/guide/isik-basis-403/Einfuehrung/ReleaseNotes?version=4.0.3
 
 ### Impressum

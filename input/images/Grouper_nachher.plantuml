@@ -1,0 +1,60 @@
+@startuml
+title Pathobefund (Nach 2026 Update): Probenweise Grouper-Struktur
+
+skinparam linetype ortho
+
+package "DiagnosticReport" {
+  object "DiagnosticReport" as Report
+}
+
+package "Specimens" {
+  object "Specimen Sample" as Sample
+  object "Specimen Block" as Block #raus
+  object "Specimen Schnitt" as Schnitt #2x
+}
+
+package "PathoFindings" {
+  object "PathoFinding A1" as A1
+  object "PathoFinding A2" as A2
+  object "PathoFinding A3" as A3
+  object "PathoFinding B1" as B1
+  object "PathoFinding B2" as B2
+  object "PathoFinding B3" as B3
+  object "PathoFinding C1" as C1
+  object "PathoFinding C2" as C2
+  object "PathoFinding C3" as C3
+}
+
+package "Grouperinstanzen" {
+  object "Makro" as Makro
+  object "Mikro" as Mikro #HEFärbung
+  object "DiagnosticConclusion" as Conclusion #ISUPGruppe
+}
+
+' Verbindungen
+Report --> Makro : result
+Report --> Mikro
+Report --> Conclusion
+
+Makro --> A1 : .hasMember
+Makro --> B1
+Makro --> C1
+
+Mikro --> A2
+Mikro --> B2
+Mikro --> C2
+
+Conclusion --> A3
+Conclusion --> B3
+Conclusion --> C3
+
+A1 --> Sample : specimen
+A2 --> Block
+
+B1 --> Sample
+B2 --> Block
+
+C1 --> Sample
+C2 --> Schnitt
+
+@enduml

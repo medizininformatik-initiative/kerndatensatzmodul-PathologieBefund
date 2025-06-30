@@ -1,0 +1,81 @@
+@startuml
+title Pathobefund (Vorher): Probenweise Grouper-Struktur
+
+skinparam linetype ortho
+
+package "DiagnosticReport" {
+  object "DiagnosticReport" as Report
+}
+
+package "Specimens" {
+  object "Specimen Sample" as Sample
+  object "Specimen Block" as Block
+  object "Specimen Schnitt" as Schnitt
+}
+
+package "PathoFindings"{
+  object "PathoFinding A1" as A1
+  object "PathoFinding A2" as A2
+  object "PathoFinding A3" as A3
+  object "PathoFinding B1" as B1
+  object "PathoFinding B2" as B2
+  object "PathoFinding B3" as B3
+  object "PathoFinding C1" as C1
+  object "PathoFinding C2" as C2
+  object "PathoFinding C3" as C3
+}
+
+package "Grouperinstanzen" {
+  object "Makro A" as MakroA 
+  object "Makro B" as MakroB
+  object "Makro C" as MakroC
+  object "Mikro A" as MikroA
+  object "Mikro B" as MikroB
+  object "Mikro C" as MikroC
+  object "DiagnosticConclusion A" as ConclusionA
+  object "DiagnosticConclusion B" as ConclusionB
+
+}
+
+' Verbindungen
+Report --> MakroA : result
+Report --> MakroB
+Report --> MakroC
+Report --> MikroA
+Report --> MikroB
+Report --> MikroC
+Report --> ConclusionA
+Report --> ConclusionB
+
+MakroA --> A1 : .hasMember
+MakroB --> B1
+MikroC --> C1
+
+MakroA --> A2
+MakroB --> B2
+MikroC --> C2
+
+ConclusionA --> A3
+ConclusionA --> B3
+ConclusionB --> C3
+
+A1 --> Sample : specimen
+A2 --> Block
+
+B1 --> Sample
+B2 --> Block
+
+C1 --> Sample
+C2 --> Schnitt
+
+
+MakroA --> Sample : specimen
+MakroA --> Block
+
+MakroB --> Sample
+MakroB --> Block
+
+MikroC --> Sample
+MikroC --> Schnitt
+
+@enduml
