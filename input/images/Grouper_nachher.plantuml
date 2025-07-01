@@ -55,7 +55,7 @@ Makro --> C1
 
 Mikro --> A2
 Mikro --> B2
-Mikro --> C2
+Mikro -up-> C2
 
 Conclusion --> A3
 Conclusion --> B3
