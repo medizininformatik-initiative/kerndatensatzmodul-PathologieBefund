@@ -62,7 +62,7 @@ Usage: #example
 * status = #final
 * hasMember[0] = Reference(Observation/mii-exa-patho-biopsy-site-a)
 * hasMember[+] = Reference(Observation/mii-exa-patho-tissue-length-a)
-//Kein Specimenbezug??
+
 
 
 //-------------------------------------

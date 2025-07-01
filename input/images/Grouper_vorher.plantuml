@@ -8,32 +8,32 @@ package "DiagnosticReport" {
 }
 
 package "Specimens" {
-  object "Specimen Sample" as Sample
-  object "Specimen Block" as Block
-  object "Specimen Schnitt" as Schnitt
+  object "Specimen Sample" as Sample #FFCCCC
+  object "Specimen Schnitt 1" as Schnitt1 #FFCCCC
+  object "Specimen Schnitt 2" as Schnitt2 #FFCCCC
 }
 
 package "PathoFindings"{
-  object "PathoFinding A1" as A1
-  object "PathoFinding A2" as A2
-  object "PathoFinding A3" as A3
-  object "PathoFinding B1" as B1
-  object "PathoFinding B2" as B2
-  object "PathoFinding B3" as B3
-  object "PathoFinding C1" as C1
-  object "PathoFinding C2" as C2
-  object "PathoFinding C3" as C3
+  object "PathoFinding A1" as A1 #LightBlue
+  object "PathoFinding A2" as A2 #LightBlue
+  object "PathoFinding A3" as A3 #LightBlue
+  object "PathoFinding B1" as B1 #LightBlue
+  object "PathoFinding B2" as B2 #LightBlue
+  object "PathoFinding B3" as B3 #LightBlue
+  object "PathoFinding C1" as C1 #LightBlue
+  object "PathoFinding C2" as C2 #LightBlue
+  object "PathoFinding C3" as C3 #LightBlue
 }
 
 package "Grouperinstanzen" {
-  object "Makro A" as MakroA 
-  object "Makro B" as MakroB
-  object "Makro C" as MakroC
-  object "Mikro A" as MikroA
-  object "Mikro B" as MikroB
-  object "Mikro C" as MikroC
-  object "DiagnosticConclusion A" as ConclusionA
-  object "DiagnosticConclusion B" as ConclusionB
+  object "Makro A" as MakroA #CFF5CF
+  object "Makro B" as MakroB #CFF5CF
+  object "Makro C" as MakroC #CFF5CF
+  object "Mikro A" as MikroA #CFF5CF
+  object "Mikro B" as MikroB #CFF5CF
+  object "Mikro C" as MikroC #CFF5CF
+  object "DiagnosticConclusion A" as ConclusionA #CFF5CF
+  object "DiagnosticConclusion B" as ConclusionB #CFF5CF
 
 }
 
@@ -60,22 +60,25 @@ ConclusionA --> B3
 ConclusionB --> C3
 
 A1 --> Sample : specimen
-A2 --> Block
+A2 --> Schnitt1
 
 B1 --> Sample
-B2 --> Block
+B2 --> Schnitt1
 
 C1 --> Sample
-C2 --> Schnitt
+C2 --> Schnitt2
 
 
 MakroA --> Sample : specimen
-MakroA --> Block
+MakroA --> Schnitt1
 
 MakroB --> Sample
-MakroB --> Block
+MakroB --> Schnitt1
 
 MikroC --> Sample
-MikroC --> Schnitt
+MikroC --> Schnitt2
+
+ConclusionA --> Sample : specimen
+ConclusionB --> Sample : specimen
 
 @enduml

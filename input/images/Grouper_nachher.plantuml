@@ -8,27 +8,40 @@ package "DiagnosticReport" {
 }
 
 package "Specimens" {
-  object "Specimen Sample" as Sample
-  object "Specimen Block" as Block #raus
-  object "Specimen Schnitt" as Schnitt #2x
+  object "Specimen Sample" as Sample #FFCCCC {
+    type = 309134005 "Prostate tru-cut biopsy sample"
+  }
+  object "Specimen Schnitt HE" as Schnitt1 #FFCCCC {
+    type = 430856003 "Tissue section (specimen)"
+    collection.method = 40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
+    processing.procedure.coding[sct] = 104210008 "Hematoxylin and eosin stain method (procedure)"
+  }
+  object "Specimen Schnitt p63" as Schnitt2 #FFCCCC {
+    type = 430856003 "Tissue section (specimen)"
+    collection.method = 40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
+    processing.procedure.coding[sct] = 13269000 "Immunocytochemical stain (procedure)"
+  }
 }
 
 package "PathoFindings" {
-  object "PathoFinding A1" as A1
-  object "PathoFinding A2" as A2
-  object "PathoFinding A3" as A3
-  object "PathoFinding B1" as B1
-  object "PathoFinding B2" as B2
-  object "PathoFinding B3" as B3
-  object "PathoFinding C1" as C1
-  object "PathoFinding C2" as C2
-  object "PathoFinding C3" as C3
+  object "PathoFinding A1" as A1 #LightBlue
+  object "PathoFinding A2" as A2 #LightBlue
+  object "PathoFinding A3" as A3 #LightBlue
+  object "PathoFinding B1" as B1 #LightBlue
+  object "PathoFinding B2" as B2 #LightBlue
+  object "PathoFinding B3" as B3 #LightBlue
+  object "PathoFinding C1" as C1 #LightBlue
+  object "PathoFinding p63-a" as C2 #LightBlue { 
+    code = 101548-6 "P63 protein [Interpretation] in Blood or Tissue Qualitative"
+    valueCodeableConcept = LA11883-8 "Not detected"
+  }
+  object "PathoFinding C3" as C3 #LightBlue
 }
 
 package "Grouperinstanzen" {
-  object "Makro" as Makro
-  object "Mikro" as Mikro #HEFärbung
-  object "DiagnosticConclusion" as Conclusion #ISUPGruppe
+  object "Makroskopie" as Makro #CFF5CF
+  object "Mikroskopie" as Mikro #CFF5CF 
+  object "DiagnosticConclusion" as Conclusion #CFF5CF
 }
 
 ' Verbindungen
@@ -49,12 +62,12 @@ Conclusion --> B3
 Conclusion --> C3
 
 A1 --> Sample : specimen
-A2 --> Block
+A2 --> Schnitt1
 
 B1 --> Sample
-B2 --> Block
+B2 --> Schnitt1
 
 C1 --> Sample
-C2 --> Schnitt
+C2 --> Schnitt2
 
 @enduml

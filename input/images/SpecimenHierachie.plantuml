@@ -1,34 +1,33 @@
 @startuml
 title MII Pathobefund – Specimen-Hierarchie
 
-' Basis-Style für leserliches Layout
 skinparam classAttributeIconSize 0
 skinparam linetype ortho
 skinparam nodesep 40
 
-' Definition der Specimen-Instanzen als Klassen (Vereinfachung)
-class "mii-exa-patho-prostate-tru-cut-biopsy-sample\n(Tru-cut Gewebeprobe)" as Sample {
-  Type: "Prostate tru-cut biopsy sample"
+' Specimen als Objekte mit Attributen
+object "mii-exa-patho-prostate-tru-cut-biopsy-sample\n(Tru-cut Gewebeprobe)" as Sample #FFCCCC {
+  Type = "Prostate tru-cut biopsy sample"
 }
 
-class "mii-exa-patho-prostate-biopsy-block\n(Paraffinblock)" as Block {
-  Type: "Tissue block specimen"
-  parent → Sample
+object "mii-exa-patho-prostate-biopsy-block\n(Paraffinblock)" as Block #FFCCCC {
+  Type = "Tissue block specimen"
+  parent = Sample
 }
 
-class "mii-exa-patho-prostate-biopsy-schnitt-HE\n(Schnitt HE)" as SchnittHE {
-  Type: "Tissue section"
-  parent → Block
+object "mii-exa-patho-prostate-biopsy-schnitt-HE\n(Schnitt HE)" as SchnittHE #FFCCCC {
+  Type = "Tissue section"
+  parent = Block
 }
 
-class "mii-exa-patho-prostate-biopsy-schnitt-p63\n(Schnitt p63)" as SchnittP63 {
-  Type: "Tissue section"
-  parent → Block
+object "mii-exa-patho-prostate-biopsy-schnitt-p63\n(Schnitt p63)" as SchnittP63 #FFCCCC {
+  Type = "Tissue section"
+  parent = Block
 }
 
-' Beziehungen (Hierarchie über Specimen.parent)
-Block --> Sample : .parent
-SchnittHE --> Block : .parent
-SchnittP63 --> Block : .parent
+' Hierarchische Beziehungen
+Block -up-> Sample : .parent
+SchnittHE -up-> Block : .parent
+SchnittP63 -up-> Block : .parent
 
 @enduml
