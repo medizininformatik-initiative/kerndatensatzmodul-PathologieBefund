@@ -52,12 +52,12 @@ Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)
 * hasMember[+] = Reference(mii-exa-patho-tissue-length-b)
 */
 Instance: mii-exa-patho-macro-grouper-a
-InstanceOf: Observation // THIMO!! TODO correction
+InstanceOf: mii-pr-patho-macroscopic-grouper
 Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Makroskopische Beurteilung</h1><p><b>Probe A: 1,2 cm langer weißlicher Gewebszylinder aus dem rechten lateralen Prostataseitenlappen peripher </b></p></div>"
-// * category[laboratory-category].coding = $cs-obs-category#laboratory -fixed im Profile
+* category[laboratory-category].coding = $cs-obs-category#laboratory
 * code.coding = $LOINC#22634-0
 * status = #final
 * hasMember[0] = Reference(Observation/mii-exa-patho-biopsy-site-a)
@@ -165,7 +165,7 @@ Description: "Example for a diagnostic conclusion"
 */
 
 Instance: mii-exa-patho-diagnostic-conclusion-grouper
-InstanceOf: Observation
+InstanceOf: mii-pr-patho-diagnostic-conclusion-grouper
 Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper"
 * text.status = #additional

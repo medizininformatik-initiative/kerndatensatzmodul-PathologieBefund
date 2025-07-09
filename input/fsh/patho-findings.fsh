@@ -118,6 +118,7 @@ Usage: #example
 * valueCodeableConcept.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 * valueCodeableConcept.extension.valueUrl = "#macro-a-biopsy-site-value"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
+// Warum nicht .bodysite?? 
 
 //-------------------------------
 // Microscopic Report
@@ -175,7 +176,7 @@ Usage: #example
 * valueCodeableConcept = $SCT#369772003 "Gleason Pattern 3"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE)
 
-// hier fehlt secodnary Gleason Pattern - kann sein dass es bei drei redudnatn ist, trotzdem
+// hier fehlt secondary Gleason Pattern - kann sein dass es bei drei redundant ist
 
 
 Instance: mii-exa-patho-histologic-type-a
@@ -191,7 +192,7 @@ Usage: #example
 * valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma" // hier icd-0-3 morphology?
 * specimen = Reference(Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE)
 
-// Negativbesipiel von unauffälliger Stanze!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Negativbesipiel von unauffälliger Stanze!
 
 //-------------------------------
 // Diagnostic Conclusion
