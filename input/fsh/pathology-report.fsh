@@ -65,25 +65,25 @@ Description: "Defines the general pathology report structure for German hospital
 * result ^slicing.rules = #closed
 * result ^slicing.ordered = true
 * result contains 
-      intraoperative-observations 0..* MS
-      and macroscopic-observations 0..* MS
-      and microscopic-observations 0..* MS
-      and additional-observations 0..* MS
-      and diagnostic-conclusion 1..* MS
+      intraoperative-observations 0..1 MS
+      and macroscopic-observations 0..1 MS
+      and microscopic-observations 0..1 MS
+      and additional-observations 0..1 MS
+      and diagnostic-conclusion 1..1 MS
 * result[intraoperative-observations] only Reference(mii-pr-patho-intraoperative-grouper)
-  * reference 1.. MS
+  * reference 1..1 MS
   * ^short = "Reference to intraoperative Observation grouper(s)"
 * result[macroscopic-observations] only Reference(mii-pr-patho-macroscopic-grouper)
-  * reference 1.. MS
+  * reference 1..1 MS
   * ^short = "Reference to macroscopic Observation grouper(s)"
 * result[microscopic-observations] only Reference(mii-pr-patho-microscopic-grouper)
-  * reference 1.. MS
+  * reference 1..1 MS
   * ^short = "Reference to microscopic Observation grouper(s)"
 * result[additional-observations] only Reference(mii-pr-patho-additional-specified-grouper)     
-  * reference 1.. MS
+  * reference 1..1 MS
   * ^short = "Reference to any additional Observation grouper(s)"
 * result[diagnostic-conclusion] only Reference(mii-pr-patho-diagnostic-conclusion-grouper) 
-  * reference 1.. MS
+  * reference 1..1 MS
   * ^short = "Reference to the 'Diagnostic Conclusion' grouper(s)"
 // Referenz zu angehaengten Bildern inkl. Informationen dazu (Bsp. DICOM) 
 * imagingStudy MS

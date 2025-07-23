@@ -13,7 +13,7 @@
         - Englische Übersetzung des IG (TODO)
     - Anpassung Beispieldaten (u.a. Specimen)
     - Update MII Dependencies
-    - Update externe Dependencies (z.B. ISIK)
+    - Update externe Dependencies (z.B. ISiK)
     - Formatierung ggfs. analog https://simplifier.net/guide/isik-basis-403/Einfuehrung/ReleaseNotes?version=4.0.3
 
 ### Impressum

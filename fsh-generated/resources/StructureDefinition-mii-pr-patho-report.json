@@ -262,7 +262,7 @@
         "sliceName": "intraoperative-observations",
         "short": "Reference to intraoperative Observation grouper(s)",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -285,7 +285,7 @@
         "sliceName": "macroscopic-observations",
         "short": "Reference to macroscopic Observation grouper(s)",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -308,7 +308,7 @@
         "sliceName": "microscopic-observations",
         "short": "Reference to microscopic Observation grouper(s)",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -331,7 +331,7 @@
         "sliceName": "additional-observations",
         "short": "Reference to any additional Observation grouper(s)",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -354,7 +354,7 @@
         "sliceName": "diagnostic-conclusion",
         "short": "Reference to the 'Diagnostic Conclusion' grouper(s)",
         "min": 1,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "Reference",
