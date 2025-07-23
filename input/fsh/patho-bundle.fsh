@@ -18,7 +18,7 @@ Description: "A Document-Bundle to wrap the composition and other patho-instance
         and Specimen 1..* MS 
         and DiagnosticReport 1..* MS 
         and Observations 1..* MS
-        and Patient 0..1 MS // Mehr als ein Patient? TODO - Definition/Comment 
+        and Patient 0..1 MS
 
 * entry[Composition] ^comment = "Already defined in the parent profile isik-basis-bericht-bundle - mandatory 1..1"
 * entry[Composition].resource ^definition = "Contraint on isik-basis-bericht-subsysteme"
@@ -30,3 +30,4 @@ Description: "A Document-Bundle to wrap the composition and other patho-instance
 * entry[Patient] ^comment = "To attach a patient is optional"
 
 * signature 1..1 MS
+

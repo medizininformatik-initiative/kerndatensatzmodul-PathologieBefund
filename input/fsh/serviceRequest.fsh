@@ -83,7 +83,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 * category 1..1 MS 
 * category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" 
 * code MS
-* code from mii-vs-patho-service-request-snomed-ct (preferred)
+* code from mii-vs-patho-service-request-code (extensible)
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"

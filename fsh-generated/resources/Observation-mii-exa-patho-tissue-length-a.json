@@ -54,5 +54,10 @@
   },
   "specimen": {
     "reference": "Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"
-  }
+  },
+  "derivedFrom": [
+    {
+      "reference": "Media/mii-exa-patho-attached-image"
+    }
+  ]
 }

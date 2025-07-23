@@ -9,31 +9,33 @@ package "DiagnosticReport" {
 
 package "Specimens" {
   object "Specimen Sample" as Sample #FFCCCC
-  object "Specimen Schnitt 1" as Schnitt1 #FFCCCC
-  object "Specimen Schnitt 2" as Schnitt2 #FFCCCC
+  object "Specimen Schnitt 1" as Schnitt1 #CFF5CF
+  object "Specimen Schnitt 2" as Schnitt2 #CFF5CF
 }
 
 package "PathoFindings"{
-  object "PathoFinding A1" as A1 #LightBlue
-  object "PathoFinding A2" as A2 #LightBlue
+  object "PathoFinding A1" as A1 #FFCCCC
+  object "PathoFinding B1" as B1 #FFCCCC
+  object "PathoFinding C1" as C1 #FFCCCC
+  object "PathoFinding A2" as A2 #CFF5CF
   object "PathoFinding A3" as A3 #LightBlue
-  object "PathoFinding B1" as B1 #LightBlue
-  object "PathoFinding B2" as B2 #LightBlue
+  
+  object "PathoFinding B2" as B2 #CFF5CF
   object "PathoFinding B3" as B3 #LightBlue
-  object "PathoFinding C1" as C1 #LightBlue
-  object "PathoFinding C2" as C2 #LightBlue
+  
+  object "PathoFinding C2" as C2 #CFF5CF
   object "PathoFinding C3" as C3 #LightBlue
 }
 
 package "Grouperinstanzen" {
-  object "Makro A" as MakroA #CFF5CF
-  object "Makro B" as MakroB #CFF5CF
-  object "Makro C" as MakroC #CFF5CF
+  object "Makro A" as MakroA #FFCCCC
+  object "Makro B" as MakroB #FFCCCC
+  object "Makro C" as MakroC #FFCCCC
   object "Mikro A" as MikroA #CFF5CF
   object "Mikro B" as MikroB #CFF5CF
   object "Mikro C" as MikroC #CFF5CF
-  object "DiagnosticConclusion A" as ConclusionA #CFF5CF
-  object "DiagnosticConclusion B" as ConclusionB #CFF5CF
+  object "DiagnosticConclusion A" as ConclusionA #LightBlue
+  object "DiagnosticConclusion B" as ConclusionB #LightBlue
 
 }
 
@@ -49,10 +51,10 @@ Report --> ConclusionB
 
 MakroA --> A1 : .hasMember
 MakroB --> B1
-MikroC --> C1
+MakroC --> C1
 
-MakroA --> A2
-MakroB --> B2
+MikroA --> A2 : .hasMember
+MikroB --> B2
 MikroC --> C2
 
 ConclusionA --> A3
@@ -77,8 +79,5 @@ MakroB --> Schnitt1
 
 MikroC --> Sample
 MikroC --> Schnitt2
-
-ConclusionA --> Sample : specimen
-ConclusionB --> Sample : specimen
 
 @enduml

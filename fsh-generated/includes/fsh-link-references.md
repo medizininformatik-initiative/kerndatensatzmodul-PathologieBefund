@@ -35,7 +35,7 @@
 [MII_VS_Patho_Processing_Procedure_SNOMED_CT]: ValueSet-mii-vs-patho-processing-procedure-snomed-ct.html
 [MII_VS_Patho_Report_Category_HL7]: ValueSet-mii-vs-patho-report-category-hl7.html
 [MII_VS_Patho_Section_Types_LOINC]: ValueSet-mii-vs-patho-section-types-loinc.html
-[MII_VS_Patho_Service_Request_SNOMED_CT]: ValueSet-mii-vs-patho-service-request-snomed-ct.html
+[MII_VS_Patho_Service_Request_Code]: ValueSet-mii-vs-patho-service-request-code.html
 [mii-exa-patho-biopsy-site-a]: Observation-mii-exa-patho-biopsy-site-a.html
 [mii-exa-patho-diagnostic-conclusion-1]: Observation-mii-exa-patho-diagnostic-conclusion-1.html
 [mii-exa-patho-diagnostic-conclusion-2]: Observation-mii-exa-patho-diagnostic-conclusion-2.html

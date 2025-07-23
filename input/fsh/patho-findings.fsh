@@ -102,7 +102,7 @@ Usage: #example
 * valueQuantity.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 * valueQuantity.extension.valueUrl = "#macro-a-tissue-length-value"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
-//* derivedFrom[+] = Reference(mii-exa-patho-attached-image) - fehlt in den neuen Beispielen!
+* derivedFrom[+] = Reference(mii-exa-patho-attached-image)
 
 Instance: mii-exa-patho-biopsy-site-a
 InstanceOf: mii-pr-patho-finding
@@ -118,7 +118,7 @@ Usage: #example
 * valueCodeableConcept.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 * valueCodeableConcept.extension.valueUrl = "#macro-a-biopsy-site-value"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
-// Warum nicht .bodysite?? 
+// Warum nicht specimen.bodysite?? Bei Pool-specimen fehlt die .bodysite!!
 
 //-------------------------------
 // Microscopic Report
@@ -186,7 +186,7 @@ Usage: #example
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
-* code = $SCT#371441004 "Histologic type"
+* code = $SCT#371441004 "Histologic type" // z.B. LOINC Code "presence of Acinar adenocarcinoma"
 * code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 * code.extension.valueUrl = "#micro-a-histologic-type-key"
 * valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma" // hier icd-0-3 morphology?
@@ -233,20 +233,18 @@ Description: "Example for diagnostic conclusion"
 Instance: mii-exa-patho-diagnostic-conclusion-1
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding" // ?
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
 * code = $LOINC#59847-4 "Histology and Behavior ICD-O-3 Cancer"
-* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"  // ?
+* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink" 
 * code.extension.valueUrl = "#diagnostic-conclusion-icdo-3-key"
 * valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom (azinär)"
-//Specimen fehlt
+
 
 Instance: mii-exa-patho-diagnostic-conclusion-2
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
@@ -258,7 +256,6 @@ Usage: #example
 Instance: mii-exa-patho-diagnostic-conclusion-3
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final

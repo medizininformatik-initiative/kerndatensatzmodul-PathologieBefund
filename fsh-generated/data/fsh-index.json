@@ -77,23 +77,23 @@
     "fshType": "Instance",
     "fshFile": "patho-findings.fsh",
     "startLine": 233,
-    "endLine": 243
+    "endLine": 242
   },
   {
     "outputFile": "Observation-mii-exa-patho-diagnostic-conclusion-2.json",
     "fshName": "mii-exa-patho-diagnostic-conclusion-2",
     "fshType": "Instance",
     "fshFile": "patho-findings.fsh",
-    "startLine": 246,
-    "endLine": 256
+    "startLine": 245,
+    "endLine": 254
   },
   {
     "outputFile": "Observation-mii-exa-patho-diagnostic-conclusion-3.json",
     "fshName": "mii-exa-patho-diagnostic-conclusion-3",
     "fshType": "Instance",
     "fshFile": "patho-findings.fsh",
-    "startLine": 258,
-    "endLine": 268
+    "startLine": 256,
+    "endLine": 265
   },
   {
     "outputFile": "Observation-mii-exa-patho-diagnostic-conclusion-grouper.json",
@@ -149,7 +149,7 @@
     "fshType": "Instance",
     "fshFile": "patho-findings.fsh",
     "startLine": 88,
-    "endLine": 104
+    "endLine": 105
   },
   {
     "outputFile": "ServiceRequest-mii-exa-patho-request.json",
@@ -380,8 +380,8 @@
     "fshName": "MII_VS_Patho_All_LOINC",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 125,
-    "endLine": 131
+    "startLine": 145,
+    "endLine": 151
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-collection-method-snomed-ct.json",
@@ -420,8 +420,8 @@
     "fshName": "MII_VS_Patho_Problem_List_SNOMED_CT",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 95,
-    "endLine": 107
+    "startLine": 115,
+    "endLine": 127
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-processing-procedure-snomed-ct.json",
@@ -444,15 +444,15 @@
     "fshName": "MII_VS_Patho_Section_Types_LOINC",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 112,
-    "endLine": 122
+    "startLine": 132,
+    "endLine": 142
   },
   {
-    "outputFile": "ValueSet-mii-vs-patho-service-request-snomed-ct.json",
-    "fshName": "MII_VS_Patho_Service_Request_SNOMED_CT",
+    "outputFile": "ValueSet-mii-vs-patho-service-request-code.json",
+    "fshName": "MII_VS_Patho_Service_Request_Code",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
     "startLine": 84,
-    "endLine": 90
+    "endLine": 110
   }
 ]

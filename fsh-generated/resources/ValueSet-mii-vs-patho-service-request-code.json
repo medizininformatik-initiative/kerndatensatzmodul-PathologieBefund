@@ -1,0 +1,135 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Patho_Service_Request_Code",
+  "id": "mii-vs-patho-service-request-code",
+  "title": "MII VS Patho Service Request Code",
+  "description": "ValueSet for a preferred set of ServiceRequest codes",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code",
+  "version": "2025.0.0",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "108252007"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          },
+          {
+            "property": "ORDER_OBS",
+            "op": "=",
+            "value": "Both"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7061-7"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          },
+          {
+            "property": "ORDER_OBS",
+            "op": "=",
+            "value": "Both"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP61649-7"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          },
+          {
+            "property": "ORDER_OBS",
+            "op": "=",
+            "value": "Both"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP247851-1"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          },
+          {
+            "property": "ORDER_OBS",
+            "op": "=",
+            "value": "Both"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP247830-5"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -81,13 +81,33 @@ Description: "ValueSet for the categorization of Pathology Report documents"
 //-----------------------------------
 // ServiceRequest
 //-----------------------------------
-ValueSet: MII_VS_Patho_Service_Request_SNOMED_CT
-Id: mii-vs-patho-service-request-snomed-ct
-Title: "MII VS Patho Service Request [SNOMED CT]"
+ValueSet: MII_VS_Patho_Service_Request_Code
+Id: mii-vs-patho-service-request-code
+Title: "MII VS Patho Service Request Code"
 Description: "ValueSet for a preferred set of ServiceRequest codes"
 * insert PR_CS_VS_Version
 * insert Publisher
 * include codes from system $SCT where concept descendent-of #108252007 "Laboratory procedure (procedure)"
+* include codes from system http://loinc.org where
+    STATUS = "ACTIVE" and
+    ORDER_OBS = "Both" and
+    SYSTEM = #LP7061-7 and
+    CLASSTYPE = "1" 
+* include codes from system http://loinc.org where
+    STATUS = "ACTIVE" and
+    ORDER_OBS = "Both" and
+    SYSTEM = #LP61649-7 and
+    CLASSTYPE = "1"
+* include codes from system http://loinc.org where
+    STATUS = "ACTIVE" and
+    ORDER_OBS = "Both" and
+    SYSTEM = #LP247851-1 and
+    CLASSTYPE = "1"
+* include codes from system http://loinc.org where
+    STATUS = "ACTIVE" and
+    ORDER_OBS = "Both" and
+    SYSTEM = #LP247830-5 and
+    CLASSTYPE = "1"
 
 //------------------------------------
 // Active Problems
