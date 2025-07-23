@@ -34,7 +34,7 @@ Block (resultiert aus makroskopischem Zuschnitt):
 |Specimen.type| 1201985008 Tissue block specimen (specimen)|
 |Specimen.parent|Part|
 |Specimen.collection.method|168126000 Sample macroscopy (procedure)|
-|Specimen.collection.bodySite|123037004 Body structure (body structure) +|
+|Specimen.collection.bodySite|123037004 Body structure (body structure) |
 |Specimen.collection.bodySite.extension:locationQualifier|Insbesondere falls mehrere Blöcke aus einem Part entstehen|
 |Specimen.processing|787376009 Preparation of formalin fixed paraffin embedded tissue specimen (procedure)|
 
