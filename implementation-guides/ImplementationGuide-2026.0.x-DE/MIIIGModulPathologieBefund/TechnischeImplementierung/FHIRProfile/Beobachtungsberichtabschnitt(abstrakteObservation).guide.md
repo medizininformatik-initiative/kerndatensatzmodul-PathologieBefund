@@ -27,7 +27,7 @@ Diese Grouper haben die Observation.codes
 - [100969-5](https://loinc.org/100969-5/) (Pathology report additional specified observation) | *Verlinkung wird erst mit dem nächsten LOINC Release funktionieren, da der Code erst im August 2022 angenommen wurde*
 - [22637-3](https://loinc.org/22637-3/) (Pathology report diagnosis)  
 
-Falls ein Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so sollte jeweils ein Grouper pro Präparat vorhanden sein.
+Falls ein Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.
 
 Ein Grouper für "Clinical Information", [22636-5](https://loinc.org/22636-5/) (Pathology report relevant history), ist nicht notwendig, da die hierzu gehörenden Informationen im **MII PR Patho Service Request** unter `.supportingInfo` vorhanden sind.
 

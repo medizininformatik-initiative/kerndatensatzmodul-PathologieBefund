@@ -1,7 +1,7 @@
 ## {{page-title}}
 
 ### Verwendung der Grouperprofile
-Die Verwendung der Grouper wurde im Update 2026 so umgestellt, dass  nur noch jeweils ein Grouper pro Befundbericht(DiagnosticReport) referenziert werden darf. Um diese Umstellung der Verwendung zu visuallisieren wurden zwei Relationship-Diagramme zum Stand vor und nach dem Update angefertigt:
+Die Verwendung der Grouper wurde im Update 2026 so umgestellt, dass  nur noch jeweils ein Grouper pro Befundbericht(DiagnosticReport) referenziert werden darf. Um diese Umstellung der Verwendung zu visualisieren wurden zwei Relationship-Diagramme zum Stand vor und nach dem Update angefertigt:
 
 Vorheriger Stand (bis 2025):
 {{render:implementation-guides-ImplementationGuide-Common-images-GrouperVorher}}

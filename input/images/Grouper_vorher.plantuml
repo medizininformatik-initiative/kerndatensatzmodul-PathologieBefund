@@ -49,7 +49,7 @@ Report --> MikroC
 Report --> ConclusionA
 Report --> ConclusionB
 
-MakroA --> A1 : .hasMember
+MakroA -right-> A1 : .hasMember
 MakroB --> B1
 MakroC --> C1
 
@@ -57,11 +57,11 @@ MikroA --> A2 : .hasMember
 MikroB --> B2
 MikroC --> C2
 
-ConclusionA --> A3
+ConclusionA -left-> A3
 ConclusionA --> B3
 ConclusionB --> C3
 
-A1 --> Sample : specimen
+A1 --> Sample
 A2 --> Schnitt1
 
 B1 --> Sample
@@ -72,12 +72,12 @@ C2 --> Schnitt2
 
 
 MakroA --> Sample : specimen
-MakroA --> Schnitt1
+MikroA --> Schnitt1
 
 MakroB --> Sample
-MakroB --> Schnitt1
+MikroB --> Schnitt1
 
-MikroC --> Sample
+MakroC --> Sample
 MikroC --> Schnitt2
 
 @enduml
