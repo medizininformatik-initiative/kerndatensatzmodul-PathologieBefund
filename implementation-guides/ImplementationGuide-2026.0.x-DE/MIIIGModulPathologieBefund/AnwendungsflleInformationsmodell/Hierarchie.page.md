@@ -1,17 +1,19 @@
 ## {{page-title}}
 
 ### Verwendung der Grouperprofile
-Die Verwendung der Grouper wurde im Update 2026 so umgestellt, dass  nur noch jeweils ein Grouper pro Befundbericht(DiagnosticReport) referenziert werden darf. Um diese Umstellung der Verwendung zu visualisieren wurden zwei Relationship-Diagramme zum Stand vor und nach dem Update angefertigt:
+Die Verwendung der Grouper wurde im Update 2026 so umgestellt, dass  nur noch jeweils ein Grouper pro Befundbericht(DiagnosticReport) referenziert werden darf. Um diese Umstellung zu visualisieren wurden zwei Relationship-Diagramme zum Stand vor und nach dem Update angefertigt:
 
 Vorheriger Stand (bis 2025):
 {{render:implementation-guides-ImplementationGuide-Common-images-GrouperVorher}}
 
+
 Aktueller Stand (ab 2026):
 {{render:implementation-guides-ImplementationGuide-Common-images-GrouperNachher}}
 
+Mit der Umstellung gibt es keine Referenz(en) auf Specimen innerhalb der Grouper, somit ist die Hierchachie bzw. die Referenzierung der Specimen untereinander essentiell:
 
 ### Specimen Hierarchie
-Im folgenden wird die Hierarchie der Specimen anhand einiger Beispiele näher beschrieben:
+Im folgenden wird die Hierarchie der Specimen anhand eines Relationship-Diagramms und einiger Beispiele näher beschrieben:
 
 {{render:implementation-guides-ImplementationGuide-Common-images-Specimen}}
 
@@ -20,12 +22,12 @@ Das Rootelement(Sample) ist jeweils ein klinisch gewonnenes Probenmaterial von e
 Gemäß dem Domänen-Analyse.Modell müssen die verschiedenen Bearbeitungslevel von Specimen getrennt spezifiziert werden:
 
 Part (Klinisch gewonnene Probe):
-|Element|Constraint???|
+|Element|Constraint|
 |-
 |Specimen.type|123038009 Specimen (specimen)|
 |Specimen.parent|0..0|
-|Specimen.collection.method|118292001 Removal (procedure)|
-|Specimen.collection.bodySite|123037004 Body structure (body structure)|
+|Specimen.collection.method| descendants-of 118292001 Removal (procedure)|
+|Specimen.collection.bodySite| descendants-of 123037004 Body structure (body structure)|
 |Specimen.processing|0..0|
 
 Block (resultiert aus makroskopischem Zuschnitt):
@@ -34,9 +36,9 @@ Block (resultiert aus makroskopischem Zuschnitt):
 |Specimen.type| 1201985008 Tissue block specimen (specimen)|
 |Specimen.parent|Part|
 |Specimen.collection.method|168126000 Sample macroscopy (procedure)|
-|Specimen.collection.bodySite|123037004 Body structure (body structure) |
+|Specimen.collection.bodySite| descendants-of 123037004 Body structure (body structure) |
 |Specimen.collection.bodySite.extension:locationQualifier|Insbesondere falls mehrere Blöcke aus einem Part entstehen|
-|Specimen.processing|787376009 Preparation of formalin fixed paraffin embedded tissue specimen (procedure)|
+|Specimen.processing| 787376009 Preparation of formalin fixed paraffin embedded tissue specimen (procedure)|
 
 
 Slide (Schneiden und Färben):
@@ -45,6 +47,6 @@ Slide (Schneiden und Färben):
 |Specimen.type|430856003 Tissue section (specimen)|
 |Specimen.parent|13283003 Tissue processing technique (procedure)|
 |Specimen.collection.method|13283003 Tissue processing technique (procedure)|
-|Specimen.collection.bodySite|123037004 Body structure (body structure)|
+|Specimen.collection.bodySite| descendants-of 123037004 Body structure (body structure)|
 |Specimen.collection.bodySite.extension:locationQualifier|Siehe Block|
-|Specimen.processing|127790008 Staining method (procedure)|
+|Specimen.processing| descendants-of 127790008 Staining method (procedure)|
