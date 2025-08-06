@@ -22,7 +22,7 @@ Das Rootelement(Sample) ist jeweils ein klinisch gewonnenes Probenmaterial von e
 Gemäß dem Domänen-Analyse.Modell müssen die verschiedenen Bearbeitungslevel von Specimen getrennt spezifiziert werden:
 
 Part (Klinisch gewonnene Probe):
-|Element|Constraint|
+|Element|Anforderung|Anzahl von Konzepten|Stärke der Anforderung|
 |-
 |Specimen.type|123038009 Specimen (specimen)|
 |Specimen.parent|0..0|
@@ -31,7 +31,7 @@ Part (Klinisch gewonnene Probe):
 |Specimen.processing|0..0|
 
 Block (resultiert aus makroskopischem Zuschnitt):
-|Element|Constraint|
+|Element|Anforderung|Anzahl von Konzepten|Stärke der Anforderung|
 |-
 |Specimen.type| 1201985008 Tissue block specimen (specimen)|
 |Specimen.parent|Part|
@@ -42,7 +42,7 @@ Block (resultiert aus makroskopischem Zuschnitt):
 
 
 Slide (Schneiden und Färben):
-|Element|Constraint|
+|Element|Anforderung|Anzahl von Konzepten|Stärke der Anforderung|
 |-
 |Specimen.type|430856003 Tissue section (specimen)|
 |Specimen.parent|13283003 Tissue processing technique (procedure)|

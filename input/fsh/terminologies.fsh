@@ -21,11 +21,9 @@ Description: "ValueSet for container type based on IHE PaLM's ContainerEntityCla
 * $SCT#434708008 "Tissue cassette for microarray (physical object)"
 * $SCT#433466003 "Microscope slide (physical object)"
 * $SCT#433453003 "Specimen container component (physical object)"
-* $SCT#430863003 "Tissue embedding medium (substance)"
 * $SCT#434533009 "Electron microscopy grid (physical object)"
 * $SCT#434822004 "Specimen well (physical object)"
 * $SCT#433472003 "Microscope slide coverslip (physical object)"
-* $SCT#430862008 "Microscope slide mounting medium (substance)"
 * $SCT#434473001 "Specimen container lid (physical object)"
 
 ValueSet: MII_VS_Patho_Processing_Procedure_SNOMED_CT
