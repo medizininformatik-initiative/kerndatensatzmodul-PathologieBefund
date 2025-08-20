@@ -12,8 +12,8 @@
     "fshName": "mii-exa-patho-composition",
     "fshType": "Instance",
     "fshFile": "pathology-report.fsh",
-    "startLine": 311,
-    "endLine": 375
+    "startLine": 314,
+    "endLine": 378
   },
   {
     "outputFile": "Condition-mii-exa-patho-problem-list-item-1.json",
@@ -36,8 +36,8 @@
     "fshName": "mii-exa-patho-report",
     "fshType": "Instance",
     "fshFile": "pathology-report.fsh",
-    "startLine": 203,
-    "endLine": 226
+    "startLine": 206,
+    "endLine": 229
   },
   {
     "outputFile": "List-mii-exa-patho-active-problems-list.json",
@@ -245,7 +245,7 @@
     "fshType": "Profile",
     "fshFile": "pathology-report.fsh",
     "startLine": 103,
-    "endLine": 167
+    "endLine": 170
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.json",
@@ -392,11 +392,19 @@
     "endLine": 10
   },
   {
-    "outputFile": "ValueSet-mii-vs-patho-composition-type-loinc.json",
-    "fshName": "MII_VS_Patho_Composition_Type_LOINC",
+    "outputFile": "ValueSet-mii-vs-patho-composition-type-kdl.json",
+    "fshName": "MII_VS_Patho_Composition_Type_KDL",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 57,
+    "startLine": 153,
+    "endLine": 161
+  },
+  {
+    "outputFile": "ValueSet-mii-vs-patho-composition-type-snomed-ct.json",
+    "fshName": "MII_VS_Patho_Composition_Type_SNOMED_CT",
+    "fshType": "ValueSet",
+    "fshFile": "terminologies.fsh",
+    "startLine": 55,
     "endLine": 70
   },
   {
@@ -405,15 +413,15 @@
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
     "startLine": 13,
-    "endLine": 29
+    "endLine": 27
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-media-modality-snomed-ct.json",
     "fshName": "MII_VS_Patho_Media_Modality_SNOMED_CT",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 42,
-    "endLine": 52
+    "startLine": 40,
+    "endLine": 50
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-problem-list-snomed-ct.json",
@@ -428,8 +436,8 @@
     "fshName": "MII_VS_Patho_Processing_Procedure_SNOMED_CT",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 31,
-    "endLine": 37
+    "startLine": 29,
+    "endLine": 35
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-report-category-hl7.json",

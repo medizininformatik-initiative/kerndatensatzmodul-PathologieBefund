@@ -83,42 +83,71 @@
         "comment": "Bereits in Subsysteme auf 1..1 & Fixed Value auf final"
       },
       {
-        "id": "Composition.type.coding:LOINC-patho",
+        "id": "Composition.type.coding:KDL",
         "path": "Composition.type.coding",
-        "sliceName": "LOINC-patho",
-        "min": 1,
-        "max": "*",
+        "sliceName": "KDL",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl"
+        }
+      },
+      {
+        "id": "Composition.type.coding:IHE",
+        "path": "Composition.type.coding",
+        "sliceName": "IHE"
+      },
+      {
+        "id": "Composition.type.coding:IHE.code",
+        "path": "Composition.type.coding.code",
+        "patternCode": "PATH"
+      },
+      {
+        "id": "Composition.type.coding:sct",
+        "path": "Composition.type.coding",
+        "sliceName": "sct",
+        "min": 0,
+        "max": "1",
         "patternCoding": {
-          "system": "http://loinc.org"
+          "system": "http://snomed.info/sct"
         },
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-loinc"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct"
         }
       },
       {
-        "id": "Composition.type.coding:LOINC-patho.system",
+        "id": "Composition.type.coding:sct.system",
         "path": "Composition.type.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Composition.type.coding:LOINC-patho.code",
+        "id": "Composition.type.coding:sct.code",
         "path": "Composition.type.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Composition.category.coding:HL7-patho",
+        "id": "Composition.category.coding:IHE",
         "path": "Composition.category.coding",
-        "sliceName": "HL7-patho",
+        "sliceName": "IHE"
+      },
+      {
+        "id": "Composition.category.coding:IHE.code",
+        "path": "Composition.category.coding.code",
+        "patternCode": "BEF"
+      },
+      {
+        "id": "Composition.category.coding:sct",
+        "path": "Composition.category.coding",
+        "sliceName": "sct",
         "min": 0,
         "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct"
         }
       },
       {

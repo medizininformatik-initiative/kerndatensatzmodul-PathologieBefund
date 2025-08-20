@@ -52,12 +52,13 @@ Description: "ValueSet with some of the main Media.modalities needed in the path
 //----------------------------------
 // Composition
 //----------------------------------
-ValueSet: MII_VS_Patho_Composition_Type_LOINC
-Id: mii-vs-patho-composition-type-loinc
-Title: "MII VS Patho Composition Type [LOINC]"
+ValueSet: MII_VS_Patho_Composition_Type_SNOMED_CT
+Id: mii-vs-patho-composition-type-snomed-ct
+Title: "MII VS Patho Composition Type [Snomed CT]"
 Description: "ValueSet for the types a pathology Composition can have"
 * insert PR_CS_VS_Version
 * insert Publisher
+/* Codes des alten Valuesets [LOINC]
 * $LOINC#18743-5 "Autopsy report"
 * $LOINC#11526-1 "Pathology study"
 * $LOINC#26435-8 "Molecular pathology studies (set)"
@@ -65,7 +66,8 @@ Description: "ValueSet for the types a pathology Composition can have"
 * $LOINC#60568-3 "Pathology Synoptic report"
 * $LOINC#47527-7 "Cytology Cvx/Vag Doc Thin Prep"
 * $LOINC#33717-0 "Cytology Cvx/Vag study"
-* $LOINC#33716-2 "Non-gynecological cytology study"
+* $LOINC#33716-2 "Non-gynecological cytology study"*/
+* include codes from system $SCT where concept is-a #371528001
 
 ValueSet: MII_VS_Patho_Report_Category_HL7
 Id: mii-vs-patho-report-category-hl7
@@ -147,3 +149,13 @@ Description: "ValueSet for general LOINC VS binding"
 * insert PR_CS_VS_Version
 * insert Publisher
 * include codes from system $LOINC
+
+ValueSet: MII_VS_Patho_Composition_Type_KDL
+Id: mii-vs-patho-composition-type-kdl
+Title: "MII VS Patho Composition Type KDL"
+Description: "ValueSet for the categorization of Pathology Report documents"
+* insert PR_CS_VS_Version
+* insert Publisher
+* http://dvmd.de/fhir/CodeSystem/kdl#PT080102 "Histologiebefund"
+* http://dvmd.de/fhir/CodeSystem/kdl#PT130102 "Molekularpathologiebefund"
+* http://dvmd.de/fhir/CodeSystem/kdl#PT260102 "Zytologiebefund"

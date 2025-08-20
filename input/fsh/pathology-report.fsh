@@ -116,15 +116,18 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
   * type 1.. MS
   * type.coding = $v2-0203#ACSN "Accession ID"
 * type
-  * coding contains LOINC-patho 1.. MS
-  * coding[LOINC-patho] from mii-vs-patho-composition-type-loinc (extensible)  
-  * coding[LOINC-patho] ^patternCoding.system = $LOINC
+  * coding contains sct ..1 MS
+  * coding[sct] from mii-vs-patho-composition-type-snomed-ct (extensible)  
+  * coding[sct] ^patternCoding.system = $SCT
     * system 1.. MS
     * code 1.. MS
+  * coding[IHE].code = #PATH
+  * coding[KDL] from mii-vs-patho-composition-type-kdl (extensible)  
 * status ^comment = "Bereits in Subsysteme auf 1..1 & Fixed Value auf final"
 * category 
-  * coding contains HL7-patho ..1 MS
-  * coding[HL7-patho] from mii-vs-patho-report-category-hl7 (extensible)
+  * coding contains sct ..1 MS
+  * coding[sct] from mii-vs-patho-composition-type-snomed-ct (extensible)
+  * coding[IHE].code = #BEF
 * encounter 1..
 * author only Reference($isik-person-im-gesundheitsberuf or Organization)
 * author ^short = "Author can only be of type Practitioner or Organization"

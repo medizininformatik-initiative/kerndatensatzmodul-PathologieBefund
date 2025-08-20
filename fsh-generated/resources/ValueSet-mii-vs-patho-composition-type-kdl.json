@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Patho_Composition_Type_KDL",
+  "id": "mii-vs-patho-composition-type-kdl",
+  "title": "MII VS Patho Composition Type KDL",
+  "description": "ValueSet for the categorization of Pathology Report documents",
+  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl",
+  "version": "2025.0.0",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "concept": [
+          {
+            "code": "PT080102",
+            "display": "Histologiebefund"
+          },
+          {
+            "code": "PT130102",
+            "display": "Molekularpathologiebefund"
+          },
+          {
+            "code": "PT260102",
+            "display": "Zytologiebefund"
+          }
+        ]
+      }
+    ]
+  }
+}

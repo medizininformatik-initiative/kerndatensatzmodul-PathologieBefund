@@ -5,7 +5,10 @@
     - Grouperkardinalität auf ..1 beschnitten. Somit ist nur noch jeweils ein Grouper innerhalb eines Befundberichtes zu verwenden
         - Entsprechende Veränderung innerhalb der Grouperprofile und des DiagnosticReports
     - Profil PathoBundle hinzugefügt
-    - VS MII_VS_Patho_Service_Request_Code umbenannt, um LOINC Codes erweitert und das Binding von prefered auf extensible geändert
+    - VS MII_VS_Patho_Service_Request_Code umbenannt, um LOINC Codes erweitert und das Binding 
+    von prefered auf extensible geändert
+    - Composition.type und Composition.category - Eigene Slices auf Snomed CT Codes umgestellt und passend umgenannt
+        - MII_VS_Patho_Composition_Type_KDL für den KDL-Slice hinzugefügt
     - Aktualisierung des IG
         - Bezeichnungen der Profilseiten im IG wurden angepasst
         - neue Seite für Patho-Bundle
@@ -15,7 +18,6 @@
     - Zwei falsche Codes (substances) aus dem VS MII_VS_Patho_Container_Type_SNOMED_CT entfernt
     - Update MII Dependencies
     - Update externe Dependencies (z.B. ISiK)
-    - Formatierung ggfs. analog https://simplifier.net/guide/isik-basis-403/Einfuehrung/ReleaseNotes?version=4.0.3 (TODO)
 
 ### Impressum
 Dieser Leitfaden ist im Rahmen der Medizininformatik-Initiative erstellt worden und unterliegt per Governance-Prozess dem Abstimmungsverfahren des Interoperabilitätsforums und der Technischen Komitees (TCs) von HL7 Deutschland e. V.  

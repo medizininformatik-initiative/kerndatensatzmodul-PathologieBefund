@@ -28,7 +28,8 @@
 [MII_PR_Patho_Specimen]: StructureDefinition-mii-pr-patho-specimen.html
 [MII_VS_Patho_All_LOINC]: ValueSet-mii-vs-patho-all-loinc.html
 [MII_VS_Patho_Collection_Method_SNOMED_CT]: ValueSet-mii-vs-patho-collection-method-snomed-ct.html
-[MII_VS_Patho_Composition_Type_LOINC]: ValueSet-mii-vs-patho-composition-type-loinc.html
+[MII_VS_Patho_Composition_Type_KDL]: ValueSet-mii-vs-patho-composition-type-kdl.html
+[MII_VS_Patho_Composition_Type_SNOMED_CT]: ValueSet-mii-vs-patho-composition-type-snomed-ct.html
 [MII_VS_Patho_Container_Type_SNOMED_CT]: ValueSet-mii-vs-patho-container-type-snomed-ct.html
 [MII_VS_Patho_Media_Modality_SNOMED_CT]: ValueSet-mii-vs-patho-media-modality-snomed-ct.html
 [MII_VS_Patho_Problem_List_SNOMED_CT]: ValueSet-mii-vs-patho-problem-list-snomed-ct.html
