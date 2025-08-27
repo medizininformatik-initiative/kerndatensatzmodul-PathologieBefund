@@ -71,8 +71,8 @@ In the table below, elements marked with * are duplicated in the MII PR Patho Co
 |DiagnosticReport.presentedForm | PDF of the pathology report |
 
 ----------------------------------
-### Mapping zum Logical Model
-| FHIR-Element | Logisches Datenmodell |
+### Mapping to Logical Model
+| FHIR Element | Logical Data Model |
 |--|--|
 |DiagnosticReport.id | Befundbericht.id  |
 |DiagnosticReport.identifier| Befundbericht.Identifikator |
@@ -94,175 +94,175 @@ In the table below, elements marked with * are duplicated in the MII PR Patho Co
 
 -----
 
-### Suchparameter
+### Search Parameters
 
-Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in Kombination:
+The following search parameters are relevant for the Pathology Report module, also in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id``` MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/DiagnosticReport?_id=103270```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_id``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Usage notes: Further information on searching for ```_id``` can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-1. Der Suchparameter ```_lastUpdated``` MUSS unterstützt werden:
+1. The search parameter ```_lastUpdated``` MUST be supported:
 
-    Beispiele:
+    Examples:
     
     ```GET [base]/DiagnosticReport?_lastUpdated=2021-12-08```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_lastUpdated``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Usage notes: Further information on searching for ```_lastUpdated``` can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-1. Der Suchparameter ```_profile``` MUSS unterstützt werden:
+1. The search parameter ```_profile``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_profile``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+    Usage notes: Further information on searching for ```_profile``` can be found in the [FHIR base specification - section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-1. Der Suchparameter ```based-on``` MUSS unterstützt werden:
+1. The search parameter ```based-on``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?based-on=ServiceRequest/mii-exa-patho-request```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.basedOn``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Usage notes: Further information on searching for ```DiagnosticReport.basedOn``` can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```category``` MUSS unterstützt werden:
+1. The search parameter ```category``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?category=CP```
     
     ```GET [base]/DiagnosticReport?category=http://terminology.hl7.org/CodeSystem/v2-0074|CP```
 
-    Anwendungshinweise:  Weitere Informationen zur Suche nach ```DiagnosticReport.category``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+    Usage notes: Further information on searching for ```DiagnosticReport.category``` can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter ```code``` MUSS unterstützt werden:
+1. The search parameter ```code``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?code=http://loinc.org|60568-3```
 
     ```GET [base]/DiagnosticReport?code=60568-3```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.code``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+    Usage notes: Further information on searching for ```DiagnosticReport.code``` can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter ```conclusion``` MUSS unterstützt werden:
+1. The search parameter ```conclusion``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?conclusion=http://snomed.info/sct|399490008```
 
     ```GET [base]/DiagnosticReport?conclusion=399490008```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.conclusionCode``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+    Usage notes: Further information on searching for ```DiagnosticReport.conclusionCode``` can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter ```date``` MUSS unterstützt werden:
+1. The search parameter ```date``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?date=2021-06-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.effective``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
+    Usage notes: Further information on searching for ```DiagnosticReport.effective``` can be found in the [FHIR base specification - section "date"](http://hl7.org/fhir/R4/search.html#date).
 
-1. Der Suchparameter ```encounter``` MUSS unterstützt werden:
+1. The search parameter ```encounter``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?encounter=Encounter/234980```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.encounter``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Usage notes: Further information on searching for ```DiagnosticReport.encounter``` can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```identifier``` MUSS unterstützt werden:
+1. The search parameter ```identifier``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?identifier=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|E21.12345```
 
     ```GET [base]/DiagnosticReport?identifier=E21.12345```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.identifier``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+    Usage notes: Further information on searching for ```DiagnosticReport.identifier``` can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter ```issued``` MUSS unterstützt werden:
+1. The search parameter ```issued``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?issued=2022-01-01```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.issued``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
+    Usage notes: Further information on searching for ```DiagnosticReport.issued``` can be found in the [FHIR base specification - section "date"](http://hl7.org/fhir/R4/search.html#date).
 
-1. Der Suchparameter ```media``` MUSS unterstützt werden:
+1. The search parameter ```media``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?media=Media/ex-mii-patho-attached-image```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.media.link``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Usage notes: Further information on searching for ```DiagnosticReport.media.link``` can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```patient``` MUSS unterstützt werden:
+1. The search parameter ```patient``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?patient=Patient/12345```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.subject.​where(resolve() is Patient)``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Usage notes: Further information on searching for ```DiagnosticReport.subject.​where(resolve() is Patient)``` can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```performer``` MUSS unterstützt werden:
+1. The search parameter ```performer``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?performer=Practitioner/2346545```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.performer``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Usage notes: Further information on searching for ```DiagnosticReport.performer``` can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```result``` MUSS unterstützt werden:
+1. The search parameter ```result``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?result=Observation/ex-mii-patho-macro-grouper-b```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.result``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Usage notes: Further information on searching for ```DiagnosticReport.result``` can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```specimen``` MUSS unterstützt werden:
+1. The search parameter ```specimen``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?specimen=Specimen/987976```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.specimen``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Usage notes: Further information on searching for ```DiagnosticReport.specimen``` can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```status``` MUSS unterstützt werden:
+1. The search parameter ```status``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?status=final```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.status``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+    Usage notes: Further information on searching for ```DiagnosticReport.status``` can be found in the [FHIR base specification - section "token"](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter ```subject``` MUSS unterstützt werden:
+1. The search parameter ```subject``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?subject=Patient/12345```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.subject``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Usage notes: Further information on searching for ```DiagnosticReport.subject``` can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```imaging-study``` MUSS unterstützt werden:
+1. The search parameter ```imaging-study``` MUST be supported:
 
-    Beispiele:
+    Examples:
 
     ```GET [base]/DiagnosticReport?imaging-study=ImagingStudy/978698```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```DiagnosticReport.imagingStudy``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+    Usage notes: Further information on searching for ```DiagnosticReport.imagingStudy``` can be found in the [FHIR base specification - section "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
 
 
 
 -----------------------------------
-### Beispiele
+### Examples
 
 {{json:mii-exa-patho-report}}
 

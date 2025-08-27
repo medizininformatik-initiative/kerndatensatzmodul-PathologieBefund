@@ -150,6 +150,9 @@ Description: "ValueSet for general LOINC VS binding"
 * insert Publisher
 * include codes from system $LOINC
 
+//---------------------------------------
+// Composition
+//---------------------------------------
 ValueSet: MII_VS_Patho_Composition_Type_KDL
 Id: mii-vs-patho-composition-type-kdl
 Title: "MII VS Patho Composition Type KDL"
@@ -159,3 +162,4 @@ Description: "ValueSet for the categorization of Pathology Report documents"
 * http://dvmd.de/fhir/CodeSystem/kdl#PT080102 "Histologiebefund"
 * http://dvmd.de/fhir/CodeSystem/kdl#PT130102 "Molekularpathologiebefund"
 * http://dvmd.de/fhir/CodeSystem/kdl#PT260102 "Zytologiebefund"
+

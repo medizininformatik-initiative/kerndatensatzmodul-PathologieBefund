@@ -2,6 +2,9 @@
 .history/
 .devcontainer/
 
+# Claude Code files
+CLAUDE.md
+
 .DS_Store
 Thumbs.db
 # /fsh-generated

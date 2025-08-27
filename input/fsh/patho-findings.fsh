@@ -11,7 +11,7 @@ Description: "Instantiable Observation to describe a generic pathology finding"
 * category contains section-type 1..1 MS
 * category[section-type] from mii-vs-patho-section-types-loinc (required)
 * value[x] MS
-* value[x] only string or Quantity or CodeableConcept or Ratio
+* value[x] only string or Quantity or CodeableConcept or Ratio or Range
 
 //---------------------------------
 // Example(s)

@@ -281,8 +281,4 @@ Usage Notes: For more information on searching for ```Specimen.container.additiv
 
 ---------------------------------------
 ### Examples:
-
-
----------------------------------------
-### Beispiele:
 {{json:mii-exa-patho-specimen-a}}

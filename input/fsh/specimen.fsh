@@ -9,7 +9,34 @@ Description: "Pathology specimen (based on Biobank module)"
 * meta.lastUpdated MS
 * meta.profile MS
 * text MS
-* accessionIdentifier 1.. MS
+// Identifikation - Auftrags-ID: Auftrags-ID des Auftraggebers (Placer) || Auftrags-ID des Auftragnehmers (Filler)
+* identifier 1.. MS
+* identifier ^slicing.discriminator[0].type = #pattern
+* identifier ^slicing.discriminator[0].path = "$this.type"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Contains slices for the request's placer- and filler IDs based on type.coding pattern"
+* identifier contains Placer-ID 0..1 MS 
+                    and Filler-ID 0..1 MS
+* identifier[Placer-ID] ^short = "Placer identifier"
+* identifier[Placer-ID] ^definition = "Identifier for the placer of the pathology request"
+  * value 1.. MS
+  * system 1.. MS
+  * type 1.. MS
+  * type = $v2-0203#PLAC
+    * coding MS
+      * system 1..1 MS
+      * code 1..1 MS
+* identifier[Filler-ID] ^short = "Filler Identifier"
+* identifier[Filler-ID] ^definition = "Identifier for the filler of the pathology request"
+  * value 1.. MS
+  * system 1.. MS
+  * type 1.. MS
+  * type = $v2-0203#FILL
+    * coding MS
+      * system 1..1 MS
+      * code 1..1 MS
+* accessionIdentifier 0..1 MS
+* accessionIdentifier ^definition = "Laborinterner Identifikator, wird vergeben bei Eingang"
 * collection
   * method 1.. MS
   * method from mii-vs-patho-collection-method-snomed-ct (extensible)
@@ -155,7 +182,7 @@ Usage: #example
 * identifier[=].value = "E12345_21-A"
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht" //  (Typ nicht zu verwenden im Untersuchungsauftrag) - angehangen
 * accessionIdentifier.value = "E12345_21"
-* accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht" // (Acession identifier nicht zu verwenden im Untersuchungsauftrag) - angehangen
+* accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht" // (Accession identifier nicht zu verwenden im Untersuchungsauftrag) - angehangen
 * type = $SCT#309134005 "Prostate tru-cut biopsy sample"
 * subject.reference = "Patient/12345"
 * request = Reference(mii-exa-patho-request)

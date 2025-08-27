@@ -4,7 +4,7 @@ This specification describes the FHIR representation of the core data set extens
 
 | Publication   |   |
 |---------|---|
-| Datum   | TODO - Datum der Veröffentlichung nachtragen  |
+| Datum   | 01.09.2025 |
 | Version | 2026.0.0         |
 | Status  | Active       |
 | Realm   | DE          | 
@@ -42,3 +42,13 @@ Comments and criticism are always welcome in the form of 'issues' in the [GitHub
 * Julian Saß                (Berlin Institute of Health at Charité)
 * Sylvia Thun               (Berlin Institute of Health at Charité)
 
+### Copyright Notice, Usage Guidelines
+Copyright � 2022+: TMF e. V., Charlottenstra�e 42, 10117 Berlin
+The content of this specification is public. Reuse and publication rights are not restricted.
+For usage rights of the underlying FHIR technology, see the FHIR base specification.
+Some code systems used are published and maintained by other organizations. The copyright of the respective publishers listed there applies.</br> 
+
+### Disclaimer
+The content of this document is public. It should be noted that parts of this document are based on FHIR Version R4, for which the copyright belongs to HL7 International.
+
+Although this publication has been prepared with the greatest care, the authors cannot accept any liability for direct or indirect damage that could arise from the content of this specification.

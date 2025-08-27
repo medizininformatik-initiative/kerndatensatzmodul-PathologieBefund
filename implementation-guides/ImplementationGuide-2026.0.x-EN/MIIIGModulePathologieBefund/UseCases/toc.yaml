@@ -1,8 +1,10 @@
 - name: Index
   filename: Index.guide.md
-- name: Beschreibung von Szenarien für die Anwendung der Module
-  filename: BeschreibungvonSzenarienfrdieAnwendungderModule.guide.md
-- name: Datensätze inkl. Beschreibungen
-  filename: Datenstzeinkl.Beschreibungen.guide.md
+- name: Description of scenarios for the application
+  filename: Descriptionofscenariosfortheapplication.md
+- name: Dataset incl. descriptions
+  filename: Datasetincldescriptions.md
+- name: Hierarchy
+  filename: Hierarchie.page.md
 - name: UML
   filename: UML.guide.md

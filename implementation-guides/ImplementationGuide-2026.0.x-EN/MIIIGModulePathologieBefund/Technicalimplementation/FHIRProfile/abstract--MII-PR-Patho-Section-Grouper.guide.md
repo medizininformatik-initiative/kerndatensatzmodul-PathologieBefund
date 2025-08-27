@@ -53,25 +53,25 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 </tabs>
 
 ------------------------------------------------------------------
-### Liste aller Must-Support Datenelemente
-| FHIR-Element | Erklärung |
+### List of all Must-Support Data Elements
+| FHIR Element | Explanation |
 |--|--|
-|Observation.id | Must-support, jedoch optional |
-|Observation.text | Nicht empfohlenes, optionales Narrativ der Observation, nicht identisch mit dem Observation.code.display oder einem Observation.valueString (siehe Composition.text und Composition.section.text)|
-|Observation.meta.lastUpdated | Must-support, jedoch optional|
-|Observation.meta.profile | Must-support, jedoch optional|
-|Observation.identifier | Observation muss eindeutig identifizierbar sein, keine Vorgaben zur Kodierung, Präferenz: Ableitung aus der Eingangsnummer + Section Type|
-|Observation.basedOn | Auftrag, der die Beobachtung veranlasst hat |
-|Observation.status | Finale & vorläufige Ergebnisse sind zulässig |
+|Observation.id | Must-support, but optional |
+|Observation.text | Not recommended, optional narrative of the observation, not identical to Observation.code.display or an Observation.valueString (see Composition.text and Composition.section.text)|
+|Observation.meta.lastUpdated | Must-support, but optional|
+|Observation.meta.profile | Must-support, but optional|
+|Observation.identifier | Observation must be uniquely identifiable, no coding requirements, preference: derivation from entry number + section type|
+|Observation.basedOn | Order that initiated the observation |
+|Observation.status | Final & preliminary results are permitted |
 |Observation.category | HL7 Code "laboratory"  |
-|Observation.code | Kodierung der Observation, weiterführende Constraints in Kinderprofilen|
-|Observation.subject | Referenz zu Patient (erbt von Modul Person der MII https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient)|
-|Observation.effective[x] | Klinisch relevanter Zeitpunkt /-periode für die Beobachtung, meist Zeit der Probenentnahme |
-|Observation.bodySite | Körperstelle, an der die Beobachtung vorgenommen wird, Must-support, jedoch optional |
-|Observation.method | kodierte Methode, die zur Beobachtung genutzt wurde |
-|Observation.specimen | Referenz zur Probe, an der die Beobachtung erfolgte |
-|Observation.hasMember | zum Untersuchungs-/Beobachtungspanel zugehörige Beobachtung(en) / QuestionnaireResponse|
-|Observation.derivedFrom | Referenz zu zugehörigen Resourcen, von denen die Beobachtung abgeleitet wurde  |
+|Observation.code | Coding of the observation, additional constraints in child profiles|
+|Observation.subject | Reference to Patient (inherits from MII Person Module https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient)|
+|Observation.effective[x] | Clinically relevant time point/period for the observation, usually time of specimen collection |
+|Observation.bodySite | Body site where the observation is made, must-support, but optional |
+|Observation.method | coded method used for the observation |
+|Observation.specimen | Reference to the specimen on which the observation was made |
+|Observation.hasMember | observation(s) / QuestionnaireResponse belonging to the examination/observation panel|
+|Observation.derivedFrom | Reference to related resources from which the observation was derived  |
 
 ------------------------------------
 ### Referenz zum Logical Model

@@ -72,6 +72,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 * supportingInfo contains codedCondition 0.. MS 
                       and anamnesis 0.. MS
                       and activeProblems 0.. MS
+                      and observations 0.. MS
 // Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
 // History of Present Illness
@@ -79,6 +80,9 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Active Problems (Fragestellung) 
 * supportingInfo[activeProblems] only Reference(mii-pr-patho-active-problems-list)
   * ^short = "List of possible problems that should be analyzed"
+// Messwerte
+* supportingInfo[observations] only Reference(Observation)
+  * ^short = "measurements like psa"
 // category for searching purposes 
 * category 1..1 MS 
 * category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" 
@@ -99,11 +103,15 @@ Description: "Condition profile for problem list item"
 * insert PR_CS_VS_Version
 * insert Publisher
 * meta.profile MS
-* category 1.. MS
+* category 1.. MS 
   * coding 1.. MS
-  * coding = $cs-hl7-condition-category#problem-list-item
-    * code 1..
-    * system 1..
+    * system 1.. MS 
+    * code 1.. MS
+* category ^slicing.discriminator[0].type = #pattern
+* category ^slicing.discriminator[0].path = "$this"
+* category ^slicing.rules = #open
+* category contains problem-list-item 1..1 MS
+* category[problem-list-item] = $cs-hl7-condition-category#problem-list-item
 * code MS
 * code from mii-vs-patho-problem-list-snomed-ct (extensible)
   * coding MS
@@ -208,7 +216,7 @@ InstanceOf: mii-pr-patho-problem-list-item
 Usage: #example
 Title: "MII EXA Patho Problem List Item 1"
 Description: "Pathology Problem List Item Example"
-* category = $cs-hl7-condition-category#problem-list-item
+* category[problem-list-item] = $cs-hl7-condition-category#problem-list-item
 * code = $SCT#363346000 "Malignant neoplastic disease (disorder)"
 * subject.reference = "Patient/12345"
 
@@ -217,7 +225,7 @@ InstanceOf: mii-pr-patho-problem-list-item
 Usage: #example
 Title: "MII EXA Patho Problem List Item 2"
 Description: "Pathology Problem List Item Example"
-* category = $cs-hl7-condition-category#problem-list-item
+* category[problem-list-item] = $cs-hl7-condition-category#problem-list-item
 * code = $SCT#266987004 "History of malignant neoplasm (situation)"
 * subject.reference = "Patient/12345"
 

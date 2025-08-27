@@ -57,6 +57,9 @@
             "code": "string"
           },
           {
+            "code": "Range"
+          },
+          {
             "code": "Ratio"
           }
         ],

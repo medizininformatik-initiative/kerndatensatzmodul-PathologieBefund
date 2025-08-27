@@ -287,4 +287,12 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
 
 ---------------------------------------
 ### Beispiele:
-{{json:mii-exa-patho-specimen-a}}
+
+Part (Klinisch gewonnene Probe):
+{{json:mii-exa-patho-prostate-tru-cut-biopsy-sample}}
+
+Block (resultiert aus makroskopischem Zuschnitt):
+{{json:mii-exa-patho-prostate-biopsy-block}}
+
+Slide (Schneiden und Färben):
+{{json:mii-exa-patho-prostate-biopsy-schnitt-HE}}

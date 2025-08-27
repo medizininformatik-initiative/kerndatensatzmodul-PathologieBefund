@@ -350,6 +350,23 @@
         "mustSupport": true
       },
       {
+        "id": "ServiceRequest.supportingInfo:observations",
+        "path": "ServiceRequest.supportingInfo",
+        "sliceName": "observations",
+        "short": "measurements like psa",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "ServiceRequest.specimen",
         "path": "ServiceRequest.specimen",
         "mustSupport": true

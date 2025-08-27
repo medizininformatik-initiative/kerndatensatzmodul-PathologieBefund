@@ -50,7 +50,7 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 |ServiceRequest.requester | Referenz zum Einsender |
 |ServiceRequest.performer | Referenz zum beauftragten Pathologen |
 |ServiceRequest.reasonCode | Code für den Anlass des Untersuchungsauftrags (Reason for Referral), Children von SCT Clinical findings|
-|ServiceRequest.supportingInfo | Referenz auf zusätzliche klinische Informationen (Anamnestische Angaben (History of present illness), Klinische Fragestellung (Active Problems), Diagnose,   |
+|ServiceRequest.supportingInfo | Referenz auf zusätzliche klinische Informationen (Anamnestische Angaben (History of present illness), Klinische Fragestellung (Active Problems), Diagnose und/oder Messergebnisse (Observation)) |
 |ServiceRequest.specimen | Referenz zu Probe(n) (zum Einsendungsmaterial)|
 
 -----------------------------------------------
