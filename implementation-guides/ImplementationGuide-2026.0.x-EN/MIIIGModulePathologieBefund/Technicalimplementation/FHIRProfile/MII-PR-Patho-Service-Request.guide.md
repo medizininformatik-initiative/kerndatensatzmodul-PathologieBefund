@@ -5,11 +5,11 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 ## {{page-title}}
 
-### Beschreibung
+### Description
 
-Das Profil **MII PR Patho Service Request** der Ressource [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) stellt die Beschreibung des Auftrags des Klinikers an die Pathologieeinrichtung dar. Dieser ist in der Regel unspezifisch gehalten (“Histologie erbeten”, dies entspricht enem Auftrag zur konsiliarischen Begutachtung), kann aber durch spezielle Fragen untersetzt sein (z.B. “FISH für Her2”, entspricht einem Zielauftrag).
+The **MII PR Patho Service Request** profile of the [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) resource represents the description of the clinician's (sender's) request to the pathology facility. This request is usually non-specific ("Histology requested," which corresponds to a request for a consultative review), but can be supplemented by specific questions (e.g., "FISH for Her2," which corresponds to a target request).
 
-Ein Untersuchungsauftrag ist immer an eine (oder mehrere) Probe(n) gebunden, zu denen detaillierte Beschreibungen des Einsenders vorliegen können. Ein Untersuchungsauftrag begründet in der Regel einen Fall (Einsendung, "Accession") der Pathologieeinrichtung. Durch die den Untersuchungsauftrag abarbeitende Pathologieeinrichtung kann eine Zusammenfassung oder Aufteilung von Untersuchungsanträgen entsprechend den laborinternen Erfordernissen zu einem Fall oder mehreren Fällen erfolgen.
+An examination request is always linked to one (or more) sample(s), for which detailed descriptions may be available from the sender. An examination request usually constitutes a case (submission, "accession") at the pathology facility. The pathology facility processing the examination request may combine or divide examination requests into one or more cases according to the laboratory's internal requirements.
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request' select Name: name, Canonical: url
@@ -33,208 +33,208 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 </tabs>
 
 ---------------------------------------------------
-### Liste aller Must-Support Datenelemente
-| FHIR-Element | Erklärung |
+
+### List of all must-support data elements
+| FHIR element | Explanation |
 |--|--|
-|ServiceRequest.meta.lastUpdated | Must-support, jedoch optional |
-|ServiceRequest.meta.source | Must-support, jedoch optional |
-|ServiceRequest.meta.profile | Must-support, jedoch optional |
-|ServiceRequest.identifier | Anforderungsnummer der gewünschten Untersuchung, mind. eindeutig durch System und Value identifiziert. Dient zur Verknüfung des Pathologie-Systems (Filler-ID) mit dem anfordernden System (Placer-ID). |
-|ServiceRequest.requisition | Identifikator für einen gruppierten Auftrag (Placer Group Number)  |
-|ServiceRequest.status | Fixed value, da nur finale Anforderungen abgebildet werden sollen. =“completed” |
-|ServiceRequest.intent | Fixed value, ServiceRequest repräsentiert immer die Anforderung der Diagnostik. “Order” |
-|ServiceRequest.category | Fixed SCT "726007 Pathology consultation, comprehensive, records and specimen with report (procedure)"|
-|ServiceRequest.code | kodierte Art des Pathologiebefundes, VS_MII_Patho_Service_Request_LOINC (preferred) |
-|ServiceRequest.subject | Referenz zum*r Patienten*in (erbt von Modul Person der MII https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient)|
-|ServiceRequest.encounter | Referenz zum Behandlungsfall |
-|ServiceRequest.requester | Referenz zum Einsender |
-|ServiceRequest.performer | Referenz zum beauftragten Pathologen |
-|ServiceRequest.reasonCode | Code für den Anlass des Untersuchungsauftrags (Reason for Referral), Children von SCT Clinical findings|
-|ServiceRequest.supportingInfo | Referenz auf zusätzliche klinische Informationen (Anamnestische Angaben (History of present illness), Klinische Fragestellung (Active Problems), Diagnose,   |
-|ServiceRequest.specimen | Referenz zu Probe(n) (zum Einsendungsmaterial)|
+|ServiceRequest.meta.lastUpdated | Must-support, but optional |
+|ServiceRequest.meta.source | Must-support, but optional |
+|ServiceRequest.meta.profile | Must-support, but optional |
+|ServiceRequest.identifier | Request number of the desired examination, at least uniquely identified by system and value. Serves to link the pathology system (filler ID) with the requesting system (placer ID). |
+|ServiceRequest.requisition | Identifier for a grouped order (placer group number) |
+|ServiceRequest.status | Fixed value, since only final requests should be mapped. =“completed” |
+|ServiceRequest.intent | Fixed value, ServiceRequest always represents the diagnostic request. “Order” |
+|ServiceRequest.category | Fixed SCT "726007 Pathology consultation, comprehensive, records and specimen with report (procedure)" |
+|ServiceRequest.code | Coded type of pathology finding, VS_MII_Patho_Service_Request_LOINC (preferred) |
+|ServiceRequest.subject | Patient reference (inherited from the Person module of the MII https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient) |
+|ServiceRequest.encounter | Reference to the treatment case |
+|ServiceRequest.requester | Reference to the sender |
+|ServiceRequest.performer | Reference to the commissioned pathologist |
+|ServiceRequest.reasonCode | Code for the reason for the examination order (Reason for Referral), Children from SCT Clinical findings |
+|ServiceRequest.supportingInfo | Reference to additional clinical information (history of present illness, clinical question (active problems), diagnosis, |
+|ServiceRequest.specimen | Reference to sample(s) (for the submitted material)|
 
 -----------------------------------------------
-### Referenz zum Logical Model
-| FHIR-Element | Logisches Datenmodell |
+### Reference to the Logical Model
+| FHIR Element | Logical Data Model |
 |--|--|
-|ServiceRequest.id | Untersuchungsauftrag.id |
-|ServiceRequest.meta | Untersuchungsauftrag.meta |
-|ServiceRequest.identifier | Untersuchungsauftrag.Auftrags-ID |
-|ServiceRequest.requisition | Untersuchungsauftrag.Auftragsgruppen-ID |
-|ServiceRequest.status | Untersuchungsauftrag.Status |
-|ServiceRequest.intent | Untersuchungsauftrag.Intention |
-|ServiceRequest.category | Untersuchungsauftrag.Kategorie |
-|ServiceRequest.code |Untersuchungsauftrag.Untersuchung|
-|ServiceRequest.requester |Referenz zum Einsender | 
-|ServiceRequest.subject | Referenz zum Patienten |
-|ServiceRequest.authoredOn | Erstelldatum der Anforderung, falls nicht vorhanden Eingangsdatum der Anforderung |
-|ServiceRequest.reasonCode |Untersuchungsauftrag.KlinischeAngaben.Überweisungsgrund |
-|ServiceRequest.reasonReference |Referenz zum Überweisungsgrund |
-|ServiceRequest.supportingInfo | Untersuchungsauftrag.KlinischeInformation.Anamnese, Fragestellung und Diagnose |
-|ServiceRequest.specimen |Referenz zur Probe |
+|ServiceRequest.id | Investigation order.id |
+|ServiceRequest.meta | Investigation order.meta |
+|ServiceRequest.identifier | Investigation order.Order ID |
+|ServiceRequest.requisition | Investigation order.Order group ID |
+|ServiceRequest.status | Investigation order.Status |
+|ServiceRequest.intent | Investigation order.Intention |
+|ServiceRequest.category | Investigation order.Category |
+|ServiceRequest.code |Examination order.Examination|
+|ServiceRequest.requester |Reference to the sender |
+|ServiceRequest.subject | Reference to the patient |
+|ServiceRequest.authoredOn | Date the request was created, if not available, the date the request was received |
+|ServiceRequest.reasonCode |Examination order.Clinical information.Reference reason |
+|ServiceRequest.reasonReference |Reference to the reason for referral |
+|ServiceRequest.supportingInfo | Examination order.Clinical information.Anamnesis, question and diagnosise |
+|ServiceRequest.specimen |Reference to the sample |
 
 ---
 
-### Suchparameter
+### Search parameters
 
-Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in Kombination:
+The following search parameters are relevant for the Pathology Report module, even in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id`` MUST be supported:
 
-    Beispiele:
-    
-    ```GET [base]/ServiceRequest?_id=103270```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_id``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+``GET [base]/ServiceRequest?_id=103270```
 
-1. Der Suchparameter ```_lastUpdated``` MUSS unterstützt werden:
+Usage notes: Further information on searching for ```_id`` can be found in the [FHIR Base Specification - Section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-    Beispiele:
-    
-    ```GET [base]/ServiceRequest?_lastUpdated=2021-12-08```
+1. The search parameter ```_lastUpdated``` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_lastUpdated``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+Examples:
 
-1. Der Suchparameter ```_profile``` MUSS unterstützt werden:
+```GET [base]/ServiceRequest?_lastUpdated=2021-12-08```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```_lastUpdated``, see the [FHIR Base Specification - Section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-    ```GET [base]/ServiceRequest?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-service-request```
+1. The search parameter ```_profile`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_profile``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+Examples:
 
-1. Der Suchparameter ```authored``` MUSS unterstützt werden:
+```GET [base]/ServiceRequest?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/sd-mii-patho-service-request```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```_profile`` can be found in the [FHIR Base Specification - Section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-    ```GET [base]/ServiceRequest?authored=2021-06-08```
+1. The search parameter ```authored``` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.authored``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
+Examples:
 
-1. Der Suchparameter ```category``` MUSS unterstützt werden:
+```GET [base]/ServiceRequest?authored=2021-06-08```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```ServiceRequest.authored``, see the [FHIR Base Specification - "date" section](http://hl7.org/fhir/R4/search.html#date).
 
-    ```GET [base]/ServiceRequest?category=726007```
+1. The search parameter ```category`` MUST be supported:
 
-    ```GET [base]/ServiceRequest?category=http://snomed.info/sct|726007```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.category``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/ServiceRequest?category=726007```
 
-1. Der Suchparameter ```code``` MUSS unterstützt werden:
+````GET [base]/ServiceRequest?category=http://snomed.info/sct|726007```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```ServiceRequest.category`` can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/ServiceRequest?code=11526-1```
+1. The search parameter ```code`` MUST be supported:
 
-    ```GET [base]/ServiceRequest?code=http://loinc.org|11526-1```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.code``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/ServiceRequest?code=11526-1```
 
-1. Der Suchparameter ```encounter``` MUSS unterstützt werden:
+````GET [base]/ServiceRequest?code=http://loinc.org|11526-1```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```ServiceRequest.code``, see the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/ServiceRequest?encounter=Encounter/769808```
+1. The search parameter ```encounter``` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.encounter``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Examples:
 
-1. Der Suchparameter ```identifier``` MUSS unterstützt werden:
+```GET [base]/ServiceRequest?encounter=Encounter/769808```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```ServiceRequest.encounter``, see the [FHIR Base Specification - Reference Section](http://hl7.org/fhir/R4/search.html#reference).
 
-    ```GET [base]/ServiceRequest?identifier=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|E21.12345```
+1. The search parameter "identifier" MUST be supported:
 
-    ```GET [base]/ServiceRequest?identifier=E21.12345```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.identifier``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+GET [base]/ServiceRequest?identifier=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|E21.12345
 
-1. Der Suchparameter ```intent``` MUSS unterstützt werden:
+GET [base]/ServiceRequest?identifier=E21.12345
 
-    Beispiele:
+Usage Notes: Further information on searching for "ServiceRequest.identifier" can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/ServiceRequest?intent=order```
+1. The search parameter ```intent`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.intent``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+Examples:
 
-1. Der Suchparameter ```patient``` MUSS unterstützt werden:
+``GET [base]/ServiceRequest?intent=order```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```ServiceRequest.intent`` can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/ServiceRequest?patient=Patient/12345```
+1. The search parameter ```patient`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.subject.​where(resolve() is Patient)``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Examples:
 
-1. Der Suchparameter ```performer``` MUSS unterstützt werden:
+```GET [base]/ServiceRequest?patient=Patient/12345```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```ServiceRequest.subject.​where(resolve() is Patient)`` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-    ```GET [base]/ServiceRequest?performer=Practitioner/2346545```
+1. The search parameter ```performer`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.performer``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Examples:
 
-1. Der Suchparameter ```requester``` MUSS unterstützt werden:
+``GET [base]/ServiceRequest?performer=Practitioner/2346545```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```ServiceRequest.performer`` can be found in the [FHIR Base Specification - Reference Section](http://hl7.org/fhir/R4/search.html#reference).
 
-    ```GET [base]/ServiceRequest?requester=Practitioner/2346545```
+1. The search parameter ```requester`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.requester``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Examples:
 
-1. Der Suchparameter ```requisition``` MUSS unterstützt werden:
+```GET [base]/ServiceRequest?requester=Practitioner/2346545```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```ServiceRequest.requester`` can be found in the [FHIR Base Specification - Reference Section](http://hl7.org/fhir/R4/search.html#reference).
 
-    ```GET [base]/ServiceRequest?requisition=124325```
+1. The search parameter ```requisition`` MUST be supported:
 
-    ```GET [base]/ServiceRequest?requisition=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|124325```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.requisition``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/ServiceRequest?requisition=124325```
 
-1. Der Suchparameter ```specimen``` MUSS unterstützt werden:
+```GET [base]/ServiceRequest?requisition=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|124325```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```ServiceRequest.requisition`` can be found herecan be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/ServiceRequest?specimen=Specimen/ex-mii-patho-prostate-tru-cut-biopsy-sample```
+1. The search parameter ```specimen``` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.specimen``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Examples:
 
-1. Der Suchparameter ```status``` MUSS unterstützt werden:
+```GET [base]/ServiceRequest?specimen=Specimen/ex-mii-patho-prostate-tru-cut-biopsy-sample```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```ServiceRequest.specimen``` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-    ```GET [base]/ServiceRequest?status=completed```
+1. The search parameter ```status`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.status``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+Examples:
 
-1. Der Suchparameter ```subject``` MUSS unterstützt werden:
+``GET [base]/ServiceRequest?status=completed```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```ServiceRequest.status``, see the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/ServiceRequest?subject=Patient/12345```
+1. The search parameter ```subject`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.subject``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Examples:
 
-1. Der Suchparameter ```reason-code``` MUSS unterstützt werden:
+```GET [base]/ServiceRequest?subject=Patient/12345```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```ServiceRequest.subject``, see the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-    ```GET [base]/ServiceRequest?reason-code=396152005```
+1. The search parameter ```reason-code`` MUST be supported:
 
-    ```GET [base]/ServiceRequest?reason-code=http://snomed.info/sct|396152005```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.reasonCode``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/ServiceRequest?reason-code=396152005```
 
-1. Der Suchparameter ```supporting-info``` MUSS unterstützt werden:
+```GET [base]/ServiceRequest?reason-code=http://snomed.info/sct|396152005```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```ServiceRequest.reasonCode``, see the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/ServiceRequest?supporting-info=Condition/12345```
+1. The ```supporting-info`` search parameter MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```ServiceRequest.supportingInfo``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Examples:
 
+``GET [base]/ServiceRequest?supporting-info=Condition/12345```
+
+Usage Notes: For more information on searching for ```ServiceRequest.supportingInfo``, see the [FHIR Base Specification - Reference Section](http://hl7.org/fhir/R4/search.html#reference).
 
 --------------------------------
-### Beispiele
+### Examples
 
 {{json:mii-exa-patho-request}}

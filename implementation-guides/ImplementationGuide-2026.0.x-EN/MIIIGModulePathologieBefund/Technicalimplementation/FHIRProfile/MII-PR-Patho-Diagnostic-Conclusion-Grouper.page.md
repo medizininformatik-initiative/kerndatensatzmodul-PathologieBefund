@@ -8,21 +8,13 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 ### Description
 
-Das Profil **MII PR Patho Diagnostic Conclusion Grouper** der Ressource Observation stellt als `DiagnosticReport.result:diagnostic-conclusion-grouper` für einen **MII PR Patho Report** den jeweiligen Beobachtungsberichtsabschnitt "Diagnostische Schlussfolgerung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von **MII PR Patho Finding**.
-
-Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu **MII PR Patho Finding** eingebunden werden.
-
-Falls dieser Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so kann jeweils ein **MII PR Patho Diagnostic Conclusion Grouper** pro Präparat vorhanden sein.
-
-Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
-
 The **MII PR Patho Diagnostic Conclusion Grouper** profile of the Observation resource represents the respective observation report section "Diagnostic Conclusion" (corresponding to this CDA section) for an **MII PR Patho Report** as `DiagnosticReport.result:diagnostic-conclusion-grouper` and acts as an organizer for the corresponding groupings of **MII PR Patho Finding**.
 
 This special Grouper Observation element must be placed before all other Observation elements, which are then included as hasMember or derivedFrom references to MII PR Patho Finding.
 
-If this observation report section contains multiple input specimens, only one MII PR Patho Diagnostic Conclusion Grouper should be used. The organisation of the MII PR Patho Findings according to the different samples is done by the specimen references of those findings, especially regarding the "parts".
+If this observation report section contains multiple input specimens, only one **MII PR Patho Diagnostic Conclusion Grouper** should be used. The organisation of the **MII PR Patho Findings** according to the different samples is done by the specimen references of those findings, especially regarding the "parts".
 
-For a list and explanation of the FHIR elements, see (abstract) MII PR Patho Section Grouper.
+For a list and explanation of the FHIR elements, see **(abstract) MII PR Patho Section Grouper**.
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper' select Name: name, Canonical: url

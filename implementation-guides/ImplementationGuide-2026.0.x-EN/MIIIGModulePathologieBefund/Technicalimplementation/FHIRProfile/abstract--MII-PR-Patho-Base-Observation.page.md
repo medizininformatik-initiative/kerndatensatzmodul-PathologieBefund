@@ -5,9 +5,9 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 ## {{page-title}}
 
-### Beschreibung
+### Description
+This abstract profile collects all common profiling requirements of the pathology observations and serves as the basis for all other observation profiles in this module. As an abstract profile, it cannot be instantiated.
 
-Dieses abstrakte Profil sammelt alle gemeinsamen Profilierungsanforderungen der Pathologie Observations und dient als Basis für alle anderen Observation-Profile in diesem Modul. Als abstraktes Profil ist dieses nicht instanziierbar. 
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation' select Name: name, Canonical: url
@@ -31,52 +31,52 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 </tabs>
 
 ----------------------------------
-### Liste aller Must-Support Datenelemente
-| FHIR-Element | Erklärung |
+### List of all must-support data elements
+| FHIR element | Explanation |
 |--|--|
-|Observation.id|Must-support, jedoch optional |
-| Observation.text | Text zur Beschreibung der Untersuchung |
-|Observation.meta.lastUpdated | Must-support, jedoch optional|
-|Observation.meta.profile | Must-support, jedoch optional|
-|Observation.identifier| Observation muss eindeutig identifizierbar sein, keine Vorgaben zur Kodierung, Präferenz: Ableitung aus der Eingangsnummer (Part-Block-Slide)  |
-|Observation.basedOn|Auftrag, der die Beobachtung veranlasst hat | 
-|Observation.status|Finale & vorläufige Ergebnisse sind zulässig  |
-|Observation.category|Kategorie der Beobachtung |
-|Observation.code|Code der Beobachtung, LOINC preferred |
-|Observation.subject| Referenz zum/r Patient:in (erbt von Modul Person der MII https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient)|
-|Observation.effective[x]|Zeitpunkt oder Zeitspanne der Beobachtung |
-|Observation.bodySite| Körperstelle, an der die Beobachtung vorgenommen wird, Must-support, jedoch optional  |
-|Observation.method|Beobachtungsmethode |
-|Observation.specimen| Referenz zur beobachteten Probe```(1)```|
-| Observation.hasMember | Zum Beobachtungsberichtabschnitt zugehöhrige Resource |
-|Observation.derivedFrom| Referenz zu zugehörigen Resourcen, von denen die Beobachtung abgeleitet wurde  |
+|Observation.id | Must-support, but optional |
+|Observation.text | Text describing the observation |
+|Observation.meta.lastUpdated | Must-support, but optional |
+|Observation.meta.profile | Must-support, but optional |
+|Observation.identifier| Observation must be clearly identifiable, no coding requirements, preference: derivation from the accession number (part-block-slide) |
+|Observation.basedOn|Order/request that initiated the observation |
+|Observation.status|Final & preliminary results are acceptable |
+|Observation.category|Category of observation |
+|Observation.code|Code of observation, LOINC preferred |
+|Observation.subject| Reference to the patient (inherited from the Person module of the MII https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient) |
+|Observation.effective[x]|Time or period of observation |
+|Observation.bodySite| Body site where the observation is made, must-support, but optional |
+|Observation.method| Observation method |
+|Observation.specimen| Reference to the observed sample/specimen (1) |
+|Observation.hasMember | Resource belonging to the observation report section |
+|Observation.derivedFrom | Reference to related resources from which the observation was derived |
 
-```(1) Die Referenz auf mehr als einer Probe ist zur Zeit aufgrund der Kernspezifikation von FHIR nicht möglich. Für eine ausführlichere Problembeschreibung und aktuellen Lösungsvorschlägen siehe``` [hier](https://jira.hl7.org/browse/FHIR-34002).
+```(1) Referencing more than one sample is currently not possible due to the FHIR core specification. For a more detailed problem description and current workarounds, see [here](https://jira.hl7.org/browse/FHIR-34002).
 
 -----------------------------------------------------------------
-### Referenz zum Logical Model
-| FHIR-Element | Logisches Datenmodell |
+### Reference to the Logical Model
+| FHIR Element | Logical Data Model |
 |--|--|
-|Observation.id | Generische Pathologisch-anatomische Einzelbeobachtung.id |
-|Observation.text | Generische Pathologisch-anatomische Einzelbeobachtung.Text |
-|Observation.meta | Generische Pathologisch-anatomische Einzelbeobachtung.meta |
-|Observation.identifier | Generische Pathologisch-anatomische Einzelbeobachtung.Identifikation |
-|Observation.basedOn | Untersuchungsauftrag |
-|Observation.status | Generische Pathologisch-anatomische Einzelbeobachtung.Status|
-|Observation.category | Generische Pathologisch-anatomische Einzelbeobachtung.Kategorie |
-|Observation.code | Generische Pathologisch-anatomische Einzelbeobachtung.Code |
+|Observation.id | Generic Pathological-Anatomical Observation.id |
+|Observation.text | Generic Pathological-Anatomical Observation.Text |
+|Observation.meta | Generic Pathological-Anatomical Observation.meta |
+|Observation.identifier | Generic pathological-anatomical observation.Identifier |
+|Observation.basedOn | Examination order/request |
+|Observation.status | Generic pathological-anatomical observation.Status |
+|Observation.category | Generic pathological-anatomical observation.Category |
+|Observation.code | Generic pathological-anatomical observation.Code |
 |Observation.subject | Patient |
-|Observation.effective | Generische Pathologisch-anatomische Einzelbeobachtung.Befundzeit |
-|Observation.issued | Generische Pathologisch-anatomische Einzelbeobachtung.Datum |
-|Observation.performer | Generische Pathologisch-anatomische Einzelbeobachtung.Durchführender (.Autor, .Informant) |
-|Observation.value | Generische Pathologisch-anatomische Einzelbeobachtung.Wert |
+|Observation.effective | Generic pathological-anatomical observation.Time observation has been made |
+|Observation.issued | Generic pathological-anatomical observation.Date |
+|Observation.performer | Generic pathological-anatomical observation.Performer (.Author, .Informant) |
+|Observation.value | Generic pathological-anatomical observation.Value |
 |Observation.dataAbsentReason | |
-|Observation.interpretation |Generische Pathologisch-anatomische Einzelbeobachtung.Interpretation |
-|Observation.note | Generische Pathologisch-anatomische Einzelbeobachtung.Kommentar |
-|Observation.method | Generische Pathologisch-anatomische Einzelbeobachtung.Methode |
-|Observation.specimen | Generische Pathologisch-anatomische Einzelbeobachtung.Probe |
-|Observation.hasMember | Generische Pathologisch-anatomische Einzelbeobachtung.Unterbeobachtung |
-|Observation.derivedFrom |Generische Pathologisch-anatomische Einzelbeobachtung.EingebettetesBild |
-|Observation.component |Generische Pathologisch-anatomische Einzelbeobachtung.Unterbeobachtung |
+|Observation.interpretation |Generic pathological-anatomical observation.Interpretation |
+|Observation.note | Generic pathological-anatomical observation.Comment |
+|Observation.method | Generic pathological-anatomical observation.Method |
+|Observation.specimen | Generic pathological-anatomical observation.Specimen |
+|Observation.hasMember | Generic pathological-anatomical observation.Subobservation |
+|Observation.derivedFrom |Generic pathological-anatomical observation.EmbeddedImage |
+|Observation.component |Generic pathological-anatomical observation.Subobservation |
 
 -----------------------------------------------

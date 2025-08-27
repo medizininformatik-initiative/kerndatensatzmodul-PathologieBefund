@@ -5,12 +5,11 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 ## {{page-title}}
 
-### Beschreibung
+### Description
 
+This profile inherits from [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/profilespecimenbioprobecore) from the Biobank module.
 
-Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/profilespecimenbioprobecore) aus dem Modul Biobanken. 
-
-Ihm liegt das Domänen-Analyse-Modell von HL7 (HL7_DAM_SPECIMEN_R2_INFORM_2019APR) zugrunde. Dieses berücksichtigt insbesondere für die Pathologie das Rollenmodell von Specimen, welche sowohl Gegenstand als auch Produkt von Laborprozessen sind. Das Rootelement ist jeweils die in der Klinik entnommene Bioprobe. Tochterelemente sind Part, Block und Schnitt.
+It is based on the HL7 domain analysis model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR). This model, particularly for pathology, considers the role model of specimens, which may be both subject and product of laboratory processes. The root element is the sample collected in the clinic. All samples removed in a single collection procedure, be they biologic (e.g. tissue) or non-biologic (e.g. orthopedic hardware) are considered a single “Case” and given a single identifier, often referred to as an accession. Child elements in the laboratory are "part", "block", and "section (slide)", called specimens. Each specimen is always found in or on a container.
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen' select Name: name, Canonical: url
@@ -34,255 +33,254 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 </tabs>
 
 -------------------------------
-### Liste aller Must-Support Datenelemente:
-|FHIR-Element |Erklärung |
+### List of all must-support data elements:
+|FHIR Element |Explanation |
 |--|--|
-|Specimen.id|Must-Support, aber optional|
-|Specimen.meta.lastUpdated |Must-Support, aber optional|
-|Specimen.meta.profile |Must-Support, aber optional|
-|Specimen.text|textliche Beschreibung der Probe, Must-Support, aber optional|
-|Specimen.identifier|vom Einsender (type="PLAC") und/oder vom Labor (type="FILL") vergebener Identifikator, Must-Support, aber optional|
-|Specimen.accessionIdentifier|vom Labor vergebener Identifikator, identisch mit Eingangs- oder Fallnummer, siehe DiagnosticReport.identifier |
-|Specimen.status|Status der Probe|
-|Specimen.type|Probentyp|
-|Specimen.subject|Patient (erbt von Modul Person der MII https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient)|
-|Specimen.parent|Elternprobe, von der die aktualle Probe abgeleitet wurde, z.B. Block als Elternprobe von Schnitt, Must-Support, aber optional|
-|Specimen.request|Untersuchungsauftrag, Must-Support, aber optional|
-|Specimen.collection|Probengewinnung (vom Patienten)|
-|Specimen.collection.collected|Zeitpunkt bzw. Zeitspanne der Probengewinnung|
-|Specimen.collection.method|Prozedur der Probengewinnung|
-|Specimen.collection.bodySite|Herkunft der Probe aus dem Patienten, Must-Support, aber optional|
-|Specimen.collection.fastingStatus|Must-Support, aber optional|
-|Specimen.processing|Probenbearbeitung, Must-Support, aber optional|
-|Specimen.processing.procedure|Laborprozedur für die Probenbearbeitung|
-|Specimen.processing.additive|Additiv in der Laborprozedur für die Probenbearbeitung, zu verwenden sowohl für Färbungsprozesse als auch für Fixierung Einbettung und Eindeckung (siehe Terminologien), Must-Support, aber optional|
-|Specimen.processing.time|Zeitpunkt oder Zeitspanne der Probenbearbeitung,Must-Support, aber optional|
-|Specimen.container|Probencontainer, Must-Support, aber optional|
-|Specimen.container.type|Typ des Probencontainers|
-|Specimen.container.capacity|Fassungsvermögen des Probencontainers, Must-Support, aber optional|
-|Specimen.container.specimenQuantity|Menge der Probenmenge, Must-Support, aber optional|
-|Specimen.container.additive|Additiv im Container, Children von SNOMED CT Code 430864009|
-|Specimen.note|Anmerkungen zur Probe, Must-Support, aber optional|
+|Specimen.id |Must-support, but optional |
+|Specimen.meta.lastUpdated |Must-support, but optional |
+|Specimen.meta.profile |Must-support, but optional |
+|Specimen.text|Textual description of the sample, must-support, but optional|
+|Specimen.identifier|Identifier assigned by the sender (type="PLAC") and/or the laboratory (type="FILL"), must-support, but optional|
+|Specimen.accessionIdentifier|Identifier assigned by the laboratory, identical to the accession or case number, see DiagnosticReport.identifier |
+|Specimen.status|Status of the sample/specimen|
+|Specimen.type|Sample/specimen type|
+|Specimen.subject|Patient (inherited from the Person module of the MII https://www.medizininformatik-initiative.de/fhir/core/modul-person/StructureDefinition/Patient)|
+|Specimen.parent|Parent sample/specimen from which the current sample/specimen was derived, e.g., block as parent sample of section, must-support, but optional|
+|Specimen.request|Request for testing, must-support, but optional|
+|Specimen.collection|Sample collection (from the patient)|
+|Specimen.collection.collected|Time or period of sample collection|
+|Specimen.collection.method|Sample collection procedure|
+|Specimen.collection.bodySite|Origin of the sample from the patient, must-support, but optional|
+|Specimen.collection.fastingStatus|Must-support, but optional|
+|Specimen.processing|Sample processing, must-support, but optional|
+|Specimen.processing.procedure|Laboratory procedure for sample/specimen processing|
+|Specimen.processing.additive|Additive in the laboratory procedure for sample/specimen processing, to be used for both staining processes and for fixation, embedding, and coverslipping (see terminologies), must-support, but optional|
+|Specimen.processing.time|Time or period of sample/specimen processing, must-support, but optional|
+|Specimen.container|Sample/specimen container, must-support, but optional|
+|Specimen.container.type|Type of sample/specimen container|
+|Specimen.container.capacity|Capacity of the sample container, must-support, but optional|
+|Specimen.container.specimenQuantity|Quantity of sample, must-support, but optional|
+|Specimen.container.additive|Additive in the container, children of SNOMED CT Code 430864009|
+|Specimen.note|Notes on the sample/specimen, must-support, but optional|
 
 ------------------------------------
-### Referenz zum Logical Model:
-| FHIR-Element | Logisches Datenmodell |
+### Reference to the Logical Model:
+| FHIR Element | Logical Data Model |
 |--|--|
-|Specimen.id| Probe.Identifikation |
-|Specimen.text| Probe.Text |
-|Specimen.identifier|Probe .ProbeID |
-|Specimen.accesionIdentifier|Probe.ProbenID |
-|Specimen.status| Probe.Status |
-|Specimen.type| Probe.Probenart |
-|Specimen.subject| Referenz zum Patient |
-|Specimen.request| Referenz zum Untersuchungsauftrag|
-|Specimen.collection| Probe.Entnahme |
-|Specimen.collection.collected| Probe.Entnahme.EntnahmeZeitpunkt |
-|Specimen.collection.method| Probe.Entnahme.Entnahmemethode |
-|Specimen.collection.bodySite| Probe.Entnahme.Herkunft |
-|Specimen.processing| Probe.Bearbeitung |
-|Specimen.processing.procedure|Probe.Bearbeitung.Bearbeitungsprozedur|
-|Specimen.processing.additive|Probe.Bearbeitung.Additive und Probe.Container.Additive|
+|Specimen.id| Sample/specimen.Identification |
+|Specimen.text| Sample/specimen.Text |
+|Specimen.identifier|Sample/specimen.ProbeIdentifier |
+|Specimen.accessionIdentifier|Sample.ProbeIdentifier |
+|Specimen.status| Sample/specimen.Status |
+|Specimen.type| Sample/specimen.ProbeType |
+|Specimen.subject| Patient Reference |
+|Specimen.request| Examination Request Reference |
+|Specimen.collection| Sample.Collection |
+|Specimen.collection.collected| Sample.Collection.CollectionTime |
+|Specimen.collection.method| Sample.Collection.CollectionMethod |
+|Specimen.collection.bodySite| Sample.Collection.Origin |
+|Specimen.processing| Sample/specimen.Processing |
+|Specimen.processing.procedure| Sample/specimen.Processing.Procedure| |Specimen.processing.additive|Sample/specimen.Processing.Additive and Sample/specimen.Container.Additive|
 |Specimen.processing.time| |
-|Specimen.container|Probe.Container|
-|Specimen.container.type|Probe.Container.ContainerTyp|
-|Specimen.container.capacity|Probe.Container.Kapazität|
+|Specimen.container|Sample/specimen.Container|
+|Specimen.container.type|Sample/specimen.Container.ContainerType|
+|Specimen.container.capacity|Sample/specimen.Container.Capacity|
 |Specimen.container.specimenQuantity||
-|Specimen.container.additive|Probe.Container.Additive|
-|Specimen.note|Probe.Notiz|
+|Specimen.container.additive|Sample/specimen.Container.Additive|
+|Specimen.note|Sample/specimen.Note|
 
 ---
 
-### Suchparameter
+### Search Parameters
 
-Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in Kombination:
+The following search parameters are relevant for the Pathology Report module, even in combination:
 
-1. Der Suchparameter ```_id``` MUSS unterstützt werden:
+1. The search parameter ```_id`` MUST be supported:
 
-    Beispiele:
-    
-    ```GET [base]/Specimen?_id=103270```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_id``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+``GET [base]/Specimen?_id=103270```
 
-1. Der Suchparameter ```_lastUpdated``` MUSS unterstützt werden:
+Usage Notes: Further information on searching for ```_id`` can be found in the [FHIR Base Specification - Section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-    Beispiele:
-    
-    ```GET [base]/Specimen?_lastUpdated=2021-12-08```
+1. The search parameter ```_lastUpdated``` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_lastUpdated``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+Examples:
 
-1. Der Suchparameter ```_profile``` MUSS unterstützt werden:
+```GET [base]/Specimen?_lastUpdated=2021-12-08```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```_lastUpdated``, see the [FHIR Base Specification - Section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-    ```GET [base]/Specimen?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report```
+1. The search parameter ```_profile`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```_profile``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
+Examples:
 
-1. Der Suchparameter ```identifier``` MUSS unterstützt werden:
+```GET [base]/Specimen?_profile=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```_profile`` can be found in the [FHIR Base Specification - Section "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
-    ```GET [base]/Specimen?identifier=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|E12345_21-A1-1HE```
+1. The search parameter "identifier" MUST be supported:
 
-    ```GET [base]/Specimen?identifier=E12345_21-A1-1HE```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.identifier``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+GET [base]/Specimen?identifier=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|E12345_21-A1-1HE
 
-1. Der Suchparameter ```accession``` MUSS unterstützt werden:
+GET [base]/Specimen?identifier=E12345_21-A1-1HE
 
-    Beispiele:
+Usage Notes: Further information on searching for "Specimen.identifier" can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/Specimen?accession=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|E12345_21```
+1. The search parameter "accession" MUST be supported:
 
-    ```GET [base]/Specimen?identifier=E12345_21```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.accessionIdentifier``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+GET [base]/Specimen?accession=https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht|E12345_21
 
-1. Der Suchparameter ```status``` MUSS unterstützt werden:
+GET [base]/Specimen?identifier=E12345_21
 
-    Beispiele:
+Usage Notes: Further information on searching for "Specimen.accessionIdentifier" can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/Specimen?status=available```
+1. The search parameter ```status`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.status``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+Examples:
 
-1. Der Suchparameter ```type``` MUSS unterstützt werden:
+``GET [base]/Specimen?status=available```
 
-    Beispiele:
+Usage Notes: For more information on searching for ```Specimen.status``, see the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/Specimen?type=787150001```
+1. The search parameter ```type`` MUST be supported:
 
-    ```GET [base]/Specimen?type=http://snomed.info/sct|787150001```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.type``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/Specimen?type=787150001```
 
-1. Der Suchparameter ```subject``` MUSS unterstützt werden:
+```GET [base]/Specimen?type=http://snomed.info/sct|787150001```
 
-    Beispiele:
+Usage Notes: Further information on searching for ```Specimen.type`` can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    ```GET [base]/Specimen?subject=Patient/12345```
+1. The search parameter ```subject`` MUST be supported:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.subject``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Examples:
 
+``GET [base]/Specimen?subject=Patient/12345```
 
-1. Der Suchparameter ```parent``` MUSS unterstützt werden:
+Usage Notes: Further information on searching for ```Specimen.subject`` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-    Beispiele:
+1. The search parameter ```parent`` MUST be supported:
 
-    ```GET [base]/Specimen?parent=Specimen/ex-mii-patho-prostate-tru-cut-biopsy-sample```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.parent``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+```GET [base]/Specimen?parent=Specimen/ex-mii-patho-prostate-tru-cut-biopsy-sample```
 
-1. Der Suchparameter ```collected``` MUSS unterstützt werden:
+Usage Notes: Further information on searching for ```Specimen.parent`` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-    Beispiele:
+1. The search parameter ```collected`` MUST be supported:
 
-    ```GET [base]/Specimen?collected=2021-01-29```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.​collection.​collected``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
+```GET [base]/Specimen?collected=2021-01-29```
 
-1. Der Suchparameter ```collector``` MUSS unterstützt werden:
+Usage Notes: Further information on searching for ```Specimen.​collection.​collected``` can be found in the [FHIR Base Specification - "date" section](http://hl7.org/fhir/R4/search.html#date).
 
-    Beispiele:
+1. The search parameter ```collector`` MUST be supported:
 
-    ```GET [base]/Specimen?collector=Practitioner/2346545```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.collection.collector``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+```GET [base]/Specimen?collector=Practitioner/2346545```
 
-1. Der Suchparameter ```body-site``` MUSS unterstützt werden:
+Usage Notes: Further information on searching for ```Specimen.collection.collector`` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-    Beispiele:
+1. The search parameter ```body-site`` MUST be supported:
 
-    ```GET [base]/Specimen?body-site=716917000```
+Examples:
 
-    ```GET [base]/Specimen?body-site=http://snomed.info/sct|716917000```
+```GET [base]/Specimen?body-site=716917000```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.collection-bodySite``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/Specimen?body-site=http://snomed.info/sct|716917000```
 
-1. Der Suchparameter ```container``` MUSS unterstützt werden:
+Usage Notes: For more information on searching for ```Specimen.collection-bodySite``, see the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    Beispiele:
+1. The search parameter ```container`` MUST be supported:
 
-    ```GET [base]/Specimen?container=434746001```
+Examples:
 
-    ```GET [base]/Specimen?container=http://snomed.info/sct|434746001```
+```GET [base]/Specimen?container=434746001```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.​container.​type``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/Specimen?container=http://snomed.info/sct|434746001```
 
-1. Der Suchparameter ```patient``` MUSS unterstützt werden:
+Usage Notes: Further information on searching for ```Specimen.​container.​type```can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    Beispiele:
+1. The search parameter ```patient`` MUST be supported:
 
-    ```GET [base]/Specimen?patient=Patient/12345```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.subject.​where(resolve() is Patient)``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+```GET [base]/Specimen?patient=Patient/12345```
 
-1. Der Suchparameter ```request``` MUSS unterstützt werden:
+Usage Notes: Further information on searching for ```Specimen.subject.​where(resolve() is Patient)``` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-    Beispiele:
+1. The search parameter ```request`` MUST be supported:
 
-    ```GET [base]/Specimen?request=ServiceRequest/ex-mii-patho-request```
+Examples:
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.request``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+```GET [base]/Specimen?request=ServiceRequest/ex-mii-patho-request```
 
-1. Der Suchparameter ```collection-method``` MUSS unterstützt werden:
+Usage Notes: For more information on searching for ```Specimen.request``, see the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-    Beispiele:
+1. The search parameter ```collection-method``` MUST be supported:
 
-    ```GET [base]/Specimen?collection-method=301759007```
+Examples:
 
-    ```GET [base]/Specimen?collection-method=http://snomed.info/sct|301759007```
+```GET [base]/Specimen?collection-method=301759007```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.​collection.method``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/Specimen?collection-method=http://snomed.info/sct|301759007```
 
-1. Der Suchparameter ```collection-body-site``` MUSS unterstützt werden:
+Usage Notes: Further information on searching for ```Specimen.​collection.method``` can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    Beispiele:
+1. The search parameter ```collection-body-site``` MUST be supported:
 
-    ```GET [base]/Specimen?collection-body-site=716917000```
+Examples:
 
-    ```GET [base]/Specimen?collection-body-site=http://snomed.info/sct|716917000```
+```GET [base]/Specimen?collection-body-site=716917000```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.​collection.bodySite``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/Specimen?collection-body-site=http://snomed.info/sct|716917000```
 
-1. Der Suchparameter ```processing-procedure``` MUSS unterstützt werden:
+Usage Notes: For more information on searching for ```Specimen.​collection.bodySite``, see the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-    Beispiele:
+1. The search parameter ```processing-procedure``` MUST be supported:
 
-    ```GET [base]/Specimen?processing-procedure=104210008```
+Examples:
 
-    ```GET [base]/Specimen?processing-procedure=http://snomed.info/sct|104210008```
+```GET [base]/Specimen?processing-procedure=104210008```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.​processing.procedure``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+```GET [base]/Specimen?processing-procedure=http://snomed.info/sct|104210008```
 
+Usage Notes: Further information on searching for ```Specimen.​processing.procedure``` can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
 
-1. Der Suchparameter ```processing-additive``` MUSS unterstützt werden:
+1. The search parameter ```processing-additive``` MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/Specimen?processing-additive=Substance/ex-mii-patho-hematoxylin-stain```
+```GET [base]/Specimen?processing-additive=Substance/ex-mii-patho-hematoxylin-stain```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.processing.additive``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Usage Notes: For more information on searching for ```Specimen.processing.additive```, see the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```processing-date``` MUSS unterstützt werden:
+1. The processing-date search parameter MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/Specimen?processing-date=2021-01-29```
+GET [base]/Specimen?processing-date=2021-01-29
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.processing.time``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
+Usage Notes: For more information on searching for Specimen.processing.time, see the [FHIR Base Specification - "date" section](http://hl7.org/fhir/R4/search.html#date).
 
-1. Der Suchparameter ```container-additive``` MUSS unterstützt werden:
+1. The search parameter ```container-additive`` MUST be supported:
 
-    Beispiele:
+Examples:
 
-    ```GET [base]/Specimen?container-additive=Substance/mii-exa-patho-neutral-buffered-formalin```
+``GET [base]/Specimen?container-additive=Substance/mii-exa-patho-neutral-buffered-formalin```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Specimen.container.additive``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
+Usage Notes: For more information on searching for ```Specimen.container.additive``, see the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
+---------------------------------------
+### Examples:
 
 
 ---------------------------------------

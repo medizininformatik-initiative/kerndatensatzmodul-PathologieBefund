@@ -5,35 +5,33 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 ## {{page-title}}
 
-### Beschreibung
+### Description
+The **MII PR Patho Section Grouper** profile is an abstract profile that defines the basis for the pathological grouper profiles, but should not be instantiated. The grouper profiles represent the respective observation report section (corresponding to a CDA section) for an **MII PR Patho Report** as `DiagnosticReport.result:<grouper-name>` and act as an organizer for these groupings of **MII PR Patho Finding**.
 
-Beim Profil **MII PR Patho Section Grouper** handelt es sich um ein abstraktes Profil, welches die Basis für die pathologischen Grouper Profile festlegt, jedoch nicht instanziiert werden soll. Die Grouper-Profile stellen als `DiagnosticReport.result:<grouper-name>` für einen **MII PR Patho Report** den jeweiligen Beobachtungsberichtsabschnitt (entspr. einer CDA-Section) dar und fungieren als Organizer für diese Gruppierungen von **MII PR Patho Finding**.
+These are test results that must be grouped into logical groups ("panels") based on formal requirements of a pathology report (see the observation report sections). This special grouper observation element must be placed above all other observation elements, which are then nested into this grouper as `hasMember` or `derivedFrom` references to **MII PR Patho Findings**.
 
-Hierbei handelt es sich um Untersuchungsergebnisse, die nach inhaltlichen und/oder formalen Erfordernissen zu logischen Gruppen ("Panels") zusammengefast werden müssen, z.B. die jeweiligen Beobachtungen an jeweils definierten Proben, z.B. den verschiedenen eingesandten Präparaten. Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu **MII PR Patho Finding** eingebunden werden.  
+As "panels" of individual examinations, the observation report sections
+- **MII PR Patho Intraoperative Grouper**,
+- **MII PR Patho Macroscopic Grouper**,
+- **MII PR Patho Microscopic Grouper**,
+- **MII PR Patho Additional Specified Grouper** and
+- **MII PR Patho Diagnostic Conclusion Grouper** are organized in the form of `DiagnosticReport.result:<grouper-name>` with a grouper function in the **MII PR Patho Report** and are thus equivalent to the "Sections" in CDA. They are characterized by having only an `Observation.code` but no `Observation.value`. They group the "panel" observations using the `hasMember` and/or `derivedFrom` references or as an `Observation.component`.
 
-Als “Panels” von Einzeluntersuchungen sind die Beobachtungsberichtabschnitte 
-- **MII PR Patho Intraoperative Grouper**, 
-- **MII PR Patho Macroscopic Grouper**, 
-- **MII PR Patho Microscopic Grouper**, 
-- **MII PR Patho Additional Specified Grouper** und 
-- **MII PR Patho Diagnostic Conclusion Grouper** in Form von `DiagnosticReport.result:<grouper-name>` mit Grouper-Funktion im **MII PR Patho Report** organisiert und sind damit den "Sections" in CDA äquivalent. Sie zeichnen sich dadurch aus, dass sie nur einen `Observation.code`, aber keinen `Observation.value` haben. Sie gruppieren die “Panel”-Beobachtungen mithilfe der `hasMember`- und/oder `derivedFrom`-Referenzen oder als `Observation.component`. 
+The text (narrative) of these "Sections" is represented in the `Observation.text` element. It is also possible to use the FHIR Core Extensions [original Text](http://hl7.org/fhir/r4/extension-originaltext.html) or [narrative Link](http://hl7.org/fhir/r4/extension-narrativelink.html) to link the narrative with the structured part using HTML tags. For more information on the correct use of both extensions, see [here](http://hl7.org/fhir/r4/narrative.html#linking).
 
-Der Text (Narrative) dieser "Sections" wird im `Observation.text`-Element dargestellt. Es besteht außerdem die Möglichkeit die FHIR Core Extensions [original Text](http://hl7.org/fhir/r4/extension-originaltext.html) oder [narrative Link](http://hl7.org/fhir/r4/extension-narrativelink.html) zu nutzen, um den "narrativen" mit dem strukturierten Part mittels HTML-Tags zu verbinden. Für weitere Informationen zur richtigen Anwendung beider Extensions siehe [hier](http://hl7.org/fhir/r4/narrative.html#linking).
-
-Diese Grouper haben die Observation.codes 
+These groupers have the Observation.codes
 - [83321-0](https://loinc.org/83321-0/) (Pathology report intraoperative observation in Specimen Document) 
 - [22634-0](https://loinc.org/22634-0/) (Pathology report gross observation) 
 - [22635-7](https://loinc.org/22635-7/) (Pathology report microscopic observation) 
 - [100969-5](https://loinc.org/100969-5/) (Pathology report additional specified observation) | *Verlinkung wird erst mit dem nächsten LOINC Release funktionieren, da der Code erst im August 2022 angenommen wurde*
 - [22637-3](https://loinc.org/22637-3/) (Pathology report diagnosis)  
 
-Falls ein Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so sollte jeweils ein Grouper pro Präparat vorhanden sein.
+If an observation report section contains multiple input specimens, there should be only one grouper present. The organisation of these MII PR Patho Findings according to the different samples is done by the specimen references concerning the "parts" of these findings.
 
-Ein Grouper für "Clinical Information", [22636-5](https://loinc.org/22636-5/) (Pathology report relevant history), ist nicht notwendig, da die hierzu gehörenden Informationen im **MII PR Patho Service Request** unter `.supportingInfo` vorhanden sind.
+A grouper for "Clinical Information," [22636-5](https://loinc.org/22636-5/) (Pathology report relevant history), is not necessary, as the relevant information is available in the **MII PR Patho Service Request** under `.supportingInfo`.
 
-**Sonderfall:**
-- Ein **MII PR Patho Finding** als `hasMember`-Konstrukt innerhalb eines der o.g. Grouper zur Gruppierung von medizinischen inhaltlichen Problemen (entspricht CDA-Problem Organizer), z.B. beim Vorhandensein von zwei unterschiedlichen Tumorentitäten in einer Probe, sollte mit dem LOINC-Code [75326-9, Problem](https://loinc.org/75326-9/) gebildet werden, ein `Observation.value` wird nicht benötigt, als `Observation.component` wird im Code das Gruppierungsproblem dargestellt (z.B. ein ICD-Code ([76540-4, Pathology diagnosis ICD code](https://loinc.org/76540-4/)) für eine spezifische Entität, ein Specimen-Code für eine spezifische Probe ([85298-8, Body structure included in specimen](https://loinc.org/85298-8/)), etc.), im Value der konkrete Wert. Die eigentlichen Untersuchungsergebnisse zu diesem inhaltlichen Problem werden dann mittels des `hasMember`-Konstrukts als **MII PR Patho Findings** dargestellt. 
-
+**Special case:**
+A **MII PR Patho Finding** as a `hasMember` construct within one of the above-mentioned groupers for grouping medical content problems (corresponds to the CDA Problem Organizer), e.g., when two different tumor entities are present in a sample, should be created using the LOINC code [75326-9, Problem](https://loinc.org/75326-9/). An `Observation.value` is not required; the `Observation.component` represents the grouping problem in the code (e.g., an ICD code ([76540-4, Pathology diagnosis ICD code](https://loinc.org/76540-4/)) for a specific entity, a specimen code for a specific specimen ([85298-8, Body structure included in specimen](https://loinc.org/85298-8/)), etc.). The actual observation results for this content-related problem are then presented as **MII PR Patho Findings** using the `hasMember` construct.
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-section-grouper' select Name: name, Canonical: url
 ```
