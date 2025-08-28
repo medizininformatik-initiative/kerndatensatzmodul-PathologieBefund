@@ -28,6 +28,7 @@ StructureDefinition-mii-pr-patho-active-problems-list.json           MII_PR_Path
 StructureDefinition-mii-pr-patho-additional-specified-grouper.json   MII_PR_Patho_Additional_Specified_Grouper       Profile   patho-groupers.fsh               84 - 91
 StructureDefinition-mii-pr-patho-attached-image.json                 MII_PR_Patho_Attached_Image                     Profile   pathology-imaging.fsh            3 - 29
 StructureDefinition-mii-pr-patho-base-observation.json               MII_PR_Patho_Base_Observation                   Profile   patho-abstract-observations.fsh  5 - 68
+StructureDefinition-mii-pr-patho-bundle.json                         MII_PR_Patho_Bundle                             Profile   patho-bundle.fsh                 1 - 22
 StructureDefinition-mii-pr-patho-composition.json                    MII_PR_Patho_Composition                        Profile   pathology-report.fsh             103 - 164
 StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.json  MII_PR_Patho_Diagnostic_Conclusion_Grouper      Profile   patho-groupers.fsh               99 - 117
 StructureDefinition-mii-pr-patho-finding.json                        MII_PR_Patho_Finding                            Profile   patho-findings.fsh               4 - 14
