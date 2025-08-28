@@ -93,14 +93,14 @@ Usage: #example
 * category[section-type].coding = $LOINC#22634-0 
 * status = #final
 * code.coding = $LOINC#44619-5 "Length of tissue core(s)"
-* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
-* code.extension.valueUrl = "#macro-a-tissue-length-key"
+//* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+//* code.extension.valueUrl = "#macro-a-tissue-length-key"
 * valueQuantity.value = 1.2
 * valueQuantity.unit = "cm"
 * valueQuantity.system = $UCUM
 * valueQuantity.code = #cm 
-* valueQuantity.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
-* valueQuantity.extension.valueUrl = "#macro-a-tissue-length-value"
+//* valueQuantity.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+//* valueQuantity.extension.valueUrl = "#macro-a-tissue-length-value"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
 * derivedFrom[+] = Reference(mii-exa-patho-attached-image)
 
@@ -112,11 +112,11 @@ Usage: #example
 * category[section-type].coding = $LOINC#22634-0 
 * status = #final
 * code.coding = $LOINC#94738-2 "Biopsy site Patient"
-* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
-* code.extension.valueUrl = "#macro-a-biopsy-site-key"
+//* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+//* code.extension.valueUrl = "#macro-a-biopsy-site-key"
 * valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
-* valueCodeableConcept.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
-* valueCodeableConcept.extension.valueUrl = "#macro-a-biopsy-site-value"
+//* valueCodeableConcept.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+//* valueCodeableConcept.extension.valueUrl = "#macro-a-biopsy-site-value"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
 // Warum nicht specimen.bodysite?? Bei Pool-specimen fehlt die .bodysite!!
 
@@ -170,7 +170,7 @@ Usage: #example
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
-* code = $LOINC#44641-9 "Gleason pattern.primary in prostate tumor"
+* code = $LOINC#44641-9 "Gleason pattern.primary in Prostate tumor"
 * code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 * code.extension.valueUrl = "#micro-a-gleason-pattern-key"
 * valueCodeableConcept = $SCT#369772003 "Gleason Pattern 3"

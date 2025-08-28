@@ -115,19 +115,38 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * identifier 1.. MS 
   * type 1.. MS
   * type.coding = $v2-0203#ACSN "Accession ID"
-* type
-  * coding contains sct ..1 MS
-  * coding[sct] from mii-vs-patho-composition-type-snomed-ct (extensible)  
-  * coding[sct] ^patternCoding.system = $SCT
-    * system 1.. MS
-    * code 1.. MS
-  * coding[IHE].code = #PATH
-  * coding[KDL] from mii-vs-patho-composition-type-kdl (extensible)  
+// KORREKTE TYPE SLICING DEFINITION
+* type.coding ^slicing.discriminator.type = #value
+* type.coding ^slicing.discriminator.path = "system"
+* type.coding ^slicing.rules = #open
+* type.coding contains 
+    sct 0..1 MS
+
+* type.coding[sct].system = $SCT (exactly)
+* type.coding[sct] from mii-vs-patho-composition-type-snomed-ct (extensible)
+* type.coding[sct].system 1.. MS
+* type.coding[sct].code 1.. MS
+
+// IHE Slice ist bereits vererbt, nur Code setzen
+* type.coding[IHE].code = #PATH (exactly)
+
+// KDL Slice  
+* type.coding[KDL] from mii-vs-patho-composition-type-kdl (extensible)
+
 * status ^comment = "Bereits in Subsysteme auf 1..1 & Fixed Value auf final"
-* category 
-  * coding contains sct ..1 MS
-  * coding[sct] from mii-vs-patho-composition-type-snomed-ct (extensible)
-  * coding[IHE].code = #BEF
+
+// KORREKTE CATEGORY SLICING DEFINITION
+* category.coding ^slicing.discriminator.type = #value
+* category.coding ^slicing.discriminator.path = "system" 
+* category.coding ^slicing.rules = #open
+* category.coding contains sct 0..1 MS
+
+// SCT Slice für Category
+* category.coding[sct].system = $SCT (exactly)
+* category.coding[sct] from mii-vs-patho-composition-type-snomed-ct (extensible)
+
+// IHE Slice ist bereits vererbt, nur Code setzen  
+* category.coding[IHE].code = #BEF (exactly)
 * encounter 1..
 * author only Reference($isik-person-im-gesundheitsberuf or Organization)
 * author ^short = "Author can only be of type Practitioner or Organization"
@@ -210,9 +229,9 @@ Usage: #example
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].value = "E21.12345"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-* identifier[Set-ID].extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
-* identifier[Set-ID].extension.valueUrl = "#befund-eingangsnummer"
-* code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
+//* identifier[Set-ID].extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+//* identifier[Set-ID].extension.valueUrl = "#befund-eingangsnummer"
+* code.coding[pathology-report] = $LOINC#60568-3 "Pathology synoptic report"
 * basedOn = Reference(ServiceRequest/mii-exa-patho-request)
 * status = #final
 * subject.reference = "Patient/12345"
@@ -365,8 +384,8 @@ Usage: #example
 * identifier.value = "E21.12345"
 * identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * identifier.type = $v2-0203#ACSN "Accession ID"
-* identifier.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
-* identifier.extension.valueUrl = "#befund-eingangsnummer"
+//* identifier.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+//* identifier.extension.valueUrl = "#befund-eingangsnummer"
 * subject.reference = "Patient/34545"
 * encounter.reference = "Encounter/34555"
 * date = "2021-06-08"

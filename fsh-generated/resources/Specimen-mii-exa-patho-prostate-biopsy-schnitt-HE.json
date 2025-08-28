@@ -34,12 +34,6 @@
             "system": "http://snomed.info/sct",
             "display": "Hematoxylin and eosin stain method (procedure)"
           }
-        ],
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-            "valueUrl": "#faerbung"
-          }
         ]
       },
       "additive": [

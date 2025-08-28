@@ -7,7 +7,7 @@ This specification describes the FHIR representation of the core data set extens
 | Datum   | 01.09.2025 |
 | Version | 2026.0.0         |
 | Status  | Active       |
-| Realm   | DE          | 
+| Realm   | EN          | 
 
 ## Table of contents
 

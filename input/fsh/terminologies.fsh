@@ -75,6 +75,7 @@ Title: "MII VS Patho Report Category HL7"
 Description: "ValueSet for the categorization of Pathology Report documents"
 * insert PR_CS_VS_Version
 * insert Publisher
+* ^experimental = false
 * $v2-0074#CP "Cytopathology"
 * $v2-0074#SP "Surgical Pathology"
 

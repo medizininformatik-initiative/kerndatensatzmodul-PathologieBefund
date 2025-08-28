@@ -290,8 +290,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this.resolve()"
+              "type": "type",
+              "path": "$this"
             }
           ],
           "rules": "open",
@@ -304,6 +304,7 @@
         "id": "ServiceRequest.supportingInfo:codedCondition",
         "path": "ServiceRequest.supportingInfo",
         "sliceName": "codedCondition",
+        "short": "Reference to coded conditions",
         "min": 0,
         "max": "*",
         "type": [
@@ -320,6 +321,7 @@
         "id": "ServiceRequest.supportingInfo:anamnesis",
         "path": "ServiceRequest.supportingInfo",
         "sliceName": "anamnesis",
+        "short": "Reference to history of present illness",
         "min": 0,
         "max": "*",
         "type": [
@@ -353,7 +355,7 @@
         "id": "ServiceRequest.supportingInfo:observations",
         "path": "ServiceRequest.supportingInfo",
         "sliceName": "observations",
-        "short": "measurements like psa",
+        "short": "Reference to observation measurements like PSA",
         "min": 0,
         "max": "*",
         "type": [

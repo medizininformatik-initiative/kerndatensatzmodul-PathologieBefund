@@ -64,10 +64,9 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Clinical Information - Pathology report relevant history $LOINC#22636-5
 * supportingInfo MS
 * supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
-* supportingInfo ^slicing.discriminator.type = #pattern
-* supportingInfo ^slicing.discriminator.path = "$this.resolve()"
+* supportingInfo ^slicing.discriminator.type = #type
+* supportingInfo ^slicing.discriminator.path = "$this"
 * supportingInfo ^slicing.rules = #open
-// * supportingInfo ^slicing.description = ""
 * supportingInfo ^slicing.ordered = false
 * supportingInfo contains codedCondition 0.. MS 
                       and anamnesis 0.. MS
@@ -75,14 +74,16 @@ Description: "Order for the analysis of a sample or a group of samples."
                       and observations 0.. MS
 // Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
+* supportingInfo[codedCondition] ^short = "Reference to coded conditions"
 // History of Present Illness
 * supportingInfo[anamnesis] only Reference(mii-pr-patho-history-of-present-illness)
+* supportingInfo[anamnesis] ^short = "Reference to history of present illness"
 // Active Problems (Fragestellung) 
 * supportingInfo[activeProblems] only Reference(mii-pr-patho-active-problems-list)
-  * ^short = "List of possible problems that should be analyzed"
+* supportingInfo[activeProblems] ^short = "List of possible problems that should be analyzed"
 // Messwerte
 * supportingInfo[observations] only Reference(Observation)
-  * ^short = "measurements like psa"
+* supportingInfo[observations] ^short = "Reference to observation measurements like PSA"
 // category for searching purposes 
 * category 1..1 MS 
 * category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" 

@@ -244,8 +244,8 @@ Usage: #example
 * processing.extension[temperaturbedingungen].valueRange.low = 0 'Cel' "°C"
 * processing.extension[temperaturbedingungen].valueRange.high = 30 'Cel' "°C"
 * processing.procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method (procedure)"
-* processing.procedure.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
-* processing.procedure.extension.valueUrl = "#faerbung"
+//* processing.procedure.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+//* processing.procedure.extension.valueUrl = "#faerbung"
 * processing.additive[0] = Reference(Substance/mii-exa-patho-hematoxylin-stain)
 * processing.additive[+] = Reference(Substance/mii-exa-patho-eosin-y)
 * container.type = $SCT#433466003 "Microscope slide (physical object)"

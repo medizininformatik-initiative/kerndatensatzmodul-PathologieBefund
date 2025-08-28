@@ -32,25 +32,13 @@
         "system": "http://loinc.org",
         "display": "Length of tissue core(s)"
       }
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-        "valueUrl": "#macro-a-tissue-length-key"
-      }
     ]
   },
   "valueQuantity": {
     "value": 1.2,
     "unit": "cm",
     "system": "http://unitsofmeasure.org",
-    "code": "cm",
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-        "valueUrl": "#macro-a-tissue-length-value"
-      }
-    ]
+    "code": "cm"
   },
   "specimen": {
     "reference": "Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"
