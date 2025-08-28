@@ -26,7 +26,7 @@ dependencies:
   de.medizininformatikinitiative.kerndatensatz.meta: 2025.0.x
   de.medizininformatikinitiative.kerndatensatz.biobank: 2025.0.x
   de.medizininformatikinitiative.kerndatensatz.diagnose: 2025.0.x
-  de.gematik.isik-basismodul: 4.0.1
+  de.gematik.isik-basismodul: 4.0.3
   hl7.fhir.us.mcode: 4.0.0-ballot
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
