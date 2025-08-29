@@ -44,10 +44,6 @@
             "display": "Specimen container component (physical object)"
           },
           {
-            "code": "430863003",
-            "display": "Tissue embedding medium (substance)"
-          },
-          {
             "code": "434533009",
             "display": "Electron microscopy grid (physical object)"
           },
@@ -58,10 +54,6 @@
           {
             "code": "433472003",
             "display": "Microscope slide coverslip (physical object)"
-          },
-          {
-            "code": "430862008",
-            "display": "Microscope slide mounting medium (substance)"
           },
           {
             "code": "434473001",

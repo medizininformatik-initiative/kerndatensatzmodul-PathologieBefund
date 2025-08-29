@@ -6,6 +6,7 @@ id: mii-ig-modul-patho
 canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho
 title: "MII IG Modul Patho"
 name: MII_IG_Modul_Patho
+language: de-DE
 status: active
 experimental: false
 version: 1.0.0
@@ -25,7 +26,7 @@ dependencies:
   de.medizininformatikinitiative.kerndatensatz.meta: 2025.0.x
   de.medizininformatikinitiative.kerndatensatz.biobank: 2025.0.x
   de.medizininformatikinitiative.kerndatensatz.diagnose: 2025.0.x
-  de.gematik.isik-basismodul: 4.0.1
+  de.gematik.isik-basismodul: 4.0.3
   hl7.fhir.us.mcode: 4.0.0-ballot
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

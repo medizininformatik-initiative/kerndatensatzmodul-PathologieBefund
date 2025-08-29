@@ -32,6 +32,12 @@
         "system": "http://loinc.org",
         "display": "Histology and Behavior ICD-O-3 Cancer"
       }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+        "valueUrl": "#diagnostic-conclusion-icdo-3-key"
+      }
     ]
   },
   "valueCodeableConcept": {

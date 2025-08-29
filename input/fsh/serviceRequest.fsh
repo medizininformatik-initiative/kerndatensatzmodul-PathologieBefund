@@ -64,26 +64,31 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Clinical Information - Pathology report relevant history $LOINC#22636-5
 * supportingInfo MS
 * supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
-* supportingInfo ^slicing.discriminator.type = #pattern
-* supportingInfo ^slicing.discriminator.path = "$this.resolve()"
+* supportingInfo ^slicing.discriminator.type = #type
+* supportingInfo ^slicing.discriminator.path = "$this"
 * supportingInfo ^slicing.rules = #open
-// * supportingInfo ^slicing.description = ""
 * supportingInfo ^slicing.ordered = false
 * supportingInfo contains codedCondition 0.. MS 
                       and anamnesis 0.. MS
                       and activeProblems 0.. MS
+                      and observations 0.. MS
 // Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
+* supportingInfo[codedCondition] ^short = "Reference to coded conditions"
 // History of Present Illness
 * supportingInfo[anamnesis] only Reference(mii-pr-patho-history-of-present-illness)
+* supportingInfo[anamnesis] ^short = "Reference to history of present illness"
 // Active Problems (Fragestellung) 
 * supportingInfo[activeProblems] only Reference(mii-pr-patho-active-problems-list)
-  * ^short = "List of possible problems that should be analyzed"
+* supportingInfo[activeProblems] ^short = "List of possible problems that should be analyzed"
+// Messwerte
+* supportingInfo[observations] only Reference(Observation)
+* supportingInfo[observations] ^short = "Reference to observation measurements like PSA"
 // category for searching purposes 
 * category 1..1 MS 
 * category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" 
 * code MS
-* code from mii-vs-patho-service-request-snomed-ct (preferred)
+* code from mii-vs-patho-service-request-code (extensible)
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
 * reasonCode MS 
   * ^short = "Coded representation of the reason for referral"
@@ -99,11 +104,15 @@ Description: "Condition profile for problem list item"
 * insert PR_CS_VS_Version
 * insert Publisher
 * meta.profile MS
-* category 1.. MS
+* category 1.. MS 
   * coding 1.. MS
-  * coding = $cs-hl7-condition-category#problem-list-item
-    * code 1..
-    * system 1..
+    * system 1.. MS 
+    * code 1.. MS
+* category ^slicing.discriminator[0].type = #pattern
+* category ^slicing.discriminator[0].path = "$this"
+* category ^slicing.rules = #open
+* category contains problem-list-item 1..1 MS
+* category[problem-list-item] = $cs-hl7-condition-category#problem-list-item
 * code MS
 * code from mii-vs-patho-problem-list-snomed-ct (extensible)
   * coding MS
@@ -162,6 +171,7 @@ Description: "List profile for 'History of Present Illness'"
 //---------------------------
 //Examples
 //---------------------------
+/*
 Instance: mii-exa-patho-request
 InstanceOf: mii-pr-patho-service-request
 Usage: #example
@@ -181,13 +191,33 @@ Description: "Pathology Service Request Example"
 * code = $SCT#44977009 "Cytopathology procedure, cell block preparation (procedure)"
 * supportingInfo[anamnesis] = Reference(mii-exa-patho-history-of-present-illness)
 * supportingInfo[activeProblems] = Reference(mii-exa-patho-active-problems-list)
+*/
+Instance: mii-exa-patho-request
+InstanceOf: mii-pr-patho-service-request
+Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request"
+//* category = $sct#108252007 "Laboratory procedure (procedure" - Ist fixed auf einen anderen Code
+* identifier.type = $v2-0203#PLAC
+* identifier.value = "KHXX_ENDO_18.123451"
+* identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
+// Kein Filler?
+* status = #completed
+* intent = #order
+* subject.reference = "Patient/12345"
+* encounter.reference = "Encounter/87687"
+* requester.reference = "Practitioner/34456"
+* code = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+* supportingInfo[anamnesis] = Reference(List/mii-exa-patho-history-of-present-illness)
+* supportingInfo[activeProblems] = Reference(List/mii-exa-patho-active-problems-list)
+* specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
+
 
 Instance: mii-exa-patho-problem-list-item-1
 InstanceOf: mii-pr-patho-problem-list-item
 Usage: #example
 Title: "MII EXA Patho Problem List Item 1"
 Description: "Pathology Problem List Item Example"
-* category = $cs-hl7-condition-category#problem-list-item
+* category[problem-list-item] = $cs-hl7-condition-category#problem-list-item
 * code = $SCT#363346000 "Malignant neoplastic disease (disorder)"
 * subject.reference = "Patient/12345"
 
@@ -196,7 +226,7 @@ InstanceOf: mii-pr-patho-problem-list-item
 Usage: #example
 Title: "MII EXA Patho Problem List Item 2"
 Description: "Pathology Problem List Item Example"
-* category = $cs-hl7-condition-category#problem-list-item
+* category[problem-list-item] = $cs-hl7-condition-category#problem-list-item
 * code = $SCT#266987004 "History of malignant neoplasm (situation)"
 * subject.reference = "Patient/12345"
 

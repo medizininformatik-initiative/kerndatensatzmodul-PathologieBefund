@@ -1,0 +1,36 @@
+### Description of scenarios for the application of the modules
+
+Various scenarios are possible for a generic pathology report, concerning:
+
+* **Berichtsstatus / Report status**: Pathology reports can be provisional or final. In both cases, they require explicit approval by the responsible pathologist.
+
+* **Nach-, Zusatz- und Korrekturberichte / Follow-up, additional and corrective reports**: These generally replace the existing current version of a report. The option of an information update can be used to indicate the part of the report that the update concerns and to classify the clinical relevance of the update.
+
+* **Komplexität des Befundberichtes / Complexity of the report**: Pathology reports can be created for submissions of a single sample (submission) with a single clinical question (e.g. Skin excision, question: Type of skin tumor) or for a sample (submission) consisting of several parts (parts, which are in turn samples by definition), with different examination orders and questions, e.g.:
+
+Prostate needle biopsy with 12 cores, **Fragestellung:** Prostate cancer? Grading?
+
+Breast segment resection and sentinel lymph nodes, **Fragestellung:** Breast cancer? Status of resection margins? Lymph node metastases?
+
+Cystoprostatectomy, **Fragestellung:** Prostate cancer? Bladder cancer? Resection margins?
+
+For complex reports, the coded information must be able to be organized accordingly using an "organizer" mechanism. This organizer mechanism is not provided in FHIR, which is why other adequate solutions (e.g. grouper observations) have been used in this module.
+
+In order to be able to include structured coded information in a pathology report, or to build it up entirely or partially using such coding, pathology systems require appropriate recording tools. For the extension module, the resources [Extractable Questionnaire - Definition](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-extr-defn.html) and [SDC Questionnaire Response](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaireresponse.html) described in the [FHIR IG Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/index.html) are suitable, which allow an automatic direct transfer of the recorded data into the pathology report.
+
+### Exemplary Use Case: Pathology Report for Prostate Needle Biopsies According to ICCR Guidelines
+
+Patient A., B., m., 61 years old, visits his urologist Dr. C., D. in the outpatient clinic of the Urology Department, to whom he was referred by his family doctor because of an elevated PSA level. Dr. C. establishes the indication for prostate needle biopsy after taking a medical history and digital rectal examination, which he performs after local anesthesia as an ultrasound-guided sextant biopsy.
+In preparation, he calls up the KBV form 10 extended with organ-specific information in his PVS/KIS (which could also be retrieved as a request form from the patho-LIS of the pathology department), into which the patient/insured data (subject, insurance), the doctor and facility data (requester, performerType, performer) are transferred from the PVS/KIS and into which the reason for submission (reasonCode), the medical history and current problems of the patient as well as results of laboratory examinations (PSA!) (each supportingInfo), the target localizations of the needle biopsy within the prostate, the number of needle cylinders obtained per localization and their length (specimen. …) are entered in structured form. Dr. C acts as Order Placer.
+After the twelve needle localizations are separated, he places the individual obtained needle cylinders into twelve sample tubes, which are labeled with the patient's name, date of birth, order number and sample designation. The required labels are provided by the PVS/KIS.
+From this information, a ServiceRequest with a Placer Identifier is created in the PVS/KIS with associated Specimen information including IDs and sample designations (sample identifiers). These FHIR instances are sent to the pathology institute to be commissioned with the examination, and the sample containers are sent together with a PDF printout of form 10.
+In the specimen receiving department of the pathology institute (Order filler), the sample containers and the PDF printout of form 10 (submission form) are compared with the FHIR instances for the submission that are now available in the patho-LIS, the sample containers are checked for completeness and the samples for integrity, and the clinical order (Placer order) is transferred into a case of the pathology institute. For this purpose, a Filler order with the case number (Accession identifier) is created for this order (or for other related orders) and for the associated samples, the sample designations of the clinician are adopted or new designations are assigned.
+The patho-LIS confirms receipt of the clinical examination order and the samples and informs the PVS/LIS of the assigned case number as well as acceptance of the examination order (or its non-feasibility due to, among other things, problems with the samples). Currently, no FHIR mechanism exists for this within the framework of the MII pathology report. HL7 Order&Observations is working on a solution (FHIR COW ... Clinical Order Workflow). Usually, HL7 V2.x messages are used for this.
+In the so-called sectioning department of the pathology institute, the samples are described macroscopically. This description is documented on a FHIR Questionnaire for each individual needle core. The information available in the patho-LIS from the ServiceRequest is already pre-filled in this questionnaire and is either adopted or changed or supplemented.
+After tissue preparation of the sample material (embedding, sectioning, staining, coverslipping), the stained section preparations (possibly digitized) are sorted by case and assigned to the responsible pathologist Dr. E.,F. for microscopic assessment. The patho-LIS controls the completeness of the stained section preparations according to sample receipt and macroscopic description and notifies the responsible pathologist Dr. E about the availability of a case ready for diagnosis.
+After calling up another questionnaire, the microscopic findings of each individual needle biopsy are captured in a structured manner and in a third questionnaire the case-related summary is also carried out in a structured manner.
+
+The QuestionnaireResponses are automatically transferred by the FHIR server of the pathology institute into a FHIR-PathoReport, which is embedded in a FHIR-Composition, which can be signed as a FHIR-Bundle by the responsible pathologist Dr. E after checking the finished (human readable) pathology report and is then sent as a PDF document together with the mentioned embedded FHIR instances to the PVS/KIS of the sender (xds procedure), or offered to the sender for retrieval from the FHIR server by notification.
+The PVS/LIS, in its function as Order result tracker, reads in the transmitted/retrieved FHIR instances from the pathology institute and notifies the urologist Dr. C about the availability of a requested pathology report for his patient, Mr. A., B.
+
+At the request of Mr. A., Dr. C. transfers the report to Mr. A.'s ePA after explaining the findings.

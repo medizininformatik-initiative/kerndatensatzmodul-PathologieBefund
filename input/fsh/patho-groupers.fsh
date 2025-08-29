@@ -26,6 +26,7 @@ Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * code = $LOINC#22634-0
 
 // Example(s)
+/*
 Instance: mii-exa-patho-macro-grouper-a
 InstanceOf: mii-pr-patho-macroscopic-grouper
 Usage: #example
@@ -49,6 +50,19 @@ Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)
 * valueString = "Specimen B: Prostataseitenlappen rechts, apikal 1.5cm"
 * hasMember[+] = Reference(mii-exa-patho-biopsy-site-b)
 * hasMember[+] = Reference(mii-exa-patho-tissue-length-b)
+*/
+Instance: mii-exa-patho-macro-grouper-a
+InstanceOf: mii-pr-patho-macroscopic-grouper
+Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Makroskopische Beurteilung</h1><p><b>Probe A: 1,2 cm langer weißlicher Gewebszylinder aus dem rechten lateralen Prostataseitenlappen peripher </b></p></div>"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* code.coding = $LOINC#22634-0
+* status = #final
+* hasMember[0] = Reference(Observation/mii-exa-patho-biopsy-site-a)
+* hasMember[+] = Reference(Observation/mii-exa-patho-tissue-length-a)
+
 
 
 //-------------------------------------
@@ -64,6 +78,7 @@ Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * code = $LOINC#22635-7
 
 // Example(s)
+/*
 Instance: mii-exa-patho-micro-grouper-a
 InstanceOf: mii-pr-patho-microscopic-grouper
 Usage: #example
@@ -76,6 +91,21 @@ Description: "Grouper for all Microscopic Observations of Specimen A"
 * hasMember[+] = Reference(mii-exa-patho-histologic-type-a)
 * hasMember[+] = Reference(mii-exa-patho-gleason-pattern-a)
 * specimen = Reference(mii-exa-patho-he-stained-slide-prostate)
+*/
+
+Instance: mii-exa-patho-micro-grouper-a
+InstanceOf: mii-pr-patho-microscopic-grouper
+Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Mikroskopische Beurteilung</h1><p><b>Probe A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders einnehmen</b></p></div>"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* code.coding = $LOINC#22635-7
+* status = #final
+* valueString = "Specimen A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders..."
+* hasMember[0] = Reference(Observation/mii-exa-patho-histologic-type-a)
+* hasMember[+] = Reference(Observation/mii-exa-patho-gleason-pattern-a)
+* hasMember[+] = Reference(Observation/mii-exa-patho-p63-a)
 
 
 //--------------------------------------------
@@ -117,6 +147,7 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
 * note MS
 
 // Example(s)
+/*
 Instance: mii-exa-patho-diagnostic-conclusion-grouper
 InstanceOf: mii-pr-patho-diagnostic-conclusion-grouper
 Usage: #example
@@ -131,3 +162,19 @@ Description: "Example for a diagnostic conclusion"
 * hasMember[+] = Reference(mii-exa-patho-diagnostic-conclusion-1)
 * hasMember[+] = Reference(mii-exa-patho-diagnostic-conclusion-2)
 * hasMember[+] = Reference(mii-exa-patho-diagnostic-conclusion-3)
+*/
+
+Instance: mii-exa-patho-diagnostic-conclusion-grouper
+InstanceOf: mii-pr-patho-diagnostic-conclusion-grouper
+Usage: #example
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Zusammenfassende Beurteilung</h1><p><b>Azinäres Adenokarzinom der Prostata im untersuchten Stanzzylinder, Gleason-Score 3+3=6, ISUP Gradgruppe 1</b></p></div>"
+* category[laboratory-category].coding = $cs-obs-category#laboratory
+* code.coding = $LOINC#22637-3
+* status = #final
+* derivedFrom[0] = Reference(Observation/mii-exa-patho-macro-grouper-a)
+* derivedFrom[+] = Reference(Observation/mii-exa-patho-micro-grouper-a)
+* hasMember[0] = Reference(Observation/mii-exa-patho-diagnostic-conclusion-1)
+* hasMember[+] = Reference(Observation/mii-exa-patho-diagnostic-conclusion-2)
+* hasMember[+] = Reference(Observation/mii-exa-patho-diagnostic-conclusion-3)

@@ -1,0 +1,92 @@
+@startuml
+title Pathobefund (Nach 2026 Update): Probenweise Grouper-Struktur
+
+skinparam linetype ortho
+
+package "DiagnosticReport" {
+  object "DiagnosticReport" as Report
+}
+
+package "Specimens" {
+  object "Specimen Sample" as Sample #FFCCCC {
+    type = 309134005 "Prostate tru-cut biopsy sample"
+  }
+  object "Specimen Schnitt HE" as Schnitt1 #CFF5CF {
+    type = 430856003 "Tissue section (specimen)"
+    collection.method = 40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
+    processing.procedure.coding[sct] = 104210008 "Hematoxylin and eosin stain method (procedure)"
+  }
+  object "Specimen Schnitt p63" as Schnitt2 #CFF5CF {
+    type = 430856003 "Tissue section (specimen)"
+    collection.method = 40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
+    processing.procedure.coding[sct] = 13269000 "Immunocytochemical stain (procedure)"
+  }
+}
+
+package "PathoFindings" {
+  object "PathoFinding A1" as A1 #FFCCCC {
+    code.coding = $LOINC#44619-5 "Length of tissue core(s)"
+    valueQuantity = 1.2 cm 
+  }
+  object "PathoFinding A2" as A2 #CFF5CF {
+    Gleason score Sekundär
+    Score = 4
+  }
+  object "PathoFinding A3" as A3 #LightBlue {
+    Gleason  grade (Score) 7a
+    Score: 3=4
+  }
+  object "PathoFinding B1" as B1 #FFCCCC {
+    Anzahl der Stanzen
+  }
+  object "PathoFinding B2" as B2 #CFF5CF { 
+    Gleason Score Primär
+    Score = 3
+  }
+  object "PathoFinding D2" as D2 #CFF5CF { 
+    Gleason 4/5 Prozent
+    30%
+  }
+  object "PathoFinding B3" as B3 #LightBlue {
+    Gleason grade group 2
+  }
+  object "PathoFinding p63-a" as C2 #CFF5CF { 
+    code = 101548-6 "P63 protein [Interpretation] in Blood or Tissue Qualitative"
+    valueCodeableConcept = LA11883-8 "Not detected"
+  }
+  object "PathoFinding C3" as C3 #LightBlue
+}
+
+package "Grouperinstanzen" {
+  object "Makroskopie" as Makro #FFCCCC
+  object "Mikroskopie" as Mikro #CFF5CF 
+  object "DiagnosticConclusion" as Conclusion #LightBlue
+}
+
+' Verbindungen
+Report --> Makro : result
+Report --> Mikro
+Report --> Conclusion
+
+Makro --> A1 : .hasMember
+Makro --> B1
+
+Mikro --> A2
+Mikro --> B2
+Mikro -up-> C2
+Mikro --> D2
+
+Conclusion --> A3
+Conclusion --> B3
+Conclusion --> C3
+
+A1 --> Sample : specimen
+A2 --> Schnitt1
+
+B1 --> Sample
+B2 --> Schnitt1
+D2 --> Schnitt1
+
+C2 --> Schnitt2
+
+@enduml

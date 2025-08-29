@@ -24,6 +24,10 @@
       }
     ]
   },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Makroskopische Beurteilung</h1><p><b>Probe A: 1,2 cm langer weißlicher Gewebszylinder aus dem rechten lateralen Prostataseitenlappen peripher</b></p></div>"
+  },
   "status": "final",
   "hasMember": [
     {
@@ -32,8 +36,5 @@
     {
       "reference": "Observation/mii-exa-patho-tissue-length-a"
     }
-  ],
-  "specimen": {
-    "reference": "Specimen/mii-exa-patho-he-stained-slide-prostate"
-  }
+  ]
 }

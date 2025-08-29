@@ -1,0 +1,36 @@
+- name: Index
+  filename: Index.guide.md
+- name: Pathologie-Befund (DiagnosticReport)
+  filename: Pathologie-Befund(DiagnosticReport).guide.md
+- name: Beobachtung (abstrakte Observation)
+  filename: Beobachtung(abstrakteObservation).page.md
+- name: Beobachtungsberichtabschnitt (abstrakte Observation)
+  filename: Beobachtungsberichtabschnitt(abstrakteObservation).guide.md
+- name: Makrokopische Beurteilung (Observation)
+  filename: MakrokopischeBeurteilung(Observation).page.md
+- name: MII PR Patho Microscopic Grouper
+  filename: MII-PR-Patho-Microscopic-Grouper.page.md
+- name: Intraoperative Beurteilung (Observation)
+  filename: IntraoperativeBeurteilung(Observation).page.md
+- name: Diagnostische Schlussfolgerung (Observation)
+  filename: DiagnostischeSchlussfolgerung(Observation).page.md
+- name: Zusätzlicher Beobachtung (Observation)
+  filename: ZusätzlicherBeobachtung(Observation).page.md
+- name: Einzelbeobachtung (Observation)
+  filename: Einzelbeobachtung(Observation).guide.md
+- name: Befundzusammenfassung (Composition)
+  filename: Befundzusammenfassung(Composition).guide.md
+- name: MUntersuchungsauftrag (ServiceRequest)
+  filename: Untersuchungsauftrag(ServiceRequest).guide.md
+- name: Probe (Specimen)
+  filename: Probe(Specimen).page.md
+- name: Fragestellung (List)
+  filename: Fragestellung(List).page.md
+- name: Anamnese (List)
+  filename: Anamnese(List).page.md
+- name: Problem (Condition)
+  filename: MProblem(Condition).page.md
+- name: Eingebettetes Bild (Media)
+  filename: EingebettetesBild(Media).page.md
+- name: Befunddokument (Bundle)
+  filename: Befunddokument(Bundle).page.md

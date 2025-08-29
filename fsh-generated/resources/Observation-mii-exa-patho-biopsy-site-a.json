@@ -32,12 +32,6 @@
         "system": "http://loinc.org",
         "display": "Biopsy site Patient"
       }
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-        "valueUrl": "#macro-a-biopsy-site-key"
-      }
     ]
   },
   "valueCodeableConcept": {
@@ -47,20 +41,9 @@
         "system": "http://snomed.info/sct",
         "display": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
       }
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-        "valueUrl": "#macro-a-biopsy-site-value"
-      }
     ]
   },
-  "derivedFrom": [
-    {
-      "reference": "Media/mii-exa-patho-attached-image"
-    }
-  ],
   "specimen": {
-    "reference": "Specimen/mii-exa-patho-he-stained-slide-prostate"
+    "reference": "Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"
   }
 }

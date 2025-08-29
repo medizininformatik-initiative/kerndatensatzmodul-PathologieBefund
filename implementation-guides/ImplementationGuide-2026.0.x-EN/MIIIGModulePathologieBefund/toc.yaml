@@ -1,0 +1,12 @@
+- name: Index
+  filename: Index.guide.md
+- name: Modul description "Pathologie-Befund"
+  filename: ModuledescriptionPathologie-Befund.guide.md
+- name:  Context in the overall project / references from other modules
+  filename: Contextandreferences.md
+- name: References
+  filename: References.guide.md
+- name: Use Cases
+  filename: UseCases
+- name: Technical Implementation
+  filename: Technicalimplementation

@@ -1,0 +1,33 @@
+@startuml
+title MII Pathobefund – Specimen-Hierarchie
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam nodesep 40
+
+' Specimen als Objekte mit Attributen
+object "mii-exa-patho-prostate-tru-cut-biopsy-sample\n(Tru-cut Gewebeprobe)" as Sample #FFCCCC {
+  Type = "Prostate tru-cut biopsy sample"
+}
+
+object "mii-exa-patho-prostate-biopsy-block\n(Paraffinblock)" as Block #FFCCCC {
+  Type = "Tissue block specimen"
+  parent = Sample
+}
+
+object "mii-exa-patho-prostate-biopsy-schnitt-HE\n(Schnitt HE)" as SchnittHE #FFCCCC {
+  Type = "Tissue section"
+  parent = Block
+}
+
+object "mii-exa-patho-prostate-biopsy-schnitt-p63\n(Schnitt p63)" as SchnittP63 #FFCCCC {
+  Type = "Tissue section"
+  parent = Block
+}
+
+' Hierarchische Beziehungen
+Block -up-> Sample : .parent
+SchnittHE -up-> Block : .parent
+SchnittP63 -up-> Block : .parent
+
+@enduml

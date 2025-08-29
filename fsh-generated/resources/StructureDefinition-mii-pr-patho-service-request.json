@@ -227,8 +227,8 @@
         "path": "ServiceRequest.code",
         "mustSupport": true,
         "binding": {
-          "strength": "preferred",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-snomed-ct"
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code"
         }
       },
       {
@@ -290,8 +290,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this.resolve()"
+              "type": "type",
+              "path": "$this"
             }
           ],
           "rules": "open",
@@ -304,6 +304,7 @@
         "id": "ServiceRequest.supportingInfo:codedCondition",
         "path": "ServiceRequest.supportingInfo",
         "sliceName": "codedCondition",
+        "short": "Reference to coded conditions",
         "min": 0,
         "max": "*",
         "type": [
@@ -320,6 +321,7 @@
         "id": "ServiceRequest.supportingInfo:anamnesis",
         "path": "ServiceRequest.supportingInfo",
         "sliceName": "anamnesis",
+        "short": "Reference to history of present illness",
         "min": 0,
         "max": "*",
         "type": [
@@ -344,6 +346,23 @@
             "code": "Reference",
             "targetProfile": [
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.supportingInfo:observations",
+        "path": "ServiceRequest.supportingInfo",
+        "sliceName": "observations",
+        "short": "Reference to observation measurements like PSA",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
         ],

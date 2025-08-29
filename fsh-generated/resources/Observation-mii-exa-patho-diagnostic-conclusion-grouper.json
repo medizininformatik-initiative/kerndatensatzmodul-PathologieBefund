@@ -24,13 +24,14 @@
       }
     ]
   },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Zusammenfassende Beurteilung</h1><p><b>Azinäres Adenokarzinom der Prostata im untersuchten Stanzzylinder, Gleason-Score 3+3=6, ISUP Gradgruppe 1</b></p></div>"
+  },
   "status": "final",
   "derivedFrom": [
     {
       "reference": "Observation/mii-exa-patho-macro-grouper-a"
-    },
-    {
-      "reference": "Observation/mii-exa-patho-macro-grouper-b"
     },
     {
       "reference": "Observation/mii-exa-patho-micro-grouper-a"

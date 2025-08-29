@@ -11,16 +11,6 @@
     "status": "extensions",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div id=\"befund-titel\"><b>Pathologisch-anatomisch Begutachtung</b></div><table><tr id=\"befund-identifikator\"><td>id</td><td>E12345_21.1</td></tr><tr id=\"befund-eingangsnummer\"><td>Eingangsnummer</td><td>E12345_21</td></tr><tr id=\"befund-status\"><td>Status</td><td>final</td></tr><tr id=\"befund-patient\"><td>Patient</td><td>Patient/12345</td></tr><tr id=\"befund-effective\"><td>Effective</td><td>2021-06-01</td></tr><tr id=\"befund-issued\"><td>Issued</td><td>2021-06-01</td></tr><tr id=\"befund-performer\"><td>Performer</td><td>Practitioner/2346545</td></tr></table></div>"
   },
-  "type": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "11526-1",
-        "display": "Pathology study"
-      }
-    ],
-    "text": "Pathologie-Befundbericht"
-  },
   "attester": [
     {
       "mode": "legal",
@@ -43,7 +33,7 @@
       "title": "Pathology Diagnostic Report",
       "text": {
         "status": "additional",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div id=\"macro-a-title\"><b>Makroskopie A</b></div><table><tr id=\"macro-a-biosy-site\"><td id=\"macro-a-biosy-site-key\">Entnahmeort lt. klin. Angabe</td><td id=\"macro-a-biosy-site-value\">Prostataseitenlappen rechts, lateral</td></tr><tr id=\"macro-a-tissue-length\"><td id=\"macro-a-tissue-length-key\">Stanzzylinderlänge</td><td id=\"macro-a-tissue-length-value\">1,2 cm</td></tr></table></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Gesamter Textkörper des Befundberichts, z.B. beginnend mit Makroskopie:</b></p><div id=\"macro-a-title\"><b>Makroskopie A</b></div><table><tr id=\"macro-a-biosy-site\"><td id=\"macro-a-biosy-site-key\">Entnahmeort lt. klin. Angabe</td><td id=\"macro-a-biosy-site-value\">Prostataseitenlappen rechts, lateral</td></tr><tr id=\"macro-a-tissue-length\"><td id=\"macro-a-tissue-length-key\">Stanzzylinderlänge</td><td id=\"macro-a-tissue-length-value\">1,2 cm</td></tr></table></div>"
       },
       "entry": [
         {
@@ -58,6 +48,16 @@
       "valueString": "1"
     }
   ],
+  "type": {
+    "coding": [
+      {
+        "code": "11526-1",
+        "system": "http://loinc.org",
+        "display": "Pathology study"
+      }
+    ],
+    "text": "Pathologie-Befundbericht"
+  },
   "identifier": {
     "value": "E21.12345",
     "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht",
@@ -69,13 +69,7 @@
           "display": "Accession ID"
         }
       ]
-    },
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-        "valueUrl": "#befund-eingangsnummer"
-      }
-    ]
+    }
   },
   "subject": {
     "reference": "Patient/34545"

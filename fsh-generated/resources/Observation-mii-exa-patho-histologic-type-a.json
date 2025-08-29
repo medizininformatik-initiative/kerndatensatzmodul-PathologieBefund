@@ -32,6 +32,12 @@
         "system": "http://snomed.info/sct",
         "display": "Histologic type"
       }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+        "valueUrl": "#micro-a-histologic-type-key"
+      }
     ]
   },
   "valueCodeableConcept": {
@@ -44,6 +50,6 @@
     ]
   },
   "specimen": {
-    "reference": "Specimen/mii-exa-patho-he-stained-slide-prostate"
+    "reference": "Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE"
   }
 }
