@@ -1,6 +1,6 @@
 ## Kontext im Gesamtprojekt / Bezüge aus anderen Modulen
 
-Das Erweiterungsmodul **Pathologie-Befund** bildet Pathologiebefunde ab, die typischerweise in einer Pathologieeinrichtung eines Klinikums erhoben werden. Diese Befunde spielen in einigen Use Cases der MII eine zentrale Rolle: 
+Das Modul **Pathologie-Befund** bildet Pathologiebefunde ab, die typischerweise in einer Pathologieeinrichtung eines Klinikums erhoben werden. Diese Befunde spielen in einigen Use Cases der MII eine zentrale Rolle: 
 
 * Pathologiebefundberichte aus Routineuntersuchungen sind essentiell für Diagnosefindung und Therapieüberwachung bei den meisten Erkrankungen 
 
@@ -8,7 +8,7 @@ Das Erweiterungsmodul **Pathologie-Befund** bildet Pathologiebefunde ab, die typ
 
 ### Bezüge innerhalb der MII
 
-Ein Pathologiebefundbericht ist dabei immer der [Person](https://simplifier.net/mii-basismodul-person-2024) zugeordnet, von welcher die *Proben* entnommen wurden und auf einen [Versorgungsstellenkontakt](https://simplifier.net/medizininformatikinitiative-modulfall) bezogen. Bei dem *Versorgungsstellenkontakt* handelt es sich um einen pathologieeinrichtungspezifischen *(Abteilungs)kontakt*, die sogenannte Einsendung, der alle Untersuchungsaufträge zu Proben einer Person, die in einem zeitlichen und fachlichen Zusammenhang entnommen wurden, zusammenfasst. Dieser *Versorgungsstellenkontakt* muss nicht identisch mit dem Untersuchungsauftrag sein. Wenn eine Probe eines Falles in einer Biobank für weitere Untersuchungen verwahrt wird, kann diese Probe mit den Profilen im Erweiterungsmodul [Bioproben](https://simplifier.net/medizininformatikinitiative-modulbiobank) abgebildet werden. Die Ergebnisse aus einem Pathologiebefundbericht können als einzelne Elemente in verschiedenen anderen Modulen, z.B. zur Tumordokumentation, wieder eingebunden sein. 
+Ein Pathologiebefundbericht ist dabei immer der [Person](https://simplifier.net/mii-basismodul-person-2024) zugeordnet, von welcher die *Proben* entnommen wurden und auf einen [Versorgungsstellenkontakt](https://simplifier.net/medizininformatikinitiative-modulfall) bezogen. Bei dem *Versorgungsstellenkontakt* handelt es sich um einen pathologieeinrichtungspezifischen *(Abteilungs)kontakt*, die sogenannte Einsendung, der alle Untersuchungsaufträge zu Proben einer Person, die in einem zeitlichen und fachlichen Zusammenhang entnommen wurden, zusammenfasst. Dieser *Versorgungsstellenkontakt* muss nicht identisch mit dem Untersuchungsauftrag sein. Wenn eine Probe eines Falles in einer Biobank für weitere Untersuchungen verwahrt wird, kann diese Probe mit den Profilen im Modul [Bioproben](https://simplifier.net/medizininformatikinitiative-modulbiobank) abgebildet werden. Die Ergebnisse aus einem Pathologiebefundbericht können als einzelne Elemente in verschiedenen anderen Modulen, z.B. zur Tumordokumentation, wieder eingebunden sein. 
 
 Andererseits können Befundberichte aus anderen Disziplinen (z.B. aus den Modulen [Molekulargenetischer Befundbericht](https://simplifier.net/medizininformatikinitiative-modulomics) oder [Labor](https://simplifier.net/medizininformatikinitiative-modullabor) ganz oder auszugsweise in Pathologiebefundberichte aufgenommen und im Sinne einer synoptischen Bewertung interpretiert werden.
 

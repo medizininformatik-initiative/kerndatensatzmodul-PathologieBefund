@@ -5,7 +5,7 @@
 
 Histologische und zytologische Untersuchungen spielen bei einem Großteil von schwerwiegenden medizinischen Diagnosen eine entscheidende Rolle. Autoptische Untersuchungen sind sowohl wertvolle Quelle für neue medizinische Erkenntnisse (siehe COVID-19), als auch zentrale Elemente einer klinischen Qualitätskontrolle.  
 
-Zentrales Dokument und Gegenstand dieses Erweiterungsmoduls ist dabei der **Befundbericht einer Pathologieeinrichtung**. Für zeitkritische Anwendungen, z.B. eine intraoperative Schnellschnittdiagnostik, können auch schon vorläufige Ergebnisse interessant sein. In der Regel werden aber sowohl in der Patientenversorgung als auch in der Forschung die finalen Pathologiebefundberichte verwendet. Aufgrund des breiten Einsatzes des Erweiterungsmoduls **Pathologie-Befund** wird auf eine Beschreibung von einzelnen Anwendungen innerhalb der einzelnen Konsortien verzichtet. 
+Zentrales Dokument und Gegenstand dieses Moduls ist dabei der **Befundbericht einer Pathologieeinrichtung**. Für zeitkritische Anwendungen, z.B. eine intraoperative Schnellschnittdiagnostik, können auch schon vorläufige Ergebnisse interessant sein. In der Regel werden aber sowohl in der Patientenversorgung als auch in der Forschung die finalen Pathologiebefundberichte verwendet. Aufgrund des breiten Einsatzes des Moduls **Pathologie-Befund** wird auf eine Beschreibung von einzelnen Anwendungen innerhalb der einzelnen Konsortien verzichtet. 
 
 ### Abbildung in Art-Decor
 
