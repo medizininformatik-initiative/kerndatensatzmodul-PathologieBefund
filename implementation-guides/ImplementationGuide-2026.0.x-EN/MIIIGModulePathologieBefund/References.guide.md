@@ -1,12 +1,12 @@
 ## References
 
-The information model for the Pathology Findings extension module contains references to the following projects:
+The information model for the Pathology Findings module contains references to the following projects:
 
 * [IHE Anatomic Pathology Structured Report (APSR)](https://wiki.ihe.net/index.php/Anatomic_Pathology_Structured_Report) 
 
 * [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/history.html)
 
-The individual references to the APSR ART-DECOR project can be found in the corresponding data elements of the Pathology report extension module.
+The individual references to the APSR ART-DECOR project can be found in the corresponding data elements of the Pathology report module.
 
 In addition, the module builds on version R4 of the [HL7 FHIR core specification](http://hl7.org/fhir/r4), in particular the corresponding resources [DiagnosticReport](http://hl7.org/fhir/r4/diagnosticreport.html), [ServiceRequest](http://hl7.org/fhir/r4/servicerequest.html), [Specimen](http://hl7.org/fhir/r4/specimen.html) and [Observation](http://hl7.org/fhir/r4/observation.html). The content takes into account the requirements of [DIN EN ISO/IEC 17020:2012](https://www.din.de/de/mitwirken/normenausschuesse/nqsz/veroeffentlichungen/wdc-beuth:din21:146320816) and technical criteria for their application for accreditation in pathology/neuropathology ([DAkkS 71 SD 4 001 | Revision: 1.6](https://www.dakks.de/files/Dokumentensuche/Dateien/71%20SD%204%20001_Anforderungskatalog%20Pathologie_20170428_v1.6.pdf)). 
 

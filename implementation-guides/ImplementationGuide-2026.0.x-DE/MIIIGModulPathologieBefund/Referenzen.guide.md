@@ -1,6 +1,6 @@
 ## Referenzen
 
-Das Informationsmodell zum Erweiterungsmodul Pathologie-Befund enthält Referenzen zu folgenden Projekten: 
+Das Informationsmodell zum Modul Pathologie-Befund enthält Referenzen zu folgenden Projekten: 
 
 * [IHE Anatomic Pathology Structured Report (APSR)](https://wiki.ihe.net/index.php/Anatomic_Pathology_Structured_Report) 
 

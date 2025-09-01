@@ -1,6 +1,6 @@
 ### Data sets including descriptions
 
-The official version of the information model for the Pathology Report extension module can be found on [Art-Decor](https://art-decor.org/art-decor/decor-datasets--mide-?id=2.16.840.1.113883.3.1937.777.24.1.1&effectiveDate=2018-06-05T12%3A44%3A12&conceptId=2.16.840.1.113883.3.1937.777.24.2.1113&conceptEffectiveDate=2020-01-06T11%3A50%3A48&language=de-DE). To standardize the representation, the information model was also mapped as a FHIR Logical Model:
+The official version of the information model for the Pathology Report module can be found on [Art-Decor](https://art-decor.org/art-decor/decor-datasets--mide-?id=2.16.840.1.113883.3.1937.777.24.1.1&effectiveDate=2018-06-05T12%3A44%3A12&conceptId=2.16.840.1.113883.3.1937.777.24.2.1113&conceptEffectiveDate=2020-01-06T11%3A50%3A48&language=de-DE). To standardize the representation, the information model was also mapped as a FHIR Logical Model:
 
 {{tree:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-lm-patho-logical-model}}
 

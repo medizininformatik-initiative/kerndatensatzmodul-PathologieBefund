@@ -1,12 +1,12 @@
 # Kerndatensatz Modul Pathologie-Befund
 
-Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz Erweiterungsmoduls 'Diagnostik | Pathologie-Befund' der Medizininformatik-Initiative. Im Folgenden werden die Use-Cases des Moduls sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
+Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz Moduls 'Diagnostik | Pathologie-Befund' der Medizininformatik-Initiative. Im Folgenden werden die Use-Cases des Moduls sowie die dazugehörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
 
 | Veröffentlichung   |   |
 |---------|---|
 | Datum   | 01.09.2025  |
-| Version | 2026.0.0         |
-| Status  | Active       |
+| Version | 2026.0.0-ballot         |
+| Status  | ballot       |
 | Realm   | DE          | 
 
 ## Inhaltsverzeichnis

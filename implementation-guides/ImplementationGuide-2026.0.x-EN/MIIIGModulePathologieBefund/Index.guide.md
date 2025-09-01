@@ -1,12 +1,12 @@
 # Core data set module Pathologie-Befund/Pathology report
 
-This specification describes the FHIR representation of the core data set extension module 'Diaknostik | Pathologie-Befund' of the Medical Informatics Initiative. The use cases of the module and the associated FHIR profiles and terminology resources are described below in their binding form.
+This specification describes the FHIR representation of the core data set module 'Diaknostik | Pathologie-Befund' of the Medical Informatics Initiative. The use cases of the module and the associated FHIR profiles and terminology resources are described below in their binding form.
 
 | Publication   |   |
 |---------|---|
 | Datum   | 01.09.2025 |
-| Version | 2026.0.0         |
-| Status  | Active       |
+| Version | 2026.0.0-ballot         |
+| Status  | ballot       |
 | Realm   | EN          | 
 
 ## Table of contents

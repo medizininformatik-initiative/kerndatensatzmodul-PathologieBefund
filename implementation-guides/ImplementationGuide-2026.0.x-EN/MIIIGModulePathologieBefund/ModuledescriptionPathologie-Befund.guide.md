@@ -4,7 +4,7 @@
 
 Histological and cytological examinations play a crucial role in the diagnosis of the majority of serious medical problems. Autopsy examinations are both a valuable source of new medical knowledge (see COVID-19) and central elements of clinical quality control.
 
-The central document and subject of this extension module is the **report from a pathology facility**. For time-critical applications, e.g. intraoperative frozen section diagnostics, even preliminary results can be of interest. As a rule, however, the final pathology reports are used in both patient care and research. Due to the widespread use of the **Pathologie-Befund/Pathology report** extension module, a description of individual applications within the individual consortia is omitted.
+The central document and subject of this module is the **report from a pathology facility**. For time-critical applications, e.g. intraoperative frozen section diagnostics, even preliminary results can be of interest. As a rule, however, the final pathology reports are used in both patient care and research. Due to the widespread use of the **Pathologie-Befund/Pathology report** module, a description of individual applications within the individual consortia is omitted.
 
 ### Illustration in Art-Decor
 
