@@ -34,3 +34,38 @@
   filename: MII-PR-Patho-Attached-Image.page.md
 - name: MII PR Patho Bundle
   filename: MII-PR-Patho-Bundle.page.md
+
+- name: Pathology Report (DiagnosticReport)
+  filename: PathologyReport(DiagnosticReport).guide.md
+- name: Observation (abstract)
+  filename: Observation(abstract).page.md
+- name: Observation Report Section (abstract)
+  filename: ObservationReportSection(abstract).guide.md
+- name: Macroscopic Assessment (Observation)
+  filename: MacroscopicAssessment(Observation).page.md
+- name: Microscopic Assessment (Observation)
+  filename: MicroscopicAssessment(Observation).page.md
+- name: Intraoperative Assessment (Observation)
+  filename: IntraoperativeAssessment(Observation).page.md
+- name: Diagnostic Conclusion (Observation)
+  filename: DiagnosticConclusion(Observation).page.md
+- name: Additional Observation (Observation)
+  filename: AdditionalObservation(Observation).page.md
+- name: Finding (Observation)
+  filename: Finding(Observation).guide.md
+- name: Report Summary (Composition)
+  filename: ReportSummary(Composition).guide.md
+- name: Examination Request (ServiceRequest)
+  filename: ExaminationRequest(ServiceRequest).guide.md
+- name: Specimen (Specimen)
+  filename: Specimen(Specimen).page.md
+- name: Active Problems (List)
+  filename: ActiveProblems(List).page.md
+- name: History of present illness (List)
+  filename: Historyofpresentillness(List).page.md
+- name: Problem (Condition)
+  filename: Problem(Condition).page.md
+- name: Attached Image (Media)
+  filename: AttachedImage(Media).page.md
+- name: Report Document (Bundle)
+  filename: ReportDocument(Bundle).page.md

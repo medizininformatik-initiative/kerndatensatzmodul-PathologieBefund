@@ -5,6 +5,6 @@
 - name: Dataset incl. descriptions
   filename: Datasetincldescriptions.md
 - name: Hierarchy
-  filename: Hierarchie.page.md
+  filename: Hierarchy.page.md
 - name: UML
   filename: UML.guide.md

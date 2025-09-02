@@ -21,32 +21,38 @@ Das Rootelement(Sample) ist ein klinisch gewonnenes Probenmaterial von einem Pat
 
 Gemäß dem Domänen-Analyse Modell müssen die verschiedenen Bearbeitungslevel von Specimen getrennt spezifiziert werden:
 
-Part (Klinisch gewonnene Probe):
-|Element|Anforderung|Anzahl von Konzepten|Stärke der Anforderung*|
-|-
-|Specimen.type|descendants-of 123038009 Specimen (specimen)| SOLLTE |
-|Specimen.parent|0..0| SOLLTE NICHT |
-|Specimen.collection.method| descendants-of 118292001 Removal (procedure)| SOLLTE |
-|Specimen.collection.bodySite| descendants-of 123037004 Body structure (body structure)| SOLLTE |
-|Specimen.processing|0..0| SOLLTE NICHT |
+#### Part (Klinisch entnommene Probe)
 
-Block (resultiert aus makroskopischem Zuschnitt):
-|Element|Anforderung|Anzahl von Konzepten|Stärke der Anforderung*|
-|-
-|Specimen.type| descendants-of 1201985008 Tissue block specimen (specimen)| SOLLTE |
-|Specimen.parent|Part| SOLLTE |
-|Specimen.collection.method|descendants-of 168126000 Sample macroscopy (procedure)| SOLLTE |
-|Specimen.collection.bodySite| descendants-of 123037004 Body structure (body structure) | SOLLTE |
-|Specimen.collection.bodySite.extension:locationQualifier|Insbesondere falls mehrere Blöcke aus einem Part entstehen| SOLLTE |
-|Specimen.processing| 787376009 Preparation of formalin fixed paraffin embedded tissue specimen (procedure)| SOLLTE |
+| Element                      | Anforderung                                             | Stärke der Anforderung |
+|------------------------------|---------------------------------------------------------|-------------------------|
+| Specimen.type                | descendants-of 123038009 Specimen (specimen)            | SOLLTE                  |
+| Specimen.parent              | 0..0                                                    | SOLLTE NICHT            |
+| Specimen.collection.method   | descendants-of 118292001 Entfernung (procedure)         | SOLLTE                  |
+| Specimen.collection.bodySite | descendants-of 123037004 Körperstruktur (body structure)| SOLLTE                  |
+| Specimen.processing          | 0..0                                                    | SOLLTE NICHT            |
 
+---
 
-Slide (Schneiden und Färben):
-|Element|Anforderung|Anzahl von Konzepten|Stärke der Anforderung*
-|-
-|Specimen.type|descendants-of 430856003 Tissue section (specimen)| SOLLTE |
-|Specimen.parent|Block| SOLLTE |
-|Specimen.collection.method|descendants-of 13283003 Tissue processing technique (procedure)| SOLLTE |
-|Specimen.collection.bodySite| descendants-of 123037004 Body structure (body structure)| SOLLTE |
-|Specimen.collection.bodySite.extension:locationQualifier|Siehe Block| SOLLTE |
-|Specimen.processing| descendants-of 127790008 Staining method (procedure)| SOLLTE |
+#### Block (Ergebnisse aus der makroskopischen Schnittführung)
+
+| Element                                           | Anforderung                                                                    | Stärke der Anforderung |
+|---------------------------------------------------|--------------------------------------------------------------------------------|-------------------------|
+| Specimen.type                                     | descendants-of 1201985008 Gewebeblockpräparat (specimen)                       | SOLLTE                  |
+| Specimen.parent                                   | Part                                                                           | SOLLTE                  |
+| Specimen.collection.method                        | descendants-of 168126000 Makroskopie der Probe (procedure)                     | SOLLTE                  |
+| Specimen.collection.bodySite                      | descendants-of 123037004 Körperstruktur (body structure)                        | SOLLTE                  |
+| Specimen.collection.bodySite.extension:locationQualifier | Insbesondere, wenn mehrere Blöcke aus einem Teil stammen                       | SOLLTE                  |
+| Specimen.processing                               | 787376009 Aufbereitung von formalinfixiertem paraffineingebettetem Gewebepräparat (procedure) | SOLLTE                  |
+
+---
+
+#### Slide (Schnitt und Färbung)
+
+| Element                                           | Anforderung                                                     | Stärke der Anforderung |
+|---------------------------------------------------|-----------------------------------------------------------------|-------------------------|
+| Specimen.type                                     | descendants-of 430856003 Gewebeschnitt (specimen)               | SOLLTE                  |
+| Specimen.parent                                   | Block                                                           | SOLLTE                  |
+| Specimen.collection.method                        | descendants-of 13283003 Technik der Gewebeaufbereitung (procedure) | SOLLTE               |
+| Specimen.collection.bodySite                      | descendants-of 123037004 Körperstruktur (body structure)         | SOLLTE                  |
+| Specimen.collection.bodySite.extension:locationQualifier | Siehe Block                                                     | SOLLTE                  |
+| Specimen.processing                               | descendants-of 127790008 Färbemethode (procedure)               | SOLLTE                  |

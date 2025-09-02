@@ -10,3 +10,5 @@
   filename: UseCases
 - name: Technical Implementation
   filename: Technicalimplementation
+- name: Release Notes
+  filename: ReleaseNotes.md
