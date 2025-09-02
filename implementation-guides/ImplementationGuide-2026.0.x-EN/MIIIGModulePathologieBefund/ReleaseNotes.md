@@ -1,6 +1,6 @@
 # Release Notes
 
-## 2026.0.0-alpha
+## 2026.0.0-ballot
     - Grouper cardinality reduced to ..1. Therefore, only one grouper each is to be used within a pathology report
         - Corresponding changes within the grouper profiles and the DiagnosticReport
     - PathoBundle profile added

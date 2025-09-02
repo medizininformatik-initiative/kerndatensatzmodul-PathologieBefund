@@ -42,6 +42,20 @@
         "short": "Header-Informationen"
       },
       {
+        "id": "Composition.extension",
+        "path": "Composition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
         "id": "Composition.extension:document-version",
         "path": "Composition.extension",
         "sliceName": "document-version",

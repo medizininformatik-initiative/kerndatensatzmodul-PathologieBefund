@@ -6,3 +6,5 @@
   filename: Datenstzeinkl.Beschreibungen.guide.md
 - name: UML
   filename: UML.guide.md
+- name: Hierarchie
+  filename: Hierarchie.page.md

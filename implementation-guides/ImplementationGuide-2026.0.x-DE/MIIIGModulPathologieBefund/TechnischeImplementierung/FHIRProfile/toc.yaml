@@ -8,19 +8,19 @@
   filename: Beobachtungsberichtabschnitt(abstrakteObservation).guide.md
 - name: Makrokopische Beurteilung (Observation)
   filename: MakrokopischeBeurteilung(Observation).page.md
-- name: MII PR Patho Microscopic Grouper
-  filename: MII-PR-Patho-Microscopic-Grouper.page.md
+- name: Mikroskopische Beurteilung (Observation)
+  filename: MikroskopischeBeurteilung(Observation).page.md
 - name: Intraoperative Beurteilung (Observation)
   filename: IntraoperativeBeurteilung(Observation).page.md
 - name: Diagnostische Schlussfolgerung (Observation)
   filename: DiagnostischeSchlussfolgerung(Observation).page.md
-- name: Zusätzlicher Beobachtung (Observation)
-  filename: ZusätzlicherBeobachtung(Observation).page.md
+- name: Zusätzliche Beobachtung (Observation)
+  filename: ZusätzlicheBeobachtung(Observation).page.md
 - name: Einzelbeobachtung (Observation)
   filename: Einzelbeobachtung(Observation).guide.md
 - name: Befundzusammenfassung (Composition)
   filename: Befundzusammenfassung(Composition).guide.md
-- name: MUntersuchungsauftrag (ServiceRequest)
+- name: Untersuchungsauftrag (ServiceRequest)
   filename: Untersuchungsauftrag(ServiceRequest).guide.md
 - name: Probe (Specimen)
   filename: Probe(Specimen).page.md
@@ -29,7 +29,7 @@
 - name: Anamnese (List)
   filename: Anamnese(List).page.md
 - name: Problem (Condition)
-  filename: MProblem(Condition).page.md
+  filename: Problem(Condition).page.md
 - name: Eingebettetes Bild (Media)
   filename: EingebettetesBild(Media).page.md
 - name: Befunddokument (Bundle)

@@ -1,8 +1,8 @@
 - name: Index
   filename: Index.guide.md
-- name: FHIR Profile
-  filename: FHIRProfile
+- name: FHIR Profiles
+  filename: FHIRProfiles
 - name: CapabilityStatement
   filename: CapabilityStatement.page.md
 - name: Terminologies
-  filename: Terminologien.guide.md
+  filename: Terminologies.guide.md
