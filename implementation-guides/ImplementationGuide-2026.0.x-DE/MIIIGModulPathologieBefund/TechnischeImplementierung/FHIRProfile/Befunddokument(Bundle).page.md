@@ -38,15 +38,15 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 -----------------------------------------------
 
 ### Liste aller Must-Support Datenelemente
-| FHIR-Element              | Erklärung                                                                                     |
-|----------------------------|-----------------------------------------------------------------------------------------------|
-| Bundle.id                  | Must-support, jedoch optional                                                                 |
-| Bundle.meta.lastUpdated    | Must-support, jedoch optional                                                                 |
-| Bundle.meta.profile        | Must-support, jedoch optional                                                                 |
-| Bundle.identifier          | Identifikation des Pathologiebefundberichts, i.d.R. die Eingangsnummer (Fall-Nr.), ergänzt durch Versionsnummer. Andere UIDs möglich |
-| Bundle.type                | fixed value auf #document                                                                     |
-| Bundle.entry               | Slices auf Composition, ServiceRequest, Specimen, DiagnosticReport, Observation und Patient   |
-| Bundle.signature           | Digitale Signatur des Erstellenden  
---------------------------------
+
+| FHIR-Element            | Erklärung                                                                                     |
+|--------------------------|-----------------------------------------------------------------------------------------------|
+| Bundle.id                | Must-support, jedoch optional                                                                 |
+| Bundle.meta.lastUpdated  | Must-support, jedoch optional                                                                 |
+| Bundle.meta.profile      | Must-support, jedoch optional                                                                 |
+| Bundle.identifier        | Identifikation des Pathologiebefundberichts, i.d.R. die Eingangsnummer (Fall-Nr.), ergänzt durch Versionsnummer. Andere UIDs möglich |
+| Bundle.type              | fixed value auf #document                                                                     |
+| Bundle.entry             | Slices auf Composition, ServiceRequest, Specimen, DiagnosticReport, Observation und Patient   |
+| Bundle.signature         | Digitale Signatur des Erstellenden   
 
 	

@@ -37,14 +37,13 @@ from StructureDefinition where url = 'https://www.medizininformatik-initiative.d
 
 -----------------------------------------------
 ### List of all Must-Support Data Elements
-| FHIR Element | Explanation |
-|--|--|
-| Bundle.id | Must-support, but optional |
-| Bundle.meta.lastUpdated | Must-support, but optional |
-| Bundle.meta.profile | Must-support, but optional |
-| Bundle.identifier | Identification of the pathology report, usually the accession number (case no.), supplemented by version number. Other UIDs possible |
-| Bundle.type | fixed value to #document |
-| Bundle.entry | Slices on Composition, ServiceRequest, Specimen, DiagnosticReport, Observation and Patient |
-| Bundle.signature | Digital signature of the creator |
---------------------------------
-### Examples
+
+| FHIR Element            | Explanation                                                                                  |
+|--------------------------|----------------------------------------------------------------------------------------------|
+| Bundle.id                | Must-support, but optional                                                                   |
+| Bundle.meta.lastUpdated  | Must-support, but optional                                                                   |
+| Bundle.meta.profile      | Must-support, but optional                                                                   |
+| Bundle.identifier        | Identification of the pathology report, usually the accession number (case no.), supplemented by version number. Other UIDs possible |
+| Bundle.type              | fixed value to #document                                                                     |
+| Bundle.entry             | Slices on Composition, ServiceRequest, Specimen, DiagnosticReport, Observation and Patient   |
+| Bundle.signature         | Digital signature of the creator           
