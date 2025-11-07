@@ -216,8 +216,8 @@ Usage: #example
 * processing.extension[temperaturbedingungen].valueRange.low = 0 'Cel' "°C"
 * processing.extension[temperaturbedingungen].valueRange.high = 30 'Cel' "°C"
 * processing.procedure.coding[sct] = $SCT#787376009 "Preparation of formalin fixed paraffin embedded tissue specimen (procedure)"
-* processing.procedure.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
-* processing.procedure.extension.valueUrl = "#bearbeitungsprozedur"
+//* processing.procedure.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+//* processing.procedure.extension.valueUrl = "#bearbeitungsprozedur"
 * container.type = $SCT#434464009 "Tissue cassette (physical object)"
 * container.additiveReference = Reference(Substance/mii-exa-patho-paraffin)
 
@@ -274,8 +274,8 @@ Usage: #example
 * processing.extension[temperaturbedingungen].valueRange.low = 0 'Cel' "°C"
 * processing.extension[temperaturbedingungen].valueRange.high = 30 'Cel' "°C"
 * processing.procedure.coding[sct] = $SCT#13269000 "Immunocytochemical stain (procedure)"
-* processing.procedure.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
-* processing.procedure.extension.valueUrl = "#immunfaerbung"
+//* processing.procedure.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
+//* processing.procedure.extension.valueUrl = "#immunfaerbung"
 * processing.additive = Reference(Substance/mii-exa-patho-p63-stain)
 * container.type = $SCT#433466003 "Microscope slide (physical object)"
 * container.additiveReference = Reference(Substance/mii-exa-patho-canadabalsam)

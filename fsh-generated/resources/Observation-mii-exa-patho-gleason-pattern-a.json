@@ -32,12 +32,6 @@
         "system": "http://loinc.org",
         "display": "Gleason pattern.primary in Prostate tumor"
       }
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-        "valueUrl": "#micro-a-gleason-pattern-key"
-      }
     ]
   },
   "valueCodeableConcept": {

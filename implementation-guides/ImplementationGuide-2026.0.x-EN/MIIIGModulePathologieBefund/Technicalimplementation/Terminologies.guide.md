@@ -78,41 +78,44 @@ In addition, several data elements in the FHIR resources are encoded using HL7 V
 | MII PR Patho Composition | MII_VS_Patho_Composition_Type_LOINC <br> MII_VS_Patho_All_LOINC | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) <br> [Required](http://hl7.org/fhir/r4/terminologies.html#required) | 
 | MII PR Patho Base Observation | MII_VS_Patho_All_LOINC | [Preferred](http://hl7.org/fhir/r4/terminologies.html#preferred) |
 
----
 
+---
+**MII_VS_Patho_Collection_Method_SNOMED_CT:**
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct}}
 
 ---
-
+**MII_VS_Patho_Container_Type_SNOMED:**
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct}}
 
 ---
-
-{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-snomed-ct}}
+**MII_VS_Patho_Service_Request_SNOMED_CT:**
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code}}
 
 ---
-
+**MII_VS_Patho_Problem_List_SNOMED_CT:**
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct}}
 
 ---
-
+**MII_VS_Patho_Section_Types_LOINC:**
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc}}
 
 ---
-
+**MII_VS_Patho_Report_Category_HL7:**
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7}}
 
 ---
-
+**MII_VS_Patho_Processing_Procedure_SNOMED_CT:**
+{{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct}}
+---
+**MII_VS_Patho_Media_Modality_SNOMED_CT:**
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct}}
 
 ---
-
+**MII_VS_Patho_Composition_Type_LOINC:**
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-loinc}}
 
 ---
-
+**MII_VS_Patho_All_LOINC:**
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc}}
 
 ---
-

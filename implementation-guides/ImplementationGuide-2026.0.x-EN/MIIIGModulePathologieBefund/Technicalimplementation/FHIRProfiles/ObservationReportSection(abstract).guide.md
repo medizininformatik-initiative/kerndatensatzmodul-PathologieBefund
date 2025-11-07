@@ -23,7 +23,7 @@ These groupers have the Observation.codes
 - [83321-0](https://loinc.org/83321-0/) (Pathology report intraoperative observation in Specimen Document) 
 - [22634-0](https://loinc.org/22634-0/) (Pathology report gross observation) 
 - [22635-7](https://loinc.org/22635-7/) (Pathology report microscopic observation) 
-- [100969-5](https://loinc.org/100969-5/) (Pathology report additional specified observation) | *Verlinkung wird erst mit dem nächsten LOINC Release funktionieren, da der Code erst im August 2022 angenommen wurde*
+- [100969-5](https://loinc.org/100969-5/) (Pathology report additional specified observation)
 - [22637-3](https://loinc.org/22637-3/) (Pathology report diagnosis)  
 
 If an observation report section contains multiple input specimens, there should be only one grouper present. The organisation of these MII PR Patho Findings according to the different samples is done by the specimen references concerning the "parts" of these findings.

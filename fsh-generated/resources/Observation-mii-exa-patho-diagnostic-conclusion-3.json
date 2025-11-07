@@ -32,12 +32,6 @@
         "system": "http://loinc.org",
         "display": "Prostate cancer grade group [Score] in Prostate tumor Qualitative"
       }
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-        "valueUrl": "#diagnostic-conclusion-isup-grade-group-key"
-      }
     ]
   },
   "valueCodeableConcept": {

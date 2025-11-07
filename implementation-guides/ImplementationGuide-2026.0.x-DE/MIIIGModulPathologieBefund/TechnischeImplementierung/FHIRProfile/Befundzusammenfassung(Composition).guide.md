@@ -7,7 +7,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 ### Beschreibung
 
-Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-basis-v4/isikberichtsubsysteme) aus der Spezifikation [ISiK - Basis (Stufe 4)](https://simplifier.net/isik-basis-v4). 
+Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5). 
 
 Das Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. 
 Dieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”, der persistierende eindeutige `Bundle.identifier` sollte dem der Composition (Composition.identifier, s.u.), z.B. Eingangsnummer einschließlich Versionsnummer entsprechen.  Optional können weitere Entries enthalten sein. Das Bundle enthält eine Signatur. 

@@ -15,7 +15,9 @@ The **MII PR Patho Finding** profile of the Observation resource maps atomically
 - In the case of a finding update, an **MII PR Patho Finding** with the LOINC code [90004-3 - 
 Clinical significance of updated information](https://loinc.org/90004-3/) serves as the organizer for the update information, which is mapped in the **MII PR Patho Diagnostic Conclusion Grouper**. For this purpose, the focus reference is used to indicate the affected **MII PR Patho Grouper** (observation section). The `Observation.value` is represented by a ValueSet "ClinicalSignificance" (e.g., LOINC LL4770-5).
 
-For specific observation constructs, especially in oncological questions (TNM, histological tumor type, etc.), observation profiles from the [MII Erweiterungsmoduls Onkologie](https://simplifier.net/medizininformatikinitiative-modulonkologie) or [HL7 DE Basis Onkologie](https://simplifier.net/basisprofileonkologie) can also be used. 
+For specific Observation constructs, particularly those from the oncological basic dataset (oBDS) — such as TNM classification, histological tumor type, etc. — the Observation profiles from the [MII Oncology Extension Module](https://simplifier.net/medizininformatikinitiative-modulonkologie) can be used.
+For observations related to immunohistochemical staining, in-situ hybridization, PCR tests, methylation tests, and NGS analyses, the Observation profiles from the [MII Molecular Tumor Board Extension Module](https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard) or the [MII Molecular Genetic Report Extension Module](https://simplifier.net/medizininformatikinitiative-modulomics) should be used.
+
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding' select Name: name, Canonical: url

@@ -32,12 +32,6 @@
         "system": "http://loinc.org",
         "display": "Gleason score in Specimen Qualitative"
       }
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-        "valueUrl": "#diagnostic-conclusion-gleason-score-key"
-      }
     ]
   },
   "valueCodeableConcept": {

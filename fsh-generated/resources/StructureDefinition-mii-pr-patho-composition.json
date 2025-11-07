@@ -42,6 +42,20 @@
         "short": "Header-Informationen"
       },
       {
+        "id": "Composition.extension",
+        "path": "Composition.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
         "id": "Composition.extension:document-version",
         "path": "Composition.extension",
         "sliceName": "document-version",
@@ -105,12 +119,12 @@
         }
       },
       {
-        "id": "Composition.type.coding:IHE",
+        "id": "Composition.type.coding:XDS",
         "path": "Composition.type.coding",
-        "sliceName": "IHE"
+        "sliceName": "XDS"
       },
       {
-        "id": "Composition.type.coding:IHE.code",
+        "id": "Composition.type.coding:XDS.code",
         "path": "Composition.type.coding.code",
         "fixedCode": "PATH"
       },
@@ -129,14 +143,12 @@
       {
         "id": "Composition.type.coding:sct.system",
         "path": "Composition.type.coding.system",
-        "min": 1,
         "fixedUri": "http://snomed.info/sct",
         "mustSupport": true
       },
       {
         "id": "Composition.type.coding:sct.code",
         "path": "Composition.type.coding.code",
-        "min": 1,
         "mustSupport": true
       },
       {
