@@ -204,6 +204,7 @@
       {
         "id": "ServiceRequest.intent",
         "path": "ServiceRequest.intent",
+        "patternCode": "order",
         "mustSupport": true
       },
       {

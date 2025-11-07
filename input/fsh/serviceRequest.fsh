@@ -48,6 +48,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 //Status
 * status MS
 * intent MS
+* intent = http://hl7.org/fhir/request-intent#order
 // Referenz zur Probe
 * specimen MS
 // Referenz zu Patient:in
