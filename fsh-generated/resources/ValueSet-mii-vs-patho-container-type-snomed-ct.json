@@ -58,6 +58,10 @@
           {
             "code": "434473001",
             "display": "Specimen container lid (physical object)"
+          },
+          {
+            "code": "706053007",
+            "display": "General specimen container (physical object)"
           }
         ]
       }

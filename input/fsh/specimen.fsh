@@ -192,6 +192,11 @@ Usage: #example
 * collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
 * container.type = $SCT#434746001 "Specimen vial (physical object)"
 * container.additiveReference = Reference(Substance/mii-exa-patho-neutral-buffered-formalin)
+* extension[feature].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature"
+* extension[feature].extension[type].valueCodeableConcept = $SCT#251597001 "Structure of right lateral lobe of prostate (body structure)"
+* extension[feature].extension[type].url = "type"
+* extension[feature].extension[description].valueString = "Marked by red ink"
+* extension[feature].extension[description].url = "description"
 
 Instance: mii-exa-patho-prostate-biopsy-block
 InstanceOf: mii-pr-patho-specimen
