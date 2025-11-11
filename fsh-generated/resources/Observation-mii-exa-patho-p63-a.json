@@ -32,12 +32,6 @@
         "system": "http://loinc.org",
         "display": "P63 protein [Interpretation] in Blood or Tissue Qualitative"
       }
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-        "valueUrl": "#micro-a-p63-key"
-      }
     ]
   },
   "valueCodeableConcept": {

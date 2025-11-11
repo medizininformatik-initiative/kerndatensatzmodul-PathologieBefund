@@ -100,10 +100,10 @@ class "Probe" as Specimen #PaleTurquoise {
   +Eigenschaften : code
 }
 
-Specimen "0..*" <-u- "1..*" PathoFinding
-Specimen "0..*" -l- "1" Section
+Specimen "0..1" <-u- "0..*" PathoFinding
+Specimen "0..1" -l- "0..*" Section
 Specimen "0..*" <-l- "0..1" ServiceRequest
-Specimen "0..*" - "0..1" Specimen : gewonnen||bearbeitet aus
+Specimen "0..*" -r- "0..1" Specimen : gewonnen||bearbeitet aus
 
 class "Entnahme" as Collection #PaleTurquoise {
   +Entnahmezeitpunkt : datetime
@@ -113,10 +113,11 @@ class "Entnahme" as Collection #PaleTurquoise {
 
 Collection "1" -u- "1..*" Specimen
 
+class "SubstanceAdditiv" as Additiv <<from Biobank>> #LightCoral
+Processing "0..1" --> "0..*" Additiv 
+
 class "Bearbeitung" as Processing #PaleTurquoise {
   +Bearbeitungsprozedur : code 
-  +Elternprobe : identifier
-  +Additive : code
   +Beschreibung : String
 }
 

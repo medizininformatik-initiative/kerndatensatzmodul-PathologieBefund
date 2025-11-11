@@ -128,7 +128,7 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * type.coding[sct].code 1.. MS
 
 // IHE Slice ist bereits vererbt, nur Code setzen
-* type.coding[IHE].code = #PATH (exactly)
+* type.coding[XDS].code = #PATH (exactly)
 
 // KDL Slice  
 * type.coding[KDL] from mii-vs-patho-composition-type-kdl (extensible)

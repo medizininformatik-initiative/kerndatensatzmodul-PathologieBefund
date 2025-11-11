@@ -34,12 +34,6 @@
             "system": "http://snomed.info/sct",
             "display": "Immunocytochemical stain (procedure)"
           }
-        ],
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-            "valueUrl": "#immunfaerbung"
-          }
         ]
       },
       "additive": [

@@ -1,6 +1,20 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-specimen",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/spdx-license",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen",
   "version": "2025.0.0",
   "name": "MII_PR_Patho_Specimen",
@@ -27,18 +41,8 @@
   "differential": {
     "element": [
       {
-        "id": "Specimen.id",
-        "path": "Specimen.id",
-        "mustSupport": true
-      },
-      {
         "id": "Specimen.meta.lastUpdated",
         "path": "Specimen.meta.lastUpdated",
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.meta.profile",
-        "path": "Specimen.meta.profile",
         "mustSupport": true
       },
       {

@@ -6,6 +6,29 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen"
     ]
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature",
+      "extension": [
+        {
+          "url": "type",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "251597001",
+                "system": "http://snomed.info/sct",
+                "display": "Structure of right lateral lobe of prostate (body structure)"
+              }
+            ]
+          }
+        },
+        {
+          "url": "description",
+          "valueString": "Marked by red ink"
+        }
+      ]
+    }
+  ],
   "status": "available",
   "text": {
     "status": "additional",

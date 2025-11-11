@@ -6,6 +6,7 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request"
     ]
   },
+  "intent": "order",
   "category": [
     {
       "coding": [
@@ -32,7 +33,6 @@
     }
   ],
   "status": "completed",
-  "intent": "order",
   "subject": {
     "reference": "Patient/12345"
   },

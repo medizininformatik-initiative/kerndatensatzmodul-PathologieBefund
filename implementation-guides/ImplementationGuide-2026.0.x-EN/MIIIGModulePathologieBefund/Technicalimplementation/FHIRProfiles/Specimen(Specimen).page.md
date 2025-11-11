@@ -7,9 +7,9 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 ### Description
 
-This profile inherits from [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/profilespecimenbioprobecore) from the Biobank module.
+This profile inherits from [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core) from the Biobank module.
 
-It is based on the HL7 domain analysis model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR). This model, particularly for pathology, considers the role model of specimens, which may be both subject and product of laboratory processes. The root element is the sample collected in the clinic. All samples removed in a single collection procedure, be they biologic (e.g. tissue) or non-biologic (e.g. orthopedic hardware) are considered a single “Case” and given a single identifier, often referred to as an accession. Child elements in the laboratory are "part", "block", and "section (slide)", called specimens. Each specimen is always found in or on a container.
+It is based on the HL7 domain analysis model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR). This model, particularly for pathology, considers the role model of specimens, which may be both subject and product of laboratory processes. The root element is the sample collected in the clinic. All samples removed in a single collection procedure, be they biologic (e.g. tissue) or non-biologic (e.g. orthopedic hardware) are considered a single “Case” and given a single identifier, often referred to as an accession. Child elements in the laboratory are "block" and "section (slide)", called specimens. Each specimen is always found in or on a container.
 
 @```
 from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen' select Name: name, Canonical: url

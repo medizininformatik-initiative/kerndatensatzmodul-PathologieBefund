@@ -20,16 +20,16 @@
     "fshName": "mii-exa-patho-problem-list-item-1",
     "fshType": "Instance",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 215,
-    "endLine": 222
+    "startLine": 216,
+    "endLine": 223
   },
   {
     "outputFile": "Condition-mii-exa-patho-problem-list-item-2.json",
     "fshName": "mii-exa-patho-problem-list-item-2",
     "fshType": "Instance",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 224,
-    "endLine": 231
+    "startLine": 225,
+    "endLine": 232
   },
   {
     "outputFile": "DiagnosticReport-mii-exa-patho-report.json",
@@ -44,16 +44,16 @@
     "fshName": "mii-exa-patho-active-problems-list",
     "fshType": "Instance",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 244,
-    "endLine": 253
+    "startLine": 245,
+    "endLine": 254
   },
   {
     "outputFile": "List-mii-exa-patho-history-of-present-illness.json",
     "fshName": "mii-exa-patho-history-of-present-illness",
     "fshType": "Instance",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 233,
-    "endLine": 242
+    "startLine": 234,
+    "endLine": 243
   },
   {
     "outputFile": "Media-mii-exa-patho-attached-image.json",
@@ -156,32 +156,32 @@
     "fshName": "mii-exa-patho-request",
     "fshType": "Instance",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 195,
-    "endLine": 212
+    "startLine": 196,
+    "endLine": 213
   },
   {
     "outputFile": "Specimen-mii-exa-patho-prostate-biopsy-block.json",
     "fshName": "mii-exa-patho-prostate-biopsy-block",
     "fshType": "Instance",
     "fshFile": "specimen.fsh",
-    "startLine": 196,
-    "endLine": 222
+    "startLine": 201,
+    "endLine": 227
   },
   {
     "outputFile": "Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE.json",
     "fshName": "mii-exa-patho-prostate-biopsy-schnitt-HE",
     "fshType": "Instance",
     "fshFile": "specimen.fsh",
-    "startLine": 224,
-    "endLine": 252
+    "startLine": 229,
+    "endLine": 257
   },
   {
     "outputFile": "Specimen-mii-exa-patho-prostate-biopsy-schnitt-p63.json",
     "fshName": "mii-exa-patho-prostate-biopsy-schnitt-p63",
     "fshType": "Instance",
     "fshFile": "specimen.fsh",
-    "startLine": 254,
-    "endLine": 281
+    "startLine": 259,
+    "endLine": 286
   },
   {
     "outputFile": "Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.json",
@@ -189,7 +189,7 @@
     "fshType": "Instance",
     "fshFile": "specimen.fsh",
     "startLine": 171,
-    "endLine": 194
+    "endLine": 199
   },
   {
     "outputFile": "StructureDefinition-mii-lm-patho-logical-model.json",
@@ -204,8 +204,8 @@
     "fshName": "MII_PR_Patho_Active_Problems_List",
     "fshType": "Profile",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 127,
-    "endLine": 145
+    "startLine": 128,
+    "endLine": 146
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-additional-specified-grouper.json",
@@ -237,7 +237,7 @@
     "fshType": "Profile",
     "fshFile": "patho-bundle.fsh",
     "startLine": 1,
-    "endLine": 32
+    "endLine": 30
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-composition.json",
@@ -268,8 +268,8 @@
     "fshName": "MII_PR_Patho_History_Of_Present_Illness",
     "fshType": "Profile",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 150,
-    "endLine": 168
+    "startLine": 151,
+    "endLine": 169
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-intraoperative-grouper.json",
@@ -300,8 +300,8 @@
     "fshName": "MII_PR_Patho_Problem_List_Item",
     "fshType": "Profile",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 99,
-    "endLine": 122
+    "startLine": 100,
+    "endLine": 123
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-report.json",
@@ -325,7 +325,7 @@
     "fshType": "Profile",
     "fshFile": "serviceRequest.fsh",
     "startLine": 4,
-    "endLine": 94
+    "endLine": 95
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-specimen.json",
@@ -340,48 +340,48 @@
     "fshName": "mii-exa-patho-eosin-y",
     "fshType": "Instance",
     "fshFile": "specimen.fsh",
-    "startLine": 290,
-    "endLine": 295
+    "startLine": 295,
+    "endLine": 300
   },
   {
     "outputFile": "Substance-mii-exa-patho-hematoxylin-stain.json",
     "fshName": "mii-exa-patho-hematoxylin-stain",
     "fshType": "Instance",
     "fshFile": "specimen.fsh",
-    "startLine": 283,
-    "endLine": 288
+    "startLine": 288,
+    "endLine": 293
   },
   {
     "outputFile": "Substance-mii-exa-patho-microscope-slide-mounting-medium.json",
     "fshName": "mii-exa-patho-microscope-slide-mounting-medium",
     "fshType": "Instance",
     "fshFile": "specimen.fsh",
-    "startLine": 304,
-    "endLine": 309
+    "startLine": 309,
+    "endLine": 314
   },
   {
     "outputFile": "Substance-mii-exa-patho-neutral-buffered-formalin.json",
     "fshName": "mii-exa-patho-neutral-buffered-formalin",
     "fshType": "Instance",
     "fshFile": "specimen.fsh",
-    "startLine": 297,
-    "endLine": 302
+    "startLine": 302,
+    "endLine": 307
   },
   {
     "outputFile": "Substance-mii-exa-patho-p63-immunostain.json",
     "fshName": "mii-exa-patho-p63-immunostain",
     "fshType": "Instance",
     "fshFile": "specimen.fsh",
-    "startLine": 311,
-    "endLine": 320
+    "startLine": 316,
+    "endLine": 325
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-all-loinc.json",
     "fshName": "MII_VS_Patho_All_LOINC",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 146,
-    "endLine": 152
+    "startLine": 147,
+    "endLine": 153
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-collection-method-snomed-ct.json",
@@ -396,16 +396,16 @@
     "fshName": "MII_VS_Patho_Composition_Type_KDL",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 157,
-    "endLine": 165
+    "startLine": 158,
+    "endLine": 166
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-composition-type-snomed-ct.json",
     "fshName": "MII_VS_Patho_Composition_Type_SNOMED_CT",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 55,
-    "endLine": 70
+    "startLine": 56,
+    "endLine": 71
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-container-type-snomed-ct.json",
@@ -413,54 +413,54 @@
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
     "startLine": 13,
-    "endLine": 27
+    "endLine": 28
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-media-modality-snomed-ct.json",
     "fshName": "MII_VS_Patho_Media_Modality_SNOMED_CT",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 40,
-    "endLine": 50
+    "startLine": 41,
+    "endLine": 51
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-problem-list-snomed-ct.json",
     "fshName": "MII_VS_Patho_Problem_List_SNOMED_CT",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 116,
-    "endLine": 128
+    "startLine": 117,
+    "endLine": 129
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-processing-procedure-snomed-ct.json",
     "fshName": "MII_VS_Patho_Processing_Procedure_SNOMED_CT",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 29,
-    "endLine": 35
+    "startLine": 30,
+    "endLine": 36
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-report-category-hl7.json",
     "fshName": "MII_VS_Patho_Report_Category_HL7",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 72,
-    "endLine": 80
+    "startLine": 73,
+    "endLine": 81
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-section-types-loinc.json",
     "fshName": "MII_VS_Patho_Section_Types_LOINC",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 133,
-    "endLine": 143
+    "startLine": 134,
+    "endLine": 144
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-service-request-code.json",
     "fshName": "MII_VS_Patho_Service_Request_Code",
     "fshType": "ValueSet",
     "fshFile": "terminologies.fsh",
-    "startLine": 85,
-    "endLine": 111
+    "startLine": 86,
+    "endLine": 112
   }
 ]

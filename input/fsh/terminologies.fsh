@@ -25,6 +25,7 @@ Description: "ValueSet for container type based on IHE PaLM's ContainerEntityCla
 * $SCT#434822004 "Specimen well (physical object)"
 * $SCT#433472003 "Microscope slide coverslip (physical object)"
 * $SCT#434473001 "Specimen container lid (physical object)"
+* $SCT#706053007 "General specimen container (physical object)"
 
 ValueSet: MII_VS_Patho_Processing_Procedure_SNOMED_CT
 Id: mii-vs-patho-processing-procedure-snomed-ct

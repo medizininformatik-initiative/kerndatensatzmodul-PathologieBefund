@@ -10,3 +10,5 @@
   filename: AnwendungsflleInformationsmodell
 - name: Technische Implementierung
   filename: TechnischeImplementierung
+- name: Release Notes
+  filename: ReleaseNotes.md
