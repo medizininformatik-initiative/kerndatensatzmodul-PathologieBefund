@@ -10,12 +10,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  DOTNET_FHIR_VALIDATION:
-    uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml@master
-    with:
-      ref: ${{ github.event.pull_request.head.ref }}
-      SUSHI_VERSION: ${{ vars.SUSHI_VERSION }}
-    secrets: inherit
 
   JAVA_FHIR_VALIDATION:
     uses: medizininformatik-initiative/kerndatensatz-meta/.github/workflows/ci_java_validation.yml@master
