@@ -29,8 +29,7 @@
     "coding": [
       {
         "code": "44641-9",
-        "system": "http://loinc.org",
-        "display": "Gleason pattern.primary in Prostate tumor"
+        "system": "http://loinc.org"
       }
     ]
   },
@@ -38,8 +37,7 @@
     "coding": [
       {
         "code": "369772003",
-        "system": "http://snomed.info/sct",
-        "display": "Gleason Pattern 3"
+        "system": "http://snomed.info/sct"
       }
     ]
   },

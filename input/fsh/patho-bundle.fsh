@@ -28,4 +28,3 @@ Description: "A Document-Bundle to wrap the composition and other patho-instance
 * entry[Observations] ^definition = "For Patho-Grouper and -Findings"
 
 * signature 1..1 MS
-

@@ -156,10 +156,10 @@ Usage: #example
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
-* code = $LOINC#101548-6 "P63 protein [Interpretation] in Blood or Tissue Qualitative"
+* code = $LOINC#101548-6 //"P63 protein [Interpretation] in Blood or Tissue Qualitative"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* code.extension.valueUrl = "#micro-a-p63-key"
-* valueCodeableConcept = $LOINC#LA11883-8 "Not detected"
+* valueCodeableConcept = $LOINC#LA11883-8 ///"Not detected"
 * valueCodeableConcept.text = "Die Tumorzellen sind negativ für p63"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63)
 
@@ -170,10 +170,10 @@ Usage: #example
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
-* code = $LOINC#44641-9 "Gleason pattern.primary in Prostate tumor"
+* code = $LOINC#44641-9 //"Gleason pattern.primary in Prostate tumor"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* code.extension.valueUrl = "#micro-a-gleason-pattern-key"
-* valueCodeableConcept = $SCT#369772003 "Gleason Pattern 3"
+* valueCodeableConcept = $SCT#369772003 //"Gleason Pattern 3"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE)
 
 // hier fehlt secondary Gleason Pattern - kann sein dass es bei drei redundant ist
@@ -186,10 +186,10 @@ Usage: #example
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
-* code = $SCT#371441004 "Histologic type" // z.B. LOINC Code "presence of Acinar adenocarcinoma"
+* code = $SCT#371441004 //"Histologic type" // z.B. LOINC Code "presence of Acinar adenocarcinoma"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* code.extension.valueUrl = "#micro-a-histologic-type-key"
-* valueCodeableConcept = $SCT#45410002 "Acinar adenocarcinoma" // hier icd-0-3 morphology?
+* valueCodeableConcept = $SCT#45410002 //"Acinar adenocarcinoma" // hier icd-0-3 morphology?
 * specimen = Reference(Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE)
 
 // Negativbesipiel von unauffälliger Stanze!
@@ -236,10 +236,10 @@ Usage: #example
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
-* code = $LOINC#59847-4 "Histology and Behavior ICD-O-3 Cancer"
+* code = $LOINC#59847-4 //"Histology and Behavior ICD-O-3 Cancer"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink" 
 //* code.extension.valueUrl = "#diagnostic-conclusion-icdo-3-key"
-* valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom (azinär)"
+* valueCodeableConcept = $icd-o-3#8140/3 // "Adenokarzinom (azinär)"
 
 
 Instance: mii-exa-patho-diagnostic-conclusion-2
@@ -248,10 +248,10 @@ Usage: #example
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
-* code = $LOINC#35266-6 "Gleason score in Specimen Qualitative"
+* code = $LOINC#35266-6 //"Gleason score in Specimen Qualitative"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* code.extension.valueUrl = "#diagnostic-conclusion-gleason-score-key"
-* valueCodeableConcept = $SCT#84556003 "Gleason grade score 6 out of 10 (finding)"
+* valueCodeableConcept = $SCT#84556003 // "Gleason grade score 6 out of 10 (finding)"
 
 Instance: mii-exa-patho-diagnostic-conclusion-3
 InstanceOf: mii-pr-patho-finding
@@ -259,7 +259,7 @@ Usage: #example
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
-* code = $LOINC#94734-1 "Prostate cancer grade group [Score] in Prostate tumor Qualitative"
+* code = $LOINC#94734-1 //"Prostate cancer grade group [Score] in Prostate tumor Qualitative"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* code.extension.valueUrl = "#diagnostic-conclusion-isup-grade-group-key"
-* valueCodeableConcept = $LOINC#LA30794-4 "Grade 1"
+* valueCodeableConcept = $LOINC#LA30794-4 // "Grade 1"

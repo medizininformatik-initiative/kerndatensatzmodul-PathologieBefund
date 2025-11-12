@@ -115,10 +115,7 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * identifier 1.. MS 
   * type 1.. MS
   * type.coding = $v2-0203#ACSN "Accession ID"
-// KORREKTE TYPE SLICING DEFINITION
-* type.coding ^slicing.discriminator.type = #value
-* type.coding ^slicing.discriminator.path = "system"
-* type.coding ^slicing.rules = #open
+
 * type.coding contains 
     sct 0..1 MS
 

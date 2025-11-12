@@ -291,7 +291,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "type",
+              "type": "profile",
               "path": "$this"
             }
           ],

@@ -65,7 +65,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 // Clinical Information - Pathology report relevant history $LOINC#22636-5
 * supportingInfo MS
 * supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
-* supportingInfo ^slicing.discriminator.type = #type
+* supportingInfo ^slicing.discriminator.type = #profile
 * supportingInfo ^slicing.discriminator.path = "$this"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false

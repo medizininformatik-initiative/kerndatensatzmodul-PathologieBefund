@@ -323,4 +323,5 @@ Usage: #example
 * status = #active
 * category = $substance-category#material "Material"
 * code = $befundbericht#p63 "p63 immunostain" 
+
 Alias: $befundbericht = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht // Korrekt?
