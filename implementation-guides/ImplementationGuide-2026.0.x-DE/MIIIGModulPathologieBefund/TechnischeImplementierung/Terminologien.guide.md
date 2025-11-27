@@ -100,7 +100,9 @@ Außerdem werden mehrere Datenelemente in den FHIR Resourcen durch HL7 V2.x -Kod
 ---
 **MII_VS_Patho_Processing_Procedure_SNOMED_CT:**
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct}}
+
 ---
+
 **MII_VS_Patho_Media_Modality_SNOMED_CT:**
 {{render:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct}}
 

@@ -8,9 +8,93 @@ Title: "MII PR Patho Finding"
 Description: "Instantiable Observation to describe a generic pathology finding"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert Translation(^title, de-DE, MII PR Patho Befund)
+* insert Translation(^title, en-US, MII PR Patho Finding)
+* insert Translation(^description, de-DE, Instanziierbare Beobachtung zur Beschreibung eines generischen pathologischen Befunds)
+* insert Translation(^description, en-US, Instantiable Observation to describe a generic pathology finding)
+* insert Label(identifier, Identifikator, Eindeutiger Identifikator)
+* insert Translation(identifier ^short, de-DE, Identifikator)
+* insert Translation(identifier ^short, en-US, Identifier)
+* insert Translation(identifier ^definition, de-DE, Eindeutiger Identifikator)
+* insert Translation(identifier ^definition, en-US, Unique identifier)
+* insert Label(basedOn, Untersuchungsauftrag, Verweis auf den Untersuchungsauftrag)
+* insert Translation(basedOn ^short, de-DE, Untersuchungsauftrag)
+* insert Translation(basedOn ^short, en-US, Request)
+* insert Translation(basedOn ^definition, de-DE, Verweis auf den Untersuchungsauftrag)
+* insert Translation(basedOn ^definition, en-US, Reference to the request)
+* insert Label(status, Status, Status der Beobachtung)
+* insert Translation(status ^short, de-DE, Status)
+* insert Translation(status ^short, en-US, Status)
+* insert Translation(status ^definition, de-DE, Status der Beobachtung)
+* insert Translation(status ^definition, en-US, Status of the observation)
+* insert Label(category, Kategorie, Klassifikation der Art der Beobachtung)
+* insert Translation(category ^short, de-DE, Kategorie)
+* insert Translation(category ^short, en-US, Category)
+* insert Translation(category ^definition, de-DE, Klassifikation der Art der Beobachtung)
+* insert Translation(category ^definition, en-US, Classification of type of observation)
+* insert Label(code, Code, Art der durchgeführten Beobachtung)
+* insert Translation(code ^short, de-DE, Code)
+* insert Translation(code ^short, en-US, Code)
+* insert Translation(code ^definition, de-DE, Art der durchgeführten Beobachtung)
+* insert Translation(code ^definition, en-US, Type of observation)
+* insert Label(subject, Patient, Patient für den die Beobachtung durchgeführt wurde)
+* insert Translation(subject ^short, de-DE, Patient)
+* insert Translation(subject ^short, en-US, Subject)
+* insert Translation(subject ^definition, de-DE, Patient für den die Beobachtung durchgeführt wurde)
+* insert Translation(subject ^definition, en-US, Patient for whom the observation was performed)
+* insert Label(effectiveDateTime, Befundzeit, Zeitpunkt der Beobachtung)
+* insert Translation(effectiveDateTime ^short, de-DE, Befundzeit)
+* insert Translation(effectiveDateTime ^short, en-US, Effective time)
+* insert Translation(effectiveDateTime ^definition, de-DE, Zeitpunkt der Beobachtung)
+* insert Translation(effectiveDateTime ^definition, en-US, Time of observation)
+* insert Label(bodySite, Körperstelle, Anatomische Stelle der Beobachtung)
+* insert Translation(bodySite ^short, de-DE, Körperstelle)
+* insert Translation(bodySite ^short, en-US, Body site)
+* insert Translation(bodySite ^definition, de-DE, Anatomische Stelle der Beobachtung)
+* insert Translation(bodySite ^definition, en-US, Anatomical site of observation)
+* insert Label(method, Methode, Untersuchungsmethode)
+* insert Translation(method ^short, de-DE, Methode)
+* insert Translation(method ^short, en-US, Method)
+* insert Translation(method ^definition, de-DE, Untersuchungsmethode)
+* insert Translation(method ^definition, en-US, Examination method)
+* insert Label(specimen, Probe, Referenz zur untersuchten Probe)
+* insert Translation(specimen ^short, de-DE, Probe)
+* insert Translation(specimen ^short, en-US, Specimen)
+* insert Translation(specimen ^definition, de-DE, Referenz zur untersuchten Probe)
+* insert Translation(specimen ^definition, en-US, Reference to examined specimen)
+* insert Label(hasMember, Hat Mitglied, Verwandte Beobachtungen)
+* insert Translation(hasMember ^short, de-DE, Hat Mitglied)
+* insert Translation(hasMember ^short, en-US, Has member)
+* insert Translation(hasMember ^definition, de-DE, Verwandte Beobachtungen)
+* insert Translation(hasMember ^definition, en-US, Related observations)
+* insert Label(derivedFrom, Abgeleitet von, Quelle der abgeleiteten Beobachtung)
+* insert Translation(derivedFrom ^short, de-DE, Abgeleitet von)
+* insert Translation(derivedFrom ^short, en-US, Derived from)
+* insert Translation(derivedFrom ^definition, de-DE, Quelle der abgeleiteten Beobachtung)
+* insert Translation(derivedFrom ^definition, en-US, Source of derived observation)
+* insert Label(component.code, Komponenten-Code, Code der Komponente)
+* insert Translation(component.code ^short, de-DE, Komponenten-Code)
+* insert Translation(component.code ^short, en-US, Component code)
+* insert Translation(component.code ^definition, de-DE, Code der Komponente)
+* insert Translation(component.code ^definition, en-US, Code of component)
+* insert Label(component.dataAbsentReason, Grund für fehlende Daten, Grund warum Komponentenwert fehlt)
+* insert Translation(component.dataAbsentReason ^short, de-DE, Grund für fehlende Daten)
+* insert Translation(component.dataAbsentReason ^short, en-US, Data absent reason)
+* insert Translation(component.dataAbsentReason ^definition, de-DE, Grund warum Komponentenwert fehlt)
+* insert Translation(component.dataAbsentReason ^definition, en-US, Reason why component value is missing)
 * category contains section-type 1..1 MS
+* insert Label(category[section-type], Abschnittstyp, Typ des pathologischen Abschnitts)
+* insert Translation(category[section-type] ^short, de-DE, Abschnittstyp)
+* insert Translation(category[section-type] ^short, en-US, Section type)
+* insert Translation(category[section-type] ^definition, de-DE, Typ des pathologischen Abschnitts)
+* insert Translation(category[section-type] ^definition, en-US, Type of pathological section)
 * category[section-type] from mii-vs-patho-section-types-loinc (required)
 * value[x] MS
+* insert Label(value[x], Wert, Wert der Beobachtung)
+* insert Translation(value[x] ^short, de-DE, Wert)
+* insert Translation(value[x] ^short, en-US, Value)
+* insert Translation(value[x] ^definition, de-DE, Wert der Beobachtung)
+* insert Translation(value[x] ^definition, en-US, Value of the observation)
 * value[x] only string or Quantity or CodeableConcept or Ratio or Range
 
 //---------------------------------
@@ -239,7 +323,7 @@ Usage: #example
 * code = $LOINC#59847-4 //"Histology and Behavior ICD-O-3 Cancer"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink" 
 //* code.extension.valueUrl = "#diagnostic-conclusion-icdo-3-key"
-* valueCodeableConcept = $icd-o-3#8140/3 // "Adenokarzinom (azinär)"
+* valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom o.n.A."
 
 
 Instance: mii-exa-patho-diagnostic-conclusion-2
@@ -262,4 +346,4 @@ Usage: #example
 * code = $LOINC#94734-1 //"Prostate cancer grade group [Score] in Prostate tumor Qualitative"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* code.extension.valueUrl = "#diagnostic-conclusion-isup-grade-group-key"
-* valueCodeableConcept = $LOINC#LA30794-4 // "Grade 1"
+* valueCodeableConcept = $LOINC#LA30794-4 "ISUP Grade (Grade Group) 1 (Gleason score <=6)"

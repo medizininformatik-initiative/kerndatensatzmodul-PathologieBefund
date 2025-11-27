@@ -8,18 +8,37 @@ Title: "MII PR Patho Service Request"
 Description: "Order for the analysis of a sample or a group of samples."
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert Translation(^title, de-DE, MII PR Patho Untersuchungsauftrag)
+* insert Translation(^title, en-US, MII PR Patho Service Request)
+* insert Translation(^description, de-DE, Auftrag für die Analyse einer Probe oder einer Gruppe von Proben)
+* insert Translation(^description, en-US, Order for the analysis of a sample or a group of samples)
 // Meta
 * meta.profile MS
 * meta.source MS
 * meta.lastUpdated MS
 // Identifikation - Auftrags-ID: Auftrags-ID des Auftraggebers (Placer) || Auftrags-ID des Auftragnehmers (Filler)
 * identifier 1.. MS
+* insert Label(identifier, Identifikator, Eindeutiger Identifikator des Auftrags)
+* insert Translation(identifier ^short, de-DE, Identifikator)
+* insert Translation(identifier ^short, en-US, Identifier)
+* insert Translation(identifier ^definition, de-DE, Eindeutiger Identifikator des Auftrags)
+* insert Translation(identifier ^definition, en-US, Unique identifier of the request)
 * identifier ^slicing.discriminator[0].type = #pattern
 * identifier ^slicing.discriminator[0].path = "$this.type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Contains slices for the request's placer- and filler IDs based on type.coding pattern"
-* identifier contains Placer-ID 0..1 MS 
+* identifier contains Placer-ID 0..1 MS
+* insert Label(identifier[Placer-ID], Auftraggeber-ID, Identifikator des Auftraggebers)
+* insert Translation(identifier[Placer-ID] ^short, de-DE, Auftraggeber-ID)
+* insert Translation(identifier[Placer-ID] ^short, en-US, Placer ID)
+* insert Translation(identifier[Placer-ID] ^definition, de-DE, Identifikator des Auftraggebers)
+* insert Translation(identifier[Placer-ID] ^definition, en-US, Identifier of the placer) 
                     and Filler-ID 0..1 MS
+* insert Label(identifier[Filler-ID], Auftragnehmer-ID, Identifikator des Auftragnehmers)
+* insert Translation(identifier[Filler-ID] ^short, de-DE, Auftragnehmer-ID)
+* insert Translation(identifier[Filler-ID] ^short, en-US, Filler ID)
+* insert Translation(identifier[Filler-ID] ^definition, de-DE, Identifikator des Auftragnehmers)
+* insert Translation(identifier[Filler-ID] ^definition, en-US, Identifier of the filler)
 * identifier[Placer-ID] ^short = "Placer identifier"
 * identifier[Placer-ID] ^definition = "Identifier for the placer of the pathology request"
   * value 1.. MS
@@ -40,6 +59,11 @@ Description: "Order for the analysis of a sample or a group of samples."
       * code 1..1 MS
 // Auftragsgruppen-ID
 * requisition MS
+* insert Label(requisition, Auftragsgruppen-ID, Identifikator für Auftragsgruppen)
+* insert Translation(requisition ^short, de-DE, Auftragsgruppen-ID)
+* insert Translation(requisition ^short, en-US, Requisition)
+* insert Translation(requisition ^definition, de-DE, Identifikator für Auftragsgruppen)
+* insert Translation(requisition ^definition, en-US, Identifier for request groups)
 * requisition ^short = "Composite or group identifier"
   * system 1.. MS
   * value 1.. MS
@@ -47,32 +71,92 @@ Description: "Order for the analysis of a sample or a group of samples."
   * type = $v2-0203#PGN "Placer Group Number"
 //Status
 * status MS
+* insert Label(status, Status, Status des Auftrags)
+* insert Translation(status ^short, de-DE, Status)
+* insert Translation(status ^short, en-US, Status)
+* insert Translation(status ^definition, de-DE, Status des Auftrags)
+* insert Translation(status ^definition, en-US, Status of the request)
 * intent MS
+* insert Label(intent, Absicht, Absicht des Auftrags)
+* insert Translation(intent ^short, de-DE, Absicht)
+* insert Translation(intent ^short, en-US, Intent)
+* insert Translation(intent ^definition, de-DE, Absicht des Auftrags)
+* insert Translation(intent ^definition, en-US, Intent of the request)
 * intent = http://hl7.org/fhir/request-intent#order
 // Referenz zur Probe
 * specimen MS
+* insert Label(specimen, Probe, Verweis auf die zu untersuchende Probe)
+* insert Translation(specimen ^short, de-DE, Probe)
+* insert Translation(specimen ^short, en-US, Specimen)
+* insert Translation(specimen ^definition, de-DE, Verweis auf die zu untersuchende Probe)
+* insert Translation(specimen ^definition, en-US, Reference to the specimen to be examined)
 // Referenz zu Patient:in
 * subject MS
+* insert Label(subject, Patient, Verweis auf den Patienten)
+* insert Translation(subject ^short, de-DE, Patient)
+* insert Translation(subject ^short, en-US, Subject)
+* insert Translation(subject ^definition, de-DE, Verweis auf den Patienten)
+* insert Translation(subject ^definition, en-US, Reference to the patient)
 * subject only Reference(Patient)
 // Referenz für Einsender
 * requester 1.. MS
+* insert Label(requester, Anforderer, Person oder Organisation die den Auftrag stellt)
+* insert Translation(requester ^short, de-DE, Anforderer)
+* insert Translation(requester ^short, en-US, Requester)
+* insert Translation(requester ^definition, de-DE, Person oder Organisation die den Auftrag stellt)
+* insert Translation(requester ^definition, en-US, Person or organization placing the request)
 * requester only Reference(Practitioner or Organization)
 // Referenz zum Versorgungsstellenkontakt - ob die Referenz zum Versorgungsstellenkontakt gehen wird ist noch zu klaeren 
 * encounter 1.. MS
+* insert Label(encounter, Fall, Verweis auf den Behandlungsfall)
+* insert Translation(encounter ^short, de-DE, Fall)
+* insert Translation(encounter ^short, en-US, Encounter)
+* insert Translation(encounter ^definition, de-DE, Verweis auf den Behandlungsfall)
+* insert Translation(encounter ^definition, en-US, Reference to the treatment case)
 //Referenz für Probenentnehmer
 * performer MS
+* insert Label(performer, Durchführer, Person die die Untersuchung durchführt)
+* insert Translation(performer ^short, de-DE, Durchführer)
+* insert Translation(performer ^short, en-US, Performer)
+* insert Translation(performer ^definition, de-DE, Person die die Untersuchung durchführt)
+* insert Translation(performer ^definition, en-US, Person who performs the examination)
 * performer only Reference(Practitioner)
 // Clinical Information - Pathology report relevant history $LOINC#22636-5
 * supportingInfo MS
+* insert Label(supportingInfo, Zusätzliche Informationen, Unterstützende klinische Informationen)
+* insert Translation(supportingInfo ^short, de-DE, Zusätzliche Informationen)
+* insert Translation(supportingInfo ^short, en-US, Supporting info)
+* insert Translation(supportingInfo ^definition, de-DE, Unterstützende klinische Informationen)
+* insert Translation(supportingInfo ^definition, en-US, Supporting clinical information)
 * supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
-* supportingInfo ^slicing.discriminator.type = #profile
-* supportingInfo ^slicing.discriminator.path = "$this"
+* supportingInfo ^slicing.discriminator.type = #profile // #value 
+* supportingInfo ^slicing.discriminator.path = "$this" // "reference.resolve()"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false
-* supportingInfo contains codedCondition 0.. MS 
+* supportingInfo contains codedCondition 0.. MS
+* insert Label(supportingInfo[codedCondition], Kodierte Diagnose, Verweis auf kodierte Diagnosen)
+* insert Translation(supportingInfo[codedCondition] ^short, de-DE, Kodierte Diagnose)
+* insert Translation(supportingInfo[codedCondition] ^short, en-US, Coded condition)
+* insert Translation(supportingInfo[codedCondition] ^definition, de-DE, Verweis auf kodierte Diagnosen)
+* insert Translation(supportingInfo[codedCondition] ^definition, en-US, Reference to coded diagnoses) 
                       and anamnesis 0.. MS
+* insert Label(supportingInfo[anamnesis], Anamnese, Verweis auf die Anamnese)
+* insert Translation(supportingInfo[anamnesis] ^short, de-DE, Anamnese)
+* insert Translation(supportingInfo[anamnesis] ^short, en-US, Anamnesis)
+* insert Translation(supportingInfo[anamnesis] ^definition, de-DE, Verweis auf die Anamnese)
+* insert Translation(supportingInfo[anamnesis] ^definition, en-US, Reference to anamnesis)
                       and activeProblems 0.. MS
+* insert Label(supportingInfo[activeProblems], Aktive Probleme, Verweis auf aktive Probleme)
+* insert Translation(supportingInfo[activeProblems] ^short, de-DE, Aktive Probleme)
+* insert Translation(supportingInfo[activeProblems] ^short, en-US, Active problems)
+* insert Translation(supportingInfo[activeProblems] ^definition, de-DE, Verweis auf aktive Probleme)
+* insert Translation(supportingInfo[activeProblems] ^definition, en-US, Reference to active problems)
                       and observations 0.. MS
+* insert Label(supportingInfo[observations], Beobachtungen, Verweis auf Messwerte und Beobachtungen)
+* insert Translation(supportingInfo[observations] ^short, de-DE, Beobachtungen)
+* insert Translation(supportingInfo[observations] ^short, en-US, Observations)
+* insert Translation(supportingInfo[observations] ^definition, de-DE, Verweis auf Messwerte und Beobachtungen)
+* insert Translation(supportingInfo[observations] ^definition, en-US, Reference to measurements and observations)
 // Diagnose codiert - Clinical Problem?
 * supportingInfo[codedCondition] only Reference(Condition)
 * supportingInfo[codedCondition] ^short = "Reference to coded conditions"
@@ -86,12 +170,27 @@ Description: "Order for the analysis of a sample or a group of samples."
 * supportingInfo[observations] only Reference(Observation)
 * supportingInfo[observations] ^short = "Reference to observation measurements like PSA"
 // category for searching purposes 
-* category 1..1 MS 
+* category 1..1 MS
+* insert Label(category, Kategorie, Kategorie des Untersuchungsauftrags)
+* insert Translation(category ^short, de-DE, Kategorie)
+* insert Translation(category ^short, en-US, Category)
+* insert Translation(category ^definition, de-DE, Kategorie des Untersuchungsauftrags)
+* insert Translation(category ^definition, en-US, Category of the examination request)
 * category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" 
 * code MS
+* insert Label(code, Code, Code für die angeforderte Leistung)
+* insert Translation(code ^short, de-DE, Code)
+* insert Translation(code ^short, en-US, Code)
+* insert Translation(code ^definition, de-DE, Code für die angeforderte Leistung)
+* insert Translation(code ^definition, en-US, Code for the requested service)
 * code from mii-vs-patho-service-request-code (extensible)
 // Ueberweisungsgrund und Fragestellung - Reason for Referral
-* reasonCode MS 
+* reasonCode MS
+* insert Label(reasonCode, Begründungscode, Kodierter Grund für die Überweisung)
+* insert Translation(reasonCode ^short, de-DE, Begründungscode)
+* insert Translation(reasonCode ^short, en-US, Reason code)
+* insert Translation(reasonCode ^definition, de-DE, Kodierter Grund für die Überweisung)
+* insert Translation(reasonCode ^definition, en-US, Coded reason for referral) 
   * ^short = "Coded representation of the reason for referral"
 
 //------------------------------------------------
