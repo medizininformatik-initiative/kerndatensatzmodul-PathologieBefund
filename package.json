@@ -27,7 +27,7 @@
   "canonicals": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho",
   "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
   "dependencies": {
-    "de.gematik.isik-basismodul": "5.1.0",
+    "de.gematik.isik": "5.1.0",
     "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.x",
     "de.medizininformatikinitiative.kerndatensatz.diagnose": "2025.0.x",
     "de.medizininformatikinitiative.kerndatensatz.biobank": "2026.0.0-ballot1",
