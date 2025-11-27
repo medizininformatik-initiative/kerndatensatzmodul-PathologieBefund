@@ -20,26 +20,21 @@ Description: "Defines the general pathology report structure for German hospital
 * text MS
 // Extension for parent report
 * extension contains $fhir-workflow-related-artifact named related-report 0..* MS
-* insert Label(extension[related-report], Verwandter Bericht, Verweis auf verwandte Berichte)
+* insert Label(extension[related-report], Verwandter Bericht, Verweis auf Vorbefunde)
 * insert Translation(extension[related-report] ^short, de-DE, Verwandter Bericht)
 * insert Translation(extension[related-report] ^short, en-US, Related report)
-* insert Translation(extension[related-report] ^definition, de-DE, Verweis auf verwandte Berichte)
+* insert Translation(extension[related-report] ^definition, de-DE, Verweis auf Vorbefunde)
 * insert Translation(extension[related-report] ^definition, en-US, Reference to related reports)
 // Identifikator
 * identifier 1.. MS
-* insert Label(identifier, Identifikator, Eindeutiger Identifikator des Berichts)
-* insert Translation(identifier ^short, de-DE, Identifikator)
-* insert Translation(identifier ^short, en-US, Identifier)
-* insert Translation(identifier ^definition, de-DE, Eindeutiger Identifikator des Berichts)
-* insert Translation(identifier ^definition, en-US, Unique identifier of the report)
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this.type"
   * ^slicing.rules = #open
 * identifier contains Set-ID 1..1 MS
-* insert Label(identifier[Set-ID], Set-ID, Zugriffsnummer des Berichts)
+* insert Label(identifier[Set-ID], Set-ID, Befundnummer (Eingangsnummer, Fallnummer, Filler order number, Accession number))
 * insert Translation(identifier[Set-ID] ^short, de-DE, Set-ID)
 * insert Translation(identifier[Set-ID] ^short, en-US, Set-ID)
-* insert Translation(identifier[Set-ID] ^definition, de-DE, Zugriffsnummer des Berichts)
+* insert Translation(identifier[Set-ID] ^definition, de-DE, Befundnummer (Eingangsnummer, Fallnummer, Filler order number, Accession number))
 * insert Translation(identifier[Set-ID] ^definition, en-US, Accession number of the report)
 * identifier[Set-ID] 
   * type 1.. MS
@@ -57,34 +52,34 @@ Description: "Defines the general pathology report structure for German hospital
 * basedOn ^short = "Reference to respective MII_PR_Patho_Service_Request"
 // Status
 * status MS
-* insert Label(status, Status, Status des Berichts)
+* insert Label(status, Status, Status des Befundes)
 * insert Translation(status ^short, de-DE, Status)
 * insert Translation(status ^short, en-US, Status)
-* insert Translation(status ^definition, de-DE, Status des Berichts)
+* insert Translation(status ^definition, de-DE, Status des Befundes)
 * insert Translation(status ^definition, en-US, Status of the report)
 * category MS
-* insert Label(category, Kategorie, Kategorisierung des Berichts)
+* insert Label(category, Kategorie, Kategorisierung des Befundes)
 * insert Translation(category ^short, de-DE, Kategorie)
 * insert Translation(category ^short, en-US, Category)
-* insert Translation(category ^definition, de-DE, Kategorisierung des Berichts)
+* insert Translation(category ^definition, de-DE, Kategorisierung des Befundes)
 * insert Translation(category ^definition, en-US, Categorization of the report) 
 * category from mii-vs-patho-report-category-hl7 (extensible)
 // Code
 * code MS
-* insert Label(code, Code, Code des Pathologie-Berichts)
+* insert Label(code, Code, Code des Pathologie-Befundes)
 * insert Translation(code ^short, de-DE, Code)
 * insert Translation(code ^short, en-US, Code)
-* insert Translation(code ^definition, de-DE, Code des Pathologie-Berichts)
+* insert Translation(code ^definition, de-DE, Code des Pathologie-Befundes)
 * insert Translation(code ^definition, en-US, Code of the pathology report)
 * code ^short = "Pathology report code"
   * coding ^slicing.discriminator.type = #pattern
   * coding ^slicing.discriminator.path = "$this"
   * coding ^slicing.rules = #open
   * coding contains pathology-report 1..1 MS
-  * insert Label(coding[pathology-report], Pathologie-Bericht Code, Spezifischer Code für Pathologie-Bericht)
-  * insert Translation(coding[pathology-report] ^short, de-DE, Pathologie-Bericht Code)
+  * insert Label(coding[pathology-report], Pathologie-Befund Code, Spezifischer Code für Pathologie-Befunde)
+  * insert Translation(coding[pathology-report] ^short, de-DE, Pathologie-Befund Code)
   * insert Translation(coding[pathology-report] ^short, en-US, Pathology report code)
-  * insert Translation(coding[pathology-report] ^definition, de-DE, Spezifischer Code für Pathologie-Bericht)
+  * insert Translation(coding[pathology-report] ^definition, de-DE, Spezifischer Code für Pathologie-Befunde)
   * insert Translation(coding[pathology-report] ^definition, en-US, Specific code for pathology report)
   * coding[pathology-report] = $LOINC#60568-3 
     * system 1.. MS 
@@ -107,17 +102,17 @@ Description: "Defines the general pathology report structure for German hospital
 // Dokumentationsdatum
 * effective[x] only dateTime
 * effectiveDateTime MS
-* insert Label(effectiveDateTime, Dokumentationsdatum, Zeitpunkt der Berichtserstellung)
+* insert Label(effectiveDateTime, Dokumentationsdatum, Zeitpunkt der Befunderstellung)
 * insert Translation(effectiveDateTime ^short, de-DE, Dokumentationsdatum)
 * insert Translation(effectiveDateTime ^short, en-US, Effective date)
-* insert Translation(effectiveDateTime ^definition, de-DE, Zeitpunkt der Berichtserstellung)
+* insert Translation(effectiveDateTime ^definition, de-DE, Zeitpunkt der Befunderstellung)
 * insert Translation(effectiveDateTime ^definition, en-US, Time of report creation)
 // Autor 
 * performer 1.. MS
-* insert Label(performer, Autor, Ersteller des Berichts)
+* insert Label(performer, Autor, Ersteller des Befundes)
 * insert Translation(performer ^short, de-DE, Autor)
 * insert Translation(performer ^short, en-US, Performer)
-* insert Translation(performer ^definition, de-DE, Ersteller des Berichts)
+* insert Translation(performer ^definition, de-DE, Ersteller des Befundes)
 * insert Translation(performer ^definition, en-US, Creator of the report)
 // Referenz zur Probe
 * specimen 1.. MS
@@ -128,11 +123,11 @@ Description: "Defines the general pathology report structure for German hospital
 * insert Translation(specimen ^definition, en-US, Reference to the examined specimen)
 // Beobachtungsabschnitte bzw. Beobachtungen
 * result 1.. MS
-* insert Label(result, Ergebnis, Beobachtungen und Befunde)
+* insert Label(result, Ergebnis, Referenz auf Beobachtungsberichtsabschnitte mit Einzelbeobachtungen)
 * insert Translation(result ^short, de-DE, Ergebnis)
 * insert Translation(result ^short, en-US, Result)
-* insert Translation(result ^definition, de-DE, Beobachtungen und Befunde)
-* insert Translation(result ^definition, en-US, Observations and findings)
+* insert Translation(result ^definition, de-DE, Referenz auf Beobachtungsberichtsabschnitte mit Einzelbeobachtungen)
+* insert Translation(result ^definition, en-US, References to grouper with the findings)
 // * result only Reference(PathologyGrouper)
 * result ^slicing.discriminator[+].type = #value
 * result ^slicing.discriminator[=].path = "resolve().code"
@@ -210,10 +205,10 @@ Description: "Defines the general pathology report structure for German hospital
 * insert Translation(presentedForm ^definition, en-US, pdf document)
 // Diagnostische Schlussfolgerung
 * conclusionCode MS
-* insert Label(conclusionCode, Schlussfolgerungscode, Kodierte diagnostische Schlussfolgerung)
+* insert Label(conclusionCode, Schlussfolgerungscode, Kodierung für abschließende diagnostische Schlussfolgerung)
 * insert Translation(conclusionCode ^short, de-DE, Schlussfolgerungscode)
 * insert Translation(conclusionCode ^short, en-US, Conclusion code)
-* insert Translation(conclusionCode ^definition, de-DE, Kodierte diagnostische Schlussfolgerung)
+* insert Translation(conclusionCode ^definition, de-DE, Kodierung für abschließende diagnostische Schlussfolgerung)
 * insert Translation(conclusionCode ^definition, en-US, Coded diagnostic conclusion)
 
 // -------------------------
@@ -336,18 +331,18 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(custodian ^definition, de-DE, Verwaltende Organisation)
 * insert Translation(custodian ^definition, en-US, Managing organization)
 * relatesTo MS
-* insert Label(relatesTo, Bezieht sich auf, Beziehung zu anderen Dokumenten)
+* insert Label(relatesTo, Bezieht sich auf, Beziehung zu anderen Dokumenten z.B. Vor-, Zusatz-, und/oder Korrekturbefunde)
 * insert Translation(relatesTo ^short, de-DE, Bezieht sich auf)
 * insert Translation(relatesTo ^short, en-US, Relates to)
-* insert Translation(relatesTo ^definition, de-DE, Beziehung zu anderen Dokumenten)
+* insert Translation(relatesTo ^definition, de-DE, Beziehung zu anderen Dokumenten z.B. Vor-, Zusatz-, und/oder Korrekturbefunde)
 * insert Translation(relatesTo ^definition, en-US, Relationship to other documents) 
   * code MS
   * targetReference MS
 * event 1.. MS
-* insert Label(event, Ereignis, Dokumentationsereignis)
+* insert Label(event, Referenz auf Untersuchungsauftrag, Referenz auf den auslösenden Untersuchungsauftrag)
 * insert Translation(event ^short, de-DE, Ereignis)
 * insert Translation(event ^short, en-US, Event)
-* insert Translation(event ^definition, de-DE, Dokumentationsereignis)
+* insert Translation(event ^definition, de-DE, Referenz auf den auslösenden Untersuchungsauftrag)
 * insert Translation(event ^definition, en-US, Documentation event)
 // Entry referenziert nur auf MII_PR_Patho_Report
 * section 
@@ -374,11 +369,11 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * section ^slicing.discriminator[0].path = "$this.code.coding"
 * section ^slicing.rules = #open
 * section contains patho-diagnostic-report 1..* MS
-* insert Label(section[patho-diagnostic-report], Pathologie-Diagnostikbericht, Pathologie-Diagnostikbericht Abschnitt)
+* insert Label(section[patho-diagnostic-report], Pathologie-Diagnostikbericht, Pathologie-Diagnostikbericht)
 * insert Translation(section[patho-diagnostic-report] ^short, de-DE, Pathologie-Diagnostikbericht)
 * insert Translation(section[patho-diagnostic-report] ^short, en-US, Pathology diagnostic report)
-* insert Translation(section[patho-diagnostic-report] ^definition, de-DE, Pathologie-Diagnostikbericht Abschnitt)
-* insert Translation(section[patho-diagnostic-report] ^definition, en-US, Pathology diagnostic report section)
+* insert Translation(section[patho-diagnostic-report] ^definition, de-DE, Pathologie-Diagnostikbericht)
+* insert Translation(section[patho-diagnostic-report] ^definition, en-US, Pathology diagnostic report)
           // and additional-diagnostic-report 0..* MS
 * section[patho-diagnostic-report]
   * code 1.. MS
