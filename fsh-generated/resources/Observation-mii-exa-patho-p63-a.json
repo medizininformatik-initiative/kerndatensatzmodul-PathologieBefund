@@ -29,8 +29,7 @@
     "coding": [
       {
         "code": "101548-6",
-        "system": "http://loinc.org",
-        "display": "P63 protein [Interpretation] in Blood or Tissue Qualitative"
+        "system": "http://loinc.org"
       }
     ]
   },
@@ -38,8 +37,7 @@
     "coding": [
       {
         "code": "LA11883-8",
-        "system": "http://loinc.org",
-        "display": "Not detected"
+        "system": "http://loinc.org"
       }
     ],
     "text": "Die Tumorzellen sind negativ für p63"

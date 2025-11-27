@@ -29,8 +29,7 @@
     "coding": [
       {
         "code": "59847-4",
-        "system": "http://loinc.org",
-        "display": "Histology and Behavior ICD-O-3 Cancer"
+        "system": "http://loinc.org"
       }
     ]
   },
@@ -38,8 +37,7 @@
     "coding": [
       {
         "code": "8140/3",
-        "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
-        "display": "Adenokarzinom (azinär)"
+        "system": "http://terminology.hl7.org/CodeSystem/icd-o-3"
       }
     ]
   }

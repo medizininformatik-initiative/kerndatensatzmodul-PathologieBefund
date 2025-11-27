@@ -1,9 +1,9 @@
 Output File                                                          Name                                            Type      FSH File                         Lines
 CapabilityStatement-mii-cps-patho-capability-statement.json          mii-cps-patho-capability-statement              Instance  capability-statement.fsh         1 - 246
-Composition-mii-exa-patho-composition.json                           mii-exa-patho-composition                       Instance  pathology-report.fsh             333 - 397
+Composition-mii-exa-patho-composition.json                           mii-exa-patho-composition                       Instance  pathology-report.fsh             330 - 394
 Condition-mii-exa-patho-problem-list-item-1.json                     mii-exa-patho-problem-list-item-1               Instance  serviceRequest.fsh               216 - 223
 Condition-mii-exa-patho-problem-list-item-2.json                     mii-exa-patho-problem-list-item-2               Instance  serviceRequest.fsh               225 - 232
-DiagnosticReport-mii-exa-patho-report.json                           mii-exa-patho-report                            Instance  pathology-report.fsh             225 - 248
+DiagnosticReport-mii-exa-patho-report.json                           mii-exa-patho-report                            Instance  pathology-report.fsh             222 - 245
 List-mii-exa-patho-active-problems-list.json                         mii-exa-patho-active-problems-list              Instance  serviceRequest.fsh               245 - 254
 List-mii-exa-patho-history-of-present-illness.json                   mii-exa-patho-history-of-present-illness        Instance  serviceRequest.fsh               234 - 243
 Media-mii-exa-patho-attached-image.json                              mii-exa-patho-attached-image                    Instance  pathology-imaging.fsh            32 - 40
@@ -29,7 +29,7 @@ StructureDefinition-mii-pr-patho-additional-specified-grouper.json   MII_PR_Path
 StructureDefinition-mii-pr-patho-attached-image.json                 MII_PR_Patho_Attached_Image                     Profile   pathology-imaging.fsh            3 - 29
 StructureDefinition-mii-pr-patho-base-observation.json               MII_PR_Patho_Base_Observation                   Profile   patho-abstract-observations.fsh  5 - 68
 StructureDefinition-mii-pr-patho-bundle.json                         MII_PR_Patho_Bundle                             Profile   patho-bundle.fsh                 1 - 30
-StructureDefinition-mii-pr-patho-composition.json                    MII_PR_Patho_Composition                        Profile   pathology-report.fsh             103 - 189
+StructureDefinition-mii-pr-patho-composition.json                    MII_PR_Patho_Composition                        Profile   pathology-report.fsh             103 - 186
 StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.json  MII_PR_Patho_Diagnostic_Conclusion_Grouper      Profile   patho-groupers.fsh               129 - 147
 StructureDefinition-mii-pr-patho-finding.json                        MII_PR_Patho_Finding                            Profile   patho-findings.fsh               4 - 14
 StructureDefinition-mii-pr-patho-history-of-present-illness.json     MII_PR_Patho_History_Of_Present_Illness         Profile   serviceRequest.fsh               151 - 169

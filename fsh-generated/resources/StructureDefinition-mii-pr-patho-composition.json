@@ -97,19 +97,6 @@
         "comment": "Bereits in Subsysteme auf 1..1 & Fixed Value auf final"
       },
       {
-        "id": "Composition.type.coding",
-        "path": "Composition.type.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "open"
-        }
-      },
-      {
         "id": "Composition.type.coding:KDL",
         "path": "Composition.type.coding",
         "sliceName": "KDL",
