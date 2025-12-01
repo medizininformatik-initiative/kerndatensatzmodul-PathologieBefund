@@ -368,6 +368,6 @@ Usage: #example
 * identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * status = #active
 * category = $substance-category#material "Material"
-* code = $befundbericht#p63 "p63 immunostain" 
+* code = $befundbericht#p63 "p63 immunostain"
 
 Alias: $befundbericht = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht // Korrekt?

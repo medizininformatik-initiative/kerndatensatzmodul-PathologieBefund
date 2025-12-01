@@ -4,8 +4,8 @@
   "code": {
     "coding": [
       {
-        "code": "406975001",
-        "system": "http://snomed.info/sct",
+        "code": "p63",
+        "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht",
         "display": "p63 immunostain"
       }
     ]

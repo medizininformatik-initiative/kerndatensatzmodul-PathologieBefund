@@ -247,6 +247,7 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(type.coding[sct] ^definition, en-US, SNOMED CT coding for document type)
 
 * type.coding[sct].system 1.. MS
+* type.coding[sct] ^patternCoding.system = $SCT
 * type.coding[sct].system = $SCT (exactly)
 * type.coding[sct] from mii-vs-patho-composition-type-snomed-ct (extensible)
 * type.coding[sct].code 1.. MS
@@ -547,8 +548,8 @@ Usage: #example
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition"
 * extension[document-version].valueString = "1"
 * status = #final
-* type = $LOINC#11526-1 "Pathology study"
-* type.text = "Pathologie-Befundbericht"
+* type.coding[XDS].code = #PATH
+* type.coding[sct] = $SCT#371528001 "Pathology report (record artifact)"
 * attester[legal].mode = #legal
 * attester[legal].party = Reference(Practitioner/765879)
 * section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"
