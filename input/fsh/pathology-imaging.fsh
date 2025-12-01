@@ -29,17 +29,18 @@ Description: "Profile for attached images"
 * insert Translation(status ^definition, de-DE, Status des Mediums)
 * insert Translation(status ^definition, en-US, Status of the medium)
 * type 1.. MS
-* insert Label(type, Typ, Typ des Mediums)
-* insert Translation(type ^short, de-DE, Typ)
-* insert Translation(type ^short, en-US, Type)
-* insert Translation(type ^definition, de-DE, Typ des Mediums)
-* insert Translation(type ^definition, en-US, Type of medium)
   * coding 1..
   * coding ^slicing.discriminator[0].type = #value
   * coding ^slicing.discriminator[0].path = "$this"
   * coding ^slicing.rules = #open
   * coding contains image 1..1
   * coding[image] = $media-type#image 
+* insert Label(type, Typ, Typ des Mediums)
+* insert Translation(type ^short, de-DE, Typ)
+* insert Translation(type ^short, en-US, Type)
+* insert Translation(type ^definition, de-DE, Typ des Mediums)
+* insert Translation(type ^definition, en-US, Type of medium)
+
 // Referenz kann auch weg, weil die Observations schon drauf verweisen ueber .derivedFrom
 * modality MS
 * insert Label(modality, Modalität, Bildgebungsmodalität)

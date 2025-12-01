@@ -37,7 +37,8 @@
     "coding": [
       {
         "code": "LA30794-4",
-        "system": "http://loinc.org"
+        "system": "http://loinc.org",
+        "display": "ISUP Grade (Grade Group) 1 (Gleason score <=6)"
       }
     ]
   }

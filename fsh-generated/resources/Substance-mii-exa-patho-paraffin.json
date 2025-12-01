@@ -1,0 +1,25 @@
+{
+  "resourceType": "Substance",
+  "id": "mii-exa-patho-paraffin",
+  "code": {
+    "coding": [
+      {
+        "code": "311731000",
+        "system": "http://snomed.info/sct",
+        "display": "Paraffin"
+      }
+    ]
+  },
+  "description": "Paraffin wax used for tissue block embedding",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "chemical",
+          "system": "http://terminology.hl7.org/CodeSystem/substance-category",
+          "display": "Chemical"
+        }
+      ]
+    }
+  ]
+}

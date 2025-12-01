@@ -27,13 +27,13 @@ Description: "Order for the analysis of a sample or a group of samples."
 * identifier ^slicing.discriminator[0].path = "$this.type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Contains slices for the request's placer- and filler IDs based on type.coding pattern"
-* identifier contains Placer-ID 0..1 MS
+* identifier contains Placer-ID 0..1 MS and Filler-ID 0..1 MS
 * insert Label(identifier[Placer-ID], Auftraggeber-ID, Identifikator des Auftraggebers)
 * insert Translation(identifier[Placer-ID] ^short, de-DE, Auftraggeber-ID)
 * insert Translation(identifier[Placer-ID] ^short, en-US, Placer ID)
 * insert Translation(identifier[Placer-ID] ^definition, de-DE, Identifikator des Auftraggebers)
 * insert Translation(identifier[Placer-ID] ^definition, en-US, Identifier of the placer) 
-                    and Filler-ID 0..1 MS
+
 * insert Label(identifier[Filler-ID], Auftragnehmer-ID, Identifikator des Auftragnehmers)
 * insert Translation(identifier[Filler-ID] ^short, de-DE, Auftragnehmer-ID)
 * insert Translation(identifier[Filler-ID] ^short, en-US, Filler ID)
@@ -129,29 +129,29 @@ Description: "Order for the analysis of a sample or a group of samples."
 * insert Translation(supportingInfo ^definition, de-DE, Unterstützende klinische Informationen)
 * insert Translation(supportingInfo ^definition, en-US, Supporting clinical information)
 * supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
-* supportingInfo ^slicing.discriminator.type = #profile // #value 
-* supportingInfo ^slicing.discriminator.path = "$this" // "reference.resolve()"
+* supportingInfo ^slicing.discriminator.type = #value  
+* supportingInfo ^slicing.discriminator.path = "reference.resolve()" 
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false
-* supportingInfo contains codedCondition 0.. MS
+* supportingInfo contains codedCondition 0.. MS and anamnesis 0.. MS and activeProblems 0.. MS and observations 0.. MS
 * insert Label(supportingInfo[codedCondition], Kodierte Diagnose, Verweis auf kodierte Diagnosen)
 * insert Translation(supportingInfo[codedCondition] ^short, de-DE, Kodierte Diagnose)
 * insert Translation(supportingInfo[codedCondition] ^short, en-US, Coded condition)
 * insert Translation(supportingInfo[codedCondition] ^definition, de-DE, Verweis auf kodierte Diagnosen)
 * insert Translation(supportingInfo[codedCondition] ^definition, en-US, Reference to coded diagnoses) 
-                      and anamnesis 0.. MS
+                      
 * insert Label(supportingInfo[anamnesis], Anamnese, Verweis auf die Anamnese)
 * insert Translation(supportingInfo[anamnesis] ^short, de-DE, Anamnese)
 * insert Translation(supportingInfo[anamnesis] ^short, en-US, Anamnesis)
 * insert Translation(supportingInfo[anamnesis] ^definition, de-DE, Verweis auf die Anamnese)
 * insert Translation(supportingInfo[anamnesis] ^definition, en-US, Reference to anamnesis)
-                      and activeProblems 0.. MS
+                      
 * insert Label(supportingInfo[activeProblems], Aktive Probleme, Verweis auf aktive Probleme)
 * insert Translation(supportingInfo[activeProblems] ^short, de-DE, Aktive Probleme)
 * insert Translation(supportingInfo[activeProblems] ^short, en-US, Active problems)
 * insert Translation(supportingInfo[activeProblems] ^definition, de-DE, Verweis auf aktive Probleme)
 * insert Translation(supportingInfo[activeProblems] ^definition, en-US, Reference to active problems)
-                      and observations 0.. MS
+                      
 * insert Label(supportingInfo[observations], Beobachtungen, Verweis auf Messwerte und Beobachtungen)
 * insert Translation(supportingInfo[observations] ^short, de-DE, Beobachtungen)
 * insert Translation(supportingInfo[observations] ^short, en-US, Observations)
@@ -191,7 +191,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 * insert Translation(reasonCode ^short, en-US, Reason code)
 * insert Translation(reasonCode ^definition, de-DE, Kodierter Grund für die Überweisung)
 * insert Translation(reasonCode ^definition, en-US, Coded reason for referral) 
-  * ^short = "Coded representation of the reason for referral"
+
 
 //------------------------------------------------
 // Problem List Item 
@@ -285,9 +285,9 @@ Description: "Pathology Service Request Example"
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"
 * status = #completed
 * intent = #order
-* subject.reference = "Patient/12345"
-* encounter.reference = "Encounter/87687"
-* requester.reference = "Practitioner/34456"
+* subject = Reference(Patient/12345)
+* encounter = Reference(Encounter/87687)
+* requester = Reference(Practitioner/34456)
 * code = $SCT#44977009 "Cytopathology procedure, cell block preparation (procedure)"
 * supportingInfo[anamnesis] = Reference(mii-exa-patho-history-of-present-illness)
 * supportingInfo[activeProblems] = Reference(mii-exa-patho-active-problems-list)
@@ -303,9 +303,9 @@ Usage: #example
 // Kein Filler?
 * status = #completed
 * intent = #order
-* subject.reference = "Patient/12345"
-* encounter.reference = "Encounter/87687"
-* requester.reference = "Practitioner/34456"
+* subject = Reference(Patient/12345)
+* encounter = Reference(Encounter/87687)
+* requester = Reference(Practitioner/34456)
 * code = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
 * supportingInfo[anamnesis] = Reference(List/mii-exa-patho-history-of-present-illness)
 * supportingInfo[activeProblems] = Reference(List/mii-exa-patho-active-problems-list)
@@ -319,7 +319,7 @@ Title: "MII EXA Patho Problem List Item 1"
 Description: "Pathology Problem List Item Example"
 * category[problem-list-item] = $cs-hl7-condition-category#problem-list-item
 * code = $SCT#363346000 "Malignant neoplastic disease (disorder)"
-* subject.reference = "Patient/12345"
+* subject = Reference(Patient/12345)
 
 Instance: mii-exa-patho-problem-list-item-2
 InstanceOf: mii-pr-patho-problem-list-item
@@ -328,7 +328,7 @@ Title: "MII EXA Patho Problem List Item 2"
 Description: "Pathology Problem List Item Example"
 * category[problem-list-item] = $cs-hl7-condition-category#problem-list-item
 * code = $SCT#266987004 "History of malignant neoplasm (situation)"
-* subject.reference = "Patient/12345"
+* subject = Reference(Patient/12345)
 
 Instance: mii-exa-patho-history-of-present-illness
 InstanceOf: mii-pr-patho-history-of-present-illness
@@ -338,7 +338,7 @@ Description: "Pathology History of Present Illness List Example"
 * status = #current 
 * mode = #snapshot
 * code = $LOINC#8684-3 "History of Present illness"
-* subject.reference = "Patient/12345"
+* subject = Reference(Patient/12345)
 * entry.item = Reference(mii-exa-patho-problem-list-item-2)
 
 Instance: mii-exa-patho-active-problems-list
@@ -349,5 +349,5 @@ Description: "Pathology Active Problems List List Example"
 * status = #current 
 * mode = #snapshot
 * code = $LOINC#11450-4 "Problem list - Reported"
-* subject.reference = "Patient/12345"
+* subject = Reference(Patient/12345)
 * entry.item = Reference(mii-exa-patho-problem-list-item-1)

@@ -6,7 +6,7 @@
   "title": "MII VS Patho Collection Method [SNOMED CT]",
   "description": "ValueSet for the clinical collection method",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct",
-  "version": "2025.0.0",
+  "version": "2026.0.0",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {

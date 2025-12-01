@@ -67,10 +67,10 @@ Description: "Instantiable Observation to describe a generic pathology finding"
 * insert Translation(hasMember ^short, en-US, Has member)
 * insert Translation(hasMember ^definition, de-DE, Zum Untersuchungs-/Beobachtungspanel zugehörige Beobachtung / QuestionnaireResponse)
 * insert Translation(hasMember ^definition, en-US, Observation / QuestionnaireResponse belonging to the examination/observation panel)
-* insert Label(derivedFrom, Abgeleitet von, Referenz auf eine Messung / ein Bild / eine QuestionnaireResponse / ein Dokument, von dem die Beobachtung abgeleitet wurde)
+* insert Label(derivedFrom, Abgeleitet von, Referenz auf eine Messung / ein Bild / eine QuestionnaireResponse / ein Dokument von dem die Beobachtung abgeleitet wurde)
 * insert Translation(derivedFrom ^short, de-DE, Abgeleitet von)
 * insert Translation(derivedFrom ^short, en-US, Derived from)
-* insert Translation(derivedFrom ^definition, de-DE, Referenz auf eine Messung / ein Bild / eine QuestionnaireResponse / ein Dokument, von dem die Beobachtung abgeleitet wurde)
+* insert Translation(derivedFrom ^definition, de-DE, Referenz auf eine Messung / ein Bild / eine QuestionnaireResponse / ein Dokument von dem die Beobachtung abgeleitet wurde)
 * insert Translation(derivedFrom ^definition, en-US, Reference to a measurement / image / QuestionnaireResponse / document from which the observation was derived)
 
 * category contains section-type 1..1 MS

@@ -86,7 +86,7 @@
   ],
   "title": "Pathologie Befundbericht",
   "custodian": {
-    "reference": "Organization/12345"
+    "reference": "Organization/123456"
   },
   "event": [
     {

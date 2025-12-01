@@ -31,16 +31,16 @@ Description: "Defines the general pathology report structure for German hospital
   * ^slicing.discriminator.path = "$this.type"
   * ^slicing.rules = #open
 * identifier contains Set-ID 1..1 MS
-* insert Label(identifier[Set-ID], Set-ID, Befundnummer (Eingangsnummer, Fallnummer, Filler order number, Accession number))
-* insert Translation(identifier[Set-ID] ^short, de-DE, Set-ID)
-* insert Translation(identifier[Set-ID] ^short, en-US, Set-ID)
-* insert Translation(identifier[Set-ID] ^definition, de-DE, Befundnummer (Eingangsnummer, Fallnummer, Filler order number, Accession number))
-* insert Translation(identifier[Set-ID] ^definition, en-US, Accession number of the report)
 * identifier[Set-ID] 
   * type 1.. MS
   * type = $v2-0203#ACSN "Accession ID"
   * value 1.. MS
   * system 1.. MS
+* insert Label(identifier[Set-ID], Set-ID, Befundnummer oder Eingangsnummer des Befundes)
+* insert Translation(identifier[Set-ID] ^short, de-DE, Set-ID)
+* insert Translation(identifier[Set-ID] ^short, en-US, Set-ID)
+* insert Translation(identifier[Set-ID] ^definition, de-DE, Befundnummer oder Eingangsnummer des Befundes)
+* insert Translation(identifier[Set-ID] ^definition, en-US, Accession number of the report)
 // Referenz zum Untersuchungsauftrag
 * basedOn 1.. MS
 * insert Label(basedOn, Untersuchungsauftrag, Verweis auf den zugehörigen Untersuchungsauftrag)
@@ -133,12 +133,7 @@ Description: "Defines the general pathology report structure for German hospital
 * result ^slicing.discriminator[=].path = "resolve().code"
 * result ^slicing.rules = #closed
 * result ^slicing.ordered = true
-* result contains 
-      intraoperative-observations 0..1 MS
-      and macroscopic-observations 0..1 MS
-      and microscopic-observations 0..1 MS
-      and additional-observations 0..1 MS
-      and diagnostic-conclusion 1..1 MS
+* result contains intraoperative-observations 0..1 MS and macroscopic-observations 0..1 MS and microscopic-observations 0..1 MS and additional-observations 0..1 MS and diagnostic-conclusion 1..1 MS
 * insert Label(result[intraoperative-observations], Intraoperative Beobachtungen, Verweis auf intraoperative Beobachtungen)
 * insert Translation(result[intraoperative-observations] ^short, de-DE, Intraoperative Beobachtungen)
 * insert Translation(result[intraoperative-observations] ^short, en-US, Intraoperative observations)
@@ -235,16 +230,16 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(extension[document-version] ^definition, de-DE, Versionsnummer des Dokuments)
 * insert Translation(extension[document-version] ^definition, en-US, Version number of the document)
 * identifier 1.. MS
+  * type 1.. MS
+  * type.coding = $v2-0203#ACSN "Accession ID"
 * insert Label(identifier, Identifikator, Eindeutiger Identifikator)
 * insert Translation(identifier ^short, de-DE, Identifikator)
 * insert Translation(identifier ^short, en-US, Identifier)
 * insert Translation(identifier ^definition, de-DE, Eindeutiger Identifikator)
 * insert Translation(identifier ^definition, en-US, Unique identifier)
-  * type 1.. MS
-  * type.coding = $v2-0203#ACSN "Accession ID"
 
-* type.coding contains 
-    sct 0..1 MS
+
+* type.coding contains sct 0..1 MS
 * insert Label(type.coding[sct], SNOMED CT Typ, SNOMED CT Kodierung für Dokumenttyp)
 * insert Translation(type.coding[sct] ^short, de-DE, SNOMED CT Typ)
 * insert Translation(type.coding[sct] ^short, en-US, SNOMED CT type)
@@ -252,7 +247,7 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(type.coding[sct] ^definition, en-US, SNOMED CT coding for document type)
 
 * type.coding[sct].system 1.. MS
-* type.coding[sct].system ^pattern = $SCT
+* type.coding[sct].system = $SCT (exactly)
 * type.coding[sct] from mii-vs-patho-composition-type-snomed-ct (extensible)
 * type.coding[sct].code 1.. MS
 
@@ -265,8 +260,8 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * status ^comment = "Bereits in Subsysteme auf 1..1 & Fixed Value auf final"
 
 // KORREKTE CATEGORY SLICING DEFINITION
-* category.coding ^slicing.discriminator.type = #value
-* category.coding ^slicing.discriminator.path = "system" 
+* category.coding ^slicing.discriminator.type = #pattern
+* category.coding ^slicing.discriminator.path = "$this" 
 * category.coding ^slicing.rules = #open
 * category.coding contains sct 0..1 MS
 * insert Label(category.coding[sct], SNOMED CT Kategorie, SNOMED CT Kodierung für Dokumentkategorie)
@@ -294,13 +289,13 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * attester ^slicing.discriminator.path = "$this.mode"
 * attester ^slicing.rules = #open
 * attester ^slicing.ordered = false
-* attester contains legal 1.. MS
+* attester contains legal 1.. MS and content-validator 0..* MS
 * insert Label(attester[legal], Rechtlicher Bestätiger, Rechtliche Bestätigung des Berichts)
 * insert Translation(attester[legal] ^short, de-DE, Rechtlicher Bestätiger)
 * insert Translation(attester[legal] ^short, en-US, Legal attester)
 * insert Translation(attester[legal] ^definition, de-DE, Rechtliche Bestätigung des Berichts)
 * insert Translation(attester[legal] ^definition, en-US, Legal attestation of the report) 
-                and content-validator 0..* MS
+  
 * insert Label(attester[content-validator], Inhaltssprüfer, Inhaltliche Prüfung des Berichts)
 * insert Translation(attester[content-validator] ^short, de-DE, Inhaltssprüfer)
 * insert Translation(attester[content-validator] ^short, en-US, Content validator)
@@ -331,13 +326,14 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(custodian ^definition, de-DE, Verwaltende Organisation)
 * insert Translation(custodian ^definition, en-US, Managing organization)
 * relatesTo MS
-* insert Label(relatesTo, Bezieht sich auf, Beziehung zu anderen Dokumenten z.B. Vor-, Zusatz-, und/oder Korrekturbefunde)
-* insert Translation(relatesTo ^short, de-DE, Bezieht sich auf)
-* insert Translation(relatesTo ^short, en-US, Relates to)
-* insert Translation(relatesTo ^definition, de-DE, Beziehung zu anderen Dokumenten z.B. Vor-, Zusatz-, und/oder Korrekturbefunde)
-* insert Translation(relatesTo ^definition, en-US, Relationship to other documents) 
   * code MS
   * targetReference MS
+* insert Label(relatesTo, Bezieht sich auf, Beziehung zu anderen Dokumenten z.B. Vor- Zusatz- und/oder Korrekturbefunde)
+* insert Translation(relatesTo ^short, de-DE, Bezieht sich auf)
+* insert Translation(relatesTo ^short, en-US, Relates to)
+* insert Translation(relatesTo ^definition, de-DE, Beziehung zu anderen Dokumenten z.B. Vor- Zusatz- und/oder Korrekturbefunde)
+* insert Translation(relatesTo ^definition, en-US, Relationship to other documents) 
+
 * event 1.. MS
 * insert Label(event, Referenz auf Untersuchungsauftrag, Referenz auf den auslösenden Untersuchungsauftrag)
 * insert Translation(event ^short, de-DE, Ereignis)
@@ -346,25 +342,10 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(event ^definition, en-US, Documentation event)
 // Entry referenziert nur auf MII_PR_Patho_Report
 * section 
-  * code 1.. MS
-  * insert Label(code, Code, Abschnittscode)
-  * insert Translation(code ^short, de-DE, Code)
-  * insert Translation(code ^short, en-US, Code)
-  * insert Translation(code ^definition, de-DE, Abschnittscode)
-  * insert Translation(code ^definition, en-US, Section code)
-    * coding 1.. MS
-    * insert Label(coding, Kodierung, Abschnitts-Kodierung)
-    * insert Translation(coding ^short, de-DE, Kodierung)
-    * insert Translation(coding ^short, en-US, Coding)
-    * insert Translation(coding ^definition, de-DE, Abschnitts-Kodierung)
-    * insert Translation(coding ^definition, en-US, Section coding)
-    * coding from mii-vs-patho-all-loinc (required)
-  * entry 1.. MS
-  * insert Label(entry, Eintrag, Abschnittseintrag)
-  * insert Translation(entry ^short, de-DE, Eintrag)
-  * insert Translation(entry ^short, en-US, Entry)
-  * insert Translation(entry ^definition, de-DE, Abschnittseintrag)
-  * insert Translation(entry ^definition, en-US, Section entry)
+* section.code 1.. MS
+* section.code.coding 1.. MS
+* section.code.coding from mii-vs-patho-all-loinc (required)
+* section.entry 1.. MS
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this.code.coding"
 * section ^slicing.rules = #open
@@ -374,7 +355,7 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(section[patho-diagnostic-report] ^short, en-US, Pathology diagnostic report)
 * insert Translation(section[patho-diagnostic-report] ^definition, de-DE, Pathologie-Diagnostikbericht)
 * insert Translation(section[patho-diagnostic-report] ^definition, en-US, Pathology diagnostic report)
-          // and additional-diagnostic-report 0..* MS
+// and additional-diagnostic-report 0..* MS
 * section[patho-diagnostic-report]
   * code 1.. MS
     * coding 1.. MS
@@ -400,10 +381,10 @@ Description: "Example for MII_PR_Patho_Report"
 * basedOn = Reference(mii-exa-patho-request)
 * status = #final
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
-* subject.reference = "Patient/12345"
-* performer.reference = "Practitioner/2346545"
+* subject = Reference(Patient/12345)
+* performer = Reference(Practitioner/2346545)
 * specimen = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
-* encounter.reference = "Encounter/12345"
+* encounter = Reference(Encounter/12345)
 * result[macroscopic-observations] = Reference(mii-exa-patho-macro-grouper-a)
 * result[macroscopic-observations] = Reference(mii-exa-patho-macro-grouper-b)
 * result[microscopic-observations] = Reference(mii-exa-patho-micro-grouper-a)
@@ -428,10 +409,10 @@ Usage: #example
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology synoptic report"
 * basedOn = Reference(ServiceRequest/mii-exa-patho-request)
 * status = #final
-* subject.reference = "Patient/12345"
-* performer.reference = "Practitioner/2346545"
+* subject = Reference(Patient/12345)
+* performer = Reference(Practitioner/2346545)
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
-* encounter.reference = "Encounter/12345"
+* encounter = Reference(Encounter/12345)
 * result[macroscopic-observations] = Reference(Observation/mii-exa-patho-macro-grouper-a)
 * result[microscopic-observations] = Reference(Observation/mii-exa-patho-micro-grouper-a)
 * result[diagnostic-conclusion] = Reference(Observation/mii-exa-patho-diagnostic-conclusion-grouper)
@@ -492,15 +473,15 @@ Description: "Example for an MII_PR_Patho_Composition"
 * identifier.extension.valueUrl = "#befund-eingangsnummer"
 * type = $LOINC#11526-1 "Pathology study"
 * type.text = "Pathologie-Befundbericht"
-* subject.reference = "Patient/34545"
-* encounter.reference = "Encounter/34555"
+* subject = Reference(Patient/34545)
+* encounter = Reference(Encounter/34555)
 * date = "2021-06-08"
-* author[+].reference = "Practitioner/2346545"
+* author[+] = Reference(Practitioner/2346545)
 * author[=].display = "Dr. Name"
 * title = "Pathologie Befundbericht"
-* custodian.reference = "Organization/12345"
+* custodian = Reference(Organization/12345)
 * attester[legal].mode = #legal
-* attester[legal].party.reference = "Practitioner/765879"
+* attester[legal].party = Reference(Practitioner/765879)
 * event.period.start = "2021-06-05"
 * event.period.end = "2021-06-08"
 * section[patho-diagnostic-report]
@@ -569,7 +550,7 @@ Usage: #example
 * type = $LOINC#11526-1 "Pathology study"
 * type.text = "Pathologie-Befundbericht"
 * attester[legal].mode = #legal
-* attester[legal].party.reference = "Practitioner/765879"
+* attester[legal].party = Reference(Practitioner/765879)
 * section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"
 * section[patho-diagnostic-report].title = "Pathology Diagnostic Report"
 * section[patho-diagnostic-report].text.status = #additional
@@ -580,12 +561,12 @@ Usage: #example
 * identifier.type = $v2-0203#ACSN "Accession ID"
 //* identifier.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* identifier.extension.valueUrl = "#befund-eingangsnummer"
-* subject.reference = "Patient/34545"
-* encounter.reference = "Encounter/34555"
+* subject = Reference(Patient/34545)
+* encounter = Reference(Encounter/34555)
 * date = "2021-06-08"
-* author[+].reference = "Practitioner/2346545"
+* author[+] = Reference(Practitioner/2346545)
 * author[=].display = "Dr. Name"
 * title = "Pathologie Befundbericht"
-* custodian.reference = "Organization/12345"
+* custodian = Reference(Organization/123456)
 * event.period.start = "2021-06-05"
 * event.period.end = "2021-06-08"

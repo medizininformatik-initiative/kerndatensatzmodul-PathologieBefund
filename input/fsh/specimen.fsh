@@ -24,13 +24,13 @@ Description: "Pathology specimen (based on Biobank module)"
 * identifier ^slicing.discriminator[0].path = "$this.type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Contains slices for the request's placer- and filler IDs based on type.coding pattern"
-* identifier contains Placer-ID 0..1 MS
+* identifier contains Placer-ID 0..1 MS and Filler-ID 0..1 MS
 * insert Label(identifier[Placer-ID], Auftraggeber-ID, Identifikator des Auftraggebers)
 * insert Translation(identifier[Placer-ID] ^short, de-DE, Auftraggeber-ID)
 * insert Translation(identifier[Placer-ID] ^short, en-US, Placer ID)
 * insert Translation(identifier[Placer-ID] ^definition, de-DE, Identifikator des Auftraggebers)
 * insert Translation(identifier[Placer-ID] ^definition, en-US, Identifier of the placer) 
-                    and Filler-ID 0..1 MS
+                    
 * insert Label(identifier[Filler-ID], Auftragnehmer-ID, Identifikator des Auftragnehmers)
 * insert Translation(identifier[Filler-ID] ^short, de-DE, Auftragnehmer-ID)
 * insert Translation(identifier[Filler-ID] ^short, en-US, Filler ID)
@@ -63,19 +63,20 @@ Description: "Pathology specimen (based on Biobank module)"
 * accessionIdentifier ^definition = "Laborinterner Identifikator, wird vergeben bei Eingang"
 * collection
   * method 1.. MS
+  * method from mii-vs-patho-collection-method-snomed-ct (extensible)
+  * bodySite.extension contains $us-mcode-body-location-qualifier named locationQualifier 0..* MS and $us-mcode-laterality-qualifier named lateralityQualifier 0..1 MS
   * insert Label(method, Entnahmemethode, Methode der Probenentnahme)
   * insert Translation(method ^short, de-DE, Entnahmemethode)
   * insert Translation(method ^short, en-US, Collection method)
   * insert Translation(method ^definition, de-DE, Methode der Probenentnahme)
   * insert Translation(method ^definition, en-US, Method of specimen collection)
-  * method from mii-vs-patho-collection-method-snomed-ct (extensible)
-  * bodySite.extension contains $us-mcode-body-location-qualifier named locationQualifier 0..* MS
+
   * insert Label(bodySite.extension[locationQualifier], Lagequalifikator, Qualifikator für die anatomische Lage)
   * insert Translation(bodySite.extension[locationQualifier] ^short, de-DE, Lagequalifikator)
   * insert Translation(bodySite.extension[locationQualifier] ^short, en-US, Location qualifier)
   * insert Translation(bodySite.extension[locationQualifier] ^definition, de-DE, Qualifikator für die anatomische Lage)
   * insert Translation(bodySite.extension[locationQualifier] ^definition, en-US, Qualifier for anatomical location)
-                       and $us-mcode-laterality-qualifier named lateralityQualifier 0..1 MS
+                       
   * insert Label(bodySite.extension[lateralityQualifier], Seitlichkeitsqualifikator, Qualifikator für die Körperseite)
   * insert Translation(bodySite.extension[lateralityQualifier] ^short, de-DE, Seitlichkeitsqualifikator)
   * insert Translation(bodySite.extension[lateralityQualifier] ^short, en-US, Laterality qualifier)
@@ -86,12 +87,13 @@ Description: "Pathology specimen (based on Biobank module)"
   * procedure from mii-vs-patho-processing-procedure-snomed-ct (extensible)
   * additive only Reference($mii-bio-additive)
 * container MS
+  * type from mii-vs-patho-container-type-snomed-ct (required)
 * insert Label(container, Behälter, Probenbehälter)
 * insert Translation(container ^short, de-DE, Behälter)
 * insert Translation(container ^short, en-US, Container)
 * insert Translation(container ^definition, de-DE, Probenbehälter)
 * insert Translation(container ^definition, en-US, Specimen container)
-  * type from mii-vs-patho-container-type-snomed-ct (required)
+
 /*
 // Examples
 Instance: mii-exa-patho-prostate-tru-cut-biopsy-sample
@@ -120,11 +122,11 @@ Description: "Prostate tru-cut biopsy sample (specimen)"
   * value = "E12345_21"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#309134005 "Prostate tru-cut biopsy sample"
-* subject.reference = "Patient/12345"
-* parent.reference = "Specimen/E12345_21"
+* subject = Reference(Patient/12345)
+* parent = Reference(Specimen/E12345_21)
 * request = Reference(mii-exa-patho-request)
 * collection
-  * collector.reference = "Practitioner/2346545"
+  * collector = Reference(Practitioner/2346545)
   * collectedDateTime = "2021-01-29T06:15:00Z"
   * method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
   * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -166,11 +168,11 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
   * value = "E12345_21"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#787150001 "Stained slide of tissue section (specimen)"
-* subject.reference = "Patient/12345"
+* subject = Reference(Patient/12345)
 * parent = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
 * request = Reference(mii-exa-patho-request)
 * collection
-  * collector.reference = "Practitioner/2346545"
+  * collector = Reference(Practitioner/2346545)
   * collectedDateTime = "2021-01-29T06:15:00Z"
   * method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
   * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -228,9 +230,9 @@ Usage: #example
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht" // (Accession identifier nicht zu verwenden im Untersuchungsauftrag) - angehangen
 * type = $SCT#309134005 "Prostate tru-cut biopsy sample"
-* subject.reference = "Patient/12345"
+* subject = Reference(Patient/12345)
 * request = Reference(mii-exa-patho-request)
-* collection.collector.reference = "Practitioner/2346545"
+* collection.collector = Reference(Practitioner/2346545)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
 * collection.method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
 * collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -255,10 +257,10 @@ Usage: #example
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#1201985008 "Tissue block specimen (specimen)"
-* subject.reference = "Patient/12345"
+* subject = Reference(Patient/12345)
 * parent = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
 * request = Reference(mii-exa-patho-request)
-* collection.collector.reference = "Practitioner/21234"
+* collection.collector = Reference(Practitioner/21234)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
 * collection.method = $SCT#168126000 "Sample macroscopy (procedure)"
 * collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -283,10 +285,10 @@ Usage: #example
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#430856003 "Tissue section (specimen)"
-* subject.reference = "Patient/12345"
+* subject = Reference(Patient/12345)
 * parent = Reference(mii-exa-patho-prostate-biopsy-block)
 * request = Reference(mii-exa-patho-request)
-* collection.collector.reference = "Practitioner/2346545"
+* collection.collector = Reference(Practitioner/2346545)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
 * collection.method = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
 * collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -313,10 +315,10 @@ Usage: #example
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#430856003 "Tissue section (specimen)"
-* subject.reference = "Patient/12345"
+* subject = Reference(Patient/12345)
 * parent = Reference(mii-exa-patho-prostate-biopsy-block)
 * request = Reference(mii-exa-patho-request)
-* collection.collector.reference = "Practitioner/1234"
+* collection.collector = Reference(Practitioner/1234)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
 * collection.method = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
 * collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"

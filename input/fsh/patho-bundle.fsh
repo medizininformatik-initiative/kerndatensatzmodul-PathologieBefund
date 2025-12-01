@@ -39,25 +39,25 @@ Description: "A Document-Bundle to wrap the composition and other patho-instance
 * insert Translation(entry[Patient] ^short, en-US, Patient entry)
 * insert Translation(entry[Patient] ^definition, de-DE, Slice zur Hinterlegung der zugehörigen Patient-Instanz)
 * insert Translation(entry[Patient] ^definition, en-US, Entry for the patient)
-* entry contains ServiceRequest  0..1 MS
+* entry contains ServiceRequest  0..1 MS and Specimen 1..* MS and DiagnosticReport 1..* MS and Observations 1..* MS
 * insert Label(entry[ServiceRequest], Slice für ServiceRequest, Slice zur Hinterlegung der zugehörigen ServiceRequest-Instanz)
 * insert Translation(entry[ServiceRequest] ^short, de-DE, Slice für ServiceRequest)
 * insert Translation(entry[ServiceRequest] ^short, en-US, ServiceRequest entry)
 * insert Translation(entry[ServiceRequest] ^definition, de-DE, Slice zur Hinterlegung der zugehörigen ServiceRequest-Instanz)
 * insert Translation(entry[ServiceRequest] ^definition, en-US, Entry for the examination request) 
-        and Specimen 1..* MS
+
 * insert Label(entry[Specimen], Slice für Specimen, Slice zur Hinterlegung der zugehörigen Specimen-Instanz)
 * insert Translation(entry[Specimen] ^short, de-DE, Slice für Specimen)
 * insert Translation(entry[Specimen] ^short, en-US, Specimen entry)
 * insert Translation(entry[Specimen] ^definition, de-DE, Slice zur Hinterlegung der zugehörigen Specimen-Instanz)
 * insert Translation(entry[Specimen] ^definition, en-US, Entry for the specimens) 
-        and DiagnosticReport 1..* MS
+
 * insert Label(entry[DiagnosticReport], Slice für DiagnosticReport, Slice zur Hinterlegung der zugehörigen DiagnosticReport-Instanz)
 * insert Translation(entry[DiagnosticReport] ^short, de-DE, Slice für DiagnosticReport)
 * insert Translation(entry[DiagnosticReport] ^short, en-US, DiagnosticReport entry)
 * insert Translation(entry[DiagnosticReport] ^definition, de-DE, Slice zur Hinterlegung der zugehörigen DiagnosticReport-Instanz)
 * insert Translation(entry[DiagnosticReport] ^definition, en-US, Entry for the diagnostic report) 
-        and Observations 1..* MS
+
 * insert Label(entry[Observations], Slice für Observations, Slice zur Hinterlegung der zugehörigen Observation-Instanzen)
 * insert Translation(entry[Observations] ^short, de-DE, Slice für Observations)
 * insert Translation(entry[Observations] ^short, en-US, Observations entry)

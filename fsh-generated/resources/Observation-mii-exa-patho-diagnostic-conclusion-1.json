@@ -37,7 +37,8 @@
     "coding": [
       {
         "code": "8140/3",
-        "system": "http://terminology.hl7.org/CodeSystem/icd-o-3"
+        "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+        "display": "Adenokarzinom o.n.A."
       }
     ]
   }

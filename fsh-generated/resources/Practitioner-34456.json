@@ -1,0 +1,51 @@
+{
+  "resourceType": "Practitioner",
+  "id": "34456",
+  "identifier": [
+    {
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "code": "PRN",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display": "Provider number"
+          }
+        ]
+      },
+      "value": "34456",
+      "system": "http://example-hospital.de/practitioner-id"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Schmidt",
+      "given": [
+        "Dr. Hans"
+      ],
+      "prefix": [
+        "Dr."
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "h.schmidt@example-hospital.de"
+    }
+  ],
+  "qualification": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "309343006",
+            "system": "http://snomed.info/sct",
+            "display": "Physician"
+          }
+        ]
+      }
+    }
+  ]
+}
