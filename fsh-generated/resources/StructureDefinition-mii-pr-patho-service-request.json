@@ -1152,7 +1152,7 @@
           "discriminator": [
             {
               "type": "type",
-              "path": "resolve()"
+              "path": "reference"
             },
             {
               "type": "profile",

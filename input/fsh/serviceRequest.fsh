@@ -130,7 +130,7 @@ Description: "Order for the analysis of a sample or a group of samples."
 * insert Translation(supportingInfo ^definition, en-US, Supporting clinical information)
 * supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
 * supportingInfo ^slicing.discriminator[0].type = #type
-* supportingInfo ^slicing.discriminator[0].path = "resolve()"
+* supportingInfo ^slicing.discriminator[0].path = "reference"
 * supportingInfo ^slicing.discriminator[1].type = #profile
 * supportingInfo ^slicing.discriminator[1].path = "resolve()"
 * supportingInfo ^slicing.rules = #open
