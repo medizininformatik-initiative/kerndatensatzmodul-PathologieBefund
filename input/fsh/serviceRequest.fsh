@@ -129,8 +129,8 @@ Description: "Order for the analysis of a sample or a group of samples."
 * insert Translation(supportingInfo ^definition, de-DE, Unterstützende klinische Informationen)
 * insert Translation(supportingInfo ^definition, en-US, Supporting clinical information)
 * supportingInfo ^short = "Reference to history of present illness (anamnesis), active problems and diagnostic data"
-* supportingInfo ^slicing.discriminator.type = #type  
-* supportingInfo ^slicing.discriminator.path = "$this" 
+* supportingInfo ^slicing.discriminator.type = #value  
+* supportingInfo ^slicing.discriminator.path = "resolve()" 
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false
 * supportingInfo contains codedCondition 0.. MS and anamnesis 0.. MS and activeProblems 0.. MS and observations 0.. MS

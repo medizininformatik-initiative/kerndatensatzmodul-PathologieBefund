@@ -1151,8 +1151,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "type",
-              "path": "$this"
+              "type": "value",
+              "path": "reference.resolve()"
             }
           ],
           "rules": "open",
