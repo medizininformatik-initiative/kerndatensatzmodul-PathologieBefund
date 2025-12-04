@@ -6,7 +6,7 @@
   "title": "MII VS Patho Report Category HL7",
   "description": "ValueSet for the categorization of Pathology Report documents",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7",
-  "version": "2025.0.0",
+  "version": "2026.0.0",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {

@@ -3,18 +3,16 @@ RuleSet: AddInteraction(interaction, expectation)
 * interaction[=].extension.url = $fhir-capabilitystatement-expectation
 * interaction[=].extension.valueCode = {expectation}
 
-RuleSet: AddProfile(profile, expectation)
+RuleSet: AddProfile(profile, expectation) // nicht möglich
 * profile[+] = "http://hl7.org/fhir/StructureDefinition/{profile}"
 * profile[=].extension.url = $fhir-capabilitystatement-expectation
 * profile[=].extension.valueCode = {expectation}
 
-RuleSet: InitResource(resource-type, resource-expectation, profile, profile-expectation)
+RuleSet: InitResource(resource-type, resource-expectation)
 * type = {resource-type}
 * extension.url = $fhir-capabilitystatement-expectation
 * extension.valueCode = {resource-expectation}
-* profile[+] = "http://hl7.org/fhir/StructureDefinition/{profile}"
-* profile[=].extension.url = $fhir-capabilitystatement-expectation
-* profile[=].extension.valueCode = {profile-expectation}
+
 
 RuleSet: AddSupportedProfile(profile, expectation)
 * supportedProfile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/{profile}"

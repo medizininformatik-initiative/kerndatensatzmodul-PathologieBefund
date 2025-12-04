@@ -29,8 +29,7 @@
     "coding": [
       {
         "code": "94734-1",
-        "system": "http://loinc.org",
-        "display": "Prostate cancer grade group [Score] in Prostate tumor Qualitative"
+        "system": "http://loinc.org"
       }
     ]
   },
@@ -39,7 +38,7 @@
       {
         "code": "LA30794-4",
         "system": "http://loinc.org",
-        "display": "Grade 1"
+        "display": "ISUP Grade (Grade Group) 1 (Gleason score <=6)"
       }
     ]
   }

@@ -1,0 +1,36 @@
+{
+  "resourceType": "Encounter",
+  "id": "12345",
+  "identifier": [
+    {
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "code": "VN",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display": "Visit number"
+          }
+        ]
+      },
+      "value": "12345",
+      "system": "http://example-hospital.de/encounter-id"
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "code": "IMP",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "inpatient encounter"
+  },
+  "subject": {
+    "reference": "Patient/12345"
+  },
+  "period": {
+    "start": "2021-01-28T08:00:00Z",
+    "end": "2021-02-05T14:30:00Z"
+  },
+  "serviceProvider": {
+    "reference": "Organization/123456"
+  }
+}
