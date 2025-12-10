@@ -1,6 +1,6 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.patho",
-  "version": "1.0.0",
+  "version": "2026.0.0-rc1",
   "description": "Medizininformatik Initiative - Modul Pathologie",
   "author": "juliansass",
   "fhirVersions": [
