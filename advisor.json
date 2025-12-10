@@ -5,6 +5,6 @@
     "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
     "UNABLE_TO_INFER_CODESYSTEM@StructureDefinition.*",
     "Terminology_TX_NoValid_16@StructureDefinition.*",
-    "*@Specimen.processing.*"
+    "The slice definition for Specimen.processing:lagerprozess.extension has a minimum of 0 but the slices add up to a minimum of 1"
   ]
 }
