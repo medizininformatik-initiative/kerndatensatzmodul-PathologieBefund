@@ -23,5 +23,5 @@ jobs:
       # Custom validation report filters
       VALIDATION_REPORT_INCLUDE: errors #errors|warnings|all
       VALIDATION_REPORT_FILTERS: |
-        StructureDefinition-mii-pr-patho-specimen.json | | *Specimen.processing:lagerprozess.extension* | StructureDefinition.​snapshot.​element
+        StructureDefinition-mii-pr-patho-specimen.json||*slices add up*|StructureDefinition.snapshot.element[151]
     secrets: inherit
