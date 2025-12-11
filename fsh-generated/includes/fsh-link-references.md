@@ -1,8 +1,4 @@
 [mii-exa-patho-canadabalsam]: Substance-mii-exa-patho-canadabalsam.html
-[mii-exa-patho-eosin-y]: Substance-mii-exa-patho-eosin-y.html
-[mii-exa-patho-hematoxylin-stain]: Substance-mii-exa-patho-hematoxylin-stain.html
-[mii-exa-patho-microscope-slide-mounting-medium]: Substance-mii-exa-patho-microscope-slide-mounting-medium.html
-[mii-exa-patho-neutral-buffered-formalin]: Substance-mii-exa-patho-neutral-buffered-formalin.html
 [mii-exa-patho-p63-stain]: Substance-mii-exa-patho-p63-stain.html
 [mii-exa-patho-paraffin]: Substance-mii-exa-patho-paraffin.html
 [12345]: Encounter-12345.html
@@ -39,7 +35,6 @@
 [MII_PR_Patho_Report]: StructureDefinition-mii-pr-patho-report.html
 [MII_PR_Patho_Section_Grouper]: StructureDefinition-mii-pr-patho-section-grouper.html
 [MII_PR_Patho_Service_Request]: StructureDefinition-mii-pr-patho-service-request.html
-[MII_PR_Patho_Specimen]: StructureDefinition-mii-pr-patho-specimen.html
 [MII_VS_Patho_All_LOINC]: ValueSet-mii-vs-patho-all-loinc.html
 [MII_VS_Patho_Collection_Method_SNOMED_CT]: ValueSet-mii-vs-patho-collection-method-snomed-ct.html
 [MII_VS_Patho_Composition_Type_KDL]: ValueSet-mii-vs-patho-composition-type-kdl.html
@@ -61,11 +56,6 @@
 [mii-exa-patho-macro-grouper-a]: Observation-mii-exa-patho-macro-grouper-a.html
 [mii-exa-patho-micro-grouper-a]: Observation-mii-exa-patho-micro-grouper-a.html
 [mii-exa-patho-p63-a]: Observation-mii-exa-patho-p63-a.html
-[mii-exa-patho-p63-immunostain]: Substance-mii-exa-patho-p63-immunostain.html
-[mii-exa-patho-prostate-biopsy-block]: Specimen-mii-exa-patho-prostate-biopsy-block.html
-[mii-exa-patho-prostate-biopsy-schnitt-HE]: Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE.html
-[mii-exa-patho-prostate-biopsy-schnitt-p63]: Specimen-mii-exa-patho-prostate-biopsy-schnitt-p63.html
-[mii-exa-patho-prostate-tru-cut-biopsy-sample]: Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html
 [mii-exa-patho-report]: DiagnosticReport-mii-exa-patho-report.html
 [mii-exa-patho-request]: ServiceRequest-mii-exa-patho-request.html
 [mii-exa-patho-tissue-length-a]: Observation-mii-exa-patho-tissue-length-a.html
