@@ -29,8 +29,7 @@
     "coding": [
       {
         "code": "35266-6",
-        "system": "http://loinc.org",
-        "display": "Gleason score in Specimen Qualitative"
+        "system": "http://loinc.org"
       }
     ]
   },
@@ -38,8 +37,7 @@
     "coding": [
       {
         "code": "84556003",
-        "system": "http://snomed.info/sct",
-        "display": "Gleason grade score 6 out of 10 (finding)"
+        "system": "http://snomed.info/sct"
       }
     ]
   }

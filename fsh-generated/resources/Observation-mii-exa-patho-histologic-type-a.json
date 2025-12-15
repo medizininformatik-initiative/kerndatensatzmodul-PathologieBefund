@@ -29,8 +29,7 @@
     "coding": [
       {
         "code": "371441004",
-        "system": "http://snomed.info/sct",
-        "display": "Histologic type"
+        "system": "http://snomed.info/sct"
       }
     ]
   },
@@ -38,8 +37,7 @@
     "coding": [
       {
         "code": "45410002",
-        "system": "http://snomed.info/sct",
-        "display": "Acinar adenocarcinoma"
+        "system": "http://snomed.info/sct"
       }
     ]
   },

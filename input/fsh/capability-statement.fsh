@@ -15,12 +15,12 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format[+] = #xml
 * format[+] = #json
-* rest[+].mode = #server
+* rest.mode = #server
 //-------------------
 // Specimen
 //-------------------
-* rest[=].resource[+]
-  * insert InitResource(#Specimen, #SHALL, Specimen, #SHALL)
+* rest.resource[+]
+  * insert InitResource(#Specimen, #SHALL)
   * insert AddSupportedProfile(mii-pr-patho-specimen|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
@@ -52,8 +52,8 @@ Usage: #definition
 //-------------------
 // Observation
 //-------------------
-* rest[=].resource[+]
-  * insert InitResource(#Observation, #SHALL, Observation, #SHALL)
+* rest.resource[+]
+  * insert InitResource(#Observation, #SHALL)
   // * insert AddSupportedProfile(mii-pr-patho-base-observation, #SHALL)
   * insert AddSupportedProfile(mii-pr-patho-intraoperative-grouper|2025.0.0, #SHALL)
   * insert AddSupportedProfile(mii-pr-patho-macroscopic-grouper|2025.0.0, #SHALL)
@@ -94,8 +94,7 @@ Usage: #definition
   //* insert AddSearchParameter(#SHALL, "device", Observation-device, #reference, "The Device that generated the observation data")
   * insert AddSearchParameter(#SHALL, "encounter", clinical-encounter, #reference, "Encounter related to the observation")
   //* insert AddSearchParameter(#SHALL, "focus", Observation-focus, #reference, "The focus of an observation when the focus is not the patient of record")
-  * insert AddSearchParameter(#SHALL, "has-member", Observation-has-member, #reference, "	
-Related resource that belongs to the Observation group")
+  * insert AddSearchParameter(#SHALL, "has-member", Observation-has-member, #reference, "Related resource that belongs to the Observation group")
   * insert AddSearchParameter(#SHALL, "identifier", clinical-identifier, #token, "The unique id for a particular observation")
   * insert AddSearchParameter(#SHALL, "method", Observation-method, #token, "The method used for the observation")
   //* insert AddSearchParameter(#SHALL, "part-of", Observation-part-of, #reference, "Part of referenced event")
@@ -116,8 +115,8 @@ Related resource that belongs to the Observation group")
 //-------------------
 // ServiceRequest
 //-------------------
-* rest[=].resource[+]
-  * insert InitResource(#ServiceRequest, #SHALL, ServiceRequest, #SHALL)
+* rest.resource[+]
+  * insert InitResource(#ServiceRequest, #SHALL)
   * insert AddSupportedProfile(mii-pr-patho-service-request|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
@@ -153,8 +152,9 @@ Related resource that belongs to the Observation group")
 //-------------------
 // DiagnosticReport
 //-------------------
-* rest[=].resource[+]
-  * insert InitResource(#DiagnosticReport, #SHALL, DiagnosticReport, #SHALL)
+
+* rest.resource[+]
+  * insert InitResource(#DiagnosticReport, #SHALL)
   * insert AddSupportedProfile(mii-pr-patho-report|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
@@ -184,8 +184,8 @@ Related resource that belongs to the Observation group")
 //-------------------
 // Composition
 //-------------------
-* rest[=].resource[+]
-  * insert InitResource(#Composition, #SHALL, Composition, #SHALL)
+* rest.resource[+]
+  * insert InitResource(#Composition, #SHALL)
   * insert AddSupportedProfile(mii-pr-patho-composition|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
@@ -219,8 +219,8 @@ Related resource that belongs to the Observation group")
 //-------------------
 // Media
 //-------------------
-* rest[=].resource[+]
-  * insert InitResource(#Media, #SHALL, Media, #SHALL)
+* rest.resource[+]
+  * insert InitResource(#Media, #SHALL)
   * insert AddSupportedProfile(mii-pr-patho-attached-image|2025.0.0, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)

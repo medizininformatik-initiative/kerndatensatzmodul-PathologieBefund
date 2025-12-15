@@ -6,6 +6,15 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen"
     ]
   },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "430856003",
+        "display": "Tissue section (specimen)"
+      }
+    ]
+  },
   "processing": [
     {
       "extension": [
@@ -30,8 +39,8 @@
       "procedure": {
         "coding": [
           {
-            "code": "104210008",
             "system": "http://snomed.info/sct",
+            "code": "104210008",
             "display": "Hematoxylin and eosin stain method (procedure)"
           }
         ]
@@ -68,15 +77,6 @@
   "accessionIdentifier": {
     "value": "E12345_21",
     "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-  },
-  "type": {
-    "coding": [
-      {
-        "code": "430856003",
-        "system": "http://snomed.info/sct",
-        "display": "Tissue section (specimen)"
-      }
-    ]
   },
   "subject": {
     "reference": "Patient/12345"

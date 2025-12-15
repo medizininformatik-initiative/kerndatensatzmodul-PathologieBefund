@@ -8,6 +8,23 @@ Title: "MII PR Patho Intraoperative Grouper"
 Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert Translation(^title, de-DE, MII PR Patho Intraoperative Grouper)
+* insert Translation(^title, en-US, MII PR Patho Intraoperative Grouper)
+* insert Translation(^description, de-DE, Basierend auf IHE PaLM APSR - Intraoperative Beobachtungssektion)
+* insert Translation(^description, en-US, Based on IHE PaLM APSR - Intraoperative Observation Section)
+
+// Inherited mustSupport elements from section grouper
+* insert Label(text, Text, Narrative Darstellung)
+* insert Translation(text ^short, de-DE, Text)
+* insert Translation(text ^short, en-US, Text)
+* insert Translation(text ^definition, de-DE, Narrative Darstellung)
+* insert Translation(text ^definition, en-US, Narrative representation)
+* insert Label(hasMember[pathology-finding], Einzelbeobachtungen, Referenz zu Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^short, de-DE, Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^short, en-US, Pathology findings)
+* insert Translation(hasMember[pathology-finding] ^definition, de-DE, Referenz zu Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^definition, en-US, Reference to pathology findings)
+
 * code = $LOINC#83321-0
 
 // Example(s) TODO
@@ -23,6 +40,23 @@ Title: "MII PR Patho Macroscopic Grouper"
 Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert Translation(^title, de-DE, MII PR Patho Macroscopic Grouper)
+* insert Translation(^title, en-US, MII PR Patho Macroscopic Grouper)
+* insert Translation(^description, de-DE, Basierend auf IHE PaLM APSR - Makroskopischer Beobachtungsbefund)
+* insert Translation(^description, en-US, Based on IHE PaLM APSR - Macroscopic Observation Finding)
+
+// Inherited mustSupport elements from section grouper
+* insert Label(text, Text, Narrative Darstellung)
+* insert Translation(text ^short, de-DE, Text)
+* insert Translation(text ^short, en-US, Text)
+* insert Translation(text ^definition, de-DE, Narrative Darstellung)
+* insert Translation(text ^definition, en-US, Narrative representation)
+* insert Label(hasMember[pathology-finding], Einzelbeobachtungen, Referenz zu Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^short, de-DE, Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^short, en-US, Pathology findings)
+* insert Translation(hasMember[pathology-finding] ^definition, de-DE, Referenz zu Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^definition, en-US, Reference to pathology findings)
+
 * code = $LOINC#22634-0
 
 // Example(s)
@@ -75,6 +109,23 @@ Title: "MII PR Patho Microscopic Grouper"
 Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert Translation(^title, de-DE, MII PR Patho Microscopic Grouper)
+* insert Translation(^title, en-US, MII PR Patho Microscopic Grouper)
+* insert Translation(^description, de-DE, Basierend auf IHE PaLM APSR - Mikroskopischer Beobachtungsbefund)
+* insert Translation(^description, en-US, Based on IHE PaLM APSR - Microscopic Observation Finding)
+
+// Inherited mustSupport elements from section grouper
+* insert Label(text, Text, Narrative Darstellung)
+* insert Translation(text ^short, de-DE, Text)
+* insert Translation(text ^short, en-US, Text)
+* insert Translation(text ^definition, de-DE, Narrative Darstellung)
+* insert Translation(text ^definition, en-US, Narrative representation)
+* insert Label(hasMember[pathology-finding], Einzelbeobachtungen, Referenz zu Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^short, de-DE, Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^short, en-US, Pathology findings)
+* insert Translation(hasMember[pathology-finding] ^definition, de-DE, Referenz zu Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^definition, en-US, Reference to pathology findings)
+
 * code = $LOINC#22635-7
 
 // Example(s)
@@ -118,7 +169,24 @@ Title: "MII PR Patho Additional Specified Grouper"
 Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
 * insert PR_CS_VS_Version
 * insert Publisher
-* code = $LOINC#100969-5 // not able to validate code yet, should come with next LOINC release & update of FHIR term-server
+* insert Translation(^title, de-DE, MII PR Patho Additional Specified Grouper)
+* insert Translation(^title, en-US, MII PR Patho Additional Specified Grouper)
+* insert Translation(^description, de-DE, Basierend auf IHE PaLM APSR - Gruppierung für zusätzlich spezifizierte Beobachtungen)
+* insert Translation(^description, en-US, Based on IHE PaLM APSR - Grouper for additional specified Observations)
+
+// Inherited mustSupport elements from section grouper
+* insert Label(text, Text, Narrative Darstellung)
+* insert Translation(text ^short, de-DE, Text)
+* insert Translation(text ^short, en-US, Text)
+* insert Translation(text ^definition, de-DE, Narrative Darstellung)
+* insert Translation(text ^definition, en-US, Narrative representation)
+* insert Label(hasMember[pathology-finding], Einzelbeobachtungen, Referenz zu Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^short, de-DE, Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^short, en-US, Pathology findings)
+* insert Translation(hasMember[pathology-finding] ^definition, de-DE, Referenz zu Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^definition, en-US, Reference to pathology findings)
+
+* code = $LOINC#100969-5 
 
 // Example(s) TODO
 
@@ -133,6 +201,23 @@ Title: "MII PR Patho Diagnostic Conclusion Grouper"
 Description: "Grouper profile to collect Diagnostic Conclusion information"
 * insert PR_CS_VS_Version
 * insert Publisher
+* insert Translation(^title, de-DE, MII PR Patho Diagnostic Conclusion Grouper)
+* insert Translation(^title, en-US, MII PR Patho Diagnostic Conclusion Grouper)
+* insert Translation(^description, de-DE, Gruppierungsprofil zur Erfassung von Diagnoseschlussfolgerungen)
+* insert Translation(^description, en-US, Grouper profile to collect Diagnostic Conclusion information)
+
+// Inherited mustSupport elements from section grouper
+* insert Label(text, Text, Narrative Darstellung)
+* insert Translation(text ^short, de-DE, Text)
+* insert Translation(text ^short, en-US, Text)
+* insert Translation(text ^definition, de-DE, Narrative Darstellung)
+* insert Translation(text ^definition, en-US, Narrative representation)
+* insert Label(hasMember[pathology-finding], Einzelbeobachtungen, Referenz zu Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^short, de-DE, Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^short, en-US, Pathology findings)
+* insert Translation(hasMember[pathology-finding] ^definition, de-DE, Referenz zu Einzelbeobachtungen)
+* insert Translation(hasMember[pathology-finding] ^definition, en-US, Reference to pathology findings)
+
 * code = $LOINC#22637-3
 // Observation the Diagnostic Conclusion derives from
 * derivedFrom MS
@@ -143,8 +228,23 @@ Description: "Grouper profile to collect Diagnostic Conclusion information"
 * derivedFrom contains grouper-observation 0..* MS
                    and questionnaire-response 0..* MS
 * derivedFrom[grouper-observation] only Reference(mii-pr-patho-section-grouper)
+* insert Label(derivedFrom[grouper-observation], Gruppierte Beobachtung, Referenz zu gruppierten Beobachtungen)
+* insert Translation(derivedFrom[grouper-observation] ^short, de-DE, Gruppierte Beobachtung)
+* insert Translation(derivedFrom[grouper-observation] ^short, en-US, Grouper observation)
+* insert Translation(derivedFrom[grouper-observation] ^definition, de-DE, Referenz zu gruppierten Beobachtungen)
+* insert Translation(derivedFrom[grouper-observation] ^definition, en-US, Reference to grouper observations)
 * derivedFrom[questionnaire-response] only Reference(QuestionnaireResponse)
+* insert Label(derivedFrom[questionnaire-response], Fragebogen-Antwort, Referenz zu Fragebogen-Antworten)
+* insert Translation(derivedFrom[questionnaire-response] ^short, de-DE, Fragebogen-Antwort)
+* insert Translation(derivedFrom[questionnaire-response] ^short, en-US, Questionnaire response)
+* insert Translation(derivedFrom[questionnaire-response] ^definition, de-DE, Referenz zu Fragebogen-Antworten)
+* insert Translation(derivedFrom[questionnaire-response] ^definition, en-US, Reference to questionnaire responses)
 * note MS
+* insert Label(note, Notiz, Zusätzliche Notizen)
+* insert Translation(note ^short, de-DE, Notiz)
+* insert Translation(note ^short, en-US, Note)
+* insert Translation(note ^definition, de-DE, Zusätzliche Notizen)
+* insert Translation(note ^definition, en-US, Additional notes)
 
 // Example(s)
 /*

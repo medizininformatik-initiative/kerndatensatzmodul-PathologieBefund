@@ -5,8 +5,8 @@ This specification describes the FHIR representation of the core data set module
 | Publication   |   |
 |---------|---|
 | Datum   | 15.09.2025 |
-| Version | 2026.0.0-ballot         |
-| Status  | ballot       |
+| Version | 2026.0.0        |
+| Status  | Active       |
 | Realm   | EN          | 
 
 ## Table of contents

@@ -19,7 +19,6 @@
     "reference": "Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"
   },
   "content": {
-    "contentType": "image/png",
     "url": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/image"
   }
 }

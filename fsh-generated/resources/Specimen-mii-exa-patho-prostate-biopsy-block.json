@@ -6,6 +6,15 @@
       "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen"
     ]
   },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1201985008",
+        "display": "Tissue block specimen (specimen)"
+      }
+    ]
+  },
   "processing": [
     {
       "extension": [
@@ -30,8 +39,8 @@
       "procedure": {
         "coding": [
           {
-            "code": "787376009",
             "system": "http://snomed.info/sct",
+            "code": "787376009",
             "display": "Preparation of formalin fixed paraffin embedded tissue specimen (procedure)"
           }
         ]
@@ -60,15 +69,6 @@
   "accessionIdentifier": {
     "value": "E12345_21",
     "system": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-  },
-  "type": {
-    "coding": [
-      {
-        "code": "1201985008",
-        "system": "http://snomed.info/sct",
-        "display": "Tissue block specimen (specimen)"
-      }
-    ]
   },
   "subject": {
     "reference": "Patient/12345"
