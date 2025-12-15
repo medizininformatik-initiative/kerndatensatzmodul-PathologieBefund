@@ -248,6 +248,38 @@
     "endLine": 314
   },
   {
+    "outputFile": "Specimen-mii-exa-patho-prostate-biopsy-block.json",
+    "fshName": "mii-exa-patho-prostate-biopsy-block",
+    "fshType": "Instance",
+    "fshFile": "specimen.fsh",
+    "startLine": 247,
+    "endLine": 273
+  },
+  {
+    "outputFile": "Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE.json",
+    "fshName": "mii-exa-patho-prostate-biopsy-schnitt-HE",
+    "fshType": "Instance",
+    "fshFile": "specimen.fsh",
+    "startLine": 275,
+    "endLine": 303
+  },
+  {
+    "outputFile": "Specimen-mii-exa-patho-prostate-biopsy-schnitt-p63.json",
+    "fshName": "mii-exa-patho-prostate-biopsy-schnitt-p63",
+    "fshType": "Instance",
+    "fshFile": "specimen.fsh",
+    "startLine": 305,
+    "endLine": 332
+  },
+  {
+    "outputFile": "Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.json",
+    "fshName": "mii-exa-patho-prostate-tru-cut-biopsy-sample",
+    "fshType": "Instance",
+    "fshFile": "specimen.fsh",
+    "startLine": 217,
+    "endLine": 245
+  },
+  {
     "outputFile": "StructureDefinition-mii-lm-patho-logical-model.json",
     "fshName": "MII_LM_Patho_Logical_Model",
     "fshType": "Logical",
@@ -384,12 +416,60 @@
     "endLine": 195
   },
   {
+    "outputFile": "StructureDefinition-mii-pr-patho-specimen.json",
+    "fshName": "MII_PR_Patho_Specimen",
+    "fshType": "Profile",
+    "fshFile": "specimen.fsh",
+    "startLine": 1,
+    "endLine": 95
+  },
+  {
     "outputFile": "Substance-mii-exa-patho-canadabalsam.json",
     "fshName": "mii-exa-patho-canadabalsam",
     "fshType": "Instance",
     "fshFile": "externe-referenzen/substances.fsh",
     "startLine": 5,
     "endLine": 12
+  },
+  {
+    "outputFile": "Substance-mii-exa-patho-eosin-y.json",
+    "fshName": "mii-exa-patho-eosin-y",
+    "fshType": "Instance",
+    "fshFile": "specimen.fsh",
+    "startLine": 341,
+    "endLine": 346
+  },
+  {
+    "outputFile": "Substance-mii-exa-patho-hematoxylin-stain.json",
+    "fshName": "mii-exa-patho-hematoxylin-stain",
+    "fshType": "Instance",
+    "fshFile": "specimen.fsh",
+    "startLine": 334,
+    "endLine": 339
+  },
+  {
+    "outputFile": "Substance-mii-exa-patho-microscope-slide-mounting-medium.json",
+    "fshName": "mii-exa-patho-microscope-slide-mounting-medium",
+    "fshType": "Instance",
+    "fshFile": "specimen.fsh",
+    "startLine": 355,
+    "endLine": 360
+  },
+  {
+    "outputFile": "Substance-mii-exa-patho-neutral-buffered-formalin.json",
+    "fshName": "mii-exa-patho-neutral-buffered-formalin",
+    "fshType": "Instance",
+    "fshFile": "specimen.fsh",
+    "startLine": 348,
+    "endLine": 353
+  },
+  {
+    "outputFile": "Substance-mii-exa-patho-p63-immunostain.json",
+    "fshName": "mii-exa-patho-p63-immunostain",
+    "fshType": "Instance",
+    "fshFile": "specimen.fsh",
+    "startLine": 362,
+    "endLine": 371
   },
   {
     "outputFile": "Substance-mii-exa-patho-p63-stain.json",

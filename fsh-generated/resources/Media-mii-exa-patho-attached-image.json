@@ -16,7 +16,7 @@
   },
   "status": "completed",
   "subject": {
-    "reference": "mii-exa-patho-prostate-tru-cut-biopsy-sample"
+    "reference": "Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"
   },
   "content": {
     "url": "https://pathologie.klinikum-karlsruhe.de/fhir/fn/image"

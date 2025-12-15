@@ -477,6 +477,14 @@
             }
           ]
         },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
