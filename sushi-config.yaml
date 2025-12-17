@@ -9,7 +9,7 @@ name: MII_IG_Modul_Patho
 language: de-DE
 status: active
 experimental: false
-version: 2026.0.0-rc1
+version: 2026.0.0
 date: "2025-12-10"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
