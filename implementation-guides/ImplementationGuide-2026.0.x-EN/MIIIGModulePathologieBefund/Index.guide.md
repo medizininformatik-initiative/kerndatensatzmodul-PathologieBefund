@@ -1,6 +1,6 @@
 # Core data set module Pathology report
 
-This specification describes the FHIR representation of the core data set module 'Pathology report' of the Medical Informatics Initiative. The use cases of the module and the associated FHIR profiles and terminology resources are described below in their binding form.
+This specification describes the FHIR representation of the core data set module 'Pathologie-Befund' of the Medical Informatics Initiative. The use cases of the module and the associated FHIR profiles and terminology resources are described below in their binding form.
 
 | Publication   |   |
 |---------|---|
