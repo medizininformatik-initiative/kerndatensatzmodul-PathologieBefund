@@ -1,8 +1,7 @@
 
 # Release Notes
-## 2026.0.1
+## 2026.0.0
     - Empfehlungen zum Lebenszyklus des Dokumentes "Pathologiebefund" auf der Seite Hierarchie- und Workflow-Aspekte aufgenommen
-## 2026.0.0-ballot
     - Grouperkardinalität auf ..1 beschnitten. Somit ist nur noch jeweils ein Grouper innerhalb eines Befundberichtes zu verwenden
         - Entsprechende Veränderung innerhalb der Grouperprofile und des DiagnosticReports
     - Profil PathoBundle hinzugefügt

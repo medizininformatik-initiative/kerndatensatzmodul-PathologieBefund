@@ -1,6 +1,6 @@
 # Core data set module Pathologie-Befund/Pathology report
 
-This specification describes the FHIR representation of the core data set module 'Diaknostik | Pathologie-Befund' of the Medical Informatics Initiative. The use cases of the module and the associated FHIR profiles and terminology resources are described below in their binding form.
+This specification describes the FHIR representation of the core data set module 'Pathologie-Befund' of the Medical Informatics Initiative. The use cases of the module and the associated FHIR profiles and terminology resources are described below in their binding form.
 
 | Publication   |   |
 |---------|---|
@@ -43,7 +43,7 @@ Comments and criticism are always welcome in the form of 'issues' in the [GitHub
 * Sylvia Thun               (Berlin Institute of Health at Charité)
 
 ### Copyright Notice, Usage Guidelines
-Copyright � 2022+: TMF e. V., Charlottenstra�e 42, 10117 Berlin
+Copyright © 2022+: TMF e. V., Charlottenstraße 42, 10117 Berlin
 The content of this specification is public. Reuse and publication rights are not restricted.
 For usage rights of the underlying FHIR technology, see the FHIR base specification.
 Some code systems used are published and maintained by other organizations. The copyright of the respective publishers listed there applies.</br> 
