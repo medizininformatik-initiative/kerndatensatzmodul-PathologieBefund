@@ -13,7 +13,7 @@
     "fshType": "Instance",
     "fshFile": "pathology-report.fsh",
     "startLine": 509,
-    "endLine": 573
+    "endLine": 574
   },
   {
     "outputFile": "Condition-mii-exa-patho-problem-list-item-1.json",
@@ -21,15 +21,15 @@
     "fshType": "Instance",
     "fshFile": "serviceRequest.fsh",
     "startLine": 317,
-    "endLine": 324
+    "endLine": 325
   },
   {
     "outputFile": "Condition-mii-exa-patho-problem-list-item-2.json",
     "fshName": "mii-exa-patho-problem-list-item-2",
     "fshType": "Instance",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 326,
-    "endLine": 333
+    "startLine": 327,
+    "endLine": 335
   },
   {
     "outputFile": "DiagnosticReport-mii-exa-patho-report.json",
@@ -40,44 +40,20 @@
     "endLine": 424
   },
   {
-    "outputFile": "Encounter-12345.json",
-    "fshName": "Encounter-12345",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/encounters.fsh",
-    "startLine": 22,
-    "endLine": 37
-  },
-  {
-    "outputFile": "Encounter-34555.json",
-    "fshName": "Encounter-34555",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/encounters.fsh",
-    "startLine": 39,
-    "endLine": 54
-  },
-  {
-    "outputFile": "Encounter-87687.json",
-    "fshName": "Encounter-87687",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/encounters.fsh",
-    "startLine": 5,
-    "endLine": 20
-  },
-  {
     "outputFile": "List-mii-exa-patho-active-problems-list.json",
     "fshName": "mii-exa-patho-active-problems-list",
     "fshType": "Instance",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 346,
-    "endLine": 355
+    "startLine": 349,
+    "endLine": 359
   },
   {
     "outputFile": "List-mii-exa-patho-history-of-present-illness.json",
     "fshName": "mii-exa-patho-history-of-present-illness",
     "fshType": "Instance",
     "fshFile": "serviceRequest.fsh",
-    "startLine": 335,
-    "endLine": 344
+    "startLine": 337,
+    "endLine": 347
   },
   {
     "outputFile": "Media-mii-exa-patho-attached-image.json",
@@ -85,7 +61,7 @@
     "fshType": "Instance",
     "fshFile": "pathology-imaging.fsh",
     "startLine": 67,
-    "endLine": 74
+    "endLine": 75
   },
   {
     "outputFile": "Observation-mii-exa-patho-biopsy-site-a.json",
@@ -101,23 +77,23 @@
     "fshType": "Instance",
     "fshFile": "patho-findings.fsh",
     "startLine": 308,
-    "endLine": 317
+    "endLine": 318
   },
   {
     "outputFile": "Observation-mii-exa-patho-diagnostic-conclusion-2.json",
     "fshName": "mii-exa-patho-diagnostic-conclusion-2",
     "fshType": "Instance",
     "fshFile": "patho-findings.fsh",
-    "startLine": 320,
-    "endLine": 329
+    "startLine": 321,
+    "endLine": 331
   },
   {
     "outputFile": "Observation-mii-exa-patho-diagnostic-conclusion-3.json",
     "fshName": "mii-exa-patho-diagnostic-conclusion-3",
     "fshType": "Instance",
     "fshFile": "patho-findings.fsh",
-    "startLine": 331,
-    "endLine": 340
+    "startLine": 333,
+    "endLine": 343
   },
   {
     "outputFile": "Observation-mii-exa-patho-diagnostic-conclusion-grouper.json",
@@ -174,70 +150,6 @@
     "fshFile": "patho-findings.fsh",
     "startLine": 163,
     "endLine": 180
-  },
-  {
-    "outputFile": "Organization-123456.json",
-    "fshName": "Organization-12345",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/organizations.fsh",
-    "startLine": 5,
-    "endLine": 28
-  },
-  {
-    "outputFile": "Patient-12345.json",
-    "fshName": "Patient-12345",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/patients.fsh",
-    "startLine": 5,
-    "endLine": 20
-  },
-  {
-    "outputFile": "Patient-34545.json",
-    "fshName": "Patient-34545",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/patients.fsh",
-    "startLine": 22,
-    "endLine": 37
-  },
-  {
-    "outputFile": "Practitioner-1234.json",
-    "fshName": "1234",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/practitioners.fsh",
-    "startLine": 57,
-    "endLine": 71
-  },
-  {
-    "outputFile": "Practitioner-21234.json",
-    "fshName": "21234",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/practitioners.fsh",
-    "startLine": 41,
-    "endLine": 55
-  },
-  {
-    "outputFile": "Practitioner-2346545.json",
-    "fshName": "2346545",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/practitioners.fsh",
-    "startLine": 23,
-    "endLine": 39
-  },
-  {
-    "outputFile": "Practitioner-34456.json",
-    "fshName": "34456",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/practitioners.fsh",
-    "startLine": 5,
-    "endLine": 21
-  },
-  {
-    "outputFile": "Practitioner-765879.json",
-    "fshName": "765879",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/practitioners.fsh",
-    "startLine": 73,
-    "endLine": 89
   },
   {
     "outputFile": "ServiceRequest-mii-exa-patho-request.json",
@@ -424,14 +336,6 @@
     "endLine": 95
   },
   {
-    "outputFile": "Substance-mii-exa-patho-canadabalsam.json",
-    "fshName": "mii-exa-patho-canadabalsam",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/substances.fsh",
-    "startLine": 5,
-    "endLine": 12
-  },
-  {
     "outputFile": "Substance-mii-exa-patho-eosin-y.json",
     "fshName": "mii-exa-patho-eosin-y",
     "fshType": "Instance",
@@ -470,22 +374,6 @@
     "fshFile": "specimen.fsh",
     "startLine": 362,
     "endLine": 371
-  },
-  {
-    "outputFile": "Substance-mii-exa-patho-p63-stain.json",
-    "fshName": "mii-exa-patho-p63-stain",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/substances.fsh",
-    "startLine": 14,
-    "endLine": 21
-  },
-  {
-    "outputFile": "Substance-mii-exa-patho-paraffin.json",
-    "fshName": "mii-exa-patho-paraffin",
-    "fshType": "Instance",
-    "fshFile": "externe-referenzen/substances.fsh",
-    "startLine": 23,
-    "endLine": 30
   },
   {
     "outputFile": "ValueSet-mii-vs-patho-all-loinc.json",
