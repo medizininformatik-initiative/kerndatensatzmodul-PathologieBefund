@@ -401,7 +401,7 @@ Description: "Example for MII_PR_Patho_Report"
 Instance: mii-exa-patho-report
 InstanceOf: mii-pr-patho-report
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2026.0.0"
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].value = "E21.12345"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
@@ -509,6 +509,7 @@ Description: "Example for an MII_PR_Patho_Composition"
 Instance: mii-exa-patho-composition
 InstanceOf: mii-pr-patho-composition
 Usage: #example
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2026.0.0"
 * text.div = "
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
   <div id=\"befund-titel\">
