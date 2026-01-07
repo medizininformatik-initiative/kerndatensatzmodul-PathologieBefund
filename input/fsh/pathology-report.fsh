@@ -546,7 +546,6 @@ Usage: #example
     </tr>
   </table>
 </div>"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition"
 * extension[document-version].valueString = "1"
 * status = #final
 * type.coding[XDS].code = #PATH
