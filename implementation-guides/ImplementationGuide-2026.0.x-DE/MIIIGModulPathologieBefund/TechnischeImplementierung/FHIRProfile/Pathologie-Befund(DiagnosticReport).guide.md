@@ -11,7 +11,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). 
 
-Es stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein.
+Es stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein. Ein vollständiges Beispiel eines Pathologiebefundberichts mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
  
 Die wichtigsten Besonderheiten des **MII PR Patho Report** sind: 
 - die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden, 

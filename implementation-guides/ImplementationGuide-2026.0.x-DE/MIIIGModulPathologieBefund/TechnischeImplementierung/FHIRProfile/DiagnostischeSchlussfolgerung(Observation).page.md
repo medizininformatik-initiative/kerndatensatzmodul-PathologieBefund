@@ -177,14 +177,6 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
 
     Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.subject``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
 
-1. Der Suchparameter ```value-string``` MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?value-string:contains=Diagnostische```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.value``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "string"](http://hl7.org/fhir/R4/search.html#string).
-
 1. Der Suchparameter ```body-site``` MUSS unterstützt werden:
 
     Beispiele:
@@ -197,4 +189,7 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
 
 --------------------------------
 ### Beispiele
+
+Weitere umfangreiche Beispiele mit vollständigen Narrativen finden sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
+
 {{json:mii-exa-patho-diagnostic-conclusion-grouper}}

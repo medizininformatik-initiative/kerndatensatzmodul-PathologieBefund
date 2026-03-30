@@ -11,7 +11,7 @@ subject: https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Struct
 
 The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) resource represents the complete findings report without document properties (see **MII-PR-Patho-Composition**).
 
-It presents highly structured examination results, including human-readable texts (narratives), that belong to "panels" of individual examinations. It collects and organizes pathology findings for even complex individual results and can reference additional information about the examination panel, e.g., clinical information and sample information. A complete, formatted finding text should be part of the **MII PR Patho Report**.
+It presents highly structured examination results, including human-readable texts (narratives), that belong to "panels" of individual examinations. It collects and organizes pathology findings for even complex individual results and can reference additional information about the examination panel, e.g., clinical information and sample information. A complete, formatted finding text should be part of the **MII PR Patho Report**. A complete example of a pathology report with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
 
 The most important features of the **MII PR Patho Report** are:
 - the ability to include additional clinical context, e.g., a mix of results from individual observations, images, text, and formatted representations.

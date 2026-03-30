@@ -179,14 +179,6 @@ Examples:
 
 Usage Notes: Further information on searching for ```Observation.subject`` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-1. The search parameter ```value-string`` MUST be supported:
-
-Examples:
-
-```GET [base]/Observation?value-string:contains=Macroscopy```
-
-Usage Notes: Further information on searching for ```Observation.value`` can be found in the [FHIR Base Specification - "string" section](http://hl7.org/fhir/R4/search.html#string).
-
 1. The search parameter ```body-site``` MUST be supported:
 
 Examples:

@@ -1,5 +1,13 @@
 # Release Notes
 
+## 2027.0.0
+    - `documentation` Added references to the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) as a reference example for narratives on the use case, Section Grouper, Finding, DiagnosticReport and Composition pages
+    - `documentation` Removed references to originalText and narrativeLink extensions from the Section Grouper description
+    - `documentation` Removed "one grouper per specimen" text from all Grouper profile pages (#249)
+    - `documentation` Added text on the relationship between examination request, specimen and case (#250)
+    - `documentation` Added missing search parameters (value-concept, value-quantity, value-date) to the Finding profile page (#248)
+    - `documentation` Removed value-string search parameter from all Grouper profile pages (#248)
+
 ## 2026.0.0-ballot
     - Grouper cardinality reduced to ..1. Therefore, only one grouper each is to be used within a pathology report
         - Corresponding changes within the grouper profiles and the DiagnosticReport

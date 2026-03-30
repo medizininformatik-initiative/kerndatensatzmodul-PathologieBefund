@@ -239,15 +239,39 @@ Examples:
 
 Usage Notes: Further information on searching for ```Observation.subject`` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-1. The search parameter ```value-string`` MUST be supported:
+1. The search parameter ```value-string``` MUST be supported:
 
-Examples:
+    Examples:
 
-```GET [base]/Observation?value-string:contains=Macroscopy```
+    ```GET [base]/Observation?value-string:contains=Macroscopy```
 
-Usage Notes: Further information on searching for ```Observation.value`` can be found in the [FHIR Base Specification - "string" section](http://hl7.org/fhir/R4/search.html#string).
+    Usage Notes: Further information on searching for ```Observation.value``` can be found in the [FHIR Base Specification - "string" section](http://hl7.org/fhir/R4/search.html#string).
 
-1. The search parameter ```body-site`` MUST be supported:
+1. The search parameter ```value-concept``` MUST be supported:
+
+    Examples:
+
+    ```GET [base]/Observation?value-concept=http://snomed.info/sct|399068003```
+
+    Usage Notes: Further information on searching for ```Observation.value``` can be found in the [FHIR Base Specification - "token" section](http://hl7.org/fhir/R4/search.html#token).
+
+1. The search parameter ```value-quantity``` MUST be supported:
+
+    Examples:
+
+    ```GET [base]/Observation?value-quantity=le5.4|http://unitsofmeasure.org|mm```
+
+    Usage Notes: Further information on searching for ```Observation.value``` can be found in the [FHIR Base Specification - "quantity" section](http://hl7.org/fhir/R4/search.html#quantity).
+
+1. The search parameter ```value-date``` MUST be supported:
+
+    Examples:
+
+    ```GET [base]/Observation?value-date=2021-06-01```
+
+    Usage Notes: Further information on searching for ```Observation.value``` can be found in the [FHIR Base Specification - "date" section](http://hl7.org/fhir/R4/search.html#date).
+
+1. The search parameter ```body-site``` MUST be supported:
 
 Examples:
 
@@ -283,4 +307,7 @@ Examples:
 Usage Notes: More information on searching for ```(Observation.value as Quantity) | (Whether(Observation.​value as SampledData) | (Observation.​component.​value as Quantity) | (Observation.​component.​value as SampledData) can be found in the [FHIR Base Specification - "quantity" section](http://hl7.org/fhir/R4/search.html#quantity).
 --------------------------------
 ### Examples
+
+Further comprehensive examples with complete narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
+
 {{json:mii-exa-patho-biopsy-site-a}}

@@ -1,5 +1,13 @@
 
 # Release Notes
+## 2027.0.0
+    - `documentation` Verweise auf den [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) als Referenzbeispiel für Narrative auf den Seiten Anwendungsfall, Section Grouper, Finding, DiagnosticReport und Composition hinzugefügt
+    - `documentation` Verweise auf originalText und narrativeLink Extensions aus der Section Grouper Beschreibung entfernt
+    - `documentation` Text "ein Grouper pro Präparat" aus allen Grouper-Profilseiten entfernt (#249)
+    - `documentation` Text zu Zusammenhang zwischen Untersuchungsauftrag, Probe und Fall ergänzt (#250)
+    - `documentation` Fehlende Suchparameter (value-concept, value-quantity, value-date) auf der Finding-Profilseite ergänzt (#248)
+    - `documentation` Suchparameter value-string aus allen Grouper-Profilseiten entfernt (#248)
+
 ## 2026.0.1
     - Empfehlungen zum Lebenszyklus des Dokumentes "Pathologiebefund" auf der Seite Hierarchie- und Workflow-Aspekte aufgenommen
 ## 2026.0.0-ballot

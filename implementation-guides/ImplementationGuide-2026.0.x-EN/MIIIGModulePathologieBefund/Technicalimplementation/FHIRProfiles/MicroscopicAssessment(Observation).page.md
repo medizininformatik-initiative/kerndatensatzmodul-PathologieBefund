@@ -175,15 +175,7 @@ Examples:
 
 Usage Notes: Further information on searching for ```Observation.subject`` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
 
-1. The search parameter ```value-string`` MUST be supported:
-
-Examples:
-
-```GET [base]/Observation?value-string:contains=Microscopy```
-
-Usage Notes: Further information on searching for ```Observation.value`` can be found in the [FHIR Base Specification - "string" section](http://hl7.org/fhir/R4/search.html#string).
-
-1. The search parameter ```body-site`` MUST be supported:
+1. The search parameter ```body-site``` MUST be supported:
 
 Examples:
 
@@ -195,4 +187,7 @@ Usage Notes: Further information on searching for ```Observation.bodySite`` can 
 
 --------------------------------
 ### Examples
+
+Further comprehensive examples with complete narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
+
 {{json:mii-exa-patho-micro-grouper-a}}

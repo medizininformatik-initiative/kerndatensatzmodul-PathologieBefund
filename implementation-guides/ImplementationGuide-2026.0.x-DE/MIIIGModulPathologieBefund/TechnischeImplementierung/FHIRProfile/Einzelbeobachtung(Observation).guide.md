@@ -247,6 +247,30 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
 
     Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.value``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "string"](http://hl7.org/fhir/R4/search.html#string).
 
+1. Der Suchparameter ```value-concept``` MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Observation?value-concept=http://snomed.info/sct|399068003```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.value``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "token"](http://hl7.org/fhir/R4/search.html#token).
+
+1. Der Suchparameter ```value-quantity``` MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Observation?value-quantity=le5.4|http://unitsofmeasure.org|mm```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.value``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "quantity"](http://hl7.org/fhir/R4/search.html#quantity).
+
+1. Der Suchparameter ```value-date``` MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/Observation?value-date=2021-06-01```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.value``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "date"](http://hl7.org/fhir/R4/search.html#date).
+
 1. Der Suchparameter ```body-site``` MUSS unterstützt werden:
 
     Beispiele:
@@ -283,4 +307,7 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
     Anwendungshinweise: Weitere Informationen zur Suche nach ```(Observation.value as Quantity) | (Observation.​value as SampledData) | (Observation.​component.​value as Quantity) | (Observation.​component.​value as SampledData)``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "quantity"](http://hl7.org/fhir/R4/search.html#quantity).
 --------------------------------
 ### Beispiele
+
+Weitere umfangreiche Beispiele mit vollständigen Narrativen finden sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
+
 {{json:mii-exa-patho-biopsy-site-a}}

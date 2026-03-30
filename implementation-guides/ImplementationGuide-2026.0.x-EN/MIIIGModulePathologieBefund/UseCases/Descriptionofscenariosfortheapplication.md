@@ -34,3 +34,5 @@ The QuestionnaireResponses are automatically transferred by the FHIR server of t
 The PVS/LIS, in its function as Order result tracker, reads in the transmitted/retrieved FHIR instances from the pathology institute and notifies the urologist Dr. C about the availability of a requested pathology report for his patient, Mr. A., B.
 
 At the request of Mr. A., Dr. C. transfers the report to Mr. A.'s ePA after explaining the findings.
+
+For a complete, exemplary implementation of this use case as a FHIR Implementation Guide, see the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
