@@ -12,8 +12,6 @@ Das Profil **MII PR Patho Intraoperative Grouper** der Resource Observation stel
 
 Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu **MII PR Patho Finding** eingebunden werden.
 
-Falls dieser Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so sollte jeweils ein **MII PR Patho Intraoperative Grouper** pro Präparat vorhanden sein.
-
 Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
 
 @```

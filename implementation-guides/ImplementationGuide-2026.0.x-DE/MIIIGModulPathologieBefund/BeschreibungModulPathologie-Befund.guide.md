@@ -40,6 +40,10 @@ Mit dem Untersuchungsauftrag des Einsenders werden den Patholog:innen zusammen m
 
 Aus einem (oder mehreren) Untersuchungsaufträgen zu einer Patientin wird mit den zugehörigen Proben in der Pathologieeinrichtung ein Fall, das "Service Event", kreiert. Die Fallnummer wird meist als Eingangsnummer (**Accession number**) bezeichnet.
 
+In der Regel wird ein Untersuchungsauftrag mit zugehöriger Probe zum Service Event bzw. Fall in der Pathologieeinrichtung, auch als *Accession* oder *Eingang* bezeichnet.
+Die zugehörige Probe kann in bestimmten Konfigurationen auch eine Probe aus einem bereits zurückliegenden, abgeschlossenen Fall sein, zu welcher ein anderer als der Primärauftraggeber eine weitere Untersuchung beauftragt, z.B. eine molekularpathologische Untersuchung oder eine vergleichende morphologische Untersuchung mit weiteren Vorbefunden.
+Am zugrundeliegenden Fall-Paradigma ändert sich dabei nichts: Dem Untersuchungsauftrag *muss* eine Probe zugeordnet sein, egal ob diese gleichzeitig mit dem Auftrag eingesandt wurde oder bereits in der Pathologieeinrichtung vorhanden ist.
+
 ### Abbildung des Untersuchungsauftrags
 
 {{render:guides-ImplementationGuide-Common-images-ArtDecor-Untersuchungsauftrag}}

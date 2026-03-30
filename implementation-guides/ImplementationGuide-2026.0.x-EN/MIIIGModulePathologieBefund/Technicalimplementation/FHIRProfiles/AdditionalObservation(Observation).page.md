@@ -12,8 +12,6 @@ The **MII PR Patho Additional Specified Grouper** profile of the [Observation](h
 
 This special grouper observation element must be placed before all other observation elements, which are then included as hasMember or derivedFrom references to **MII PR Patho Finding**.
 
-If this observation report section contains multiple input specimens, only one **MII PR Patho Additional Specified Grouper** should be used.
-
 For a list and explanation of the FHIR elements, see **(abstract) MII PR Patho Section Grouper**.
 
 

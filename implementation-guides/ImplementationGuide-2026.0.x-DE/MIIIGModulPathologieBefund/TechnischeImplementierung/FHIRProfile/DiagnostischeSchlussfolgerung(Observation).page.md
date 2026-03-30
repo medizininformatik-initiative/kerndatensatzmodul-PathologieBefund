@@ -12,8 +12,6 @@ Das Profil **MII PR Patho Diagnostic Conclusion Grouper** der Ressource Observat
 
 Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu **MII PR Patho Finding** eingebunden werden.
 
-Falls dieser Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so kann jeweils ein **MII PR Patho Diagnostic Conclusion Grouper** pro Präparat vorhanden sein.
-
 Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
 
 @```

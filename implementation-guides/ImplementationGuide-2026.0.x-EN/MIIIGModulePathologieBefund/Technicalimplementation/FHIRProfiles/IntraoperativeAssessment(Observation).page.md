@@ -12,8 +12,6 @@ The **MII PR Patho Intraoperative Grouper** profile of the Resource Observation 
 
 This special Grouper Observation element must be placed before all other Observation elements, which are then included as `hasMember` or `derivedFrom` references to **MII PR Patho Finding**.
 
-If this observation report section contains multiple input specimens, there should only be one **MII PR Patho Intraoperative Grouper**. The organisation of the **MII PR Patho Findings** according to the different samples is done by the specimen references of those findings, especially regarding the "parts".
-
 For a list and explanation of the FHIR elements, see **(abstract) MII PR Patho Section Grouper**.
 
 @```

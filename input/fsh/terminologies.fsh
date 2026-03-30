@@ -138,7 +138,7 @@ Description: "ValueSet for IHE PaLM APSR's section types"
 * insert PR_CS_VS_Version
 * insert Publisher
 * $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document" //Intraoperative Observation Section
-* $LOINC#22634-0 "Pathology report gross observation" //Macroscopic Observation Section
+* $LOINC#22634-0 "Pathology report gross observation" //Macroscopic Observation Section //24419-4 "Pathology report gross observation"
 * $LOINC#22635-7 "Pathology report microscopic observation" //Microscopic Observation Section
 * $LOINC#22637-3 "Pathology report diagnosis" //Diagnostic Conclusion Section
 * $LOINC#77599-9 "Additional documentation" //Additional Observation Section

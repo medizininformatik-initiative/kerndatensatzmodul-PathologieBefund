@@ -40,6 +40,10 @@ With the examination order from the submitter, the pathologists are provided wit
 
 From one (or more) examination orders for a patient, a case, the "service event", is created together with the associated samples in the pathology facility. The case number is usually referred to as the **accession number**.
 
+As a rule, an examination order with an associated specimen is assigned to a service event or case in the pathology facility, also referred to as *accession* or *receipt*.
+In certain configurations, the associated specimen may also be a specimen from a previous, completed case for which a party other than the primary ordering provider has requested a further examination, e.g. a molecular pathology examination or a comparative morphological examination with additional prior findings.
+The underlying case paradigm does not change: A specimen *must* be assigned to the examination order, regardless of whether it was submitted at the same time as the order or was already present in the pathology facility.
+
 ### Illustration of the request for investigation
 
 {{render:guides-ImplementationGuide-Common-images-ArtDecor-Untersuchungsauftrag}}
