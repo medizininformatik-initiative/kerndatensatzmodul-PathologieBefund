@@ -150,6 +150,26 @@ Usage: #definition
   * insert AddMIISearchParameter(#SHALL, "reason-code", mii-sp-meta-servicerequest-reason-code, #token, "SearchParameter for ServiceRequest.reasonCode")
   * insert AddMIISearchParameter(#SHALL, "supporting-info", mii-sp-meta-servicerequest-supporting-info, #reference, "SearchParameter for ServiceRequest.supportingInfo")
 //-------------------
+// RequestGroup
+//-------------------
+* rest.resource[+]
+  * insert InitResource(#RequestGroup, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-request-group|2027.0.0, #SHALL)
+  * insert AddInteraction(#read, #SHALL)
+  * insert AddInteraction(#search-type, #SHALL)
+  // CORE
+  * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
+  * insert AddSearchParameter(#SHALL, "_lastUpdated", Resource-lastUpdated, #date, "When the resource version last changed")
+  * insert AddSearchParameter(#SHALL, "_profile", Resource-profile, #uri, "Profiles this resource claims to conform to")
+  * insert AddSearchParameter(#SHALL, "author", RequestGroup-author, #reference, "The author of the request group")
+  * insert AddSearchParameter(#SHALL, "authored", RequestGroup-authored, #date, "The date the request group was authored")
+  * insert AddSearchParameter(#SHALL, "encounter", RequestGroup-encounter, #reference, "The encounter the request group applies to")
+  * insert AddSearchParameter(#SHALL, "identifier", RequestGroup-identifier, #token, "External identifiers for the request group")
+  * insert AddSearchParameter(#SHALL, "intent", RequestGroup-intent, #token, "The intent of the request group")
+  * insert AddSearchParameter(#SHALL, "patient", RequestGroup-patient, #reference, "The identity of a patient to search for request groups")
+  * insert AddSearchParameter(#SHALL, "status", RequestGroup-status, #token, "The status of the request group")
+  * insert AddSearchParameter(#SHALL, "subject", RequestGroup-subject, #reference, "The subject that the request group is about")
+//-------------------
 // DiagnosticReport
 //-------------------
 

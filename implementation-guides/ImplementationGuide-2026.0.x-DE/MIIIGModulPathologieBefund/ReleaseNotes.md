@@ -7,6 +7,7 @@
     - `documentation` Text zu Zusammenhang zwischen Untersuchungsauftrag, Probe und Fall ergänzt (#250)
     - `documentation` Fehlende Suchparameter (value-concept, value-quantity, value-date) auf der Finding-Profilseite ergänzt (#248)
     - `documentation` Suchparameter value-string aus allen Grouper-Profilseiten entfernt (#248)
+    - `feature` Neues Profil MII PR Patho Request Group (RequestGroup) zur Gruppierung mehrerer Untersuchungsaufträge (#227)
 
 ## 2026.0.1
     - Empfehlungen zum Lebenszyklus des Dokumentes "Pathologiebefund" auf der Seite Hierarchie- und Workflow-Aspekte aufgenommen

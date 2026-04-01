@@ -7,6 +7,7 @@
     - `documentation` Added text on the relationship between examination request, specimen and case (#250)
     - `documentation` Added missing search parameters (value-concept, value-quantity, value-date) to the Finding profile page (#248)
     - `documentation` Removed value-string search parameter from all Grouper profile pages (#248)
+    - `feature` New profile MII PR Patho Request Group (RequestGroup) for grouping multiple service requests (#227)
 
 ## 2026.0.0-ballot
     - Grouper cardinality reduced to ..1. Therefore, only one grouper each is to be used within a pathology report
