@@ -24,9 +24,10 @@
       "url" : "https://www.medizininformatik-initiative.de/"
     }
   ],
-  "canonicals": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho",
-  "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
+  "canonical": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho",
+  "jurisdiction": "urn:iso:std:iso:3166#DE",
   "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
     "de.gematik.isik": "5.1.0",
     "de.medizininformatikinitiative.kerndatensatz.meta": "2026.0.x",
     "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.x",
