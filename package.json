@@ -1,6 +1,6 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.patho",
-  "version": "2026.0.0-rc1",
+  "version": "2026.0.2",
   "description": "Medizininformatik Initiative - Modul Pathologie",
   "author": "juliansass",
   "fhirVersions": [
@@ -28,9 +28,9 @@
   "jurisdiction": "http://unstats.un.org/unsd/methods/m49/m49.htm#276",
   "dependencies": {
     "de.gematik.isik": "5.1.0",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "2025.0.x",
-    "de.medizininformatikinitiative.kerndatensatz.diagnose": "2025.0.x",
-    "de.medizininformatikinitiative.kerndatensatz.biobank": "2026.0.0-ballot1",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.x",
+    "de.medizininformatikinitiative.kerndatensatz.biobank": "2026.0.0",
     "hl7.fhir.us.mcode": "2.1.x"
   }
 }
