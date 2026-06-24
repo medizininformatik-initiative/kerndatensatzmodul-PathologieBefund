@@ -1,14 +1,14 @@
-## Description of the Pathologie-Befund/Pathology report module
+## Description of the Pathology report module
 
 Histological and cytological examinations play a crucial role in the diagnosis of the majority of serious medical problems. Autopsy examinations are both a valuable source of new medical knowledge (see COVID-19) and central elements of clinical quality control.
 
-The central document and subject of this module is the **report from a pathology facility**. For time-critical applications, e.g. intraoperative frozen section diagnostics, even preliminary results can be of interest. As a rule, however, the final pathology reports are used in both patient care and research. Due to the widespread use of the **Pathologie-Befund/Pathology report** module, a description of individual applications within the individual consortia is omitted.
+The central document and subject of this module is the **report from a pathology facility**. For time-critical applications, e.g. intraoperative frozen section diagnostics, even preliminary results can be of interest. As a rule, however, the final pathology reports are used in both patient care and research. Due to the widespread use of the **Pathology report** module, a description of individual applications within the individual consortia is omitted.
 
 ### Illustration in Art-Decor
 
 {{render:implementation-guides-ImplementationGuide-Common-images-ArtDecor-ganz}}
 
-**Pathologie-BefundePathology reports** are summarized as clinical documents, predominantly in text form, of a clinically commissioned histo- and cytomorphological as well as molecular examination or groups of such examinations with a synoptic summary, carried out in a pathology facility. In the sense of the [ISO/IEC-Norm 17020](https://www.din.de/de/mitwirken/normenausschuesse/nqsz/veroeffentlichungen/wdc-beuth:din21:146320816), these are inspection reports, the **"Pathologisch-anatomischen Begutachtungen"**. The free-text examination results can also be supplemented by structured coding (semantically annotated). The following applies: **Every structured coding must also be readable as text, but not every text information must be coded.**
+**Pathology reports** are summarized as clinical documents, predominantly in text form, of a clinically commissioned histo- and cytomorphological as well as molecular examination or groups of such examinations with a synoptic summary, carried out in a pathology facility. In the sense of the [ISO/IEC-Norm 17020](https://www.din.de/de/mitwirken/normenausschuesse/nqsz/veroeffentlichungen/wdc-beuth:din21:146320816), these are inspection reports, the **"Pathologisch-anatomischen Begutachtungen"**. The free-text examination results can also be supplemented by structured coding (semantically annotated). The following applies: **Every structured coding must also be readable as text, but not every text information must be coded.**
 
 Various data is recorded for the clinical order and for the individual examinations, including whether the examination findings are preliminary or final (status) and various important points in time in the context.
 
