@@ -7,13 +7,12 @@
     - `documentation` Text zu Zusammenhang zwischen Untersuchungsauftrag, Probe und Fall ergänzt (#250)
     - `documentation` Fehlende Suchparameter (value-concept, value-quantity, value-date) auf der Finding-Profilseite ergänzt (#248)
     - `documentation` Suchparameter value-string aus allen Grouper-Profilseiten entfernt (#248)
-    - `feature` Neues Profil MII PR Patho Request Group (RequestGroup) zur Gruppierung mehrerer Untersuchungsaufträge (#227)
     - `feature` Neues ValueSet MII_VS_Patho_Report_Code_LOINC fuer DiagnosticReport.code mit LOINC-Codes fuer verschiedene Berichtstypen (Histopathologie, Zytologie, Molekularpathologie, Obduktion) (#166)
     - `changed` DiagnosticReport.code.coding[pathology-report] von fixem Code (LOINC#60568-3) auf extensible Binding an MII_VS_Patho_Report_Code_LOINC geaendert (#166)
-    - `documentation` Untersuchungsauftrag-Beschreibung um Hinweis zu mehreren ServiceRequests in einer requisition (Placer Order Group) und requisition als Fall/Accession ergänzt (#253)
-    - `documentation` Specimen-Beschreibung um Referenzierungslogik der Proben (Eingang/Parts vs. gefärbte Schnittebene) ergänzt (#255)
-    - `documentation` Grouper-Beschreibungen (abstrakt und alle spezifischen) um derivedFrom-Hinweis ergänzt (Finding referenziert Eltern-Beobachtungen via SDC QuestionnaireResponses und/oder Grouper) (#257)
-    - `changed` Composition.event Kurzbeschreibung und Definition korrigiert (dokumentiertes Pathologiebericht-Ereignis statt Untersuchungsauftrag) (#258)
+    - `documentation` Untersuchungsauftrag: requisition als Auftragsgruppe/Fall (#253)
+    - `documentation` Specimen: Referenzierungslogik der Proben ergänzt (#255)
+    - `documentation` Grouper: derivedFrom-Hinweis ergänzt (#257)
+    - `changed` Composition.event korrigiert (#258)
 
 ## 2026.0.1
     - Empfehlungen zum Lebenszyklus des Dokumentes "Pathologiebefund" auf der Seite Hierarchie- und Workflow-Aspekte aufgenommen

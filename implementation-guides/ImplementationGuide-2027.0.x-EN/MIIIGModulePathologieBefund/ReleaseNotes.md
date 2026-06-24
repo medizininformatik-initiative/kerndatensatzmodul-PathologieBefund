@@ -7,13 +7,12 @@
     - `documentation` Added text on the relationship between examination request, specimen and case (#250)
     - `documentation` Added missing search parameters (value-concept, value-quantity, value-date) to the Finding profile page (#248)
     - `documentation` Removed value-string search parameter from all Grouper profile pages (#248)
-    - `feature` New profile MII PR Patho Request Group (RequestGroup) for grouping multiple service requests (#227)
     - `feature` New ValueSet MII_VS_Patho_Report_Code_LOINC for DiagnosticReport.code with LOINC codes for different report types (histopathology, cytology, molecular pathology, autopsy) (#166)
     - `changed` DiagnosticReport.code.coding[pathology-report] changed from fixed code (LOINC#60568-3) to extensible binding to MII_VS_Patho_Report_Code_LOINC (#166)
-    - `documentation` Extended the Examination Request description with a note on multiple ServiceRequests grouped in a requisition (placer order group) and requisition as case/accession (#253)
-    - `documentation` Extended the Specimen description with the specimen referencing logic (submission/parts vs. stained tissue section level) (#255)
-    - `documentation` Extended the Grouper descriptions (abstract and all specific) with a derivedFrom note (Finding references its parent observations via SDC QuestionnaireResponses and/or Groupers) (#257)
-    - `changed` Corrected Composition.event short description and definition (documented pathology reporting event instead of examination request) (#258)
+    - `documentation` Examination Request: requisition as order group/case (#253)
+    - `documentation` Specimen: specimen referencing logic added (#255)
+    - `documentation` Grouper: derivedFrom note added (#257)
+    - `changed` Composition.event corrected (#258)
 
 ## 2026.0.0-ballot
     - Grouper cardinality reduced to ..1. Therefore, only one grouper each is to be used within a pathology report
