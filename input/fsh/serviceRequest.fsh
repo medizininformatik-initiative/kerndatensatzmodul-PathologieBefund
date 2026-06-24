@@ -227,7 +227,7 @@ Description: "Profile to group multiple pathology service requests into a single
 * insert Translation(intent ^definition, en-US, Intent of the request group)
 * intent = http://hl7.org/fhir/request-intent#order
 // Subject
-* subject 1..1 MS
+* subject 1..1 MS 
 * insert Label(subject, Patient, Verweis auf den Patienten)
 * insert Translation(subject ^short, de-DE, Patient)
 * insert Translation(subject ^short, en-US, Subject)

@@ -1,0 +1,5 @@
+ ### UML
+
+As a more abstract version of an information model and to better illustrate the relationships between the domain concepts, a UML class diagram was created, derived from the HL7-CDA-RMIM. Concepts represented as groups in ART-DECOR are modeled as separate classes, which have association relationships with each other. These concepts only represent the content/clinical modeling, thus the individual classes do not always correspond to a FHIR profile. A pathology report is associated with a patient, a care case, a healthcare facility, an examination request, examined sample material (specimen), and the respective findings and diagnostic conclusions of a pathological-anatomical examination. Such findings and conclusions have a textual representation and can contain specific semantic annotations regarding finding details. Classes based on concepts from other core dataset modules are color-coded to distinguish them from the pathology report classes.
+
+{{render:implementation-guides-ImplementationGuide-Common-images-patho-uml-v1.0.0}}

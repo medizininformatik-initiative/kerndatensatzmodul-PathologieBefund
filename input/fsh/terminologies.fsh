@@ -81,6 +81,24 @@ Description: "ValueSet for the categorization of Pathology Report documents"
 * $v2-0074#SP "Surgical Pathology"
 
 //-----------------------------------
+// DiagnosticReport
+//-----------------------------------
+ValueSet: MII_VS_Patho_Report_Code_LOINC
+Id: mii-vs-patho-report-code-loinc
+Title: "MII VS Patho Report Code [LOINC]"
+Description: "ValueSet for the report type codes of pathology DiagnosticReports"
+* insert PR_CS_VS_Version
+* insert Publisher
+* $LOINC#60568-3 "Pathology Synoptic report"
+* $LOINC#11526-1 "Pathology study"
+* $LOINC#11529-5 "Surgical pathology study"
+* $LOINC#33716-2 "Non-gynecological cytology study"
+* $LOINC#26435-8 "Molecular pathology studies (set)"
+* $LOINC#47528-5 "Cytology report of Cervical or vaginal smear or scraping Cyto stain"
+* $LOINC#47527-7 "Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep"
+* $LOINC#18743-5 "Autopsy report"
+
+//-----------------------------------
 // ServiceRequest
 //-----------------------------------
 ValueSet: MII_VS_Patho_Service_Request_Code

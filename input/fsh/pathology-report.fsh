@@ -81,8 +81,8 @@ Description: "Defines the general pathology report structure for German hospital
   * insert Translation(coding[pathology-report] ^short, en-US, Pathology report code)
   * insert Translation(coding[pathology-report] ^definition, de-DE, Spezifischer Code für Pathologie-Befunde)
   * insert Translation(coding[pathology-report] ^definition, en-US, Specific code for pathology report)
-  * coding[pathology-report] = $LOINC#60568-3 
-    * system 1.. MS 
+  * coding[pathology-report] from mii-vs-patho-report-code-loinc (extensible)
+    * system 1.. MS
     * code 1.. MS
 // Referenz zu Patient:in
 * subject 1.. MS
@@ -336,11 +336,11 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(relatesTo ^definition, en-US, Relationship to other documents) 
 
 * event 1.. MS
-* insert Label(event, Referenz auf Untersuchungsauftrag, Referenz auf den auslösenden Untersuchungsauftrag)
+* insert Label(event, Ereignis, Dokumentiertes Ereignis (pathologische Begutachtung/Befundung) auf das sich der Befundbericht bezieht)
 * insert Translation(event ^short, de-DE, Ereignis)
 * insert Translation(event ^short, en-US, Event)
-* insert Translation(event ^definition, de-DE, Referenz auf den auslösenden Untersuchungsauftrag)
-* insert Translation(event ^definition, en-US, Documentation event)
+* insert Translation(event ^definition, de-DE, Dokumentiertes Ereignis (pathologische Begutachtung/Befundung) auf das sich der Befundbericht bezieht)
+* insert Translation(event ^definition, en-US, Documented event (pathology reporting act) the report refers to)
 // Entry referenziert nur auf MII_PR_Patho_Report
 * section 
 * section.code 1.. MS
