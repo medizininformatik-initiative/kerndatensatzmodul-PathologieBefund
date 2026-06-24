@@ -336,11 +336,11 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(relatesTo ^definition, en-US, Relationship to other documents) 
 
 * event 1.. MS
-* insert Label(event, Ereignis, Dokumentiertes Ereignis (pathologische Begutachtung/Befundung) auf das sich der Befundbericht bezieht)
+* insert Label(event, Ereignis, Dokumentiertes Pathologie-Ereignis - die Begutachtung bzw. Befundung auf die sich der Befundbericht bezieht)
 * insert Translation(event ^short, de-DE, Ereignis)
 * insert Translation(event ^short, en-US, Event)
-* insert Translation(event ^definition, de-DE, Dokumentiertes Ereignis (pathologische Begutachtung/Befundung) auf das sich der Befundbericht bezieht)
-* insert Translation(event ^definition, en-US, Documented event (pathology reporting act) the report refers to)
+* insert Translation(event ^definition, de-DE, Dokumentiertes Pathologie-Ereignis - die Begutachtung bzw. Befundung auf die sich der Befundbericht bezieht)
+* insert Translation(event ^definition, en-US, Documented pathology event - the reporting act the report refers to)
 // Entry referenziert nur auf MII_PR_Patho_Report
 * section 
 * section.code 1.. MS
