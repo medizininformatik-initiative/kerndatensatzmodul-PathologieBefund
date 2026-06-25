@@ -16,7 +16,7 @@ Cystoprostatectomy, **Fragestellung:** Prostate cancer? Bladder cancer? Resectio
 
 For complex reports, the coded information must be able to be organized accordingly using an "organizer" mechanism. This organizer mechanism is not provided in FHIR, which is why other adequate solutions (e.g. grouper observations) have been used in this module.
 
-In order to be able to include structured coded information in a pathology report, or to build it up entirely or partially using such coding, pathology systems require appropriate recording tools. For the module, the resources [Extractable Questionnaire - Definition](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-extr-defn.html) and [SDC Questionnaire Response](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaireresponse.html) described in the [FHIR IG Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/index.html) are suitable, which allow an automatic direct transfer of the recorded data into the pathology report.
+In order to be able to include structured coded and semantically annotated information in a pathology report, or to build it up entirely or partially using such coded data elements, pathology systems require appropriate recording tools. For the module, the functions for data capture and extraction from FHIR Questionnaires described in the [FHIR IG Structured Data Capture](http://hl7.org/fhir/uv/sdc/) are suitable, enabling a direct transfer of the recorded data into the structured report.
 
 ### Exemplary Use Case: Pathology Report for Prostate Needle Biopsies According to ICCR Guidelines
 

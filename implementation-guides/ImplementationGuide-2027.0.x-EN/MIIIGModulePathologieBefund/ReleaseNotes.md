@@ -13,6 +13,7 @@
     - `documentation` Specimen: specimen referencing logic added (#255)
     - `documentation` Grouper: derivedFrom note added (#257)
     - `changed` Composition.event corrected (#258)
+    - `documentation` Scenarios: SDC passage refined (#256)
 
 ## 2026.0.0-ballot
     - Grouper cardinality reduced to ..1. Therefore, only one grouper each is to be used within a pathology report

@@ -13,6 +13,7 @@
     - `documentation` Specimen: Referenzierungslogik der Proben ergänzt (#255)
     - `documentation` Grouper: derivedFrom-Hinweis ergänzt (#257)
     - `changed` Composition.event korrigiert (#258)
+    - `documentation` Szenarien: SDC-Passus präzisiert (#256)
 
 ## 2026.0.1
     - Empfehlungen zum Lebenszyklus des Dokumentes "Pathologiebefund" auf der Seite Hierarchie- und Workflow-Aspekte aufgenommen
