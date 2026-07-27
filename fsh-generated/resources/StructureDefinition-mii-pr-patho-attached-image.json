@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-attached-image",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image",
-  "version": "2026.0.0",
+  "version": "2027.0.0",
   "name": "MII_PR_Patho_Attached_Image",
   "title": "MII PR Patho Attached Image",
   "_title": {
@@ -47,22 +47,9 @@
       ]
     }
   ],
-  "description": "Profile for attached images",
+  "description": "Mit dem Profil **MII PR Patho Attached Image** der Ressource Media wird  die Beschreibung von in den Befund, d.h. den [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), eingebetteten Bildern vorgenommen. Um Bilder in [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) einzubinden, muss auf eine Referenz zu einer ImagingStudy zurückgegriffen werden. Das vorliegende Profil sollte vorzugsweise nur zur \"Illustration\" eines Pathologiebefundberichts verwendet werden.",
   "_description": {
     "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
-        "extension": [
-          {
-            "url": "lang",
-            "valueCode": "de-DE"
-          },
-          {
-            "url": "content",
-            "valueString": "Profil für angefügte Bilder"
-          }
-        ]
-      },
       {
         "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
@@ -72,7 +59,7 @@
           },
           {
             "url": "content",
-            "valueString": "Profile for attached images"
+            "valueString": "The **MII PR Patho Attached Image** profile of the Media resource is used to describe images embedded in the report, i.e. the [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html). To include images in [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html), a reference to an ImagingStudy must be used. The present profile should preferably only be used for the \"illustration\" of a pathology report."
           }
         ]
       }

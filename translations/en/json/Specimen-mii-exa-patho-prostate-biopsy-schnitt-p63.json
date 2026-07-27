@@ -1,0 +1,43 @@
+{
+  "id" : "Specimen-mii-exa-patho-prostate-biopsy-schnitt-p63",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Tissue section (specimen)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)",
+      "target" : null
+    },
+    {
+      "id" : "Quantity.unit",
+      "context" : "Quantity.unit",
+      "source" : "°C",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Immunocytochemical stain (procedure)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Microscope slide (physical object)",
+      "target" : null
+    }]
+  }]
+}

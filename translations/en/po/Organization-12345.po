@@ -1,0 +1,6 @@
+
+# Organization.name
+#: Organization.name
+msgid "Institut für Pathologie"
+msgstr ""
+

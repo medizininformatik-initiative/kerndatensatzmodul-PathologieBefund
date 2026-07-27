@@ -1,0 +1,19 @@
+{
+  "id" : "Practitioner-1234",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "HumanName.family",
+      "context" : "HumanName.family",
+      "source" : "Labor",
+      "target" : null
+    },
+    {
+      "id" : "HumanName.given",
+      "context" : "HumanName.given",
+      "source" : "Lena",
+      "target" : null
+    }]
+  }]
+}

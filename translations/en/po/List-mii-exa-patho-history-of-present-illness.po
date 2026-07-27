@@ -1,0 +1,6 @@
+
+# Coding.display
+#: Coding.display
+msgid "History of Present illness"
+msgstr ""
+

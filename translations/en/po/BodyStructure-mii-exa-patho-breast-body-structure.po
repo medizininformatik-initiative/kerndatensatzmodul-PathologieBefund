@@ -1,0 +1,16 @@
+
+# Coding.display
+#: Coding.display
+msgid "Structure of lower outer quadrant of breast (body structure)"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Left (qualifier value)"
+msgstr ""
+
+# BodyStructure.description
+#: BodyStructure.description
+msgid "Linke Mamma, unterer aeusserer Quadrant, 5 Uhr, 50 mm von der Mamille entfernt"
+msgstr ""
+

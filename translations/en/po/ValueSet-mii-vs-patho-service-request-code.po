@@ -1,0 +1,71 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "MII_VS_Patho_Service_Request_Code"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "MII VS Patho Service Request Code"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "ValueSet for a preferred set of ServiceRequest codes"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "108252007"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "ACTIVE"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "Both"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "LP7061-7"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "1"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "LP61649-7"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "LP247851-1"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "LP247830-5"
+msgstr ""
+

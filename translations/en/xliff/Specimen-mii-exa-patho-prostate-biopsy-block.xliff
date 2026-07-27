@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Specimen-mii-exa-patho-prostate-biopsy-block" original="Resource Specimen-mii-exa-patho-prostate-biopsy-block" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-block" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Tissue block specimen (specimen)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-block" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Sample macroscopy (procedure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-block" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-block" resname="Quantity.unit">
+             <notes>
+               <note id="n1">Quantity.unit</note>
+             </notes>
+        <source>°C</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-block" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-block" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Tissue cassette (physical object)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

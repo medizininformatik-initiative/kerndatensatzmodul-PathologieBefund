@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ServiceRequest-mii-exa-patho-request" original="Resource ServiceRequest-mii-exa-patho-request" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ServiceRequest-mii-exa-patho-request" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Pathology consultation, comprehensive, records and specimen with report (procedure)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

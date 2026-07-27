@@ -1,0 +1,636 @@
+
+# CapabilityStatement.name
+#: CapabilityStatement.name
+msgid "MII_CPS_Patho_Capability_Statement"
+msgstr ""
+
+# CapabilityStatement.title
+#: CapabilityStatement.title
+msgid "MII CPS Patho Capability Statement"
+msgstr ""
+
+# CapabilityStatement.publisher
+#: CapabilityStatement.publisher
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# CapabilityStatement.description
+#: CapabilityStatement.description
+msgid "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Logical id of this artifact"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "When the resource version last changed"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Profiles this resource claims to conform to"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The unique identifier associated with the specimen"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The accession number associated with the specimen"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "available | unavailable | unsatisfactory | entered-in-error"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The specimen type"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The subject of the specimen"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The parent of the specimen"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The date the specimen was collected"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Who collected the specimen"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The code for the body site from where the specimen originated"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The kind of specimen container"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The patient the specimen comes from"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Specimen.request"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Specimen.collection.method"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Specimen.collection.bodySite"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Specimen.processing.procedure"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Specimen.processing.additive"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Specimen.processing.time"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Specimen.container.additive"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Reference to the service request"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The classification of the type of observation"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The code of the observation type"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Code and coded value parameter pair"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Code and date/time value parameter pair"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Code and quantity value parameter pair"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Code and string value parameter pair"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The code of the observation type or component type"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Code and coded value parameter pair, including in components"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Code and quantity value parameter pair, including in components"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The reason why the expected value in the element Observation.value[x] or Observation.component.value[x] is missing"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The value or component value of the observation, if the value is a CodeableConcept"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The value or component value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The component code of the observation type"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Component code and component coded value parameter pair"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Component code and component quantity value parameter pair"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The reason why the expected value in the element Observation.component.value[x] is missing"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The value of the component observation, if the value is a CodeableConcept"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The value of the component observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The reason why the expected value in the element Observation.value[x] is missing"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Obtained datetime. If the obtained element is a period, a date that falls in the period"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Related measurements the observation is made from"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Encounter related to the observation"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Related resource that belongs to the Observation group"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The unique id for a particular observation"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The method used for the observation"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The subject that the observation is about (if patient)"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Who performed the observation"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Specimen used for this observation"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The status of the observation"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The subject that the observation is about"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The value of the observation, if the value is a CodeableConcept"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The value of the observation, if the value is a date or period of time"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The value of the observation, if the value is a string, and also searches in CodeableConcept.text"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Observation.bodySite"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Observation.valueRatio"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Observation.valueRatio.numerator"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Observation.valueRatio.denominator"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Date request signed"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Classification of service"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "What is being requested/ordered"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "An encounter in which this request is made"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Identifiers assigned to this order"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Search by subject - a patient"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Requested performer"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Who/what is requesting service"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Composite Request ID"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Specimen to be tested"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Search by subject"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for ServiceRequest.reasonCode"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for ServiceRequest.supportingInfo"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The author of the request group"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The date the request group was authored"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The encounter the request group applies to"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "External identifiers for the request group"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The intent of the request group"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The identity of a patient to search for request groups"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The status of the request group"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The subject that the request group is about"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Which diagnostic discipline/department created the report"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "A coded conclusion (interpretation/impression) on the report"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The clinically relevant time of the report"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The Encounter when the order was made"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "An identifier for the report"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "When the report was issued"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "A reference to the image source"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The subject of the report if a patient"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Who is responsible for the report"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Link to an atomic result (observation resource)"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The specimen details"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The status of the report"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The subject of the report"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for DiagnosticReport.imagingStudy"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Who attested the composition"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Who and/or what authored the composition"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Categorization of Composition"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Code(s) that apply to the event being documented"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Composition editing time"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Context of the Composition"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "A reference to data that supports this section"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Version-independent identifier for the Composition"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Who and/or what the composition is about"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "The period covered by the documentation"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Target of the relationship"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Classification of section (recommended)"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "preliminary | final | amended | entered-in-error"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Human Readable name/title"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Kind of composition (LOINC if possible)"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Composition.attester.mode"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Composition.custodian"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Composition.relatesTo.code"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "When Media was collected"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Who/What this Media is a record of"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "Classification of media as image, video, or audio"
+msgstr ""
+
+# CapabilityStatement.rest.resource.searchParam.documentation
+#: CapabilityStatement.rest.resource.searchParam.documentation
+msgid "SearchParameter for Media.partOf"
+msgstr ""
+

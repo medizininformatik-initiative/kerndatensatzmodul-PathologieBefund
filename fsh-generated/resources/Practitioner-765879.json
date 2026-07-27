@@ -1,0 +1,12 @@
+{
+  "resourceType": "Practitioner",
+  "id": "765879",
+  "name": [
+    {
+      "family": "Färber",
+      "given": [
+        "Frank"
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-additional-specified-grouper",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper",
-  "version": "2026.0.0",
+  "version": "2027.0.0",
   "name": "MII_PR_Patho_Additional_Specified_Grouper",
   "title": "MII PR Patho Additional Specified Grouper",
   "_title": {
@@ -47,22 +47,9 @@
       ]
     }
   ],
-  "description": "Based on IHE PaLM APSR - Grouper for additional specified Observations",
+  "description": "Das Profil **MII PR Patho Additional Specified Grouper** der Resource [Observation](http://hl7.org/fhir/R4/observation.html) stellt als `DiagnosticReport.result` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt \"Zusätzliche spezifizierte Beobachtungen\" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) aus nicht-morphologischen Untersuchungen bzw. aus molekulargenetischen Untersuchungen.\n\nDieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre \"Eltern-Beobachtungen\" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.\n\nAuflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.",
   "_description": {
     "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
-        "extension": [
-          {
-            "url": "lang",
-            "valueCode": "de-DE"
-          },
-          {
-            "url": "content",
-            "valueString": "Basierend auf IHE PaLM APSR - Gruppierung für zusätzlich spezifizierte Beobachtungen"
-          }
-        ]
-      },
       {
         "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
@@ -72,7 +59,7 @@
           },
           {
             "url": "content",
-            "valueString": "Based on IHE PaLM APSR - Grouper for additional specified Observations"
+            "valueString": "The **MII PR Patho Additional Specified Grouper** profile of the [Observation](http://hl7.org/fhir/R4/observation.html) resource represents, as `DiagnosticReport.result` for a [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section \"Additional Specified Observations\" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) from non-morphological examinations or from molecular genetic examinations.\n\nThis special grouper observation element is to be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their \"parent observations\" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.\n\nFor a listing and explanation of the FHIR elements, see **(abstract) MII PR Patho Section Grouper**."
           }
         ]
       }

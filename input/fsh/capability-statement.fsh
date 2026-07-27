@@ -5,7 +5,7 @@ Usage: #definition
 * insert Version
 * name = "MII_CPS_Patho_Capability_Statement"
 * title = "MII CPS Patho Capability Statement"
-* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/metadata"
+* url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/mii-cps-patho-capability-statement"
 * description = "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative"
 * experimental = false
 * date = "2024-11-08"

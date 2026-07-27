@@ -1,0 +1,66 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "MII_VS_Patho_Problem_List_SNOMED_CT"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "MII VS Patho Problem List [SNOMED CT]"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "64572001"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "418799008"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "404684003"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "409586006"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "248536006"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "55607006"
+msgstr ""
+
+# ValueSet.compose.include.filter.value
+#: ValueSet.compose.include.filter.value
+msgid "282291009"
+msgstr ""
+

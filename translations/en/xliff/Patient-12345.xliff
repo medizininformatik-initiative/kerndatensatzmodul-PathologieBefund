@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Patient-12345" original="Resource Patient-12345" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Patient-12345" resname="HumanName.family">
+             <notes>
+               <note id="n1">HumanName.family</note>
+             </notes>
+        <source>Mustermann</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Patient-12345" resname="HumanName.given">
+             <notes>
+               <note id="n1">HumanName.given</note>
+             </notes>
+        <source>Max</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

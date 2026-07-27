@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="DiagnosticReport-mii-exa-patho-report" original="Resource DiagnosticReport-mii-exa-patho-report" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="DiagnosticReport-mii-exa-patho-report" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Accession ID</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="DiagnosticReport-mii-exa-patho-report" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Pathology synoptic report</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="DiagnosticReport-mii-exa-patho-report" resname="DiagnosticReport.media.comment">
+             <notes>
+               <note id="n1">DiagnosticReport.media.comment</note>
+             </notes>
+        <source>HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="DiagnosticReport-mii-exa-patho-report" resname="DiagnosticReport.conclusion">
+             <notes>
+               <note id="n1">DiagnosticReport.conclusion</note>
+             </notes>
+        <source>Gut differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 1</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

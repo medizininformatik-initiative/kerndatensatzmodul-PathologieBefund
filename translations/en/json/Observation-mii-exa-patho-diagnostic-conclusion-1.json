@@ -1,0 +1,19 @@
+{
+  "id" : "Observation-mii-exa-patho-diagnostic-conclusion-1",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Adenocarcinoma, NOS",
+      "target" : null
+    },
+    {
+      "id" : "CodeableConcept.text",
+      "context" : "CodeableConcept.text",
+      "source" : "Adenokarzinom o.n.A.",
+      "target" : null
+    }]
+  }]
+}

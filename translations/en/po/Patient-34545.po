@@ -1,0 +1,11 @@
+
+# HumanName.family
+#: HumanName.family
+msgid "Musterfrau"
+msgstr ""
+
+# HumanName.given
+#: HumanName.given
+msgid "Erika"
+msgstr ""
+

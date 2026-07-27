@@ -1,0 +1,13 @@
+{
+  "id" : "Substance-mii-exa-patho-eosin-y",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Eosin Y (substance)",
+      "target" : null
+    }]
+  }]
+}

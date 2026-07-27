@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="BodyStructure-mii-exa-patho-left-breast-body-structure" original="Resource BodyStructure-mii-exa-patho-left-breast-body-structure" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="BodyStructure-mii-exa-patho-left-breast-body-structure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Lower outer quadrant of left breast</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-left-breast-body-structure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Left (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-left-breast-body-structure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Nipple structure</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-left-breast-body-structure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>5 o'clock position</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-left-breast-body-structure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Distal</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-left-breast-body-structure" resname="Quantity.unit">
+             <notes>
+               <note id="n1">Quantity.unit</note>
+             </notes>
+        <source>mm</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-left-breast-body-structure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Infiltrating duct carcinoma</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-left-breast-body-structure" resname="CodeableConcept.text">
+             <notes>
+               <note id="n1">CodeableConcept.text</note>
+             </notes>
+        <source>Bioptisch gesichertes invasives Karzinom</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-left-breast-body-structure" resname="BodyStructure.description">
+             <notes>
+               <note id="n1">BodyStructure.description</note>
+             </notes>
+        <source>5 x 3 x 3 cm, eine Draht- und eine Fadenmarkierung</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

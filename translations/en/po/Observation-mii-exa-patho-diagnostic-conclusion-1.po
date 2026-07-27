@@ -1,0 +1,11 @@
+
+# Coding.display
+#: Coding.display
+msgid "Adenocarcinoma, NOS"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Adenokarzinom o.n.A."
+msgstr ""
+

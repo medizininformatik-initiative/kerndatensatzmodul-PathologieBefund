@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ValueSet-mii-vs-patho-report-category-hl7" original="Resource ValueSet-mii-vs-patho-report-category-hl7" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ValueSet-mii-vs-patho-report-category-hl7" resname="ValueSet.name">
+             <notes>
+               <note id="n1">ValueSet.name</note>
+             </notes>
+        <source>MII_VS_Patho_Report_Category_HL7</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-report-category-hl7" resname="ValueSet.title">
+             <notes>
+               <note id="n1">ValueSet.title</note>
+             </notes>
+        <source>MII VS Patho Report Category HL7</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-report-category-hl7" resname="ValueSet.publisher">
+             <notes>
+               <note id="n1">ValueSet.publisher</note>
+             </notes>
+        <source>Medizininformatik-Initiative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-report-category-hl7" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Medizininformatik-Initiative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-report-category-hl7" resname="ValueSet.description">
+             <notes>
+               <note id="n1">ValueSet.description</note>
+             </notes>
+        <source>ValueSet for the categorization of Pathology Report documents</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-report-category-hl7" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-report-category-hl7" resname="ValueSet.compose.include.version">
+             <notes>
+               <note id="n1">ValueSet.compose.include.version</note>
+             </notes>
+        <source>3.0.0</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-report-category-hl7" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Cytopathology</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-report-category-hl7" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Surgical Pathology</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

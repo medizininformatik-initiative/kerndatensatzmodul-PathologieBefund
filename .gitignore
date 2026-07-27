@@ -10,6 +10,7 @@ Thumbs.db
 # /fsh-generated
 /input-cache
 /output
+/Unterlagen
 /temp
 /template
 validator_cli.jar

@@ -4,13 +4,20 @@ Profile: MII_PR_Patho_Attached_Image
 Parent: Media
 Id: mii-pr-patho-attached-image
 Title: "MII PR Patho Attached Image"
-Description: "Profile for attached images"
+Description: """
+Mit dem Profil **MII PR Patho Attached Image** der Ressource Media wird  die Beschreibung von in den Befund, d.h. den [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), eingebetteten Bildern vorgenommen. Um Bilder in [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) einzubinden, muss auf eine Referenz zu einer ImagingStudy zurückgegriffen werden. Das vorliegende Profil sollte vorzugsweise nur zur "Illustration" eines Pathologiebefundberichts verwendet werden.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert Translation(^title, de-DE, MII PR Patho Angefügtes Bild)
 * insert Translation(^title, en-US, MII PR Patho Attached Image)
-* insert Translation(^description, de-DE, Profil für angefügte Bilder)
-* insert Translation(^description, en-US, Profile for attached images)
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Attached Image** profile of the Media resource is used to describe images embedded in the report, i.e. the [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html). To include images in [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html), a reference to an ImagingStudy must be used. The present profile should preferably only be used for the "illustration" of a pathology report.
+"""
 * id MS
 * meta.lastUpdated MS
 * meta.profile MS

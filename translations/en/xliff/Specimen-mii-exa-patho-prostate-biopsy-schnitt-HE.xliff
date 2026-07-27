@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE" original="Resource Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Tissue section (specimen)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE" resname="Quantity.unit">
+             <notes>
+               <note id="n1">Quantity.unit</note>
+             </notes>
+        <source>°C</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Hematoxylin and eosin stain method (procedure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Microscope slide (physical object)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

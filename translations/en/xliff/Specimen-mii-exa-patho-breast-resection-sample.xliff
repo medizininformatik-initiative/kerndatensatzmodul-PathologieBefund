@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Specimen-mii-exa-patho-breast-resection-sample" original="Resource Specimen-mii-exa-patho-breast-resection-sample" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Specimen-mii-exa-patho-breast-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Part of left breast</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-breast-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Anterior surgical margin</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-breast-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Distal surgical margin</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-breast-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Specimen from breast obtained by excision</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-breast-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Wide local excision of breast lesion</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-breast-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Structure of lower outer quadrant of breast</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-breast-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Specimen vial (physical object)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-breast-resection-sample" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>BET-Exzisionspraeparat Mamma links, unterer aeusserer Quadrant, 5 Uhr, 50 mm von der Mamille. Drahthaekchen und zwei Fadenmarkierungen.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

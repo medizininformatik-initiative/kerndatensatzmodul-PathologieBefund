@@ -1,0 +1,31 @@
+{
+  "id" : "DiagnosticReport-mii-exa-patho-report",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Accession ID",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Pathology synoptic report",
+      "target" : null
+    },
+    {
+      "id" : "DiagnosticReport.media.comment",
+      "context" : "DiagnosticReport.media.comment",
+      "source" : "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert",
+      "target" : null
+    },
+    {
+      "id" : "DiagnosticReport.conclusion",
+      "context" : "DiagnosticReport.conclusion",
+      "source" : "Gut differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 1",
+      "target" : null
+    }]
+  }]
+}

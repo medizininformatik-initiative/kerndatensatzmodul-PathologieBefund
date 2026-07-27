@@ -13,7 +13,71 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Beschreibung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="beschreibung.html">Modulbeschreibung</a>
+      </li>
+      <li>
+        <a href="kontext.html">Kontext und Bezüge</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsfälle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsfaelle.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="szenarien.html">Szenarien</a>
+      </li>
+      <li>
+        <a href="datensaetze.html">Datensätze</a>
+      </li>
+      <li>
+        <a href="uml.html">UML</a>
+      </li>
+      <li>
+        <a href="hierarchie.html">Hierarchie und Workflow</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artefakte
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="terminologien.html">Terminologien</a>
+      </li>
+    </ul>
+  </li>
   <li>
-    <a href="artifacts.html">Artifacts</a>
+    <a href="referenzen.html">Referenzen</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Versionierung
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="version-history.html">Versionierung</a>
+      </li>
+      <li>
+        <a href="changes.html">Changelog</a>
+      </li>
+    </ul>
   </li>
 </ul>

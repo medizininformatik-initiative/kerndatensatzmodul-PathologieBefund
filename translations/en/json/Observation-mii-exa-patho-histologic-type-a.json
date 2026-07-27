@@ -1,0 +1,7 @@
+{
+  "id" : "Observation-mii-exa-patho-histologic-type-a",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en"
+  }]
+}

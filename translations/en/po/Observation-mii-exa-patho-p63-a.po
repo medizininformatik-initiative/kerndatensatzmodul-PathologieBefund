@@ -1,0 +1,6 @@
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Die Tumorzellen sind negativ für p63"
+msgstr ""
+

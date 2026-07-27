@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Specimen-mii-exa-patho-prostate-resection-sample" original="Resource Specimen-mii-exa-patho-prostate-resection-sample" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Specimen from prostate obtained by radical prostatectomy (specimen)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Radical prostatectomy (procedure)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Prostate</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-resection-sample" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Specimen vial (physical object)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Specimen-mii-exa-patho-prostate-resection-sample" resname="Annotation.text">
+             <notes>
+               <note id="n1">Annotation.text</note>
+             </notes>
+        <source>Radikalprostatektomie-Praeparat, Tumorregion rechte apikale periphere Zone (posterior) markiert. In Formalin fixiert.</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

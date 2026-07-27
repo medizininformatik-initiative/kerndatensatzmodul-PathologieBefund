@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ValueSet-mii-vs-patho-media-modality-snomed-ct" original="Resource ValueSet-mii-vs-patho-media-modality-snomed-ct" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="ValueSet.name">
+             <notes>
+               <note id="n1">ValueSet.name</note>
+             </notes>
+        <source>MII_VS_Patho_Media_Modality_SNOMED_CT</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="ValueSet.title">
+             <notes>
+               <note id="n1">ValueSet.title</note>
+             </notes>
+        <source>MII VS Patho Media Modality [SNOMED CT]</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="ValueSet.publisher">
+             <notes>
+               <note id="n1">ValueSet.publisher</note>
+             </notes>
+        <source>Medizininformatik-Initiative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Medizininformatik-Initiative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="ValueSet.description">
+             <notes>
+               <note id="n1">ValueSet.description</note>
+             </notes>
+        <source>ValueSet with some of the main Media.modalities needed in the pathological scope</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Scanner (physical object)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Microscope camera (physical object)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Camera, device (physical object)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>Multi-purpose digital medical camera (physical object)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-media-modality-snomed-ct" resname="ValueSet.compose.include.concept.display">
+             <notes>
+               <note id="n1">ValueSet.compose.include.concept.display</note>
+             </notes>
+        <source>External camera (physical object)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

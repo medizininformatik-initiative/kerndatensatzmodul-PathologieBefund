@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="Observation-mii-exa-patho-biopsy-site-a" original="Resource Observation-mii-exa-patho-biopsy-site-a" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="Observation-mii-exa-patho-biopsy-site-a" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Biopsy site Patient</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="Observation-mii-exa-patho-biopsy-site-a" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

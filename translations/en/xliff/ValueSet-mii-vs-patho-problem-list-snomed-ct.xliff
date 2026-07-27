@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="ValueSet-mii-vs-patho-problem-list-snomed-ct" original="Resource ValueSet-mii-vs-patho-problem-list-snomed-ct" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.name">
+             <notes>
+               <note id="n1">ValueSet.name</note>
+             </notes>
+        <source>MII_VS_Patho_Problem_List_SNOMED_CT</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.title">
+             <notes>
+               <note id="n1">ValueSet.title</note>
+             </notes>
+        <source>MII VS Patho Problem List [SNOMED CT]</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.publisher">
+             <notes>
+               <note id="n1">ValueSet.publisher</note>
+             </notes>
+        <source>Medizininformatik-Initiative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Medizininformatik-Initiative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.description">
+             <notes>
+               <note id="n1">ValueSet.description</note>
+             </notes>
+        <source>ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.compose.include.filter.value">
+             <notes>
+               <note id="n1">ValueSet.compose.include.filter.value</note>
+             </notes>
+        <source>64572001</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.compose.include.filter.value">
+             <notes>
+               <note id="n1">ValueSet.compose.include.filter.value</note>
+             </notes>
+        <source>418799008</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.compose.include.filter.value">
+             <notes>
+               <note id="n1">ValueSet.compose.include.filter.value</note>
+             </notes>
+        <source>404684003</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.compose.include.filter.value">
+             <notes>
+               <note id="n1">ValueSet.compose.include.filter.value</note>
+             </notes>
+        <source>409586006</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.compose.include.filter.value">
+             <notes>
+               <note id="n1">ValueSet.compose.include.filter.value</note>
+             </notes>
+        <source>248536006</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.compose.include.filter.value">
+             <notes>
+               <note id="n1">ValueSet.compose.include.filter.value</note>
+             </notes>
+        <source>55607006</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ValueSet-mii-vs-patho-problem-list-snomed-ct" resname="ValueSet.compose.include.filter.value">
+             <notes>
+               <note id="n1">ValueSet.compose.include.filter.value</note>
+             </notes>
+        <source>282291009</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-bundle",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-bundle",
-  "version": "2026.0.0",
+  "version": "2027.0.0",
   "name": "MII_PR_Patho_Bundle",
   "title": "MII PR Patho Bundle",
   "_title": {
@@ -47,22 +47,9 @@
       ]
     }
   ],
-  "description": "A Document-Bundle to wrap the composition and other patho-instances into an official document.",
+  "description": "Dieses Profil **MII PR Patho Bundle** erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtbundle) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).\nEs dient der Aggregation aller Ressourcen, die Bestandteil des Dokumentes sind. Dabei sollte die erste Ressource im Bundle (Bundle.entry.resource) stets eine Composition sein.\n\nDas Profil verwendet `Bundle.type` = “document” und einen persistenten, eindeutigen `Bundle.identifier`. Dieser sollte dem `Composition.identifier` entsprechen, beispielsweise einer Eingangsnummer inklusive Versionsnummer. Weitere Slices von Bundle.entry sind ServiceRequest, Specimen, DiagnosticReport, Observation und Patient. Wobei die Slices ServiceRequest und Patient optional sind.\nDas Bundle enthält eine Signatur.",
   "_description": {
     "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
-        "extension": [
-          {
-            "url": "lang",
-            "valueCode": "de-DE"
-          },
-          {
-            "url": "content",
-            "valueString": "Dokumenten-Bundle zum Zusammenfügen der Composition und anderer Pathologie-Instanzen in ein offizielles Dokument"
-          }
-        ]
-      },
       {
         "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
@@ -72,7 +59,7 @@
           },
           {
             "url": "content",
-            "valueString": "A Document-Bundle to wrap the composition and other patho-instances into an official document"
+            "valueString": "This **MII PR Patho Bundle** profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtbundle) of the [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5) specification.\nIt serves to aggregate all resources that are part of the document. The first resource in the bundle (Bundle.entry.resource) should always be a Composition.\n\nThe profile uses `Bundle.type` = “document” and a persistent, unique `Bundle.identifier`. This should correspond to the `Composition.identifier`, for example an accession number including a version number. Further slices of Bundle.entry are ServiceRequest, Specimen, DiagnosticReport, Observation and Patient. The slices ServiceRequest and Patient are optional.\nThe bundle contains a signature."
           }
         ]
       }

@@ -1,0 +1,25 @@
+{
+  "id" : "BodyStructure-mii-exa-patho-breast-body-structure",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Structure of lower outer quadrant of breast (body structure)",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Left (qualifier value)",
+      "target" : null
+    },
+    {
+      "id" : "BodyStructure.description",
+      "context" : "BodyStructure.description",
+      "source" : "Linke Mamma, unterer aeusserer Quadrant, 5 Uhr, 50 mm von der Mamille entfernt",
+      "target" : null
+    }]
+  }]
+}

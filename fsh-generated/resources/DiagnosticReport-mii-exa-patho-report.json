@@ -3,7 +3,7 @@
   "id": "mii-exa-patho-report",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2026.0.0"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0"
     ]
   },
   "identifier": [
@@ -24,8 +24,8 @@
   "code": {
     "coding": [
       {
-        "code": "60568-3",
         "system": "http://loinc.org",
+        "code": "60568-3",
         "display": "Pathology synoptic report"
       }
     ]

@@ -1,0 +1,897 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="CapabilityStatement-mii-cps-patho-capability-statement" original="Resource CapabilityStatement-mii-cps-patho-capability-statement" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.name">
+             <notes>
+               <note id="n1">CapabilityStatement.name</note>
+             </notes>
+        <source>MII_CPS_Patho_Capability_Statement</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.title">
+             <notes>
+               <note id="n1">CapabilityStatement.title</note>
+             </notes>
+        <source>MII CPS Patho Capability Statement</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.publisher">
+             <notes>
+               <note id="n1">CapabilityStatement.publisher</note>
+             </notes>
+        <source>Medizininformatik-Initiative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Medizininformatik-Initiative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.description">
+             <notes>
+               <note id="n1">CapabilityStatement.description</note>
+             </notes>
+        <source>The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Germany</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Logical id of this artifact</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>When the resource version last changed</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Profiles this resource claims to conform to</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The unique identifier associated with the specimen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The accession number associated with the specimen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>available | unavailable | unsatisfactory | entered-in-error</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The specimen type</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The subject of the specimen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The parent of the specimen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The date the specimen was collected</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Who collected the specimen</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The code for the body site from where the specimen originated</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The kind of specimen container</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The patient the specimen comes from</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Specimen.request</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Specimen.collection.method</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Specimen.collection.bodySite</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Specimen.processing.procedure</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Specimen.processing.additive</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Specimen.processing.time</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Specimen.container.additive</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Reference to the service request</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The classification of the type of observation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The code of the observation type</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Code and coded value parameter pair</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Code and date/time value parameter pair</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Code and quantity value parameter pair</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Code and string value parameter pair</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The code of the observation type or component type</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Code and coded value parameter pair, including in components</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Code and quantity value parameter pair, including in components</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The reason why the expected value in the element Observation.value[x] or Observation.component.value[x] is missing</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The value or component value of the observation, if the value is a CodeableConcept</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The value or component value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The component code of the observation type</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Component code and component coded value parameter pair</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Component code and component quantity value parameter pair</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The reason why the expected value in the element Observation.component.value[x] is missing</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The value of the component observation, if the value is a CodeableConcept</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The value of the component observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The reason why the expected value in the element Observation.value[x] is missing</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Obtained datetime. If the obtained element is a period, a date that falls in the period</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Related measurements the observation is made from</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Encounter related to the observation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Related resource that belongs to the Observation group</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The unique id for a particular observation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The method used for the observation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The subject that the observation is about (if patient)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Who performed the observation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Specimen used for this observation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The status of the observation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The subject that the observation is about</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The value of the observation, if the value is a CodeableConcept</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The value of the observation, if the value is a date or period of time</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The value of the observation, if the value is a string, and also searches in CodeableConcept.text</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Observation.bodySite</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Observation.valueRatio</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Observation.valueRatio.numerator</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Observation.valueRatio.denominator</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Date request signed</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Classification of service</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>What is being requested/ordered</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>An encounter in which this request is made</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Identifiers assigned to this order</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Search by subject - a patient</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Requested performer</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Who/what is requesting service</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Composite Request ID</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Specimen to be tested</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>draft | active | on-hold | revoked | completed | entered-in-error | unknown</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Search by subject</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for ServiceRequest.reasonCode</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for ServiceRequest.supportingInfo</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The author of the request group</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The date the request group was authored</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The encounter the request group applies to</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>External identifiers for the request group</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The intent of the request group</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The identity of a patient to search for request groups</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The status of the request group</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The subject that the request group is about</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Which diagnostic discipline/department created the report</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>A coded conclusion (interpretation/impression) on the report</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The clinically relevant time of the report</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The Encounter when the order was made</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>An identifier for the report</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>When the report was issued</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>A reference to the image source</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The subject of the report if a patient</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Who is responsible for the report</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Link to an atomic result (observation resource)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The specimen details</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The status of the report</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The subject of the report</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for DiagnosticReport.imagingStudy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Who attested the composition</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Who and/or what authored the composition</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Categorization of Composition</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Code(s) that apply to the event being documented</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Composition editing time</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Context of the Composition</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>A reference to data that supports this section</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Version-independent identifier for the Composition</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Who and/or what the composition is about</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>The period covered by the documentation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Target of the relationship</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Classification of section (recommended)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>preliminary | final | amended | entered-in-error</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Human Readable name/title</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Kind of composition (LOINC if possible)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Composition.attester.mode</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Composition.custodian</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Composition.relatesTo.code</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>When Media was collected</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Who/What this Media is a record of</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>Classification of media as image, video, or audio</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="CapabilityStatement-mii-cps-patho-capability-statement" resname="CapabilityStatement.rest.resource.searchParam.documentation">
+             <notes>
+               <note id="n1">CapabilityStatement.rest.resource.searchParam.documentation</note>
+             </notes>
+        <source>SearchParameter for Media.partOf</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

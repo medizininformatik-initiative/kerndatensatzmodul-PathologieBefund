@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="de" target-language="en" id="BodyStructure-mii-exa-patho-prostate-body-structure" original="Resource BodyStructure-mii-exa-patho-prostate-body-structure" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="BodyStructure-mii-exa-patho-prostate-body-structure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Apical peripheral zone of prostate</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-prostate-body-structure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Right (qualifier value)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-prostate-body-structure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Structure of apex of prostate</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-prostate-body-structure" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>Posterior</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-prostate-body-structure" resname="Quantity.unit">
+             <notes>
+               <note id="n1">Quantity.unit</note>
+             </notes>
+        <source>mm</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="BodyStructure-mii-exa-patho-prostate-body-structure" resname="BodyStructure.description">
+             <notes>
+               <note id="n1">BodyStructure.description</note>
+             </notes>
+        <source>Rechte apikale periphere Zone der Prostata, posterior, 15 mm proximal des Apex</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

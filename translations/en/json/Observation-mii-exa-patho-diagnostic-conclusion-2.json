@@ -1,0 +1,7 @@
+{
+  "id" : "Observation-mii-exa-patho-diagnostic-conclusion-2",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en"
+  }]
+}

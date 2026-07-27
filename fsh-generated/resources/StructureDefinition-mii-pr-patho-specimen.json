@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen",
-  "version": "2026.0.0",
+  "version": "2027.0.0",
   "name": "MII_PR_Patho_Specimen",
   "title": "MII PR Patho Specimen",
   "_title": {
@@ -61,22 +61,9 @@
       ]
     }
   ],
-  "description": "Pathology specimen (based on Biobank module)",
+  "description": "Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core)\nIhm liegt das Domänen-Analyse-Modell von HL7 (HL7_DAM_SPECIMEN_R2_INFORM_2019APR) zugrunde. Dieses berücksichtigt insbesondere für die Pathologie das Rollenmodell von Specimen, welche sowohl Gegenstand als auch Produkt von Laborprozessen sind. Das Rootelement(Sample) ist ein klinisch gewonnenes Probenmaterial von einem Patienten, entspricht im Pathologie-Workflow einem Part. Tochterelemente sind Blöcke und Schnitte bzw. ein zytologisches Präparat. Die Kinderproben (Blöcke und Schnitte) sollten stets und mindestens ihre direkte Elternprobe über das Element Specimen.parent referenzieren.\n\nProben werden in verschiedenen Profilen referenziert. Im \"PathologieBefund\" und in den \"Einzelbeobachtungen\" der Grouper für Makroskopie und Diagnostische Schlussfolgerungen sollten die Proben des Eingangs (Parts), in den \"Einzelbeobachtungen\" des Mikroskopie-Groupers die Proben der gefärbten Gewebsschnitt-Ebene referenziert werden.",
   "_description": {
     "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
-        "extension": [
-          {
-            "url": "lang",
-            "valueCode": "de-DE"
-          },
-          {
-            "url": "content",
-            "valueString": "Pathologie-Probe basierend auf Biobank-Modul"
-          }
-        ]
-      },
       {
         "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
@@ -86,7 +73,7 @@
           },
           {
             "url": "content",
-            "valueString": "Pathology specimen based on Biobank module"
+            "valueString": "This profile inherits from [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core)\nIt is based on the HL7 Domain Analysis Model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR). This model, in particular for pathology, accounts for the role model of specimens, which are both the subject and the product of laboratory processes. The root element (Sample) is clinically obtained specimen material from a patient and corresponds to a Part in the pathology workflow. Child elements are blocks and slides, or a cytological preparation. The child specimens (blocks and slides) should always reference at least their direct parent specimen via the Specimen.parent element.\n\nSpecimens are referenced in various profiles. In the \"PathologyReport\" and in the \"individual observations\" of the groupers for Macroscopy and Diagnostic Conclusions, the specimens of the accession (Parts) should be referenced; in the \"individual observations\" of the Microscopy grouper, the specimens of the stained tissue slide level should be referenced."
           }
         ]
       }
@@ -565,10 +552,10 @@
         }
       },
       {
-        "id": "Specimen.collection.bodySite.extension:locationQualifier",
+        "id": "Specimen.collection.bodySite.extension:bodyStructure",
         "path": "Specimen.collection.bodySite.extension",
-        "sliceName": "locationQualifier",
-        "short": "Lagequalifikator",
+        "sliceName": "bodyStructure",
+        "short": "Koerperstruktur",
         "_short": {
           "extension": [
             {
@@ -580,7 +567,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Lagequalifikator"
+                  "valueString": "Koerperstruktur"
                 }
               ]
             },
@@ -593,13 +580,13 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Location qualifier"
+                  "valueString": "Body structure"
                 }
               ]
             }
           ]
         },
-        "definition": "Qualifikator für die anatomische Lage",
+        "definition": "Verweis auf eine BodyStructure-Ressource mit der detaillierten Lokalisation",
         "_definition": {
           "extension": [
             {
@@ -611,7 +598,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Qualifikator für die anatomische Lage"
+                  "valueString": "Verweis auf eine BodyStructure-Ressource mit der detaillierten Lokalisation"
                 }
               ]
             },
@@ -624,85 +611,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Qualifier for anatomical location"
-                }
-              ]
-            }
-          ]
-        },
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-body-location-qualifier"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Specimen.collection.bodySite.extension:lateralityQualifier",
-        "path": "Specimen.collection.bodySite.extension",
-        "sliceName": "lateralityQualifier",
-        "short": "Seitlichkeitsqualifikator",
-        "_short": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Seitlichkeitsqualifikator"
-                }
-              ]
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "en-US"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Laterality qualifier"
-                }
-              ]
-            }
-          ]
-        },
-        "definition": "Qualifikator für die Körperseite",
-        "_definition": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "de-DE"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Qualifikator für die Körperseite"
-                }
-              ]
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/translation",
-              "extension": [
-                {
-                  "url": "lang",
-                  "valueCode": "en-US"
-                },
-                {
-                  "url": "content",
-                  "valueString": "Qualifier for body side"
+                  "valueString": "Reference to a BodyStructure resource carrying the detailed location"
                 }
               ]
             }
@@ -714,11 +623,28 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality-qualifier"
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite"
             ]
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Specimen.collection.bodySite.extension:bodyStructure.extension",
+        "path": "Specimen.collection.bodySite.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Specimen.collection.bodySite.extension:bodyStructure.value[x]",
+        "path": "Specimen.collection.bodySite.extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/BodyStructure"
+            ]
+          }
+        ]
       },
       {
         "id": "Specimen.processing",

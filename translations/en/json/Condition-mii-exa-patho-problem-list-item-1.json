@@ -1,0 +1,13 @@
+{
+  "id" : "Condition-mii-exa-patho-problem-list-item-1",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Malignant neoplastic disease (disorder)",
+      "target" : null
+    }]
+  }]
+}

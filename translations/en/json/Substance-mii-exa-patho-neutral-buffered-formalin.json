@@ -1,0 +1,13 @@
+{
+  "id" : "Substance-mii-exa-patho-neutral-buffered-formalin",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Neutral buffered formalin (substance)",
+      "target" : null
+    }]
+  }]
+}

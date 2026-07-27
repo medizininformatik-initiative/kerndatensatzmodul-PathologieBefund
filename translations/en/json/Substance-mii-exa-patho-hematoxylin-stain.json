@@ -1,0 +1,13 @@
+{
+  "id" : "Substance-mii-exa-patho-hematoxylin-stain",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Hematoxylin stain (substance)",
+      "target" : null
+    }]
+  }]
+}

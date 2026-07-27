@@ -1,0 +1,6 @@
+
+# Coding.display
+#: Coding.display
+msgid "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+msgstr ""
+

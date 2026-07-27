@@ -1,0 +1,13 @@
+{
+  "id" : "Substance-mii-exa-patho-canadabalsam",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "Canada balsam (substance)",
+      "target" : null
+    }]
+  }]
+}

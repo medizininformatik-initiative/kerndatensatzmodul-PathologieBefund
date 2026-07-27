@@ -1,0 +1,56 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "MII_VS_Patho_Media_Modality_SNOMED_CT"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "MII VS Patho Media Modality [SNOMED CT]"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "ValueSet with some of the main Media.modalities needed in the pathological scope"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Scanner (physical object)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Microscope camera (physical object)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Camera, device (physical object)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Multi-purpose digital medical camera (physical object)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "External camera (physical object)"
+msgstr ""
+

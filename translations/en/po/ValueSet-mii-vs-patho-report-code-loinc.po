@@ -1,0 +1,71 @@
+
+# ValueSet.name
+#: ValueSet.name
+msgid "MII_VS_Patho_Report_Code_LOINC"
+msgstr ""
+
+# ValueSet.title
+#: ValueSet.title
+msgid "MII VS Patho Report Code [LOINC]"
+msgstr ""
+
+# ValueSet.publisher
+#: ValueSet.publisher
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Medizininformatik-Initiative"
+msgstr ""
+
+# ValueSet.description
+#: ValueSet.description
+msgid "ValueSet for the report type codes of pathology DiagnosticReports"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Germany"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Pathology Synoptic report"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Pathology study"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Surgical pathology study"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Non-gynecological cytology study"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Molecular pathology studies (set)"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Cytology report of Cervical or vaginal smear or scraping Cyto stain"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep"
+msgstr ""
+
+# ValueSet.compose.include.concept.display
+#: ValueSet.compose.include.concept.display
+msgid "Autopsy report"
+msgstr ""
+

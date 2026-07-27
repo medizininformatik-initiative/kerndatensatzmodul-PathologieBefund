@@ -1,0 +1,16 @@
+
+# Coding.display
+#: Coding.display
+msgid "Labor and industries number"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Material"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "p63 immunostain"
+msgstr ""
+

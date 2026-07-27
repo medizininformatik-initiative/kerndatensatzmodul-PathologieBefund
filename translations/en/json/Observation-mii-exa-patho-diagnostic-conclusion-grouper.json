@@ -1,0 +1,7 @@
+{
+  "id" : "Observation-mii-exa-patho-diagnostic-conclusion-grouper",
+  "baseLang" : "de",
+  "languages" : [{
+    "targetLang" : "en"
+  }]
+}

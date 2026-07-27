@@ -1,0 +1,46 @@
+
+# Coding.display
+#: Coding.display
+msgid "Lower outer quadrant of left breast"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Left (qualifier value)"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Nipple structure"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "5 o'clock position"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Distal"
+msgstr ""
+
+# Quantity.unit
+#: Quantity.unit
+msgid "mm"
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "Infiltrating duct carcinoma"
+msgstr ""
+
+# CodeableConcept.text
+#: CodeableConcept.text
+msgid "Bioptisch gesichertes invasives Karzinom"
+msgstr ""
+
+# BodyStructure.description
+#: BodyStructure.description
+msgid "5 x 3 x 3 cm, eine Draht- und eine Fadenmarkierung"
+msgstr ""
+

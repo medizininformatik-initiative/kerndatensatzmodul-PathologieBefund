@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-problem-list-item",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item",
-  "version": "2026.0.0",
+  "version": "2027.0.0",
   "name": "MII_PR_Patho_Problem_List_Item",
   "title": "MII PR Patho Problem List Item",
   "status": "active",
@@ -17,7 +17,24 @@
       ]
     }
   ],
-  "description": "Condition profile for problem list item",
+  "description": "Das Profil **MII PR Patho Problem List Item** der Resource Condition stellt die einzelnen Listeneinträge der Profile **MII PR Patho Active Problems** und **MII PR Patho History of Present Illness** dar.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "en-US"
+          },
+          {
+            "url": "content",
+            "valueString": "The **MII PR Patho Problem List Item** profile of the Condition resource represents the individual list entries of the **MII PR Patho Active Problems** and **MII PR Patho History of Present Illness** profiles."
+          }
+        ]
+      }
+    ]
+  },
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,

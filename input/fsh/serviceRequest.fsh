@@ -5,13 +5,24 @@ Profile: MII_PR_Patho_Service_Request
 Parent: ServiceRequest
 Id: mii-pr-patho-service-request
 Title: "MII PR Patho Service Request"
-Description: "Order for the analysis of a sample or a group of samples."
+Description: """
+Das Profil **MII PR Patho Service Request** der Ressource [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) stellt die Beschreibung des Auftrags des Klinikers an die Pathologieeinrichtung dar. Dieser ist in der Regel unspezifisch gehalten (“Histologie erbeten”, dies entspricht enem Auftrag zur konsiliarischen Begutachtung), kann aber durch spezielle Fragen untersetzt sein (z.B. “FISH für Her2”, entspricht einem Zielauftrag). Falls mehrere konkrete Untersuchungen beauftragt werden sollen, so muss pro Untersuchung ein **MII PR Patho Service Request** ausgelöst werden, die alle zusammen in der `ServiceRequest.requisition` (entspricht einer Placer Order Group) zusammengefasst werden.
+
+Ein Untersuchungsauftrag ist immer an eine (oder mehrere) Probe(n) gebunden, zu denen detaillierte Beschreibungen des Einsenders vorliegen können. Ein Untersuchungsauftrag begründet in der Regel einen Fall (Einsendung, "Accession") der Pathologieeinrichtung. Wenn eine `ServiceRequest.requisition` vorliegt, bildet diese in der Regel den Fall (Einsendung, Accession). Durch die den Untersuchungsauftrag abarbeitende Pathologieeinrichtung kann eine Zusammenfassung oder Aufteilung von Untersuchungsanträgen entsprechend den laborinternen Erfordernissen zu einem Fall oder mehreren Fällen erfolgen.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert Translation(^title, de-DE, MII PR Patho Untersuchungsauftrag)
 * insert Translation(^title, en-US, MII PR Patho Service Request)
-* insert Translation(^description, de-DE, Auftrag für die Analyse einer Probe oder einer Gruppe von Proben)
-* insert Translation(^description, en-US, Order for the analysis of a sample or a group of samples)
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Service Request** profile of the [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) resource represents the description of the clinician's order to the pathology facility. This is usually kept unspecific (“Histology requested”, which corresponds to an order for a consultative assessment), but may be underpinned by specific questions (e.g. “FISH for Her2”, corresponding to a targeted order). If several concrete examinations are to be ordered, one **MII PR Patho Service Request** must be triggered per examination, all of which are grouped together in the `ServiceRequest.requisition` (corresponding to a Placer Order Group).
+
+An examination request is always bound to one (or more) specimen(s), for which detailed descriptions from the submitter may be available. An examination request usually establishes a case (submission, "Accession") of the pathology facility. If a `ServiceRequest.requisition` is present, it usually forms the case (submission, Accession). The pathology facility processing the examination request may combine or split examination requests into one or more cases according to the laboratory's internal requirements.
+"""
 // Meta
 * meta.profile MS
 * meta.source MS
@@ -202,11 +213,20 @@ Profile: MII_PR_Patho_Problem_List_Item
 Parent: Condition
 Id: mii-pr-patho-problem-list-item
 Title: "MII PR Patho Problem List Item"
-Description: "Condition profile for problem list item"
+Description: """
+Das Profil **MII PR Patho Problem List Item** der Resource Condition stellt die einzelnen Listeneinträge der Profile **MII PR Patho Active Problems** und **MII PR Patho History of Present Illness** dar.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Problem List Item** profile of the Condition resource represents the individual list entries of the **MII PR Patho Active Problems** and **MII PR Patho History of Present Illness** profiles.
+"""
 * meta.profile MS
-* category 1.. MS 
+* category 1.. MS
   * coding 1.. MS
     * system 1.. MS 
     * code 1.. MS
@@ -230,9 +250,22 @@ Profile: MII_PR_Patho_Active_Problems_List
 Parent: List
 Id: mii-pr-patho-active-problems-list
 Title: "MII PR Patho Active Problems List"
-Description: "List of conditions currently being monitored for the patient"
+Description: """
+Das Profil **MII PR Patho Active Problems** der Ressource [List](http://hl7.org/fhir/R4/list.html) stellt eine Liste der zu dem Untersuchungszeitpunkt vorhandenen Erkrankungen u/o Probleme des/der Patient:in dar, welche die Klinische Fragestellung des Einsenders innerhalb der Supporting Information des Profils [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.html) abbilden.
+
+Die einzelnen Erkrankungen/Fragestellungen können mithilfe des Profils [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-problem-list-item.html) dargestellt werden.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Active Problems** profile of the [List](http://hl7.org/fhir/R4/list.html) resource represents a list of the diseases and/or problems of the patient present at the time of examination, which represent the submitter's clinical question within the Supporting Information of the [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.html) profile.
+
+The individual diseases/questions can be represented using the [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-problem-list-item.html) profile.
+"""
 * meta.profile MS
 * status MS
 * mode MS
@@ -253,9 +286,22 @@ Profile: MII_PR_Patho_History_Of_Present_Illness
 Parent: List
 Id: mii-pr-patho-history-of-present-illness
 Title: "MII PR Patho History Of Present Illness"
-Description: "List profile for 'History of Present Illness'"
+Description: """
+Das Profil **MII PR Patho History of Present Illness** der Resource [List](http://hl7.org/fhir/R4/list.html) bildet die Beschreibung der Anamnese durch den Einsender ab und ist Teil der "supportingInfo" im Profil [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.html) ab.
+
+Die einzelnen Erkrankungen/Probleme können mithilfe des Profils [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-problem-list-item.html) dargestellt werden.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho History of Present Illness** profile of the [List](http://hl7.org/fhir/R4/list.html) resource represents the description of the anamnesis by the submitter and is part of the "supportingInfo" in the [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.html) profile.
+
+The individual diseases/problems can be represented using the [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-problem-list-item.html) profile.
+"""
 * meta.profile MS
 * status MS
 * mode MS
@@ -354,6 +400,6 @@ Description: "Pathology Active Problems List List Example"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list|2027.0.0"
 * status = #current 
 * mode = #snapshot
-* code = $LOINC#11450-4 "Problem list - Reported"
+* code = $LOINC#11450-4 "Problemliste - Berichtet"
 * subject = Reference(Patient/12345)
 * entry.item = Reference(mii-exa-patho-problem-list-item-1)
