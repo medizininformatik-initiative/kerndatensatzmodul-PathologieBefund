@@ -8,7 +8,7 @@ The central document and subject of this module is the **report from a pathology
 
 {{render:implementation-guides-ImplementationGuide-Common-images-ArtDecor-ganz}}
 
-**Pathologie-BefundePathology reports** are summarized as clinical documents, predominantly in text form, of a clinically commissioned histo- and cytomorphological as well as molecular examination or groups of such examinations with a synoptic summary, carried out in a pathology facility. In the sense of the [ISO/IEC-Norm 17020](https://www.din.de/de/mitwirken/normenausschuesse/nqsz/veroeffentlichungen/wdc-beuth:din21:146320816), these are inspection reports, the **"Pathologisch-anatomischen Begutachtungen"**. The free-text examination results can also be supplemented by structured coding (semantically annotated). The following applies: **Every structured coding must also be readable as text, but not every text information must be coded.**
+**Pathologie-BefundePathology reports** are summarized as clinical documents, predominantly in text form, of a clinically commissioned histo- and cytomorphological as well as molecular examination or groups of such examinations with a summarizing diagnostic assessment, carried out in a pathology facility. These results arise from observations on the clinically submitted specimens of a patient. In the sense of the [ISO/IEC-Norm 17020](https://www.din.de/de/mitwirken/normenausschuesse/nqsz/veroeffentlichungen/wdc-beuth:din21:146320816), these are inspection reports, the **"Pathologisch-anatomischen Begutachtungen"**. The free-text examination results can also be supplemented by structured coding (semantically annotated). The following applies: **Every structured coding must also be readable as text, but not every text information must be coded.**
 
 Various data is recorded for the clinical order and for the individual examinations, including whether the examination findings are preliminary or final (status) and various important points in time in the context.
 
@@ -20,9 +20,37 @@ For each examination, there is a point in time at which an observation in the sa
 
 The validity date indicates when the report was released. Since a pathology report often includes several analyses, the release of the report should be provided with an explicit date.
 
+### Design decisions
+
+There are – in principle – two ways to represent a pathology report in HL7 FHIR:
+
+- by using the `DiagnosticReport` resource;
+- or by treating the report like any other clinical document, i.e. using an HL7 FHIR document Bundle.
+
+The following applies:
+
+- A pathology report is a **legally binding signed document**.
+- Reports are often structured and may contain various kinds of examination results.
+- Individual implementations of pathology reports are currently based on HL7 CDA (KBV eArztbrief) and continue to use document exchange infrastructures (e.g. IHE XD*).
+- On the other hand, typical HL7 FHIR consumers expect to retrieve pathology reports by searching for the `DiagnosticReport` resource.
+
+A solution was therefore sought that balances the two approaches (FHIR document and DiagnosticReport). The R5 design pattern for `DiagnosticReport` was taken into account, in which the relationship between `DiagnosticReport` and `Composition` runs from the `DiagnosticReport` resource to the `Composition` resource.
+
+In brief:
+
+- A pathology report is always represented by exactly one `DiagnosticReport` resource.
+- A `DiagnosticReport` may reference the associated `Composition` resource via an extension; conversely, the `Composition` may reference its `DiagnosticReport`. Both links are optional in this module in order to preserve backward compatibility.
+- The referenced `Composition`:
+  - defines the structure of the report (even if only a single section);
+  - provides a means to assemble the report as a document (i.e. as a `Bundle` of type `document`).
+
+The document Bundle represents the legally signable report and contains all data that define the report.
+
 ### Interpretations and comments
 
-An essential part of the pathology report are the medical interpretations, the so-called synopsis, and the comments with which the pathologist making the report helps the submitter to draw the right conclusions from the test results. The actual interpretation is essentially saved as free text. Additional structured coding is also possible here.
+An essential part of the pathology report are the medical diagnostic interpretations and the comments with which the pathologist making the report helps the submitter to draw the right conclusions from the examination results. The actual interpretation is essentially saved as free text. Additional structured coding is also possible here.
+
+A so-called synoptic structured pathology report (College of American Pathologists, [Cancer protocol templates](https://www.cap.org)), corresponding to a structuring level 3 or higher (Ellis DW, Srigley J. Does standardised structured reporting contribute to quality in diagnostic pathology? The importance of evidence-based datasets. Virchows Arch. 2016 Jan;468(1):51–9.), exists when the examination results are organized in a defined question-answer structure.
 
 Sometimes individual comments do not refer to the entire report, but only to individual observations (e.g. "it is most likely ...", "... most likely corresponds to a ..."). These comments should be saved as a note.
 
