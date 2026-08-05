@@ -41,7 +41,7 @@ Gemäß dem Domänen-Analyse Modell müssen die verschiedenen Bearbeitungslevel 
 | Specimen.parent                                   | Part                                                                           | SOLLTE                  |
 | Specimen.collection.method                        | descendants-of 168126000 Makroskopie der Probe (procedure)                     | SOLLTE                  |
 | Specimen.collection.bodySite                      | descendants-of 123037004 Körperstruktur (body structure)                        | SOLLTE                  |
-| Specimen.collection.bodySite.extension:locationQualifier | Insbesondere, wenn mehrere Blöcke aus einem Teil stammen                       | SOLLTE                  |
+| Specimen.collection.bodySite.extension:bodyStructure | Verweis auf eine BodyStructure-Ressource, insbesondere wenn mehrere Blöcke aus einem Teil stammen                       | SOLLTE                  |
 | Specimen.processing                               | 787376009 Aufbereitung von formalinfixiertem paraffineingebettetem Gewebepräparat (procedure) | SOLLTE                  |
 
 ---
@@ -54,7 +54,7 @@ Gemäß dem Domänen-Analyse Modell müssen die verschiedenen Bearbeitungslevel 
 | Specimen.parent                                   | Block                                                           | SOLLTE                  |
 | Specimen.collection.method                        | descendants-of 13283003 Technik der Gewebeaufbereitung (procedure) | SOLLTE               |
 | Specimen.collection.bodySite                      | descendants-of 123037004 Körperstruktur (body structure)         | SOLLTE                  |
-| Specimen.collection.bodySite.extension:locationQualifier | Siehe Block                                                     | SOLLTE                  |
+| Specimen.collection.bodySite.extension:bodyStructure | Siehe Block                                                     | SOLLTE                  |
 | Specimen.processing                               | descendants-of 127790008 Färbemethode (procedure)               | SOLLTE                  |
 
 
@@ -70,32 +70,34 @@ Das Empfängersystem stellt stets die synoptische Übersicht aller Berichtsteile
 
 Berichtsform | Vorläufiger Hauptbericht | Hauptbericht | Plus Zusatz-/Nachbericht | Plus Korrekturbericht
 -- | -- | -- | -- | --
-Bundle.identifier | E12345/25-1 | E12345/25-1 | E12345/25-1 | E12345/25-1
-Bundle.signature | Dr.A  (Chefarzt) | Dr.A | Dr.C (Facharzt) | Dr.D (Oberarzt)
+Bundle.identifier | E12345/25-1 | E12345/25-2 | E12345/25-3 | E12345/25-4
+Bundle.signature | Dr.A  (Chefarzt) | Dr.A | Dr.C (Facharzt) | Dr.D (Oberarzt)
+Composition.id | Abcd | Abcde | Abcdf | Abcdg
+Composition.identifier | E12345/25 | E12345/25 | E12345/25 | E12345/25
 Composition.ext.:version | 1 | 2 | 3 | 4
-Composition.identifier |   | E12345/25-1 | E12345/25-1 | E12345/25-1
 Composition.status | Final | Final | Final | Final
 Composition.author | Dr.B (Facharzt) | Dr.B | Dr.C | Dr.D
 Composition.attester | Dr.A | Dr.A | Dr.A | Dr.A
-Composition.relatesTo | E9345/25-1 (Vorbefund, falls existent) | E12345/25-1 | E12345/25-1 | E12345/25-1
-DiagnosticReport.ext.:related-report | E9345/25-1 (Vorbefund, falls existent) | E12345/25-1 | E12345/25-1 | E12345/25-1
+Composition.relatesTo.target.[x] | E9345/25 (Vorbefund, falls existent) | Ref. Abcd | Ref. Abcde | Ref. Abcdf
+Composition.relatesTo.code |  |  | replaces | replaces
+DiagnosticReport.ext.:related-report | E9345/25 (Vorbefund, falls existent) | E9345/25 (Vorbefund, falls existent) | E9345/25 (Vorbefund, falls existent) | E9345/25 (Vorbefund, falls existent)
 DiagnosticReport.ext.:set-ID | E12345/25 | E12345/25 | E12345/25 | E12345/25
-DiagnosticReport.status | Preliminary | Amended | Appended | Corrected
+DiagnosticReport.status | Preliminary | Final | Amended | Corrected
 DiagnosticReport.performer | Dr.B | Dr.B | Dr.C | Dr.D
-DiagnosticReport.resultstInterpreter | Dr.A | Dr.A | Dr.A |  
+DiagnosticReport.resultsInterpreter | Dr.A | Dr.A | Dr.A | 
 DiagnosticReport.custodian | IfP | IfP | IfP | IfP
-1.Observation.identifier | E10345/25_A_1_HE |   |   |  
-1.Observation.status | Final |   |   |  
-1.Observation.performer | Dr.B |   |   |  
-2.Observation.identifier |   | E10345/25_A_1_ER |   |  
-2.Observation.status |   | Amended |   |  
-2.Observation.performer |   | Dr.B |   |  
-3.Observation.identifier |   |   | E10345/25_A_1_Her2 |  
-3.Observation.status |   |   | Amended |  
-3.Observation.performer |   |   | Dr.C |  
-4.Observation.identifier |   |   |   | E10345/25_A_1_Her2K
-4.Observation.status |   |   |   | Corrected
-4.Observation.performer |   |   |   | Dr.D
+1.Observation.identifier | E10345/25_A_1_HE |  |  | 
+1.Observation.status | Final |  |  | 
+1.Observation.performer | Dr.B |  |  | 
+2.Observation.identifier |  | E10345/25_A_1_ER |  | 
+2.Observation.status |  | Final |  | 
+2.Observation.performer |  | Dr.B |  | 
+3.Observation.identifier |  |  | E10345/25_A_1_Her2 | 
+3.Observation.status |  |  | Final | 
+3.Observation.performer |  |  | Dr.C | 
+4.Observation.identifier |  |  |  | E10345/25_A_1_Her2
+4.Observation.status |  |  |  | Corrected
+4.Observation.performer |  |  |  | Dr.D
 
 Szenario 2: 
 Wie oben.
@@ -108,20 +110,22 @@ Berichtsform | Vorläufiger Hauptbericht | Hauptbericht | Zusatz-/Nachbericht | 
 -- | -- | -- | -- | --
 Bundle.identifier | E12345/25-1V | E12345/25-1 | E12345/25-1Z | E12345/25-1K
 Bundle.signature | Dr.A | Dr.A | Dr.B | Dr.D
+Composition.id | Abcd | Abcde | Abcdf | Abcdg
+Composition.identifier | E12345/25 | E12345/25 | E12345/25 | E12345/25
 Composition.ext.:version | 1 | 1 | 1 | 2
-Composition.identifier | E12345/25-1V | E12345/25-1 | E12345/25-1Z | E12345/25-1K
 Composition.status | Final | Final | Final | Final
 Composition.author | Dr.B | Dr.B | Dr.C | Dr.D
-Composition.attester | Dr.A | Dr.A |   |  
-Composition.relatesTo | E9345/25-1 (Vorbefund, falls existen) | E9345/25-1 | E12345/25-1 | E12345/25-1Z
-DiagnosticReport.ext.:related-report | E9345/25-1 (Vorbefund, falls existen) | E9345/25-1 | E12345/25-1 | E12345/25-1Z
+Composition.attester | Dr.A | Dr.A |  | 
+Composition.relatesTo.target.[x] | E9345/25 (Vorbefund, falls existent) | Ref. Abcd | Ref. Abcde | Ref. Abcdf
+Composition.relatesTo.code |  |  | appends | replaces
+DiagnosticReport.ext.:related-report | E9345/25 (Vorbefund, falls existent) | E9345/25 (Vorbefund, falls existent) | E9345/25 (Vorbefund, falls existent) | E9345/25 (Vorbefund, falls existent)
 DiagnosticReport.ext.:set-ID | E12345/25 | E12345/25 | E12345/25 | E12345/25
-DiagnosticReport.status | Preliminary | Final | Appended | Corrected
+DiagnosticReport.status | Preliminary | Final | Final | Corrected
 DiagnosticReport.performer | Dr.B | Dr.B | Dr.C | Dr.D
-DiagnosticReport.resultstInterpreter | Dr.A | Dr.A |   |  
-DiagnosticReportcustodian | IfP | IfP | IfP | IfP
+DiagnosticReport.resultsInterpreter | Dr.A | Dr.A |  | 
+DiagnosticReport.custodian | IfP | IfP | IfP | IfP
 Observation.identifier | E10345/25_A_1_HE | E10345/25_A_1_ER | E10345/25_A_1_Her2 | E10345/25_A_1_Her2K
-Observation.status | Final | Amended | Amended | Corrected
+Observation.status | Final | Final | Final | Corrected
 Observation.performer | Dr.B | Dr.B | Dr.C | Dr.D
 
 Für das IHE Profil APSR2.1 (CDA) gilt folgende Festlegung:

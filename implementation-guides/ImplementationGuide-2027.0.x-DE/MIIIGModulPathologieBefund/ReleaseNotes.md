@@ -1,19 +1,22 @@
 
 # Release Notes
 ## 2027.0.0
-    - `documentation` Verweise auf den [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) als Referenzbeispiel für Narrative auf den Seiten Anwendungsfall, Section Grouper, Finding, DiagnosticReport und Composition hinzugefügt
-    - `documentation` Verweise auf originalText und narrativeLink Extensions aus der Section Grouper Beschreibung entfernt
+    - `documentation` Verweise auf den [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) als Referenzbeispiel ergänzt
+    - `documentation` Verweise auf originalText/narrativeLink aus der Section-Grouper-Beschreibung entfernt
     - `documentation` Text "ein Grouper pro Präparat" aus allen Grouper-Profilseiten entfernt (#249)
-    - `documentation` Text zu Zusammenhang zwischen Untersuchungsauftrag, Probe und Fall ergänzt (#250)
-    - `documentation` Fehlende Suchparameter (value-concept, value-quantity, value-date) auf der Finding-Profilseite ergänzt (#248)
-    - `documentation` Suchparameter value-string aus allen Grouper-Profilseiten entfernt (#248)
-    - `feature` Neues ValueSet MII_VS_Patho_Report_Code_LOINC fuer DiagnosticReport.code mit LOINC-Codes fuer verschiedene Berichtstypen (Histopathologie, Zytologie, Molekularpathologie, Obduktion) (#166)
-    - `changed` DiagnosticReport.code.coding[pathology-report] von fixem Code (LOINC#60568-3) auf extensible Binding an MII_VS_Patho_Report_Code_LOINC geaendert (#166)
+    - `documentation` Zusammenhang Untersuchungsauftrag/Probe/Fall ergänzt (#250)
+    - `documentation` Suchparameter auf Finding/Grouper angepasst (#248)
+    - `feature` DiagnosticReport.code: neues ValueSet MII_VS_Patho_Report_Code_LOINC, extensible Binding (#166)
     - `documentation` Untersuchungsauftrag: requisition als Auftragsgruppe/Fall (#253)
     - `documentation` Specimen: Referenzierungslogik der Proben ergänzt (#255)
     - `documentation` Grouper: derivedFrom-Hinweis ergänzt (#257)
     - `changed` Composition.event korrigiert (#258)
     - `documentation` Szenarien: SDC-Passus präzisiert (#256)
+    - `documentation` Beschreibung Modul ergänzt: Gestaltungsentscheidungen, synoptisch strukturierte Berichte (#261)
+    - `documentation` Lebenszyklus-Tabellen auf aktualisierte Berichtsform-Matrix gebracht (#247)
+    - `feature` Specimen.collection.bodySite: R5-BodyStructure-Extension (mCode entfällt) inkl. Prostatektomie- und Mamma-Beispiel (#259)
+    - `feature` EU-Lab-Angleichung: DiagnosticReport↔Composition-Extensions und optionale Composition-Section-Slices (#262, #263)
+    - `fix` Korrekturen: CapabilityStatement-URL, fehlende Substances in Specimen-Beispielen
 
 ## 2026.0.1
     - Empfehlungen zum Lebenszyklus des Dokumentes "Pathologiebefund" auf der Seite Hierarchie- und Workflow-Aspekte aufgenommen

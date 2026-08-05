@@ -1,19 +1,22 @@
 # Release Notes
 
 ## 2027.0.0
-    - `documentation` Added references to the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) as a reference example for narratives on the use case, Section Grouper, Finding, DiagnosticReport and Composition pages
-    - `documentation` Removed references to originalText and narrativeLink extensions from the Section Grouper description
+    - `documentation` Added references to the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) as a reference example
+    - `documentation` Removed originalText/narrativeLink references from the Section Grouper description
     - `documentation` Removed "one grouper per specimen" text from all Grouper profile pages (#249)
-    - `documentation` Added text on the relationship between examination request, specimen and case (#250)
-    - `documentation` Added missing search parameters (value-concept, value-quantity, value-date) to the Finding profile page (#248)
-    - `documentation` Removed value-string search parameter from all Grouper profile pages (#248)
-    - `feature` New ValueSet MII_VS_Patho_Report_Code_LOINC for DiagnosticReport.code with LOINC codes for different report types (histopathology, cytology, molecular pathology, autopsy) (#166)
-    - `changed` DiagnosticReport.code.coding[pathology-report] changed from fixed code (LOINC#60568-3) to extensible binding to MII_VS_Patho_Report_Code_LOINC (#166)
+    - `documentation` Added relationship between examination request, specimen and case (#250)
+    - `documentation` Adjusted search parameters on Finding/Grouper (#248)
+    - `feature` DiagnosticReport.code: new ValueSet MII_VS_Patho_Report_Code_LOINC, extensible binding (#166)
     - `documentation` Examination Request: requisition as order group/case (#253)
     - `documentation` Specimen: specimen referencing logic added (#255)
     - `documentation` Grouper: derivedFrom note added (#257)
     - `changed` Composition.event corrected (#258)
     - `documentation` Scenarios: SDC passage refined (#256)
+    - `documentation` Module description extended: design decisions, synoptic structured reports (#261)
+    - `documentation` Lifecycle tables updated to the revised report-form matrix (#247)
+    - `feature` Specimen.collection.bodySite: R5 BodyStructure extension (mCode removed) incl. prostatectomy and breast examples (#259)
+    - `feature` HL7 EU Lab alignment: DiagnosticReport↔Composition extensions and optional Composition section slices (#262, #263)
+    - `fix` Corrections: CapabilityStatement URL, missing substances in specimen examples
 
 ## 2026.0.0-ballot
     - Grouper cardinality reduced to ..1. Therefore, only one grouper each is to be used within a pathology report
