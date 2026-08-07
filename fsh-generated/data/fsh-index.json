@@ -140,8 +140,8 @@
     "fshName": "mii-exa-patho-diagnostic-conclusion-grouper",
     "fshType": "Instance",
     "fshFile": "patho-groupers.fsh",
-    "startLine": 342,
-    "endLine": 355
+    "startLine": 362,
+    "endLine": 375
   },
   {
     "outputFile": "Observation-mii-exa-patho-gleason-pattern-a.json",
@@ -164,16 +164,16 @@
     "fshName": "mii-exa-patho-macro-grouper-a",
     "fshType": "Instance",
     "fshFile": "patho-groupers.fsh",
-    "startLine": 118,
-    "endLine": 128
+    "startLine": 126,
+    "endLine": 136
   },
   {
     "outputFile": "Observation-mii-exa-patho-micro-grouper-a.json",
     "fshName": "mii-exa-patho-micro-grouper-a",
     "fshType": "Instance",
     "fshFile": "patho-groupers.fsh",
-    "startLine": 192,
-    "endLine": 204
+    "startLine": 204,
+    "endLine": 216
   },
   {
     "outputFile": "Observation-mii-exa-patho-p63-a.json",
@@ -340,8 +340,8 @@
     "fshName": "MII_PR_Patho_Additional_Specified_Grouper",
     "fshType": "Profile",
     "fshFile": "patho-groupers.fsh",
-    "startLine": 210,
-    "endLine": 249
+    "startLine": 222,
+    "endLine": 265
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-attached-image.json",
@@ -380,8 +380,8 @@
     "fshName": "MII_PR_Patho_Diagnostic_Conclusion_Grouper",
     "fshType": "Profile",
     "fshFile": "patho-groupers.fsh",
-    "startLine": 257,
-    "endLine": 322
+    "startLine": 273,
+    "endLine": 342
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-finding.json",
@@ -405,23 +405,23 @@
     "fshType": "Profile",
     "fshFile": "patho-groupers.fsh",
     "startLine": 4,
-    "endLine": 43
+    "endLine": 47
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-macroscopic-grouper.json",
     "fshName": "MII_PR_Patho_Macroscopic_Grouper",
     "fshType": "Profile",
     "fshFile": "patho-groupers.fsh",
-    "startLine": 51,
-    "endLine": 90
+    "startLine": 55,
+    "endLine": 98
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-microscopic-grouper.json",
     "fshName": "MII_PR_Patho_Microscopic_Grouper",
     "fshType": "Profile",
     "fshFile": "patho-groupers.fsh",
-    "startLine": 135,
-    "endLine": 174
+    "startLine": 143,
+    "endLine": 186
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-problem-list-item.json",
