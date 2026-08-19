@@ -12,6 +12,8 @@ Das Profil **MII PR Patho Microscopic Grouper** der Resource Observation stellt 
 
 Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu **MII PR Patho Finding** eingebunden werden. **MII PR Patho Finding** Observations wiederum referenzieren ihre "Eltern-Beobachtungen" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.
 
+Falls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts" betreffend.
+
 Auflistung und Erklärung der FHIR-Elemente siehe **MII PR Patho Section Grouper**.
 
 @```

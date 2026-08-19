@@ -12,6 +12,8 @@ The **MII PR Patho Diagnostic Conclusion Grouper** profile of the Observation re
 
 This special Grouper Observation element must be placed before all other Observation elements, which are then included as `hasMember` references to **MII PR Patho Finding**. **MII PR Patho Finding** Observations in turn reference their "parent observations" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective Grouper Observations.
 
+If the observation report section contains multiple submitted specimens, the MII PR Patho Findings are assigned to these different specimens via the specimen references of these MII PR Patho Findings, specifically the references concerning the "parts".
+
 For a list and explanation of the FHIR elements, see **(abstract) MII PR Patho Section Grouper**.
 
 @```
