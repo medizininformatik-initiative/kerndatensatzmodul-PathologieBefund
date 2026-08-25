@@ -40,8 +40,8 @@
             "display": "Pathology report diagnosis"
           },
           {
-            "code": "77599-9",
-            "display": "Additional documentation"
+            "code": "100969-5",
+            "display": "Pathology report additional specified observation in Specimen Narrative"
           }
         ]
       }

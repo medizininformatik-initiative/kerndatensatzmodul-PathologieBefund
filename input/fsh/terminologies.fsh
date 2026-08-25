@@ -159,7 +159,7 @@ Description: "ValueSet for IHE PaLM APSR's section types"
 * $LOINC#22634-0 "Pathology report gross observation" //Macroscopic Observation Section //24419-4 "Pathology report gross observation"
 * $LOINC#22635-7 "Pathology report microscopic observation" //Microscopic Observation Section
 * $LOINC#22637-3 "Pathology report diagnosis" //Diagnostic Conclusion Section
-* $LOINC#77599-9 "Additional documentation" //Additional Observation Section
+* $LOINC#100969-5 "Pathology report additional specified observation in Specimen Narrative" //Additional Observation Section
 
 // LOINC All
 ValueSet: MII_VS_Patho_All_LOINC	
