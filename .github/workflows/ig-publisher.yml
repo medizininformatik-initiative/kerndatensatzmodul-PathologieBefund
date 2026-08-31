@@ -105,6 +105,11 @@ env:
   PUBLISHER_SHA256: "07c576024df917cc1f879b6b5a64147cd0222d5b4129688e8f0ad9ccce58b1d5"
   SUSHI_VERSION: "3.20.1"
   JEKYLL_VERSION: "4.4.1"
+  # DEVIATION FROM THE TEMPLATE (see the "snapshot seeding" step below).
+  # Not part of the pin set the template shares across its build workflows, so
+  # scripts/toolchain-pins.test.mjs neither knows nor checks these two.
+  PKG_TOOL_VERSION: "0.3.0"
+  PKG_TOOL_SHA256: "8ce35d3b16c9c4abf7713136d2a560eab009f561507b25e8829798deff879864"
 
 jobs:
   build:
@@ -130,11 +135,20 @@ jobs:
       # The digest-pinned dev container ships the same MAJOR (17) but the
       # Microsoft Build of OpenJDK (the base image's default) — fine for a Java
       # program the container merely runs; CI (Temurin) is the reference.
+      # DEVIATION FROM THE TEMPLATE: 21 is installed alongside 17 for the
+      # snapshot-seeding step below (fhir-pkg-tool.jar is compiled for class
+      # file version 65 = Java 21; on 17 it dies with
+      # UnsupportedClassVersionError). 17 is listed LAST so it stays JAVA_HOME
+      # and on PATH — the IG Publisher runs on exactly the JDK the template
+      # pins, unchanged. The seeding step reaches 21 via JAVA_HOME_21_X64,
+      # which setup-java exports per installed JDK.
       - name: Set up Java (for the IG Publisher)
         uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
         with:
           distribution: temurin
-          java-version: "17"
+          java-version: |
+            21
+            17
 
       # The IG Publisher shells out to `jekyll` to render the HTML pages, and it
       # is NOT pre-installed on the runner. Without this step the build fails with
@@ -181,6 +195,59 @@ jobs:
           sed -i -E 's/^(  version-comparison(-master)?:)/  # (disabled by ENABLE_VERSION_COMPARISON) \1/' sushi-config.yaml
           sed -i '/^parameters:/a\  version-comparison: n/a' sushi-config.yaml
           echo "::notice::version comparison disabled via ENABLE_VERSION_COMPARISON (set to the publisher-native n/a)."
+
+      # DEVIATION FROM THE TEMPLATE — seed the FHIR package cache with snapshots.
+      #
+      # WHY: this IG profiles ISiK (de.gematik.isik, see sushi-config.yaml
+      # dependencies), and that package is published to packages.fhir.org with
+      # DIFFERENTIALS ONLY — StructureDefinition-ISiKBerichtBundle ships 19
+      # differential elements and no snapshot at all. SUSHI refuses to import a
+      # parent profile without one and fails the build with
+      #   "Structure Definition <url> is missing a snapshot. Snapshot is
+      #    required for import."
+      # for ISiKBerichtBundle and ISiKBerichtSubSysteme, which then cascades
+      # into "InstanceOf mii-pr-patho-composition not found".
+      #
+      # It builds on a maintainer's machine only because the IG Publisher
+      # generates snapshots and writes them back into ~/.fhir/packages, so a
+      # long-lived local cache is silently enriched. A fresh CI runner has a
+      # cold cache and gets the pristine, snapshot-less package — this bit CI
+      # runs 30007967047 (2026-07-23) and 33375283189 (2026-08-31).
+      #
+      # NOTE the container image kerndatensatz-basis and the MII meta reusable
+      # use (ghcr.io/gefyra/ig-publisher-with-snapshot-support) does NOT fix
+      # this by itself: it ships plain `npm i -g fsh-sushi`, and the snapshot
+      # support is the SEPARATE fhir-pkg-tool binary it also bundles. Run
+      # 30007967047 used that image and hit the identical three errors. So we
+      # keep the template's pinned SUSHI and run the tool ahead of it instead.
+      #
+      # The tool reads sushi-config.yaml's dependencies, resolves them
+      # recursively and writes snapshot-enriched packages to its default output
+      # ~/.fhir/packages — precisely the cache SUSHI then reads. Verified
+      # locally against v0.3.0: "144 snapshots generated, 0 failed", and
+      # ISiKBerichtBundle comes out with the same 152 snapshot elements a
+      # publisher-warmed local cache has.
+      #
+      # The JAR, not the native binary: fhir-pkg-tool-linux-x64 v0.3.0 dies with
+      # a NullPointerException in LanguageSubtagRegistryLoader.loadFromResource
+      # (a resource missing from the GraalVM native image) before it generates
+      # anything.
+      #
+      # REMOVE THIS STEP once the template handles differential-only
+      # dependencies itself; it is the only reason Java 21 is installed above.
+      - name: Seed the package cache with snapshots (ISiK ships differentials only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          tool="${RUNNER_TEMP}/fhir-pkg-tool.jar"
+          curl --fail --location --silent --show-error \
+            "https://github.com/Gefyra/fhir-pkg-tool/releases/download/v${PKG_TOOL_VERSION}/fhir-pkg-tool.jar" \
+            --output "${tool}"
+          echo "${PKG_TOOL_SHA256}  ${tool}" | sha256sum --check
+          # Exits 6 when a snapshot cannot be generated; let that fail the build
+          # rather than hand SUSHI a cache that is still missing what it needs.
+          "${JAVA_HOME_21_X64}/bin/java" -Xmx2g -jar "${tool}" \
+            --sushi-deps-file sushi-config.yaml
 
       - name: SUSHI compile and decide build mode
         id: build
