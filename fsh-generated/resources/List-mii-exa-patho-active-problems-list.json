@@ -3,7 +3,7 @@
   "id": "mii-exa-patho-active-problems-list",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list|2026.0.0"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list|2027.0.0-ballot.rc"
     ]
   },
   "mode": "snapshot",
@@ -12,13 +12,13 @@
       {
         "code": "11450-4",
         "system": "http://loinc.org",
-        "display": "Problem list - Reported"
+        "display": "Problemliste - Berichtet"
       }
     ]
   },
   "status": "current",
   "subject": {
-    "reference": "Patient/12345"
+    "reference": "Patient/mii-exa-patho-patient-12345"
   },
   "entry": [
     {

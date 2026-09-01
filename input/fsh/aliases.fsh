@@ -35,5 +35,8 @@ Alias: $fhir-version-number = http://hl7.org/fhir/StructureDefinition/compositio
 Alias: $fhir-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $fhir-capabilitystatement-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
 Alias: $fhir-workflow-related-artifact = http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact
-Alias: $us-mcode-body-location-qualifier = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-body-location-qualifier
-Alias: $us-mcode-laterality-qualifier = http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality-qualifier
+// Cross-Version-Extension R5: Specimen.collection.bodySite als Reference(BodyStructure)
+Alias: $r5-specimen-collection-bodysite = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite
+// DiagnosticReport <-> Composition Verknuepfung (Angleichung an HL7 EU Lab Report)
+Alias: $r5-diagnosticreport-composition = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $eu-composition-diagnosticreport = http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference

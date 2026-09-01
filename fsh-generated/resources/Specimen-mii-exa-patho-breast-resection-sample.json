@@ -1,0 +1,175 @@
+{
+  "resourceType": "Specimen",
+  "id": "mii-exa-patho-breast-resection-sample",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "397199005",
+        "display": "Specimen from breast obtained by excision"
+      }
+    ]
+  },
+  "collection": {
+    "bodySite": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite",
+          "valueReference": {
+            "reference": "BodyStructure/mii-exa-patho-left-breast-body-structure"
+          }
+        }
+      ],
+      "coding": [
+        {
+          "code": "33564002",
+          "system": "http://snomed.info/sct",
+          "display": "Structure of lower outer quadrant of breast"
+        }
+      ]
+    },
+    "collector": {
+      "reference": "Practitioner/mii-exa-patho-practitioner-2346545"
+    },
+    "collectedDateTime": "2025-02-05T10:00:00+01:00",
+    "method": {
+      "coding": [
+        {
+          "code": "237371007",
+          "system": "http://snomed.info/sct",
+          "display": "Wide local excision of breast lesion"
+        }
+      ]
+    }
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "PLAC",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://senologie.example-hospital.de/fhir/specimen/placer",
+      "value": "OP25_210_A"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "FILL",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+      "value": "E_25_210_A"
+    }
+  ],
+  "accessionIdentifier": {
+    "system": "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+    "value": "E_25_210"
+  },
+  "status": "available",
+  "subject": {
+    "reference": "Patient/mii-exa-patho-patient-34545"
+  },
+  "request": [
+    {
+      "reference": "ServiceRequest/mii-exa-patho-request"
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature",
+      "extension": [
+        {
+          "url": "type",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "735083009",
+                "system": "http://snomed.info/sct",
+                "display": "Part of left breast"
+              }
+            ]
+          }
+        },
+        {
+          "url": "description",
+          "valueString": "Praeoperative radiologische Drahtmarkierung der Biopsiestelle"
+        }
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature",
+      "extension": [
+        {
+          "url": "type",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "3680001000004109",
+                "system": "http://snomed.info/sct",
+                "display": "Anterior surgical margin"
+              }
+            ]
+          }
+        },
+        {
+          "url": "description",
+          "valueString": "Fadenmarkierung lang anterior"
+        }
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature",
+      "extension": [
+        {
+          "url": "type",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "880001000004108",
+                "system": "http://snomed.info/sct",
+                "display": "Distal surgical margin"
+              }
+            ]
+          }
+        },
+        {
+          "url": "description",
+          "valueString": "Fadenmarkierung 2x kurz distal"
+        }
+      ]
+    }
+  ],
+  "container": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "434746001",
+            "system": "http://snomed.info/sct",
+            "display": "Specimen vial (physical object)"
+          }
+        ]
+      },
+      "additiveReference": {
+        "reference": "Substance/mii-exa-patho-neutral-buffered-formalin"
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "BET-Exzisionspraeparat Mamma links, unterer aeusserer Quadrant, 5 Uhr, 50 mm von der Mamille. Drahthaekchen und zwei Fadenmarkierungen."
+    }
+  ]
+}

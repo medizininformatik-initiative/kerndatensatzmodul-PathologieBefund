@@ -1,0 +1,23 @@
+{
+  "id": "Observation-mii-exa-patho-biopsy-site-a",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Biopsy site Patient",
+          "target": "Biopsy site Patient"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)",
+          "target": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+        }
+      ]
+    }
+  ]
+}

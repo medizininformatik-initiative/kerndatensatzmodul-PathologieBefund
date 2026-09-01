@@ -1,0 +1,47 @@
+{
+  "id": "Composition-mii-exa-patho-composition",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Accession ID",
+          "target": "Accession ID"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Pathology report (record artifact)",
+          "target": "Pathology report (record artifact)"
+        },
+        {
+          "id": "Reference.display",
+          "context": "Reference.display",
+          "source": "Dr. Name",
+          "target": "Dr. Name"
+        },
+        {
+          "id": "Composition.title",
+          "context": "Composition.title",
+          "source": "Pathologie Befundbericht",
+          "target": "Pathology Report"
+        },
+        {
+          "id": "Composition.section.title",
+          "context": "Composition.section.title",
+          "source": "Pathology Diagnostic Report",
+          "target": "Pathology Diagnostic Report"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Comprehensive pathology report panel",
+          "target": "Comprehensive pathology report panel"
+        }
+      ]
+    }
+  ]
+}

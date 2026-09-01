@@ -1,0 +1,53 @@
+{
+  "id": "ValueSet-mii-vs-patho-processing-procedure-snomed-ct",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_Processing_Procedure_SNOMED_CT",
+          "target": "MII_VS_Patho_Processing_Procedure_SNOMED_CT"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho Processing Procedure [SNOMED CT]",
+          "target": "MII VS Patho Processing Procedure [SNOMED CT]"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "Specimen processing procedure",
+          "target": "Specimen processing procedure"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "108252007",
+          "target": "108252007"
+        }
+      ]
+    }
+  ]
+}

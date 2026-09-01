@@ -31,3 +31,5 @@ Die QuestionnaireResponses werden vom FHIR-Server des Pathologie-Insitutes autom
 Das PVS/LIS liest in seiner Funktion als Order result tracker die übersandten/abgerufenen FHIR-Instanzen aus dem Pathologie-Institut ein und benachrichtigt den Urologen Dr. C über das Vorliegen eines angeforderten Pathologiebefundberichts für seinen Patienten, Herrn A., B.
 
 Auf Wunsch von Herrn A. überträgt Dr. C. nach der Erläuterung des Befundes diesen in die ePA von Herrn A.
+
+Für eine vollständige, exemplarische Umsetzung dieses Anwendungsfalls als FHIR Implementation Guide siehe den [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).

@@ -1,0 +1,857 @@
+{
+  "id": "ImplementationGuide-mii-ig-modul-patho",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ImplementationGuide.name",
+          "context": "ImplementationGuide.name",
+          "source": "MII_IG_Modul_Patho",
+          "target": "MII_IG_Modul_Patho"
+        },
+        {
+          "id": "ImplementationGuide.title",
+          "context": "ImplementationGuide.title",
+          "source": "MII IG Modul Patho",
+          "target": "MII IG Modul Patho"
+        },
+        {
+          "id": "ImplementationGuide.publisher",
+          "context": "ImplementationGuide.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "EXA MII Patho Canada Balsam",
+          "target": "EXA MII Patho Canada Balsam"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Canada balsam (substance)",
+          "target": "Canada balsam (substance)"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "EXA MII Patho Eosin Y",
+          "target": "EXA MII Patho Eosin Y"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Eosin Y (substance)",
+          "target": "Eosin Y (substance)"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "EXA MII Patho Hematoxylin-stain",
+          "target": "EXA MII Patho Hematoxylin-stain"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Hematoxylin stain (substance)",
+          "target": "Hematoxylin stain (substance)"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "EXA MII Patho Microscope Slide Mounting Medium",
+          "target": "EXA MII Patho Microscope Slide Mounting Medium"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Microscope slide mounting medium (substance)",
+          "target": "Microscope slide mounting medium (substance)"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "EXA MII Patho Neutral Buffered Formalin",
+          "target": "EXA MII Patho Neutral Buffered Formalin"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Neutral buffered formalin (substance)",
+          "target": "Neutral buffered formalin (substance)"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "EXA MII Patho Paraffin",
+          "target": "EXA MII Patho Paraffin"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Paraffin wax (substance)",
+          "target": "Paraffin wax (substance)"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII CPS Patho Capability Statement",
+          "target": "MII CPS Patho Capability Statement"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative",
+          "target": "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII EXA Patho Active Problems List",
+          "target": "MII EXA Patho Active Problems List"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Pathology Active Problems List List Example",
+          "target": "Pathology Active Problems List List Example"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII EXA Patho Attached Image",
+          "target": "MII EXA Patho Attached Image"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Example for Attached Image",
+          "target": "Example for Attached Image"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII EXA Patho Breast Resection Sample",
+          "target": "MII EXA Patho Breast Resection Sample"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "BET-Exzisionspraeparat der linken Mamma als Einsendeprobe (Part), mit Draht- und Fadenmarkierungen",
+          "target": "Breast-conserving excision specimen of the left breast as submitted specimen (part), with wire and suture markings"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII EXA Patho History Of Present Illness",
+          "target": "MII EXA Patho History Of Present Illness"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Pathology History of Present Illness List Example",
+          "target": "Pathology History of Present Illness List Example"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII EXA Patho Left Breast Body Structure",
+          "target": "MII EXA Patho Left Breast Body Structure"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Lokalisation im BET-Exzisionspraeparat: linke Mamma, unterer aeusserer Quadrant, 5 Uhr, 50 mm distal der Mamille",
+          "target": "Location in the breast-conserving excision specimen: left breast, lower outer quadrant, 5 o'clock, 50 mm distal to the nipple"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII EXA Patho Problem List Item 1",
+          "target": "MII EXA Patho Problem List Item 1"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Pathology Problem List Item Example",
+          "target": "Pathology Problem List Item Example"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII EXA Patho Problem List Item 2",
+          "target": "MII EXA Patho Problem List Item 2"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII EXA Patho Prostate Body Structure",
+          "target": "MII EXA Patho Prostate Body Structure"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Lokalisation im Prostatektomie-Praeparat: rechte apikale periphere Zone, posterior, 15 mm proximal des Apex",
+          "target": "Location in the prostatectomy specimen: right apical peripheral zone, posterior, 15 mm proximal to the apex"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII EXA Patho Prostate Resection Sample",
+          "target": "MII EXA Patho Prostate Resection Sample"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Radikalprostatektomie-Praeparat als Einsendeprobe (Part)",
+          "target": "Radical prostatectomy specimen as submitted specimen (part)"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII LM Patho Logical Model",
+          "target": "MII LM Patho Logical Model"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Logical Model for the graphical reprensentation of the respective Art-Decor Model",
+          "target": "Logical Model for the graphical reprensentation of the respective Art-Decor Model"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Active Problems List",
+          "target": "MII PR Patho Active Problems List"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho Active Problems** der Ressource [List](http://hl7.org/fhir/R4/list.html) stellt eine Liste der zu dem Untersuchungszeitpunkt vorhandenen Erkrankungen u/o Probleme des/der Patient:in dar, welche die Klinische Fragestellung des Einsenders innerhalb der Supporting Information des Profils [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.html) abbilden.\n\nDie einzelnen Erkrankungen/Fragestellungen können mithilfe des Profils [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-problem-list-item.html) dargestellt werden.",
+          "target": "The **MII PR Patho Active Problems** profile of the [List](http://hl7.org/fhir/R4/list.html) resource represents a list of the patient's diseases and/or problems present at the time of the examination, which reflect the sender's clinical question within the supporting information of the [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.html) profile.\n\nThe individual diseases/questions can be represented using the [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-problem-list-item.html) profile."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Additional Specified Grouper",
+          "target": "MII PR Patho Additional Specified Grouper"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho Additional Specified Grouper** der Resource [Observation](http://hl7.org/fhir/R4/observation.html) stellt als `DiagnosticReport.result` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt \"Zusätzliche spezifizierte Beobachtungen\" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) aus nicht-morphologischen Untersuchungen bzw. aus molekulargenetischen Untersuchungen.\n\nDieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre \"Eltern-Beobachtungen\" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.\n\nFalls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.\n\nAuflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.",
+          "target": "The **MII PR Patho Additional Specified Grouper** profile of the [Observation](http://hl7.org/fhir/R4/observation.html) resource represents, as `DiagnosticReport.result` for an [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section \"Additional specified observations\" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) from non-morphological or molecular genetic examinations.\n\nThis special grouper observation element must be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their \"parent observations\" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.\n\nIf the observation report section contains several submitted specimens (samples), the MII PR Patho findings are assigned to these different specimens via the specimen references of these MII PR Patho findings, specifically the references concerning the \"parts\".\n\nFor a list and explanation of the FHIR elements see **(abstract) MII PR Patho Section Grouper**."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Attached Image",
+          "target": "MII PR Patho Attached Image"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Mit dem Profil **MII PR Patho Attached Image** der Ressource Media wird  die Beschreibung von in den Befund, d.h. den [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), eingebetteten Bildern vorgenommen. Um Bilder in [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) einzubinden, muss auf eine Referenz zu einer ImagingStudy zurückgegriffen werden. Das vorliegende Profil sollte vorzugsweise nur zur \"Illustration\" eines Pathologiebefundberichts verwendet werden.",
+          "target": "With the **MII PR Patho Attached Image** profile of the Media resource, images embedded in the report, i.e. in the [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), are described. To include images in [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html), a reference to an ImagingStudy must be used. This profile should preferably only be used to \"illustrate\" a pathology report."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Base Observation",
+          "target": "MII PR Patho Base Observation"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Dieses abstrakte Profil sammelt alle gemeinsamen Profilierungsanforderungen der Pathologie Observations und dient als Basis für alle anderen Observation-Profile in diesem Modul. Als abstraktes Profil ist dieses nicht instanziierbar.",
+          "target": "This abstract profile collects all common profiling requirements of the pathology observations and serves as the basis for all other observation profiles in this module. As an abstract profile, it cannot be instantiated."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Bundle",
+          "target": "MII PR Patho Bundle"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Dieses Profil **MII PR Patho Bundle** erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtbundle) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).\nEs dient der Aggregation aller Ressourcen, die Bestandteil des Dokumentes sind. Dabei sollte die erste Ressource im Bundle (Bundle.entry.resource) stets eine Composition sein.\n\nDas Profil verwendet `Bundle.type` = “document” und einen persistenten, eindeutigen `Bundle.identifier`. Dieser sollte dem `Composition.identifier` entsprechen, beispielsweise einer Eingangsnummer inklusive Versionsnummer. Weitere Slices von Bundle.entry sind ServiceRequest, Specimen, DiagnosticReport, Observation und Patient. Wobei die Slices ServiceRequest und Patient optional sind.\nDas Bundle enthält eine Signatur.",
+          "target": "This profile **MII PR Patho Bundle** inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtbundle) of the specification [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).\nIt serves to aggregate all resources that are part of the document. The first resource in the bundle (Bundle.entry.resource) should always be a Composition.\n\nThe profile uses `Bundle.type` = \"document\" and a persistent, unique `Bundle.identifier`. This should correspond to the `Composition.identifier`, for example an accession number including the version number. Further slices of Bundle.entry are ServiceRequest, Specimen, DiagnosticReport, Observation and Patient, whereby the ServiceRequest and Patient slices are optional.\nThe bundle contains a signature."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Composition",
+          "target": "MII PR Patho Composition"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5). \n\nDas Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. Ein vollständiges Beispiel einer Composition mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html). \nDieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”; Aufbau und Signatur des Bundles sind im Profil [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) beschrieben.\nNeben dem Diagnostischen Report (`patho-diagnostic-report`) und einem oder mehreren zusätzlichen kompletten Reports (`additional-diagnostic-report`) können die Beobachtungsberichtabschnitte optional auch direkt als eigene Sections der Composition geführt werden (Makroskopie, Mikroskopie, Intraoperativ, Diagnostische Schlussfolgerung, Zusätzliche Beobachtung); jede dieser Sections referenziert denselben Grouper wie `DiagnosticReport.result`. Composition und DiagnosticReport können zusätzlich über die Extension `composition-diagnosticReportReference` bzw. die R5-Cross-Version-Extension `DiagnosticReport.composition` wechselseitig aufeinander verweisen. Alle diese Ergänzungen sind optional.",
+          "target": "This profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) of the specification [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).\n\nThe **MII PR Patho Composition** profile, as a profile of a Composition resource with special constraints for clinical documents, brings together the resources for a complete, text-centric pathology report with the properties of a clinical document. A complete example of a Composition with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\nThis profile is the first entry in a bundle of `Bundle.type` \"document\"; the structure and signature of the bundle are described in the [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) profile.\nIn addition to the diagnostic report (`patho-diagnostic-report`) and one or more additional complete reports (`additional-diagnostic-report`), the observation report sections may optionally also be carried directly as separate sections of the Composition (macroscopy, microscopy, intraoperative, diagnostic conclusion, additional observation); each of these sections references the same grouper as `DiagnosticReport.result`. Composition and DiagnosticReport may additionally reference each other via the extension `composition-diagnosticReportReference` and the R5 cross-version extension `DiagnosticReport.composition` respectively. All of these additions are optional."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Diagnostic Conclusion Grouper",
+          "target": "MII PR Patho Diagnostic Conclusion Grouper"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho Diagnostic Conclusion Grouper** der Ressource Observation stellt als `DiagnosticReport.result:diagnostic-conclusion-grouper` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt \"Diagnostische Schlussfolgerung\" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).\n\nDieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre \"Eltern-Beobachtungen\" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.\n\nFalls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.\n\nAuflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.",
+          "target": "The **MII PR Patho Diagnostic Conclusion Grouper** profile of the Observation resource represents, as `DiagnosticReport.result:diagnostic-conclusion-grouper` for an [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section \"Diagnostic conclusion\" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).\n\nThis special grouper observation element must be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their \"parent observations\" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.\n\nIf the observation report section contains several submitted specimens (samples), the MII PR Patho findings are assigned to these different specimens via the specimen references of these MII PR Patho findings, specifically the references concerning the \"parts\".\n\nFor a list and explanation of the FHIR elements see **(abstract) MII PR Patho Section Grouper**."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Finding",
+          "target": "MII PR Patho Finding"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho Finding** der Ressource Observation bildet als `hasMember`- oder `derivedFrom`-Referenz für ein Profil vom Typ [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html) atomare kodierte Untersuchungsergebnisse ab. Dieses Profil kann verschachtelte Konstrukte bilden, um „Child Observations“ zu erfassen, die eine einzelne Observation weiter spezifizieren. PathoFindings können vom Pathologie-Informationssystem über Questionnaire- / QuestionnaireResponse-Resourcen (siehe [HL7-Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/)) bereitgestellt werden, bzw. werden QuestionnaireResponse Ressourcen referenziert. Jedes **MII PR Patho Finding** sollte die Probe referenzieren, an der die Beobachtung vorgenommen wurde.\n\n**Sonderfall:**\n\n- Im Falle eines **Befundupdates** dient ein **MII PR Patho Finding** mit dem LOINC-Code [90004-3 - Clinical significance of updated information](https://loinc.org/90004-3/) als Organizer für die Update-Informationen, die im [MII PR Patho Diagnostic Conclusion Grouper](StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.html) abgebildet werden. Hierzu wird die focus-Referenz genutzt, um auf den betroffenen **MII PR Patho Grouper** (Beobachtungsabschnitt) hinzuweisen. Der `Observation.value` wird durch einen ValueSet \"ClinicalSignificance\" (z.B. LOINC LL4770-5) dargestellt.\n\nFür spezifische Observation-Konstrukte, speziell aus dem Bereich des onkologischen Basisdatensatzes oBDS (TNM, Histologischer Tumortyp, etc.), kann auch auf Observation-Profile des [MII Erweiterungsmoduls Onkologie](https://simplifier.net/medizininformatikinitiative-modulonkologie) zurückgegriffen werden. Für Beobachtungen an immunhistochemischen Färbungen, in-situ-Hybridisierungen, PCR-Tests, Methylierungs-Tests und NGS-Untersuchungen sollten Observation-Profile des [MII Erweiterungsmoduls Molekulares Tumorboard](https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard) bzw. des [MII Erweiterungsmoduls Molekulargenetischer Befundbericht](https://simplifier.net/medizininformatikinitiative-modulomics) genutzt werden.",
+          "target": "The **MII PR Patho Finding** profile of the Observation resource maps atomically coded examination results as a `hasMember` or `derivedFrom` reference for a profile of the type [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html). This profile can form nested constructs in order to capture \"child observations\" that further specify a single observation. Patho findings can be provided by the pathology information system via Questionnaire / QuestionnaireResponse resources (see [HL7 Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/)), or QuestionnaireResponse resources are referenced. Each **MII PR Patho Finding** should reference the specimen on which the observation was made.\n\n**Special case:**\n\n- In the case of a **report update**, an **MII PR Patho Finding** with the LOINC code [90004-3 - Clinical significance of updated information](https://loinc.org/90004-3/) serves as the organizer for the update information, which is mapped in the [MII PR Patho Diagnostic Conclusion Grouper](StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.html). For this purpose the focus reference is used to point to the affected **MII PR Patho Grouper** (observation section). The `Observation.value` is represented by a ValueSet \"ClinicalSignificance\" (e.g. LOINC LL4770-5).\n\nFor specific Observation constructs, especially from the oncological basic data set (oBDS) - such as TNM, histological tumor type, etc. - the Observation profiles of the [MII Extension Module Oncology](https://simplifier.net/medizininformatikinitiative-modulonkologie) can also be used. For observations on immunohistochemical stains, in-situ hybridizations, PCR tests, methylation tests and NGS analyses, the Observation profiles of the [MII Extension Module Molecular Tumor Board](https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard) or of the [MII Extension Module Molecular Genetic Report](https://simplifier.net/medizininformatikinitiative-modulomics) should be used."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho History Of Present Illness",
+          "target": "MII PR Patho History Of Present Illness"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho History of Present Illness** der Resource [List](http://hl7.org/fhir/R4/list.html) bildet die Beschreibung der Anamnese durch den Einsender ab und ist Teil der \"supportingInfo\" im Profil [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.html) ab.\n\nDie einzelnen Erkrankungen/Probleme können mithilfe des Profils [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-problem-list-item.html) dargestellt werden.",
+          "target": "The **MII PR Patho History of Present Illness** profile of the [List](http://hl7.org/fhir/R4/list.html) resource represents the description of the medical history by the sender and is part of the \"supportingInfo\" in the [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.html) profile.\n\nThe individual diseases/problems can be represented using the [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-problem-list-item.html) profile."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Intraoperative Grouper",
+          "target": "MII PR Patho Intraoperative Grouper"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho Intraoperative Grouper** der Resource Observation stellt als `DiagnosticReport.result:intraoperative-grouper` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt \"Intraoperative Beobachtung\" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).\n\nDieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre \"Eltern-Beobachtungen\" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.\n\nFalls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.\n\nAuflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.",
+          "target": "The **MII PR Patho Intraoperative Grouper** profile of the Observation resource represents, as `DiagnosticReport.result:intraoperative-grouper` for an [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section \"Intraoperative observation\" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).\n\nThis special grouper observation element must be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their \"parent observations\" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.\n\nIf the observation report section contains several submitted specimens (samples), the MII PR Patho findings are assigned to these different specimens via the specimen references of these MII PR Patho findings, specifically the references concerning the \"parts\".\n\nFor a list and explanation of the FHIR elements see **(abstract) MII PR Patho Section Grouper**."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Macroscopic Grouper",
+          "target": "MII PR Patho Macroscopic Grouper"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho Macroscopic Grouper** der Resource Observation stellt als `DiagnosticReport.result:macroscopic-grouper` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt \"Makroskopische Beurteilung\" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).\n\nDieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre \"Eltern-Beobachtungen\" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.\n\nFalls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.\n\nAuflistung und Erklärung der FHIR-Elemente siehe [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html).",
+          "target": "The **MII PR Patho Macroscopic Grouper** profile of the Observation resource represents, as `DiagnosticReport.result:macroscopic-grouper` for an [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section \"Macroscopic assessment\" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).\n\nThis special grouper observation element must be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their \"parent observations\" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.\n\nIf the observation report section contains several submitted specimens (samples), the MII PR Patho findings are assigned to these different specimens via the specimen references of these MII PR Patho findings, specifically the references concerning the \"parts\".\n\nFor a list and explanation of the FHIR elements see [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html)."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Microscopic Grouper",
+          "target": "MII PR Patho Microscopic Grouper"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho Microscopic Grouper** der Resource Observation stellt als `DiagnosticReport.result:microscopic-grouper` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt \"Mikroskopische Beurteilung\" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).\n\nDieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre \"Eltern-Beobachtungen\" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.\n\nFalls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.\n\nAuflistung und Erklärung der FHIR-Elemente siehe [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html).",
+          "target": "The **MII PR Patho Microscopic Grouper** profile of the Observation resource represents, as `DiagnosticReport.result:microscopic-grouper` for an [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section \"Microscopic assessment\" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).\n\nThis special grouper observation element must be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their \"parent observations\" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.\n\nIf the observation report section contains several submitted specimens (samples), the MII PR Patho findings are assigned to these different specimens via the specimen references of these MII PR Patho findings, specifically the references concerning the \"parts\".\n\nFor a list and explanation of the FHIR elements see [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html)."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Problem List Item",
+          "target": "MII PR Patho Problem List Item"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho Problem List Item** der Resource Condition stellt die einzelnen Listeneinträge der Profile **MII PR Patho Active Problems** und **MII PR Patho History of Present Illness** dar.",
+          "target": "The **MII PR Patho Problem List Item** profile of the Condition resource represents the individual list entries of the **MII PR Patho Active Problems** and **MII PR Patho History of Present Illness** profiles."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Report",
+          "target": "MII PR Patho Report"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). \n\nEs stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein. Ein vollständiges Beispiel eines Pathologiebefundberichts mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\n\nDie wichtigsten Besonderheiten des **MII PR Patho Report** sind: \n- die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden, \n- die Möglichkeit, Informationen zu mehreren Proben (hier die klinischerseits eingesandten Proben) zu einzubinden,\n- und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.  \n\nDas **MII PR Patho Report** bildet als Entry in der Section \"patho-diagnostic-report\" des Profils [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) den Kern eines persistenten Dokuments \"Pathologiebefundbericht\".\n\n---\n\nIn untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Patho Composition dupliziert werden.",
+          "target": "The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) resource represents the complete pathology report without having document properties (see **MII-PR-Patho-Composition**).\n\nIt presents highly structured examination results including human-readable texts (narratives) that belong to \"panels\" of individual examinations. It collects and organizes pathology findings for complex individual results as well and can reference further information on the examination panel, e.g. clinical information and specimen information. A complete, formatted report text should be part of the **MII PR Patho Report**. A complete example of a pathology report with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\n\nThe most important features of the **MII PR Patho Report** are:\n- the ability to include additional clinical context, e.g. a mix of results from individual observations, images, texts and formatted representations,\n- the ability to include information on several specimens (here the specimens submitted by the clinician),\n- and the ability to represent a summarizing assessment, the conclusion, as well as one or more conclusion codes that are not identical to the pathology findings.\n\nAs an entry in the section \"patho-diagnostic-report\" of the [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) profile, the **MII PR Patho Report** forms the core of a persistent \"pathology report\" document.\n\n---\n\nIn the table below, elements that are duplicated in the MII PR Patho Composition profile are marked with *."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Section Grouper",
+          "target": "MII PR Patho Section Grouper"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Beim Profil **MII PR Patho Section Grouper** handelt es sich um ein abstraktes Profil, welches die Basis für die pathologischen Grouper Profile festlegt, jedoch nicht instanziiert werden soll. Die Grouper-Profile stellen als `DiagnosticReport.result:[grouper-name]` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt (entspr. einer CDA-Section) dar und fungieren als Organizer für diese Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).\n\nHierbei handelt es sich um Untersuchungsergebnisse, die nach inhaltlichen und/oder formalen Erfordernissen zu logischen Gruppen (\"Panels\") zusammengefast werden müssen, z.B. die jeweiligen Beobachtungen an jeweils definierten Proben, z.B. den verschiedenen eingesandten Präparaten. Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre \"Eltern-Beobachtungen\" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.\n\nAls “Panels” von Einzeluntersuchungen sind die folgenden Beobachtungsberichtabschnitte definiert:\n\n- [MII PR Patho Intraoperative Grouper](StructureDefinition-mii-pr-patho-intraoperative-grouper.html)\n- [MII PR Patho Macroscopic Grouper](StructureDefinition-mii-pr-patho-macroscopic-grouper.html)\n- [MII PR Patho Microscopic Grouper](StructureDefinition-mii-pr-patho-microscopic-grouper.html)\n- [MII PR Patho Additional Specified Grouper](StructureDefinition-mii-pr-patho-additional-specified-grouper.html)\n- [MII PR Patho Diagnostic Conclusion Grouper](StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.html)\n\nSie werden in Form von `DiagnosticReport.result:[grouper-name]` mit Grouper-Funktion im [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) organisiert und sind damit den \"Sections\" in CDA äquivalent. Sie zeichnen sich dadurch aus, dass sie nur einen `Observation.code`, aber keinen `Observation.value` haben. Sie gruppieren die “Panel”-Beobachtungen mithilfe der `hasMember`- und/oder `derivedFrom`-Referenzen oder als `Observation.component`.\n\nDer Text (Narrative) dieser \"Sections\" wird im `Observation.text`-Element dargestellt. Ein vollständiges Beispiel für die Nutzung von Narrativen in Grouper-Observations findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\n\nDiese Grouper haben die Observation.codes\n- [83321-0](https://loinc.org/83321-0/) (Pathology report intraoperative observation in Specimen Document)\n- [22634-0](https://loinc.org/22634-0/) (Pathology report gross observation)\n- [22635-7](https://loinc.org/22635-7/) (Pathology report microscopic observation)\n- [100969-5](https://loinc.org/100969-5/) (Pathology report additional specified observation)\n- [22637-3](https://loinc.org/22637-3/) (Pathology report diagnosis)\n\nFalls ein Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.\n\nEin Grouper für \"Clinical Information\", [22636-5](https://loinc.org/22636-5/) (Pathology report relevant history), ist nicht notwendig, da die hierzu gehörenden Informationen im [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.html) unter `.supportingInfo` vorhanden sind.\n\n**Sonderfall:**\n- Ein [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) als `hasMember`-Konstrukt innerhalb eines der o.g. Grouper zur Gruppierung von medizinischen inhaltlichen Problemen (entspricht CDA-Problem Organizer), z.B. beim Vorhandensein von zwei unterschiedlichen Tumorentitäten in einer Probe, sollte mit dem LOINC-Code [75326-9, Problem](https://loinc.org/75326-9/) gebildet werden, ein `Observation.value` wird nicht benötigt, als `Observation.component` wird im Code das Gruppierungsproblem dargestellt (z.B. ein ICD-Code ([76540-4, Pathology diagnosis ICD code](https://loinc.org/76540-4/)) für eine spezifische Entität, ein Specimen-Code für eine spezifische Probe ([85298-8, Body structure included in specimen](https://loinc.org/85298-8/)), etc.), im Value der konkrete Wert. Die eigentlichen Untersuchungsergebnisse zu diesem inhaltlichen Problem werden dann mittels des `hasMember`-Konstrukts als **MII PR Patho Findings** dargestellt.",
+          "target": "The **MII PR Patho Section Grouper** profile is an abstract profile that defines the basis for the pathology grouper profiles but is not intended to be instantiated. As `DiagnosticReport.result:[grouper-name]` for an [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the grouper profiles represent the respective observation report section (corresponding to a CDA section) and act as an organizer for these groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).\n\nThese are examination results that have to be combined into logical groups (\"panels\") according to content-related and/or formal requirements, e.g. the respective observations on defined specimens such as the different submitted preparations. This special grouper observation element must be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their \"parent observations\" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.\n\nThe following observation report sections are defined as \"panels\" of individual examinations:\n\n- [MII PR Patho Intraoperative Grouper](StructureDefinition-mii-pr-patho-intraoperative-grouper.html)\n- [MII PR Patho Macroscopic Grouper](StructureDefinition-mii-pr-patho-macroscopic-grouper.html)\n- [MII PR Patho Microscopic Grouper](StructureDefinition-mii-pr-patho-microscopic-grouper.html)\n- [MII PR Patho Additional Specified Grouper](StructureDefinition-mii-pr-patho-additional-specified-grouper.html)\n- [MII PR Patho Diagnostic Conclusion Grouper](StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.html)\n\nThey are organized in the form of `DiagnosticReport.result:[grouper-name]` with a grouper function in the [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) and are thus equivalent to the \"sections\" in CDA. They are characterized by having only an `Observation.code` but no `Observation.value`. They group the \"panel\" observations using the `hasMember` and/or `derivedFrom` references or as an `Observation.component`.\n\nThe text (narrative) of these \"sections\" is represented in the `Observation.text` element. A complete example of the use of narratives in grouper observations can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\n\nThese groupers have the Observation.codes\n- [83321-0](https://loinc.org/83321-0/) (Pathology report intraoperative observation in Specimen Document)\n- [22634-0](https://loinc.org/22634-0/) (Pathology report gross observation)\n- [22635-7](https://loinc.org/22635-7/) (Pathology report microscopic observation)\n- [100969-5](https://loinc.org/100969-5/) (Pathology report additional specified observation)\n- [22637-3](https://loinc.org/22637-3/) (Pathology report diagnosis)\n\nIf an observation report section contains several submitted specimens (samples), the MII PR Patho findings are assigned to these different specimens via the specimen references of these MII PR Patho findings, specifically the references concerning the \"parts\".\n\nA grouper for \"Clinical Information\", [22636-5](https://loinc.org/22636-5/) (Pathology report relevant history), is not necessary, as the corresponding information is available in the [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.html) under `.supportingInfo`.\n\n**Special case:**\n- A [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) as a `hasMember` construct within one of the above-mentioned groupers for grouping medical content-related problems (corresponds to the CDA problem organizer), e.g. when two different tumor entities are present in one specimen, should be created with the LOINC code [75326-9, Problem](https://loinc.org/75326-9/); an `Observation.value` is not required, the grouping problem is represented in the code as `Observation.component` (e.g. an ICD code ([76540-4, Pathology diagnosis ICD code](https://loinc.org/76540-4/)) for a specific entity, a specimen code for a specific specimen ([85298-8, Body structure included in specimen](https://loinc.org/85298-8/)), etc.) and the concrete value in the value. The actual examination results for this content-related problem are then represented as **MII PR Patho Findings** by means of the `hasMember` construct."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Service Request",
+          "target": "MII PR Patho Service Request"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Das Profil **MII PR Patho Service Request** der Ressource [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) stellt die Beschreibung des Auftrags des Klinikers an die Pathologieeinrichtung dar. Dieser ist in der Regel unspezifisch gehalten (“Histologie erbeten”, dies entspricht enem Auftrag zur konsiliarischen Begutachtung), kann aber durch spezielle Fragen untersetzt sein (z.B. “FISH für Her2”, entspricht einem Zielauftrag). Falls mehrere konkrete Untersuchungen beauftragt werden sollen, so muss pro Untersuchung ein **MII PR Patho Service Request** ausgelöst werden, die alle zusammen in der `ServiceRequest.requisition` (entspricht einer Placer Order Group) zusammengefasst werden.\n\nEin Untersuchungsauftrag ist immer an eine (oder mehrere) Probe(n) gebunden, zu denen detaillierte Beschreibungen des Einsenders vorliegen können. Ein Untersuchungsauftrag begründet in der Regel einen Fall (Einsendung, \"Accession\") der Pathologieeinrichtung. Wenn eine `ServiceRequest.requisition` vorliegt, bildet diese in der Regel den Fall (Einsendung, Accession). Durch die den Untersuchungsauftrag abarbeitende Pathologieeinrichtung kann eine Zusammenfassung oder Aufteilung von Untersuchungsanträgen entsprechend den laborinternen Erfordernissen zu einem Fall oder mehreren Fällen erfolgen.",
+          "target": "The **MII PR Patho Service Request** profile of the [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) resource represents the description of the clinician's request to the pathology facility. This request is usually non-specific (\"histology requested\", which corresponds to a request for a consultative assessment), but it can be supplemented by specific questions (e.g. \"FISH for Her2\", corresponding to a target request). If several specific examinations are to be ordered, a separate **MII PR Patho Service Request** must be issued for each examination, all of which are grouped together in the `ServiceRequest.requisition` (corresponding to a placer order group).\n\nAn examination request is always linked to one (or more) specimen(s), for which detailed descriptions from the sender may be available. An examination request usually constitutes a case (submission, \"accession\") of the pathology facility. If a `ServiceRequest.requisition` is present, it usually constitutes the case (submission, accession). The pathology facility processing the examination request may combine or divide examination requests into one or several cases according to the laboratory-internal requirements."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII PR Patho Specimen",
+          "target": "MII PR Patho Specimen"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core)\nIhm liegt das Domänen-Analyse-Modell von HL7 (HL7_DAM_SPECIMEN_R2_INFORM_2019APR) zugrunde. Dieses berücksichtigt insbesondere für die Pathologie das Rollenmodell von Specimen, welche sowohl Gegenstand als auch Produkt von Laborprozessen sind. Das Rootelement(Sample) ist ein klinisch gewonnenes Probenmaterial von einem Patienten, entspricht im Pathologie-Workflow einem Part. Tochterelemente sind Blöcke und Schnitte bzw. ein zytologisches Präparat. Die Kinderproben (Blöcke und Schnitte) sollten stets und mindestens ihre direkte Elternprobe über das Element Specimen.parent referenzieren.\n\nProben werden in verschiedenen Profilen referenziert. Im \"PathologieBefund\" und in den \"Einzelbeobachtungen\" der Grouper für Makroskopie und Diagnostische Schlussfolgerungen sollten die Proben des Eingangs (Parts), in den \"Einzelbeobachtungen\" des Mikroskopie-Groupers die Proben der gefärbten Gewebsschnitt-Ebene referenziert werden.",
+          "target": "This profile inherits from [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core)\nIt is based on the HL7 domain analysis model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR). Particularly for pathology, this model takes into account the role model of specimens, which are both the subject and the product of laboratory processes. The root element (sample) is specimen material clinically obtained from a patient and corresponds to a part in the pathology workflow. Child elements are blocks and sections, or a cytological preparation. The child specimens (blocks and sections) should always reference at least their direct parent specimen via the element Specimen.parent.\n\nSpecimens are referenced in several profiles. In the \"pathology report\" and in the \"individual observations\" of the groupers for macroscopy and diagnostic conclusion, the specimens of the submission (parts) should be referenced; in the \"individual observations\" of the microscopy grouper, the specimens at the stained tissue section level should be referenced."
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho All [LOINC]",
+          "target": "MII VS Patho All [LOINC]"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "ValueSet for general LOINC VS binding",
+          "target": "ValueSet for general LOINC VS binding"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Collection Method [SNOMED CT]",
+          "target": "MII VS Patho Collection Method [SNOMED CT]"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "ValueSet for the clinical collection method",
+          "target": "ValueSet for the clinical collection method"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Composition Type KDL",
+          "target": "MII VS Patho Composition Type KDL"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "ValueSet for the categorization of Pathology Report documents",
+          "target": "ValueSet for the categorization of Pathology Report documents"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Composition Type [Snomed CT]",
+          "target": "MII VS Patho Composition Type [Snomed CT]"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "ValueSet for the types a pathology Composition can have",
+          "target": "ValueSet for the types a pathology Composition can have"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Container Type [SNOMED CT]",
+          "target": "MII VS Patho Container Type [SNOMED CT]"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet",
+          "target": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Media Modality [SNOMED CT]",
+          "target": "MII VS Patho Media Modality [SNOMED CT]"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "ValueSet with some of the main Media.modalities needed in the pathological scope",
+          "target": "ValueSet with some of the main Media.modalities needed in the pathological scope"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Problem List [SNOMED CT]",
+          "target": "MII VS Patho Problem List [SNOMED CT]"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)",
+          "target": "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Processing Procedure [SNOMED CT]",
+          "target": "MII VS Patho Processing Procedure [SNOMED CT]"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "Specimen processing procedure",
+          "target": "Specimen processing procedure"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Report Category HL7",
+          "target": "MII VS Patho Report Category HL7"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Report Code [LOINC]",
+          "target": "MII VS Patho Report Code [LOINC]"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "ValueSet for the report type codes of pathology DiagnosticReports",
+          "target": "ValueSet for the report type codes of pathology DiagnosticReports"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Section Types [LOINC]",
+          "target": "MII VS Patho Section Types [LOINC]"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "ValueSet for IHE PaLM APSR's section types",
+          "target": "ValueSet for IHE PaLM APSR's section types"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "MII VS Patho Service Request Code",
+          "target": "MII VS Patho Service Request Code"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.description",
+          "context": "ImplementationGuide.definition.resource.description",
+          "source": "ValueSet for a preferred set of ServiceRequest codes",
+          "target": "ValueSet for a preferred set of ServiceRequest codes"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-encounter-12345",
+          "target": "mii-exa-encounter-12345"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-encounter-34555",
+          "target": "mii-exa-encounter-34555"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-encounter-87687",
+          "target": "mii-exa-encounter-87687"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-organization-12345",
+          "target": "mii-exa-organization-12345"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-organization-123456",
+          "target": "mii-exa-organization-123456"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-biopsy-site-a",
+          "target": "mii-exa-patho-biopsy-site-a"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-diagnostic-conclusion-1",
+          "target": "mii-exa-patho-diagnostic-conclusion-1"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-diagnostic-conclusion-2",
+          "target": "mii-exa-patho-diagnostic-conclusion-2"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-diagnostic-conclusion-3",
+          "target": "mii-exa-patho-diagnostic-conclusion-3"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-diagnostic-conclusion-grouper",
+          "target": "mii-exa-patho-diagnostic-conclusion-grouper"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-gleason-pattern-a",
+          "target": "mii-exa-patho-gleason-pattern-a"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-histologic-type-a",
+          "target": "mii-exa-patho-histologic-type-a"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-macro-grouper-a",
+          "target": "mii-exa-patho-macro-grouper-a"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-micro-grouper-a",
+          "target": "mii-exa-patho-micro-grouper-a"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-p63-a",
+          "target": "mii-exa-patho-p63-a"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-p63-immunostain",
+          "target": "mii-exa-patho-p63-immunostain"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-prostate-biopsy-block",
+          "target": "mii-exa-patho-prostate-biopsy-block"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-prostate-biopsy-schnitt-HE",
+          "target": "mii-exa-patho-prostate-biopsy-schnitt-HE"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-prostate-biopsy-schnitt-p63",
+          "target": "mii-exa-patho-prostate-biopsy-schnitt-p63"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-prostate-tru-cut-biopsy-sample",
+          "target": "mii-exa-patho-prostate-tru-cut-biopsy-sample"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-report",
+          "target": "mii-exa-patho-report"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-request",
+          "target": "mii-exa-patho-request"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patho-tissue-length-a",
+          "target": "mii-exa-patho-tissue-length-a"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patient-12345",
+          "target": "mii-exa-patient-12345"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-patient-34545",
+          "target": "mii-exa-patient-34545"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-practitioner-1234",
+          "target": "mii-exa-practitioner-1234"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-practitioner-21234",
+          "target": "mii-exa-practitioner-21234"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-practitioner-2346545",
+          "target": "mii-exa-practitioner-2346545"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-practitioner-34456",
+          "target": "mii-exa-practitioner-34456"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "mii-exa-practitioner-765879",
+          "target": "mii-exa-practitioner-765879"
+        },
+        {
+          "id": "ImplementationGuide.definition.resource.name",
+          "context": "ImplementationGuide.definition.resource.name",
+          "source": "Pathologie Befundbericht",
+          "target": "Pathology Report"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Table of Contents",
+          "target": "Table of Contents"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Kerndatensatz Modul Pathologie-Befund",
+          "target": "Core Data Set Module Pathology Report"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Beschreibung des Moduls",
+          "target": "Module description"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Kontext und Bezüge",
+          "target": "Context and references"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Anwendungsfälle und Informationsmodell",
+          "target": "Use cases and information model"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Szenarien",
+          "target": "Scenarios"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Datensätze",
+          "target": "Data sets"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "UML",
+          "target": "UML"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Hierarchie und Workflow",
+          "target": "Hierarchy and workflow"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Terminologien",
+          "target": "Terminologies"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Referenzen",
+          "target": "References"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Downloads",
+          "target": "Downloads"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Versionierung",
+          "target": "Versioning"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Changelog",
+          "target": "Changelog"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "ImplementationGuide.definition.page.title",
+          "source": "Hinweise zur Übersetzung",
+          "target": "Translation information"
+        }
+      ]
+    }
+  ]
+}

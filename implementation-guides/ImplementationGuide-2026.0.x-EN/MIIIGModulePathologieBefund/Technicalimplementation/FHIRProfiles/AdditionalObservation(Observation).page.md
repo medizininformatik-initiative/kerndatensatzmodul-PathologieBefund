@@ -12,8 +12,6 @@ The **MII PR Patho Additional Specified Grouper** profile of the [Observation](h
 
 This special grouper observation element must be placed before all other observation elements, which are then included as hasMember or derivedFrom references to **MII PR Patho Finding**.
 
-If this observation report section contains multiple input specimens, only one **MII PR Patho Additional Specified Grouper** should be used.
-
 For a list and explanation of the FHIR elements, see **(abstract) MII PR Patho Section Grouper**.
 
 
@@ -180,14 +178,6 @@ Examples:
 ``GET [base]/Observation?subject=Patient/12345```
 
 Usage Notes: Further information on searching for ```Observation.subject`` can be found in the [FHIR Base Specification - "reference" section](http://hl7.org/fhir/R4/search.html#reference).
-
-1. The search parameter ```value-string`` MUST be supported:
-
-Examples:
-
-```GET [base]/Observation?value-string:contains=Macroscopy```
-
-Usage Notes: Further information on searching for ```Observation.value`` can be found in the [FHIR Base Specification - "string" section](http://hl7.org/fhir/R4/search.html#string).
 
 1. The search parameter ```body-site``` MUST be supported:
 

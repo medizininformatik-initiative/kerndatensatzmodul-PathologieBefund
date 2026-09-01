@@ -5,13 +5,46 @@ Profile: MII_PR_Patho_Report
 Parent: DiagnosticReport
 Id: mii-pr-patho-report
 Title: "MII PR Patho Report"
-Description: "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative"
+Description: """
+Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). 
+
+Es stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein. Ein vollständiges Beispiel eines Pathologiebefundberichts mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
+ 
+Die wichtigsten Besonderheiten des **MII PR Patho Report** sind: 
+- die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden, 
+- die Möglichkeit, Informationen zu mehreren Proben (hier die klinischerseits eingesandten Proben) zu einzubinden,
+- und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.  
+ 
+Das **MII PR Patho Report** bildet als Entry in der Section "patho-diagnostic-report" des Profils [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) den Kern eines persistenten Dokuments "Pathologiebefundbericht".
+
+---
+
+In untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Patho Composition dupliziert werden.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert Translation(^title, de-DE, MII PR Patho Bericht)
 * insert Translation(^title, en-US, MII PR Patho Report)
-* insert Translation(^description, de-DE, Definiert die allgemeine Struktur des Pathologie-Berichts für deutsche Krankenhäuser mit den von der Medizininformatik-Initiative definierten Begriffen)
-* insert Translation(^description, en-US, Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative)
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) resource represents the complete report without possessing document properties (see **MII-PR-Patho-Composition**).
+
+It represents highly structured examination results including human-readable texts (narratives) that belong to "panels" of individual examinations. It collects and organizes PathologyFindings for even complex individual results and can reference further information on the examination panel, e.g. also clinical information and specimen information. A complete formatted report text should be part of the **MII PR Patho Report**. A complete example of a pathology report with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
+
+The most important features of the **MII PR Patho Report** are:
+- the ability to incorporate additional clinical context, e.g. a mixture of results from individual observations, images, texts and formatted representations,
+- the ability to incorporate information on multiple specimens (here the specimens submitted by the clinical side),
+- and the ability to represent a summarizing assessment, the conclusion, as well as one or more conclusion.codes that are not identical to PathologyFindings.
+
+As an entry in the "patho-diagnostic-report" section of the [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) profile, the **MII PR Patho Report** forms the core of a persistent document "pathology report".
+
+---
+
+In the table below, elements are marked with * that are duplicated in the MII PR Patho Composition profile.
+"""
 // ID
 * id MS
 * meta
@@ -25,6 +58,14 @@ Description: "Defines the general pathology report structure for German hospital
 * insert Translation(extension[related-report] ^short, en-US, Related report)
 * insert Translation(extension[related-report] ^definition, de-DE, Verweis auf Vorbefunde)
 * insert Translation(extension[related-report] ^definition, en-US, Reference to related reports)
+// R5-Cross-Version-Extension: Verweis auf die zugehoerige Composition (Angleichung an HL7 EU Lab Report).
+// Optional (kein Breaking Change); ermoeglicht, den Bericht dokumentenzentrisch ueber die Composition zu rendern.
+* extension contains $r5-diagnosticreport-composition named composition 0..1 MS
+* insert Label(extension[composition], Composition, Verweis auf die zugehoerige Composition)
+* insert Translation(extension[composition] ^short, de-DE, Composition)
+* insert Translation(extension[composition] ^short, en-US, Composition)
+* insert Translation(extension[composition] ^definition, de-DE, Verweis auf die zugehoerige Composition)
+* insert Translation(extension[composition] ^definition, en-US, Reference to the associated Composition)
 // Identifikator
 * identifier 1.. MS
   * ^slicing.discriminator.type = #pattern
@@ -72,8 +113,8 @@ Description: "Defines the general pathology report structure for German hospital
 * insert Translation(code ^definition, de-DE, Code des Pathologie-Befundes)
 * insert Translation(code ^definition, en-US, Code of the pathology report)
 * code ^short = "Pathology report code"
-  * coding ^slicing.discriminator.type = #pattern
-  * coding ^slicing.discriminator.path = "$this"
+  * coding ^slicing.discriminator.type = #value
+  * coding ^slicing.discriminator.path = "system"
   * coding ^slicing.rules = #open
   * coding contains pathology-report 1..1 MS
   * insert Label(coding[pathology-report], Pathologie-Befund Code, Spezifischer Code für Pathologie-Befunde)
@@ -81,8 +122,9 @@ Description: "Defines the general pathology report structure for German hospital
   * insert Translation(coding[pathology-report] ^short, en-US, Pathology report code)
   * insert Translation(coding[pathology-report] ^definition, de-DE, Spezifischer Code für Pathologie-Befunde)
   * insert Translation(coding[pathology-report] ^definition, en-US, Specific code for pathology report)
-  * coding[pathology-report] = $LOINC#60568-3 
-    * system 1.. MS 
+  * coding[pathology-report] from mii-vs-patho-report-code-loinc (extensible)
+    * system 1.. MS
+    * system = $LOINC (exactly)
     * code 1.. MS
 // Referenz zu Patient:in
 * subject 1.. MS
@@ -213,13 +255,28 @@ Profile: MII_PR_Patho_Composition
 Parent: $isik-basis-bericht-subsysteme
 Id: mii-pr-patho-composition
 Title: "MII PR Patho Composition"
-Description: "Composition as a template for pathology report as a FHIR-Document"
+Description: """
+Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5). 
+
+Das Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. Ein vollständiges Beispiel einer Composition mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html). 
+Dieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”; Aufbau und Signatur des Bundles sind im Profil [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) beschrieben.
+Neben dem Diagnostischen Report (`patho-diagnostic-report`) und einem oder mehreren zusätzlichen kompletten Reports (`additional-diagnostic-report`) können die Beobachtungsberichtabschnitte optional auch direkt als eigene Sections der Composition geführt werden (Makroskopie, Mikroskopie, Intraoperativ, Diagnostische Schlussfolgerung, Zusätzliche Beobachtung); jede dieser Sections referenziert denselben Grouper wie `DiagnosticReport.result`. Composition und DiagnosticReport können zusätzlich über die Extension `composition-diagnosticReportReference` bzw. die R5-Cross-Version-Extension `DiagnosticReport.composition` wechselseitig aufeinander verweisen. Alle diese Ergänzungen sind optional.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert Translation(^title, de-DE, MII PR Patho Zusammenstellung)
 * insert Translation(^title, en-US, MII PR Patho Composition)
-* insert Translation(^description, de-DE, Zusammenstellung als Vorlage für Pathologie-Berichte als FHIR-Dokument)
-* insert Translation(^description, en-US, Composition as a template for pathology report as a FHIR-Document)
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+This profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) from the specification [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).
+
+As a profile of a Composition resource with special constraints for ClinicalDocuments, the **MII PR Patho Composition** profile aggregates the resources for a complete, text-centered pathology report with the properties of a clinical document. A complete example of a Composition with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
+This profile is the first entry in a Bundle of `Bundle.type` "document"; the structure and signature of the Bundle are described in the [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) profile.
+In addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more additional complete reports (`additional-diagnostic-report`), the observation report sections may optionally be carried directly as separate sections of the Composition (macroscopy, microscopy, intraoperative, diagnostic conclusion, additional observation); each of these sections references the same grouper as `DiagnosticReport.result`. Composition and DiagnosticReport may additionally reference each other via the extension `composition-diagnosticReportReference` and the R5 cross-version extension `DiagnosticReport.composition` respectively. All of these additions are optional.
+"""
 * text ^short = "Header-Informationen"
 * meta.lastUpdated MS
 * meta.profile MS
@@ -229,6 +286,14 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(extension[document-version] ^short, en-US, Document version)
 * insert Translation(extension[document-version] ^definition, de-DE, Versionsnummer des Dokuments)
 * insert Translation(extension[document-version] ^definition, en-US, Version number of the document)
+// HL7-EU-Lab-Extension: Verweis auf den zugehoerigen DiagnosticReport (Angleichung an HL7 EU Lab Report).
+// Optional (kein Breaking Change); die bestehende Verknuepfung ueber section[patho-diagnostic-report].entry bleibt.
+* extension contains $eu-composition-diagnosticreport named diagnosticReport 0..1 MS
+* insert Label(extension[diagnosticReport], Diagnostikbericht, Verweis auf den zugehoerigen DiagnosticReport)
+* insert Translation(extension[diagnosticReport] ^short, de-DE, Diagnostikbericht)
+* insert Translation(extension[diagnosticReport] ^short, en-US, Diagnostic report)
+* insert Translation(extension[diagnosticReport] ^definition, de-DE, Verweis auf den zugehoerigen DiagnosticReport)
+* insert Translation(extension[diagnosticReport] ^definition, en-US, Reference to the associated DiagnosticReport)
 * identifier 1.. MS
   * type 1.. MS
   * type.coding = $v2-0203#ACSN "Accession ID"
@@ -336,11 +401,11 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * insert Translation(relatesTo ^definition, en-US, Relationship to other documents) 
 
 * event 1.. MS
-* insert Label(event, Referenz auf Untersuchungsauftrag, Referenz auf den auslösenden Untersuchungsauftrag)
+* insert Label(event, Ereignis, Dokumentiertes Pathologie-Ereignis - die Begutachtung bzw. Befundung auf die sich der Befundbericht bezieht)
 * insert Translation(event ^short, de-DE, Ereignis)
 * insert Translation(event ^short, en-US, Event)
-* insert Translation(event ^definition, de-DE, Referenz auf den auslösenden Untersuchungsauftrag)
-* insert Translation(event ^definition, en-US, Documentation event)
+* insert Translation(event ^definition, de-DE, Dokumentiertes Pathologie-Ereignis - die Begutachtung bzw. Befundung auf die sich der Befundbericht bezieht)
+* insert Translation(event ^definition, en-US, Documented pathology event - the reporting act the report refers to)
 // Entry referenziert nur auf MII_PR_Patho_Report
 * section 
 * section.code 1.. MS
@@ -350,12 +415,46 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this.code.coding"
 * section ^slicing.rules = #open
+// Der DiagnosticReport-zentrische Weg (patho-diagnostic-report) bleibt unveraendert.
+// Zusaetzlich koennen die Beobachtungsberichtabschnitte optional direkt als Composition-Sections
+// gefuehrt werden (Angleichung an HL7 EU Lab / US Pathology Composition). Jede Section referenziert
+// denselben Grouper wie DiagnosticReport.result. Alle Section-Slices sind optional (kein Breaking Change).
 * section contains patho-diagnostic-report 1..* MS
+    and makroskopie 0..1 MS
+    and mikroskopie 0..1 MS
+    and intraoperativ 0..1 MS
+    and diagnostische-schlussfolgerung 0..1 MS
+    and zusaetzliche-beobachtung 0..1 MS
 * insert Label(section[patho-diagnostic-report], Pathologie-Diagnostikbericht, Pathologie-Diagnostikbericht)
 * insert Translation(section[patho-diagnostic-report] ^short, de-DE, Pathologie-Diagnostikbericht)
 * insert Translation(section[patho-diagnostic-report] ^short, en-US, Pathology diagnostic report)
 * insert Translation(section[patho-diagnostic-report] ^definition, de-DE, Pathologie-Diagnostikbericht)
 * insert Translation(section[patho-diagnostic-report] ^definition, en-US, Pathology diagnostic report)
+* insert Label(section[makroskopie], Makroskopie, Abschnitt der makroskopischen Beurteilung)
+* insert Translation(section[makroskopie] ^short, de-DE, Makroskopie)
+* insert Translation(section[makroskopie] ^short, en-US, Macroscopy)
+* insert Translation(section[makroskopie] ^definition, de-DE, Abschnitt der makroskopischen Beurteilung)
+* insert Translation(section[makroskopie] ^definition, en-US, Macroscopic assessment section)
+* insert Label(section[mikroskopie], Mikroskopie, Abschnitt der mikroskopischen Beurteilung)
+* insert Translation(section[mikroskopie] ^short, de-DE, Mikroskopie)
+* insert Translation(section[mikroskopie] ^short, en-US, Microscopy)
+* insert Translation(section[mikroskopie] ^definition, de-DE, Abschnitt der mikroskopischen Beurteilung)
+* insert Translation(section[mikroskopie] ^definition, en-US, Microscopic assessment section)
+* insert Label(section[intraoperativ], Intraoperative Beurteilung, Abschnitt der intraoperativen Beurteilung)
+* insert Translation(section[intraoperativ] ^short, de-DE, Intraoperative Beurteilung)
+* insert Translation(section[intraoperativ] ^short, en-US, Intraoperative assessment)
+* insert Translation(section[intraoperativ] ^definition, de-DE, Abschnitt der intraoperativen Beurteilung)
+* insert Translation(section[intraoperativ] ^definition, en-US, Intraoperative assessment section)
+* insert Label(section[diagnostische-schlussfolgerung], Diagnostische Schlussfolgerung, Abschnitt der diagnostischen Schlussfolgerung)
+* insert Translation(section[diagnostische-schlussfolgerung] ^short, de-DE, Diagnostische Schlussfolgerung)
+* insert Translation(section[diagnostische-schlussfolgerung] ^short, en-US, Diagnostic conclusion)
+* insert Translation(section[diagnostische-schlussfolgerung] ^definition, de-DE, Abschnitt der diagnostischen Schlussfolgerung)
+* insert Translation(section[diagnostische-schlussfolgerung] ^definition, en-US, Diagnostic conclusion section)
+* insert Label(section[zusaetzliche-beobachtung], Zusaetzliche Beobachtung, Abschnitt fuer zusaetzliche spezifizierte Beobachtungen)
+* insert Translation(section[zusaetzliche-beobachtung] ^short, de-DE, Zusaetzliche Beobachtung)
+* insert Translation(section[zusaetzliche-beobachtung] ^short, en-US, Additional observation)
+* insert Translation(section[zusaetzliche-beobachtung] ^definition, de-DE, Abschnitt fuer zusaetzliche spezifizierte Beobachtungen)
+* insert Translation(section[zusaetzliche-beobachtung] ^definition, en-US, Section for additional specified observations)
 // and additional-diagnostic-report 0..* MS
 * section[patho-diagnostic-report]
   * code 1.. MS
@@ -363,6 +462,38 @@ Description: "Composition as a template for pathology report as a FHIR-Document"
     * coding = $LOINC#60567-5
   * entry 1.. MS
   * entry only Reference (mii-pr-patho-report)
+// Optionale Beobachtungsberichtabschnitte als Composition-Sections; die entry referenziert jeweils
+// denselben Grouper wie DiagnosticReport.result. section.text (Narrativ) bleibt optional.
+* section[makroskopie]
+  * code 1.. MS
+    * coding 1.. MS
+    * coding = $LOINC#22634-0
+  * entry 1..1 MS
+  * entry only Reference(mii-pr-patho-macroscopic-grouper)
+* section[mikroskopie]
+  * code 1.. MS
+    * coding 1.. MS
+    * coding = $LOINC#22635-7
+  * entry 1..1 MS
+  * entry only Reference(mii-pr-patho-microscopic-grouper)
+* section[intraoperativ]
+  * code 1.. MS
+    * coding 1.. MS
+    * coding = $LOINC#83321-0
+  * entry 1..1 MS
+  * entry only Reference(mii-pr-patho-intraoperative-grouper)
+* section[diagnostische-schlussfolgerung]
+  * code 1.. MS
+    * coding 1.. MS
+    * coding = $LOINC#22637-3
+  * entry 1..1 MS
+  * entry only Reference(mii-pr-patho-diagnostic-conclusion-grouper)
+* section[zusaetzliche-beobachtung]
+  * code 1.. MS
+    * coding 1.. MS
+    * coding = $LOINC#100969-5
+  * entry 1..1 MS
+  * entry only Reference(mii-pr-patho-additional-specified-grouper)
 
 
 //--------------------------------
@@ -382,10 +513,10 @@ Description: "Example for MII_PR_Patho_Report"
 * basedOn = Reference(mii-exa-patho-request)
 * status = #final
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
-* subject = Reference(Patient/12345)
-* performer = Reference(Practitioner/2346545)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
+* performer = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * specimen = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
-* encounter = Reference(Encounter/12345)
+* encounter = Reference(Encounter/mii-exa-patho-encounter-12345)
 * result[macroscopic-observations] = Reference(mii-exa-patho-macro-grouper-a)
 * result[macroscopic-observations] = Reference(mii-exa-patho-macro-grouper-b)
 * result[microscopic-observations] = Reference(mii-exa-patho-micro-grouper-a)
@@ -401,7 +532,7 @@ Description: "Example for MII_PR_Patho_Report"
 Instance: mii-exa-patho-report
 InstanceOf: mii-pr-patho-report
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc"
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].value = "E21.12345"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
@@ -410,10 +541,10 @@ Usage: #example
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology synoptic report"
 * basedOn = Reference(ServiceRequest/mii-exa-patho-request)
 * status = #final
-* subject = Reference(Patient/12345)
-* performer = Reference(Practitioner/2346545)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
+* performer = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
-* encounter = Reference(Encounter/12345)
+* encounter = Reference(Encounter/mii-exa-patho-encounter-12345)
 * result[macroscopic-observations] = Reference(Observation/mii-exa-patho-macro-grouper-a)
 * result[microscopic-observations] = Reference(Observation/mii-exa-patho-micro-grouper-a)
 * result[diagnostic-conclusion] = Reference(Observation/mii-exa-patho-diagnostic-conclusion-grouper)
@@ -449,7 +580,7 @@ Description: "Example for an MII_PR_Patho_Composition"
     </tr>
     <tr id=\"befund-patient\">
       <td>Patient</td>
-      <td>Patient/12345</td>
+      <td>Patient/mii-exa-patho-patient-12345</td>
     </tr>
     <tr id=\"befund-effective\">
       <td>Effective</td>
@@ -461,7 +592,7 @@ Description: "Example for an MII_PR_Patho_Composition"
     </tr>
     <tr id=\"befund-performer\">
       <td>Performer</td>
-      <td>Practitioner/2346545</td>
+      <td>Practitioner/mii-exa-patho-practitioner-2346545</td>
     </tr>
   </table>
 </div>"
@@ -474,15 +605,15 @@ Description: "Example for an MII_PR_Patho_Composition"
 * identifier.extension.valueUrl = "#befund-eingangsnummer"
 * type = $LOINC#11526-1 "Pathology study"
 * type.text = "Pathologie-Befundbericht"
-* subject = Reference(Patient/34545)
-* encounter = Reference(Encounter/34555)
+* subject = Reference(Patient/mii-exa-patho-patient-34545)
+* encounter = Reference(Encounter/mii-exa-patho-encounter-34555)
 * date = "2021-06-08"
-* author[+] = Reference(Practitioner/2346545)
+* author[+] = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * author[=].display = "Dr. Name"
 * title = "Pathologie Befundbericht"
-* custodian = Reference(Organization/12345)
+* custodian = Reference(Organization/mii-exa-patho-organization-12345)
 * attester[legal].mode = #legal
-* attester[legal].party = Reference(Practitioner/765879)
+* attester[legal].party = Reference(Practitioner/mii-exa-patho-practitioner-765879)
 * event.period.start = "2021-06-05"
 * event.period.end = "2021-06-08"
 * section[patho-diagnostic-report]
@@ -509,7 +640,7 @@ Description: "Example for an MII_PR_Patho_Composition"
 Instance: mii-exa-patho-composition
 InstanceOf: mii-pr-patho-composition
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot.rc"
 * text.div = "
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
   <div id=\"befund-titel\">
@@ -530,7 +661,7 @@ Usage: #example
     </tr>
     <tr id=\"befund-patient\">
       <td>Patient</td>
-      <td>Patient/12345</td>
+      <td>Patient/mii-exa-patho-patient-12345</td>
     </tr>
     <tr id=\"befund-effective\">
       <td>Effective</td>
@@ -542,7 +673,7 @@ Usage: #example
     </tr>
     <tr id=\"befund-performer\">
       <td>Performer</td>
-      <td>Practitioner/2346545</td>
+      <td>Practitioner/mii-exa-patho-practitioner-2346545</td>
     </tr>
   </table>
 </div>"
@@ -551,7 +682,7 @@ Usage: #example
 * type.coding[XDS].code = #PATH
 * type.coding[sct] = $SCT#371528001 "Pathology report (record artifact)"
 * attester[legal].mode = #legal
-* attester[legal].party = Reference(Practitioner/765879)
+* attester[legal].party = Reference(Practitioner/mii-exa-patho-practitioner-765879)
 * section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"
 * section[patho-diagnostic-report].title = "Pathology Diagnostic Report"
 * section[patho-diagnostic-report].text.status = #additional
@@ -562,12 +693,12 @@ Usage: #example
 * identifier.type = $v2-0203#ACSN "Accession ID"
 //* identifier.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* identifier.extension.valueUrl = "#befund-eingangsnummer"
-* subject = Reference(Patient/34545)
-* encounter = Reference(Encounter/34555)
+* subject = Reference(Patient/mii-exa-patho-patient-34545)
+* encounter = Reference(Encounter/mii-exa-patho-encounter-34555)
 * date = "2021-06-08"
-* author[+] = Reference(Practitioner/2346545)
+* author[+] = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * author[=].display = "Dr. Name"
 * title = "Pathologie Befundbericht"
-* custodian = Reference(Organization/123456)
+* custodian = Reference(Organization/mii-exa-patho-organization-123456)
 * event.period.start = "2021-06-05"
 * event.period.end = "2021-06-08"

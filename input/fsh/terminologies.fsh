@@ -81,6 +81,24 @@ Description: "ValueSet for the categorization of Pathology Report documents"
 * $v2-0074#SP "Surgical Pathology"
 
 //-----------------------------------
+// DiagnosticReport
+//-----------------------------------
+ValueSet: MII_VS_Patho_Report_Code_LOINC
+Id: mii-vs-patho-report-code-loinc
+Title: "MII VS Patho Report Code [LOINC]"
+Description: "ValueSet for the report type codes of pathology DiagnosticReports"
+* insert PR_CS_VS_Version
+* insert Publisher
+* $LOINC#60568-3 "Pathology Synoptic report"
+* $LOINC#11526-1 "Pathology study"
+* $LOINC#11529-5 "Surgical pathology study"
+* $LOINC#33716-2 "Non-gynecological cytology study"
+* $LOINC#26435-8 "Molecular pathology studies (set)"
+* $LOINC#47528-5 "Cytology report of Cervical or vaginal smear or scraping Cyto stain"
+* $LOINC#47527-7 "Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep"
+* $LOINC#18743-5 "Autopsy report"
+
+//-----------------------------------
 // ServiceRequest
 //-----------------------------------
 ValueSet: MII_VS_Patho_Service_Request_Code
@@ -138,10 +156,10 @@ Description: "ValueSet for IHE PaLM APSR's section types"
 * insert PR_CS_VS_Version
 * insert Publisher
 * $LOINC#83321-0 "Pathology report intraoperative observation in Specimen Document" //Intraoperative Observation Section
-* $LOINC#22634-0 "Pathology report gross observation" //Macroscopic Observation Section
+* $LOINC#22634-0 "Pathology report gross observation" //Macroscopic Observation Section //24419-4 "Pathology report gross observation"
 * $LOINC#22635-7 "Pathology report microscopic observation" //Microscopic Observation Section
 * $LOINC#22637-3 "Pathology report diagnosis" //Diagnostic Conclusion Section
-* $LOINC#77599-9 "Additional documentation" //Additional Observation Section
+* $LOINC#100969-5 "Pathology report additional specified observation in Specimen Narrative" //Additional Observation Section
 
 // LOINC All
 ValueSet: MII_VS_Patho_All_LOINC	

@@ -9,12 +9,14 @@ name: MII_IG_Modul_Patho
 language: de-DE
 status: active
 experimental: false
-version: 2026.0.2
-date: "2025-12-10"
+version: 2027.0.0-ballot.rc
+date: "2026-09-01"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
+license: CC-BY-4.0
+jurisdiction: urn:iso:std:iso:3166#DE "Germany"
 packageId: de.medizininformatikinitiative.kerndatensatz.patho
-releaseLabel: ci-build
+releaseLabel: ballot
 publisher:
   name: Medizininformatik-Initiative
   url: https://www.medizininformatik-initiative.de/
@@ -23,16 +25,76 @@ FSHOnly: false
 # Don't forget to add further dependencies if necessary!
 dependencies:
   # de.basisprofil.r4: 1.5.0
-  de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.biobank: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.0
+  de.medizininformatikinitiative.kerndatensatz.biobank: 2026.0.1
   # de.medizininformatikinitiative.kerndatensatz.diagnose: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.base: 2026.0.x
-  de.gematik.isik: 5.1.0
-  hl7.fhir.us.mcode: 4.0.0-ballot
+  de.medizininformatikinitiative.kerndatensatz.base: 2026.0.1
+  de.gematik.isik: 5.1.2
+  # Cross-Version-Extensions R5 -> R4 (BodyStructure an Specimen.collection.bodySite, #259;
+  # DiagnosticReport.composition zur Angleichung an HL7 EU Lab Report)
+  hl7.fhir.uv.xver-r5.r4: 0.1.0
+  # HL7 EU Extensions: composition-diagnosticReportReference (Composition -> DiagnosticReport)
+  hl7.fhir.eu.extensions.r4: 1.3.0
+
+parameters:
+  path-pages:
+    - input/intro-notes
+  i18n-default-lang: de
+  i18n-lang:
+    - en
+  translation-sources:
+    - input/translations/en
+  excludettl: true
+
+pages:
+  index.md:
+    title: Kerndatensatz Modul Pathologie-Befund
+  beschreibung.md:
+    title: Beschreibung des Moduls
+  kontext.md:
+    title: Kontext und Bezüge
+  anwendungsfaelle.md:
+    title: Anwendungsfälle und Informationsmodell
+    szenarien.md:
+      title: Szenarien
+    datensaetze.md:
+      title: Datensätze
+    uml.md:
+      title: UML
+    hierarchie.md:
+      title: Hierarchie und Workflow
+  terminologien.md:
+    title: Terminologien
+  referenzen.md:
+    title: Referenzen
+  downloads.md:
+    title: Downloads
+  version-history.md:
+    title: Versionierung
+    changes.md:
+      title: Changelog
+  translationinfo.md:
+    title: Hinweise zur Übersetzung
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Artifacts: artifacts.html
+  Beschreibung:
+    Modulbeschreibung: beschreibung.html
+    Kontext und Bezüge: kontext.html
+  Anwendungsfälle:
+    Übersicht: anwendungsfaelle.html
+    Szenarien: szenarien.html
+    Datensätze: datensaetze.html
+    UML: uml.html
+    Hierarchie und Workflow: hierarchie.html
+  Artefakte:
+    Übersicht: artifacts.html
+    Terminologien: terminologien.html
+  Referenzen: referenzen.html
+  Downloads: downloads.html
+  Versionierung:
+    Versionierung: version-history.html
+    Changelog: changes.html

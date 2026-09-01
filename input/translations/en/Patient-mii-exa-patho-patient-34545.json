@@ -1,0 +1,23 @@
+{
+  "id": "Patient-mii-exa-patho-patient-34545",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "HumanName.family",
+          "context": "HumanName.family",
+          "source": "Musterfrau",
+          "target": "Musterfrau"
+        },
+        {
+          "id": "HumanName.given",
+          "context": "HumanName.given",
+          "source": "Erika",
+          "target": "Erika"
+        }
+      ]
+    }
+  ]
+}

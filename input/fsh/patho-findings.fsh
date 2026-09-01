@@ -5,13 +5,32 @@ Profile: MII_PR_Patho_Finding
 Parent: mii-pr-patho-base-observation
 Id: mii-pr-patho-finding
 Title: "MII PR Patho Finding"
-Description: "Instantiable Observation to describe a generic pathology finding"
+Description: """
+Das Profil **MII PR Patho Finding** der Ressource Observation bildet als `hasMember`- oder `derivedFrom`-Referenz für ein Profil vom Typ [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html) atomare kodierte Untersuchungsergebnisse ab. Dieses Profil kann verschachtelte Konstrukte bilden, um „Child Observations“ zu erfassen, die eine einzelne Observation weiter spezifizieren. PathoFindings können vom Pathologie-Informationssystem über Questionnaire- / QuestionnaireResponse-Resourcen (siehe [HL7-Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/)) bereitgestellt werden, bzw. werden QuestionnaireResponse Ressourcen referenziert. Jedes **MII PR Patho Finding** sollte die Probe referenzieren, an der die Beobachtung vorgenommen wurde.
+
+**Sonderfall:**
+
+- Im Falle eines **Befundupdates** dient ein **MII PR Patho Finding** mit dem LOINC-Code [90004-3 - Clinical significance of updated information](https://loinc.org/90004-3/) als Organizer für die Update-Informationen, die im [MII PR Patho Diagnostic Conclusion Grouper](StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.html) abgebildet werden. Hierzu wird die focus-Referenz genutzt, um auf den betroffenen **MII PR Patho Grouper** (Beobachtungsabschnitt) hinzuweisen. Der `Observation.value` wird durch einen ValueSet "ClinicalSignificance" (z.B. LOINC LL4770-5) dargestellt.
+
+Für spezifische Observation-Konstrukte, speziell aus dem Bereich des onkologischen Basisdatensatzes oBDS (TNM, Histologischer Tumortyp, etc.), kann auch auf Observation-Profile des [MII Erweiterungsmoduls Onkologie](https://simplifier.net/medizininformatikinitiative-modulonkologie) zurückgegriffen werden. Für Beobachtungen an immunhistochemischen Färbungen, in-situ-Hybridisierungen, PCR-Tests, Methylierungs-Tests und NGS-Untersuchungen sollten Observation-Profile des [MII Erweiterungsmoduls Molekulares Tumorboard](https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard) bzw. des [MII Erweiterungsmoduls Molekulargenetischer Befundbericht](https://simplifier.net/medizininformatikinitiative-modulomics) genutzt werden.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert Translation(^title, de-DE, MII PR Patho Befund)
 * insert Translation(^title, en-US, MII PR Patho Finding)
-* insert Translation(^description, de-DE, Instanziierbare Observation zur Beschreibung einer generischen pathologischen Einzelbeobachtung)
-* insert Translation(^description, en-US, Instantiable Observation to describe a generic pathology finding)
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Finding** profile of the Observation resource represents atomic coded examination results as a `hasMember` or `derivedFrom` reference for a profile of type [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html). This profile can form nested constructs to capture "child observations" that further specify a single observation. PathoFindings may be provided by the pathology information system via Questionnaire / QuestionnaireResponse resources (see [HL7 Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/)), or QuestionnaireResponse resources are referenced. Each **MII PR Patho Finding** should reference the specimen on which the observation was made.
+
+**Special case:**
+
+- In the case of a **report update**, a **MII PR Patho Finding** with the LOINC code [90004-3 - Clinical significance of updated information](https://loinc.org/90004-3/) serves as an organizer for the update information represented in the [MII PR Patho Diagnostic Conclusion Grouper](StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.html). The focus reference is used to point to the affected **MII PR Patho Grouper** (observation section). The `Observation.value` is represented by a "ClinicalSignificance" value set (e.g. LOINC LL4770-5).
+
+For specific observation constructs, especially from the oncology basic data set (oBDS) (TNM, histological tumor type, etc.), observation profiles of the [MII Oncology extension module](https://simplifier.net/medizininformatikinitiative-modulonkologie) may also be used. For observations on immunohistochemical stains, in-situ hybridizations, PCR tests, methylation tests and NGS examinations, observation profiles of the [MII Molecular Tumor Board extension module](https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard) or the [MII Molecular Genetic Report extension module](https://simplifier.net/medizininformatikinitiative-modulomics) should be used.
+"""
 * insert Label(identifier, Identifikator, Eindeutiger Identifikator)
 * insert Translation(identifier ^short, de-DE, Identifikator)
 * insert Translation(identifier ^short, en-US, Identifier)
@@ -163,7 +182,7 @@ Description: "Tissue length of Specimen B (2nd punch)"
 Instance: mii-exa-patho-tissue-length-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 
 * status = #final
@@ -182,7 +201,7 @@ Usage: #example
 Instance: mii-exa-patho-biopsy-site-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 
 * status = #final
@@ -227,7 +246,7 @@ Description: "[Microscopic Finding] Gleason pattern.primary in prostate tumor fo
 Instance: mii-exa-patho-p63-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
@@ -241,7 +260,7 @@ Usage: #example
 Instance: mii-exa-patho-gleason-pattern-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
@@ -257,7 +276,7 @@ Usage: #example
 Instance: mii-exa-patho-histologic-type-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
@@ -308,20 +327,21 @@ Description: "Example for diagnostic conclusion"
 Instance: mii-exa-patho-diagnostic-conclusion-1
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
 * code = $LOINC#59847-4 //"Histology and Behavior ICD-O-3 Cancer"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink" 
 //* code.extension.valueUrl = "#diagnostic-conclusion-icdo-3-key"
-* valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom o.n.A."
+* valueCodeableConcept = $icd-o-3#8140/3 "Adenocarcinoma, NOS"
+* valueCodeableConcept.text = "Adenokarzinom o.n.A."
 
 
 Instance: mii-exa-patho-diagnostic-conclusion-2
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
@@ -333,7 +353,7 @@ Usage: #example
 Instance: mii-exa-patho-diagnostic-conclusion-3
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final

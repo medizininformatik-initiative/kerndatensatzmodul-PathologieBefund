@@ -1,0 +1,47 @@
+{
+  "id": "BodyStructure-mii-exa-patho-prostate-body-structure",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Apical peripheral zone of prostate",
+          "target": "Apical peripheral zone of prostate"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Right (qualifier value)",
+          "target": "Right (qualifier value)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Structure of apex of prostate",
+          "target": "Structure of apex of prostate"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Posterior",
+          "target": "Posterior"
+        },
+        {
+          "id": "Quantity.unit",
+          "context": "Quantity.unit",
+          "source": "mm",
+          "target": "mm"
+        },
+        {
+          "id": "BodyStructure.description",
+          "context": "BodyStructure.description",
+          "source": "Rechte apikale periphere Zone der Prostata, posterior, 15 mm proximal des Apex",
+          "target": "Right apical peripheral zone of the prostate, posterior, 15 mm proximal to the apex"
+        }
+      ]
+    }
+  ]
+}

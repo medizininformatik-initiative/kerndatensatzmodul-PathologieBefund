@@ -1,0 +1,3 @@
+## Technical implementation
+
+{{index:current}}

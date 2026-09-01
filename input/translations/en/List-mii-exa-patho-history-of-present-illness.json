@@ -1,0 +1,17 @@
+{
+  "id": "List-mii-exa-patho-history-of-present-illness",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "History of Present illness",
+          "target": "History of Present illness"
+        }
+      ]
+    }
+  ]
+}

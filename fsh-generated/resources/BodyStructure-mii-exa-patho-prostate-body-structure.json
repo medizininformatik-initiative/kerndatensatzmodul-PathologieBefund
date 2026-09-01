@@ -1,0 +1,103 @@
+{
+  "resourceType": "BodyStructure",
+  "id": "mii-exa-patho-prostate-body-structure",
+  "active": true,
+  "patient": {
+    "reference": "Patient/mii-exa-patho-patient-12345"
+  },
+  "location": {
+    "coding": [
+      {
+        "code": "717007000",
+        "system": "http://snomed.info/sct",
+        "display": "Apical peripheral zone of prostate"
+      }
+    ]
+  },
+  "locationQualifier": [
+    {
+      "coding": [
+        {
+          "code": "24028007",
+          "system": "http://snomed.info/sct",
+          "display": "Right (qualifier value)"
+        }
+      ]
+    }
+  ],
+  "description": "Rechte apikale periphere Zone der Prostata, posterior, 15 mm proximal des Apex",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure",
+      "extension": [
+        {
+          "url": "structure",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "717007000",
+                "system": "http://snomed.info/sct",
+                "display": "Apical peripheral zone of prostate"
+              }
+            ]
+          }
+        },
+        {
+          "url": "laterality",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "24028007",
+                "system": "http://snomed.info/sct",
+                "display": "Right (qualifier value)"
+              }
+            ]
+          }
+        },
+        {
+          "url": "bodyLandmarkOrientation",
+          "extension": [
+            {
+              "url": "landmarkDescription",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "68756004",
+                    "system": "http://snomed.info/sct",
+                    "display": "Structure of apex of prostate"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "surfaceOrientation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "255551008",
+                    "system": "http://snomed.info/sct",
+                    "display": "Posterior"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "distanceFromLandmark",
+              "extension": [
+                {
+                  "url": "value",
+                  "valueQuantity": {
+                    "value": 15,
+                    "code": "mm",
+                    "system": "http://unitsofmeasure.org",
+                    "unit": "mm"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

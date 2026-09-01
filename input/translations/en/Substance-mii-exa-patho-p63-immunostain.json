@@ -1,0 +1,29 @@
+{
+  "id": "Substance-mii-exa-patho-p63-immunostain",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Labor and industries number",
+          "target": "Labor and industries number"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Material",
+          "target": "Material"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "p63 immunostain",
+          "target": "p63 immunostain"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "Practitioner-mii-exa-patho-practitioner-2346545",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "HumanName.family",
+          "context": "HumanName.family",
+          "source": "Schnitt",
+          "target": "Schnitt"
+        },
+        {
+          "id": "HumanName.given",
+          "context": "HumanName.given",
+          "source": "Sabine",
+          "target": "Sabine"
+        }
+      ]
+    }
+  ]
+}

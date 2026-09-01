@@ -5,13 +5,32 @@ Profile: MII_PR_Patho_Intraoperative_Grouper
 Parent: mii-pr-patho-section-grouper
 Id: mii-pr-patho-intraoperative-grouper
 Title: "MII PR Patho Intraoperative Grouper"
-Description: "Based on IHE PaLM APSR - Intraoperative Observation Section"
+Description: """
+Das Profil **MII PR Patho Intraoperative Grouper** der Resource Observation stellt als `DiagnosticReport.result:intraoperative-grouper` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt "Intraoperative Beobachtung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).
+
+Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre "Eltern-Beobachtungen" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.
+
+Falls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.
+
+Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert Translation(^title, de-DE, MII PR Patho Intraoperative Grouper)
 * insert Translation(^title, en-US, MII PR Patho Intraoperative Grouper)
-* insert Translation(^description, de-DE, Basierend auf IHE PaLM APSR - Intraoperative Beobachtungssektion)
-* insert Translation(^description, en-US, Based on IHE PaLM APSR - Intraoperative Observation Section)
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Intraoperative Grouper** profile of the Observation resource represents, as `DiagnosticReport.result:intraoperative-grouper` for a [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section "Intraoperative Observation" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).
+
+This special grouper observation element is to be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their "parent observations" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.
+
+If the observation report section contains multiple submitted specimens, the MII PR Patho Findings are assigned to these different specimens via the specimen references of these MII PR Patho Findings, specifically the references concerning the "parts".
+
+For a listing and explanation of the FHIR elements, see **(abstract) MII PR Patho Section Grouper**.
+"""
 
 // Inherited mustSupport elements from section grouper
 * insert Label(text, Text, Narrative Darstellung)
@@ -37,13 +56,32 @@ Profile: MII_PR_Patho_Macroscopic_Grouper
 Parent: mii-pr-patho-section-grouper
 Id: mii-pr-patho-macroscopic-grouper
 Title: "MII PR Patho Macroscopic Grouper"
-Description: "Based on IHE PaLM APSR - Macroscopic Observation Finding"
+Description: """
+Das Profil **MII PR Patho Macroscopic Grouper** der Resource Observation stellt als `DiagnosticReport.result:macroscopic-grouper` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt "Makroskopische Beurteilung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).
+
+Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre "Eltern-Beobachtungen" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.
+
+Falls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.
+
+Auflistung und Erklärung der FHIR-Elemente siehe [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html).
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert Translation(^title, de-DE, MII PR Patho Macroscopic Grouper)
 * insert Translation(^title, en-US, MII PR Patho Macroscopic Grouper)
-* insert Translation(^description, de-DE, Basierend auf IHE PaLM APSR - Makroskopischer Beobachtungsbefund)
-* insert Translation(^description, en-US, Based on IHE PaLM APSR - Macroscopic Observation Finding)
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Macroscopic Grouper** profile of the Observation resource represents, as `DiagnosticReport.result:macroscopic-grouper` for a [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section "Macroscopic Evaluation" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).
+
+This special grouper observation element is to be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their "parent observations" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.
+
+If the observation report section contains multiple submitted specimens, the MII PR Patho Findings are assigned to these different specimens via the specimen references of these MII PR Patho Findings, specifically the references concerning the "parts".
+
+For a listing and explanation of the FHIR elements, see [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html).
+"""
 
 // Inherited mustSupport elements from section grouper
 * insert Label(text, Text, Narrative Darstellung)
@@ -88,7 +126,7 @@ Description: "Grouper for all Macroscopic Observations of Specimen B (2nd punch)
 Instance: mii-exa-patho-macro-grouper-a
 InstanceOf: mii-pr-patho-macroscopic-grouper
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2027.0.0-ballot.rc"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Makroskopische Beurteilung</h1><p><b>Probe A: 1,2 cm langer weißlicher Gewebszylinder aus dem rechten lateralen Prostataseitenlappen peripher </b></p></div>"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
@@ -106,13 +144,32 @@ Profile: MII_PR_Patho_Microscopic_Grouper
 Parent: mii-pr-patho-section-grouper
 Id: mii-pr-patho-microscopic-grouper
 Title: "MII PR Patho Microscopic Grouper"
-Description: "Based on IHE PaLM APSR - Microscopic Observation Finding"
+Description: """
+Das Profil **MII PR Patho Microscopic Grouper** der Resource Observation stellt als `DiagnosticReport.result:microscopic-grouper` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt "Mikroskopische Beurteilung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).
+
+Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre "Eltern-Beobachtungen" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.
+
+Falls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.
+
+Auflistung und Erklärung der FHIR-Elemente siehe [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html).
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert Translation(^title, de-DE, MII PR Patho Microscopic Grouper)
 * insert Translation(^title, en-US, MII PR Patho Microscopic Grouper)
-* insert Translation(^description, de-DE, Basierend auf IHE PaLM APSR - Mikroskopischer Beobachtungsbefund)
-* insert Translation(^description, en-US, Based on IHE PaLM APSR - Microscopic Observation Finding)
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Microscopic Grouper** profile of the Observation resource represents, as `DiagnosticReport.result:microscopic-grouper` for a [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section "Microscopic Evaluation" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).
+
+This special grouper observation element is to be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their "parent observations" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.
+
+If the observation report section contains multiple submitted specimens, the MII PR Patho Findings are assigned to these different specimens via the specimen references of these MII PR Patho Findings, specifically the references concerning the "parts".
+
+For a listing and explanation of the FHIR elements, see [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html).
+"""
 
 // Inherited mustSupport elements from section grouper
 * insert Label(text, Text, Narrative Darstellung)
@@ -147,7 +204,7 @@ Description: "Grouper for all Microscopic Observations of Specimen A"
 Instance: mii-exa-patho-micro-grouper-a
 InstanceOf: mii-pr-patho-microscopic-grouper
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper|2027.0.0-ballot.rc"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Mikroskopische Beurteilung</h1><p><b>Probe A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders einnehmen</b></p></div>"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
@@ -166,13 +223,32 @@ Profile: MII_PR_Patho_Additional_Specified_Grouper
 Parent: mii-pr-patho-section-grouper
 Id: mii-pr-patho-additional-specified-grouper
 Title: "MII PR Patho Additional Specified Grouper"
-Description: "Based on IHE PaLM APSR - Grouper for additional specified Observations"
+Description: """
+Das Profil **MII PR Patho Additional Specified Grouper** der Resource [Observation](http://hl7.org/fhir/R4/observation.html) stellt als `DiagnosticReport.result` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt "Zusätzliche spezifizierte Beobachtungen" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) aus nicht-morphologischen Untersuchungen bzw. aus molekulargenetischen Untersuchungen.
+
+Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre "Eltern-Beobachtungen" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.
+
+Falls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.
+
+Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert Translation(^title, de-DE, MII PR Patho Additional Specified Grouper)
 * insert Translation(^title, en-US, MII PR Patho Additional Specified Grouper)
-* insert Translation(^description, de-DE, Basierend auf IHE PaLM APSR - Gruppierung für zusätzlich spezifizierte Beobachtungen)
-* insert Translation(^description, en-US, Based on IHE PaLM APSR - Grouper for additional specified Observations)
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Additional Specified Grouper** profile of the [Observation](http://hl7.org/fhir/R4/observation.html) resource represents, as `DiagnosticReport.result` for a [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section "Additional Specified Observations" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) from non-morphological examinations or from molecular genetic examinations.
+
+This special grouper observation element is to be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their "parent observations" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.
+
+If the observation report section contains multiple submitted specimens, the MII PR Patho Findings are assigned to these different specimens via the specimen references of these MII PR Patho Findings, specifically the references concerning the "parts".
+
+For a listing and explanation of the FHIR elements, see **(abstract) MII PR Patho Section Grouper**.
+"""
 
 // Inherited mustSupport elements from section grouper
 * insert Label(text, Text, Narrative Darstellung)
@@ -186,7 +262,7 @@ Description: "Based on IHE PaLM APSR - Grouper for additional specified Observat
 * insert Translation(hasMember[pathology-finding] ^definition, de-DE, Referenz zu Einzelbeobachtungen)
 * insert Translation(hasMember[pathology-finding] ^definition, en-US, Reference to pathology findings)
 
-* code = $LOINC#100969-5 
+* code = $LOINC#100969-5
 
 // Example(s) TODO
 
@@ -198,13 +274,32 @@ Profile: MII_PR_Patho_Diagnostic_Conclusion_Grouper
 Parent: mii-pr-patho-section-grouper	
 Id: mii-pr-patho-diagnostic-conclusion-grouper
 Title: "MII PR Patho Diagnostic Conclusion Grouper"
-Description: "Grouper profile to collect Diagnostic Conclusion information"
+Description: """
+Das Profil **MII PR Patho Diagnostic Conclusion Grouper** der Ressource Observation stellt als `DiagnosticReport.result:diagnostic-conclusion-grouper` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html) den jeweiligen Beobachtungsberichtsabschnitt "Diagnostische Schlussfolgerung" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).
+
+Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`-Referenzen zu [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) eingebunden werden. [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) Observations wiederum referenzieren ihre "Eltern-Beobachtungen" via `derivedFrom`-Referenzen zu SDC QuestionnaireResponses und/oder zu den jeweiligen Grouper Observations.
+
+Falls der Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, erfolgt die Zuordnung der MII PR Patho Befunde zu diesen verschiedenen Proben über die Probenreferenzen dieser MII PR Patho Befunde, und zwar hinsichtlich der Referenzen die „Parts“ betreffend.
+
+Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
+"""
 * insert PR_CS_VS_Version
 * insert Publisher
 * insert Translation(^title, de-DE, MII PR Patho Diagnostic Conclusion Grouper)
 * insert Translation(^title, en-US, MII PR Patho Diagnostic Conclusion Grouper)
-* insert Translation(^description, de-DE, Gruppierungsprofil zur Erfassung von Diagnoseschlussfolgerungen)
-* insert Translation(^description, en-US, Grouper profile to collect Diagnostic Conclusion information)
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en-US
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = """
+The **MII PR Patho Diagnostic Conclusion Grouper** profile of the Observation resource represents, as `DiagnosticReport.result:diagnostic-conclusion-grouper` for a [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.html), the respective observation report section "Diagnostic Conclusion" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html).
+
+This special grouper observation element is to be placed before all other observation elements, which are then included as `hasMember` references to [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html). [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.html) observations in turn reference their "parent observations" via `derivedFrom` references to SDC QuestionnaireResponses and/or to the respective grouper observations.
+
+If the observation report section contains multiple submitted specimens, the MII PR Patho Findings are assigned to these different specimens via the specimen references of these MII PR Patho Findings, specifically the references concerning the "parts".
+
+For a listing and explanation of the FHIR elements, see **(abstract) MII PR Patho Section Grouper**.
+"""
 
 // Inherited mustSupport elements from section grouper
 * insert Label(text, Text, Narrative Darstellung)
@@ -267,7 +362,7 @@ Description: "Example for a diagnostic conclusion"
 Instance: mii-exa-patho-diagnostic-conclusion-grouper
 InstanceOf: mii-pr-patho-diagnostic-conclusion-grouper
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2026.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot.rc"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Zusammenfassende Beurteilung</h1><p><b>Azinäres Adenokarzinom der Prostata im untersuchten Stanzzylinder, Gleason-Score 3+3=6, ISUP Gradgruppe 1</b></p></div>"
 * category[laboratory-category].coding = $cs-obs-category#laboratory

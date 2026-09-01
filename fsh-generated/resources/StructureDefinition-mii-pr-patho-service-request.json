@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-service-request",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request",
-  "version": "2026.0.0",
+  "version": "2027.0.0-ballot.rc",
   "name": "MII_PR_Patho_Service_Request",
   "title": "MII PR Patho Service Request",
   "_title": {
@@ -47,22 +47,9 @@
       ]
     }
   ],
-  "description": "Order for the analysis of a sample or a group of samples.",
+  "description": "Das Profil **MII PR Patho Service Request** der Ressource [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) stellt die Beschreibung des Auftrags des Klinikers an die Pathologieeinrichtung dar. Dieser ist in der Regel unspezifisch gehalten (“Histologie erbeten”, dies entspricht enem Auftrag zur konsiliarischen Begutachtung), kann aber durch spezielle Fragen untersetzt sein (z.B. “FISH für Her2”, entspricht einem Zielauftrag). Falls mehrere konkrete Untersuchungen beauftragt werden sollen, so muss pro Untersuchung ein **MII PR Patho Service Request** ausgelöst werden, die alle zusammen in der `ServiceRequest.requisition` (entspricht einer Placer Order Group) zusammengefasst werden.\n\nEin Untersuchungsauftrag ist immer an eine (oder mehrere) Probe(n) gebunden, zu denen detaillierte Beschreibungen des Einsenders vorliegen können. Ein Untersuchungsauftrag begründet in der Regel einen Fall (Einsendung, \"Accession\") der Pathologieeinrichtung. Wenn eine `ServiceRequest.requisition` vorliegt, bildet diese in der Regel den Fall (Einsendung, Accession). Durch die den Untersuchungsauftrag abarbeitende Pathologieeinrichtung kann eine Zusammenfassung oder Aufteilung von Untersuchungsanträgen entsprechend den laborinternen Erfordernissen zu einem Fall oder mehreren Fällen erfolgen.",
   "_description": {
     "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
-        "extension": [
-          {
-            "url": "lang",
-            "valueCode": "de-DE"
-          },
-          {
-            "url": "content",
-            "valueString": "Auftrag für die Analyse einer Probe oder einer Gruppe von Proben"
-          }
-        ]
-      },
       {
         "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
@@ -72,7 +59,7 @@
           },
           {
             "url": "content",
-            "valueString": "Order for the analysis of a sample or a group of samples"
+            "valueString": "The **MII PR Patho Service Request** profile of the [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) resource represents the description of the clinician's order to the pathology facility. This is usually kept unspecific (“Histology requested”, which corresponds to an order for a consultative assessment), but may be underpinned by specific questions (e.g. “FISH for Her2”, corresponding to a targeted order). If several concrete examinations are to be ordered, one **MII PR Patho Service Request** must be triggered per examination, all of which are grouped together in the `ServiceRequest.requisition` (corresponding to a Placer Order Group).\n\nAn examination request is always bound to one (or more) specimen(s), for which detailed descriptions from the submitter may be available. An examination request usually establishes a case (submission, \"Accession\") of the pathology facility. If a `ServiceRequest.requisition` is present, it usually forms the case (submission, Accession). The pathology facility processing the examination request may combine or split examination requests into one or more cases according to the laboratory's internal requirements."
           }
         ]
       }

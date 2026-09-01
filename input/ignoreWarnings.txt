@@ -1,0 +1,14 @@
+== Suppressed Messages ==
+
+# Add warning and/or information messages here after you've confirmed that they aren't really a problem
+# (And include comments like this justifying why)
+# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# Transitive Abhängigkeit über ISiK: das Subscriptions-Backport-Package ist gegen FHIR 4.0.0
+# gebaut, dieser IG gegen 4.0.1. Nicht aus diesem Repo heraus korrigierbar.
+This IG is for FHIR version 4.0.1, while the package 'hl7.fhir.uv.subscriptions-backport.r4#1.1.0' is for FHIR version 4.0.0
+
+# Geerbt aus dem MII-Biobank-Specimen-Profil (Specimen.processing:lagerprozess): dort ist die
+# Slice-Definition der Extension inkonsistent (min 0, Slices summieren sich auf min 1).
+# Upstream-Problem, nicht im Patho-Profil verursacht.
+The slice definition for Specimen.processing:lagerprozess.extension has a minimum of 0 but the slices add up to a minimum of 1

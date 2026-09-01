@@ -1,0 +1,125 @@
+{
+  "resourceType": "BodyStructure",
+  "id": "mii-exa-patho-left-breast-body-structure",
+  "active": true,
+  "patient": {
+    "reference": "Patient/mii-exa-patho-patient-34545"
+  },
+  "morphology": {
+    "coding": [
+      {
+        "code": "82711006",
+        "system": "http://snomed.info/sct",
+        "display": "Infiltrating duct carcinoma"
+      }
+    ],
+    "text": "Bioptisch gesichertes invasives Karzinom"
+  },
+  "location": {
+    "coding": [
+      {
+        "code": "110502005",
+        "system": "http://snomed.info/sct",
+        "display": "Lower outer quadrant of left breast"
+      }
+    ]
+  },
+  "locationQualifier": [
+    {
+      "coding": [
+        {
+          "code": "7771000",
+          "system": "http://snomed.info/sct",
+          "display": "Left (qualifier value)"
+        }
+      ]
+    }
+  ],
+  "description": "5 x 3 x 3 cm, eine Draht- und eine Fadenmarkierung",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure",
+      "extension": [
+        {
+          "url": "structure",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "110502005",
+                "system": "http://snomed.info/sct",
+                "display": "Lower outer quadrant of left breast"
+              }
+            ]
+          }
+        },
+        {
+          "url": "laterality",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "7771000",
+                "system": "http://snomed.info/sct",
+                "display": "Left (qualifier value)"
+              }
+            ]
+          }
+        },
+        {
+          "url": "bodyLandmarkOrientation",
+          "extension": [
+            {
+              "url": "landmarkDescription",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "24142002",
+                    "system": "http://snomed.info/sct",
+                    "display": "Nipple structure"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "clockFacePosition",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "260335000",
+                    "system": "http://snomed.info/sct",
+                    "display": "5 o'clock position"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "surfaceOrientation",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "46053002",
+                    "system": "http://snomed.info/sct",
+                    "display": "Distal"
+                  }
+                ]
+              }
+            },
+            {
+              "url": "distanceFromLandmark",
+              "extension": [
+                {
+                  "url": "value",
+                  "valueQuantity": {
+                    "value": 50,
+                    "code": "mm",
+                    "system": "http://unitsofmeasure.org",
+                    "unit": "mm"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

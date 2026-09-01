@@ -1,0 +1,23 @@
+{
+  "id": "Practitioner-mii-exa-patho-practitioner-34456",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "HumanName.family",
+          "context": "HumanName.family",
+          "source": "Urban",
+          "target": "Urban"
+        },
+        {
+          "id": "HumanName.given",
+          "context": "HumanName.given",
+          "source": "Ulrich",
+          "target": "Ulrich"
+        }
+      ]
+    }
+  ]
+}

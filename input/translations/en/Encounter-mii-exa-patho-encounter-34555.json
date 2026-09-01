@@ -1,0 +1,17 @@
+{
+  "id": "Encounter-mii-exa-patho-encounter-34555",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "ambulatory",
+          "target": "ambulatory"
+        }
+      ]
+    }
+  ]
+}

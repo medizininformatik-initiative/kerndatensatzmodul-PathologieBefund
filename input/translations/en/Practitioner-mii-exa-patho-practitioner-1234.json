@@ -1,0 +1,23 @@
+{
+  "id": "Practitioner-mii-exa-patho-practitioner-1234",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "HumanName.family",
+          "context": "HumanName.family",
+          "source": "Labor",
+          "target": "Labor"
+        },
+        {
+          "id": "HumanName.given",
+          "context": "HumanName.given",
+          "source": "Lena",
+          "target": "Lena"
+        }
+      ]
+    }
+  ]
+}

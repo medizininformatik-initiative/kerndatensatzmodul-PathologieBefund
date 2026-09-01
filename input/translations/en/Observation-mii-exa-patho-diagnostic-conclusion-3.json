@@ -1,0 +1,17 @@
+{
+  "id": "Observation-mii-exa-patho-diagnostic-conclusion-3",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "ISUP Grade (Grade Group) 1 (Gleason score <=6)",
+          "target": "ISUP Grade (Grade Group) 1 (Gleason score <=6)"
+        }
+      ]
+    }
+  ]
+}

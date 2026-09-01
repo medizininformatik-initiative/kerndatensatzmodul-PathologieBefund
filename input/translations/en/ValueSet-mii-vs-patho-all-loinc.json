@@ -1,0 +1,47 @@
+{
+  "id": "ValueSet-mii-vs-patho-all-loinc",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_All_LOINC",
+          "target": "MII_VS_Patho_All_LOINC"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho All [LOINC]",
+          "target": "MII VS Patho All [LOINC]"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "ValueSet for general LOINC VS binding",
+          "target": "ValueSet for general LOINC VS binding"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        }
+      ]
+    }
+  ]
+}

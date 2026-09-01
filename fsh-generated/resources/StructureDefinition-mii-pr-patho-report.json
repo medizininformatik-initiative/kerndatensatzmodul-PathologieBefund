@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-report",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report",
-  "version": "2026.0.0",
+  "version": "2027.0.0-ballot.rc",
   "name": "MII_PR_Patho_Report",
   "title": "MII PR Patho Report",
   "_title": {
@@ -47,22 +47,9 @@
       ]
     }
   ],
-  "description": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative",
+  "description": "Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). \n\nEs stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein. Ein vollständiges Beispiel eines Pathologiebefundberichts mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\n\nDie wichtigsten Besonderheiten des **MII PR Patho Report** sind: \n- die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden, \n- die Möglichkeit, Informationen zu mehreren Proben (hier die klinischerseits eingesandten Proben) zu einzubinden,\n- und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.  \n\nDas **MII PR Patho Report** bildet als Entry in der Section \"patho-diagnostic-report\" des Profils [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) den Kern eines persistenten Dokuments \"Pathologiebefundbericht\".\n\n---\n\nIn untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Patho Composition dupliziert werden.",
   "_description": {
     "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
-        "extension": [
-          {
-            "url": "lang",
-            "valueCode": "de-DE"
-          },
-          {
-            "url": "content",
-            "valueString": "Definiert die allgemeine Struktur des Pathologie-Berichts für deutsche Krankenhäuser mit den von der Medizininformatik-Initiative definierten Begriffen"
-          }
-        ]
-      },
       {
         "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
@@ -72,7 +59,7 @@
           },
           {
             "url": "content",
-            "valueString": "Defines the general pathology report structure for German hospitals with the defined terms by the Medical Informatics Initiative"
+            "valueString": "The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) resource represents the complete report without possessing document properties (see **MII-PR-Patho-Composition**).\n\nIt represents highly structured examination results including human-readable texts (narratives) that belong to \"panels\" of individual examinations. It collects and organizes PathologyFindings for even complex individual results and can reference further information on the examination panel, e.g. also clinical information and specimen information. A complete formatted report text should be part of the **MII PR Patho Report**. A complete example of a pathology report with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\n\nThe most important features of the **MII PR Patho Report** are:\n- the ability to incorporate additional clinical context, e.g. a mixture of results from individual observations, images, texts and formatted representations,\n- the ability to incorporate information on multiple specimens (here the specimens submitted by the clinical side),\n- and the ability to represent a summarizing assessment, the conclusion, as well as one or more conclusion.codes that are not identical to PathologyFindings.\n\nAs an entry in the \"patho-diagnostic-report\" section of the [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) profile, the **MII PR Patho Report** forms the core of a persistent document \"pathology report\".\n\n---\n\nIn the table below, elements are marked with * that are duplicated in the MII PR Patho Composition profile."
           }
         ]
       }
@@ -193,6 +180,84 @@
             "code": "Extension",
             "profile": [
               "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.extension:composition",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "composition",
+        "short": "Composition",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Composition"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Composition"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Verweis auf die zugehoerige Composition",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verweis auf die zugehoerige Composition"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Reference to the associated Composition"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition"
             ]
           }
         ],
@@ -597,8 +662,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this"
+              "type": "value",
+              "path": "system"
             }
           ],
           "rules": "open"
@@ -673,16 +738,17 @@
         },
         "min": 1,
         "max": "1",
-        "patternCoding": {
-          "code": "60568-3",
-          "system": "http://loinc.org"
-        },
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc"
+        }
       },
       {
         "id": "DiagnosticReport.code.coding:pathology-report.system",
         "path": "DiagnosticReport.code.coding.system",
         "min": 1,
+        "fixedUri": "http://loinc.org",
         "mustSupport": true
       },
       {

@@ -1,0 +1,12 @@
+{
+  "resourceType": "Practitioner",
+  "id": "mii-exa-patho-practitioner-765879",
+  "name": [
+    {
+      "family": "Färber",
+      "given": [
+        "Frank"
+      ]
+    }
+  ]
+}

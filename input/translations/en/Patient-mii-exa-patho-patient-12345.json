@@ -1,0 +1,23 @@
+{
+  "id": "Patient-mii-exa-patho-patient-12345",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "HumanName.family",
+          "context": "HumanName.family",
+          "source": "Mustermann",
+          "target": "Mustermann"
+        },
+        {
+          "id": "HumanName.given",
+          "context": "HumanName.given",
+          "source": "Max",
+          "target": "Max"
+        }
+      ]
+    }
+  ]
+}

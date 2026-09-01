@@ -1,0 +1,41 @@
+{
+  "id": "Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Structure of right lateral lobe of prostate (body structure)",
+          "target": "Structure of right lateral lobe of prostate (body structure)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Prostate tru-cut biopsy sample",
+          "target": "Prostate tru-cut biopsy sample"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Tru-cut biopsy of prostate (procedure)",
+          "target": "Tru-cut biopsy of prostate (procedure)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)",
+          "target": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Specimen vial (physical object)",
+          "target": "Specimen vial (physical object)"
+        }
+      ]
+    }
+  ]
+}

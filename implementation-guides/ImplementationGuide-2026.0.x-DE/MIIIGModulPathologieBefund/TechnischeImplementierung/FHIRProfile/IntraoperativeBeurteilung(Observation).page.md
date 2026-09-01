@@ -12,8 +12,6 @@ Das Profil **MII PR Patho Intraoperative Grouper** der Resource Observation stel
 
 Dieses spezielle Grouper-Observation-Element ist allen anderen Observation-Elementen voranzustellen, welche dann als `hasMember`- oder `derivedFrom`-Referenzen zu **MII PR Patho Finding** eingebunden werden.
 
-Falls dieser Beobachtungsberichtsabschnitt mehrere Eingangspräparate (Proben) beinhaltet, so sollte jeweils ein **MII PR Patho Intraoperative Grouper** pro Präparat vorhanden sein.
-
 Auflistung und Erklärung der FHIR-Elemente siehe **(abstract) MII PR Patho Section Grouper**.
 
 @```
@@ -178,14 +176,6 @@ Folgende Suchparameter sind für das Modul Pathologie-Befund relevant, auch in K
     ```GET [base]/Observation?subject=Patient/12345```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.subject``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "reference"](http://hl7.org/fhir/R4/search.html#reference).
-
-1. Der Suchparameter ```value-string``` MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/Observation?value-string:contains=Intraoperativ```
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach ```Observation.value``` finden sich in der [FHIR-Basisspezifikation - Abschnitt "string"](http://hl7.org/fhir/R4/search.html#string).
 
 1. Der Suchparameter ```body-site``` MUSS unterstützt werden:
 

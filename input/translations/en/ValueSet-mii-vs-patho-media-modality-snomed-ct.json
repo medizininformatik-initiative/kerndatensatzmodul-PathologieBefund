@@ -1,0 +1,107 @@
+{
+  "id": "ValueSet-mii-vs-patho-media-modality-snomed-ct",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_Media_Modality_SNOMED_CT",
+          "target": "MII_VS_Patho_Media_Modality_SNOMED_CT"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho Media Modality [SNOMED CT]",
+          "target": "MII VS Patho Media Modality [SNOMED CT]"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "ValueSet with some of the main Media.modalities needed in the pathological scope",
+          "target": "ValueSet with some of the main Media.modalities needed in the pathological scope"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Scanner (physical object)",
+          "target": "Scanner (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Scanner (physical object)",
+          "target": "Scanner (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Microscope camera (physical object)",
+          "target": "Microscope camera (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Microscope camera (physical object)",
+          "target": "Microscope camera (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Camera, device (physical object)",
+          "target": "Camera, device (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Camera, device (physical object)",
+          "target": "Camera, device (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Multi-purpose digital medical camera (physical object)",
+          "target": "Multi-purpose digital medical camera (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Multi-purpose digital medical camera (physical object)",
+          "target": "Multi-purpose digital medical camera (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "External camera (physical object)",
+          "target": "External camera (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "External camera (physical object)",
+          "target": "External camera (physical object)"
+        }
+      ]
+    }
+  ]
+}

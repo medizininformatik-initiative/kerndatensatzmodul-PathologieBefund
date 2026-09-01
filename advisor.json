@@ -1,10 +1,11 @@
-{ 
-  "suppress" : [
+{
+  "suppress": [
     "Terminology_TX_NoValid_16@ImplementationGuide.definition.parameter.code",
     "MSG_DRAFT@SearchParameter.extension[0].value.ofType(CodeableConcept)",
     "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
     "UNABLE_TO_INFER_CODESYSTEM@StructureDefinition.*",
     "Terminology_TX_NoValid_16@StructureDefinition.*",
-    ""
+    "Display_Name_for__should_be_one_of__instead_of@List.code.coding[0].display",
+    "Display_Name_for__should_be_one_of__instead_of@Observation.value.ofType(CodeableConcept).coding[0].display"
   ]
 }

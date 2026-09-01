@@ -3,7 +3,7 @@
   "id": "mii-exa-patho-report",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2026.0.0"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc"
     ]
   },
   "identifier": [
@@ -24,8 +24,8 @@
   "code": {
     "coding": [
       {
-        "code": "60568-3",
         "system": "http://loinc.org",
+        "code": "60568-3",
         "display": "Pathology synoptic report"
       }
     ]
@@ -37,11 +37,11 @@
   ],
   "status": "final",
   "subject": {
-    "reference": "Patient/12345"
+    "reference": "Patient/mii-exa-patho-patient-12345"
   },
   "performer": [
     {
-      "reference": "Practitioner/2346545"
+      "reference": "Practitioner/mii-exa-patho-practitioner-2346545"
     }
   ],
   "specimen": [
@@ -50,7 +50,7 @@
     }
   ],
   "encounter": {
-    "reference": "Encounter/12345"
+    "reference": "Encounter/mii-exa-patho-encounter-12345"
   },
   "result": [
     {

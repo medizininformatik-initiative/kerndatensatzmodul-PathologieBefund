@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-composition",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition",
-  "version": "2026.0.0",
+  "version": "2027.0.0-ballot.rc",
   "name": "MII_PR_Patho_Composition",
   "title": "MII PR Patho Composition",
   "_title": {
@@ -47,22 +47,9 @@
       ]
     }
   ],
-  "description": "Composition as a template for pathology report as a FHIR-Document",
+  "description": "Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5). \n\nDas Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. Ein vollständiges Beispiel einer Composition mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html). \nDieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”; Aufbau und Signatur des Bundles sind im Profil [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) beschrieben.\nNeben dem Diagnostischen Report (`patho-diagnostic-report`) und einem oder mehreren zusätzlichen kompletten Reports (`additional-diagnostic-report`) können die Beobachtungsberichtabschnitte optional auch direkt als eigene Sections der Composition geführt werden (Makroskopie, Mikroskopie, Intraoperativ, Diagnostische Schlussfolgerung, Zusätzliche Beobachtung); jede dieser Sections referenziert denselben Grouper wie `DiagnosticReport.result`. Composition und DiagnosticReport können zusätzlich über die Extension `composition-diagnosticReportReference` bzw. die R5-Cross-Version-Extension `DiagnosticReport.composition` wechselseitig aufeinander verweisen. Alle diese Ergänzungen sind optional.",
   "_description": {
     "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/translation",
-        "extension": [
-          {
-            "url": "lang",
-            "valueCode": "de-DE"
-          },
-          {
-            "url": "content",
-            "valueString": "Zusammenstellung als Vorlage für Pathologie-Berichte als FHIR-Dokument"
-          }
-        ]
-      },
       {
         "url": "http://hl7.org/fhir/StructureDefinition/translation",
         "extension": [
@@ -72,7 +59,7 @@
           },
           {
             "url": "content",
-            "valueString": "Composition as a template for pathology report as a FHIR-Document"
+            "valueString": "This profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) from the specification [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).\n\nAs a profile of a Composition resource with special constraints for ClinicalDocuments, the **MII PR Patho Composition** profile aggregates the resources for a complete, text-centered pathology report with the properties of a clinical document. A complete example of a Composition with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\nThis profile is the first entry in a Bundle of `Bundle.type` \"document\"; the structure and signature of the Bundle are described in the [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) profile.\nIn addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more additional complete reports (`additional-diagnostic-report`), the observation report sections may optionally be carried directly as separate sections of the Composition (macroscopy, microscopy, intraoperative, diagnostic conclusion, additional observation); each of these sections references the same grouper as `DiagnosticReport.result`. Composition and DiagnosticReport may additionally reference each other via the extension `composition-diagnosticReportReference` and the R5 cross-version extension `DiagnosticReport.composition` respectively. All of these additions are optional."
           }
         ]
       }
@@ -174,6 +161,84 @@
             "code": "Extension",
             "profile": [
               "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.extension:diagnosticReport",
+        "path": "Composition.extension",
+        "sliceName": "diagnosticReport",
+        "short": "Diagnostikbericht",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Diagnostikbericht"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Diagnostic report"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Verweis auf den zugehoerigen DiagnosticReport",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verweis auf den zugehoerigen DiagnosticReport"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Reference to the associated DiagnosticReport"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference"
             ]
           }
         ],
@@ -1035,7 +1100,7 @@
       {
         "id": "Composition.event",
         "path": "Composition.event",
-        "short": "Referenz auf Untersuchungsauftrag",
+        "short": "Ereignis",
         "_short": {
           "extension": [
             {
@@ -1066,7 +1131,7 @@
             }
           ]
         },
-        "definition": "Referenz auf den auslösenden Untersuchungsauftrag",
+        "definition": "Dokumentiertes Pathologie-Ereignis - die Begutachtung bzw. Befundung auf die sich der Befundbericht bezieht",
         "_definition": {
           "extension": [
             {
@@ -1078,7 +1143,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Referenz auf den auslösenden Untersuchungsauftrag"
+                  "valueString": "Dokumentiertes Pathologie-Ereignis - die Begutachtung bzw. Befundung auf die sich der Befundbericht bezieht"
                 }
               ]
             },
@@ -1091,7 +1156,7 @@
                 },
                 {
                   "url": "content",
-                  "valueString": "Documentation event"
+                  "valueString": "Documented pathology event - the reporting act the report refers to"
                 }
               ]
             }
@@ -1221,6 +1286,461 @@
             "code": "Reference",
             "targetProfile": [
               "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:makroskopie",
+        "path": "Composition.section",
+        "sliceName": "makroskopie",
+        "short": "Makroskopie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Makroskopie"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Macroscopy"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Abschnitt der makroskopischen Beurteilung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Abschnitt der makroskopischen Beurteilung"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Macroscopic assessment section"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:makroskopie.code.coding",
+        "path": "Composition.section.code.coding",
+        "patternCoding": {
+          "code": "22634-0",
+          "system": "http://loinc.org"
+        }
+      },
+      {
+        "id": "Composition.section:makroskopie.entry",
+        "path": "Composition.section.entry",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:mikroskopie",
+        "path": "Composition.section",
+        "sliceName": "mikroskopie",
+        "short": "Mikroskopie",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Mikroskopie"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Microscopy"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Abschnitt der mikroskopischen Beurteilung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Abschnitt der mikroskopischen Beurteilung"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Microscopic assessment section"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:mikroskopie.code.coding",
+        "path": "Composition.section.code.coding",
+        "patternCoding": {
+          "code": "22635-7",
+          "system": "http://loinc.org"
+        }
+      },
+      {
+        "id": "Composition.section:mikroskopie.entry",
+        "path": "Composition.section.entry",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:intraoperativ",
+        "path": "Composition.section",
+        "sliceName": "intraoperativ",
+        "short": "Intraoperative Beurteilung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Intraoperative Beurteilung"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Intraoperative assessment"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Abschnitt der intraoperativen Beurteilung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Abschnitt der intraoperativen Beurteilung"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Intraoperative assessment section"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:intraoperativ.code.coding",
+        "path": "Composition.section.code.coding",
+        "patternCoding": {
+          "code": "83321-0",
+          "system": "http://loinc.org"
+        }
+      },
+      {
+        "id": "Composition.section:intraoperativ.entry",
+        "path": "Composition.section.entry",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-intraoperative-grouper"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:diagnostische-schlussfolgerung",
+        "path": "Composition.section",
+        "sliceName": "diagnostische-schlussfolgerung",
+        "short": "Diagnostische Schlussfolgerung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Diagnostische Schlussfolgerung"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Diagnostic conclusion"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Abschnitt der diagnostischen Schlussfolgerung",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Abschnitt der diagnostischen Schlussfolgerung"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Diagnostic conclusion section"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:diagnostische-schlussfolgerung.code.coding",
+        "path": "Composition.section.code.coding",
+        "patternCoding": {
+          "code": "22637-3",
+          "system": "http://loinc.org"
+        }
+      },
+      {
+        "id": "Composition.section:diagnostische-schlussfolgerung.entry",
+        "path": "Composition.section.entry",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Composition.section:zusaetzliche-beobachtung",
+        "path": "Composition.section",
+        "sliceName": "zusaetzliche-beobachtung",
+        "short": "Zusaetzliche Beobachtung",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zusaetzliche Beobachtung"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Additional observation"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Abschnitt fuer zusaetzliche spezifizierte Beobachtungen",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Abschnitt fuer zusaetzliche spezifizierte Beobachtungen"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Section for additional specified observations"
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Composition.section:zusaetzliche-beobachtung.code.coding",
+        "path": "Composition.section.code.coding",
+        "patternCoding": {
+          "code": "100969-5",
+          "system": "http://loinc.org"
+        }
+      },
+      {
+        "id": "Composition.section:zusaetzliche-beobachtung.entry",
+        "path": "Composition.section.entry",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper"
             ]
           }
         ]

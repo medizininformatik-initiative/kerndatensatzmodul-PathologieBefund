@@ -10,9 +10,26 @@ Thumbs.db
 # /fsh-generated
 /input-cache
 /output
+/Unterlagen
 /temp
 /template
 validator_cli.jar
 _gencontinuous.*
 fsh-generated/resources/ImplementationGuide-mii-ig-modul-patho.json
 input/fsh/externe-referenzen
+# Worktrees liegen im Repo und wuerden sonst als eingebettetes Git-Repo
+# eingecheckt. Bewusst nur die Worktrees, nicht .claude/ komplett.
+.claude/worktrees/
+
+# Generierte Uebersetzungs-Exporte des IG Publishers (po/json/xliff).
+# Gepflegt wird ausschliesslich input/translations/<lang>/ - wie im Modul basis.
+/translations/
+# Indexer-Artefakte (u.a. im vendorten ig-template/), nie einchecken
+.index.db
+.index.json
+# Interne Arbeitsdokumente (Analysen, Migrations- und Publikationsplaene) -
+# nicht Teil der Spezifikation. ACHTUNG: falls spaeter die Recipes aus dem
+# MII-Modul-Geruest uebernommen werden, muss diese Regel praezisiert werden.
+/docs/
+# Vom IG Publisher bei jedem Build ins Repo-Wurzelverzeichnis geschrieben
+/Requirements-fromNarrative.json

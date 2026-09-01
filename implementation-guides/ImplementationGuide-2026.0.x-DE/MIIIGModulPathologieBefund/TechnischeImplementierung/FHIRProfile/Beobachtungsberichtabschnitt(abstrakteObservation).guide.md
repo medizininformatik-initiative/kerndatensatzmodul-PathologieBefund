@@ -18,7 +18,7 @@ Als “Panels” von Einzeluntersuchungen sind die Beobachtungsberichtabschnitte
 - **MII PR Patho Additional Specified Grouper** und 
 - **MII PR Patho Diagnostic Conclusion Grouper** in Form von `DiagnosticReport.result:<grouper-name>` mit Grouper-Funktion im **MII PR Patho Report** organisiert und sind damit den "Sections" in CDA äquivalent. Sie zeichnen sich dadurch aus, dass sie nur einen `Observation.code`, aber keinen `Observation.value` haben. Sie gruppieren die “Panel”-Beobachtungen mithilfe der `hasMember`- und/oder `derivedFrom`-Referenzen oder als `Observation.component`. 
 
-Der Text (Narrative) dieser "Sections" wird im `Observation.text`-Element dargestellt. Es besteht außerdem die Möglichkeit die FHIR Core Extensions [original Text](http://hl7.org/fhir/r4/extension-originaltext.html) oder [narrative Link](http://hl7.org/fhir/r4/extension-narrativelink.html) zu nutzen, um den "narrativen" mit dem strukturierten Part mittels HTML-Tags zu verbinden. Für weitere Informationen zur richtigen Anwendung beider Extensions siehe [hier](http://hl7.org/fhir/r4/narrative.html#linking).
+Der Text (Narrative) dieser "Sections" wird im `Observation.text`-Element dargestellt. Ein vollständiges Beispiel für die Nutzung von Narrativen in Grouper-Observations findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
 
 Diese Grouper haben die Observation.codes 
 - [83321-0](https://loinc.org/83321-0/) (Pathology report intraoperative observation in Specimen Document) 
