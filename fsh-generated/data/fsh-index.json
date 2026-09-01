@@ -21,7 +21,7 @@
     "fshType": "Instance",
     "fshFile": "capability-statement.fsh",
     "startLine": 1,
-    "endLine": 266
+    "endLine": 246
   },
   {
     "outputFile": "Composition-mii-exa-patho-composition.json",
@@ -56,28 +56,28 @@
     "endLine": 555
   },
   {
-    "outputFile": "Encounter-12345.json",
-    "fshName": "mii-exa-encounter-12345",
+    "outputFile": "Encounter-mii-exa-patho-encounter-12345.json",
+    "fshName": "mii-exa-patho-encounter-12345",
+    "fshType": "Instance",
+    "fshFile": "examples-external.fsh",
+    "startLine": 57,
+    "endLine": 62
+  },
+  {
+    "outputFile": "Encounter-mii-exa-patho-encounter-34555.json",
+    "fshName": "mii-exa-patho-encounter-34555",
     "fshType": "Instance",
     "fshFile": "examples-external.fsh",
     "startLine": 64,
-    "endLine": 70
+    "endLine": 69
   },
   {
-    "outputFile": "Encounter-34555.json",
-    "fshName": "mii-exa-encounter-34555",
+    "outputFile": "Encounter-mii-exa-patho-encounter-87687.json",
+    "fshName": "mii-exa-patho-encounter-87687",
     "fshType": "Instance",
     "fshFile": "examples-external.fsh",
-    "startLine": 72,
-    "endLine": 78
-  },
-  {
-    "outputFile": "Encounter-87687.json",
-    "fshName": "mii-exa-encounter-87687",
-    "fshType": "Instance",
-    "fshFile": "examples-external.fsh",
-    "startLine": 80,
-    "endLine": 86
+    "startLine": 71,
+    "endLine": 76
   },
   {
     "outputFile": "List-mii-exa-patho-active-problems-list.json",
@@ -192,76 +192,76 @@
     "endLine": 199
   },
   {
-    "outputFile": "Organization-12345.json",
-    "fshName": "mii-exa-organization-12345",
+    "outputFile": "Organization-mii-exa-patho-organization-12345.json",
+    "fshName": "mii-exa-patho-organization-12345",
     "fshType": "Instance",
     "fshFile": "examples-external.fsh",
-    "startLine": 89,
-    "endLine": 93
+    "startLine": 79,
+    "endLine": 82
   },
   {
-    "outputFile": "Organization-123456.json",
-    "fshName": "mii-exa-organization-123456",
+    "outputFile": "Organization-mii-exa-patho-organization-123456.json",
+    "fshName": "mii-exa-patho-organization-123456",
     "fshType": "Instance",
     "fshFile": "examples-external.fsh",
-    "startLine": 95,
-    "endLine": 99
+    "startLine": 84,
+    "endLine": 87
   },
   {
-    "outputFile": "Patient-12345.json",
-    "fshName": "mii-exa-patient-12345",
+    "outputFile": "Patient-mii-exa-patho-patient-12345.json",
+    "fshName": "mii-exa-patho-patient-12345",
     "fshType": "Instance",
     "fshFile": "examples-external.fsh",
     "startLine": 9,
-    "endLine": 16
+    "endLine": 15
   },
   {
-    "outputFile": "Patient-34545.json",
-    "fshName": "mii-exa-patient-34545",
+    "outputFile": "Patient-mii-exa-patho-patient-34545.json",
+    "fshName": "mii-exa-patho-patient-34545",
     "fshType": "Instance",
     "fshFile": "examples-external.fsh",
-    "startLine": 18,
-    "endLine": 25
+    "startLine": 17,
+    "endLine": 23
   },
   {
-    "outputFile": "Practitioner-1234.json",
-    "fshName": "mii-exa-practitioner-1234",
+    "outputFile": "Practitioner-mii-exa-patho-practitioner-1234.json",
+    "fshName": "mii-exa-patho-practitioner-1234",
     "fshType": "Instance",
     "fshFile": "examples-external.fsh",
-    "startLine": 56,
-    "endLine": 61
-  },
-  {
-    "outputFile": "Practitioner-21234.json",
-    "fshName": "mii-exa-practitioner-21234",
-    "fshType": "Instance",
-    "fshFile": "examples-external.fsh",
-    "startLine": 49,
+    "startLine": 50,
     "endLine": 54
   },
   {
-    "outputFile": "Practitioner-2346545.json",
-    "fshName": "mii-exa-practitioner-2346545",
+    "outputFile": "Practitioner-mii-exa-patho-practitioner-21234.json",
+    "fshName": "mii-exa-patho-practitioner-21234",
     "fshType": "Instance",
     "fshFile": "examples-external.fsh",
-    "startLine": 28,
-    "endLine": 33
+    "startLine": 44,
+    "endLine": 48
   },
   {
-    "outputFile": "Practitioner-34456.json",
-    "fshName": "mii-exa-practitioner-34456",
+    "outputFile": "Practitioner-mii-exa-patho-practitioner-2346545.json",
+    "fshName": "mii-exa-patho-practitioner-2346545",
     "fshType": "Instance",
     "fshFile": "examples-external.fsh",
-    "startLine": 42,
-    "endLine": 47
+    "startLine": 26,
+    "endLine": 30
   },
   {
-    "outputFile": "Practitioner-765879.json",
-    "fshName": "mii-exa-practitioner-765879",
+    "outputFile": "Practitioner-mii-exa-patho-practitioner-34456.json",
+    "fshName": "mii-exa-patho-practitioner-34456",
     "fshType": "Instance",
     "fshFile": "examples-external.fsh",
-    "startLine": 35,
-    "endLine": 40
+    "startLine": 38,
+    "endLine": 42
+  },
+  {
+    "outputFile": "Practitioner-mii-exa-patho-practitioner-765879.json",
+    "fshName": "mii-exa-patho-practitioner-765879",
+    "fshType": "Instance",
+    "fshFile": "examples-external.fsh",
+    "startLine": 32,
+    "endLine": 36
   },
   {
     "outputFile": "ServiceRequest-mii-exa-patho-request.json",

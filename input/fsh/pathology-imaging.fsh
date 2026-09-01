@@ -76,7 +76,7 @@ InstanceOf: mii-pr-patho-attached-image
 Usage: #example
 Title: "MII EXA Patho Attached Image"
 Description: "Example for Attached Image"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|2027.0.0-ballot.rc"
 * status = #completed
 * subject = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
 * content.url = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/image"

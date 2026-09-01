@@ -24,7 +24,7 @@ Es ist zu beachten, dass das Logical Model rein auf die Abbildung der Dateneleme
 | Befundbericht.Freigebender | Gesetzlich Verantwortlicher (Legal Authenticator) für den Befundbericht |
 | Befundbericht.ZugehörigesDokument | Ältere Version des Befundberichts |
 
-Für die Datensätze *Patient*, *Fall* und *Verwaltende Organisation* werden die MII-Module [Person](https://simplifier.net/mii-basismodul-person-2024), [Fall](https://simplifier.net/medizininformatikinitiative-modulfall) und [Strukturdaten](https://simplifier.net/medizininformatikinitiative-modulstrukturdaten) genutzt. Sie werden daher hier nicht weiter spezifiert. 
+Für die Datensätze *Patient*, *Fall* und *Verwaltende Organisation* werden die MII-Module [Person](https://medizininformatik-initiative.github.io/kerndatensatz-basis/de/StructureDefinition-mii-pr-person-patient.html), [Fall](https://medizininformatik-initiative.github.io/kerndatensatz-basis/de/StructureDefinition-mii-pr-fall-kontakt-gesundheitseinrichtung.html) und [Strukturdaten](https://simplifier.net/medizininformatikinitiative-modulstrukturdaten) genutzt. Sie werden daher hier nicht weiter spezifiert. 
 
 ------
 
@@ -43,7 +43,7 @@ Für die Datensätze *Patient*, *Fall* und *Verwaltende Organisation* werden die
 ------
 
 ### Probe
-Als Basis für die Spezifikation der *Probe* wird das MII-Profil [Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/profilespecimenbioprobecore), aus dem Modul [Biobank](https://simplifier.net/medizininformatikinitiative-modulbiobank) genutzt.
+Als Basis für die Spezifikation der *Probe* wird das MII-Profil [Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core), aus dem Modul [Biobank](https://simplifier.net/medizininformatikinitiative-modulbiobank) genutzt.
 
 | Logisches Datenmodell | Beschreibung |
 |--|--|

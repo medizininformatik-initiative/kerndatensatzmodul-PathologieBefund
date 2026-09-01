@@ -1,0 +1,13 @@
+{
+  "resourceType": "Encounter",
+  "id": "mii-exa-patho-encounter-12345",
+  "status": "finished",
+  "class": {
+    "code": "IMP",
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "display": "inpatient encounter"
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-patho-patient-12345"
+  }
+}

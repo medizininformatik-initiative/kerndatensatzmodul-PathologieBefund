@@ -1,0 +1,725 @@
+{
+  "id": "CapabilityStatement-mii-cps-patho-capability-statement",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "CapabilityStatement.name",
+          "context": "CapabilityStatement.name",
+          "source": "MII_CPS_Patho_Capability_Statement",
+          "target": "MII_CPS_Patho_Capability_Statement"
+        },
+        {
+          "id": "CapabilityStatement.title",
+          "context": "CapabilityStatement.title",
+          "source": "MII CPS Patho Capability Statement",
+          "target": "MII CPS Patho Capability Statement"
+        },
+        {
+          "id": "CapabilityStatement.publisher",
+          "context": "CapabilityStatement.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "CapabilityStatement.description",
+          "context": "CapabilityStatement.description",
+          "source": "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative",
+          "target": "The CapabilityStatement describes all mandatory interactions for a system to be conformant to the Pathology Module of the Medical Informatics Initiative"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Logical id of this artifact",
+          "target": "Logical id of this artifact"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "When the resource version last changed",
+          "target": "When the resource version last changed"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Profiles this resource claims to conform to",
+          "target": "Profiles this resource claims to conform to"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The unique identifier associated with the specimen",
+          "target": "The unique identifier associated with the specimen"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The accession number associated with the specimen",
+          "target": "The accession number associated with the specimen"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "available | unavailable | unsatisfactory | entered-in-error",
+          "target": "available | unavailable | unsatisfactory | entered-in-error"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The specimen type",
+          "target": "The specimen type"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The subject of the specimen",
+          "target": "The subject of the specimen"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The parent of the specimen",
+          "target": "The parent of the specimen"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The date the specimen was collected",
+          "target": "The date the specimen was collected"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Who collected the specimen",
+          "target": "Who collected the specimen"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The code for the body site from where the specimen originated",
+          "target": "The code for the body site from where the specimen originated"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The kind of specimen container",
+          "target": "The kind of specimen container"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The patient the specimen comes from",
+          "target": "The patient the specimen comes from"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Specimen.request",
+          "target": "SearchParameter for Specimen.request"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Specimen.collection.method",
+          "target": "SearchParameter for Specimen.collection.method"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Specimen.collection.bodySite",
+          "target": "SearchParameter for Specimen.collection.bodySite"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Specimen.processing.procedure",
+          "target": "SearchParameter for Specimen.processing.procedure"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Specimen.processing.additive",
+          "target": "SearchParameter for Specimen.processing.additive"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Specimen.processing.time",
+          "target": "SearchParameter for Specimen.processing.time"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Specimen.container.additive",
+          "target": "SearchParameter for Specimen.container.additive"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Reference to the service request",
+          "target": "Reference to the service request"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The classification of the type of observation",
+          "target": "The classification of the type of observation"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The code of the observation type",
+          "target": "The code of the observation type"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Code and coded value parameter pair",
+          "target": "Code and coded value parameter pair"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Code and date/time value parameter pair",
+          "target": "Code and date/time value parameter pair"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Code and quantity value parameter pair",
+          "target": "Code and quantity value parameter pair"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Code and string value parameter pair",
+          "target": "Code and string value parameter pair"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The code of the observation type or component type",
+          "target": "The code of the observation type or component type"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Code and coded value parameter pair, including in components",
+          "target": "Code and coded value parameter pair, including in components"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Code and quantity value parameter pair, including in components",
+          "target": "Code and quantity value parameter pair, including in components"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The reason why the expected value in the element Observation.value[x] or Observation.component.value[x] is missing",
+          "target": "The reason why the expected value in the element Observation.value[x] or Observation.component.value[x] is missing"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The value or component value of the observation, if the value is a CodeableConcept",
+          "target": "The value or component value of the observation, if the value is a CodeableConcept"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The value or component value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)",
+          "target": "The value or component value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The component code of the observation type",
+          "target": "The component code of the observation type"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Component code and component coded value parameter pair",
+          "target": "Component code and component coded value parameter pair"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Component code and component quantity value parameter pair",
+          "target": "Component code and component quantity value parameter pair"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The reason why the expected value in the element Observation.component.value[x] is missing",
+          "target": "The reason why the expected value in the element Observation.component.value[x] is missing"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The value of the component observation, if the value is a CodeableConcept",
+          "target": "The value of the component observation, if the value is a CodeableConcept"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The value of the component observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)",
+          "target": "The value of the component observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The reason why the expected value in the element Observation.value[x] is missing",
+          "target": "The reason why the expected value in the element Observation.value[x] is missing"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Obtained datetime. If the obtained element is a period, a date that falls in the period",
+          "target": "Obtained datetime. If the obtained element is a period, a date that falls in the period"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Related measurements the observation is made from",
+          "target": "Related measurements the observation is made from"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Encounter related to the observation",
+          "target": "Encounter related to the observation"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Related resource that belongs to the Observation group",
+          "target": "Related resource that belongs to the Observation group"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The unique id for a particular observation",
+          "target": "The unique id for a particular observation"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The method used for the observation",
+          "target": "The method used for the observation"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The subject that the observation is about (if patient)",
+          "target": "The subject that the observation is about (if patient)"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Who performed the observation",
+          "target": "Who performed the observation"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Specimen used for this observation",
+          "target": "Specimen used for this observation"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The status of the observation",
+          "target": "The status of the observation"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The subject that the observation is about",
+          "target": "The subject that the observation is about"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The value of the observation, if the value is a CodeableConcept",
+          "target": "The value of the observation, if the value is a CodeableConcept"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The value of the observation, if the value is a date or period of time",
+          "target": "The value of the observation, if the value is a date or period of time"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)",
+          "target": "The value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The value of the observation, if the value is a string, and also searches in CodeableConcept.text",
+          "target": "The value of the observation, if the value is a string, and also searches in CodeableConcept.text"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Observation.bodySite",
+          "target": "SearchParameter for Observation.bodySite"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Observation.valueRatio",
+          "target": "SearchParameter for Observation.valueRatio"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Observation.valueRatio.numerator",
+          "target": "SearchParameter for Observation.valueRatio.numerator"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Observation.valueRatio.denominator",
+          "target": "SearchParameter for Observation.valueRatio.denominator"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Date request signed",
+          "target": "Date request signed"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Classification of service",
+          "target": "Classification of service"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "What is being requested/ordered",
+          "target": "What is being requested/ordered"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "An encounter in which this request is made",
+          "target": "An encounter in which this request is made"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Identifiers assigned to this order",
+          "target": "Identifiers assigned to this order"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
+          "target": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Search by subject - a patient",
+          "target": "Search by subject - a patient"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Requested performer",
+          "target": "Requested performer"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Who/what is requesting service",
+          "target": "Who/what is requesting service"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Composite Request ID",
+          "target": "Composite Request ID"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Specimen to be tested",
+          "target": "Specimen to be tested"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+          "target": "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Search by subject",
+          "target": "Search by subject"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for ServiceRequest.reasonCode",
+          "target": "SearchParameter for ServiceRequest.reasonCode"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for ServiceRequest.supportingInfo",
+          "target": "SearchParameter for ServiceRequest.supportingInfo"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Which diagnostic discipline/department created the report",
+          "target": "Which diagnostic discipline/department created the report"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result",
+          "target": "The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "A coded conclusion (interpretation/impression) on the report",
+          "target": "A coded conclusion (interpretation/impression) on the report"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The clinically relevant time of the report",
+          "target": "The clinically relevant time of the report"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The Encounter when the order was made",
+          "target": "The Encounter when the order was made"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "An identifier for the report",
+          "target": "An identifier for the report"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "When the report was issued",
+          "target": "When the report was issued"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "A reference to the image source",
+          "target": "A reference to the image source"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The subject of the report if a patient",
+          "target": "The subject of the report if a patient"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Who is responsible for the report",
+          "target": "Who is responsible for the report"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Link to an atomic result (observation resource)",
+          "target": "Link to an atomic result (observation resource)"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The specimen details",
+          "target": "The specimen details"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The status of the report",
+          "target": "The status of the report"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The subject of the report",
+          "target": "The subject of the report"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for DiagnosticReport.imagingStudy",
+          "target": "SearchParameter for DiagnosticReport.imagingStudy"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Who attested the composition",
+          "target": "Who attested the composition"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Who and/or what authored the composition",
+          "target": "Who and/or what authored the composition"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Categorization of Composition",
+          "target": "Categorization of Composition"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Code(s) that apply to the event being documented",
+          "target": "Code(s) that apply to the event being documented"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Composition editing time",
+          "target": "Composition editing time"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Context of the Composition",
+          "target": "Context of the Composition"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "A reference to data that supports this section",
+          "target": "A reference to data that supports this section"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Version-independent identifier for the Composition",
+          "target": "Version-independent identifier for the Composition"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Who and/or what the composition is about",
+          "target": "Who and/or what the composition is about"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "The period covered by the documentation",
+          "target": "The period covered by the documentation"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Target of the relationship",
+          "target": "Target of the relationship"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Classification of section (recommended)",
+          "target": "Classification of section (recommended)"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "preliminary | final | amended | entered-in-error",
+          "target": "preliminary | final | amended | entered-in-error"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Human Readable name/title",
+          "target": "Human Readable name/title"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Kind of composition (LOINC if possible)",
+          "target": "Kind of composition (LOINC if possible)"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Composition.attester.mode",
+          "target": "SearchParameter for Composition.attester.mode"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Composition.custodian",
+          "target": "SearchParameter for Composition.custodian"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Composition.relatesTo.code",
+          "target": "SearchParameter for Composition.relatesTo.code"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "When Media was collected",
+          "target": "When Media was collected"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
+          "target": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Who/What this Media is a record of",
+          "target": "Who/What this Media is a record of"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "Classification of media as image, video, or audio",
+          "target": "Classification of media as image, video, or audio"
+        },
+        {
+          "id": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "context": "CapabilityStatement.rest.resource.searchParam.documentation",
+          "source": "SearchParameter for Media.partOf",
+          "target": "SearchParameter for Media.partOf"
+        }
+      ]
+    }
+  ]
+}

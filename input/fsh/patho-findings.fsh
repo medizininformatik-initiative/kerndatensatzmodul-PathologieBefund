@@ -182,7 +182,7 @@ Description: "Tissue length of Specimen B (2nd punch)"
 Instance: mii-exa-patho-tissue-length-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 
 * status = #final
@@ -201,7 +201,7 @@ Usage: #example
 Instance: mii-exa-patho-biopsy-site-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 
 * status = #final
@@ -246,7 +246,7 @@ Description: "[Microscopic Finding] Gleason pattern.primary in prostate tumor fo
 Instance: mii-exa-patho-p63-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
@@ -260,7 +260,7 @@ Usage: #example
 Instance: mii-exa-patho-gleason-pattern-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
@@ -276,7 +276,7 @@ Usage: #example
 Instance: mii-exa-patho-histologic-type-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
@@ -327,7 +327,7 @@ Description: "Example for diagnostic conclusion"
 Instance: mii-exa-patho-diagnostic-conclusion-1
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
@@ -341,7 +341,7 @@ Usage: #example
 Instance: mii-exa-patho-diagnostic-conclusion-2
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
@@ -353,7 +353,7 @@ Usage: #example
 Instance: mii-exa-patho-diagnostic-conclusion-3
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final

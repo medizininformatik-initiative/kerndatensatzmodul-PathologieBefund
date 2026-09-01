@@ -1,0 +1,167 @@
+{
+  "id": "ValueSet-mii-vs-patho-container-type-snomed-ct",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_Container_Type_SNOMED_CT",
+          "target": "MII_VS_Patho_Container_Type_SNOMED_CT"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho Container Type [SNOMED CT]",
+          "target": "MII VS Patho Container Type [SNOMED CT]"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet",
+          "target": "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Specimen vial (physical object)",
+          "target": "Specimen vial (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Specimen vial (physical object)",
+          "target": "Specimen vial (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Tissue cassette (physical object)",
+          "target": "Tissue cassette (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Tissue cassette (physical object)",
+          "target": "Tissue cassette (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Tissue cassette for microarray (physical object)",
+          "target": "Tissue cassette for microarray (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Tissue cassette for microarray (physical object)",
+          "target": "Tissue cassette for microarray (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Microscope slide (physical object)",
+          "target": "Microscope slide (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Microscope slide (physical object)",
+          "target": "Microscope slide (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Specimen container component (physical object)",
+          "target": "Specimen container component (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Specimen container component (physical object)",
+          "target": "Specimen container component (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Electron microscopy grid (physical object)",
+          "target": "Electron microscopy grid (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Electron microscopy grid (physical object)",
+          "target": "Electron microscopy grid (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Specimen well (physical object)",
+          "target": "Specimen well (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Specimen well (physical object)",
+          "target": "Specimen well (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Microscope slide coverslip (physical object)",
+          "target": "Microscope slide coverslip (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Microscope slide coverslip (physical object)",
+          "target": "Microscope slide coverslip (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Specimen container lid (physical object)",
+          "target": "Specimen container lid (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Specimen container lid (physical object)",
+          "target": "Specimen container lid (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "General specimen container (physical object)",
+          "target": "General specimen container (physical object)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "General specimen container (physical object)",
+          "target": "General specimen container (physical object)"
+        }
+      ]
+    }
+  ]
+}

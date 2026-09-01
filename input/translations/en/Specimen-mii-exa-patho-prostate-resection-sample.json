@@ -1,0 +1,41 @@
+{
+  "id": "Specimen-mii-exa-patho-prostate-resection-sample",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Specimen from prostate obtained by radical prostatectomy (specimen)",
+          "target": "Specimen from prostate obtained by radical prostatectomy (specimen)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Radical prostatectomy (procedure)",
+          "target": "Radical prostatectomy (procedure)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Prostate",
+          "target": "Prostate"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Specimen vial (physical object)",
+          "target": "Specimen vial (physical object)"
+        },
+        {
+          "id": "Annotation.text",
+          "context": "Annotation.text",
+          "source": "Radikalprostatektomie-Praeparat, Tumorregion rechte apikale periphere Zone (posterior) markiert. In Formalin fixiert.",
+          "target": "Radical prostatectomy specimen, tumor region right apical peripheral zone (posterior) marked. Fixed in formalin."
+        }
+      ]
+    }
+  ]
+}

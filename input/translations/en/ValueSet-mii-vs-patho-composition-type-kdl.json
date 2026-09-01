@@ -1,0 +1,83 @@
+{
+  "id": "ValueSet-mii-vs-patho-composition-type-kdl",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_Composition_Type_KDL",
+          "target": "MII_VS_Patho_Composition_Type_KDL"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho Composition Type KDL",
+          "target": "MII VS Patho Composition Type KDL"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "ValueSet for the categorization of Pathology Report documents",
+          "target": "ValueSet for the categorization of Pathology Report documents"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Histologiebefund",
+          "target": "Histology report"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Histology report",
+          "target": "Histology report"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Molekularpathologiebefund",
+          "target": "Molecular pathology report"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Molecular pathology report",
+          "target": "Molecular pathology report"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Zytologiebefund",
+          "target": "Cytology report"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Cytology report",
+          "target": "Cytology report"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Tissue section (specimen)",
+          "target": "Tissue section (specimen)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)",
+          "target": "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)",
+          "target": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+        },
+        {
+          "id": "Quantity.unit",
+          "context": "Quantity.unit",
+          "source": "°C",
+          "target": "°C"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Hematoxylin and eosin stain method (procedure)",
+          "target": "Hematoxylin and eosin stain method (procedure)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Microscope slide (physical object)",
+          "target": "Microscope slide (physical object)"
+        }
+      ]
+    }
+  ]
+}

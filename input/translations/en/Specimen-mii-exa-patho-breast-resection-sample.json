@@ -1,0 +1,59 @@
+{
+  "id": "Specimen-mii-exa-patho-breast-resection-sample",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Part of left breast",
+          "target": "Part of left breast"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Anterior surgical margin",
+          "target": "Anterior surgical margin"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Distal surgical margin",
+          "target": "Distal surgical margin"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Specimen from breast obtained by excision",
+          "target": "Specimen from breast obtained by excision"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Wide local excision of breast lesion",
+          "target": "Wide local excision of breast lesion"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Structure of lower outer quadrant of breast",
+          "target": "Structure of lower outer quadrant of breast"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Specimen vial (physical object)",
+          "target": "Specimen vial (physical object)"
+        },
+        {
+          "id": "Annotation.text",
+          "context": "Annotation.text",
+          "source": "BET-Exzisionspraeparat Mamma links, unterer aeusserer Quadrant, 5 Uhr, 50 mm von der Mamille. Drahthaekchen und zwei Fadenmarkierungen.",
+          "target": "Breast-conserving excision specimen, left breast, lower outer quadrant, 5 o'clock, 50 mm from the nipple. Wire hook and two suture markings."
+        }
+      ]
+    }
+  ]
+}

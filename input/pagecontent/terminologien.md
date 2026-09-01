@@ -21,9 +21,9 @@ Die zahlreichen Möglichkeiten, Beobachtungen mit Code-Value-Paaren zu beschreib
 - `Observation.valueCodebleConcept`: 
 - `Observation.dataAbsentReason`: not-applicable
 
-Für die erstgenannte Möglichkeit stehen alle [LOINC](https://www.loinc.org/)-Terme der Typen "Lab" und "Clinical" zur Verfügung. Falls kein passender LOINC-Code zur Verfügung steht, wird ein [SNOMED-CT](http://www.snomed.org/)-Code verwendet, der aus der Hierarchie-Achse |363787002 (Observable entity)| oder |386053000 (Evaluation procedure)| stammt. Die Observation.values sind vorzugsweise SNOMED-CT-Codes oder zugehörige LOINC-Answer-Codes.
+Für die erstgenannte Möglichkeit stehen alle [LOINC](https://www.loinc.org/)-Terme der Typen "Lab" und "Clinical" zur Verfügung. Falls kein passender LOINC-Code zur Verfügung steht, wird ein [SNOMED-CT](http://www.snomed.org/)-Code verwendet, der aus der Hierarchie-Achse `363787002` (Observable entity) oder `386053000` (Evaluation procedure) stammt. Die Observation.values sind vorzugsweise SNOMED-CT-Codes oder zugehörige LOINC-Answer-Codes.
 
-Für die zweitgenannte Möglichkeit ist der Observation.code vorzugsweise ein SNOMED-CT-Code aus den Hierarchie-Achsen |404684003 (Clinical finding)|, |413350009 (Finding with explicit context)| oder |272379006 (Event)|. Der Observation.value wird repräsentiert vorzugsweise durch die SNOMED-CT-Achse |362981000 (Qualifier value)|. Postkoordinierte SNOMED-CT Expressions sollten vermieden werden.
+Für die zweitgenannte Möglichkeit ist der Observation.code vorzugsweise ein SNOMED-CT-Code aus den Hierarchie-Achsen `404684003` (Clinical finding), `413350009` (Finding with explicit context) oder `272379006` (Event). Der Observation.value wird repräsentiert vorzugsweise durch die SNOMED-CT-Achse `362981000` (Qualifier value). Postkoordinierte SNOMED-CT Expressions sollten vermieden werden.
 
 Für die drittgenannte Möglichkeit sollte vorzugsweise ein SNOMED-CT-Code aus den o.g. Hierarchie-Achsen verwendet werden. Ein Observation.dataAbsentReason.value des fehlenden Observation.value sollte benutzt werden, um anzuzeigen, warum dieser Wert fehlt. 
 
@@ -56,65 +56,6 @@ Zusätzlich zu o.g. und weiteren internationalen Terminologien (ICD-O-3 und UICC
 
 Außerdem werden mehrere Datenelemente in den FHIR Resourcen durch HL7 V2.x -Kodes kodiert. 
 
+Die folgende Tabelle wird automatisch aus dem FHIR-Package erzeugt und listet je ValueSet eine Zeile mit den Profilen und Elementen, die es binden:
 
-| Profile | Value-Sets | Binding-Strength |
-|--|--|--|
-| MII PR Patho Specimen | MII_VS_Patho_Container_Type_SNOMED | [Required](http://hl7.org/fhir/r4/terminologies.html#required) |
-| MII PR Patho Service Request | MII_VS_Patho_Service_Request_SNOMED_CT | [Preferred](http://hl7.org/fhir/r4/terminologies.html#preferred) |
-| MII PR Patho Active Problems | MII_VS_Patho_Problem_List_SNOMED_CT | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) |
-| MII PR Patho Finding | MII_VS_Patho_Section_Types_LOINC | [Required](http://hl7.org/fhir/r4/terminologies.html#required) |
-| MII PR Patho Report | MII_VS_Patho_Report_Category_HL7 | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) | 
-| MII PR Patho Specimen | MII_VS_Patho_Processing_Procedure_SNOMED_CT | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) | 
-| MII PR Patho Specimen | MII_VS_Patho_Collection_Method_SNOMED_CT | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) | 
-| MII PR Patho Attached Image | MII_VS_Patho_Media_Modality_SNOMED_CT | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) | 
-| MII PR Patho Composition | MII_VS_Patho_Composition_Type_SNOMED_CT | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) | 
-| MII PR Patho Composition | MII_VS_Patho_Composition_Type_KDL | [Extensible](http://hl7.org/fhir/r4/terminologies.html#extensible) | 
-| MII PR Patho Composition | MII_VS_Patho_All_LOINC | [Required](http://hl7.org/fhir/r4/terminologies.html#required) | 
-| MII PR Patho Base Observation | MII_VS_Patho_All_LOINC | [Preferred](http://hl7.org/fhir/r4/terminologies.html#preferred) |
-
----
-**MII_VS_Patho_Collection_Method_SNOMED_CT:**
-[mii-vs-patho-collection-method-snomed-ct](ValueSet-mii-vs-patho-collection-method-snomed-ct.html)
-
----
-**MII_VS_Patho_Container_Type_SNOMED:**
-[mii-vs-patho-container-type-snomed-ct](ValueSet-mii-vs-patho-container-type-snomed-ct.html)
-
----
-**MII_VS_Patho_Service_Request_SNOMED_CT:**
-[mii-vs-patho-service-request-code](ValueSet-mii-vs-patho-service-request-code.html)
-
----
-**MII_VS_Patho_Problem_List_SNOMED_CT:**
-[mii-vs-patho-problem-list-snomed-ct](ValueSet-mii-vs-patho-problem-list-snomed-ct.html)
-
----
-**MII_VS_Patho_Section_Types_LOINC:**
-[mii-vs-patho-section-types-loinc](ValueSet-mii-vs-patho-section-types-loinc.html)
-
----
-**MII_VS_Patho_Report_Category_HL7:**
-[mii-vs-patho-report-category-hl7](ValueSet-mii-vs-patho-report-category-hl7.html)
-
----
-**MII_VS_Patho_Processing_Procedure_SNOMED_CT:**
-[mii-vs-patho-processing-procedure-snomed-ct](ValueSet-mii-vs-patho-processing-procedure-snomed-ct.html)
-
----
-
-**MII_VS_Patho_Media_Modality_SNOMED_CT:**
-[mii-vs-patho-media-modality-snomed-ct](ValueSet-mii-vs-patho-media-modality-snomed-ct.html)
-
----
-**MII_VS_Patho_Composition_Type_SNOMED_CT:**
-[mii-vs-patho-composition-type-snomed-ct](ValueSet-mii-vs-patho-composition-type-snomed-ct.html)
-
----
-**MII_VS_Patho_Composition_Type_KDL:**
-[mii-vs-patho-composition-type-kdl](ValueSet-mii-vs-patho-composition-type-kdl.html)
-
----
-**MII_VS_Patho_All_LOINC:**
-[mii-vs-patho-all-loinc](ValueSet-mii-vs-patho-all-loinc.html)
-
----
+{% sql {"query" : "WITH bindings AS (SELECT r.Title as ProfileTitle, json_extract(e.value, '$.path') as Path, json_extract(e.value, '$.binding.strength') as Strength, CASE WHEN instr(json_extract(e.value, '$.binding.valueSet'), '|') > 0 THEN substr(json_extract(e.value, '$.binding.valueSet'), 1, instr(json_extract(e.value, '$.binding.valueSet'), '|') - 1) ELSE json_extract(e.value, '$.binding.valueSet') END as VsUrl FROM Resources r, json_each(json_extract(r.Json, '$.differential.element')) e WHERE r.Type = 'StructureDefinition' AND r.derivation = 'constraint' AND r.kind IN ('resource', 'complex-type') AND json_extract(e.value, '$.binding.valueSet') IS NOT NULL) SELECT vs.Title as Title, vs.Web as Web, vs.Url as URL, vs.Description as Description, COALESCE(GROUP_CONCAT(DISTINCT b.ProfileTitle || ': ' || b.Path || ' (' || b.Strength || ')'), '-') as Usage FROM Resources vs LEFT JOIN bindings b ON b.VsUrl = vs.Url WHERE vs.Type = 'ValueSet' AND vs.Url LIKE 'https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/%' GROUP BY vs.Key ORDER BY vs.Title", "class" : "grid", "columns" : [{"title" : "Title", "type" : "link", "source" : "Title", "target" : "Web"}, {"title" : "URL", "type" : "text", "source" : "URL"}, {"title" : "Description", "type" : "text", "source" : "Description"}, {"title" : "Usage (Profil: Element, Stärke)", "type" : "text", "source" : "Usage"}]} %}

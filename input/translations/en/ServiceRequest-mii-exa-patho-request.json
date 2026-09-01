@@ -1,0 +1,17 @@
+{
+  "id": "ServiceRequest-mii-exa-patho-request",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Pathology consultation, comprehensive, records and specimen with report (procedure)",
+          "target": "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+        }
+      ]
+    }
+  ]
+}

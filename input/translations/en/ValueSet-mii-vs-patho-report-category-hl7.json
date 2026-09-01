@@ -1,0 +1,77 @@
+{
+  "id": "ValueSet-mii-vs-patho-report-category-hl7",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_Report_Category_HL7",
+          "target": "MII_VS_Patho_Report_Category_HL7"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho Report Category HL7",
+          "target": "MII VS Patho Report Category HL7"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "ValueSet for the categorization of Pathology Report documents",
+          "target": "ValueSet for the categorization of Pathology Report documents"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ValueSet.compose.include.version",
+          "context": "ValueSet.compose.include.version",
+          "source": "3.0.0",
+          "target": "3.0.0"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Cytopathology",
+          "target": "Cytopathology"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Cytopathology",
+          "target": "Cytopathology"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Surgical Pathology",
+          "target": "Surgical Pathology"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Surgical Pathology",
+          "target": "Surgical Pathology"
+        }
+      ]
+    }
+  ]
+}

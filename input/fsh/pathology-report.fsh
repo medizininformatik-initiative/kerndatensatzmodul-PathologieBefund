@@ -513,10 +513,10 @@ Description: "Example for MII_PR_Patho_Report"
 * basedOn = Reference(mii-exa-patho-request)
 * status = #final
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology Synoptic report"
-* subject = Reference(Patient/12345)
-* performer = Reference(Practitioner/2346545)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
+* performer = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * specimen = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
-* encounter = Reference(Encounter/12345)
+* encounter = Reference(Encounter/mii-exa-patho-encounter-12345)
 * result[macroscopic-observations] = Reference(mii-exa-patho-macro-grouper-a)
 * result[macroscopic-observations] = Reference(mii-exa-patho-macro-grouper-b)
 * result[microscopic-observations] = Reference(mii-exa-patho-micro-grouper-a)
@@ -532,7 +532,7 @@ Description: "Example for MII_PR_Patho_Report"
 Instance: mii-exa-patho-report
 InstanceOf: mii-pr-patho-report
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc"
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].value = "E21.12345"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
@@ -541,10 +541,10 @@ Usage: #example
 * code.coding[pathology-report] = $LOINC#60568-3 "Pathology synoptic report"
 * basedOn = Reference(ServiceRequest/mii-exa-patho-request)
 * status = #final
-* subject = Reference(Patient/12345)
-* performer = Reference(Practitioner/2346545)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
+* performer = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
-* encounter = Reference(Encounter/12345)
+* encounter = Reference(Encounter/mii-exa-patho-encounter-12345)
 * result[macroscopic-observations] = Reference(Observation/mii-exa-patho-macro-grouper-a)
 * result[microscopic-observations] = Reference(Observation/mii-exa-patho-micro-grouper-a)
 * result[diagnostic-conclusion] = Reference(Observation/mii-exa-patho-diagnostic-conclusion-grouper)
@@ -580,7 +580,7 @@ Description: "Example for an MII_PR_Patho_Composition"
     </tr>
     <tr id=\"befund-patient\">
       <td>Patient</td>
-      <td>Patient/12345</td>
+      <td>Patient/mii-exa-patho-patient-12345</td>
     </tr>
     <tr id=\"befund-effective\">
       <td>Effective</td>
@@ -592,7 +592,7 @@ Description: "Example for an MII_PR_Patho_Composition"
     </tr>
     <tr id=\"befund-performer\">
       <td>Performer</td>
-      <td>Practitioner/2346545</td>
+      <td>Practitioner/mii-exa-patho-practitioner-2346545</td>
     </tr>
   </table>
 </div>"
@@ -605,15 +605,15 @@ Description: "Example for an MII_PR_Patho_Composition"
 * identifier.extension.valueUrl = "#befund-eingangsnummer"
 * type = $LOINC#11526-1 "Pathology study"
 * type.text = "Pathologie-Befundbericht"
-* subject = Reference(Patient/34545)
-* encounter = Reference(Encounter/34555)
+* subject = Reference(Patient/mii-exa-patho-patient-34545)
+* encounter = Reference(Encounter/mii-exa-patho-encounter-34555)
 * date = "2021-06-08"
-* author[+] = Reference(Practitioner/2346545)
+* author[+] = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * author[=].display = "Dr. Name"
 * title = "Pathologie Befundbericht"
-* custodian = Reference(Organization/12345)
+* custodian = Reference(Organization/mii-exa-patho-organization-12345)
 * attester[legal].mode = #legal
-* attester[legal].party = Reference(Practitioner/765879)
+* attester[legal].party = Reference(Practitioner/mii-exa-patho-practitioner-765879)
 * event.period.start = "2021-06-05"
 * event.period.end = "2021-06-08"
 * section[patho-diagnostic-report]
@@ -640,7 +640,7 @@ Description: "Example for an MII_PR_Patho_Composition"
 Instance: mii-exa-patho-composition
 InstanceOf: mii-pr-patho-composition
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot.rc"
 * text.div = "
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
   <div id=\"befund-titel\">
@@ -661,7 +661,7 @@ Usage: #example
     </tr>
     <tr id=\"befund-patient\">
       <td>Patient</td>
-      <td>Patient/12345</td>
+      <td>Patient/mii-exa-patho-patient-12345</td>
     </tr>
     <tr id=\"befund-effective\">
       <td>Effective</td>
@@ -673,7 +673,7 @@ Usage: #example
     </tr>
     <tr id=\"befund-performer\">
       <td>Performer</td>
-      <td>Practitioner/2346545</td>
+      <td>Practitioner/mii-exa-patho-practitioner-2346545</td>
     </tr>
   </table>
 </div>"
@@ -682,7 +682,7 @@ Usage: #example
 * type.coding[XDS].code = #PATH
 * type.coding[sct] = $SCT#371528001 "Pathology report (record artifact)"
 * attester[legal].mode = #legal
-* attester[legal].party = Reference(Practitioner/765879)
+* attester[legal].party = Reference(Practitioner/mii-exa-patho-practitioner-765879)
 * section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"
 * section[patho-diagnostic-report].title = "Pathology Diagnostic Report"
 * section[patho-diagnostic-report].text.status = #additional
@@ -693,12 +693,12 @@ Usage: #example
 * identifier.type = $v2-0203#ACSN "Accession ID"
 //* identifier.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* identifier.extension.valueUrl = "#befund-eingangsnummer"
-* subject = Reference(Patient/34545)
-* encounter = Reference(Encounter/34555)
+* subject = Reference(Patient/mii-exa-patho-patient-34545)
+* encounter = Reference(Encounter/mii-exa-patho-encounter-34555)
 * date = "2021-06-08"
-* author[+] = Reference(Practitioner/2346545)
+* author[+] = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * author[=].display = "Dr. Name"
 * title = "Pathologie Befundbericht"
-* custodian = Reference(Organization/123456)
+* custodian = Reference(Organization/mii-exa-patho-organization-123456)
 * event.period.start = "2021-06-05"
 * event.period.end = "2021-06-08"

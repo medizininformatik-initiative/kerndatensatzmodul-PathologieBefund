@@ -1,0 +1,17 @@
+{
+  "id": "Observation-mii-exa-patho-p63-a",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "CodeableConcept.text",
+          "context": "CodeableConcept.text",
+          "source": "Die Tumorzellen sind negativ für p63",
+          "target": "The tumor cells are negative for p63"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ValueSet-mii-vs-patho-composition-type-snomed-ct",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_Composition_Type_SNOMED_CT",
+          "target": "MII_VS_Patho_Composition_Type_SNOMED_CT"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho Composition Type [Snomed CT]",
+          "target": "MII VS Patho Composition Type [Snomed CT]"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "ValueSet for the types a pathology Composition can have",
+          "target": "ValueSet for the types a pathology Composition can have"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "371528001",
+          "target": "371528001"
+        }
+      ]
+    }
+  ]
+}

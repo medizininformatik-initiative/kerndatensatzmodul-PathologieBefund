@@ -1,0 +1,107 @@
+{
+  "id": "ValueSet-mii-vs-patho-section-types-loinc",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_Section_Types_LOINC",
+          "target": "MII_VS_Patho_Section_Types_LOINC"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho Section Types [LOINC]",
+          "target": "MII VS Patho Section Types [LOINC]"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "ValueSet for IHE PaLM APSR's section types",
+          "target": "ValueSet for IHE PaLM APSR's section types"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Pathology report intraoperative observation in Specimen Document",
+          "target": "Pathology report intraoperative observation in Specimen Document"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Pathology report intraoperative observation in Specimen Document",
+          "target": "Pathology report intraoperative observation in Specimen Document"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Pathology report gross observation",
+          "target": "Pathology report gross observation"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Pathology report gross observation",
+          "target": "Pathology report gross observation"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Pathology report microscopic observation",
+          "target": "Pathology report microscopic observation"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Pathology report microscopic observation",
+          "target": "Pathology report microscopic observation"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Pathology report diagnosis",
+          "target": "Pathology report diagnosis"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Pathology report diagnosis",
+          "target": "Pathology report diagnosis"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Pathology report additional specified observation in Specimen Narrative",
+          "target": "Pathology report additional specified observation in Specimen Narrative"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Pathology report additional specified observation in Specimen Narrative",
+          "target": "Pathology report additional specified observation in Specimen Narrative"
+        }
+      ]
+    }
+  ]
+}

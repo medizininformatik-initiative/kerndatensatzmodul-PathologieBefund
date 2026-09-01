@@ -9,14 +9,14 @@ name: MII_IG_Modul_Patho
 language: de-DE
 status: active
 experimental: false
-version: 2027.0.0
-date: "2025-12-10"
+version: 2027.0.0-ballot.rc
+date: "2026-09-01"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 license: CC-BY-4.0
 jurisdiction: urn:iso:std:iso:3166#DE "Germany"
 packageId: de.medizininformatikinitiative.kerndatensatz.patho
-releaseLabel: ci-build
+releaseLabel: ballot
 publisher:
   name: Medizininformatik-Initiative
   url: https://www.medizininformatik-initiative.de/
@@ -25,10 +25,10 @@ FSHOnly: false
 # Don't forget to add further dependencies if necessary!
 dependencies:
   # de.basisprofil.r4: 1.5.0
-  de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.biobank: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.0
+  de.medizininformatikinitiative.kerndatensatz.biobank: 2026.0.1
   # de.medizininformatikinitiative.kerndatensatz.diagnose: 2026.0.x
-  de.medizininformatikinitiative.kerndatensatz.base: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.base: 2026.0.1
   de.gematik.isik: 5.1.2
   # Cross-Version-Extensions R5 -> R4 (BodyStructure an Specimen.collection.bodySite, #259;
   # DiagnosticReport.composition zur Angleichung an HL7 EU Lab Report)
@@ -73,6 +73,8 @@ pages:
     title: Versionierung
     changes.md:
       title: Changelog
+  translationinfo.md:
+    title: Hinweise zur Übersetzung
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │

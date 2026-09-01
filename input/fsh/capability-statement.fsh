@@ -21,7 +21,7 @@ Usage: #definition
 //-------------------
 * rest.resource[+]
   * insert InitResource(#Specimen, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-specimen|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-specimen|2027.0.0-ballot.rc, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -55,13 +55,13 @@ Usage: #definition
 * rest.resource[+]
   * insert InitResource(#Observation, #SHALL)
   // * insert AddSupportedProfile(mii-pr-patho-base-observation, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-intraoperative-grouper|2025.0.0, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-macroscopic-grouper|2025.0.0, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-microscopic-grouper|2025.0.0, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-finding|2025.0.0, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-diagnostic-conclusion-grouper|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-intraoperative-grouper|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-macroscopic-grouper|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-microscopic-grouper|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-finding|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot.rc, #SHALL)
   // * insert AddSupportedProfile(mii-pr-patho-section-grouper, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-additional-specified-grouper|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-additional-specified-grouper|2027.0.0-ballot.rc, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -117,7 +117,7 @@ Usage: #definition
 //-------------------
 * rest.resource[+]
   * insert InitResource(#ServiceRequest, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-service-request|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-service-request|2027.0.0-ballot.rc, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -150,32 +150,12 @@ Usage: #definition
   * insert AddMIISearchParameter(#SHALL, "reason-code", mii-sp-meta-servicerequest-reason-code, #token, "SearchParameter for ServiceRequest.reasonCode")
   * insert AddMIISearchParameter(#SHALL, "supporting-info", mii-sp-meta-servicerequest-supporting-info, #reference, "SearchParameter for ServiceRequest.supportingInfo")
 //-------------------
-// RequestGroup
-//-------------------
-* rest.resource[+]
-  * insert InitResource(#RequestGroup, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-request-group|2027.0.0, #SHALL)
-  * insert AddInteraction(#read, #SHALL)
-  * insert AddInteraction(#search-type, #SHALL)
-  // CORE
-  * insert AddSearchParameter(#SHALL, "_id", Resource-id, #token, "Logical id of this artifact")
-  * insert AddSearchParameter(#SHALL, "_lastUpdated", Resource-lastUpdated, #date, "When the resource version last changed")
-  * insert AddSearchParameter(#SHALL, "_profile", Resource-profile, #uri, "Profiles this resource claims to conform to")
-  * insert AddSearchParameter(#SHALL, "author", RequestGroup-author, #reference, "The author of the request group")
-  * insert AddSearchParameter(#SHALL, "authored", RequestGroup-authored, #date, "The date the request group was authored")
-  * insert AddSearchParameter(#SHALL, "encounter", RequestGroup-encounter, #reference, "The encounter the request group applies to")
-  * insert AddSearchParameter(#SHALL, "identifier", RequestGroup-identifier, #token, "External identifiers for the request group")
-  * insert AddSearchParameter(#SHALL, "intent", RequestGroup-intent, #token, "The intent of the request group")
-  * insert AddSearchParameter(#SHALL, "patient", RequestGroup-patient, #reference, "The identity of a patient to search for request groups")
-  * insert AddSearchParameter(#SHALL, "status", RequestGroup-status, #token, "The status of the request group")
-  * insert AddSearchParameter(#SHALL, "subject", RequestGroup-subject, #reference, "The subject that the request group is about")
-//-------------------
 // DiagnosticReport
 //-------------------
 
 * rest.resource[+]
   * insert InitResource(#DiagnosticReport, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-report|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-report|2027.0.0-ballot.rc, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -206,7 +186,7 @@ Usage: #definition
 //-------------------
 * rest.resource[+]
   * insert InitResource(#Composition, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-composition|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-composition|2027.0.0-ballot.rc, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -241,7 +221,7 @@ Usage: #definition
 //-------------------
 * rest.resource[+]
   * insert InitResource(#Media, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-attached-image|2025.0.0, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-attached-image|2027.0.0-ballot.rc, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE

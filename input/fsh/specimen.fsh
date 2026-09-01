@@ -132,11 +132,11 @@ Description: "Prostate tru-cut biopsy sample (specimen)"
   * value = "E12345_21"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#309134005 "Prostate tru-cut biopsy sample"
-* subject = Reference(Patient/12345)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
 * parent = Reference(Specimen/E12345_21)
 * request = Reference(mii-exa-patho-request)
 * collection
-  * collector = Reference(Practitioner/2346545)
+  * collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
   * collectedDateTime = "2021-01-29T06:15:00Z"
   * method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
   * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -178,11 +178,11 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
   * value = "E12345_21"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#787150001 "Stained slide of tissue section (specimen)"
-* subject = Reference(Patient/12345)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
 * parent = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
 * request = Reference(mii-exa-patho-request)
 * collection
-  * collector = Reference(Practitioner/2346545)
+  * collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
   * collectedDateTime = "2021-01-29T06:15:00Z"
   * method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
   * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -227,7 +227,7 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 Instance: mii-exa-patho-prostate-tru-cut-biopsy-sample
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -240,9 +240,9 @@ Usage: #example
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht" // (Accession identifier nicht zu verwenden im Untersuchungsauftrag) - angehangen
 * type = $SCT#309134005 "Prostate tru-cut biopsy sample"
-* subject = Reference(Patient/12345)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
 * request = Reference(mii-exa-patho-request)
-* collection.collector = Reference(Practitioner/2346545)
+* collection.collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
 * collection.method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
 * collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -257,7 +257,7 @@ Usage: #example
 Instance: mii-exa-patho-prostate-biopsy-block
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -267,10 +267,10 @@ Usage: #example
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#1201985008 "Tissue block specimen (specimen)"
-* subject = Reference(Patient/12345)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
 * parent = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
 * request = Reference(mii-exa-patho-request)
-* collection.collector = Reference(Practitioner/21234)
+* collection.collector = Reference(Practitioner/mii-exa-patho-practitioner-21234)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
 * collection.method = $SCT#168126000 "Sample macroscopy (procedure)"
 * collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -285,7 +285,7 @@ Usage: #example
 Instance: mii-exa-patho-prostate-biopsy-schnitt-HE
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -295,10 +295,10 @@ Usage: #example
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#430856003 "Tissue section (specimen)"
-* subject = Reference(Patient/12345)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
 * parent = Reference(mii-exa-patho-prostate-biopsy-block)
 * request = Reference(mii-exa-patho-request)
-* collection.collector = Reference(Practitioner/2346545)
+* collection.collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
 * collection.method = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
 * collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -315,7 +315,7 @@ Usage: #example
 Instance: mii-exa-patho-prostate-biopsy-schnitt-p63
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -325,10 +325,10 @@ Usage: #example
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * type = $SCT#430856003 "Tissue section (specimen)"
-* subject = Reference(Patient/12345)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
 * parent = Reference(mii-exa-patho-prostate-biopsy-block)
 * request = Reference(mii-exa-patho-request)
-* collection.collector = Reference(Practitioner/1234)
+* collection.collector = Reference(Practitioner/mii-exa-patho-practitioner-1234)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
 * collection.method = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
 * collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
@@ -403,7 +403,7 @@ Usage: #example
 Title: "MII EXA Patho Prostate Body Structure"
 Description: "Lokalisation im Prostatektomie-Praeparat: rechte apikale periphere Zone, posterior, 15 mm proximal des Apex"
 * active = true
-* patient = Reference(Patient/12345)
+* patient = Reference(Patient/mii-exa-patho-patient-12345)
 * location = $SCT#717007000 "Apical peripheral zone of prostate"
 * locationQualifier[+] = $SCT#24028007 "Right (qualifier value)"
 * description = "Rechte apikale periphere Zone der Prostata, posterior, 15 mm proximal des Apex"
@@ -426,7 +426,7 @@ InstanceOf: mii-pr-patho-specimen
 Usage: #example
 Title: "MII EXA Patho Prostate Resection Sample"
 Description: "Radikalprostatektomie-Praeparat als Einsendeprobe (Part)"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
 * identifier[+]
   * type = $v2-0203#PLAC
   * system = "https://urologie.example-hospital.de/fhir/specimen/placer"
@@ -440,9 +440,9 @@ Description: "Radikalprostatektomie-Praeparat als Einsendeprobe (Part)"
   * value = "E_25_311"
 * status = #available
 * type = $SCT#122725003 "Specimen from prostate obtained by radical prostatectomy (specimen)"
-* subject = Reference(Patient/12345)
+* subject = Reference(Patient/mii-exa-patho-patient-12345)
 * collection
-  * collector = Reference(Practitioner/2346545)
+  * collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
   * collectedDateTime = "2025-02-05T10:00:00+01:00"
   * method = $SCT#26294005 "Radical prostatectomy (procedure)"
   * bodySite = $SCT#41216001 "Prostate"
@@ -460,7 +460,7 @@ Usage: #example
 Title: "MII EXA Patho Left Breast Body Structure"
 Description: "Lokalisation im BET-Exzisionspraeparat: linke Mamma, unterer aeusserer Quadrant, 5 Uhr, 50 mm distal der Mamille"
 * active = true
-* patient = Reference(Patient/34545)
+* patient = Reference(Patient/mii-exa-patho-patient-34545)
 * morphology = $SCT#82711006 "Infiltrating duct carcinoma"
 * morphology.text = "Bioptisch gesichertes invasives Karzinom"
 * location = $SCT#110502005 "Lower outer quadrant of left breast"
@@ -487,7 +487,7 @@ InstanceOf: mii-pr-patho-specimen
 Usage: #example
 Title: "MII EXA Patho Breast Resection Sample"
 Description: "BET-Exzisionspraeparat der linken Mamma als Einsendeprobe (Part), mit Draht- und Fadenmarkierungen"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
 * identifier[+]
   * type = $v2-0203#PLAC
   * system = "https://senologie.example-hospital.de/fhir/specimen/placer"
@@ -501,7 +501,7 @@ Description: "BET-Exzisionspraeparat der linken Mamma als Einsendeprobe (Part), 
   * value = "E_25_210"
 * status = #available
 * type = $SCT#397199005 "Specimen from breast obtained by excision"
-* subject = Reference(Patient/34545)
+* subject = Reference(Patient/mii-exa-patho-patient-34545)
 * request = Reference(mii-exa-patho-request)
 * extension[0].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature"
 * extension[0].extension[0].url = "type"
@@ -519,7 +519,7 @@ Description: "BET-Exzisionspraeparat der linken Mamma als Einsendeprobe (Part), 
 * extension[2].extension[1].url = "description"
 * extension[2].extension[1].valueString = "Fadenmarkierung 2x kurz distal"
 * collection
-  * collector = Reference(Practitioner/2346545)
+  * collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
   * collectedDateTime = "2025-02-05T10:00:00+01:00"
   * method = $SCT#237371007 "Wide local excision of breast lesion"
   * bodySite = $SCT#33564002 "Structure of lower outer quadrant of breast"

@@ -1,0 +1,89 @@
+{
+  "id": "ValueSet-mii-vs-patho-problem-list-snomed-ct",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_Problem_List_SNOMED_CT",
+          "target": "MII_VS_Patho_Problem_List_SNOMED_CT"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho Problem List [SNOMED CT]",
+          "target": "MII VS Patho Problem List [SNOMED CT]"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)",
+          "target": "ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "64572001",
+          "target": "64572001"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "418799008",
+          "target": "418799008"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "404684003",
+          "target": "404684003"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "409586006",
+          "target": "409586006"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "248536006",
+          "target": "248536006"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "55607006",
+          "target": "55607006"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "282291009",
+          "target": "282291009"
+        }
+      ]
+    }
+  ]
+}

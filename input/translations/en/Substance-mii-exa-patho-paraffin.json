@@ -1,0 +1,17 @@
+{
+  "id": "Substance-mii-exa-patho-paraffin",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Paraffin wax (substance)",
+          "target": "Paraffin wax (substance)"
+        }
+      ]
+    }
+  ]
+}

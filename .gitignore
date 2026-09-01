@@ -17,3 +17,13 @@ validator_cli.jar
 _gencontinuous.*
 fsh-generated/resources/ImplementationGuide-mii-ig-modul-patho.json
 input/fsh/externe-referenzen
+# Worktrees liegen im Repo und wuerden sonst als eingebettetes Git-Repo
+# eingecheckt. Bewusst nur die Worktrees, nicht .claude/ komplett.
+.claude/worktrees/
+
+# Generierte Uebersetzungs-Exporte des IG Publishers (po/json/xliff).
+# Gepflegt wird ausschliesslich input/translations/<lang>/ - wie im Modul basis.
+/translations/*
+# Indexer-Artefakte (u.a. im vendorten ig-template/), nie einchecken
+.index.db
+.index.json

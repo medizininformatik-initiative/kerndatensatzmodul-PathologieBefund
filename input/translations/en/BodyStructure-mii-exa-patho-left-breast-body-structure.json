@@ -1,0 +1,65 @@
+{
+  "id": "BodyStructure-mii-exa-patho-left-breast-body-structure",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Lower outer quadrant of left breast",
+          "target": "Lower outer quadrant of left breast"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Left (qualifier value)",
+          "target": "Left (qualifier value)"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Nipple structure",
+          "target": "Nipple structure"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "5 o'clock position",
+          "target": "5 o'clock position"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Distal",
+          "target": "Distal"
+        },
+        {
+          "id": "Quantity.unit",
+          "context": "Quantity.unit",
+          "source": "mm",
+          "target": "mm"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Infiltrating duct carcinoma",
+          "target": "Infiltrating duct carcinoma"
+        },
+        {
+          "id": "CodeableConcept.text",
+          "context": "CodeableConcept.text",
+          "source": "Bioptisch gesichertes invasives Karzinom",
+          "target": "Biopsy-confirmed invasive carcinoma"
+        },
+        {
+          "id": "BodyStructure.description",
+          "context": "BodyStructure.description",
+          "source": "5 x 3 x 3 cm, eine Draht- und eine Fadenmarkierung",
+          "target": "5 x 3 x 3 cm, one wire marking and one suture marking"
+        }
+      ]
+    }
+  ]
+}

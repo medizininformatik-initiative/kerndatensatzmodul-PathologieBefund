@@ -1,0 +1,95 @@
+{
+  "id": "ValueSet-mii-vs-patho-service-request-code",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_Service_Request_Code",
+          "target": "MII_VS_Patho_Service_Request_Code"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho Service Request Code",
+          "target": "MII VS Patho Service Request Code"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "ValueSet for a preferred set of ServiceRequest codes",
+          "target": "ValueSet for a preferred set of ServiceRequest codes"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "108252007",
+          "target": "108252007"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "ACTIVE",
+          "target": "ACTIVE"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "Both",
+          "target": "Both"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "LP7061-7",
+          "target": "LP7061-7"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "1",
+          "target": "1"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "LP61649-7",
+          "target": "LP61649-7"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "LP247851-1",
+          "target": "LP247851-1"
+        },
+        {
+          "id": "ValueSet.compose.include.filter.value",
+          "context": "ValueSet.compose.include.filter.value",
+          "source": "LP247830-5",
+          "target": "LP247830-5"
+        }
+      ]
+    }
+  ]
+}

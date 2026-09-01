@@ -1,6 +1,0 @@
-
-# Coding.display
-#: Coding.display
-msgid "Canada balsam (substance)"
-msgstr ""
-

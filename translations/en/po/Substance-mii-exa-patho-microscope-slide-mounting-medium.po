@@ -1,6 +1,0 @@
-
-# Coding.display
-#: Coding.display
-msgid "Microscope slide mounting medium (substance)"
-msgstr ""
-

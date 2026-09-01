@@ -1,0 +1,17 @@
+{
+  "id": "Organization-mii-exa-patho-organization-12345",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Organization.name",
+          "context": "Organization.name",
+          "source": "Institut für Pathologie",
+          "target": "Institute of Pathology"
+        }
+      ]
+    }
+  ]
+}

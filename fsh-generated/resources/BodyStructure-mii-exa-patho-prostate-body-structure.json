@@ -3,7 +3,7 @@
   "id": "mii-exa-patho-prostate-body-structure",
   "active": true,
   "patient": {
-    "reference": "Patient/12345"
+    "reference": "Patient/mii-exa-patho-patient-12345"
   },
   "location": {
     "coding": [

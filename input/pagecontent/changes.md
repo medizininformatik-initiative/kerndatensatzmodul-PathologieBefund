@@ -1,4 +1,4 @@
-### 2027.0.0
+### 2027.0.0-ballot.rc
 - `documentation` Verweise auf den [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) als Referenzbeispiel ergänzt
 - `documentation` Verweise auf originalText/narrativeLink aus der Section-Grouper-Beschreibung entfernt
 - `documentation` Text "ein Grouper pro Präparat" aus allen Grouper-Profilseiten entfernt (#249)
@@ -16,6 +16,7 @@
 - `feature` EU-Lab-Angleichung: DiagnosticReport↔Composition-Extensions und optionale Composition-Section-Slices (#262, #263)
 - `fix` Korrekturen: CapabilityStatement-URL, fehlende Substances in Specimen-Beispielen
 - `changed` IG wird ab dieser Version mit dem HL7 IG Publisher erstellt (zuvor Simplifier)
+- `changed` CapabilityStatement: RequestGroup-Ressource entfernt (Profil MII_PR_Patho_Request_Group existiert nicht mehr)
 
 ### 2026.0.1
 

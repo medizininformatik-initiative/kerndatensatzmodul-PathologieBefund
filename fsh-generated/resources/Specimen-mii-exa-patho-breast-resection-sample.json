@@ -3,7 +3,7 @@
   "id": "mii-exa-patho-breast-resection-sample",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
     ]
   },
   "type": {
@@ -34,7 +34,7 @@
       ]
     },
     "collector": {
-      "reference": "Practitioner/2346545"
+      "reference": "Practitioner/mii-exa-patho-practitioner-2346545"
     },
     "collectedDateTime": "2025-02-05T10:00:00+01:00",
     "method": {
@@ -79,7 +79,7 @@
   },
   "status": "available",
   "subject": {
-    "reference": "Patient/34545"
+    "reference": "Patient/mii-exa-patho-patient-34545"
   },
   "request": [
     {

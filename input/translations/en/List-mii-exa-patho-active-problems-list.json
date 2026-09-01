@@ -1,0 +1,17 @@
+{
+  "id": "List-mii-exa-patho-active-problems-list",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Problemliste - Berichtet",
+          "target": "Problem list - Reported"
+        }
+      ]
+    }
+  ]
+}

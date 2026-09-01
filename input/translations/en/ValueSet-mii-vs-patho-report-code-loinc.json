@@ -1,0 +1,143 @@
+{
+  "id": "ValueSet-mii-vs-patho-report-code-loinc",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "ValueSet.name",
+          "context": "ValueSet.name",
+          "source": "MII_VS_Patho_Report_Code_LOINC",
+          "target": "MII_VS_Patho_Report_Code_LOINC"
+        },
+        {
+          "id": "ValueSet.title",
+          "context": "ValueSet.title",
+          "source": "MII VS Patho Report Code [LOINC]",
+          "target": "MII VS Patho Report Code [LOINC]"
+        },
+        {
+          "id": "ValueSet.publisher",
+          "context": "ValueSet.publisher",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ContactDetail.name",
+          "context": "ContactDetail.name",
+          "source": "Medizininformatik-Initiative",
+          "target": "Medizininformatik-Initiative"
+        },
+        {
+          "id": "ValueSet.description",
+          "context": "ValueSet.description",
+          "source": "ValueSet for the report type codes of pathology DiagnosticReports",
+          "target": "ValueSet for the report type codes of pathology DiagnosticReports"
+        },
+        {
+          "id": "Coding.display",
+          "context": "Coding.display",
+          "source": "Germany",
+          "target": "Germany"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Pathology Synoptic report",
+          "target": "Pathology Synoptic report"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Pathology Synoptic report",
+          "target": "Pathology Synoptic report"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Pathology study",
+          "target": "Pathology study"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Pathology study",
+          "target": "Pathology study"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Surgical pathology study",
+          "target": "Surgical pathology study"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Surgical pathology study",
+          "target": "Surgical pathology study"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Non-gynecological cytology study",
+          "target": "Non-gynecological cytology study"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Non-gynecological cytology study",
+          "target": "Non-gynecological cytology study"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Molecular pathology studies (set)",
+          "target": "Molecular pathology studies (set)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Molecular pathology studies (set)",
+          "target": "Molecular pathology studies (set)"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Cytology report of Cervical or vaginal smear or scraping Cyto stain",
+          "target": "Cytology report of Cervical or vaginal smear or scraping Cyto stain"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Cytology report of Cervical or vaginal smear or scraping Cyto stain",
+          "target": "Cytology report of Cervical or vaginal smear or scraping Cyto stain"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep",
+          "target": "Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep",
+          "target": "Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.display",
+          "context": "ValueSet.compose.include.concept.display",
+          "source": "Autopsy report",
+          "target": "Autopsy report"
+        },
+        {
+          "id": "ValueSet.compose.include.concept.designation.value",
+          "context": "ValueSet.compose.include.concept.designation.value",
+          "source": "Autopsy report",
+          "target": "Autopsy report"
+        }
+      ]
+    }
+  ]
+}

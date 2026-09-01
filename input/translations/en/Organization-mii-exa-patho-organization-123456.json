@@ -1,0 +1,17 @@
+{
+  "id": "Organization-mii-exa-patho-organization-123456",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "Organization.name",
+          "context": "Organization.name",
+          "source": "Klinikum Musterstadt",
+          "target": "Klinikum Musterstadt"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,0 @@
-
-# Coding.display
-#: Coding.display
-msgid "History of malignant neoplasm (situation)"
-msgstr ""
-

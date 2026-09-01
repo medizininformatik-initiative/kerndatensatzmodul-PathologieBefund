@@ -3,7 +3,7 @@
   "id": "mii-exa-patho-left-breast-body-structure",
   "active": true,
   "patient": {
-    "reference": "Patient/34545"
+    "reference": "Patient/mii-exa-patho-patient-34545"
   },
   "morphology": {
     "coding": [

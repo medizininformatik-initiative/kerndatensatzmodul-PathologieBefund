@@ -1,0 +1,12 @@
+{
+  "resourceType": "Practitioner",
+  "id": "mii-exa-patho-practitioner-1234",
+  "name": [
+    {
+      "family": "Labor",
+      "given": [
+        "Lena"
+      ]
+    }
+  ]
+}

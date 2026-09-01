@@ -1,0 +1,23 @@
+{
+  "id": "Practitioner-mii-exa-patho-practitioner-765879",
+  "baseLang": "de",
+  "languages": [
+    {
+      "targetLang": "en",
+      "entries": [
+        {
+          "id": "HumanName.family",
+          "context": "HumanName.family",
+          "source": "Färber",
+          "target": "Färber"
+        },
+        {
+          "id": "HumanName.given",
+          "context": "HumanName.given",
+          "source": "Frank",
+          "target": "Frank"
+        }
+      ]
+    }
+  ]
+}
