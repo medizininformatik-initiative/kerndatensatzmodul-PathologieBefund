@@ -23,7 +23,11 @@ input/fsh/externe-referenzen
 
 # Generierte Uebersetzungs-Exporte des IG Publishers (po/json/xliff).
 # Gepflegt wird ausschliesslich input/translations/<lang>/ - wie im Modul basis.
-/translations/*
+/translations/
 # Indexer-Artefakte (u.a. im vendorten ig-template/), nie einchecken
 .index.db
 .index.json
+# Interne Arbeitsdokumente (Analysen, Migrations- und Publikationsplaene) -
+# nicht Teil der Spezifikation. ACHTUNG: falls spaeter die Recipes aus dem
+# MII-Modul-Geruest uebernommen werden, muss diese Regel praezisiert werden.
+/docs/
