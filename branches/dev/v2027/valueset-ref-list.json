@@ -9,15 +9,15 @@
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-patho-composition.html" : "MII PR Patho Composition",
-    "StructureDefinition-mii-pr-patho-base-observation.html" : "MII PR Patho Base Observation",
-    "StructureDefinition-mii-pr-patho-intraoperative-grouper.html" : "MII PR Patho Intraoperative Grouper",
-    "StructureDefinition-mii-pr-patho-macroscopic-grouper.html" : "MII PR Patho Macroscopic Grouper",
-    "StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.html" : "MII PR Patho Diagnostic Conclusion Grouper",
-    "StructureDefinition-mii-pr-patho-section-grouper.html" : "MII PR Patho Section Grouper",
     "StructureDefinition-mii-pr-patho-additional-specified-grouper.html" : "MII PR Patho Additional Specified Grouper",
+    "StructureDefinition-mii-pr-patho-composition.html" : "MII PR Patho Composition",
+    "StructureDefinition-mii-pr-patho-intraoperative-grouper.html" : "MII PR Patho Intraoperative Grouper",
+    "StructureDefinition-mii-pr-patho-base-observation.html" : "MII PR Patho Base Observation",
+    "StructureDefinition-mii-pr-patho-finding.html" : "MII PR Patho Finding",
     "StructureDefinition-mii-pr-patho-microscopic-grouper.html" : "MII PR Patho Microscopic Grouper",
-    "StructureDefinition-mii-pr-patho-finding.html" : "MII PR Patho Finding"
+    "StructureDefinition-mii-pr-patho-section-grouper.html" : "MII PR Patho Section Grouper",
+    "StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.html" : "MII PR Patho Diagnostic Conclusion Grouper",
+    "StructureDefinition-mii-pr-patho-macroscopic-grouper.html" : "MII PR Patho Macroscopic Grouper"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct",

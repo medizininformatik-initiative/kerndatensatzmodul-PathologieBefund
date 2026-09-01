@@ -3,7 +3,7 @@ MII_IG_Modul_Patho : Validation Results
 
 err = 1, warn = 377, info = 523
 IG Publisher Version: 2.3.2 Out of date - current version is 2.3.3
-Generated Tue Sep 01 13:23:22 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-patho)
+Generated Tue Sep 01 14:08:36 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-patho)
  Build Errors : 4 / 36 / 0
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/BodyStructure-mii-exa-patho-left-breast-body-structure : 0 / 0 / 17
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/BodyStructure-mii-exa-patho-prostate-body-structure : 0 / 0 / 12
