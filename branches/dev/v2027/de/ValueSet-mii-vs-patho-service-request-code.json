@@ -1,0 +1,137 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-patho-service-request-code",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-patho-service-request-code</b></p><a name=\"mii-vs-patho-service-request-code\"> </a><a name=\"hcmii-vs-patho-service-request-code\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  descends from 108252007 (Laboratory procedure)</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where STATUS  = ACTIVE, ORDER_OBS  = Both, SYSTEM  = LP7061-7 (Bld/Tiss) and CLASSTYPE  = 1</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where STATUS  = ACTIVE, ORDER_OBS  = Both, SYSTEM  = LP61649-7 (Tissue) and CLASSTYPE  = 1</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where STATUS  = ACTIVE, ORDER_OBS  = Both, SYSTEM  = LP247851-1 (Breast cancer specimen) and CLASSTYPE  = 1</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where STATUS  = ACTIVE, ORDER_OBS  = Both, SYSTEM  = LP247830-5 (Cancer specimen) and CLASSTYPE  = 1</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code",
+  "version" : "2027.0.0-ballot.rc",
+  "name" : "MII_VS_Patho_Service_Request_Code",
+  "title" : "MII VS Patho Service Request Code",
+  "status" : "active",
+  "date" : "2026-09-01T13:18:58+00:00",
+  "publisher" : "Medizininformatik-Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik-Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    },
+    {
+      "system" : "email",
+      "value" : "info@medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "ValueSet for a preferred set of ServiceRequest codes",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "108252007"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      },
+      {
+        "property" : "ORDER_OBS",
+        "op" : "=",
+        "value" : "Both"
+      },
+      {
+        "property" : "SYSTEM",
+        "op" : "=",
+        "value" : "LP7061-7"
+      },
+      {
+        "property" : "CLASSTYPE",
+        "op" : "=",
+        "value" : "1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      },
+      {
+        "property" : "ORDER_OBS",
+        "op" : "=",
+        "value" : "Both"
+      },
+      {
+        "property" : "SYSTEM",
+        "op" : "=",
+        "value" : "LP61649-7"
+      },
+      {
+        "property" : "CLASSTYPE",
+        "op" : "=",
+        "value" : "1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      },
+      {
+        "property" : "ORDER_OBS",
+        "op" : "=",
+        "value" : "Both"
+      },
+      {
+        "property" : "SYSTEM",
+        "op" : "=",
+        "value" : "LP247851-1"
+      },
+      {
+        "property" : "CLASSTYPE",
+        "op" : "=",
+        "value" : "1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      },
+      {
+        "property" : "ORDER_OBS",
+        "op" : "=",
+        "value" : "Both"
+      },
+      {
+        "property" : "SYSTEM",
+        "op" : "=",
+        "value" : "LP247830-5"
+      },
+      {
+        "property" : "CLASSTYPE",
+        "op" : "=",
+        "value" : "1"
+      }]
+    }]
+  }
+}

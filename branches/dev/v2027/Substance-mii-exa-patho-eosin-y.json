@@ -1,0 +1,18 @@
+{
+  "resourceType" : "Substance",
+  "id" : "mii-exa-patho-eosin-y",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Substance mii-exa-patho-eosin-y</b></p><a name=\"mii-exa-patho-eosin-y\"> </a><a name=\"hcmii-exa-patho-eosin-y\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance\">MII PR Biobank Substance Additiv</a></p></div><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 763042003}\">Eosin Y (substance)</span></p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Substance mii-exa-patho-eosin-y</b></p><a name=\"en-mii-exa-patho-eosin-y\"> </a><a name=\"en-hcmii-exa-patho-eosin-y\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance\">MII PR Biobank Substance Additiv</a></p></div><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 763042003}\">Eosin Y (substance)</span></p></div></div>"
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "763042003",
+      "display" : "Eosin Y (substance)"
+    }]
+  }
+}

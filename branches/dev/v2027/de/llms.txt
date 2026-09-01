@@ -1,0 +1,117 @@
+# de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc: MII IG Modul Patho(de)
+
+## Pages
+
+* [Kerndatensatz Modul Pathologie-Befund](index.md)
+* [Kontext und Bezüge](kontext.md)
+* [Terminologien](terminologien.md)
+* [Versionierung](version-history.md)
+* [Szenarien](szenarien.md)
+* [Beschreibung des Moduls](beschreibung.md)
+* [UML](uml.md)
+* [Artefaktübersicht](artifacts.md)
+* [Anwendungsfälle und Informationsmodell](anwendungsfaelle.md)
+* [Datensätze](datensaetze.md)
+* [Hinweise zur Übersetzung](translationinfo.md)
+* [Changelog](changes.md)
+* [Hierarchie und Workflow](hierarchie.md)
+* [Downloads](downloads.md)
+* [Referenzen](referenzen.md)
+
+## Resources
+
+### ValueSets
+
+* [MII VS Patho All [LOINC]](ValueSet-mii-vs-patho-all-loinc.md)
+* [MII VS Patho Collection Method [SNOMED CT]](ValueSet-mii-vs-patho-collection-method-snomed-ct.md)
+* [MII VS Patho Composition Type KDL](ValueSet-mii-vs-patho-composition-type-kdl.md)
+* [MII VS Patho Composition Type [Snomed CT]](ValueSet-mii-vs-patho-composition-type-snomed-ct.md)
+* [MII VS Patho Container Type [SNOMED CT]](ValueSet-mii-vs-patho-container-type-snomed-ct.md)
+* [MII VS Patho Media Modality [SNOMED CT]](ValueSet-mii-vs-patho-media-modality-snomed-ct.md)
+* [MII VS Patho Problem List [SNOMED CT]](ValueSet-mii-vs-patho-problem-list-snomed-ct.md)
+* [MII VS Patho Processing Procedure [SNOMED CT]](ValueSet-mii-vs-patho-processing-procedure-snomed-ct.md)
+* [MII VS Patho Report Category HL7](ValueSet-mii-vs-patho-report-category-hl7.md)
+* [MII VS Patho Report Code [LOINC]](ValueSet-mii-vs-patho-report-code-loinc.md)
+* [MII VS Patho Section Types [LOINC]](ValueSet-mii-vs-patho-section-types-loinc.md)
+* [MII VS Patho Service Request Code](ValueSet-mii-vs-patho-service-request-code.md)
+
+### Logicals
+
+* [MII LM Patho Logical Model](StructureDefinition-mii-lm-patho-logical-model.md)
+
+### Resource Profiles
+
+* [MII PR Patho Active Problems List](StructureDefinition-mii-pr-patho-active-problems-list.md)
+* [MII PR Patho Additional Specified Grouper](StructureDefinition-mii-pr-patho-additional-specified-grouper.md)
+* [MII PR Patho Attached Image](StructureDefinition-mii-pr-patho-attached-image.md)
+* [MII PR Patho Base Observation](StructureDefinition-mii-pr-patho-base-observation.md)
+* [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.md)
+* [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.md)
+* [MII PR Patho Diagnostic Conclusion Grouper](StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.md)
+* [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md)
+* [MII PR Patho History Of Present Illness](StructureDefinition-mii-pr-patho-history-of-present-illness.md)
+* [MII PR Patho Intraoperative Grouper](StructureDefinition-mii-pr-patho-intraoperative-grouper.md)
+* [MII PR Patho Macroscopic Grouper](StructureDefinition-mii-pr-patho-macroscopic-grouper.md)
+* [MII PR Patho Microscopic Grouper](StructureDefinition-mii-pr-patho-microscopic-grouper.md)
+* [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-problem-list-item.md)
+* [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md)
+* [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.md)
+* [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.md)
+* [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md)
+
+### CapabilityStatements
+
+* [MII CPS Patho Capability Statement](CapabilityStatement-mii-cps-patho-capability-statement.md)
+
+### ImplementationGuides
+
+* [MII IG Modul Patho](ImplementationGuide-mii-ig-modul-patho.md)
+
+### Examples
+
+* [mii-exa-patho-left-breast-body-structure (BodyStructure)](BodyStructure-mii-exa-patho-left-breast-body-structure.md)
+* [mii-exa-patho-prostate-body-structure (BodyStructure)](BodyStructure-mii-exa-patho-prostate-body-structure.md)
+* [Pathologie Befundbericht (Composition)](Composition-mii-exa-patho-composition.md)
+* [mii-exa-patho-problem-list-item-1 (Condition)](Condition-mii-exa-patho-problem-list-item-1.md)
+* [mii-exa-patho-problem-list-item-2 (Condition)](Condition-mii-exa-patho-problem-list-item-2.md)
+* [mii-exa-patho-report (DiagnosticReport)](DiagnosticReport-mii-exa-patho-report.md)
+* [mii-exa-patho-encounter-12345 (Encounter)](Encounter-mii-exa-patho-encounter-12345.md)
+* [mii-exa-patho-encounter-34555 (Encounter)](Encounter-mii-exa-patho-encounter-34555.md)
+* [mii-exa-patho-encounter-87687 (Encounter)](Encounter-mii-exa-patho-encounter-87687.md)
+* [mii-exa-patho-active-problems-list (List)](List-mii-exa-patho-active-problems-list.md)
+* [mii-exa-patho-history-of-present-illness (List)](List-mii-exa-patho-history-of-present-illness.md)
+* [mii-exa-patho-attached-image (Media)](Media-mii-exa-patho-attached-image.md)
+* [mii-exa-patho-biopsy-site-a (Observation)](Observation-mii-exa-patho-biopsy-site-a.md)
+* [mii-exa-patho-diagnostic-conclusion-1 (Observation)](Observation-mii-exa-patho-diagnostic-conclusion-1.md)
+* [mii-exa-patho-diagnostic-conclusion-2 (Observation)](Observation-mii-exa-patho-diagnostic-conclusion-2.md)
+* [mii-exa-patho-diagnostic-conclusion-3 (Observation)](Observation-mii-exa-patho-diagnostic-conclusion-3.md)
+* [mii-exa-patho-diagnostic-conclusion-grouper (Observation)](Observation-mii-exa-patho-diagnostic-conclusion-grouper.md)
+* [mii-exa-patho-gleason-pattern-a (Observation)](Observation-mii-exa-patho-gleason-pattern-a.md)
+* [mii-exa-patho-histologic-type-a (Observation)](Observation-mii-exa-patho-histologic-type-a.md)
+* [mii-exa-patho-macro-grouper-a (Observation)](Observation-mii-exa-patho-macro-grouper-a.md)
+* [mii-exa-patho-micro-grouper-a (Observation)](Observation-mii-exa-patho-micro-grouper-a.md)
+* [mii-exa-patho-p63-a (Observation)](Observation-mii-exa-patho-p63-a.md)
+* [mii-exa-patho-tissue-length-a (Observation)](Observation-mii-exa-patho-tissue-length-a.md)
+* [Institut für Pathologie (Organization)](Organization-mii-exa-patho-organization-12345.md)
+* [Klinikum Musterstadt (Organization)](Organization-mii-exa-patho-organization-123456.md)
+* [mii-exa-patho-patient-12345 (Patient)](Patient-mii-exa-patho-patient-12345.md)
+* [mii-exa-patho-patient-34545 (Patient)](Patient-mii-exa-patho-patient-34545.md)
+* [mii-exa-patho-practitioner-1234 (Practitioner)](Practitioner-mii-exa-patho-practitioner-1234.md)
+* [mii-exa-patho-practitioner-21234 (Practitioner)](Practitioner-mii-exa-patho-practitioner-21234.md)
+* [mii-exa-patho-practitioner-2346545 (Practitioner)](Practitioner-mii-exa-patho-practitioner-2346545.md)
+* [mii-exa-patho-practitioner-34456 (Practitioner)](Practitioner-mii-exa-patho-practitioner-34456.md)
+* [mii-exa-patho-practitioner-765879 (Practitioner)](Practitioner-mii-exa-patho-practitioner-765879.md)
+* [mii-exa-patho-request (ServiceRequest)](ServiceRequest-mii-exa-patho-request.md)
+* [mii-exa-patho-breast-resection-sample (Specimen)](Specimen-mii-exa-patho-breast-resection-sample.md)
+* [mii-exa-patho-prostate-biopsy-block (Specimen)](Specimen-mii-exa-patho-prostate-biopsy-block.md)
+* [mii-exa-patho-prostate-biopsy-schnitt-HE (Specimen)](Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE.md)
+* [mii-exa-patho-prostate-biopsy-schnitt-p63 (Specimen)](Specimen-mii-exa-patho-prostate-biopsy-schnitt-p63.md)
+* [mii-exa-patho-prostate-resection-sample (Specimen)](Specimen-mii-exa-patho-prostate-resection-sample.md)
+* [mii-exa-patho-prostate-tru-cut-biopsy-sample (Specimen)](Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.md)
+* [mii-exa-patho-canadabalsam (Substance)](Substance-mii-exa-patho-canadabalsam.md)
+* [mii-exa-patho-eosin-y (Substance)](Substance-mii-exa-patho-eosin-y.md)
+* [mii-exa-patho-hematoxylin-stain (Substance)](Substance-mii-exa-patho-hematoxylin-stain.md)
+* [mii-exa-patho-microscope-slide-mounting-medium (Substance)](Substance-mii-exa-patho-microscope-slide-mounting-medium.md)
+* [mii-exa-patho-neutral-buffered-formalin (Substance)](Substance-mii-exa-patho-neutral-buffered-formalin.md)
+* [mii-exa-patho-p63-immunostain (Substance)](Substance-mii-exa-patho-p63-immunostain.md)
+* [mii-exa-patho-paraffin (Substance)](Substance-mii-exa-patho-paraffin.md)

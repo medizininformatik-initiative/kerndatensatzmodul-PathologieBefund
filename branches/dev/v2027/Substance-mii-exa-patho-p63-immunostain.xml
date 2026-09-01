@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Substance xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-p63-immunostain"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Substance mii-exa-patho-p63-immunostain</b></p><a name="mii-exa-patho-p63-immunostain"> </a><a name="hcmii-exa-patho-p63-immunostain"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance">MII PR Biobank Substance Additiv</a></p></div><p><b>identifier</b>: Labor and industries number/p63</p><p><b>status</b>: Active</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/substance-category material}">Material</span></p><p><b>code</b>: <span title="Codes:{https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht p63}">p63 immunostain</span></p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Substance mii-exa-patho-p63-immunostain</b></p><a name="en-mii-exa-patho-p63-immunostain"> </a><a name="en-hcmii-exa-patho-p63-immunostain"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance">MII PR Biobank Substance Additiv</a></p></div><p><b>identifier</b>: Labor and industries number/p63</p><p><b>status</b>: Active</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/substance-category material}">Material</span></p><p><b>code</b>: <span title="Codes:{https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht p63}">p63 immunostain</span></p></div></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="LI"/>
+        <display value="Labor and industries number"/>
+      </coding>
+    </type>
+    <system value="https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"/>
+    <value value="p63"/>
+  </identifier>
+  <status value="active"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/substance-category"/>
+      <code value="material"/>
+      <display value="Material"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"/>
+      <code value="p63"/>
+      <display value="p63 immunostain"/>
+    </coding>
+  </code>
+</Substance>

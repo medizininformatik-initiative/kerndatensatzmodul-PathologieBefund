@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-patho-container-type-snomed-ct"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-patho-container-type-snomed-ct</b></p><a name="mii-vs-patho-container-type-snomed-ct"> </a><a name="hcmii-vs-patho-container-type-snomed-ct"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>English (English, en)</b></td></tr><tr><td><a href="http://snomed.info/id/434746001">434746001</a></td><td>Specimen vial (physical object)</td><td>Specimen vial (physical object)</td></tr><tr><td><a href="http://snomed.info/id/434464009">434464009</a></td><td>Tissue cassette (physical object)</td><td>Tissue cassette (physical object)</td></tr><tr><td><a href="http://snomed.info/id/434708008">434708008</a></td><td>Tissue cassette for microarray (physical object)</td><td>Tissue cassette for microarray (physical object)</td></tr><tr><td><a href="http://snomed.info/id/433466003">433466003</a></td><td>Microscope slide (physical object)</td><td>Microscope slide (physical object)</td></tr><tr><td><a href="http://snomed.info/id/433453003">433453003</a></td><td>Specimen container component (physical object)</td><td>Specimen container component (physical object)</td></tr><tr><td><a href="http://snomed.info/id/434533009">434533009</a></td><td>Electron microscopy grid (physical object)</td><td>Electron microscopy grid (physical object)</td></tr><tr><td><a href="http://snomed.info/id/434822004">434822004</a></td><td>Specimen well (physical object)</td><td>Specimen well (physical object)</td></tr><tr><td><a href="http://snomed.info/id/433472003">433472003</a></td><td>Microscope slide coverslip (physical object)</td><td>Microscope slide coverslip (physical object)</td></tr><tr><td><a href="http://snomed.info/id/434473001">434473001</a></td><td>Specimen container lid (physical object)</td><td>Specimen container lid (physical object)</td></tr><tr><td><a href="http://snomed.info/id/706053007">706053007</a></td><td>General specimen container (physical object)</td><td>General specimen container (physical object)</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct"/>
+  <version value="2027.0.0-ballot.rc"/>
+  <name value="MII_VS_Patho_Container_Type_SNOMED_CT"/>
+  <title value="MII VS Patho Container Type [SNOMED CT]"/>
+  <status value="active"/>
+  <date value="2026-09-01T13:18:58+00:00"/>
+  <publisher value="Medizininformatik-Initiative"/>
+  <contact>
+    <name value="Medizininformatik-Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="434746001"/>
+        <display value="Specimen vial (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Specimen vial (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="434464009"/>
+        <display value="Tissue cassette (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Tissue cassette (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="434708008"/>
+        <display value="Tissue cassette for microarray (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Tissue cassette for microarray (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="433466003"/>
+        <display value="Microscope slide (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Microscope slide (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="433453003"/>
+        <display value="Specimen container component (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Specimen container component (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="434533009"/>
+        <display value="Electron microscopy grid (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Electron microscopy grid (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="434822004"/>
+        <display value="Specimen well (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Specimen well (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="433472003"/>
+        <display value="Microscope slide coverslip (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Microscope slide coverslip (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="434473001"/>
+        <display value="Specimen container lid (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Specimen container lid (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="706053007"/>
+        <display value="General specimen container (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="General specimen container (physical object)"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

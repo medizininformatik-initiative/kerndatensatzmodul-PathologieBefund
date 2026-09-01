@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-prostate-biopsy-block"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Specimen mii-exa-patho-prostate-biopsy-block</b></p><a name="mii-exa-patho-prostate-biopsy-block"> </a><a name="hcmii-exa-patho-prostate-biopsy-block"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-patho-specimen.html">MII PR Patho Specimen</a> version: 2027.0.0-ballot.rc</p></div><p><b>identifier</b>: Filler Identifier/E12345_21-A1</p><p><b>accessionIdentifier</b>: <code>https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht</code>/E12345_21</p><p><b>status</b>: Available</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 1201985008}">Tissue block specimen (specimen)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-patho-patient-12345.html">Max Mustermann  Male, DoB: 1959-08-24</a></p><p><b>parent</b>: <a href="Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html">Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample</a></p><p><b>request</b>: <a href="ServiceRequest-mii-exa-patho-request.html">ServiceRequest Pathology consultation, comprehensive, records and specimen with report (procedure)</a></p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Method</b></td><td><b>BodySite</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-mii-exa-patho-practitioner-21234.html">Practitioner Martin Makro </a></td><td>2021-01-29 06:15:00+0000</td><td><span title="Codes:{http://snomed.info/sct 168126000}">Sample macroscopy (procedure)</span></td><td><span title="Codes:{http://snomed.info/sct 716917000}">Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)</span></td></tr></table><h3>Processings</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Procedure</b></td></tr><tr><td style="display: none">*</td><td/><td><span title="Codes:{http://snomed.info/sct 787376009}">Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</span></td></tr></table><h3>Containers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 434464009}">Tissue cassette (physical object)</span></td><td><a href="Substance-mii-exa-patho-paraffin.html">Substance Paraffin wax (substance)</a></td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Specimen mii-exa-patho-prostate-biopsy-block</b></p><a name="en-mii-exa-patho-prostate-biopsy-block"> </a><a name="en-hcmii-exa-patho-prostate-biopsy-block"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-patho-specimen.html">MII PR Patho Specimen</a> version: 2027.0.0-ballot.rc</p></div><p><b>identifier</b>: Filler Identifier/E12345_21-A1</p><p><b>accessionIdentifier</b>: <code>https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht</code>/E12345_21</p><p><b>status</b>: Available</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 1201985008}">Tissue block specimen (specimen)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-patho-patient-12345.html">Max Mustermann  Male, DoB: 1959-08-24</a></p><p><b>parent</b>: <a href="Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html">Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample</a></p><p><b>request</b>: <a href="ServiceRequest-mii-exa-patho-request.html">ServiceRequest Pathology consultation, comprehensive, records and specimen with report (procedure)</a></p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Method</b></td><td><b>BodySite</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-mii-exa-patho-practitioner-21234.html">Practitioner Martin Makro </a></td><td>2021-01-29 06:15:00+0000</td><td><span title="Codes:{http://snomed.info/sct 168126000}">Sample macroscopy (procedure)</span></td><td><span title="Codes:{http://snomed.info/sct 716917000}">Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)</span></td></tr></table><h3>Processings</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Procedure</b></td></tr><tr><td style="display: none">*</td><td/><td><span title="Codes:{http://snomed.info/sct 787376009}">Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</span></td></tr></table><h3>Containers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 434464009}">Tissue cassette (physical object)</span></td><td><a href="Substance-mii-exa-patho-paraffin.html">Substance Paraffin wax (substance)</a></td></tr></table></div></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="FILL"/>
+      </coding>
+    </type>
+    <system value="https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"/>
+    <value value="E12345_21-A1"/>
+  </identifier>
+  <accessionIdentifier>
+    <system value="https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"/>
+    <value value="E12345_21"/>
+  </accessionIdentifier>
+  <status value="available"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1201985008"/>
+      <display value="Tissue block specimen (specimen)"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/mii-exa-patho-patient-12345"/>
+  </subject>
+  <parent>
+    <reference value="Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"/>
+  </parent>
+  <request>
+    <reference value="ServiceRequest/mii-exa-patho-request"/>
+  </request>
+  <collection>
+    <collector>
+      <reference value="Practitioner/mii-exa-patho-practitioner-21234"/>
+    </collector>
+    <collectedDateTime value="2021-01-29T06:15:00Z"/>
+    <method>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="168126000"/>
+        <display value="Sample macroscopy (procedure)"/>
+      </coding>
+    </method>
+    <bodySite>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="716917000"/>
+        <display value="Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"/>
+      </coding>
+    </bodySite>
+  </collection>
+  <processing>
+    <extension url="https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen">
+      <valueRange>
+        <low>
+          <value value="0"/>
+          <unit value="°C"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="Cel"/>
+        </low>
+        <high>
+          <value value="30"/>
+          <unit value="°C"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="Cel"/>
+        </high>
+      </valueRange>
+    </extension>
+    <procedure>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="787376009"/>
+        <display value="Preparation of formalin fixed paraffin embedded tissue specimen (procedure)"/>
+      </coding>
+    </procedure>
+  </processing>
+  <container>
+    <type>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="434464009"/>
+        <display value="Tissue cassette (physical object)"/>
+      </coding>
+    </type>
+    <additiveReference>
+      <reference value="Substance/mii-exa-patho-paraffin"/>
+    </additiveReference>
+  </container>
+</Specimen>

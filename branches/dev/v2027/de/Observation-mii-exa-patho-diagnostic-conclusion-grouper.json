@@ -1,0 +1,40 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-patho-diagnostic-conclusion-grouper",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot.rc"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-patho-diagnostic-conclusion-grouper</b></p><a name=\"mii-exa-patho-diagnostic-conclusion-grouper\"> </a><a name=\"hcmii-exa-patho-diagnostic-conclusion-grouper\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.html\">MII PR Patho Diagnostic Conclusion Grouper</a> version: 2027.0.0-ballot.rc</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-mii-exa-patho-diagnostic-conclusion-1.html\">Observation Histology and Behavior ICD-O-3 Cancer</a></li><li><a href=\"Observation-mii-exa-patho-diagnostic-conclusion-2.html\">Observation Gleason score in Specimen Qualitative</a></li><li><a href=\"Observation-mii-exa-patho-diagnostic-conclusion-3.html\">Observation Prostate cancer grade group [Score] in Prostate tumor Qualitative</a></li></ul><p><b>derivedFrom</b>: </p><ul><li><a href=\"Observation-mii-exa-patho-macro-grouper-a.html\">Observation Pathology report gross observation Narrative</a></li><li><a href=\"Observation-mii-exa-patho-micro-grouper-a.html\">Observation Pathology report microscopic observation Narrative Other stain</a></li></ul></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "22637-3"
+    }]
+  },
+  "hasMember" : [{
+    "reference" : "Observation/mii-exa-patho-diagnostic-conclusion-1"
+  },
+  {
+    "reference" : "Observation/mii-exa-patho-diagnostic-conclusion-2"
+  },
+  {
+    "reference" : "Observation/mii-exa-patho-diagnostic-conclusion-3"
+  }],
+  "derivedFrom" : [{
+    "reference" : "Observation/mii-exa-patho-macro-grouper-a"
+  },
+  {
+    "reference" : "Observation/mii-exa-patho-micro-grouper-a"
+  }]
+}

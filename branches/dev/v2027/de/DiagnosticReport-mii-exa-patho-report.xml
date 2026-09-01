@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-report"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: DiagnosticReport mii-exa-patho-report</b></p><a name="mii-exa-patho-report"> </a><a name="hcmii-exa-patho-report"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-patho-report.html">MII PR Patho Report</a> version: 2027.0.0-ballot.rc</p></div><h2><span title="Codes:{http://loinc.org 60568-3}">Pathology synoptic report</span> </h2><table class="grid"><tr><td>Subject</td><td>Max Mustermann  Male, DoB: 1959-08-24</td></tr><tr><td>Relevant Time</td><td>2021-06-01</td></tr><tr><td>Performer</td><td> <a href="Practitioner-mii-exa-patho-practitioner-2346545.html">Practitioner Sabine Schnitt </a></td></tr><tr><td>Identifier</td><td> Accession ID/E21.12345</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href="Observation-mii-exa-patho-macro-grouper-a.html"><span title="Codes:{http://loinc.org 22634-0}">Pathology report gross observation Narrative</span></a></td><td/><td>Final</td></tr><tr><td><a href="Observation-mii-exa-patho-micro-grouper-a.html"><span title="Codes:{http://loinc.org 22635-7}">Pathology report microscopic observation Narrative Other stain</span></a></td><td>Specimen A: Prostatastanze mit herdförmiger kontinuierlicher Infiltration durch unscharf begrenzte Verbände eines kleintubulär wachse (Gleason-Muster 3), die sich zwischen ortständige Drüsen schieben und ca. 30% der Schnittfläche des Zylinders...</td><td>Final</td></tr><tr><td><a href="Observation-mii-exa-patho-diagnostic-conclusion-grouper.html"><span title="Codes:{http://loinc.org 22637-3}">Pathology report final diagnosis Narrative</span></a></td><td/><td>Final</td></tr></table><p>Gut differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 1</p><p><b>Coded Conclusions:</b></p><ul><li><span title="Codes:{http://snomed.info/sct 1525761000004109}">International Society of Urological Pathology histologic grade group 1</span></li></ul></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="ACSN"/>
+        <display value="Accession ID"/>
+      </coding>
+    </type>
+    <system value="https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"/>
+    <value value="E21.12345"/>
+  </identifier>
+  <basedOn>
+    <reference value="ServiceRequest/mii-exa-patho-request"/>
+  </basedOn>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="60568-3"/>
+      <display value="Pathology synoptic report"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-patho-patient-12345"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/mii-exa-patho-encounter-12345"/>
+  </encounter>
+  <effectiveDateTime value="2021-06-01"/>
+  <performer>
+    <reference value="Practitioner/mii-exa-patho-practitioner-2346545"/>
+  </performer>
+  <specimen>
+    <reference value="Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"/>
+  </specimen>
+  <result>
+    <reference value="Observation/mii-exa-patho-macro-grouper-a"/>
+  </result>
+  <result>
+    <reference value="Observation/mii-exa-patho-micro-grouper-a"/>
+  </result>
+  <result>
+    <reference value="Observation/mii-exa-patho-diagnostic-conclusion-grouper"/>
+  </result>
+  <media>
+    <comment value="HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"/>
+    <link>
+      <reference value="Media/mii-exa-patho-attached-image"/>
+    </link>
+  </media>
+  <conclusion value="Gut differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 1"/>
+  <conclusionCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1525761000004109"/>
+    </coding>
+  </conclusionCode>
+</DiagnosticReport>

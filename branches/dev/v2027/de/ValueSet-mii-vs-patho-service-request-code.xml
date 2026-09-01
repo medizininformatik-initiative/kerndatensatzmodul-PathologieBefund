@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-patho-service-request-code"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-patho-service-request-code</b></p><a name="mii-vs-patho-service-request-code"> </a><a name="hcmii-vs-patho-service-request-code"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where concept  descends from 108252007 (Laboratory procedure)</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where STATUS  = ACTIVE, ORDER_OBS  = Both, SYSTEM  = LP7061-7 (Bld/Tiss) and CLASSTYPE  = 1</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where STATUS  = ACTIVE, ORDER_OBS  = Both, SYSTEM  = LP61649-7 (Tissue) and CLASSTYPE  = 1</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where STATUS  = ACTIVE, ORDER_OBS  = Both, SYSTEM  = LP247851-1 (Breast cancer specimen) and CLASSTYPE  = 1</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where STATUS  = ACTIVE, ORDER_OBS  = Both, SYSTEM  = LP247830-5 (Cancer specimen) and CLASSTYPE  = 1</li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code"/>
+  <version value="2027.0.0-ballot.rc"/>
+  <name value="MII_VS_Patho_Service_Request_Code"/>
+  <title value="MII VS Patho Service Request Code"/>
+  <status value="active"/>
+  <date value="2026-09-01T13:18:58+00:00"/>
+  <publisher value="Medizininformatik-Initiative"/>
+  <contact>
+    <name value="Medizininformatik-Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet for a preferred set of ServiceRequest codes"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="108252007"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+      <filter>
+        <property value="ORDER_OBS"/>
+        <op value="="/>
+        <value value="Both"/>
+      </filter>
+      <filter>
+        <property value="SYSTEM"/>
+        <op value="="/>
+        <value value="LP7061-7"/>
+      </filter>
+      <filter>
+        <property value="CLASSTYPE"/>
+        <op value="="/>
+        <value value="1"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+      <filter>
+        <property value="ORDER_OBS"/>
+        <op value="="/>
+        <value value="Both"/>
+      </filter>
+      <filter>
+        <property value="SYSTEM"/>
+        <op value="="/>
+        <value value="LP61649-7"/>
+      </filter>
+      <filter>
+        <property value="CLASSTYPE"/>
+        <op value="="/>
+        <value value="1"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+      <filter>
+        <property value="ORDER_OBS"/>
+        <op value="="/>
+        <value value="Both"/>
+      </filter>
+      <filter>
+        <property value="SYSTEM"/>
+        <op value="="/>
+        <value value="LP247851-1"/>
+      </filter>
+      <filter>
+        <property value="CLASSTYPE"/>
+        <op value="="/>
+        <value value="1"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+      <filter>
+        <property value="ORDER_OBS"/>
+        <op value="="/>
+        <value value="Both"/>
+      </filter>
+      <filter>
+        <property value="SYSTEM"/>
+        <op value="="/>
+        <value value="LP247830-5"/>
+      </filter>
+      <filter>
+        <property value="CLASSTYPE"/>
+        <op value="="/>
+        <value value="1"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

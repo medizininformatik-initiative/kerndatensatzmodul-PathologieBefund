@@ -1,0 +1,44 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-patho-tissue-length-a",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-patho-tissue-length-a</b></p><a name=\"en-mii-exa-patho-tissue-length-a\"> </a><a name=\"en-hcmii-exa-patho-tissue-length-a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-patho-finding.html\">MII PR Patho Finding</a> version: 2027.0.0-ballot.rc</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44619-5}\">Length of tissue core(s)</span></p><p><b>value</b>: 1.2 cm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codecm = 'cm')</span></p><p><b>specimen</b>: <a href=\"Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html\">Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample</a></p><p><b>derivedFrom</b>: <a href=\"Media-mii-exa-patho-attached-image.html\">Media: status = completed; type = Image</a></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "22634-0"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "44619-5",
+      "display" : "Length of tissue core(s)"
+    }]
+  },
+  "valueQuantity" : {
+    "value" : 1.2,
+    "unit" : "cm",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "cm"
+  },
+  "specimen" : {
+    "reference" : "Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"
+  },
+  "derivedFrom" : [{
+    "reference" : "Media/mii-exa-patho-attached-image"
+  }]
+}

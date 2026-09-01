@@ -1,0 +1,40 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-patho-histologic-type-a",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-patho-histologic-type-a</b></p><a name=\"mii-exa-patho-histologic-type-a\"> </a><a name=\"hcmii-exa-patho-histologic-type-a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-patho-finding.html\">MII PR Patho Finding</a> version: 2027.0.0-ballot.rc</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22635-7}\">Pathology report microscopic observation Narrative Other stain</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 371441004}\">Histologic type of proliferative mass</span></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 45410002}\">Acinar cell carcinoma</span></p><p><b>specimen</b>: <a href=\"Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE.html\">Specimen: identifier = Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Tissue section (specimen)</a></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "22635-7"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "371441004"
+    }]
+  },
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "45410002"
+    }]
+  },
+  "specimen" : {
+    "reference" : "Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE"
+  }
+}

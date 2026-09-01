@@ -1,0 +1,187 @@
+{
+  "package": "de.medizininformatikinitiative.kerndatensatz.patho",
+  "version": "2027.0.0-ballot.rc",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "DE",
+  "extensions": [],
+  "profiles": {
+    "List": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness",
+        "title": "MII PR Patho History Of Present Illness"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-section-grouper",
+        "title": "MII PR Patho Section Grouper"
+      }
+    ],
+    "Media": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image",
+        "title": "MII PR Patho Attached Image"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-bundle",
+        "title": "MII PR Patho Bundle"
+      }
+    ],
+    "Composition": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition",
+        "title": "MII PR Patho Composition"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item",
+        "title": "MII PR Patho Problem List Item"
+      }
+    ],
+    "DiagnosticReport": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report",
+        "title": "MII PR Patho Report"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request",
+        "title": "MII PR Patho Service Request"
+      }
+    ],
+    "Specimen": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen",
+        "title": "MII PR Patho Specimen"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference": [
+      "Composition"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure": [
+      "BodyStructure"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition": [
+      "DiagnosticReport"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite": [
+      "Specimen.collection.bodySite"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature": [
+      "Specimen"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.rest.resource",
+      "CapabilityStatement.rest.resource.interaction",
+      "CapabilityStatement.rest.resource.searchParam",
+      "CapabilityStatement.rest.resource.supportedProfile"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber": [
+      "Composition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation": [
+      "Specimen.collection.quantity"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/quantity-precision": [
+      "Specimen.collection.quantity"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/translation": [
+      "BodyStructure.description",
+      "CapabilityStatement.description",
+      "CapabilityStatement.name",
+      "CapabilityStatement.publisher",
+      "CapabilityStatement.rest.resource.searchParam.documentation",
+      "CapabilityStatement.title",
+      "Composition.section.title",
+      "Composition.title",
+      "DiagnosticReport.conclusion",
+      "DiagnosticReport.media.comment",
+      "ImplementationGuide.definition.page.page.page.title",
+      "ImplementationGuide.definition.page.page.title",
+      "ImplementationGuide.definition.page.title",
+      "ImplementationGuide.definition.resource.description",
+      "ImplementationGuide.definition.resource.name",
+      "ImplementationGuide.name",
+      "ImplementationGuide.publisher",
+      "ImplementationGuide.title",
+      "Organization.name",
+      "StructureDefinition.description",
+      "StructureDefinition.differential.element.comment",
+      "StructureDefinition.differential.element.definition",
+      "StructureDefinition.differential.element.short",
+      "StructureDefinition.name",
+      "StructureDefinition.publisher",
+      "StructureDefinition.snapshot.element.comment",
+      "StructureDefinition.snapshot.element.definition",
+      "StructureDefinition.snapshot.element.short",
+      "StructureDefinition.title",
+      "ValueSet.compose.include.filter.value",
+      "ValueSet.description",
+      "ValueSet.name",
+      "ValueSet.publisher",
+      "ValueSet.title"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact": [
+      "DiagnosticReport"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page",
+      "ImplementationGuide.definition.page.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/EinstellungBlutversorgung": [
+      "Specimen.collection"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen": [
+      "Specimen.processing"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-ebene": [
+      "Specimen"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable": [
+      "StructureDefinition"
+    ]
+  }
+}

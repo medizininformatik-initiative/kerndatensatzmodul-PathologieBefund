@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-patho-media-modality-snomed-ct"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-patho-media-modality-snomed-ct</b></p><a name="mii-vs-patho-media-modality-snomed-ct"> </a><a name="hcmii-vs-patho-media-modality-snomed-ct"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>English (English, en)</b></td></tr><tr><td><a href="http://snomed.info/id/706821004">706821004</a></td><td>Scanner (physical object)</td><td>Scanner (physical object)</td></tr><tr><td><a href="http://snomed.info/id/706582001">706582001</a></td><td>Microscope camera (physical object)</td><td>Microscope camera (physical object)</td></tr><tr><td><a href="http://snomed.info/id/14364002">14364002</a></td><td>Camera, device (physical object)</td><td>Camera, device (physical object)</td></tr><tr><td><a href="http://snomed.info/id/701627004">701627004</a></td><td>Multi-purpose digital medical camera (physical object)</td><td>Multi-purpose digital medical camera (physical object)</td></tr><tr><td><a href="http://snomed.info/id/409903006">409903006</a></td><td>External camera (physical object)</td><td>External camera (physical object)</td></tr></table></li></ul></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-patho-media-modality-snomed-ct</b></p><a name="en-mii-vs-patho-media-modality-snomed-ct"> </a><a name="en-hcmii-vs-patho-media-modality-snomed-ct"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>English (English, en)</b></td></tr><tr><td><a href="http://snomed.info/id/706821004">706821004</a></td><td>Scanner (physical object)</td><td>Scanner (physical object)</td></tr><tr><td><a href="http://snomed.info/id/706582001">706582001</a></td><td>Microscope camera (physical object)</td><td>Microscope camera (physical object)</td></tr><tr><td><a href="http://snomed.info/id/14364002">14364002</a></td><td>Camera, device (physical object)</td><td>Camera, device (physical object)</td></tr><tr><td><a href="http://snomed.info/id/701627004">701627004</a></td><td>Multi-purpose digital medical camera (physical object)</td><td>Multi-purpose digital medical camera (physical object)</td></tr><tr><td><a href="http://snomed.info/id/409903006">409903006</a></td><td>External camera (physical object)</td><td>External camera (physical object)</td></tr></table></li></ul></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct"/>
+  <version value="2027.0.0-ballot.rc"/>
+  <name value="MII_VS_Patho_Media_Modality_SNOMED_CT">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="MII_VS_Patho_Media_Modality_SNOMED_CT"/>
+      </extension>
+    </extension>
+  </name>
+  <title value="MII VS Patho Media Modality [SNOMED CT]">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="MII VS Patho Media Modality [SNOMED CT]"/>
+      </extension>
+    </extension>
+  </title>
+  <status value="active"/>
+  <date value="2026-09-01T13:18:58+00:00"/>
+  <publisher value="Medizininformatik-Initiative">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medizininformatik-Initiative"/>
+      </extension>
+    </extension>
+  </publisher>
+  <contact>
+    <name value="Medizininformatik-Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet with some of the main Media.modalities needed in the pathological scope">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="ValueSet with some of the main Media.modalities needed in the pathological scope"/>
+      </extension>
+    </extension>
+  </description>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="706821004"/>
+        <display value="Scanner (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Scanner (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="706582001"/>
+        <display value="Microscope camera (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Microscope camera (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="14364002"/>
+        <display value="Camera, device (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Camera, device (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="701627004"/>
+        <display value="Multi-purpose digital medical camera (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="Multi-purpose digital medical camera (physical object)"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="409903006"/>
+        <display value="External camera (physical object)"/>
+        <designation>
+          <language value="en"/>
+          <value value="External camera (physical object)"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,45 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-patho-composition-type-snomed-ct",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-patho-composition-type-snomed-ct</b></p><a name=\"mii-vs-patho-composition-type-snomed-ct\"> </a><a name=\"hcmii-vs-patho-composition-type-snomed-ct\"> </a><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  is-a 371528001 (Pathology report)</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct",
+  "version" : "2027.0.0-ballot.rc",
+  "name" : "MII_VS_Patho_Composition_Type_SNOMED_CT",
+  "title" : "MII VS Patho Composition Type [Snomed CT]",
+  "status" : "active",
+  "date" : "2026-09-01T13:18:58+00:00",
+  "publisher" : "Medizininformatik-Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik-Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    },
+    {
+      "system" : "email",
+      "value" : "info@medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "ValueSet for the types a pathology Composition can have",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "371528001"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "resourceType" : "BodyStructure",
+  "id" : "mii-exa-patho-prostate-body-structure",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: BodyStructure mii-exa-patho-prostate-body-structure</b></p><a name=\"mii-exa-patho-prostate-body-structure\"> </a><a name=\"hcmii-exa-patho-prostate-body-structure\"> </a><blockquote><p><b>R5: Included anatomic location(s) (new)</b></p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/structure\">structure</a></blockquote><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 717007000}\">Apical peripheral zone of prostate</span></p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/laterality\">laterality</a></blockquote><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 24028007}\">Right (qualifier value)</span></p><p><b>landmarkDescription</b>: <span title=\"Codes:{http://snomed.info/sct 68756004}\">Structure of apex of prostate</span></p><p><b>surfaceOrientation</b>: <span title=\"Codes:{http://snomed.info/sct 255551008}\">Posterior</span></p><blockquote><p><b>distanceFromLandmark</b></p><ul><li>value: 15 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></li></ul></blockquote><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/bodyLandmarkOrientation\">bodyLandmarkOrientation</a></blockquote></blockquote><p><b>active</b>: true</p><p><b>location</b>: <span title=\"Codes:{http://snomed.info/sct 717007000}\">Apical peripheral zone of prostate</span></p><p><b>locationQualifier</b>: <span title=\"Codes:{http://snomed.info/sct 24028007}\">Right (qualifier value)</span></p><p><b>description</b>: Rechte apikale periphere Zone der Prostata, posterior, 15 mm proximal des Apex</p><p><b>patient</b>: <a href=\"Patient-mii-exa-patho-patient-12345.html\">Max Mustermann  Male, DoB: 1959-08-24</a></p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: BodyStructure mii-exa-patho-prostate-body-structure</b></p><a name=\"en-mii-exa-patho-prostate-body-structure\"> </a><a name=\"en-hcmii-exa-patho-prostate-body-structure\"> </a><blockquote><p><b>R5: Included anatomic location(s) (new)</b></p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/structure\">structure</a></blockquote><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 717007000}\">Apical peripheral zone of prostate</span></p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/laterality\">laterality</a></blockquote><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 24028007}\">Right (qualifier value)</span></p><p><b>landmarkDescription</b>: <span title=\"Codes:{http://snomed.info/sct 68756004}\">Structure of apex of prostate</span></p><p><b>surfaceOrientation</b>: <span title=\"Codes:{http://snomed.info/sct 255551008}\">Posterior</span></p><blockquote><p><b>distanceFromLandmark</b></p><ul><li>value: 15 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></li></ul></blockquote><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/bodyLandmarkOrientation\">bodyLandmarkOrientation</a></blockquote></blockquote><p><b>active</b>: true</p><p><b>location</b>: <span title=\"Codes:{http://snomed.info/sct 717007000}\">Apical peripheral zone of prostate</span></p><p><b>locationQualifier</b>: <span title=\"Codes:{http://snomed.info/sct 24028007}\">Right (qualifier value)</span></p><p><b>description</b>: Right apical peripheral zone of the prostate, posterior, 15 mm proximal to the apex</p><p><b>patient</b>: <a href=\"Patient-mii-exa-patho-patient-12345.html\">Max Mustermann  Male, DoB: 1959-08-24</a></p></div></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "structure",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "717007000",
+          "display" : "Apical peripheral zone of prostate"
+        }]
+      }
+    },
+    {
+      "url" : "laterality",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "24028007",
+          "display" : "Right (qualifier value)"
+        }]
+      }
+    },
+    {
+      "extension" : [{
+        "url" : "landmarkDescription",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "68756004",
+            "display" : "Structure of apex of prostate"
+          }]
+        }
+      },
+      {
+        "url" : "surfaceOrientation",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "255551008",
+            "display" : "Posterior"
+          }]
+        }
+      },
+      {
+        "extension" : [{
+          "url" : "value",
+          "valueQuantity" : {
+            "value" : 15,
+            "unit" : "mm",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mm"
+          }
+        }],
+        "url" : "distanceFromLandmark"
+      }],
+      "url" : "bodyLandmarkOrientation"
+    }],
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure"
+  }],
+  "active" : true,
+  "location" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "717007000",
+      "display" : "Apical peripheral zone of prostate"
+    }]
+  },
+  "locationQualifier" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "24028007",
+      "display" : "Right (qualifier value)"
+    }]
+  }],
+  "description" : "Rechte apikale periphere Zone der Prostata, posterior, 15 mm proximal des Apex",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Right apical peripheral zone of the prostate, posterior, 15 mm proximal to the apex"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "patient" : {
+    "reference" : "Patient/mii-exa-patho-patient-12345"
+  }
+}

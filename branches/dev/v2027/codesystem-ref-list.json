@@ -1,0 +1,81 @@
+{
+  "codeSystems" : [{
+    "url" : "http://dvmd.de/fhir/CodeSystem/kdl",
+    "version" : "2025",
+    "status" : "active",
+    "name" : "CodeSystemKDL",
+    "title" : "CodeSystem Klinische Dokumentenklassen-Liste (Version 2025)",
+    "description" : "Diese CodeSystem-Ressource definiert alle in der Klinischen Dokumentenklassen-Liste aktuell gültigen Codes.",
+    "oids" : ["1.2.276.0.76.5.553"],
+    "uses" : {
+    },
+    "ValueSet-mii-vs-patho-composition-type-kdl.html" : "MII VS Patho Composition Type KDL"
+  },
+  {
+    "url" : "http://loinc.org",
+    "version" : "3.1.0",
+    "status" : "active",
+    "name" : "LOINC",
+    "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+    "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+    "oids" : ["2.16.840.1.113883.6.1"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-doc-typecodes.html" : "FHIR Document Type Codes",
+    "http://hl7.org/fhir/R4/valueset-doc-section-codes.html" : "Document Section Codes",
+    "ValueSet-mii-vs-patho-section-types-loinc.html" : "MII VS Patho Section Types [LOINC]",
+    "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set",
+    "http://hl7.org/fhir/R4/valueset-report-codes.html" : "LOINC Diagnostic Report Codes",
+    "ValueSet-mii-vs-patho-service-request-code.html" : "MII VS Patho Service Request Code",
+    "ValueSet-mii-vs-patho-report-code-loinc.html" : "MII VS Patho Report Code [LOINC]",
+    "ValueSet-mii-vs-patho-all-loinc.html" : "MII VS Patho All [LOINC]",
+    "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes"
+  },
+  {
+    "url" : "http://snomed.info/sct",
+    "version" : null,
+    "status" : "active",
+    "name" : "SNOMED_CT",
+    "title" : "SNOMED CT (all versions)",
+    "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+    "oids" : ["2.16.840.1.113883.6.96"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+    "http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html" : "SNOMED CT Medication As Needed Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-body-structures-sct" : "MII VS Biobank BodyStructures SCT",
+    "ValueSet-mii-vs-patho-collection-method-snomed-ct.html" : "MII VS Patho Collection Method [SNOMED CT]",
+    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
+    "ValueSet-mii-vs-patho-problem-list-snomed-ct.html" : "MII VS Patho Problem List [SNOMED CT]",
+    "ValueSet-mii-vs-patho-service-request-code.html" : "MII VS Patho Service Request Code",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html" : "Service Request Order Details Codes",
+    "ValueSet-mii-vs-patho-media-modality-snomed-ct.html" : "MII VS Patho Media Modality [SNOMED CT]",
+    "ValueSet-mii-vs-patho-composition-type-snomed-ct.html" : "MII VS Patho Composition Type [Snomed CT]",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "http://hl7.org/fhir/R4/valueset-media-view.html" : "Media Collection View/Projection",
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-probenart-sct" : "MII VS Biobank Probenart SCT",
+    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
+    "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-laboratory-procedure-sct" : "MII VS Biobank Laboratory Procedure SCT",
+    "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
+    "ValueSet-mii-vs-patho-processing-procedure-snomed-ct.html" : "MII VS Patho Processing Procedure [SNOMED CT]",
+    "http://hl7.org/fhir/R4/valueset-participant-role.html" : "Participant Roles",
+    "ValueSet-mii-vs-patho-container-type-snomed-ct.html" : "MII VS Patho Container Type [SNOMED CT]",
+    "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+    "http://hl7.org/fhir/R4/valueset-servicerequest-category.html" : "Service Request Category Codes"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "DiagnosticServiceSectionId",
+    "title" : "diagnosticServiceSectionId",
+    "description" : "HL7-defined code system of concepts which specify a section of a diagnostic service where the observation may be performed.  Used in HL7 Version 2.x messaging in the OBR and OM4 segments.",
+    "oids" : ["2.16.840.1.113883.18.29"],
+    "uses" : {
+    },
+    "ValueSet-mii-vs-patho-report-category-hl7.html" : "MII VS Patho Report Category HL7"
+  }]
+}

@@ -1,0 +1,115 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-patho-composition-type-kdl",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-patho-composition-type-kdl</b></p><a name=\"mii-vs-patho-composition-type-kdl\"> </a><a name=\"hcmii-vs-patho-composition-type-kdl\"> </a><ul><li>Include these codes as defined in <a href=\"https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl\"><code>http://dvmd.de/fhir/CodeSystem/kdl</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 2025, the version found through the package references\"> version &#x1F4E6;2025</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>English (English, en)</b></td></tr><tr><td><a href=\"https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl#kdl-cs-2025-PT080102\">PT080102</a></td><td>Histologiebefund</td><td>Die Dokumentation beinhaltet Ergebnisse einer Untersuchung zur Bestimmung von Veränderungen anhand von Gewebeproben.</td><td>Histology report</td></tr><tr><td><a href=\"https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl#kdl-cs-2025-PT130102\">PT130102</a></td><td>Molekularpathologiebefund</td><td>Die Dokumentation beinhaltet Ergebnisse einer Untersuchung der Erbinformationen auf Veränderungen. Inkl.: Zytogenetikbefund</td><td>Molecular pathology report</td></tr><tr><td><a href=\"https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl#kdl-cs-2025-PT260102\">PT260102</a></td><td>Zytologiebefund</td><td>Die Dokumentation beinhaltet Ergebnisse einer Untersuchung zur Bestimmung von Veränderungen anhand von Zellproben.</td><td>Cytology report</td></tr></table></li></ul></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-patho-composition-type-kdl</b></p><a name=\"en-mii-vs-patho-composition-type-kdl\"> </a><a name=\"en-hcmii-vs-patho-composition-type-kdl\"> </a><ul><li>Include these codes as defined in <a href=\"https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl\"><code>http://dvmd.de/fhir/CodeSystem/kdl</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 2025, the version found through the package references\"> version &#x1F4E6;2025</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>English (English, en)</b></td></tr><tr><td><a href=\"https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl#kdl-cs-2025-PT080102\">PT080102</a></td><td>Histologiebefund</td><td>Die Dokumentation beinhaltet Ergebnisse einer Untersuchung zur Bestimmung von Veränderungen anhand von Gewebeproben.</td><td>Histology report</td></tr><tr><td><a href=\"https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl#kdl-cs-2025-PT130102\">PT130102</a></td><td>Molekularpathologiebefund</td><td>Die Dokumentation beinhaltet Ergebnisse einer Untersuchung der Erbinformationen auf Veränderungen. Inkl.: Zytogenetikbefund</td><td>Molecular pathology report</td></tr><tr><td><a href=\"https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl#kdl-cs-2025-PT260102\">PT260102</a></td><td>Zytologiebefund</td><td>Die Dokumentation beinhaltet Ergebnisse einer Untersuchung zur Bestimmung von Veränderungen anhand von Zellproben.</td><td>Cytology report</td></tr></table></li></ul></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl",
+  "version" : "2027.0.0-ballot.rc",
+  "name" : "MII_VS_Patho_Composition_Type_KDL",
+  "_name" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "MII_VS_Patho_Composition_Type_KDL"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "title" : "MII VS Patho Composition Type KDL",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "MII VS Patho Composition Type KDL"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "status" : "active",
+  "date" : "2026-09-01T13:18:58+00:00",
+  "publisher" : "Medizininformatik-Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik-Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik-Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    },
+    {
+      "system" : "email",
+      "value" : "info@medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "ValueSet for the categorization of Pathology Report documents",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "ValueSet for the categorization of Pathology Report documents"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://dvmd.de/fhir/CodeSystem/kdl",
+      "concept" : [{
+        "code" : "PT080102",
+        "display" : "Histologiebefund",
+        "designation" : [{
+          "language" : "en",
+          "value" : "Histology report"
+        }]
+      },
+      {
+        "code" : "PT130102",
+        "display" : "Molekularpathologiebefund",
+        "designation" : [{
+          "language" : "en",
+          "value" : "Molecular pathology report"
+        }]
+      },
+      {
+        "code" : "PT260102",
+        "display" : "Zytologiebefund",
+        "designation" : [{
+          "language" : "en",
+          "value" : "Cytology report"
+        }]
+      }]
+    }]
+  }
+}
