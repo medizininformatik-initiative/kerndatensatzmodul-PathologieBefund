@@ -31,3 +31,5 @@ input/fsh/externe-referenzen
 # nicht Teil der Spezifikation. ACHTUNG: falls spaeter die Recipes aus dem
 # MII-Modul-Geruest uebernommen werden, muss diese Regel praezisiert werden.
 /docs/
+# Vom IG Publisher bei jedem Build ins Repo-Wurzelverzeichnis geschrieben
+/Requirements-fromNarrative.json
