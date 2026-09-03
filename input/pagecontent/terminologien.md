@@ -36,20 +36,29 @@ Die **Maßeinheiten bei Messwerten** müssen zwingend in [UCUM](http://unitsofme
 Für die Kodierung von **Proben** und **Prozeduren** wird [SNOMED-CT](http://www.snomed.org/) verwendet. 
 
 ---------------------
+
 ### Färbungen
 
 Für **Färbeprozeduren** wird folgendes Vorgehen empfohlen:
-- **Histologische und zytologische Färbungen** können in SCT entweder als präkoordinierte Procedure (z.B alle Children von [127790008](https://browser.ihtsdotools.org/?perspective=full&conceptId1=127790008&edition=MAIN/2022-05-31&release=&languages=en)) oder als Kombination von Färbeprozess (127790008) und den verwendeten Farbstoffen (alle children von [397165007](https://browser.ihtsdotools.org/?perspective=full&conceptId1=397165007&edition=MAIN/2022-05-31&release=&languages=en) oder [45389009](https://browser.ihtsdotools.org/?perspective=full&conceptId1=45389009&edition=MAIN/2022-05-31&release=&languages=en)) als Additiv (Substance) kodiert werden. Hierbei kann ein Färbeprozess mittels [Specimen.processing.procedure](http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.procedure) abgebildet werden, während die dazu gehörigen Färbesubstanzen über [Specimen.processing.additive](http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.additive) über eine Referenz zu einer oder mehreren Substance Ressourcen abzubilden wären. 
-- Für **Immunhistochemische Färbungen und in-situ-Hybridisierungen (ISH)** stehen in SCT nur wenige präkoordinierte Konzepte zur Verfügung. Auch hier bietet sich die Kombination von Färbeprozess [406867009](https://browser.ihtsdotools.org/?perspective=full&conceptId1=406867009&edition=MAIN/2022-05-31&release=&languages=en) oder [13269000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=13269000&edition=MAIN/2022-05-31&release=&languages=en) mit den Antikörpern/Antigenen und Chromogenen als .substance bzw. ingredient.substance an. 
 
-Außerdem ist in ein Postkoordinierter Färbeprozess kodierbar: 
-- Färbeprozess(procedure):usingSubstance=Farbstoff oder =Antikörper 
-- Färbeprozess(procedure):directSubstance=Zielantigen 
+- **Histologische und zytologische Färbungen** können in SNOMED CT entweder als präkoordinierte Prozedur (alle Children von [127790008 Staining method](https://browser.ihtsdotools.org/?perspective=full&conceptId1=127790008)) oder als Kombination von Färbeprozess und den verwendeten Farbstoffen (Children von [397165007 Stain](https://browser.ihtsdotools.org/?perspective=full&conceptId1=397165007) bzw. [45389009 Tissue stain](https://browser.ihtsdotools.org/?perspective=full&conceptId1=45389009)) kodiert werden. Der Färbeprozess wird über [Specimen.processing.procedure](http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.procedure) abgebildet, die zugehörigen Färbesubstanzen über [Specimen.processing.additive](http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.additive) als Referenz auf eine oder mehrere Substance-Ressourcen.
+- Für **immunhistochemische Färbungen** steht mit [117617002 Immunohistochemistry procedure](https://browser.ihtsdotools.org/?perspective=full&conceptId1=117617002) ein präkoordiniertes Konzept zur Verfügung. Für Immunfluoreszenz ist [406867009 Immunofluorescent stain method](https://browser.ihtsdotools.org/?perspective=full&conceptId1=406867009) einschlägig, für zytologische Präparate [13269000 Immunocytochemical stain](https://browser.ihtsdotools.org/?perspective=full&conceptId1=13269000). Der verwendete Antikörper bzw. das Zielantigen sowie das Chromogen werden als Additiv (Substance) angegeben.
+- Für **in-situ-Hybridisierungen (ISH), PCR-, Methylierungs- und NGS-Untersuchungen** sollte die terminologische Harmonisierung über die entsprechenden Profile des Erweiterungsmoduls [Molekulares Tumorboard](https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard) erfolgen.
+
+**Wenn kein SNOMED-CT-Konzept existiert:** Für viele Antikörper führt SNOMED CT keinen Code — p63 beispielsweise ist in der Internationalen Edition nicht enthalten. In diesen Fällen ist ein lokaler Code in `Substance.code` zulässig; er sollte in einem Namensraum der eigenen Einrichtung liegen und über `Specimen.processing.additive` referenziert werden. Für die strukturierte Angabe des Antikörpertyps steht zusätzlich [1236876007 Type of antibody used in immunohistochemistry technique](https://browser.ihtsdotools.org/?perspective=full&conceptId1=1236876007) zur Verfügung.
+
+Außerdem ist ein postkoordinierter Färbeprozess kodierbar:
+
+- Färbeprozess(procedure):usingSubstance=Farbstoff oder =Antikörper
+- Färbeprozess(procedure):directSubstance=Zielantigen
 - oder eine Kombination dieser Kodierungen.
 
 Bei postkoordinierten Codes sei allerdings zu beachten, dass diese ohne einen dafür geeigneten Terminologieserver kaum auswertbar sind. Aus diesem Grund wäre unsere Empfehlung erstmal die Zusammenhänge von Färbeprozessen und deren jeweiligen Färbesubstanzen auf das FHIR Informationsmodell zu übertragen, und diese mithilfe von .processing.procedure und .processing.additive abzubilden.
 
+Die im Modul verwendeten Bearbeitungsprozeduren sind im ValueSet [MII VS Patho Processing Procedure [SNOMED CT]](ValueSet-mii-vs-patho-processing-procedure-snomed-ct.html) zusammengefasst. Ein eigenes ValueSet für Färbesubstanzen ist in Vorbereitung.
+
 -------------------------
+
 ### Modul ValueSets
 
 Zusätzlich zu o.g. und weiteren internationalen Terminologien (ICD-O-3 und UICC-TNM) werden durch das Modul **Pathologie-Befund**  eigene ValueSets definiert. Es sei darauf hingewiesen, dass alle ValueSets keine Expansion beinhalten. Diese muss vor der Verwendung mittels eines Terminologieservers durchgeführt werden. 

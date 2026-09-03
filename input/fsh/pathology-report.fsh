@@ -58,6 +58,13 @@ In the table below, elements are marked with * that are duplicated in the MII PR
 * insert Translation(extension[related-report] ^short, en-US, Related report)
 * insert Translation(extension[related-report] ^definition, de-DE, Verweis auf Vorbefunde)
 * insert Translation(extension[related-report] ^definition, en-US, Reference to related reports)
+// Der von workflow-relatedArtifact geerbte Kommentar verlinkt auf
+// StructureDefinition-workflow-supportingInfo.html - diese Seite gibt es in
+// diesem IG nicht, der Publisher meldet vier Broken Links (DE+EN, je zwei
+// Tabellenzeilen). Ein eigener, hier zutreffender Kommentar ersetzt ihn.
+* extension[related-report] ^comment = "Verweist auf fachlich zusammenhaengende Vorbefunde desselben oder eines frueheren Falls. Unterstuetzende klinische Informationen zum Auftrag stehen dagegen im MII PR Patho Service Request unter .supportingInfo."
+* insert Translation(extension[related-report] ^comment, de-DE, [[Verweist auf fachlich zusammenhaengende Vorbefunde desselben oder eines frueheren Falls. Unterstuetzende klinische Informationen zum Auftrag stehen dagegen im MII PR Patho Service Request unter .supportingInfo.]])
+* insert Translation(extension[related-report] ^comment, en-US, [[References previous reports that are related in content, from the same or an earlier case. Supporting clinical information on the request is instead found in the MII PR Patho Service Request under .supportingInfo.]])
 // R5-Cross-Version-Extension: Verweis auf die zugehoerige Composition (Angleichung an HL7 EU Lab Report).
 // Optional (kein Breaking Change); ermoeglicht, den Bericht dokumentenzentrisch ueber die Composition zu rendern.
 * extension contains $r5-diagnosticreport-composition named composition 0..1 MS
@@ -532,7 +539,7 @@ Description: "Example for MII_PR_Patho_Report"
 Instance: mii-exa-patho-report
 InstanceOf: mii-pr-patho-report
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc1"
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].value = "E21.12345"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
@@ -640,7 +647,7 @@ Description: "Example for an MII_PR_Patho_Composition"
 Instance: mii-exa-patho-composition
 InstanceOf: mii-pr-patho-composition
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot.rc"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot.rc1"
 * text.div = "
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
   <div id=\"befund-titel\">

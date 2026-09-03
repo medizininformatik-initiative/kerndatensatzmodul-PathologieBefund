@@ -227,7 +227,7 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 Instance: mii-exa-patho-prostate-tru-cut-biopsy-sample
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -257,7 +257,7 @@ Usage: #example
 Instance: mii-exa-patho-prostate-biopsy-block
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -285,7 +285,7 @@ Usage: #example
 Instance: mii-exa-patho-prostate-biopsy-schnitt-HE
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -315,7 +315,7 @@ Usage: #example
 Instance: mii-exa-patho-prostate-biopsy-schnitt-p63
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -426,7 +426,7 @@ InstanceOf: mii-pr-patho-specimen
 Usage: #example
 Title: "MII EXA Patho Prostate Resection Sample"
 Description: "Radikalprostatektomie-Praeparat als Einsendeprobe (Part)"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"
 * identifier[+]
   * type = $v2-0203#PLAC
   * system = "https://urologie.example-hospital.de/fhir/specimen/placer"
@@ -487,7 +487,7 @@ InstanceOf: mii-pr-patho-specimen
 Usage: #example
 Title: "MII EXA Patho Breast Resection Sample"
 Description: "BET-Exzisionspraeparat der linken Mamma als Einsendeprobe (Part), mit Draht- und Fadenmarkierungen"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"
 * identifier[+]
   * type = $v2-0203#PLAC
   * system = "https://senologie.example-hospital.de/fhir/specimen/placer"

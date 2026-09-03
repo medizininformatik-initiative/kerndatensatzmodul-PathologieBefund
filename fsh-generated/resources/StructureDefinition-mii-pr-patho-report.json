@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-report",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report",
-  "version": "2027.0.0-ballot.rc",
+  "version": "2027.0.0-ballot.rc1",
   "name": "MII_PR_Patho_Report",
   "title": "MII PR Patho Report",
   "_title": {
@@ -168,6 +168,37 @@
                 {
                   "url": "content",
                   "valueString": "Reference to related reports"
+                }
+              ]
+            }
+          ]
+        },
+        "comment": "Verweist auf fachlich zusammenhaengende Vorbefunde desselben oder eines frueheren Falls. Unterstuetzende klinische Informationen zum Auftrag stehen dagegen im MII PR Patho Service Request unter .supportingInfo.",
+        "_comment": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Verweist auf fachlich zusammenhaengende Vorbefunde desselben oder eines frueheren Falls. Unterstuetzende klinische Informationen zum Auftrag stehen dagegen im MII PR Patho Service Request unter .supportingInfo."
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "en-US"
+                },
+                {
+                  "url": "content",
+                  "valueString": "References previous reports that are related in content, from the same or an earlier case. Supporting clinical information on the request is instead found in the MII PR Patho Service Request under .supportingInfo."
                 }
               ]
             }

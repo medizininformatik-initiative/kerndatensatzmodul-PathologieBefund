@@ -850,6 +850,12 @@
           "context": "ImplementationGuide.definition.page.title",
           "source": "Hinweise zur Übersetzung",
           "target": "Translation information"
+        },
+        {
+          "id": "ImplementationGuide.definition.page.title",
+          "context": "A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.",
+          "source": "Profile",
+          "target": "Profiles"
         }
       ]
     }

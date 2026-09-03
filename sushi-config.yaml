@@ -9,7 +9,7 @@ name: MII_IG_Modul_Patho
 language: de-DE
 status: active
 experimental: false
-version: 2027.0.0-ballot.rc
+version: 2027.0.0-ballot.rc1
 date: "2026-09-01"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
@@ -63,6 +63,8 @@ pages:
       title: UML
     hierarchie.md:
       title: Hierarchie und Workflow
+  profile.md:
+    title: Profile
   terminologien.md:
     title: Terminologien
   referenzen.md:
@@ -92,6 +94,7 @@ menu:
     Hierarchie und Workflow: hierarchie.html
   Artefakte:
     Übersicht: artifacts.html
+    Profile: profile.html
     Terminologien: terminologien.html
   Referenzen: referenzen.html
   Downloads: downloads.html

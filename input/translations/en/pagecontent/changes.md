@@ -1,4 +1,4 @@
-### 2027.0.0-ballot.rc
+### 2027.0.0-ballot.rc1
 - `documentation` References to the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) added as a reference example
 - `documentation` References to originalText/narrativeLink removed from the section grouper description
 - `documentation` Text "one grouper per preparation" removed from all grouper profile pages (#249)

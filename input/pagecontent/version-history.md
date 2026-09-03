@@ -2,7 +2,7 @@ Das Modul Pathologie-Befund folgt der Versionierung des MII-Kerndatensatzes: Ein
 
 | Bestandteil | Wert |
 |---|---|
-| Aktuelle Version | 2027.0.0-ballot.rc |
+| Aktuelle Version | 2027.0.0-ballot.rc1 |
 | Package-ID | de.medizininformatikinitiative.kerndatensatz.patho |
 | Canonical | https://www.medizininformatik-initiative.de/fhir/ext/modul-patho |
 | FHIR-Version | R4 (4.0.1) |
