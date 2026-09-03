@@ -1,0 +1,141 @@
+# Release-Fassung auf GitHub Pages veroeffentlichen.
+#
+# Purpose:   Kopiert einen bereits gebauten und geprueften Branch-Preview nach
+#            gh-pages/<version>/ und erzeugt die Wurzel-Landingpage. Damit
+#            bekommt eine Release-Fassung eine versionsstabile, oeffentliche
+#            URL, ohne den -go-publish-Prozess.
+#
+#            BEWUSSTE ENTSCHEIDUNG (2026-09-03): Der IG wird dieses Jahr auf
+#            GitHub Pages gehostet, das Paket ueber Simplifier in die
+#            FHIR-Paketregistry geladen. Der Publisher erzeugt seinen
+#            Release-Header ("… : Release … permanent home") ausschliesslich im
+#            -go-publish-Modus; die hier veroeffentlichten Seiten tragen daher
+#            weiterhin den Kopf "Local Development build". Nachgewiesen am
+#            Vergleich mit kerndatensatz-basis, dessen Preview denselben Kopf
+#            zeigt und nur die -go-publish-Ausgabe den Release-Kopf traegt.
+#
+# Triggers:  ausschliesslich workflow_dispatch. Laeuft nie automatisch.
+#
+# Toggle:    keiner - der manuelle Trigger IST das Gate.
+#
+# Voraussetzung: Der Preview des Quellbranches muss existieren und exakt die
+#            angeforderte Version tragen. Beides wird geprueft; bei Abweichung
+#            bricht der Lauf ab, statt eine falsche Fassung zu veroeffentlichen.
+name: Publish release to GitHub Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Zielverzeichnis auf gh-pages, z. B. 2027.0.0-ballot.rc1"
+        required: true
+        type: string
+      source_branch:
+        description: "Branch, dessen Preview veroeffentlicht wird"
+        required: true
+        default: "dev/v2027"
+        type: string
+
+permissions:
+  contents: write
+
+# Serialisiert mit ig-publisher.yml und cleanup-gh-pages.yml.
+concurrency:
+  group: gh-pages-writes
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: gh-pages
+          persist-credentials: false
+
+      - name: Preview pruefen und Version verifizieren
+        env:
+          VERSION: ${{ inputs.version }}
+          SRC: ${{ inputs.source_branch }}
+        run: |
+          set -euo pipefail
+          src="branches/${SRC}"
+          [ -d "${src}" ] || { echo "::error::Kein Preview unter ${src}. Erst den Branch bauen lassen."; exit 1; }
+          [ -f "${src}/index.html" ] || { echo "::error::${src}/index.html fehlt - unvollstaendiger Preview."; exit 1; }
+          [ -f "${src}/package.tgz" ] || { echo "::error::${src}/package.tgz fehlt."; exit 1; }
+          # Die gerenderte Fassung MUSS die angeforderte Version tragen.
+          built="$(tar -xzOf "${src}/package.tgz" package/package.json | python3 -c 'import json,sys; print(json.load(sys.stdin)["version"])')"
+          echo "Preview traegt Version: ${built}"
+          if [ "${built}" != "${VERSION}" ]; then
+            echo "::error::Preview ist Version ${built}, angefordert wurde ${VERSION}. Erst neu bauen lassen."
+            exit 1
+          fi
+
+      - name: Nach <version>/ kopieren
+        env:
+          VERSION: ${{ inputs.version }}
+          SRC: ${{ inputs.source_branch }}
+        run: |
+          set -euo pipefail
+          rm -rf "${VERSION}"
+          mkdir -p "${VERSION}"
+          cp -R "branches/${SRC}/." "${VERSION}/"
+          # Der .branch-name-Marker gehoert zum Preview-Aufraeumer, nicht zu
+          # einer Release-Fassung - cleanup-gh-pages.yml darf sie nie loeschen.
+          rm -f "${VERSION}/.branch-name"
+          echo "Dateien: $(find "${VERSION}" -type f | wc -l)"
+
+      - name: Wurzel-Landingpage erzeugen
+        env:
+          VERSION: ${{ inputs.version }}
+          SRC: ${{ inputs.source_branch }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          touch .nojekyll
+          cat > index.html <<HTML
+          <!doctype html>
+          <!-- ERZEUGT von .github/workflows/publish-release.yml - nicht von Hand bearbeiten. -->
+          <html lang="de"><head><meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>MII IG Modul Patho</title>
+          <style>
+            body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;max-width:46rem;
+                 margin:3rem auto;padding:0 1.5rem;line-height:1.6;color:#1a1a1a}
+            h1{font-size:1.5rem;margin-bottom:.25rem}
+            p.sub{color:#555;margin-top:0}
+            ul{padding-left:1.2rem} li{margin:.4rem 0}
+            code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px}
+            @media(prefers-color-scheme:dark){
+              body{background:#111;color:#eee} p.sub{color:#aaa} code{background:#222}
+              a{color:#7ab7ff}}
+          </style></head><body>
+          <h1>MII Kerndatensatzmodul Pathologie-Befund</h1>
+          <p class="sub">FHIR Implementation Guide der Medizininformatik-Initiative</p>
+          <ul>
+            <li><a href="./${VERSION}/">${VERSION}</a> — aktuelle Fassung</li>
+            <li><a href="./branches/${SRC}/">Entwicklungsstand</a> — Branch <code>${SRC}</code>, aendert sich laufend</li>
+          </ul>
+          <p>FHIR-Paket: <a href="./${VERSION}/package.tgz">package.tgz</a> ·
+             Quellen: <a href="https://github.com/${REPO}">GitHub</a></p>
+          </body></html>
+          HTML
+
+      - name: Commit und Push
+        env:
+          VERSION: ${{ inputs.version }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          if git diff --cached --quiet; then
+            echo "::notice::Nichts zu veroeffentlichen - ${VERSION} ist bereits aktuell."
+            exit 0
+          fi
+          git commit -m "publish: ${VERSION}"
+          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+          echo "### Veroeffentlicht" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/${VERSION}/" >> "${GITHUB_STEP_SUMMARY}"

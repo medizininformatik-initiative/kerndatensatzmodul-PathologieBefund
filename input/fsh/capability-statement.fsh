@@ -21,7 +21,7 @@ Usage: #definition
 //-------------------
 * rest.resource[+]
   * insert InitResource(#Specimen, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-specimen|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-specimen|2027.0.0-ballot.rc1, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -55,13 +55,13 @@ Usage: #definition
 * rest.resource[+]
   * insert InitResource(#Observation, #SHALL)
   // * insert AddSupportedProfile(mii-pr-patho-base-observation, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-intraoperative-grouper|2027.0.0-ballot.rc, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-macroscopic-grouper|2027.0.0-ballot.rc, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-microscopic-grouper|2027.0.0-ballot.rc, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-finding|2027.0.0-ballot.rc, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-intraoperative-grouper|2027.0.0-ballot.rc1, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-macroscopic-grouper|2027.0.0-ballot.rc1, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-microscopic-grouper|2027.0.0-ballot.rc1, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-finding|2027.0.0-ballot.rc1, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot.rc1, #SHALL)
   // * insert AddSupportedProfile(mii-pr-patho-section-grouper, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-additional-specified-grouper|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-additional-specified-grouper|2027.0.0-ballot.rc1, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -117,7 +117,7 @@ Usage: #definition
 //-------------------
 * rest.resource[+]
   * insert InitResource(#ServiceRequest, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-service-request|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-service-request|2027.0.0-ballot.rc1, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -155,7 +155,7 @@ Usage: #definition
 
 * rest.resource[+]
   * insert InitResource(#DiagnosticReport, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-report|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-report|2027.0.0-ballot.rc1, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -186,7 +186,7 @@ Usage: #definition
 //-------------------
 * rest.resource[+]
   * insert InitResource(#Composition, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-composition|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-composition|2027.0.0-ballot.rc1, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
@@ -221,7 +221,7 @@ Usage: #definition
 //-------------------
 * rest.resource[+]
   * insert InitResource(#Media, #SHALL)
-  * insert AddSupportedProfile(mii-pr-patho-attached-image|2027.0.0-ballot.rc, #SHALL)
+  * insert AddSupportedProfile(mii-pr-patho-attached-image|2027.0.0-ballot.rc1, #SHALL)
   * insert AddInteraction(#read, #SHALL)
   * insert AddInteraction(#search-type, #SHALL)
   // CORE
