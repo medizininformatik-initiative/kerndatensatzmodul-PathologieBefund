@@ -1,4 +1,4 @@
-# MII PR Patho Service Request - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho Service Request - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request | *Version*:2027.0.0-ballot.rc |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_Patho_Service_Request |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Patho_Service_Request |
 
  
 Das Profil **MII PR Patho Service Request** der Ressource [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) stellt die Beschreibung des Auftrags des Klinikers an die Pathologieeinrichtung dar. Dieser ist in der Regel unspezifisch gehalten (“Histologie erbeten”, dies entspricht enem Auftrag zur konsiliarischen Begutachtung), kann aber durch spezielle Fragen untersetzt sein (z.B. “FISH für Her2”, entspricht einem Zielauftrag). Falls mehrere konkrete Untersuchungen beauftragt werden sollen, so muss pro Untersuchung ein **MII PR Patho Service Request** ausgelöst werden, die alle zusammen in der `ServiceRequest.requisition` (entspricht einer Placer Order Group) zusammengefasst werden. 
@@ -119,7 +119,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-service-request",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_Service_Request",
   "_name" : {
     "extension" : [{
@@ -171,7 +171,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

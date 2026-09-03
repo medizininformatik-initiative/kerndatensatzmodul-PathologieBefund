@@ -1,4 +1,4 @@
-# Changelog - MII IG Modul Patho v2027.0.0-ballot.rc
+# Changelog - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Versioning**](version-history.md)
@@ -6,7 +6,7 @@
 
 ## Changelog
 
-### 2027.0.0-ballot.rc
+### 2027.0.0-ballot.rc1
 
 * `documentation` References to the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) added as a reference example
 * `documentation` References to originalText/narrativeLink removed from the section grouper description

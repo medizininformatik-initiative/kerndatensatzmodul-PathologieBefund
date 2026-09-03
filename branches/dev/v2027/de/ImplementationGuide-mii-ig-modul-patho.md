@@ -10,7 +10,7 @@
   "id" : "mii-ig-modul-patho",
   "language" : "de",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_IG_Modul_Patho",
   "_name" : {
     "extension" : [{
@@ -3660,6 +3660,28 @@
           },
           "generation" : "markdown"
         }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "profile.html"
+        }],
+        "nameUrl" : "profile.html",
+        "title" : "Profile",
+        "_title" : {
+          "extension" : [{
+            "extension" : [{
+              "url" : "lang",
+              "valueCode" : "en"
+            },
+            {
+              "url" : "content",
+              "valueString" : "Profiles"
+            }],
+            "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+          }]
+        },
+        "generation" : "markdown"
       },
       {
         "extension" : [{

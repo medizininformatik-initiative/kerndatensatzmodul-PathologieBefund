@@ -1,4 +1,4 @@
-# MII VS Patho Service Request Code - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII VS Patho Service Request Code - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code | *Version*:2027.0.0-ballot.rc |
-| Active as of 2026-09-01 | *Computable Name*:MII_VS_Patho_Service_Request_Code |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Patho_Service_Request_Code |
 
  
 ValueSet for a preferred set of ServiceRequest codes 
@@ -37,7 +37,7 @@ ValueSet for a preferred set of ServiceRequest codes
   "resourceType" : "ValueSet",
   "id" : "mii-vs-patho-service-request-code",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Patho_Service_Request_Code",
   "_name" : {
     "extension" : [{
@@ -67,7 +67,7 @@ ValueSet for a preferred set of ServiceRequest codes
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,4 +1,4 @@
-# mii-exa-patho-diagnostic-conclusion-grouper - MII IG Modul Patho v2027.0.0-ballot.rc
+# mii-exa-patho-diagnostic-conclusion-grouper - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Diagnostic Conclusion Grouper](StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.md) version: 2027.0.0-ballot.rc
+Profile: [MII PR Patho Diagnostic Conclusion Grouper](StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.md) version: 2027.0.0-ballot.rc1
 
 **status**: Final
 
@@ -40,7 +40,7 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouper](StructureDefinition-mii-pr
   "resourceType" : "Observation",
   "id" : "mii-exa-patho-diagnostic-conclusion-grouper",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot.rc"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot.rc1"]
   },
   "status" : "final",
   "category" : [{

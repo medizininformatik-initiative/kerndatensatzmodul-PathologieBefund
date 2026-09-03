@@ -1,4 +1,4 @@
-# MII PR Patho Report - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho Report - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report | *Version*:2027.0.0-ballot.rc |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_Patho_Report |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Patho_Report |
 
  
 Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). 
@@ -156,7 +156,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-report",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_Report",
   "_name" : {
     "extension" : [{
@@ -208,7 +208,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -386,6 +386,31 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
           {
             "url" : "content",
             "valueString" : "Reference to previous reports"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "comment" : "Verweist auf fachlich zusammenhaengende Vorbefunde desselben oder eines frueheren Falls. Unterstuetzende klinische Informationen zum Auftrag stehen dagegen im MII PR Patho Service Request unter .supportingInfo.",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Verweist auf fachlich zusammenhaengende Vorbefunde desselben oder eines frueheren Falls. Unterstuetzende klinische Informationen zum Auftrag stehen dagegen im MII PR Patho Service Request unter .supportingInfo."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "References previous reports that are related in content, from the same or an earlier case. Supporting clinical information on the request is instead found in the MII PR Patho Service Request under .supportingInfo."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

@@ -7,11 +7,11 @@
     "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-patho-processing-procedure-snomed-ct</b></p><a name=\"mii-vs-patho-processing-procedure-snomed-ct\"> </a><a name=\"hcmii-vs-patho-processing-procedure-snomed-ct\"> </a><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where concept  is-a 108252007 (Laboratory procedure)</li></ul></div>"
   },
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Patho_Processing_Procedure_SNOMED_CT",
   "title" : "MII VS Patho Processing Procedure [SNOMED CT]",
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "contact" : [{
     "name" : "Medizininformatik-Initiative",

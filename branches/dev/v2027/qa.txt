@@ -3,8 +3,8 @@ MII_IG_Modul_Patho : Validation Results
 
 err = 1, warn = 377, info = 523
 IG Publisher Version: 2.3.2 Out of date - current version is 2.3.3
-Generated Tue Sep 01 14:08:36 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-patho)
- Build Errors : 4 / 36 / 0
+Generated Thu Sep 03 08:50:35 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc1 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-patho)
+ Build Errors : 0 / 36 / 0
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/BodyStructure-mii-exa-patho-left-breast-body-structure : 0 / 0 / 17
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/BodyStructure-mii-exa-patho-prostate-body-structure : 0 / 0 / 12
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/CapabilityStatement-mii-cps-patho-capability-statement : 0 / 7 / 6
@@ -117,10 +117,6 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource DiagnosticReport/mii-exa-patho-report.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ServiceRequest/mii-exa-patho-request.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/mii-exa-patho-tissue-length-a.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: de/StructureDefinition-mii-pr-patho-report-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/p/a at Line 443, column 215: The link 'StructureDefinition-workflow-supportingInfo.html' for "supportingInfo extension" cannot be resolved
-ERROR: de/StructureDefinition-mii-pr-patho-report-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/p/a at Line 839, column 215: The link 'StructureDefinition-workflow-supportingInfo.html' for "supportingInfo extension" cannot be resolved
-ERROR: en/StructureDefinition-mii-pr-patho-report-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/p/a at Line 443, column 215: The link 'StructureDefinition-workflow-supportingInfo.html' for "supportingInfo extension" cannot be resolved
-ERROR: en/StructureDefinition-mii-pr-patho-report-definitions.html#/html/body/div/div/div/div/div/div/div/table/tr/td/p/a at Line 839, column 215: The link 'StructureDefinition-workflow-supportingInfo.html' for "supportingInfo extension" cannot be resolved
 WARNING: 1: An HTML fragment from the set [ip-statements.xhtml, ip-statements.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml, cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml, dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
@@ -268,7 +264,7 @@ WARNING: Observation/mii-exa-patho-gleason-pattern-a: Observation: Alle Observat
 WARNING: Observation/mii-exa-patho-gleason-pattern-a: Observation: Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben
 == fsh-generated/resources/Observation-mii-exa-patho-histologic-type-a.json ==
 INFORMATION: Observation/mii-exa-patho-histologic-type-a: Observation.category[1]: Keiner der angegebenen Codes ist im Valueset 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://loinc.org#22635-7)
-INFORMATION: Observation/mii-exa-patho-histologic-type-a: Observation.code.coding[0]: Konnte nicht bestätigen, dass die angegebenen Codes im ValueSet 'MII VS Patho All [LOINC]' (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc|2027.0.0-ballot.rc) enthalten sind, und es wird empfohlen, einen Code aus diesem ValueSet zu verwenden.
+INFORMATION: Observation/mii-exa-patho-histologic-type-a: Observation.code.coding[0]: Konnte nicht bestätigen, dass die angegebenen Codes im ValueSet 'MII VS Patho All [LOINC]' (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc|2027.0.0-ballot.rc1) enthalten sind, und es wird empfohlen, einen Code aus diesem ValueSet zu verwenden.
 WARNING: Observation/mii-exa-patho-histologic-type-a: Observation: Alle Observations sollten ein Subject haben
 WARNING: Observation/mii-exa-patho-histologic-type-a: Observation: Alle Observations sollten einen Performer haben
 WARNING: Observation/mii-exa-patho-histologic-type-a: Observation: Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben
@@ -344,7 +340,7 @@ INFORMATION: Coding.display: Unused 'en' translation 'Structure of lower outer q
 INFORMATION: Coding.display: Unused 'en' translation 'Specimen vial (physical object)' -> 'Specimen vial (physical object)'
 INFORMATION: Annotation.text: Unused 'en' translation 'BET-Exzisionspraeparat Mamma links, unterer aeusserer Quadrant, 5 Uhr, 50 mm von der Mamille. Drahthaekchen und zwei Fadenmarkierungen.' -> 'Breast-conserving excision specimen, left breast, lower outer quadrant, 5 o'clock, 50 mm from the nipple. Wire hook and two suture markings.'
 == fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-block.json ==
-INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-block: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc überein.
+INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-block: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1 überein.
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-block: Specimen.identifier[0].system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-block: Specimen.accessionIdentifier.system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-block: Specimen.type.coding[0].display: There are no valid display names found for the code http://snomed.info/sct#1201985008 for language(s) 'de'. The display is 'Tissue block specimen (specimen)' which is a valid display for the default language
@@ -360,7 +356,7 @@ INFORMATION: Quantity.unit: Unused 'en' translation '°C' -> '°C'
 INFORMATION: Coding.display: Unused 'en' translation 'Preparation of formalin fixed paraffin embedded tissue specimen (procedure)' -> 'Preparation of formalin fixed paraffin embedded tissue specimen (procedure)'
 INFORMATION: Coding.display: Unused 'en' translation 'Tissue cassette (physical object)' -> 'Tissue cassette (physical object)'
 == fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE.json ==
-INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc überein.
+INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1 überein.
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE: Specimen.identifier[0].system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE: Specimen.accessionIdentifier.system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE: Specimen.type.coding[0].display: There are no valid display names found for the code http://snomed.info/sct#430856003 for language(s) 'de'. The display is 'Tissue section (specimen)' which is a valid display for the default language
@@ -376,7 +372,7 @@ INFORMATION: Quantity.unit: Unused 'en' translation '°C' -> '°C'
 INFORMATION: Coding.display: Unused 'en' translation 'Hematoxylin and eosin stain method (procedure)' -> 'Hematoxylin and eosin stain method (procedure)'
 INFORMATION: Coding.display: Unused 'en' translation 'Microscope slide (physical object)' -> 'Microscope slide (physical object)'
 == fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-schnitt-p63.json ==
-INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc überein.
+INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1 überein.
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63: Specimen.identifier[0].system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63: Specimen.accessionIdentifier.system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63: Specimen.type.coding[0].display: There are no valid display names found for the code http://snomed.info/sct#430856003 for language(s) 'de'. The display is 'Tissue section (specimen)' which is a valid display for the default language

@@ -1,4 +1,4 @@
-# MII PR Patho Composition - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho Composition - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition | *Version*:2027.0.0-ballot.rc |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_Patho_Composition |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Patho_Composition |
 
  
 Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5). 
@@ -145,7 +145,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-composition",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_Composition",
   "_name" : {
     "extension" : [{
@@ -197,7 +197,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -7,7 +7,7 @@
     <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide mii-ig-modul-patho</b></p><a name="mii-ig-modul-patho"> </a><a name="hcmii-ig-modul-patho"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>MII_IG_Modul_Patho</h2><p>The official URL for this implementation guide is: </p><pre>https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho</pre></div>
   </text>
   <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho"/>
-  <version value="2027.0.0-ballot.rc"/>
+  <version value="2027.0.0-ballot.rc1"/>
   <name value="MII_IG_Modul_Patho"/>
   <title value="MII IG Modul Patho"/>
   <status value="active"/>
@@ -1467,6 +1467,14 @@
           <title value="Hierarchie und Workflow"/>
           <generation value="markdown"/>
         </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="profile.html"/>
+        </extension>
+        <nameUrl value="profile.html"/>
+        <title value="Profile"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

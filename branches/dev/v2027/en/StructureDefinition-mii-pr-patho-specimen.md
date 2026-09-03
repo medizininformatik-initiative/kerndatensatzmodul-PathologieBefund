@@ -1,4 +1,4 @@
-# MII PR Patho Specimen - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho Specimen - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen | *Version*:2027.0.0-ballot.rc |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_Patho_Specimen |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Patho_Specimen |
 
  
 This profile inherits from [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core) It is based on the HL7 Domain Analysis Model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR). This model, in particular for pathology, accounts for the role model of specimens, which are both the subject and the product of laboratory processes. The root element (Sample) is clinically obtained specimen material from a patient and corresponds to a Part in the pathology workflow. Child elements are blocks and slides, or a cytological preparation. The child specimens (blocks and slides) should always reference at least their direct parent specimen via the Specimen.parent element. 
@@ -59,7 +59,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-spec
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_Specimen",
   "_name" : {
     "extension" : [{
@@ -111,7 +111,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-spec
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

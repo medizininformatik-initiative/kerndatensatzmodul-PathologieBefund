@@ -1,4 +1,4 @@
-# MII LM Patho Logical Model - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII LM Patho Logical Model - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-lm-patho-logical-model | *Version*:2027.0.0-ballot.rc |
-| Active as of 2026-09-01 | *Computable Name*:MII_LM_Patho_Logical_Model |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-lm-patho-logical-model | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_LM_Patho_Logical_Model |
 
  
 Logical Model for the graphical reprensentation of the respective Art-Decor Model 
@@ -37,7 +37,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-patho-logi
   "resourceType" : "StructureDefinition",
   "id" : "mii-lm-patho-logical-model",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-lm-patho-logical-model",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_LM_Patho_Logical_Model",
   "_name" : {
     "extension" : [{
@@ -67,7 +67,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-patho-logi
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

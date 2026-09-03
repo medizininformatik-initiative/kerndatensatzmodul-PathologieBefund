@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Terminologien - MII IG Modul Patho v2027.0.0-ballot.rc</title>
+    <title>Terminologien - MII IG Modul Patho v2027.0.0-ballot.rc1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -67,8 +67,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"5"}
-    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Modul Patho</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
 
 
 
@@ -220,6 +220,9 @@
         <a href="artifacts.html">Übersicht</a>
       </li>
       <li>
+        <a href="profile.html">Profile</a>
+      </li>
+      <li>
         <a href="terminologien.html">Terminologien</a>
       </li>
     </ul>
@@ -296,7 +299,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Modul Patho - Local Development build (v2027.0.0-ballot.rc) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Modul Patho - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Terminologien</h2>
   
 
@@ -368,15 +371,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Für die Kodierung von <strong>Proben</strong> und <strong>Prozeduren</strong> wird <a href="http://www.snomed.org/">SNOMED-CT</a> verwendet.</p>
 
 <hr />
+
 <h3 id="färbungen">Färbungen</h3>
 
 <p>Für <strong>Färbeprozeduren</strong> wird folgendes Vorgehen empfohlen:</p>
+
 <ul>
-  <li><strong>Histologische und zytologische Färbungen</strong> können in SCT entweder als präkoordinierte Procedure (z.B alle Children von <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=127790008&amp;edition=MAIN/2022-05-31&amp;release=&amp;languages=en">127790008</a>) oder als Kombination von Färbeprozess (127790008) und den verwendeten Farbstoffen (alle children von <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=397165007&amp;edition=MAIN/2022-05-31&amp;release=&amp;languages=en">397165007</a> oder <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=45389009&amp;edition=MAIN/2022-05-31&amp;release=&amp;languages=en">45389009</a>) als Additiv (Substance) kodiert werden. Hierbei kann ein Färbeprozess mittels <a href="http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.procedure">Specimen.processing.procedure</a> abgebildet werden, während die dazu gehörigen Färbesubstanzen über <a href="http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.additive">Specimen.processing.additive</a> über eine Referenz zu einer oder mehreren Substance Ressourcen abzubilden wären.</li>
-  <li>Für <strong>Immunhistochemische Färbungen und in-situ-Hybridisierungen (ISH)</strong> stehen in SCT nur wenige präkoordinierte Konzepte zur Verfügung. Auch hier bietet sich die Kombination von Färbeprozess <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=406867009&amp;edition=MAIN/2022-05-31&amp;release=&amp;languages=en">406867009</a> oder <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=13269000&amp;edition=MAIN/2022-05-31&amp;release=&amp;languages=en">13269000</a> mit den Antikörpern/Antigenen und Chromogenen als .substance bzw. ingredient.substance an.</li>
+  <li><strong>Histologische und zytologische Färbungen</strong> können in SNOMED CT entweder als präkoordinierte Prozedur (alle Children von <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=127790008">127790008 Staining method</a>) oder als Kombination von Färbeprozess und den verwendeten Farbstoffen (Children von <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=397165007">397165007 Stain</a> bzw. <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=45389009">45389009 Tissue stain</a>) kodiert werden. Der Färbeprozess wird über <a href="http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.procedure">Specimen.processing.procedure</a> abgebildet, die zugehörigen Färbesubstanzen über <a href="http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.additive">Specimen.processing.additive</a> als Referenz auf eine oder mehrere Substance-Ressourcen.</li>
+  <li>Für <strong>immunhistochemische Färbungen</strong> steht mit <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=117617002">117617002 Immunohistochemistry procedure</a> ein präkoordiniertes Konzept zur Verfügung. Für Immunfluoreszenz ist <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=406867009">406867009 Immunofluorescent stain method</a> einschlägig, für zytologische Präparate <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=13269000">13269000 Immunocytochemical stain</a>. Der verwendete Antikörper bzw. das Zielantigen sowie das Chromogen werden als Additiv (Substance) angegeben.</li>
+  <li>Für <strong>in-situ-Hybridisierungen (ISH), PCR-, Methylierungs- und NGS-Untersuchungen</strong> sollte die terminologische Harmonisierung über die entsprechenden Profile des Erweiterungsmoduls <a href="https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard">Molekulares Tumorboard</a> erfolgen.</li>
 </ul>
 
-<p>Außerdem ist in ein Postkoordinierter Färbeprozess kodierbar:</p>
+<p><strong>Wenn kein SNOMED-CT-Konzept existiert:</strong> Für viele Antikörper führt SNOMED CT keinen Code — p63 beispielsweise ist in der Internationalen Edition nicht enthalten. In diesen Fällen ist ein lokaler Code in <code class="language-plaintext highlighter-rouge">Substance.code</code> zulässig; er sollte in einem Namensraum der eigenen Einrichtung liegen und über <code class="language-plaintext highlighter-rouge">Specimen.processing.additive</code> referenziert werden. Für die strukturierte Angabe des Antikörpertyps steht zusätzlich <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1236876007">1236876007 Type of antibody used in immunohistochemistry technique</a> zur Verfügung.</p>
+
+<p>Außerdem ist ein postkoordinierter Färbeprozess kodierbar:</p>
+
 <ul>
   <li>Färbeprozess(procedure):usingSubstance=Farbstoff oder =Antikörper</li>
   <li>Färbeprozess(procedure):directSubstance=Zielantigen</li>
@@ -385,7 +394,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Bei postkoordinierten Codes sei allerdings zu beachten, dass diese ohne einen dafür geeigneten Terminologieserver kaum auswertbar sind. Aus diesem Grund wäre unsere Empfehlung erstmal die Zusammenhänge von Färbeprozessen und deren jeweiligen Färbesubstanzen auf das FHIR Informationsmodell zu übertragen, und diese mithilfe von .processing.procedure und .processing.additive abzubilden.</p>
 
+<p>Die im Modul verwendeten Bearbeitungsprozeduren sind im ValueSet <a href="ValueSet-mii-vs-patho-processing-procedure-snomed-ct.html">MII VS Patho Processing Procedure [SNOMED CT]</a> zusammengefasst. Ein eigenes ValueSet für Färbesubstanzen ist in Vorbereitung.</p>
+
 <hr />
+
 <h3 id="modul-valuesets">Modul ValueSets</h3>
 
 <p>Zusätzlich zu o.g. und weiteren internationalen Terminologien (ICD-O-3 und UICC-TNM) werden durch das Modul <strong>Pathologie-Befund</strong>  eigene ValueSets definiert. Es sei darauf hingewiesen, dass alle ValueSets keine Expansion beinhalten. Diese muss vor der Verwendung mittels eines Terminologieservers durchgeführt werden.</p>
@@ -420,8 +432,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Tue, Sep 1, 2026 13:59+0000">2026-09-01</span>
+          Package de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Thu, Sep 3, 2026 08:45+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

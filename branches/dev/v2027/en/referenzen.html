@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>References - MII IG Modul Patho v2027.0.0-ballot.rc</title>
+    <title>References - MII IG Modul Patho v2027.0.0-ballot.rc1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -67,8 +67,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"6"}
-    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII IG Modul Patho</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc - 
+            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
 
 
 
@@ -220,6 +220,9 @@
         <a href="artifacts.html">Übersicht</a>
       </li>
       <li>
+        <a href="profile.html">Profile</a>
+      </li>
+      <li>
         <a href="terminologien.html">Terminologien</a>
       </li>
     </ul>
@@ -296,7 +299,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII IG Modul Patho - Local Development build (v2027.0.0-ballot.rc) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII IG Modul Patho - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>References</h2>
   
 
@@ -325,21 +328,20 @@ This page includes translations from the original source language in which the g
 <p>The information model of the module Pathology Report contains references to the following projects:</p>
 
 <ul>
-  <li>
-    <p><a href="https://wiki.ihe.net/index.php/Anatomic_Pathology_Structured_Report">IHE Anatomic Pathology Structured Report (APSR)</a></p>
-  </li>
-  <li>
-    <p><a href="http://hl7.org/fhir/uv/ips/history.html">International Patient Summary (IPS)</a></p>
-  </li>
+  <li><a href="https://wiki.ihe.net/index.php/Anatomic_Pathology_Structured_Report">IHE Anatomic Pathology Structured Report (APSR)</a></li>
+  <li><a href="http://hl7.org/fhir/uv/ips/history.html">International Patient Summary (IPS)</a></li>
+  <li><a href="https://simplifier.net/packages/de.gematik.isik-basismodul/4.0.1">ISiK specification</a></li>
+  <li><a href="https://hl7.eu/fhir/laboratory/">HL7 Europe Laboratory Report</a></li>
 </ul>
 
-<p>The individual references to the APSR ART-DECOR project can be found at the corresponding data elements of the extension module Pathology Report.</p>
+<h3 id="reference-implementations">Reference implementations</h3>
 
-<p>In addition, the module builds on version R4 of the <a href="http://hl7.org/fhir/r4">HL7 FHIR core specification</a>, in particular on the corresponding resources <a href="http://hl7.org/fhir/r4/diagnosticreport.html">DiagnosticReport</a>, <a href="http://hl7.org/fhir/r4/servicerequest.html">ServiceRequest</a>, <a href="http://hl7.org/fhir/r4/specimen.html">Specimen</a> and <a href="http://hl7.org/fhir/r4/observation.html">Observation</a>. In terms of content, the requirements of <a href="https://www.din.de/de/mitwirken/normenausschuesse/nqsz/veroeffentlichungen/wdc-beuth:din21:146320816">DIN EN ISO/IEC 17020:2012</a> are taken into account.</p>
+<p>Complete, exemplary implementations of this module's profiles as separate implementation guides:</p>
 
-<p>This specification was designed on the basis of the description of the MII core data set in the <a href="https://www.medizininformatik-initiative.de/sites/default/files/inline-files/MII_04_Kerndatensatz_1-0.pdf">version of 10 March 2017</a> as well as the data set description in <a href="https://art-decor.org/art-decor/decor-project--mide\-">Art-Decor</a>.</p>
-
-<p>In addition, due to the proximity to the care structures in the hospital, there are references from and to the <a href="https://simplifier.net/packages/de.gematik.isik-basismodul/4.0.1">ISiK specification</a>.</p>
+<ul>
+  <li><a href="https://bih-cei.github.io/ProstateCancerSpec/">Prostate Cancer Spec IG</a> — prostate core biopsy and prostatectomy, with complete narratives in Composition, DiagnosticReport and the grouper observations</li>
+  <li><a href="https://bih-cei.github.io/BreastCancerSpec/">Breast Cancer Spec IG</a> — breast-conserving therapy and breast resection specimen, including localization by means of BodyStructure</li>
+</ul>
 
 
 
@@ -365,8 +367,8 @@ This page includes translations from the original source language in which the g
 
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Tue, Sep 1, 2026 13:59+0000">2026-09-01</span>
+          Package de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Thu, Sep 3, 2026 08:45+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

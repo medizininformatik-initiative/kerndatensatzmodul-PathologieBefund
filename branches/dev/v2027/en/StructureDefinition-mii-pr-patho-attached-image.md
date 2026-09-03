@@ -1,4 +1,4 @@
-# MII PR Patho Attached Image - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho Attached Image - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image | *Version*:2027.0.0-ballot.rc |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_Patho_Attached_Image |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Patho_Attached_Image |
 
  
 The **MII PR Patho Attached Image** profile of the Media resource is used to describe images embedded in the report, i.e. the [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md). To include images in [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md), a reference to an ImagingStudy must be used. The present profile should preferably only be used for the "illustration" of a pathology report. 
@@ -39,7 +39,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-atta
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-attached-image",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_Attached_Image",
   "_name" : {
     "extension" : [{
@@ -91,7 +91,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-atta
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

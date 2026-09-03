@@ -1,4 +1,4 @@
-# MII PR Patho History Of Present Illness - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho History Of Present Illness - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness | *Version*:2027.0.0-ballot.rc |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_Patho_History_Of_Present_Illness |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Patho_History_Of_Present_Illness |
 
  
 The **MII PR Patho History of Present Illness** profile of the [List](http://hl7.org/fhir/R4/list.html) resource represents the description of the anamnesis by the submitter and is part of the "supportingInfo" in the [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.md) profile. 
@@ -39,7 +39,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-hist
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-history-of-present-illness",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_History_Of_Present_Illness",
   "_name" : {
     "extension" : [{
@@ -69,7 +69,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-hist
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

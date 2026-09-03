@@ -1,4 +1,4 @@
-# MII PR Patho Service Request - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho Service Request - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request | *Version*:2027.0.0-ballot.rc |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_Patho_Service_Request |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Patho_Service_Request |
 
  
 The **MII PR Patho Service Request** profile of the [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) resource represents the description of the clinician's order to the pathology facility. This is usually kept unspecific (“Histology requested”, which corresponds to an order for a consultative assessment), but may be underpinned by specific questions (e.g. “FISH for Her2”, corresponding to a targeted order). If several concrete examinations are to be ordered, one **MII PR Patho Service Request** must be triggered per examination, all of which are grouped together in the `ServiceRequest.requisition` (corresponding to a Placer Order Group). 
@@ -41,7 +41,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-serv
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-service-request",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_Service_Request",
   "_name" : {
     "extension" : [{
@@ -93,7 +93,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-serv
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,4 +1,4 @@
-# MII EXA Patho Active Problems List - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII EXA Patho Active Problems List - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Active Problems List](StructureDefinition-mii-pr-patho-active-problems-list.md) version: 2027.0.0-ballot.rc
+Profile: [MII PR Patho Active Problems List](StructureDefinition-mii-pr-patho-active-problems-list.md) version: 2027.0.0-ballot.rc1
 
 | | | |
 | :--- | :--- | :--- |
@@ -30,7 +30,7 @@ Profile: [MII PR Patho Active Problems List](StructureDefinition-mii-pr-patho-ac
   "resourceType" : "List",
   "id" : "mii-exa-patho-active-problems-list",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list|2027.0.0-ballot.rc"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list|2027.0.0-ballot.rc1"]
   },
   "status" : "current",
   "mode" : "snapshot",

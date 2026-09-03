@@ -1,4 +1,4 @@
-# Hinweise zur Übersetzung - MII IG Modul Patho v2027.0.0-ballot.rc
+# Hinweise zur Übersetzung - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Hinweise zur Übersetzung**

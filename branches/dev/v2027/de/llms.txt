@@ -1,9 +1,10 @@
-# de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc: MII IG Modul Patho(de)
+# de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc1: MII IG Modul Patho(de)
 
 ## Pages
 
 * [Kerndatensatz Modul Pathologie-Befund](index.md)
 * [Kontext und Bezüge](kontext.md)
+* [Profile](profile.md)
 * [Terminologien](terminologien.md)
 * [Versionierung](version-history.md)
 * [Szenarien](szenarien.md)

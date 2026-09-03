@@ -1,4 +1,4 @@
-# Hierarchy and workflow - MII IG Modul Patho v2027.0.0-ballot.rc
+# Hierarchy and workflow - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Use cases and information model**](anwendungsfaelle.md)
@@ -142,60 +142,4 @@ Note 3: A final report can also be replaced by a corrective final report. The ru
 Note 4: A new version of a report SHOULD have an Update Organizer in its Diagnostic Conclusion
 
 carrying information about what has been changed in comparison with the immediate previous report, and what is the clinical significance of that change.
-
-### Profile overview and dependencies
-
-#### FHIR profiles
-
-| | |
-| :--- | :--- |
-|   | For mandatory elements or elements marked as must-support, reference is made here to the corresponding[rules of the IPS](http://hl7.org/fhir/uv/ips/STU1/design.html#must-support), which also apply to this implementation guide. |
-
-The work on the core data set specifications is based, wherever possible, on international standards and terminologies. The [Anatomic Pathology Structured Report (APSR)](https://art-decor.org/art-decor/decor-templates--psr-?section=templates&id=1.3.6.1.4.1.19376.1.8.1.1.1&effectiveDate=2014-05-13T11:57:57&language=de-DE) and the [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/history.html) should be highlighted in particular. An adaptation to the general conditions of the German healthcare system is achieved by using the [German base profiles of HL7 Deutschland](https://simplifier.net/basisprofil-de-r4).
-
-All elements of the core data set, adapted to the details and requirements of the use cases of the Medical Informatics Initiative, are described below in the form of FHIR StructureDefinitions. The necessity of adapting the FHIR profiles is explained in textual form below the respective profiles.
-
-#### Requirement documentation
-
-Requirements in this specification are marked by the following keywords written in capital letters, based on [RFC-2119](https://datatracker.ietf.org/doc/html/rfc2119):
-
-| | |
-| :--- | :--- |
-| MUSS / MÜSSEN | MUST / SHALL |
-| DARF NICHT / DÜRFEN NICHT | MUST NOT / SHALL NOT |
-| VERPFLICHTEND | REQUIRED |
-| SOLLTE / SOLLTEN | SHOULD |
-| SOLLTE NICHT / SOLLTEN NICHT | SHOULD NOT |
-| EMPFOHLEN | RECOMMENDED |
-| KANN / OPTIONAL | MAY |
-
-#### Profile overview
-
-* [MII PR Patho Pathology Report (DiagnosticReport)](StructureDefinition-mii-pr-patho-report.md)
-* [MII PR Patho Examination Request (ServiceRequest)](StructureDefinition-mii-pr-patho-service-request.md)
-* [MII PR Patho Specimen (Specimen)](StructureDefinition-mii-pr-patho-specimen.md)
-* [MII PR Patho Report Summary (Composition)](StructureDefinition-mii-pr-patho-composition.md)
-* [MII PR Patho Report Document (Bundle)](StructureDefinition-mii-pr-patho-bundle.md)
-* [MII PR Patho Observation (abstract Observation)](StructureDefinition-mii-pr-patho-base-observation.md)
-* [MII PR Patho Observation Report Section (abstract Observation)](StructureDefinition-mii-pr-patho-section-grouper.md)
-* [MII PR Patho Macroscopic Assessment (Observation)](StructureDefinition-mii-pr-patho-macroscopic-grouper.md)
-* [MII PR Patho Microscopic Assessment (Observation)](StructureDefinition-mii-pr-patho-microscopic-grouper.md)
-* [MII PR Patho Intraoperative Assessment (Observation)](StructureDefinition-mii-pr-patho-intraoperative-grouper.md)
-* [MII PR Patho Diagnostic Conclusion (Observation)](StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.md)
-* [MII PR Patho Additional Observation (Observation)](StructureDefinition-mii-pr-patho-additional-specified-grouper.md)
-* [MII PR Patho Finding (Observation)](StructureDefinition-mii-pr-patho-finding.md)
-* [MII PR Patho Attached Image (Media)](StructureDefinition-mii-pr-patho-attached-image.md)
-* [MII PR Patho Active Problems (List)](StructureDefinition-mii-pr-patho-active-problems-list.md)
-* [MII PR Patho History of Present Illness (List)](StructureDefinition-mii-pr-patho-history-of-present-illness.md)
-* [MII PR Patho Problem (Condition)](StructureDefinition-mii-pr-patho-problem-list-item.md)
-
-#### Pathology observations
-
-All observations in the module Pathology Report have the abstract observation profile **MII PR Base Observation** as their common basis.
-
-![](patho_observation_dependencies_v1.0.0.png)
-
-#### Overall view of all profiles and references
-
-![](patho_profile_relationships_v1.0.0.png)
 

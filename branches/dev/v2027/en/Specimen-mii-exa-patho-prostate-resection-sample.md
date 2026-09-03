@@ -1,4 +1,4 @@
-# MII EXA Patho Prostate Resection Sample - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII EXA Patho Prostate Resection Sample - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) version: 2027.0.0-ballot.rc
+Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) version: 2027.0.0-ballot.rc1
 
 **identifier**: Placer Identifier/OP25_311_A, Filler Identifier/E_25_311_A
 
@@ -54,7 +54,7 @@ Radikalprostatektomie-Praeparat, Tumorregion rechte apikale periphere Zone (post
   "resourceType" : "Specimen",
   "id" : "mii-exa-patho-prostate-resection-sample",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"]
   },
   "identifier" : [{
     "type" : {

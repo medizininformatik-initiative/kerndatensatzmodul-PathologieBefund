@@ -1,4 +1,4 @@
-# Context and references - MII IG Modul Patho v2027.0.0-ballot.rc
+# Context and references - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Context and references**

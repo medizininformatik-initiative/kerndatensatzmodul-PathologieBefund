@@ -5970,7 +5970,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "mii-pr-patho-report","DiagnosticReport.extension:related-report","DiagnosticReport.extension","related-report","","",0,*,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact]]} {[]}
-","Verwandter Bericht","Verweis auf Vorbefunde","Note that in contrast to this extension, the [supportingInfo extension](StructureDefinition-workflow-supportingInfo.html) references other resources *from the patient record* that were used in creating the resource.","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Verwandter Bericht","Verweis auf Vorbefunde","Verweist auf fachlich zusammenhaengende Vorbefunde desselben oder eines frueheren Falls. Unterstuetzende klinische Informationen zum Auftrag stehen dagegen im MII PR Patho Service Request unter .supportingInfo.","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "mii-pr-patho-report","DiagnosticReport.extension:composition","DiagnosticReport.extension","composition","","",0,1,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition]]} {[]}

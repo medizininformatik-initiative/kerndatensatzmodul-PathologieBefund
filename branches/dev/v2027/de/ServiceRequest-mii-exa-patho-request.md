@@ -1,4 +1,4 @@
-# mii-exa-patho-request - MII IG Modul Patho v2027.0.0-ballot.rc
+# mii-exa-patho-request - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.md) version: 2027.0.0-ballot.rc
+Profile: [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.md) version: 2027.0.0-ballot.rc1
 
 **identifier**: Placer Identifier/KHXX_ENDO_18.123451
 
@@ -46,7 +46,7 @@ Profile: [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service
   "resourceType" : "ServiceRequest",
   "id" : "mii-exa-patho-request",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2027.0.0-ballot.rc"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2027.0.0-ballot.rc1"]
   },
   "identifier" : [{
     "type" : {

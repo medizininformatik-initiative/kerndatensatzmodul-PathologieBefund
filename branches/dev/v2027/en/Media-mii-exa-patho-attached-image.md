@@ -1,4 +1,4 @@
-# MII EXA Patho Attached Image - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII EXA Patho Attached Image - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Attached Image](StructureDefinition-mii-pr-patho-attached-image.md) version: 2027.0.0-ballot.rc
+Profile: [MII PR Patho Attached Image](StructureDefinition-mii-pr-patho-attached-image.md) version: 2027.0.0-ballot.rc1
 
 **status**: Completed
 
@@ -36,7 +36,7 @@ Profile: [MII PR Patho Attached Image](StructureDefinition-mii-pr-patho-attached
   "resourceType" : "Media",
   "id" : "mii-exa-patho-attached-image",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|2027.0.0-ballot.rc"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|2027.0.0-ballot.rc1"]
   },
   "status" : "completed",
   "type" : {

@@ -1,4 +1,4 @@
-# MII PR Patho Additional Specified Grouper - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho Additional Specified Grouper - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper | *Version*:2027.0.0-ballot.rc |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_Patho_Additional_Specified_Grouper |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Patho_Additional_Specified_Grouper |
 
  
 Das Profil **MII PR Patho Additional Specified Grouper** der Resource [Observation](http://hl7.org/fhir/R4/observation.html) stellt als `DiagnosticReport.result` für einen [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md) den jeweiligen Beobachtungsberichtsabschnitt "Zusätzliche spezifizierte Beobachtungen" (entspr. dieser CDA-Section) dar und fungiert als Organizer für die entsprechenden Gruppierungen von [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) aus nicht-morphologischen Untersuchungen bzw. aus molekulargenetischen Untersuchungen. 
@@ -81,7 +81,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-additional-specified-grouper",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_Additional_Specified_Grouper",
   "_name" : {
     "extension" : [{
@@ -133,7 +133,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

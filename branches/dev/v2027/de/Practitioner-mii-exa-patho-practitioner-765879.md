@@ -1,4 +1,4 @@
-# mii-exa-patho-practitioner-765879 - MII IG Modul Patho v2027.0.0-ballot.rc
+# mii-exa-patho-practitioner-765879 - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

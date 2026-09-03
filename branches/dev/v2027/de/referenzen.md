@@ -1,4 +1,4 @@
-# Referenzen - MII IG Modul Patho v2027.0.0-ballot.rc
+# Referenzen - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Referenzen**
@@ -9,12 +9,13 @@ Das Informationsmodell zum Modul Pathologie-Befund enthält Referenzen zu folgen
 
 * [IHE Anatomic Pathology Structured Report (APSR)](https://wiki.ihe.net/index.php/Anatomic_Pathology_Structured_Report)
 * [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/history.html)
+* [ISiK Spezifikation](https://simplifier.net/packages/de.gematik.isik-basismodul/4.0.1)
+* [HL7 Europe Laboratory Report](https://hl7.eu/fhir/laboratory/)
 
-Die einzelnen Referenzen auf das APSR ART-DECOR-Projekt sind bei den entsprechenden Datenelementen des Erweiterungsmoduls Pathologie-Befund zu finden.
+### Referenzimplementierungen
 
-Außerdem baut das Modul auf die Version R4 der [Kernspezifikation von HL7 FHIR](http://hl7.org/fhir/r4), insbesondere den entsprechenden Ressourcen [DiagnosticReport](http://hl7.org/fhir/r4/diagnosticreport.html), [ServiceRequest](http://hl7.org/fhir/r4/servicerequest.html), [Specimen](http://hl7.org/fhir/r4/specimen.html) und [Observation](http://hl7.org/fhir/r4/observation.html) auf. Inhaltlich werden die Anforderungen der [DIN EN ISO/IEC 17020:2012](https://www.din.de/de/mitwirken/normenausschuesse/nqsz/veroeffentlichungen/wdc-beuth:din21:146320816) berücksichtigt.
+Vollständige, exemplarische Umsetzungen der Profile dieses Moduls als eigenständige Implementation Guides:
 
-Die vorliegende Spezifikation wurde gestaltet auf Basis der Beschreibung des MII-Kerndatensatzes in der [Version vom 10.03.2017](https://www.medizininformatik-initiative.de/sites/default/files/inline-files/MII_04_Kerndatensatz_1-0.pdf) sowie der Datensatzbeschreibung in [Art-Decor](https://art-decor.org/art-decor/decor-project--mide\-).
-
-Hinzu kommt es aufgrund der Nähe zu den Versorgungsstrukturen im Krankenhaus zu Referenzen von und zur [ISiK Spezifikation](https://simplifier.net/packages/de.gematik.isik-basismodul/4.0.1).
+* [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/) — Prostatastanzbiopsie und Prostatektomie, mit vollständigen Narrativen in Composition, DiagnosticReport und Grouper-Observations
+* [Breast Cancer Spec IG](https://bih-cei.github.io/BreastCancerSpec/) — brusterhaltende Therapie und Mammaresektat, einschließlich Lokalisationsangaben über BodyStructure
 

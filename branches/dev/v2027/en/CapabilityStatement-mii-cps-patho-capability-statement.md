@@ -1,4 +1,4 @@
-# MII CPS Patho Capability Statement - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII CPS Patho Capability Statement - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/mii-cps-patho-capability-statement | *Version*:2027.0.0-ballot.rc |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/mii-cps-patho-capability-statement | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2024-11-08 | *Computable Name*:MII_CPS_Patho_Capability_Statement |
 
  
@@ -31,7 +31,7 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Cap
   "resourceType" : "CapabilityStatement",
   "id" : "mii-cps-patho-capability-statement",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/mii-cps-patho-capability-statement",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_CPS_Patho_Capability_Statement",
   "_name" : {
     "extension" : [{
@@ -120,7 +120,7 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Cap
         "valueCode" : "SHALL"
       }],
       "type" : "Specimen",
-      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc"],
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"],
       "_supportedProfile" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -631,12 +631,12 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Cap
         "valueCode" : "SHALL"
       }],
       "type" : "Observation",
-      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-intraoperative-grouper|2027.0.0-ballot.rc",
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2027.0.0-ballot.rc",
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper|2027.0.0-ballot.rc",
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc",
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot.rc",
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper|2027.0.0-ballot.rc"],
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-intraoperative-grouper|2027.0.0-ballot.rc1",
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2027.0.0-ballot.rc1",
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper|2027.0.0-ballot.rc1",
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1",
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot.rc1",
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper|2027.0.0-ballot.rc1"],
       "_supportedProfile" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -1660,7 +1660,7 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Cap
         "valueCode" : "SHALL"
       }],
       "type" : "ServiceRequest",
-      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2027.0.0-ballot.rc"],
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2027.0.0-ballot.rc1"],
       "_supportedProfile" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -2102,7 +2102,7 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Cap
         "valueCode" : "SHALL"
       }],
       "type" : "DiagnosticReport",
-      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc"],
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc1"],
       "_supportedProfile" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -2567,7 +2567,7 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Cap
         "valueCode" : "SHALL"
       }],
       "type" : "Composition",
-      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot.rc"],
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot.rc1"],
       "_supportedProfile" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -3101,7 +3101,7 @@ Canonical: `https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/Cap
         "valueCode" : "SHALL"
       }],
       "type" : "Media",
-      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|2027.0.0-ballot.rc"],
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|2027.0.0-ballot.rc1"],
       "_supportedProfile" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",

@@ -1,4 +1,4 @@
-# Terminologies - MII IG Modul Patho v2027.0.0-ballot.rc
+# Terminologies - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Terminologies**
@@ -47,8 +47,11 @@ For the coding of **specimens** and **procedures**, [SNOMED CT](http://www.snome
 
 For **staining procedures** the following approach is recommended:
 
-* **Histological and cytological stainings** can be coded in SCT either as a precoordinated procedure (e.g. all children of [127790008](https://browser.ihtsdotools.org/?perspective=full&conceptId1=127790008&edition=MAIN/2022-05-31&release=&languages=en)) or as a combination of the staining process (127790008) and the dyes used (all children of [397165007](https://browser.ihtsdotools.org/?perspective=full&conceptId1=397165007&edition=MAIN/2022-05-31&release=&languages=en) or [45389009](https://browser.ihtsdotools.org/?perspective=full&conceptId1=45389009&edition=MAIN/2022-05-31&release=&languages=en)) as an additive (substance). Here a staining process can be represented by [Specimen.processing.procedure](http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.procedure), while the associated staining substances would be represented via [Specimen.processing.additive](http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.additive) by a reference to one or more Substance resources.
-* For **immunohistochemical stainings and in-situ hybridizations (ISH)** only few precoordinated concepts are available in SCT. Here, too, the combination of the staining process [406867009](https://browser.ihtsdotools.org/?perspective=full&conceptId1=406867009&edition=MAIN/2022-05-31&release=&languages=en) or [13269000](https://browser.ihtsdotools.org/?perspective=full&conceptId1=13269000&edition=MAIN/2022-05-31&release=&languages=en) with the antibodies/antigens and chromogens as .substance or ingredient.substance suggests itself.
+* **Histological and cytological stainings** can be coded in SNOMED CT either as a precoordinated procedure (all children of [127790008 Staining method](https://browser.ihtsdotools.org/?perspective=full&conceptId1=127790008)) or as a combination of the staining process and the dyes used (children of [397165007 Stain](https://browser.ihtsdotools.org/?perspective=full&conceptId1=397165007) or [45389009 Tissue stain](https://browser.ihtsdotools.org/?perspective=full&conceptId1=45389009)). The staining process is represented by [Specimen.processing.procedure](http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.procedure), the associated staining substances by [Specimen.processing.additive](http://hl7.org/fhir/specimen-definitions.html#Specimen.processing.additive) as a reference to one or more Substance resources.
+* For **immunohistochemical stainings**, the precoordinated concept [117617002 Immunohistochemistry procedure](https://browser.ihtsdotools.org/?perspective=full&conceptId1=117617002) is available. For immunofluorescence, [406867009 Immunofluorescent stain method](https://browser.ihtsdotools.org/?perspective=full&conceptId1=406867009) applies; for cytological preparations, [13269000 Immunocytochemical stain](https://browser.ihtsdotools.org/?perspective=full&conceptId1=13269000). The antibody or target antigen used, as well as the chromogen, are given as an additive (Substance).
+* For **in-situ hybridizations (ISH), PCR, methylation and NGS analyses**, terminological harmonization should be achieved through the corresponding profiles of the extension module [Molecular Tumor Board](https://simplifier.net/mii-erweiterungsmodul-molekulares-tumorboard).
+
+**Where no SNOMED CT concept exists:** SNOMED CT carries no code for many antibodies — p63, for example, is not contained in the International Edition. In these cases a local code in `Substance.code` is permissible; it should live in a namespace of the institution and be referenced via `Specimen.processing.additive`. For a structured statement of the antibody type, [1236876007 Type of antibody used in immunohistochemistry technique](https://browser.ihtsdotools.org/?perspective=full&conceptId1=1236876007) is additionally available.
 
 In addition, a postcoordinated staining process can be coded:
 
@@ -57,6 +60,8 @@ In addition, a postcoordinated staining process can be coded:
 * or a combination of these codings.
 
 With postcoordinated codes it should be noted, however, that they are hardly evaluable without a suitable terminology server. For this reason our recommendation would be to first transfer the relationships between staining processes and their respective staining substances to the FHIR information model and to represent them by means of .processing.procedure and .processing.additive.
+
+The processing procedures used in this module are collected in the ValueSet [MII VS Patho Processing Procedure [SNOMED CT]](ValueSet-mii-vs-patho-processing-procedure-snomed-ct.md). A dedicated ValueSet for staining substances is in preparation.
 
 -------
 

@@ -1,4 +1,4 @@
-# Artifacts Summary - MII IG Modul Patho v2027.0.0-ballot.rc
+# Artifacts Summary - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Artifacts Summary**

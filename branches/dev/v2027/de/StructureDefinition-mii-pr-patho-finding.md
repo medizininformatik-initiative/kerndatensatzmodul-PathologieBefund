@@ -1,4 +1,4 @@
-# MII PR Patho Finding - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho Finding - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding | *Version*:2027.0.0-ballot.rc |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_PR_Patho_Finding |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Patho_Finding |
 
  
 Das Profil **MII PR Patho Finding** der Ressource Observation bildet als `hasMember`- oder `derivedFrom`-Referenz für ein Profil vom Typ [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.md) atomare kodierte Untersuchungsergebnisse ab. Dieses Profil kann verschachtelte Konstrukte bilden, um „Child Observations“ zu erfassen, die eine einzelne Observation weiter spezifizieren. PathoFindings können vom Pathologie-Informationssystem über Questionnaire- / QuestionnaireResponse-Resourcen (siehe [HL7-Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/)) bereitgestellt werden, bzw. werden QuestionnaireResponse Ressourcen referenziert. Jedes **MII PR Patho Finding** sollte die Probe referenzieren, an der die Beobachtung vorgenommen wurde. 
@@ -97,7 +97,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-finding",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_Finding",
   "_name" : {
     "extension" : [{
@@ -149,7 +149,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

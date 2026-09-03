@@ -1,4 +1,4 @@
-# MII VS Patho Media Modality [SNOMED CT] - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII VS Patho Media Modality [SNOMED CT] - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct | *Version*:2027.0.0-ballot.rc |
-| Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_VS_Patho_Media_Modality_SNOMED_CT |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Patho_Media_Modality_SNOMED_CT |
 
  
 ValueSet with some of the main Media.modalities needed in the pathological scope 
@@ -37,7 +37,7 @@ ValueSet with some of the main Media.modalities needed in the pathological scope
   "resourceType" : "ValueSet",
   "id" : "mii-vs-patho-media-modality-snomed-ct",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Patho_Media_Modality_SNOMED_CT",
   "_name" : {
     "extension" : [{
@@ -67,7 +67,7 @@ ValueSet with some of the main Media.modalities needed in the pathological scope
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

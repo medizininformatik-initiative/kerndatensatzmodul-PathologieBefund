@@ -1,4 +1,4 @@
-# MII PR Patho Finding - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho Finding - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding | *Version*:2027.0.0-ballot.rc |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_Patho_Finding |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Patho_Finding |
 
  
 The **MII PR Patho Finding** profile of the Observation resource represents atomic coded examination results as a `hasMember` or `derivedFrom` reference for a profile of type [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.md). This profile can form nested constructs to capture "child observations" that further specify a single observation. PathoFindings may be provided by the pathology information system via Questionnaire / QuestionnaireResponse resources (see [HL7 Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/)), or QuestionnaireResponse resources are referenced. Each **MII PR Patho Finding** should reference the specimen on which the observation was made. 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-find
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-finding",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_Finding",
   "_name" : {
     "extension" : [{
@@ -99,7 +99,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-find
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,4 +1,4 @@
-# mii-exa-patho-report - MII IG Modul Patho v2027.0.0-ballot.rc
+# mii-exa-patho-report - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md) version: 2027.0.0-ballot.rc
+Profile: [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md) version: 2027.0.0-ballot.rc1
 
 ## Pathology synoptic report 
 
@@ -50,7 +50,7 @@ Well-differentiated acinar adenocarcinoma of the prostate, ISUP grade group 1
   "resourceType" : "DiagnosticReport",
   "id" : "mii-exa-patho-report",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc1"]
   },
   "identifier" : [{
     "type" : {

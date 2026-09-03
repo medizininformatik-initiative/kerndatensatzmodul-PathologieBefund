@@ -1,4 +1,4 @@
-# MII PR Patho Microscopic Grouper - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII PR Patho Microscopic Grouper - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper | *Version*:2027.0.0-ballot.rc |
-| Active as of 2026-09-01 | *Computable Name*:MII_PR_Patho_Microscopic_Grouper |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Patho_Microscopic_Grouper |
 
  
 The **MII PR Patho Microscopic Grouper** profile of the Observation resource represents, as `DiagnosticReport.result:microscopic-grouper` for a [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md), the respective observation report section "Microscopic Evaluation" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md). 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-micr
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-microscopic-grouper",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper",
-  "version" : "2027.0.0-ballot.rc",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Patho_Microscopic_Grouper",
   "_name" : {
     "extension" : [{
@@ -98,7 +98,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-micr
     }]
   },
   "status" : "active",
-  "date" : "2026-09-01T13:59:06+00:00",
+  "date" : "2026-09-03T08:45:38+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,4 +1,4 @@
-# Pathologie Befundbericht - MII IG Modul Patho v2027.0.0-ballot.rc
+# Pathologie Befundbericht - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.md) version: 2027.0.0-ballot.rc
+Profile: [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.md) version: 2027.0.0-ballot.rc1
 
 **Composition Version Number**: 1
 
@@ -55,7 +55,7 @@ Profile: [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition
   "resourceType" : "Composition",
   "id" : "mii-exa-patho-composition",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot.rc"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot.rc1"]
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",

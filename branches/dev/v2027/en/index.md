@@ -1,4 +1,4 @@
-# Core Data Set Module Pathology Report - MII IG Modul Patho v2027.0.0-ballot.rc
+# Core Data Set Module Pathology Report - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Core Data Set Module Pathology Report**
@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho | *Version*:2027.0.0-ballot.rc |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2026-09-01 | *Computable Name*:MII_IG_Modul_Patho |
 
 ### Introduction
@@ -17,7 +17,7 @@ This specification describes the FHIR representation of the core data set module
 | | |
 | :--- | :--- |
 | Date | 2026-09-01 |
-| Version | 2027.0.0-ballot.rc |
+| Version | 2027.0.0-ballot.rc1 |
 | Status | Active |
 | Realm | DE |
 

@@ -7,11 +7,11 @@
     <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-patho-report-code-loinc</b></p><a name="en-mii-vs-patho-report-code-loinc"> </a><a name="en-hcmii-vs-patho-report-code-loinc"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>English (English, en)</b></td></tr><tr><td><a href="https://loinc.org/60568-3/">60568-3</a></td><td>Pathology Synoptic report</td><td>Pathology Synoptic report</td></tr><tr><td><a href="https://loinc.org/11526-1/">11526-1</a></td><td>Pathology study</td><td>Pathology study</td></tr><tr><td><a href="https://loinc.org/11529-5/">11529-5</a></td><td>Surgical pathology study</td><td>Surgical pathology study</td></tr><tr><td><a href="https://loinc.org/33716-2/">33716-2</a></td><td>Non-gynecological cytology study</td><td>Non-gynecological cytology study</td></tr><tr><td><a href="https://loinc.org/26435-8/">26435-8</a></td><td>Molecular pathology studies (set)</td><td>Molecular pathology studies (set)</td></tr><tr><td><a href="https://loinc.org/47528-5/">47528-5</a></td><td>Cytology report of Cervical or vaginal smear or scraping Cyto stain</td><td>Cytology report of Cervical or vaginal smear or scraping Cyto stain</td></tr><tr><td><a href="https://loinc.org/47527-7/">47527-7</a></td><td>Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep</td><td>Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep</td></tr><tr><td><a href="https://loinc.org/18743-5/">18743-5</a></td><td>Autopsy report</td><td>Autopsy report</td></tr></table></li></ul></div>
   </text>
   <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc"/>
-  <version value="2027.0.0-ballot.rc"/>
+  <version value="2027.0.0-ballot.rc1"/>
   <name value="MII_VS_Patho_Report_Code_LOINC"/>
   <title value="MII VS Patho Report Code [LOINC]"/>
   <status value="active"/>
-  <date value="2026-09-01T13:59:06+00:00"/>
+  <date value="2026-09-03T08:45:38+00:00"/>
   <publisher value="Medizininformatik-Initiative"/>
   <contact>
     <name value="Medizininformatik-Initiative"/>

@@ -7,11 +7,11 @@
     <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-patho-collection-method-snomed-ct</b></p><a name="en-mii-vs-patho-collection-method-snomed-ct"> </a><a name="en-hcmii-vs-patho-collection-method-snomed-ct"> </a><ul><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where concept  is-a 118292001 (Removal)</li></ul></div>
   </text>
   <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct"/>
-  <version value="2027.0.0-ballot.rc"/>
+  <version value="2027.0.0-ballot.rc1"/>
   <name value="MII_VS_Patho_Collection_Method_SNOMED_CT"/>
   <title value="MII VS Patho Collection Method [SNOMED CT]"/>
   <status value="active"/>
-  <date value="2026-09-01T13:59:06+00:00"/>
+  <date value="2026-09-03T08:45:38+00:00"/>
   <publisher value="Medizininformatik-Initiative"/>
   <contact>
     <name value="Medizininformatik-Initiative"/>

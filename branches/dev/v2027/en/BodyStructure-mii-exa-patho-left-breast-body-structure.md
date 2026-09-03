@@ -1,4 +1,4 @@
-# MII EXA Patho Left Breast Body Structure - MII IG Modul Patho v2027.0.0-ballot.rc
+# MII EXA Patho Left Breast Body Structure - MII IG Modul Patho v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

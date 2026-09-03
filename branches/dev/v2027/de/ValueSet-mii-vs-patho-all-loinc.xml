@@ -7,11 +7,11 @@
     <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-patho-all-loinc</b></p><a name="mii-vs-patho-all-loinc"> </a><a name="hcmii-vs-patho-all-loinc"> </a><ul><li>Include all codes defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li></ul></div>
   </text>
   <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc"/>
-  <version value="2027.0.0-ballot.rc"/>
+  <version value="2027.0.0-ballot.rc1"/>
   <name value="MII_VS_Patho_All_LOINC"/>
   <title value="MII VS Patho All [LOINC]"/>
   <status value="active"/>
-  <date value="2026-09-01T13:59:06+00:00"/>
+  <date value="2026-09-03T08:45:38+00:00"/>
   <publisher value="Medizininformatik-Initiative"/>
   <contact>
     <name value="Medizininformatik-Initiative"/>
