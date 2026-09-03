@@ -1,0 +1,224 @@
+[{
+  "id" : "mii-cps-patho-capability-statement",
+  "type" : "CapabilityStatement",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/CapabilityStatement/mii-cps-patho-capability-statement",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_CPS_Patho_Capability_Statement"
+},
+{
+  "id" : "mii-ig-modul-patho",
+  "type" : "ImplementationGuide",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_IG_Modul_Patho"
+},
+{
+  "id" : "mii-lm-patho-logical-model",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-lm-patho-logical-model",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_LM_Patho_Logical_Model"
+},
+{
+  "id" : "mii-pr-patho-active-problems-list",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Active_Problems_List"
+},
+{
+  "id" : "mii-pr-patho-additional-specified-grouper",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Additional_Specified_Grouper"
+},
+{
+  "id" : "mii-pr-patho-attached-image",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Attached_Image"
+},
+{
+  "id" : "mii-pr-patho-base-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Base_Observation"
+},
+{
+  "id" : "mii-pr-patho-bundle",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-bundle",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Bundle"
+},
+{
+  "id" : "mii-pr-patho-composition",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Composition"
+},
+{
+  "id" : "mii-pr-patho-diagnostic-conclusion-grouper",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Diagnostic_Conclusion_Grouper"
+},
+{
+  "id" : "mii-pr-patho-finding",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Finding"
+},
+{
+  "id" : "mii-pr-patho-history-of-present-illness",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_History_Of_Present_Illness"
+},
+{
+  "id" : "mii-pr-patho-intraoperative-grouper",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-intraoperative-grouper",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Intraoperative_Grouper"
+},
+{
+  "id" : "mii-pr-patho-macroscopic-grouper",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Macroscopic_Grouper"
+},
+{
+  "id" : "mii-pr-patho-microscopic-grouper",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Microscopic_Grouper"
+},
+{
+  "id" : "mii-pr-patho-problem-list-item",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Problem_List_Item"
+},
+{
+  "id" : "mii-pr-patho-report",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Report"
+},
+{
+  "id" : "mii-pr-patho-section-grouper",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-section-grouper",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Section_Grouper"
+},
+{
+  "id" : "mii-pr-patho-service-request",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Service_Request"
+},
+{
+  "id" : "mii-pr-patho-specimen",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Patho_Specimen"
+},
+{
+  "id" : "mii-vs-patho-all-loinc",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_All_LOINC"
+},
+{
+  "id" : "mii-vs-patho-collection-method-snomed-ct",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Collection_Method_SNOMED_CT"
+},
+{
+  "id" : "mii-vs-patho-composition-type-kdl",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Composition_Type_KDL"
+},
+{
+  "id" : "mii-vs-patho-composition-type-snomed-ct",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Composition_Type_SNOMED_CT"
+},
+{
+  "id" : "mii-vs-patho-container-type-snomed-ct",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Container_Type_SNOMED_CT"
+},
+{
+  "id" : "mii-vs-patho-media-modality-snomed-ct",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Media_Modality_SNOMED_CT"
+},
+{
+  "id" : "mii-vs-patho-problem-list-snomed-ct",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Problem_List_SNOMED_CT"
+},
+{
+  "id" : "mii-vs-patho-processing-procedure-snomed-ct",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Processing_Procedure_SNOMED_CT"
+},
+{
+  "id" : "mii-vs-patho-report-category-hl7",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Report_Category_HL7"
+},
+{
+  "id" : "mii-vs-patho-report-code-loinc",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Report_Code_LOINC"
+},
+{
+  "id" : "mii-vs-patho-section-types-loinc",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Section_Types_LOINC"
+},
+{
+  "id" : "mii-vs-patho-service-request-code",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_Service_Request_Code"
+}]

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-organization-12345"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Organization mii-exa-patho-organization-12345</b></p><a name="mii-exa-patho-organization-12345"> </a><a name="hcmii-exa-patho-organization-12345"> </a><p><b>name</b>: Institut für Pathologie</p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Organization mii-exa-patho-organization-12345</b></p><a name="en-mii-exa-patho-organization-12345"> </a><a name="en-hcmii-exa-patho-organization-12345"> </a><p><b>name</b>: Institute of Pathology</p></div></div>
+  </text>
+  <name value="Institut für Pathologie">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Institute of Pathology"/>
+      </extension>
+    </extension>
+  </name>
+</Organization>

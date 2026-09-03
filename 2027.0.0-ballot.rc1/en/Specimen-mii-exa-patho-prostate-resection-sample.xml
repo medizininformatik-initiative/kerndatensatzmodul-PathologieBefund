@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-prostate-resection-sample"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Specimen mii-exa-patho-prostate-resection-sample</b></p><a name="en-mii-exa-patho-prostate-resection-sample"> </a><a name="en-hcmii-exa-patho-prostate-resection-sample"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-patho-specimen.html">MII PR Patho Specimen</a> version: 2027.0.0-ballot.rc1</p></div><p><b>identifier</b>: Placer Identifier/OP25_311_A, Filler Identifier/E_25_311_A</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_311</p><p><b>status</b>: Available</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 122725003}">Specimen from prostate obtained by radical prostatectomy (specimen)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-patho-patient-12345.html">Max Mustermann  Male, DoB: 1959-08-24</a></p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Method</b></td><td><b>BodySite</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-mii-exa-patho-practitioner-2346545.html">Practitioner Sabine Schnitt </a></td><td>2025-02-05 10:00:00+0100</td><td><span title="Codes:{http://snomed.info/sct 26294005}">Radical prostatectomy (procedure)</span></td><td><span title="Codes:{http://snomed.info/sct 41216001}">Prostate</span></td></tr></table><h3>Containers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 434746001}">Specimen vial (physical object)</span></td><td><a href="Substance-mii-exa-patho-neutral-buffered-formalin.html">Substance Neutral buffered formalin (substance)</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Radikalprostatektomie-Praeparat, Tumorregion rechte apikale periphere Zone (posterior) markiert. In Formalin fixiert.</p>
+</div></blockquote></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PLAC"/>
+      </coding>
+    </type>
+    <system value="https://urologie.example-hospital.de/fhir/specimen/placer"/>
+    <value value="OP25_311_A"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="FILL"/>
+      </coding>
+    </type>
+    <system value="https://pathologie.example-hospital.de/fhir/fn/befundbericht"/>
+    <value value="E_25_311_A"/>
+  </identifier>
+  <accessionIdentifier>
+    <system value="https://pathologie.example-hospital.de/fhir/fn/befundbericht"/>
+    <value value="E_25_311"/>
+  </accessionIdentifier>
+  <status value="available"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="122725003"/>
+      <display value="Specimen from prostate obtained by radical prostatectomy (specimen)"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/mii-exa-patho-patient-12345"/>
+  </subject>
+  <collection>
+    <collector>
+      <reference value="Practitioner/mii-exa-patho-practitioner-2346545"/>
+    </collector>
+    <collectedDateTime value="2025-02-05T10:00:00+01:00"/>
+    <method>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26294005"/>
+        <display value="Radical prostatectomy (procedure)"/>
+      </coding>
+    </method>
+    <bodySite>
+      <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite">
+        <valueReference>
+          <reference value="BodyStructure/mii-exa-patho-prostate-body-structure"/>
+        </valueReference>
+      </extension>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="41216001"/>
+        <display value="Prostate"/>
+      </coding>
+    </bodySite>
+  </collection>
+  <container>
+    <type>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="434746001"/>
+        <display value="Specimen vial (physical object)"/>
+      </coding>
+    </type>
+    <additiveReference>
+      <reference value="Substance/mii-exa-patho-neutral-buffered-formalin"/>
+    </additiveReference>
+  </container>
+  <note>
+    <text value="Radikalprostatektomie-Praeparat, Tumorregion rechte apikale periphere Zone (posterior) markiert. In Formalin fixiert."/>
+  </note>
+</Specimen>

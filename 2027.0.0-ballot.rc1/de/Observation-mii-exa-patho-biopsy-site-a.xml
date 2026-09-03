@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-biopsy-site-a"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-patho-biopsy-site-a</b></p><a name="mii-exa-patho-biopsy-site-a"> </a><a name="hcmii-exa-patho-biopsy-site-a"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-patho-finding.html">MII PR Patho Finding</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://loinc.org 22634-0}">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 94738-2}">Biopsy site Patient</span></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 716917000}">Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)</span></p><p><b>specimen</b>: <a href="Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html">Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample</a></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="22634-0"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="94738-2"/>
+      <display value="Biopsy site Patient"/>
+    </coding>
+  </code>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="716917000"/>
+      <display value="Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"/>
+    </coding>
+  </valueCodeableConcept>
+  <specimen>
+    <reference value="Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"/>
+  </specimen>
+</Observation>

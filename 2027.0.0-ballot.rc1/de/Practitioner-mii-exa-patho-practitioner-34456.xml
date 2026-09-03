@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-practitioner-34456"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Practitioner mii-exa-patho-practitioner-34456</b></p><a name="mii-exa-patho-practitioner-34456"> </a><a name="hcmii-exa-patho-practitioner-34456"> </a><p><b>name</b>: Ulrich Urban </p></div>
+  </text>
+  <name>
+    <family value="Urban"/>
+    <given value="Ulrich"/>
+  </name>
+</Practitioner>

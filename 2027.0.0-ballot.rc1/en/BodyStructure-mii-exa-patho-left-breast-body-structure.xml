@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BodyStructure xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-left-breast-body-structure"/>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: BodyStructure mii-exa-patho-left-breast-body-structure</b></p><a name="en-mii-exa-patho-left-breast-body-structure"> </a><a name="en-hcmii-exa-patho-left-breast-body-structure"> </a><blockquote><p><b>R5: Included anatomic location(s) (new)</b></p><blockquote><p><b>url</b></p><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/structure">structure</a></blockquote><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 110502005}">Lower outer quadrant of left breast</span></p><blockquote><p><b>url</b></p><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/laterality">laterality</a></blockquote><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 7771000}">Left (qualifier value)</span></p><p><b>landmarkDescription</b>: <span title="Codes:{http://snomed.info/sct 24142002}">Nipple structure</span></p><p><b>clockFacePosition</b>: <span title="Codes:{http://snomed.info/sct 260335000}">5 o'clock position</span></p><p><b>surfaceOrientation</b>: <span title="Codes:{http://snomed.info/sct 46053002}">Distal</span></p><blockquote><p><b>distanceFromLandmark</b></p><ul><li>value: 50 mm<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm = 'mm')</span></li></ul></blockquote><blockquote><p><b>url</b></p><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/bodyLandmarkOrientation">bodyLandmarkOrientation</a></blockquote></blockquote><p><b>active</b>: true</p><p><b>morphology</b>: <span title="Codes:{http://snomed.info/sct 82711006}">Bioptisch gesichertes invasives Karzinom</span></p><p><b>location</b>: <span title="Codes:{http://snomed.info/sct 110502005}">Lower outer quadrant of left breast</span></p><p><b>locationQualifier</b>: <span title="Codes:{http://snomed.info/sct 7771000}">Left (qualifier value)</span></p><p><b>description</b>: 5 x 3 x 3 cm, one wire marking and one suture marking</p><p><b>patient</b>: <a href="Patient-mii-exa-patho-patient-34545.html">Erika Musterfrau  Female, DoB: 1962-03-11</a></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure">
+    <extension url="structure">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="110502005"/>
+          <display value="Lower outer quadrant of left breast"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="laterality">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="7771000"/>
+          <display value="Left (qualifier value)"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="bodyLandmarkOrientation">
+      <extension url="landmarkDescription">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="24142002"/>
+            <display value="Nipple structure"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="clockFacePosition">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260335000"/>
+            <display value="5 o'clock position"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="surfaceOrientation">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="46053002"/>
+            <display value="Distal"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <extension url="distanceFromLandmark">
+        <extension url="value">
+          <valueQuantity>
+            <value value="50"/>
+            <unit value="mm"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm"/>
+          </valueQuantity>
+        </extension>
+      </extension>
+    </extension>
+  </extension>
+  <active value="true"/>
+  <morphology>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="82711006"/>
+      <display value="Infiltrating duct carcinoma"/>
+    </coding>
+    <text value="Bioptisch gesichertes invasives Karzinom"/>
+  </morphology>
+  <location>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="110502005"/>
+      <display value="Lower outer quadrant of left breast"/>
+    </coding>
+  </location>
+  <locationQualifier>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="7771000"/>
+      <display value="Left (qualifier value)"/>
+    </coding>
+  </locationQualifier>
+  <description value="5 x 3 x 3 cm, one wire marking and one suture marking"/>
+  <patient>
+    <reference value="Patient/mii-exa-patho-patient-34545"/>
+  </patient>
+</BodyStructure>

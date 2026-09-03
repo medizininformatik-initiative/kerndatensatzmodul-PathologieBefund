@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Substance xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-paraffin"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Substance mii-exa-patho-paraffin</b></p><a name="mii-exa-patho-paraffin"> </a><a name="hcmii-exa-patho-paraffin"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance">MII PR Biobank Substance Additiv</a></p></div><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 311731000}">Paraffin wax (substance)</span></p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Substance mii-exa-patho-paraffin</b></p><a name="en-mii-exa-patho-paraffin"> </a><a name="en-hcmii-exa-patho-paraffin"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance">MII PR Biobank Substance Additiv</a></p></div><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 311731000}">Paraffin wax (substance)</span></p></div></div>
+  </text>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="311731000"/>
+      <display value="Paraffin wax (substance)"/>
+    </coding>
+  </code>
+</Substance>

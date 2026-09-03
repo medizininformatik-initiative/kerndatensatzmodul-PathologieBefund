@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Media xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-attached-image"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|2027.0.0-ballot.rc1"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Media mii-exa-patho-attached-image</b></p><a name="mii-exa-patho-attached-image"> </a><a name="hcmii-exa-patho-attached-image"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-patho-attached-image.html">MII PR Patho Attached Image</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Completed</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/media-type image}">Image</span></p><p><b>subject</b>: <a href="Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html">Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample</a></p><h3>Contents</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Url</b></td></tr><tr><td style="display: none">*</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://pathologie.klinikum-karlsruhe.de/fhir/fn/image">https://pathologie.klinikum-karlsruhe.de/fhir/fn/image</a></td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Media mii-exa-patho-attached-image</b></p><a name="en-mii-exa-patho-attached-image"> </a><a name="en-hcmii-exa-patho-attached-image"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-patho-attached-image.html">MII PR Patho Attached Image</a> version: 2027.0.0-ballot.rc1</p></div><p><b>status</b>: Completed</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/media-type image}">Image</span></p><p><b>subject</b>: <a href="Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html">Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample</a></p><h3>Contents</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Url</b></td></tr><tr><td style="display: none">*</td><td><a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&amp;canonical=https://pathologie.klinikum-karlsruhe.de/fhir/fn/image">https://pathologie.klinikum-karlsruhe.de/fhir/fn/image</a></td></tr></table></div></div>
+  </text>
+  <status value="completed"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/media-type"/>
+      <code value="image"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"/>
+  </subject>
+  <content>
+    <url value="https://pathologie.klinikum-karlsruhe.de/fhir/fn/image"/>
+  </content>
+</Media>

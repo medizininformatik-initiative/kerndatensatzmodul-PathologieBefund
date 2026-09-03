@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-request"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2027.0.0-ballot.rc1"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ServiceRequest mii-exa-patho-request</b></p><a name="mii-exa-patho-request"> </a><a name="hcmii-exa-patho-request"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-patho-service-request.html">MII PR Patho Service Request</a> version: 2027.0.0-ballot.rc1</p></div><p><b>identifier</b>: Placer Identifier/KHXX_ENDO_18.123451</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 726007}">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 726007}">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-patho-patient-12345.html">Max Mustermann  Male, DoB: 1959-08-24</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-patho-encounter-87687.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>requester</b>: <a href="Practitioner-mii-exa-patho-practitioner-34456.html">Practitioner Ulrich Urban </a></p><p><b>supportingInfo</b>: </p><ul><li><a href="List-mii-exa-patho-history-of-present-illness.html">List for 'History of Present illness' for '-&gt;Max Mustermann  Male, DoB: 1959-08-24'</a></li><li><a href="List-mii-exa-patho-active-problems-list.html">List for 'Problemliste - Berichtet' for '-&gt;Max Mustermann  Male, DoB: 1959-08-24'</a></li></ul><p><b>specimen</b>: <a href="Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html">Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample</a></p></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ServiceRequest mii-exa-patho-request</b></p><a name="en-mii-exa-patho-request"> </a><a name="en-hcmii-exa-patho-request"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-patho-service-request.html">MII PR Patho Service Request</a> version: 2027.0.0-ballot.rc1</p></div><p><b>identifier</b>: Placer Identifier/KHXX_ENDO_18.123451</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 726007}">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 726007}">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>subject</b>: <a href="Patient-mii-exa-patho-patient-12345.html">Max Mustermann  Male, DoB: 1959-08-24</a></p><p><b>encounter</b>: <a href="Encounter-mii-exa-patho-encounter-87687.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>requester</b>: <a href="Practitioner-mii-exa-patho-practitioner-34456.html">Practitioner Ulrich Urban </a></p><p><b>supportingInfo</b>: </p><ul><li><a href="List-mii-exa-patho-history-of-present-illness.html">List for 'History of Present illness' for '-&gt;Max Mustermann  Male, DoB: 1959-08-24'</a></li><li><a href="List-mii-exa-patho-active-problems-list.html">List for 'Problemliste - Berichtet' for '-&gt;Max Mustermann  Male, DoB: 1959-08-24'</a></li></ul><p><b>specimen</b>: <a href="Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.html">Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample</a></p></div></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PLAC"/>
+      </coding>
+    </type>
+    <system value="https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag"/>
+    <value value="KHXX_ENDO_18.123451"/>
+  </identifier>
+  <status value="completed"/>
+  <intent value="order"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="726007"/>
+      <display value="Pathology consultation, comprehensive, records and specimen with report (procedure)"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="726007"/>
+      <display value="Pathology consultation, comprehensive, records and specimen with report (procedure)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-patho-patient-12345"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/mii-exa-patho-encounter-87687"/>
+  </encounter>
+  <requester>
+    <reference value="Practitioner/mii-exa-patho-practitioner-34456"/>
+  </requester>
+  <supportingInfo>
+    <reference value="List/mii-exa-patho-history-of-present-illness"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="List/mii-exa-patho-active-problems-list"/>
+  </supportingInfo>
+  <specimen>
+    <reference value="Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample"/>
+  </specimen>
+</ServiceRequest>

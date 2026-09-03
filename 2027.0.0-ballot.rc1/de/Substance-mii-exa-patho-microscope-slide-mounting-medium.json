@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Substance",
+  "id" : "mii-exa-patho-microscope-slide-mounting-medium",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Substance mii-exa-patho-microscope-slide-mounting-medium</b></p><a name=\"mii-exa-patho-microscope-slide-mounting-medium\"> </a><a name=\"hcmii-exa-patho-microscope-slide-mounting-medium\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2026.0.1&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance\">MII PR Biobank Substance Additiv</a></p></div><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></p></div>"
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "430862008",
+      "display" : "Microscope slide mounting medium (substance)"
+    }]
+  }
+}

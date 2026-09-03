@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-patho-report-category-hl7"/>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-patho-report-category-hl7</b></p><a name="en-mii-vs-patho-report-category-hl7"> </a><a name="en-hcmii-vs-patho-report-category-hl7"> </a><ul><li>Include these codes as defined in <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v2-0074.html"><code>http://terminology.hl7.org/CodeSystem/v2-0074</code></a><span title="Version is explicitly stated to be 3.0.0"> version &#x1F4CD;3.0.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>English (English, en)</b></td></tr><tr><td><a href="http://terminology.hl7.org/7.3.0/CodeSystem-v2-0074.html#v2-0074-CP">CP</a></td><td>Cytopathology</td><td>Cytopathology</td><td>Cytopathology</td></tr><tr><td><a href="http://terminology.hl7.org/7.3.0/CodeSystem-v2-0074.html#v2-0074-SP">SP</a></td><td>Surgical Pathology</td><td>Surgical Pathology</td><td>Surgical Pathology</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII_VS_Patho_Report_Category_HL7"/>
+  <title value="MII VS Patho Report Category HL7"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-03T08:45:38+00:00"/>
+  <publisher value="Medizininformatik-Initiative"/>
+  <contact>
+    <name value="Medizininformatik-Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet for the categorization of Pathology Report documents"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <version value="3.0.0"/>
+      <concept>
+        <code value="CP"/>
+        <display value="Cytopathology"/>
+        <designation>
+          <language value="en"/>
+          <value value="Cytopathology"/>
+        </designation>
+      </concept>
+      <concept>
+        <code value="SP"/>
+        <display value="Surgical Pathology"/>
+        <designation>
+          <language value="en"/>
+          <value value="Surgical Pathology"/>
+        </designation>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

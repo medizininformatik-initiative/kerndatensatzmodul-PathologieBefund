@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-organization-12345"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Organization mii-exa-patho-organization-12345</b></p><a name="mii-exa-patho-organization-12345"> </a><a name="hcmii-exa-patho-organization-12345"> </a><p><b>name</b>: Institut für Pathologie</p></div>
+  </text>
+  <name value="Institut für Pathologie"/>
+</Organization>

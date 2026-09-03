@@ -1,0 +1,40 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-patho-all-loinc",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-patho-all-loinc</b></p><a name=\"en-mii-vs-patho-all-loinc\"> </a><a name=\"en-hcmii-vs-patho-all-loinc\"> </a><ul><li>Include all codes defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Patho_All_LOINC",
+  "title" : "MII VS Patho All [LOINC]",
+  "status" : "active",
+  "date" : "2026-09-03T08:45:38+00:00",
+  "publisher" : "Medizininformatik-Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik-Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    },
+    {
+      "system" : "email",
+      "value" : "info@medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "ValueSet for general LOINC VS binding",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}

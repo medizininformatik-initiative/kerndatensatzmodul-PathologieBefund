@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Patient",
+  "id" : "mii-exa-patho-patient-12345",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Patient mii-exa-patho-patient-12345</b></p><a name=\"mii-exa-patho-patient-12345\"> </a><a name=\"hcmii-exa-patho-patient-12345\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Max Mustermann  Male, DoB: 1959-08-24</p><hr/></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Patient mii-exa-patho-patient-12345</b></p><a name=\"en-mii-exa-patho-patient-12345\"> </a><a name=\"en-hcmii-exa-patho-patient-12345\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Max Mustermann  Male, DoB: 1959-08-24</p><hr/></div></div>"
+  },
+  "name" : [{
+    "family" : "Mustermann",
+    "given" : ["Max"]
+  }],
+  "gender" : "male",
+  "birthDate" : "1959-08-24"
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-practitioner-1234"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Practitioner mii-exa-patho-practitioner-1234</b></p><a name="mii-exa-patho-practitioner-1234"> </a><a name="hcmii-exa-patho-practitioner-1234"> </a><p><b>name</b>: Lena Labor </p></div>
+  </text>
+  <name>
+    <family value="Labor"/>
+    <given value="Lena"/>
+  </name>
+</Practitioner>

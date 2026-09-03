@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<List xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-patho-history-of-present-illness"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness|2027.0.0-ballot.rc1"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: List mii-exa-patho-history-of-present-illness</b></p><a name="mii-exa-patho-history-of-present-illness"> </a><a name="hcmii-exa-patho-history-of-present-illness"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-patho-history-of-present-illness.html">MII PR Patho History Of Present Illness</a> version: 2027.0.0-ballot.rc1</p></div><table class="clstu"><tr><td>Mode: Snapshot List </td><td>Status: Current </td><td>Code: History of Present illness </td></tr><tr><td>Subject: <a href="Patient-mii-exa-patho-patient-12345.html">Max Mustermann  Male, DoB: 1959-08-24</a></td></tr></table><table class="grid"><tr style="backgound-color: #eeeeee"><td><b>Items</b></td></tr><tr><td><a href="Condition-mii-exa-patho-problem-list-item-2.html">Condition History of malignant neoplasm (situation)</a></td></tr></table></div>
+  </text>
+  <status value="current"/>
+  <mode value="snapshot"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="8684-3"/>
+      <display value="History of Present illness"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-patho-patient-12345"/>
+  </subject>
+  <entry>
+    <item>
+      <reference value="Condition/mii-exa-patho-problem-list-item-2"/>
+    </item>
+  </entry>
+</List>

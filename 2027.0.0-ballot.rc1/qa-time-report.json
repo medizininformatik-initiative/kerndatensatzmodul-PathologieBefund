@@ -1,0 +1,3642 @@
+{
+  "date" : "Thu, 03 Sep, 2026 08:45:38 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-mii-ig-modul-patho.json",
+    "size" : 49495,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 90,
+      "length" : 14
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 18
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 93,
+      "length" : 216
+    },
+    {
+      "activity" : "validate",
+      "start" : 118,
+      "length" : 6367
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 35
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 296
+    },
+    {
+      "activity" : "generate2",
+      "start" : 149,
+      "length" : 590
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 6
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/BodyStructure-mii-exa-patho-left-breast-body-structure.json",
+    "size" : 3042,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 18
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 93,
+      "length" : 601
+    },
+    {
+      "activity" : "validate",
+      "start" : 125,
+      "length" : 473
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 19
+    },
+    {
+      "activity" : "generate2",
+      "start" : 149,
+      "length" : 36
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/BodyStructure-mii-exa-patho-prostate-body-structure.json",
+    "size" : 2610,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 15
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 94,
+      "length" : 9
+    },
+    {
+      "activity" : "validate",
+      "start" : 125,
+      "length" : 257
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 149,
+      "length" : 32
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CapabilityStatement-mii-cps-patho-capability-statement.json",
+    "size" : 117957,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 69
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 40
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 11
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 94,
+      "length" : 212
+    },
+    {
+      "activity" : "validate",
+      "start" : 116,
+      "length" : 2130
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 23
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 258
+    },
+    {
+      "activity" : "generate2",
+      "start" : 149,
+      "length" : 282
+    },
+    {
+      "activity" : "makeDependencies",
+      "start" : 184,
+      "length" : 1
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 9
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Composition-mii-exa-patho-composition.json",
+    "size" : 4046,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 17
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 94,
+      "length" : 190
+    },
+    {
+      "activity" : "validate",
+      "start" : 125,
+      "length" : 358
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 15
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 65
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Condition-mii-exa-patho-problem-list-item-1.json",
+    "size" : 724,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 13
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 94,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 126,
+      "length" : 59
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 27
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Condition-mii-exa-patho-problem-list-item-2.json",
+    "size" : 726,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 12
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 94,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 126,
+      "length" : 63
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 27
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/DiagnosticReport-mii-exa-patho-report.json",
+    "size" : 2712,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 14
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 94,
+      "length" : 645
+    },
+    {
+      "activity" : "validate",
+      "start" : 126,
+      "length" : 195
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 100
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-mii-exa-patho-encounter-12345.json",
+    "size" : 314,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 9
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 95,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 126,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 29
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-mii-exa-patho-encounter-34555.json",
+    "size" : 305,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 9
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 95,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 126,
+      "length" : 5
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 27
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-mii-exa-patho-encounter-87687.json",
+    "size" : 314,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 95,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 126,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 24
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/List-mii-exa-patho-active-problems-list.json",
+    "size" : 669,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 95,
+      "length" : 3
+    },
+    {
+      "activity" : "loadLists",
+      "start" : 125,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 126,
+      "length" : 63
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 55
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/List-mii-exa-patho-history-of-present-illness.json",
+    "size" : 682,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 95,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 126,
+      "length" : 63
+    },
+    {
+      "activity" : "generate1",
+      "start" : 132,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 45
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Media-mii-exa-patho-attached-image.json",
+    "size" : 606,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 7
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 95,
+      "length" : 983
+    },
+    {
+      "activity" : "validate",
+      "start" : 126,
+      "length" : 7
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 19
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-biopsy-site-a.json",
+    "size" : 1110,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 9
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 96,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 126,
+      "length" : 433
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 19
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-diagnostic-conclusion-1.json",
+    "size" : 959,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 96,
+      "length" : 110
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 127,
+      "length" : 429
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-diagnostic-conclusion-2.json",
+    "size" : 860,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 89,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 96,
+      "length" : 214
+    },
+    {
+      "activity" : "validate",
+      "start" : 127,
+      "length" : 160
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-diagnostic-conclusion-3.json",
+    "size" : 924,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 96,
+      "length" : 111
+    },
+    {
+      "activity" : "validate",
+      "start" : 127,
+      "length" : 162
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-diagnostic-conclusion-grouper.json",
+    "size" : 1333,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 3
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 127,
+      "length" : 68
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 54
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-gleason-pattern-a.json",
+    "size" : 945,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 224
+    },
+    {
+      "activity" : "validate",
+      "start" : 127,
+      "length" : 373
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 23
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-histologic-type-a.json",
+    "size" : 952,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 209
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 160
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 25
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-macro-grouper-a.json",
+    "size" : 1029,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 60
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 38
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-micro-grouper-a.json",
+    "size" : 1525,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 109
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 61
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 41
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-p63-a.json",
+    "size" : 982,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 162
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 13
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-mii-exa-patho-tissue-length-a.json",
+    "size" : 1065,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 107
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 114
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 26
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-mii-exa-patho-organization-12345.json",
+    "size" : 430,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 9
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 12
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-mii-exa-patho-organization-123456.json",
+    "size" : 425,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 5
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-mii-exa-patho-patient-12345.json",
+    "size" : 218,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 12
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-mii-exa-patho-patient-34545.json",
+    "size" : 222,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-mii-exa-patho-practitioner-1234.json",
+    "size" : 174,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 12
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-mii-exa-patho-practitioner-21234.json",
+    "size" : 177,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 150,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-mii-exa-patho-practitioner-2346545.json",
+    "size" : 181,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-mii-exa-patho-practitioner-34456.json",
+    "size" : 177,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-mii-exa-patho-practitioner-765879.json",
+    "size" : 179,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-mii-exa-patho-request.json",
+    "size" : 1659,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 128,
+      "length" : 83
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 51
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-mii-exa-patho-breast-resection-sample.json",
+    "size" : 4493,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 129,
+      "length" : 641
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 17
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 43
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-block.json",
+    "size" : 3201,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 129,
+      "length" : 442
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 35
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE.json",
+    "size" : 3427,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 130,
+      "length" : 349
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 16
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 38
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-schnitt-p63.json",
+    "size" : 3335,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 9
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 130,
+      "length" : 127
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 39
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-mii-exa-patho-prostate-resection-sample.json",
+    "size" : 2675,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 12
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 130,
+      "length" : 360
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 48
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.json",
+    "size" : 3172,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 10
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 130,
+      "length" : 250
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 47
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-lm-patho-logical-model.json",
+    "size" : 102727,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 24
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 42
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 90,
+      "length" : 112
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 97,
+      "length" : 655
+    },
+    {
+      "activity" : "validate",
+      "start" : 103,
+      "length" : 2149
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 755
+    },
+    {
+      "activity" : "generate2",
+      "start" : 151,
+      "length" : 1836
+    },
+    {
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 982
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 19
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-active-problems-list.json",
+    "size" : 4354,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 5
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 44
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 6
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 98,
+      "length" : 29
+    },
+    {
+      "activity" : "validate",
+      "start" : 105,
+      "length" : 360
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 133,
+      "length" : 180
+    },
+    {
+      "activity" : "generate2",
+      "start" : 153,
+      "length" : 627
+    },
+    {
+      "activity" : "generate2",
+      "start" : 178,
+      "length" : 238
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 9
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-additional-specified-grouper.json",
+    "size" : 9905,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 5
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 187
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 11
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 98,
+      "length" : 36
+    },
+    {
+      "activity" : "validate",
+      "start" : 106,
+      "length" : 940
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 134,
+      "length" : 301
+    },
+    {
+      "activity" : "generate2",
+      "start" : 153,
+      "length" : 1939
+    },
+    {
+      "activity" : "generate2",
+      "start" : 179,
+      "length" : 422
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 10
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 295,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-attached-image.json",
+    "size" : 17532,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 11
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 34
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 5
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 98,
+      "length" : 40
+    },
+    {
+      "activity" : "validate",
+      "start" : 107,
+      "length" : 662
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 134,
+      "length" : 211
+    },
+    {
+      "activity" : "generate2",
+      "start" : 155,
+      "length" : 708
+    },
+    {
+      "activity" : "generate2",
+      "start" : 179,
+      "length" : 150
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 7
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-base-observation.json",
+    "size" : 8593,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 4
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 98,
+      "length" : 199
+    },
+    {
+      "activity" : "validate",
+      "start" : 107,
+      "length" : 319
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 134,
+      "length" : 469
+    },
+    {
+      "activity" : "generate2",
+      "start" : 156,
+      "length" : 1408
+    },
+    {
+      "activity" : "generate2",
+      "start" : 179,
+      "length" : 320
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 13
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-bundle.json",
+    "size" : 31191,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 13
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 12
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 403
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 98,
+      "length" : 71
+    },
+    {
+      "activity" : "validate",
+      "start" : 108,
+      "length" : 1022
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 3
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 135,
+      "length" : 712
+    },
+    {
+      "activity" : "generate2",
+      "start" : 157,
+      "length" : 1402
+    },
+    {
+      "activity" : "generate2",
+      "start" : 180,
+      "length" : 616
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 19
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-composition.json",
+    "size" : 60412,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 17
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 20
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 170
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 98,
+      "length" : 146
+    },
+    {
+      "activity" : "validate",
+      "start" : 109,
+      "length" : 1432
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 2
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 135,
+      "length" : 1164
+    },
+    {
+      "activity" : "generate2",
+      "start" : 159,
+      "length" : 3214
+    },
+    {
+      "activity" : "generate2",
+      "start" : 180,
+      "length" : 407
+    },
+    {
+      "activity" : "makeDependencies",
+      "start" : 184,
+      "length" : 1
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 27
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.json",
+    "size" : 16871,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 5
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 5
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 41
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 98,
+      "length" : 27
+    },
+    {
+      "activity" : "validate",
+      "start" : 110,
+      "length" : 391
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 137,
+      "length" : 327
+    },
+    {
+      "activity" : "generate2",
+      "start" : 162,
+      "length" : 1164
+    },
+    {
+      "activity" : "generate2",
+      "start" : 181,
+      "length" : 154
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 11
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 295,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-finding.json",
+    "size" : 37944,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 10
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 13
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 48
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 5
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 98,
+      "length" : 28
+    },
+    {
+      "activity" : "validate",
+      "start" : 111,
+      "length" : 709
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 137,
+      "length" : 376
+    },
+    {
+      "activity" : "generate2",
+      "start" : 163,
+      "length" : 1615
+    },
+    {
+      "activity" : "generate2",
+      "start" : 181,
+      "length" : 153
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 11
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-history-of-present-illness.json",
+    "size" : 4203,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 4
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 25
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 98,
+      "length" : 15
+    },
+    {
+      "activity" : "validate",
+      "start" : 111,
+      "length" : 164
+    },
+    {
+      "activity" : "generate1",
+      "start" : 137,
+      "length" : 176
+    },
+    {
+      "activity" : "generate2",
+      "start" : 165,
+      "length" : 535
+    },
+    {
+      "activity" : "generate2",
+      "start" : 181,
+      "length" : 88
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 5
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-intraoperative-grouper.json",
+    "size" : 9622,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 3
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 41
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 25
+    },
+    {
+      "activity" : "validate",
+      "start" : 111,
+      "length" : 357
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 137,
+      "length" : 293
+    },
+    {
+      "activity" : "generate2",
+      "start" : 165,
+      "length" : 873
+    },
+    {
+      "activity" : "generate2",
+      "start" : 181,
+      "length" : 180
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 8
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-macroscopic-grouper.json",
+    "size" : 9666,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 3
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 91,
+      "length" : 40
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 10
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 19
+    },
+    {
+      "activity" : "validate",
+      "start" : 112,
+      "length" : 291
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 138,
+      "length" : 294
+    },
+    {
+      "activity" : "generate2",
+      "start" : 166,
+      "length" : 681
+    },
+    {
+      "activity" : "generate2",
+      "start" : 181,
+      "length" : 140
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 9
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-microscopic-grouper.json",
+    "size" : 9666,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 4
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 92,
+      "length" : 40
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 10
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 20
+    },
+    {
+      "activity" : "validate",
+      "start" : 112,
+      "length" : 292
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 138,
+      "length" : 358
+    },
+    {
+      "activity" : "generate2",
+      "start" : 167,
+      "length" : 783
+    },
+    {
+      "activity" : "generate2",
+      "start" : 181,
+      "length" : 140
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 8
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-problem-list-item.json",
+    "size" : 4470,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 3
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 92,
+      "length" : 40
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 21
+    },
+    {
+      "activity" : "validate",
+      "start" : 112,
+      "length" : 169
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 138,
+      "length" : 274
+    },
+    {
+      "activity" : "generate2",
+      "start" : 168,
+      "length" : 1064
+    },
+    {
+      "activity" : "generate2",
+      "start" : 181,
+      "length" : 131
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 7
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-report.json",
+    "size" : 65753,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 17
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 27
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 92,
+      "length" : 115
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 64
+    },
+    {
+      "activity" : "validate",
+      "start" : 113,
+      "length" : 1052
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 139,
+      "length" : 582
+    },
+    {
+      "activity" : "generate2",
+      "start" : 169,
+      "length" : 735
+    },
+    {
+      "activity" : "generate2",
+      "start" : 182,
+      "length" : 148
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 16
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 295,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-section-grouper.json",
+    "size" : 12058,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 5
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 92,
+      "length" : 2
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 23
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 27
+    },
+    {
+      "activity" : "validate",
+      "start" : 114,
+      "length" : 156
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 139,
+      "length" : 285
+    },
+    {
+      "activity" : "generate2",
+      "start" : 169,
+      "length" : 816
+    },
+    {
+      "activity" : "generate2",
+      "start" : 182,
+      "length" : 161
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 15
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-service-request.json",
+    "size" : 53574,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 14
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 24
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 92,
+      "length" : 47
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 95
+    },
+    {
+      "activity" : "validate",
+      "start" : 114,
+      "length" : 1087
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 139,
+      "length" : 551
+    },
+    {
+      "activity" : "generate2",
+      "start" : 170,
+      "length" : 732
+    },
+    {
+      "activity" : "generate2",
+      "start" : 182,
+      "length" : 180
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 16
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-patho-specimen.json",
+    "size" : 25935,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 14
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 92,
+      "length" : 78
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 49
+    },
+    {
+      "activity" : "validate",
+      "start" : 115,
+      "length" : 1334
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 3
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 140,
+      "length" : 736
+    },
+    {
+      "activity" : "generate2",
+      "start" : 171,
+      "length" : 1600
+    },
+    {
+      "activity" : "generate2",
+      "start" : 182,
+      "length" : 382
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 19
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Substance-mii-exa-patho-canadabalsam.json",
+    "size" : 392,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 134
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 173,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Substance-mii-exa-patho-eosin-y.json",
+    "size" : 381,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 103
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 173,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Substance-mii-exa-patho-hematoxylin-stain.json",
+    "size" : 400,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "scan",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 53
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 173,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Substance-mii-exa-patho-microscope-slide-mounting-medium.json",
+    "size" : 431,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 53
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 173,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Substance-mii-exa-patho-neutral-buffered-formalin.json",
+    "size" : 417,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 103,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 53
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 173,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Substance-mii-exa-patho-p63-immunostain.json",
+    "size" : 1029,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 180
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 173,
+      "length" : 16
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Substance-mii-exa-patho-paraffin.json",
+    "size" : 387,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 53
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 173,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-all-loinc.json",
+    "size" : 1601,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 390
+    },
+    {
+      "activity" : "validate",
+      "start" : 101,
+      "length" : 628
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 173,
+      "length" : 491
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-collection-method-snomed-ct.json",
+    "size" : 2218,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 5
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 108
+    },
+    {
+      "activity" : "validate",
+      "start" : 101,
+      "length" : 121
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 173,
+      "length" : 569
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-composition-type-kdl.json",
+    "size" : 2360,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 46
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 14
+    },
+    {
+      "activity" : "validate",
+      "start" : 101,
+      "length" : 165
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 174,
+      "length" : 132
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-composition-type-snomed-ct.json",
+    "size" : 2236,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 5
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 54
+    },
+    {
+      "activity" : "validate",
+      "start" : 102,
+      "length" : 109
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 174,
+      "length" : 143
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-container-type-snomed-ct.json",
+    "size" : 4275,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 9
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 5
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 99,
+      "length" : 113
+    },
+    {
+      "activity" : "validate",
+      "start" : 102,
+      "length" : 174
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 16
+    },
+    {
+      "activity" : "generate2",
+      "start" : 174,
+      "length" : 160
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-media-modality-snomed-ct.json",
+    "size" : 2999,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 5
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 100,
+      "length" : 57
+    },
+    {
+      "activity" : "validate",
+      "start" : 102,
+      "length" : 156
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 174,
+      "length" : 149
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-problem-list-snomed-ct.json",
+    "size" : 5686,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 100,
+      "length" : 371
+    },
+    {
+      "activity" : "validate",
+      "start" : 102,
+      "length" : 504
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 16
+    },
+    {
+      "activity" : "generate2",
+      "start" : 174,
+      "length" : 324
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-processing-procedure-snomed-ct.json",
+    "size" : 2208,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 4
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 100,
+      "length" : 54
+    },
+    {
+      "activity" : "validate",
+      "start" : 102,
+      "length" : 88
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 175,
+      "length" : 487
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-report-category-hl7.json",
+    "size" : 2161,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 7
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 36
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 100,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 103,
+      "length" : 34
+    },
+    {
+      "activity" : "translate",
+      "start" : 131,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 175,
+      "length" : 82
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-report-code-loinc.json",
+    "size" : 3629,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 6
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 100,
+      "length" : 111
+    },
+    {
+      "activity" : "validate",
+      "start" : 103,
+      "length" : 153
+    },
+    {
+      "activity" : "translate",
+      "start" : 132,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 175,
+      "length" : 155
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-section-types-loinc.json",
+    "size" : 2991,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 100,
+      "length" : 57
+    },
+    {
+      "activity" : "validate",
+      "start" : 103,
+      "length" : 154
+    },
+    {
+      "activity" : "translate",
+      "start" : 132,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 175,
+      "length" : 77
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-patho-service-request-code.json",
+    "size" : 9941,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 90,
+      "length" : 9
+    },
+    {
+      "activity" : "load",
+      "start" : 90,
+      "length" : 8
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 100,
+      "length" : 428
+    },
+    {
+      "activity" : "validate",
+      "start" : 103,
+      "length" : 383
+    },
+    {
+      "activity" : "translate",
+      "start" : 132,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 141,
+      "length" : 18
+    },
+    {
+      "activity" : "generate2",
+      "start" : 175,
+      "length" : 1935
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 227,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 295,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 2736,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 6658,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-patho-macroscopic-grouper-intro.md",
+    "size" : 191
+  },
+  {
+    "name" : "/input/intro-notes/CapabilityStatement-mii-cps-patho-capability-statement-intro.md",
+    "size" : 997,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper-intro.md",
+    "size" : 191
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-patho-microscopic-grouper-intro.md",
+    "size" : 191
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-patho-specimen-intro.md",
+    "size" : 426,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-patho-finding-intro.md",
+    "size" : 191
+  },
+  {
+    "name" : "/input/pagecontent/terminologien.md",
+    "size" : 8924,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 51
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/changes.md",
+    "size" : 3012,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 3303
+  },
+  {
+    "name" : "/input/pagecontent/szenarien.md",
+    "size" : 7808,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/translationinfo.md",
+    "size" : 1766
+  },
+  {
+    "name" : "/input/pagecontent/uml.md",
+    "size" : 1200,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/downloads.md",
+    "size" : 2308,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/datensaetze.md",
+    "size" : 9437,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    },
+    {
+      "activity" : "makeDependencies",
+      "start" : 184,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/profile.md",
+    "size" : 5219,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/referenzen.md",
+    "size" : 979,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/anwendungsfaelle.md",
+    "size" : 660
+  },
+  {
+    "name" : "/input/pagecontent/version-history.md",
+    "size" : 933
+  },
+  {
+    "name" : "/input/pagecontent/beschreibung.md",
+    "size" : 9619,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/hierarchie.md",
+    "size" : 11940,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/kontext.md",
+    "size" : 3020,
+    "processes" : [{
+      "activity" : "scan",
+      "start" : 93,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/intro-notes",
+    "size" : 0
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-patho-macroscopic-grouper-intro.md",
+    "size" : 191,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/intro-notes/CapabilityStatement-mii-cps-patho-capability-statement-intro.md",
+    "size" : 997,
+    "processes" : [{
+      "activity" : "translate",
+      "start" : 132,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper-intro.md",
+    "size" : 191
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-patho-microscopic-grouper-intro.md",
+    "size" : 191
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-patho-specimen-intro.md",
+    "size" : 426,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/intro-notes/StructureDefinition-mii-pr-patho-finding-intro.md",
+    "size" : 191
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0
+  },
+  {
+    "name" : "/input/images/ArtDecor_ganz.PNG",
+    "size" : 8348
+  },
+  {
+    "name" : "/input/images/patho_profile_relationships_v1.0.0.png",
+    "size" : 108080,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/ArtDecor_Probe.PNG",
+    "size" : 10700
+  },
+  {
+    "name" : "/input/images/ArtDecor_Untersuchungsauftrag.PNG",
+    "size" : 13135
+  },
+  {
+    "name" : "/input/images/patho_observation_dependencies_v1.0.0.png",
+    "size" : 38867,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/GrouperNachher.png",
+    "size" : 136595
+  },
+  {
+    "name" : "/input/images/patho_uml_v2026.png",
+    "size" : 158097,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/Specimen.png",
+    "size" : 177651
+  },
+  {
+    "name" : "/input/images/ArtDecor_Beobachtungsberichtabschnitt.PNG",
+    "size" : 20362,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/GrouperVorher.png",
+    "size" : 130679
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 95488,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 177,
+      "length" : 6
+    }]
+  }]
+}

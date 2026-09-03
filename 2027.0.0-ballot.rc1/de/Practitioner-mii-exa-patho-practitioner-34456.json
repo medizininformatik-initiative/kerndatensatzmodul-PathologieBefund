@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "mii-exa-patho-practitioner-34456",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner mii-exa-patho-practitioner-34456</b></p><a name=\"mii-exa-patho-practitioner-34456\"> </a><a name=\"hcmii-exa-patho-practitioner-34456\"> </a><p><b>name</b>: Ulrich Urban </p></div>"
+  },
+  "name" : [{
+    "family" : "Urban",
+    "given" : ["Ulrich"]
+  }]
+}
