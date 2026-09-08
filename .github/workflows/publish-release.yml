@@ -27,7 +27,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Zielverzeichnis auf gh-pages, z. B. 2027.0.0-ballot.rc1"
+        description: "Zielverzeichnis auf gh-pages, z. B. 2027.0.0-ballot.rc2"
         required: true
         type: string
       source_branch:
