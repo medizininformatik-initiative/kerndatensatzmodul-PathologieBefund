@@ -30,7 +30,7 @@
         {
           "code": "7771000",
           "system": "http://snomed.info/sct",
-          "display": "Left (qualifier value)"
+          "display": "Left"
         }
       ]
     }
@@ -59,7 +59,7 @@
               {
                 "code": "7771000",
                 "system": "http://snomed.info/sct",
-                "display": "Left (qualifier value)"
+                "display": "Left"
               }
             ]
           }

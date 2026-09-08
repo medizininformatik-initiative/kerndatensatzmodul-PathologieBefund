@@ -11,7 +11,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1201985008",
-        "display": "Tissue block specimen (specimen)"
+        "display": "Tissue block specimen"
       }
     ]
   },
@@ -41,7 +41,7 @@
           {
             "system": "http://snomed.info/sct",
             "code": "787376009",
-            "display": "Preparation of formalin fixed paraffin embedded tissue specimen (procedure)"
+            "display": "Preparation of formalin fixed paraffin embedded tissue specimen"
           }
         ]
       }
@@ -93,7 +93,7 @@
         {
           "code": "168126000",
           "system": "http://snomed.info/sct",
-          "display": "Sample macroscopy (procedure)"
+          "display": "Sample macroscopy"
         }
       ]
     },
@@ -102,7 +102,7 @@
         {
           "code": "716917000",
           "system": "http://snomed.info/sct",
-          "display": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+          "display": "Right lateral middle peripheral zone of prostate"
         }
       ]
     }
@@ -114,7 +114,7 @@
           {
             "code": "434464009",
             "system": "http://snomed.info/sct",
-            "display": "Tissue cassette (physical object)"
+            "display": "Tissue cassette"
           }
         ]
       },

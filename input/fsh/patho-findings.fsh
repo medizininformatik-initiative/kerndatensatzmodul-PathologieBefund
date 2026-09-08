@@ -125,7 +125,7 @@ Description: "Biopsy site of Specimen A (1st punch)"
 * code.coding = $LOINC#94738-2 "Biopsy site Patient"
 * code.extension.url = $fhir-narrative-link
 * code.extension.valueUrl = "#macro-a-biopsy-site-key"
-* valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+* valueCodeableConcept = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
 * valueCodeableConcept.extension.url = $fhir-narrative-link
 * valueCodeableConcept.extension.valueUrl = "#macro-a-biopsy-site-value"
 * derivedFrom[+] = Reference(mii-exa-patho-attached-image)
@@ -161,7 +161,7 @@ Description: "Biopsy site of Specimen B (2nd punch)"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0
 * code.coding = $LOINC#94738-2 "Biopsy site Patient"
-* valueCodeableConcept = $SCT#716934008 "Structure of apical part of peripheral zone of right half prostate (body structure)"
+* valueCodeableConcept = $SCT#716934008 "Right apical peripheral zone of prostate"
 * derivedFrom[+] = Reference(mii-exa-patho-attached-image)
 
 Instance: mii-exa-patho-tissue-length-b
@@ -208,7 +208,7 @@ Usage: #example
 * code.coding = $LOINC#94738-2 "Biopsy site Patient"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* code.extension.valueUrl = "#macro-a-biopsy-site-key"
-* valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+* valueCodeableConcept = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
 //* valueCodeableConcept.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* valueCodeableConcept.extension.valueUrl = "#macro-a-biopsy-site-value"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)

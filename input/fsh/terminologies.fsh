@@ -16,16 +16,16 @@ Title: "MII VS Patho Container Type [SNOMED CT]"
 Description: "ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet"
 * insert PR_CS_VS_Version
 * insert Publisher
-* $SCT#434746001 "Specimen vial (physical object)"
-* $SCT#434464009 "Tissue cassette (physical object)"
-* $SCT#434708008 "Tissue cassette for microarray (physical object)"
-* $SCT#433466003 "Microscope slide (physical object)"
-* $SCT#433453003 "Specimen container component (physical object)"
-* $SCT#434533009 "Electron microscopy grid (physical object)"
-* $SCT#434822004 "Specimen well (physical object)"
-* $SCT#433472003 "Microscope slide coverslip (physical object)"
-* $SCT#434473001 "Specimen container lid (physical object)"
-* $SCT#706053007 "General specimen container (physical object)"
+* $SCT#434746001 "Specimen vial"
+* $SCT#434464009 "Tissue cassette"
+* $SCT#434708008 "Tissue cassette for microarray"
+* $SCT#433466003 "Microscope slide"
+* $SCT#433453003 "Specimen container component"
+* $SCT#434533009 "Electron microscopy grid"
+* $SCT#434822004 "Specimen well"
+* $SCT#433472003 "Microscope slide coverslip"
+* $SCT#434473001 "Specimen container lid"
+* $SCT#706053007 "General specimen container"
 
 ValueSet: MII_VS_Patho_Processing_Procedure_SNOMED_CT
 Id: mii-vs-patho-processing-procedure-snomed-ct
@@ -44,11 +44,11 @@ Title: "MII VS Patho Media Modality [SNOMED CT]"
 Description: "ValueSet with some of the main Media.modalities needed in the pathological scope"
 * insert PR_CS_VS_Version
 * insert Publisher
-* $SCT#706821004 "Scanner (physical object)"
-* $SCT#706582001 "Microscope camera (physical object)"
-* $SCT#14364002 "Camera, device (physical object)"
-* $SCT#701627004 "Multi-purpose digital medical camera (physical object)"
-* $SCT#409903006 "External camera (physical object)"
+* $SCT#706821004 "Scanner"
+* $SCT#706582001 "Microscope camera"
+* $SCT#14364002 "Camera"
+* $SCT#701627004 "Multi-purpose digital medical camera"
+* $SCT#409903006 "External camera"
 
 //----------------------------------
 // Composition

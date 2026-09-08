@@ -687,7 +687,7 @@ Usage: #example
 * extension[document-version].valueString = "1"
 * status = #final
 * type.coding[XDS].code = #PATH
-* type.coding[sct] = $SCT#371528001 "Pathology report (record artifact)"
+* type.coding[sct] = $SCT#371528001 "Pathology report"
 * attester[legal].mode = #legal
 * attester[legal].party = Reference(Practitioner/mii-exa-patho-practitioner-765879)
 * section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"

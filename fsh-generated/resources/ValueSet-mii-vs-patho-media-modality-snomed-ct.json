@@ -25,23 +25,23 @@
         "concept": [
           {
             "code": "706821004",
-            "display": "Scanner (physical object)"
+            "display": "Scanner"
           },
           {
             "code": "706582001",
-            "display": "Microscope camera (physical object)"
+            "display": "Microscope camera"
           },
           {
             "code": "14364002",
-            "display": "Camera, device (physical object)"
+            "display": "Camera"
           },
           {
             "code": "701627004",
-            "display": "Multi-purpose digital medical camera (physical object)"
+            "display": "Multi-purpose digital medical camera"
           },
           {
             "code": "409903006",
-            "display": "External camera (physical object)"
+            "display": "External camera"
           }
         ]
       }

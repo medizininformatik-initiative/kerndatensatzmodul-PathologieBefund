@@ -11,7 +11,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "430856003",
-        "display": "Tissue section (specimen)"
+        "display": "Tissue section"
       }
     ]
   },
@@ -41,7 +41,7 @@
           {
             "system": "http://snomed.info/sct",
             "code": "104210008",
-            "display": "Hematoxylin and eosin stain method (procedure)"
+            "display": "Hematoxylin and eosin stain method"
           }
         ]
       },
@@ -101,7 +101,7 @@
         {
           "code": "40923002",
           "system": "http://snomed.info/sct",
-          "display": "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
+          "display": "Tissue processing technique, routine, embed, cut and stain, per surgical specimen"
         }
       ]
     },
@@ -110,7 +110,7 @@
         {
           "code": "716917000",
           "system": "http://snomed.info/sct",
-          "display": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+          "display": "Right lateral middle peripheral zone of prostate"
         }
       ]
     }
@@ -122,7 +122,7 @@
           {
             "code": "433466003",
             "system": "http://snomed.info/sct",
-            "display": "Microscope slide (physical object)"
+            "display": "Microscope slide"
           }
         ]
       },

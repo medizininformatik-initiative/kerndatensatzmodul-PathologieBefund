@@ -131,17 +131,17 @@ Description: "Prostate tru-cut biopsy sample (specimen)"
 * accessionIdentifier
   * value = "E12345_21"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-* type = $SCT#309134005 "Prostate tru-cut biopsy sample"
+* type = $SCT#309134005 "Prostate tru-cut biopsy specimen"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * parent = Reference(Specimen/E12345_21)
 * request = Reference(mii-exa-patho-request)
 * collection
   * collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
   * collectedDateTime = "2021-01-29T06:15:00Z"
-  * method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
-  * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+  * method = $SCT#301759007 "Tru-cut biopsy of prostate"
+  * bodySite = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
 * container[+] 
-  * type = $SCT#434746001 "Specimen vial (physical object)"
+  * type = $SCT#434746001 "Specimen vial"
   * additiveReference = Reference(mii-exa-patho-neutral-buffered-formalin)
 
 Instance: mii-exa-patho-he-stained-slide-prostate
@@ -177,15 +177,15 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 * accessionIdentifier
   * value = "E12345_21"
   * system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-* type = $SCT#787150001 "Stained slide of tissue section (specimen)"
+* type = $SCT#787150001 "Stained slide of tissue section"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * parent = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
 * request = Reference(mii-exa-patho-request)
 * collection
   * collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
   * collectedDateTime = "2021-01-29T06:15:00Z"
-  * method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
-  * bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+  * method = $SCT#301759007 "Tru-cut biopsy of prostate"
+  * bodySite = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
 * processing[+].extension[temperaturbedingungen].valueRange
   * low
     * unit = "°C"
@@ -197,7 +197,7 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
     * system = $UCUM
     * code = #Cel
     * value = 30
-* processing[=].procedure.coding[sct] = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
+* processing[=].procedure.coding[sct] = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen"
 * processing[=].procedure.extension.url = $fhir-narrative-link
 * processing[=].procedure.extension.valueUrl = "#bearbeitungsprozedur"
 * processing[+].extension[temperaturbedingungen].valueRange
@@ -211,16 +211,16 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
     * system = $UCUM
     * code = #Cel
     * value = 30
-* processing[=].procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method (procedure)"
+* processing[=].procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method"
 * processing[=].procedure.extension.url = $fhir-narrative-link
 * processing[=].procedure.extension.valueUrl = "#faerbung"
 * processing[=].additive[+] = Reference(mii-exa-patho-hematoxylin-stain)
 * processing[=].additive[+] = Reference(mii-exa-patho-eosin-y)
 * container[+] 
-  * type = $SCT#433466003 "Microscope slide (physical object)"
+  * type = $SCT#433466003 "Microscope slide"
   * additiveReference = Reference(mii-exa-patho-microscope-slide-mounting-medium)
 * container[+]
-  * type = $SCT#433472003 "Microscope slide coverslip (physical object)"
+  * type = $SCT#433472003 "Microscope slide coverslip"
   * additiveReference = Reference(mii-exa-patho-microscope-slide-mounting-medium)
 */
 
@@ -239,17 +239,17 @@ Usage: #example
 * identifier[=].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht" //  (Typ nicht zu verwenden im Untersuchungsauftrag) - angehangen
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht" // (Accession identifier nicht zu verwenden im Untersuchungsauftrag) - angehangen
-* type = $SCT#309134005 "Prostate tru-cut biopsy sample"
+* type = $SCT#309134005 "Prostate tru-cut biopsy specimen"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * request = Reference(mii-exa-patho-request)
 * collection.collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
-* collection.method = $SCT#301759007 "Tru-cut biopsy of prostate (procedure)"
-* collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
-* container.type = $SCT#434746001 "Specimen vial (physical object)"
+* collection.method = $SCT#301759007 "Tru-cut biopsy of prostate"
+* collection.bodySite = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
+* container.type = $SCT#434746001 "Specimen vial"
 * container.additiveReference = Reference(Substance/mii-exa-patho-neutral-buffered-formalin)
 * extension[feature].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature"
-* extension[feature].extension[type].valueCodeableConcept = $SCT#251597001 "Structure of right lateral lobe of prostate (body structure)"
+* extension[feature].extension[type].valueCodeableConcept = $SCT#251597001 "Structure of right lateral lobe of prostate"
 * extension[feature].extension[type].url = "type"
 * extension[feature].extension[description].valueString = "Marked by red ink"
 * extension[feature].extension[description].url = "description"
@@ -266,20 +266,20 @@ Usage: #example
 * identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-* type = $SCT#1201985008 "Tissue block specimen (specimen)"
+* type = $SCT#1201985008 "Tissue block specimen"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * parent = Reference(mii-exa-patho-prostate-tru-cut-biopsy-sample)
 * request = Reference(mii-exa-patho-request)
 * collection.collector = Reference(Practitioner/mii-exa-patho-practitioner-21234)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
-* collection.method = $SCT#168126000 "Sample macroscopy (procedure)"
-* collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+* collection.method = $SCT#168126000 "Sample macroscopy"
+* collection.bodySite = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
 * processing.extension[temperaturbedingungen].valueRange.low = 0 'Cel' "°C"
 * processing.extension[temperaturbedingungen].valueRange.high = 30 'Cel' "°C"
-* processing.procedure.coding[sct] = $SCT#787376009 "Preparation of formalin fixed paraffin embedded tissue specimen (procedure)"
+* processing.procedure.coding[sct] = $SCT#787376009 "Preparation of formalin fixed paraffin embedded tissue specimen"
 //* processing.procedure.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* processing.procedure.extension.valueUrl = "#bearbeitungsprozedur"
-* container.type = $SCT#434464009 "Tissue cassette (physical object)"
+* container.type = $SCT#434464009 "Tissue cassette"
 * container.additiveReference = Reference(Substance/mii-exa-patho-paraffin)
 
 Instance: mii-exa-patho-prostate-biopsy-schnitt-HE
@@ -294,22 +294,22 @@ Usage: #example
 * identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-* type = $SCT#430856003 "Tissue section (specimen)"
+* type = $SCT#430856003 "Tissue section"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * parent = Reference(mii-exa-patho-prostate-biopsy-block)
 * request = Reference(mii-exa-patho-request)
 * collection.collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
-* collection.method = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
-* collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+* collection.method = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen"
+* collection.bodySite = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
 * processing.extension[temperaturbedingungen].valueRange.low = 0 'Cel' "°C"
 * processing.extension[temperaturbedingungen].valueRange.high = 30 'Cel' "°C"
-* processing.procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method (procedure)"
+* processing.procedure.coding[sct] = $SCT#104210008 "Hematoxylin and eosin stain method"
 //* processing.procedure.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* processing.procedure.extension.valueUrl = "#faerbung"
 * processing.additive[0] = Reference(Substance/mii-exa-patho-hematoxylin-stain)
 * processing.additive[+] = Reference(Substance/mii-exa-patho-eosin-y)
-* container.type = $SCT#433466003 "Microscope slide (physical object)"
+* container.type = $SCT#433466003 "Microscope slide"
 * container.additiveReference = Reference(Substance/mii-exa-patho-canadabalsam)
 
 Instance: mii-exa-patho-prostate-biopsy-schnitt-p63
@@ -324,21 +324,21 @@ Usage: #example
 * identifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
 * accessionIdentifier.value = "E12345_21"
 * accessionIdentifier.system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
-* type = $SCT#430856003 "Tissue section (specimen)"
+* type = $SCT#430856003 "Tissue section"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * parent = Reference(mii-exa-patho-prostate-biopsy-block)
 * request = Reference(mii-exa-patho-request)
 * collection.collector = Reference(Practitioner/mii-exa-patho-practitioner-1234)
 * collection.collectedDateTime = "2021-01-29T06:15:00Z"
-* collection.method = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
-* collection.bodySite = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+* collection.method = $SCT#40923002 "Tissue processing technique, routine, embed, cut and stain, per surgical specimen"
+* collection.bodySite = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
 * processing.extension[temperaturbedingungen].valueRange.low = 0 'Cel' "°C"
 * processing.extension[temperaturbedingungen].valueRange.high = 30 'Cel' "°C"
-* processing.procedure.coding[sct] = $SCT#13269000 "Immunocytochemical stain (procedure)"
+* processing.procedure.coding[sct] = $SCT#13269000 "Immunocytochemical stain"
 //* processing.procedure.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* processing.procedure.extension.valueUrl = "#immunfaerbung"
 * processing.additive = Reference(Substance/mii-exa-patho-p63-immunostain)
-* container.type = $SCT#433466003 "Microscope slide (physical object)"
+* container.type = $SCT#433466003 "Microscope slide"
 * container.additiveReference = Reference(Substance/mii-exa-patho-canadabalsam)
 
 Instance: mii-exa-patho-hematoxylin-stain
@@ -346,42 +346,42 @@ InstanceOf: $mii-bio-additive
 Usage: #example
 Title: "EXA MII Patho Hematoxylin-stain"
 Description: "Hematoxylin stain (substance)"
-* code.coding = $SCT#12710003 "Hematoxylin stain (substance)"
+* code.coding = $SCT#12710003 "Hematoxylin stain"
 
 Instance: mii-exa-patho-eosin-y
 InstanceOf: $mii-bio-additive
 Usage: #example
 Title: "EXA MII Patho Eosin Y"
 Description: "Eosin Y (substance)"
-* code.coding = $SCT#763042003 "Eosin Y (substance)"
+* code.coding = $SCT#763042003 "Eosin Y"
 
 Instance: mii-exa-patho-neutral-buffered-formalin
 InstanceOf: $mii-bio-additive
 Usage: #example
 Title: "EXA MII Patho Neutral Buffered Formalin"
 Description: "Neutral buffered formalin (substance)"
-* code.coding = $SCT#434162003 "Neutral buffered formalin (substance)"
+* code.coding = $SCT#434162003 "Neutral buffered formalin"
 
 Instance: mii-exa-patho-microscope-slide-mounting-medium
 InstanceOf: $mii-bio-additive
 Usage: #example
 Title: "EXA MII Patho Microscope Slide Mounting Medium"
 Description: "Microscope slide mounting medium (substance)"
-* code.coding = $SCT#430862008 "Microscope slide mounting medium (substance)"
+* code.coding = $SCT#430862008 "Microscope slide mounting medium"
 
 Instance: mii-exa-patho-paraffin
 InstanceOf: $mii-bio-additive
 Usage: #example
 Title: "EXA MII Patho Paraffin"
 Description: "Paraffin wax (substance)"
-* code.coding = $SCT#311731000 "Paraffin wax (substance)"
+* code.coding = $SCT#311731000 "Paraffin wax"
 
 Instance: mii-exa-patho-canadabalsam
 InstanceOf: $mii-bio-additive
 Usage: #example
 Title: "EXA MII Patho Canada Balsam"
 Description: "Canada balsam (substance)"
-* code.coding = $SCT#412582000 "Canada balsam (substance)"
+* code.coding = $SCT#412582000 "Canada balsam"
 
 Instance: mii-exa-patho-p63-immunostain
 InstanceOf: $mii-bio-additive
@@ -405,13 +405,13 @@ Description: "Lokalisation im Prostatektomie-Praeparat: rechte apikale periphere
 * active = true
 * patient = Reference(Patient/mii-exa-patho-patient-12345)
 * location = $SCT#717007000 "Apical peripheral zone of prostate"
-* locationQualifier[+] = $SCT#24028007 "Right (qualifier value)"
+* locationQualifier[+] = $SCT#24028007 "Right"
 * description = "Rechte apikale periphere Zone der Prostata, posterior, 15 mm proximal des Apex"
 * extension[0].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure"
 * extension[0].extension[0].url = "structure"
 * extension[0].extension[0].valueCodeableConcept = $SCT#717007000 "Apical peripheral zone of prostate"
 * extension[0].extension[1].url = "laterality"
-* extension[0].extension[1].valueCodeableConcept = $SCT#24028007 "Right (qualifier value)"
+* extension[0].extension[1].valueCodeableConcept = $SCT#24028007 "Right"
 * extension[0].extension[2].url = "bodyLandmarkOrientation"
 * extension[0].extension[2].extension[0].url = "landmarkDescription"
 * extension[0].extension[2].extension[0].valueCodeableConcept = $SCT#68756004 "Structure of apex of prostate"
@@ -439,16 +439,16 @@ Description: "Radikalprostatektomie-Praeparat als Einsendeprobe (Part)"
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_311"
 * status = #available
-* type = $SCT#122725003 "Specimen from prostate obtained by radical prostatectomy (specimen)"
+* type = $SCT#122725003 "Specimen from prostate obtained by radical prostatectomy"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * collection
   * collector = Reference(Practitioner/mii-exa-patho-practitioner-2346545)
   * collectedDateTime = "2025-02-05T10:00:00+01:00"
-  * method = $SCT#26294005 "Radical prostatectomy (procedure)"
+  * method = $SCT#26294005 "Radical prostatectomy"
   * bodySite = $SCT#41216001 "Prostate"
   * bodySite.extension[bodyStructure].valueReference = Reference(BodyStructure/mii-exa-patho-prostate-body-structure)
 * container
-  * type = $SCT#434746001 "Specimen vial (physical object)"
+  * type = $SCT#434746001 "Specimen vial"
   * additiveReference = Reference(Substance/mii-exa-patho-neutral-buffered-formalin)
 * note.text = "Radikalprostatektomie-Praeparat, Tumorregion rechte apikale periphere Zone (posterior) markiert. In Formalin fixiert."
 
@@ -464,13 +464,13 @@ Description: "Lokalisation im BET-Exzisionspraeparat: linke Mamma, unterer aeuss
 * morphology = $SCT#82711006 "Infiltrating duct carcinoma"
 * morphology.text = "Bioptisch gesichertes invasives Karzinom"
 * location = $SCT#110502005 "Lower outer quadrant of left breast"
-* locationQualifier[+] = $SCT#7771000 "Left (qualifier value)"
+* locationQualifier[+] = $SCT#7771000 "Left"
 * description = "5 x 3 x 3 cm, eine Draht- und eine Fadenmarkierung"
 * extension[0].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure"
 * extension[0].extension[0].url = "structure"
 * extension[0].extension[0].valueCodeableConcept = $SCT#110502005 "Lower outer quadrant of left breast"
 * extension[0].extension[1].url = "laterality"
-* extension[0].extension[1].valueCodeableConcept = $SCT#7771000 "Left (qualifier value)"
+* extension[0].extension[1].valueCodeableConcept = $SCT#7771000 "Left"
 * extension[0].extension[2].url = "bodyLandmarkOrientation"
 * extension[0].extension[2].extension[0].url = "landmarkDescription"
 * extension[0].extension[2].extension[0].valueCodeableConcept = $SCT#24142002 "Nipple structure"
@@ -525,6 +525,6 @@ Description: "BET-Exzisionspraeparat der linken Mamma als Einsendeprobe (Part), 
   * bodySite = $SCT#33564002 "Structure of lower outer quadrant of breast"
   * bodySite.extension[bodyStructure].valueReference = Reference(BodyStructure/mii-exa-patho-left-breast-body-structure)
 * container
-  * type = $SCT#434746001 "Specimen vial (physical object)"
+  * type = $SCT#434746001 "Specimen vial"
   * additiveReference = Reference(Substance/mii-exa-patho-neutral-buffered-formalin)
 * note.text = "BET-Exzisionspraeparat Mamma links, unterer aeusserer Quadrant, 5 Uhr, 50 mm von der Mamille. Drahthaekchen und zwei Fadenmarkierungen."
