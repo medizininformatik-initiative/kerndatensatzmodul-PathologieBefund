@@ -6,7 +6,7 @@
   "title": "MII VS Patho Media Modality [SNOMED CT]",
   "description": "ValueSet with some of the main Media.modalities needed in the pathological scope",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot.rc2",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -25,23 +25,23 @@
         "concept": [
           {
             "code": "706821004",
-            "display": "Scanner (physical object)"
+            "display": "Scanner"
           },
           {
             "code": "706582001",
-            "display": "Microscope camera (physical object)"
+            "display": "Microscope camera"
           },
           {
             "code": "14364002",
-            "display": "Camera, device (physical object)"
+            "display": "Camera"
           },
           {
             "code": "701627004",
-            "display": "Multi-purpose digital medical camera (physical object)"
+            "display": "Multi-purpose digital medical camera"
           },
           {
             "code": "409903006",
-            "display": "External camera (physical object)"
+            "display": "External camera"
           }
         ]
       }

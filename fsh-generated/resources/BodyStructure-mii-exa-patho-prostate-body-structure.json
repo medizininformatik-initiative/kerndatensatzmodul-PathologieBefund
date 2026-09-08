@@ -20,7 +20,7 @@
         {
           "code": "24028007",
           "system": "http://snomed.info/sct",
-          "display": "Right (qualifier value)"
+          "display": "Right"
         }
       ]
     }
@@ -49,7 +49,7 @@
               {
                 "code": "24028007",
                 "system": "http://snomed.info/sct",
-                "display": "Right (qualifier value)"
+                "display": "Right"
               }
             ]
           }

@@ -14,9 +14,7 @@
 - `documentation` Lebenszyklus-Tabellen auf aktualisierte Berichtsform-Matrix gebracht (#247)
 - `feature` Specimen.collection.bodySite: R5-BodyStructure-Extension (mCode entfällt) inkl. Prostatektomie- und Mamma-Beispiel (#259)
 - `feature` EU-Lab-Angleichung: DiagnosticReport↔Composition-Extensions und optionale Composition-Section-Slices (#262, #263)
-- `fix` Korrekturen: CapabilityStatement-URL, fehlende Substances in Specimen-Beispielen
 - `changed` IG wird ab dieser Version mit dem HL7 IG Publisher erstellt (zuvor Simplifier)
-- `changed` CapabilityStatement: RequestGroup-Ressource entfernt (Profil MII_PR_Patho_Request_Group existiert nicht mehr)
 
 ### 2026.0.1
 

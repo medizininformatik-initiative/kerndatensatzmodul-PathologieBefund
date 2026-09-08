@@ -35,8 +35,9 @@
 #              Settings → Pages to "GitHub Actions" (mirrors go-publish.yml).
 #
 # Terminology: the IG Publisher build prefers the MII terminology server
-#            (SU-TermServ) through a client-certificate nginx proxy when the repo
-#            secrets SU_TERMSERV_CLIENT_CERT / _KEY / _PASSWORD are set, and
+#            (SU-TermServ) through a client-certificate nginx proxy when the
+#            ORGANISATION secrets CDS_DEV_CLIENT_CERT / _KEY / _CERT_PASSWORD are
+#            set (das Geruest sucht SU_TERMSERV_CLIENT_* - siehe den Schritt), and
 #            otherwise falls back to the public HL7 server https://tx.fhir.org
 #            with a ::notice. The build must not hard-fail without the cert;
 #            some MII-specific value sets may then not fully expand (a QA note).
@@ -282,9 +283,17 @@ jobs:
         if: ${{ steps.build.outputs.mode == 'full' }}
         shell: bash
         env:
-          SU_TERMSERV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-          SU_TERMSERV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-          SU_TERMSERV_CLIENT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+          # Die MII-Organisation hinterlegt das SU-TermServ-Client-Zertifikat als
+          # CDS_DEV_CLIENT_CERT / _KEY / _CERT_PASSWORD - die Namen, die die
+          # Reusable-Validation-Workflows von kerndatensatz-meta deklarieren. Das
+          # Geruest, aus dem dieser Workflow stammt, erwartet stattdessen
+          # SU_TERMSERV_CLIENT_*, fand daher nichts und fiel still auf den
+          # oeffentlichen Terminologieserver zurueck. Wir lesen die Namen der
+          # Organisation; die lokalen Variablennamen bleiben, damit die Schritte
+          # unten unveraendert sind. Gleiche Loesung wie in kerndatensatzmodul-labor.
+          SU_TERMSERV_CLIENT_CERT: ${{ secrets.CDS_DEV_CLIENT_CERT }}
+          SU_TERMSERV_CLIENT_KEY: ${{ secrets.CDS_DEV_CLIENT_KEY }}
+          SU_TERMSERV_CLIENT_PASSWORD: ${{ secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
         run: |
           set -euo pipefail
           # Prefer the MII terminology server (SU-TermServ) through a client-cert
@@ -297,6 +306,19 @@ jobs:
             curl --fail --location --silent --show-error \
               "https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-meta/1db2e534704d92e5ee0cde663ce3e7ccd8825fa7/.github/workflows/nginx.conf" \
               --output "${nginx_dir}/nginx.conf"
+            # Der Publisher fragt {tx}/tx-reg/resolve nach dem zustaendigen Server
+            # fuer jedes CodeSystem. Antwortet niemand, faellt er still auf
+            # tx.fhir.org zurueck - dessen THO fuehrt ICD-O-3 als Version "2000",
+            # was hunderte Versions-/ValueSet-Fehler erzeugt. Wir lassen den Proxy
+            # sich selbst als autoritativ melden, damit der Client auf ihm bleibt.
+            # Die gepinnte Upstream-nginx.conf bleibt unberuehrt - gepatcht wird nur
+            # unsere heruntergeladene Kopie. Gegenstueck: .github/fhir-settings.json
+            # erlaubt {tx-host}/tx-reg, sonst verweigert der SSRF-Schutz die Abfrage.
+            # KEIN Heredoc hier: der Terminator muesste auf Spalte 0 stehen, die
+            # YAML-Einrueckung verschiebt ihn und bricht den Step. sed ist robust.
+            # Uebernommen aus kerndatensatzmodul-Onkologie.
+            sed -i 's|^\( *\)location / {|\1location /tx-reg {\n\1    default_type application/json;\n\1    return 200 \x27{"formats":["application/fhir+json"],"authoritative":[{"url":"http://127.0.0.1:8090/fhir"}],"candidates":[]}\x27;\n\1}\n\n\1location / {|' "${nginx_dir}/nginx.conf"
+            grep -q "location /tx-reg" "${nginx_dir}/nginx.conf"
             printf '%s' "${SU_TERMSERV_CLIENT_CERT}" | base64 --decode > "${nginx_dir}/certs/client-cert.pem"
             printf '%s' "${SU_TERMSERV_CLIENT_KEY}" | base64 --decode > "${nginx_dir}/certs/client-key-encrypted.key"
             openssl rsa \

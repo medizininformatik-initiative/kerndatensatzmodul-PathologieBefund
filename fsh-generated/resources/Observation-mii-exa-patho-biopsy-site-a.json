@@ -3,7 +3,7 @@
   "id": "mii-exa-patho-biopsy-site-a",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc2"
     ]
   },
   "category": [
@@ -30,7 +30,7 @@
       {
         "code": "94738-2",
         "system": "http://loinc.org",
-        "display": "Biopsy site Patient"
+        "display": "Biopsy site [Anatomy]"
       }
     ]
   },
@@ -39,7 +39,7 @@
       {
         "code": "716917000",
         "system": "http://snomed.info/sct",
-        "display": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+        "display": "Right lateral middle peripheral zone of prostate"
       }
     ]
   },

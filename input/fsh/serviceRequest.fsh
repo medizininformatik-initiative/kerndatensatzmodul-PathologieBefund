@@ -189,7 +189,7 @@ An examination request is always bound to one (or more) specimen(s), for which d
 * insert Translation(category ^short, en-US, Category)
 * insert Translation(category ^definition, de-DE, Kategorie des Untersuchungsauftrags)
 * insert Translation(category ^definition, en-US, Category of the examination request)
-* category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)" 
+* category = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report" 
 * code MS
 * insert Label(code, Code, Code für die angeforderte Leistung)
 * insert Translation(code ^short, de-DE, Code)
@@ -336,14 +336,14 @@ Description: "Pathology Service Request Example"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * encounter = Reference(Encounter/mii-exa-patho-encounter-87687)
 * requester = Reference(Practitioner/mii-exa-patho-practitioner-34456)
-* code = $SCT#44977009 "Cytopathology procedure, cell block preparation (procedure)"
+* code = $SCT#44977009 "Cytopathology procedure, cell block preparation"
 * supportingInfo[anamnesis] = Reference(mii-exa-patho-history-of-present-illness)
 * supportingInfo[activeProblems] = Reference(mii-exa-patho-active-problems-list)
 */
 Instance: mii-exa-patho-request
 InstanceOf: mii-pr-patho-service-request
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2027.0.0-ballot.rc2"
 //* category = $sct#108252007 "Laboratory procedure (procedure" - Ist fixed auf einen anderen Code
 * identifier.type = $v2-0203#PLAC
 * identifier.value = "KHXX_ENDO_18.123451"
@@ -354,7 +354,7 @@ Usage: #example
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * encounter = Reference(Encounter/mii-exa-patho-encounter-87687)
 * requester = Reference(Practitioner/mii-exa-patho-practitioner-34456)
-* code = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+* code = $SCT#726007 "Pathology consultation, comprehensive, records and specimen with report"
 * supportingInfo[anamnesis] = Reference(List/mii-exa-patho-history-of-present-illness)
 * supportingInfo[activeProblems] = Reference(List/mii-exa-patho-active-problems-list)
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
@@ -365,9 +365,9 @@ InstanceOf: mii-pr-patho-problem-list-item
 Usage: #example
 Title: "MII EXA Patho Problem List Item 1"
 Description: "Pathology Problem List Item Example"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item|2027.0.0-ballot.rc2"
 * category[problem-list-item] = $cs-hl7-condition-category#problem-list-item
-* code = $SCT#363346000 "Malignant neoplastic disease (disorder)"
+* code = $SCT#363346000 "Malignant neoplastic disease"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 
 Instance: mii-exa-patho-problem-list-item-2
@@ -375,9 +375,9 @@ InstanceOf: mii-pr-patho-problem-list-item
 Usage: #example
 Title: "MII EXA Patho Problem List Item 2"
 Description: "Pathology Problem List Item Example"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item|2027.0.0-ballot.rc2"
 * category[problem-list-item] = $cs-hl7-condition-category#problem-list-item
-* code = $SCT#266987004 "History of malignant neoplasm (situation)"
+* code = $SCT#266987004 "H/O: malignant neoplasm"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 
 Instance: mii-exa-patho-history-of-present-illness
@@ -385,7 +385,7 @@ InstanceOf: mii-pr-patho-history-of-present-illness
 Usage: #example
 Title: "MII EXA Patho History Of Present Illness"
 Description: "Pathology History of Present Illness List Example"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness|2027.0.0-ballot.rc2"
 * status = #current 
 * mode = #snapshot
 * code = $LOINC#8684-3 "History of Present illness"
@@ -397,7 +397,7 @@ InstanceOf: mii-pr-patho-active-problems-list
 Usage: #example
 Title: "MII EXA Patho Active Problems List"
 Description: "Pathology Active Problems List List Example"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list|2027.0.0-ballot.rc2"
 * status = #current 
 * mode = #snapshot
 * code = $LOINC#11450-4 "Problemliste - Berichtet"

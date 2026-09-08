@@ -539,7 +539,7 @@ Description: "Example for MII_PR_Patho_Report"
 Instance: mii-exa-patho-report
 InstanceOf: mii-pr-patho-report
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc1"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot.rc2"
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].value = "E21.12345"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
@@ -647,7 +647,7 @@ Description: "Example for an MII_PR_Patho_Composition"
 Instance: mii-exa-patho-composition
 InstanceOf: mii-pr-patho-composition
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot.rc1"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot.rc2"
 * text.div = "
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
   <div id=\"befund-titel\">
@@ -687,7 +687,7 @@ Usage: #example
 * extension[document-version].valueString = "1"
 * status = #final
 * type.coding[XDS].code = #PATH
-* type.coding[sct] = $SCT#371528001 "Pathology report (record artifact)"
+* type.coding[sct] = $SCT#371528001 "Pathology report"
 * attester[legal].mode = #legal
 * attester[legal].party = Reference(Practitioner/mii-exa-patho-practitioner-765879)
 * section[patho-diagnostic-report].code = $LOINC#60567-5 "Comprehensive pathology report panel"

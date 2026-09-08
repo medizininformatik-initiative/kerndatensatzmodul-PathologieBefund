@@ -1,6 +1,6 @@
 {
   "name": "de.medizininformatikinitiative.kerndatensatz.patho",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot.rc2",
   "description": "Medizininformatik Initiative - Modul Pathologie",
   "author": "juliansass",
   "fhirVersions": [
@@ -28,9 +28,9 @@
   "jurisdiction": "urn:iso:std:iso:3166#DE",
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
-    "de.medizininformatikinitiative.kerndatensatz.meta": "2026.0.0",
-    "de.medizininformatikinitiative.kerndatensatz.biobank": "2026.0.1",
-    "de.medizininformatikinitiative.kerndatensatz.base": "2026.0.1",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "2027.0.0-ballot.rc3",
+    "de.medizininformatikinitiative.kerndatensatz.biobank": "2027.0.0-ballot.rc2",
+    "de.medizininformatikinitiative.kerndatensatz.base": "2027.0.0-ballot.rc1",
     "de.gematik.isik": "5.1.2",
     "hl7.fhir.uv.xver-r5.r4": "0.1.0",
     "hl7.fhir.eu.extensions.r4": "1.3.0"

@@ -12,3 +12,37 @@ This IG is for FHIR version 4.0.1, while the package 'hl7.fhir.uv.subscriptions-
 # Slice-Definition der Extension inkonsistent (min 0, Slices summieren sich auf min 1).
 # Upstream-Problem, nicht im Patho-Profil verursacht.
 The slice definition for Specimen.processing:lagerprozess.extension has a minimum of 0 but the slices add up to a minimum of 1
+
+# Der IG Publisher meldet diese Codes als ungueltig, obwohl SU-TermServ sie im
+# selben Lauf bestaetigt: $validate-code liefert "result": true, $expand gibt sie
+# alle in "contains" zurueck (nachgewiesen in output/qa-tx.html, CI-Lauf 34228970907,
+# SNOMED-Edition 20260701, LOINC 2.83). Betroffen sind ausschliesslich enumerierte
+# ValueSet.compose.include.concept-Eintraege, nie Instanzen - derselbe Code 434464009
+# validiert in Specimen/mii-exa-patho-prostate-biopsy-block fehlerfrei. Gegen
+# tx.fhir.org trat die Meldung nicht auf. Codes zu entfernen waere falsch, sie sind
+# gueltig und werden gebraucht; gemeldet an hapifhir/org.hl7.fhir.core.
+Der Code 100969-5 ist im System http://loinc.org nicht gültig
+Der Code 11526-1 ist im System http://loinc.org nicht gültig
+Der Code 11529-5 ist im System http://loinc.org nicht gültig
+Der Code 14364002 ist im System http://snomed.info/sct nicht gültig
+Der Code 18743-5 ist im System http://loinc.org nicht gültig
+Der Code 22634-0 ist im System http://loinc.org nicht gültig
+Der Code 22635-7 ist im System http://loinc.org nicht gültig
+Der Code 22637-3 ist im System http://loinc.org nicht gültig
+Der Code 26435-8 ist im System http://loinc.org nicht gültig
+Der Code 33716-2 ist im System http://loinc.org nicht gültig
+Der Code 409903006 ist im System http://snomed.info/sct nicht gültig
+Der Code 433453003 ist im System http://snomed.info/sct nicht gültig
+Der Code 433466003 ist im System http://snomed.info/sct nicht gültig
+Der Code 433472003 ist im System http://snomed.info/sct nicht gültig
+Der Code 434464009 ist im System http://snomed.info/sct nicht gültig
+Der Code 434473001 ist im System http://snomed.info/sct nicht gültig
+Der Code 434533009 ist im System http://snomed.info/sct nicht gültig
+Der Code 434708008 ist im System http://snomed.info/sct nicht gültig
+Der Code 434822004 ist im System http://snomed.info/sct nicht gültig
+Der Code 47527-7 ist im System http://loinc.org nicht gültig
+Der Code 47528-5 ist im System http://loinc.org nicht gültig
+Der Code 60568-3 ist im System http://loinc.org nicht gültig
+Der Code 701627004 ist im System http://snomed.info/sct nicht gültig
+Der Code 706053007 ist im System http://snomed.info/sct nicht gültig
+Der Code 706582001 ist im System http://snomed.info/sct nicht gültig

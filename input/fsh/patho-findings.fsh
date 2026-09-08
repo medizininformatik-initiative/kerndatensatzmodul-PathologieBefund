@@ -122,10 +122,10 @@ Description: "Biopsy site of Specimen A (1st punch)"
 * status = #final
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 
-* code.coding = $LOINC#94738-2 "Biopsy site Patient"
+* code.coding = $LOINC#94738-2 "Biopsy site [Anatomy]"
 * code.extension.url = $fhir-narrative-link
 * code.extension.valueUrl = "#macro-a-biopsy-site-key"
-* valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+* valueCodeableConcept = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
 * valueCodeableConcept.extension.url = $fhir-narrative-link
 * valueCodeableConcept.extension.valueUrl = "#macro-a-biopsy-site-value"
 * derivedFrom[+] = Reference(mii-exa-patho-attached-image)
@@ -160,8 +160,8 @@ Description: "Biopsy site of Specimen B (2nd punch)"
 * status = #final
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0
-* code.coding = $LOINC#94738-2 "Biopsy site Patient"
-* valueCodeableConcept = $SCT#716934008 "Structure of apical part of peripheral zone of right half prostate (body structure)"
+* code.coding = $LOINC#94738-2 "Biopsy site [Anatomy]"
+* valueCodeableConcept = $SCT#716934008 "Right apical peripheral zone of prostate"
 * derivedFrom[+] = Reference(mii-exa-patho-attached-image)
 
 Instance: mii-exa-patho-tissue-length-b
@@ -182,7 +182,7 @@ Description: "Tissue length of Specimen B (2nd punch)"
 Instance: mii-exa-patho-tissue-length-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc2"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 
 * status = #final
@@ -201,14 +201,14 @@ Usage: #example
 Instance: mii-exa-patho-biopsy-site-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc2"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 
 * status = #final
-* code.coding = $LOINC#94738-2 "Biopsy site Patient"
+* code.coding = $LOINC#94738-2 "Biopsy site [Anatomy]"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* code.extension.valueUrl = "#macro-a-biopsy-site-key"
-* valueCodeableConcept = $SCT#716917000 "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+* valueCodeableConcept = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
 //* valueCodeableConcept.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* valueCodeableConcept.extension.valueUrl = "#macro-a-biopsy-site-value"
 * specimen = Reference(Specimen/mii-exa-patho-prostate-tru-cut-biopsy-sample)
@@ -246,7 +246,7 @@ Description: "[Microscopic Finding] Gleason pattern.primary in prostate tumor fo
 Instance: mii-exa-patho-p63-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc2"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
@@ -260,7 +260,7 @@ Usage: #example
 Instance: mii-exa-patho-gleason-pattern-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc2"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
@@ -276,7 +276,7 @@ Usage: #example
 Instance: mii-exa-patho-histologic-type-a
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc2"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22635-7
 * status = #final
@@ -327,21 +327,21 @@ Description: "Example for diagnostic conclusion"
 Instance: mii-exa-patho-diagnostic-conclusion-1
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc2"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
 * code = $LOINC#59847-4 //"Histology and Behavior ICD-O-3 Cancer"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink" 
 //* code.extension.valueUrl = "#diagnostic-conclusion-icdo-3-key"
-* valueCodeableConcept = $icd-o-3#8140/3 "Adenocarcinoma, NOS"
+* valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom o.n.A."
 * valueCodeableConcept.text = "Adenokarzinom o.n.A."
 
 
 Instance: mii-exa-patho-diagnostic-conclusion-2
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc2"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final
@@ -353,7 +353,7 @@ Usage: #example
 Instance: mii-exa-patho-diagnostic-conclusion-3
 InstanceOf: mii-pr-patho-finding
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc2"
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22637-3
 * status = #final

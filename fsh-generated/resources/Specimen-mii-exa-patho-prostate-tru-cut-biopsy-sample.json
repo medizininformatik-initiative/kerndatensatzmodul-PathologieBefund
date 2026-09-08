@@ -3,7 +3,7 @@
   "id": "mii-exa-patho-prostate-tru-cut-biopsy-sample",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"
+      "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc2"
     ]
   },
   "type": {
@@ -11,7 +11,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "309134005",
-        "display": "Prostate tru-cut biopsy sample"
+        "display": "Prostate tru-cut biopsy specimen"
       }
     ]
   },
@@ -26,7 +26,7 @@
               {
                 "code": "251597001",
                 "system": "http://snomed.info/sct",
-                "display": "Structure of right lateral lobe of prostate (body structure)"
+                "display": "Structure of right lateral lobe of prostate"
               }
             ]
           }
@@ -91,7 +91,7 @@
         {
           "code": "301759007",
           "system": "http://snomed.info/sct",
-          "display": "Tru-cut biopsy of prostate (procedure)"
+          "display": "Tru-cut biopsy of prostate"
         }
       ]
     },
@@ -100,7 +100,7 @@
         {
           "code": "716917000",
           "system": "http://snomed.info/sct",
-          "display": "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+          "display": "Right lateral middle peripheral zone of prostate"
         }
       ]
     }
@@ -112,7 +112,7 @@
           {
             "code": "434746001",
             "system": "http://snomed.info/sct",
-            "display": "Specimen vial (physical object)"
+            "display": "Specimen vial"
           }
         ]
       },
