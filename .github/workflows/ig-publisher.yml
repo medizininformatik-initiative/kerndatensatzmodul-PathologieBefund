@@ -306,6 +306,19 @@ jobs:
             curl --fail --location --silent --show-error \
               "https://raw.githubusercontent.com/medizininformatik-initiative/kerndatensatz-meta/1db2e534704d92e5ee0cde663ce3e7ccd8825fa7/.github/workflows/nginx.conf" \
               --output "${nginx_dir}/nginx.conf"
+            # Der Publisher fragt {tx}/tx-reg/resolve nach dem zustaendigen Server
+            # fuer jedes CodeSystem. Antwortet niemand, faellt er still auf
+            # tx.fhir.org zurueck - dessen THO fuehrt ICD-O-3 als Version "2000",
+            # was hunderte Versions-/ValueSet-Fehler erzeugt. Wir lassen den Proxy
+            # sich selbst als autoritativ melden, damit der Client auf ihm bleibt.
+            # Die gepinnte Upstream-nginx.conf bleibt unberuehrt - gepatcht wird nur
+            # unsere heruntergeladene Kopie. Gegenstueck: .github/fhir-settings.json
+            # erlaubt {tx-host}/tx-reg, sonst verweigert der SSRF-Schutz die Abfrage.
+            # KEIN Heredoc hier: der Terminator muesste auf Spalte 0 stehen, die
+            # YAML-Einrueckung verschiebt ihn und bricht den Step. sed ist robust.
+            # Uebernommen aus kerndatensatzmodul-Onkologie.
+            sed -i 's|^\( *\)location / {|\1location /tx-reg {\n\1    default_type application/json;\n\1    return 200 \x27{"formats":["application/fhir+json"],"authoritative":[{"url":"http://127.0.0.1:8090/fhir"}],"candidates":[]}\x27;\n\1}\n\n\1location / {|' "${nginx_dir}/nginx.conf"
+            grep -q "location /tx-reg" "${nginx_dir}/nginx.conf"
             printf '%s' "${SU_TERMSERV_CLIENT_CERT}" | base64 --decode > "${nginx_dir}/certs/client-cert.pem"
             printf '%s' "${SU_TERMSERV_CLIENT_KEY}" | base64 --decode > "${nginx_dir}/certs/client-key-encrypted.key"
             openssl rsa \
