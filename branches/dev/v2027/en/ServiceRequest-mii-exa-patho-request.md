@@ -20,9 +20,9 @@ Profile: [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service
 
 **intent**: Order
 
-**category**: Pathology consultation, comprehensive, records and specimen with report (procedure)
+**category**: Pathology consultation, comprehensive, records and specimen with report
 
-**code**: Pathology consultation, comprehensive, records and specimen with report (procedure)
+**code**: Pathology consultation, comprehensive, records and specimen with report
 
 **subject**: [Max Mustermann Male, DoB: 1959-08-24](Patient-mii-exa-patho-patient-12345.md)
 
@@ -35,7 +35,7 @@ Profile: [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service
 * [List for 'History of Present illness' for '->Max Mustermann Male, DoB: 1959-08-24'](List-mii-exa-patho-history-of-present-illness.md)
 * [List for 'Problemliste - Berichtet' for '->Max Mustermann Male, DoB: 1959-08-24'](List-mii-exa-patho-active-problems-list.md)
 
-**specimen**: [Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample](Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.md)
+**specimen**: [Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy specimen](Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.md)
 
 
 
@@ -64,14 +64,14 @@ Profile: [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "726007",
-      "display" : "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+      "display" : "Pathology consultation, comprehensive, records and specimen with report"
     }]
   }],
   "code" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "726007",
-      "display" : "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+      "display" : "Pathology consultation, comprehensive, records and specimen with report"
     }]
   },
   "subject" : {

@@ -19,7 +19,7 @@ Profile: [MII PR Patho Active Problems List](StructureDefinition-mii-pr-patho-ac
 | Mode: Snapshot List | Status: Current | Code: Problemliste - Berichtet |
 | Subject:[Max Mustermann Male, DoB: 1959-08-24](Patient-mii-exa-patho-patient-12345.md) | | |
 
-* **Items**: [Condition Malignant neoplastic disease (disorder)](Condition-mii-exa-patho-problem-list-item-1.md)
+* **Items**: [Condition Malignant neoplastic disease](Condition-mii-exa-patho-problem-list-item-1.md)
 
 
 

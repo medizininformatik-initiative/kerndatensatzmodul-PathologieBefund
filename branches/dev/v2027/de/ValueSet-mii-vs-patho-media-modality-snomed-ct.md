@@ -67,7 +67,7 @@ ValueSet with some of the main Media.modalities needed in the pathological scope
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T11:58:20+00:00",
+  "date" : "2026-09-08T12:58:28+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -119,43 +119,23 @@ ValueSet with some of the main Media.modalities needed in the pathological scope
       "system" : "http://snomed.info/sct",
       "concept" : [{
         "code" : "706821004",
-        "display" : "Scanner (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Scanner (physical object)"
-        }]
+        "display" : "Scanner"
       },
       {
         "code" : "706582001",
-        "display" : "Microscope camera (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Microscope camera (physical object)"
-        }]
+        "display" : "Microscope camera"
       },
       {
         "code" : "14364002",
-        "display" : "Camera, device (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Camera, device (physical object)"
-        }]
+        "display" : "Camera"
       },
       {
         "code" : "701627004",
-        "display" : "Multi-purpose digital medical camera (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Multi-purpose digital medical camera (physical object)"
-        }]
+        "display" : "Multi-purpose digital medical camera"
       },
       {
         "code" : "409903006",
-        "display" : "External camera (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "External camera (physical object)"
-        }]
+        "display" : "External camera"
       }]
     }]
   }

@@ -16,7 +16,7 @@
 > **url**[structure](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/structure)
 **value**: Apical peripheral zone of prostate
 > **url**[laterality](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/laterality)
-**value**: Right (qualifier value)**landmarkDescription**: Structure of apex of prostate**surfaceOrientation**: Posterior
+**value**: Right**landmarkDescription**: Structure of apex of prostate**surfaceOrientation**: Posterior
 > **distanceFromLandmark**
 * value: 15 mm (Details: UCUM codemm = 'mm')
 
@@ -26,7 +26,7 @@
 
 **location**: Apical peripheral zone of prostate
 
-**locationQualifier**: Right (qualifier value)
+**locationQualifier**: Right
 
 **description**: Right apical peripheral zone of the prostate, posterior, 15 mm proximal to the apex
 
@@ -57,7 +57,7 @@
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "24028007",
-          "display" : "Right (qualifier value)"
+          "display" : "Right"
         }]
       }
     },
@@ -110,7 +110,7 @@
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "24028007",
-      "display" : "Right (qualifier value)"
+      "display" : "Right"
     }]
   }],
   "description" : "Rechte apikale periphere Zone der Prostata, posterior, 15 mm proximal des Apex",

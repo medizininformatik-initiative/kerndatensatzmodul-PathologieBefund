@@ -16,7 +16,7 @@ Profile: [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-probl
 
 **category**: Problem List Item
 
-**code**: History of malignant neoplasm (situation)
+**code**: H/O: malignant neoplasm
 
 **subject**: [Max Mustermann Male, DoB: 1959-08-24](Patient-mii-exa-patho-patient-12345.md)
 
@@ -41,7 +41,7 @@ Profile: [MII PR Patho Problem List Item](StructureDefinition-mii-pr-patho-probl
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "266987004",
-      "display" : "History of malignant neoplasm (situation)"
+      "display" : "H/O: malignant neoplasm"
     }]
   },
   "subject" : {

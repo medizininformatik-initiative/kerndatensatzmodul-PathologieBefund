@@ -20,31 +20,31 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
 
 **status**: Available
 
-**type**: Tissue section (specimen)
+**type**: Tissue section
 
 **subject**: [Max Mustermann Male, DoB: 1959-08-24](Patient-mii-exa-patho-patient-12345.md)
 
-**parent**: [Specimen: identifier = Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Tissue block specimen (specimen)](Specimen-mii-exa-patho-prostate-biopsy-block.md)
+**parent**: [Specimen: identifier = Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Tissue block specimen](Specimen-mii-exa-patho-prostate-biopsy-block.md)
 
-**request**: [ServiceRequest Pathology consultation, comprehensive, records and specimen with report (procedure)](ServiceRequest-mii-exa-patho-request.md)
+**request**: [ServiceRequest Pathology consultation, comprehensive, records and specimen with report](ServiceRequest-mii-exa-patho-request.md)
 
 ### Collections
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | - | **Collector** | **Collected[x]** | **Method** | **BodySite** |
-| * | [Practitioner Sabine Schnitt ](Practitioner-mii-exa-patho-practitioner-2346545.md) | 2021-01-29 06:15:00+0000 | Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure) | Structure of lateral middle regional part of peripheral zone of right half prostate (body structure) |
+| * | [Practitioner Sabine Schnitt ](Practitioner-mii-exa-patho-practitioner-2346545.md) | 2021-01-29 06:15:00+0000 | Tissue processing technique, routine, embed, cut and stain, per surgical specimen | Right lateral middle peripheral zone of prostate |
 
-> **processing****MII EX Biobank Temperaturbedingungen**: 0-30 °C**procedure**: Hematoxylin and eosin stain method (procedure)**additive**: 
-* [Substance Hematoxylin stain (substance)](Substance-mii-exa-patho-hematoxylin-stain.md)
-* [Substance Eosin Y (substance)](Substance-mii-exa-patho-eosin-y.md)
+> **processing****MII EX Biobank Temperaturbedingungen**: 0-30 °C**procedure**: Hematoxylin and eosin stain method**additive**: 
+* [Substance Hematoxylin stain](Substance-mii-exa-patho-hematoxylin-stain.md)
+* [Substance Eosin Y](Substance-mii-exa-patho-eosin-y.md)
 
 ### Containers
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Additive[x]** |
-| * | Microscope slide (physical object) | [Substance Canada balsam (substance)](Substance-mii-exa-patho-canadabalsam.md) |
+| * | Microscope slide | [Substance Canada balsam](Substance-mii-exa-patho-canadabalsam.md) |
 
 
 
@@ -76,7 +76,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "430856003",
-      "display" : "Tissue section (specimen)"
+      "display" : "Tissue section"
     }]
   },
   "subject" : {
@@ -97,14 +97,14 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "40923002",
-        "display" : "Tissue processing technique, routine, embed, cut and stain, per surgical specimen (procedure)"
+        "display" : "Tissue processing technique, routine, embed, cut and stain, per surgical specimen"
       }]
     },
     "bodySite" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "716917000",
-        "display" : "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+        "display" : "Right lateral middle peripheral zone of prostate"
       }]
     }
   },
@@ -130,7 +130,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "104210008",
-        "display" : "Hematoxylin and eosin stain method (procedure)"
+        "display" : "Hematoxylin and eosin stain method"
       }]
     },
     "additive" : [{
@@ -145,7 +145,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "433466003",
-        "display" : "Microscope slide (physical object)"
+        "display" : "Microscope slide"
       }]
     },
     "additiveReference" : {

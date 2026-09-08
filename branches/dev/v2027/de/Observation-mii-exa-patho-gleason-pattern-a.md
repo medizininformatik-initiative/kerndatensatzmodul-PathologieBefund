@@ -22,7 +22,7 @@ Profile: [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) ver
 
 **value**: Gleason Pattern 3
 
-**specimen**: [Specimen: identifier = Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Tissue section (specimen)](Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE.md)
+**specimen**: [Specimen: identifier = Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Tissue section](Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE.md)
 
 
 

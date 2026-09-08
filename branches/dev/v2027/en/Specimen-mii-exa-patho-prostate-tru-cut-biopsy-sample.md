@@ -15,7 +15,7 @@
 Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) version: 2027.0.0-ballot.rc2
 
 > **R5: The physical feature of a specimen (new)**
-* type: Structure of right lateral lobe of prostate (body structure)
+* type: Structure of right lateral lobe of prostate
 * description: Marked by red ink
 
 **identifier**: Placer Identifier/KHXX_ENDO_18.123451_A, Filler Identifier/E12345_21-A
@@ -24,25 +24,25 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
 
 **status**: Available
 
-**type**: Prostate tru-cut biopsy sample
+**type**: Prostate tru-cut biopsy specimen
 
 **subject**: [Max Mustermann Male, DoB: 1959-08-24](Patient-mii-exa-patho-patient-12345.md)
 
-**request**: [ServiceRequest Pathology consultation, comprehensive, records and specimen with report (procedure)](ServiceRequest-mii-exa-patho-request.md)
+**request**: [ServiceRequest Pathology consultation, comprehensive, records and specimen with report](ServiceRequest-mii-exa-patho-request.md)
 
 ### Collections
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | - | **Collector** | **Collected[x]** | **Method** | **BodySite** |
-| * | [Practitioner Sabine Schnitt ](Practitioner-mii-exa-patho-practitioner-2346545.md) | 2021-01-29 06:15:00+0000 | Tru-cut biopsy of prostate (procedure) | Structure of lateral middle regional part of peripheral zone of right half prostate (body structure) |
+| * | [Practitioner Sabine Schnitt ](Practitioner-mii-exa-patho-practitioner-2346545.md) | 2021-01-29 06:15:00+0000 | Tru-cut biopsy of prostate | Right lateral middle peripheral zone of prostate |
 
 ### Containers
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Additive[x]** |
-| * | Specimen vial (physical object) | [Substance Neutral buffered formalin (substance)](Substance-mii-exa-patho-neutral-buffered-formalin.md) |
+| * | Specimen vial | [Substance Neutral buffered formalin](Substance-mii-exa-patho-neutral-buffered-formalin.md) |
 
 
 
@@ -62,7 +62,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "251597001",
-          "display" : "Structure of right lateral lobe of prostate (body structure)"
+          "display" : "Structure of right lateral lobe of prostate"
         }]
       }
     },
@@ -101,7 +101,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "309134005",
-      "display" : "Prostate tru-cut biopsy sample"
+      "display" : "Prostate tru-cut biopsy specimen"
     }]
   },
   "subject" : {
@@ -119,14 +119,14 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "301759007",
-        "display" : "Tru-cut biopsy of prostate (procedure)"
+        "display" : "Tru-cut biopsy of prostate"
       }]
     },
     "bodySite" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "716917000",
-        "display" : "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+        "display" : "Right lateral middle peripheral zone of prostate"
       }]
     }
   },
@@ -135,7 +135,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "434746001",
-        "display" : "Specimen vial (physical object)"
+        "display" : "Specimen vial"
       }]
     },
     "additiveReference" : {

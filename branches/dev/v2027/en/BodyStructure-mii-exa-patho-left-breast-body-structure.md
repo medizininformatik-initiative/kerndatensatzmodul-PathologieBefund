@@ -16,7 +16,7 @@
 > **url**[structure](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/structure)
 **value**: Lower outer quadrant of left breast
 > **url**[laterality](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/laterality)
-**value**: Left (qualifier value)**landmarkDescription**: Nipple structure**clockFacePosition**: 5 o'clock position**surfaceOrientation**: Distal
+**value**: Left**landmarkDescription**: Nipple structure**clockFacePosition**: 5 o'clock position**surfaceOrientation**: Distal
 > **distanceFromLandmark**
 * value: 50 mm (Details: UCUM codemm = 'mm')
 
@@ -28,7 +28,7 @@
 
 **location**: Lower outer quadrant of left breast
 
-**locationQualifier**: Left (qualifier value)
+**locationQualifier**: Left
 
 **description**: 5 x 3 x 3 cm, one wire marking and one suture marking
 
@@ -59,7 +59,7 @@
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "7771000",
-          "display" : "Left (qualifier value)"
+          "display" : "Left"
         }]
       }
     },
@@ -130,7 +130,7 @@
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "7771000",
-      "display" : "Left (qualifier value)"
+      "display" : "Left"
     }]
   }],
   "description" : "5 x 3 x 3 cm, eine Draht- und eine Fadenmarkierung",

@@ -22,7 +22,7 @@ Profile: [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) ver
 
 **value**: 1.2 cm (Details: UCUM codecm = 'cm')
 
-**specimen**: [Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample](Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.md)
+**specimen**: [Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy specimen](Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.md)
 
 **derivedFrom**: [Media: status = completed; type = Image](Media-mii-exa-patho-attached-image.md)
 

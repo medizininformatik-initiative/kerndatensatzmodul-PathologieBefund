@@ -36,7 +36,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
 
 **subject**: [Erika Musterfrau Female, DoB: 1962-03-11](Patient-mii-exa-patho-patient-34545.md)
 
-**request**: [ServiceRequest Pathology consultation, comprehensive, records and specimen with report (procedure)](ServiceRequest-mii-exa-patho-request.md)
+**request**: [ServiceRequest Pathology consultation, comprehensive, records and specimen with report](ServiceRequest-mii-exa-patho-request.md)
 
 ### Collections
 
@@ -50,7 +50,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Additive[x]** |
-| * | Specimen vial (physical object) | [Substance Neutral buffered formalin (substance)](Substance-mii-exa-patho-neutral-buffered-formalin.md) |
+| * | Specimen vial | [Substance Neutral buffered formalin](Substance-mii-exa-patho-neutral-buffered-formalin.md) |
 
 **note**: 
 
@@ -190,7 +190,7 @@ BET-Exzisionspraeparat Mamma links, unterer aeusserer Quadrant, 5 Uhr, 50 mm von
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "434746001",
-        "display" : "Specimen vial (physical object)"
+        "display" : "Specimen vial"
       }]
     },
     "additiveReference" : {

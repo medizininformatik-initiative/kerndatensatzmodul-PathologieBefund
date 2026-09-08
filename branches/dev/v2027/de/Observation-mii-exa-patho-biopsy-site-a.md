@@ -20,9 +20,9 @@ Profile: [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) ver
 
 **code**: Biopsy site Patient
 
-**value**: Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)
+**value**: Right lateral middle peripheral zone of prostate
 
-**specimen**: [Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample](Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.md)
+**specimen**: [Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy specimen](Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.md)
 
 
 
@@ -59,7 +59,7 @@ Profile: [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) ver
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "716917000",
-      "display" : "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+      "display" : "Right lateral middle peripheral zone of prostate"
     }]
   },
   "specimen" : {

@@ -20,7 +20,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
 
 **status**: Available
 
-**type**: Specimen from prostate obtained by radical prostatectomy (specimen)
+**type**: Specimen from prostate obtained by radical prostatectomy
 
 **subject**: [Max Mustermann Male, DoB: 1959-08-24](Patient-mii-exa-patho-patient-12345.md)
 
@@ -29,14 +29,14 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | - | **Collector** | **Collected[x]** | **Method** | **BodySite** |
-| * | [Practitioner Sabine Schnitt ](Practitioner-mii-exa-patho-practitioner-2346545.md) | 2025-02-05 10:00:00+0100 | Radical prostatectomy (procedure) | Prostate |
+| * | [Practitioner Sabine Schnitt ](Practitioner-mii-exa-patho-practitioner-2346545.md) | 2025-02-05 10:00:00+0100 | Radical prostatectomy | Prostate |
 
 ### Containers
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Additive[x]** |
-| * | Specimen vial (physical object) | [Substance Neutral buffered formalin (substance)](Substance-mii-exa-patho-neutral-buffered-formalin.md) |
+| * | Specimen vial | [Substance Neutral buffered formalin](Substance-mii-exa-patho-neutral-buffered-formalin.md) |
 
 **note**: 
 
@@ -85,7 +85,7 @@ Radikalprostatektomie-Praeparat, Tumorregion rechte apikale periphere Zone (post
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "122725003",
-      "display" : "Specimen from prostate obtained by radical prostatectomy (specimen)"
+      "display" : "Specimen from prostate obtained by radical prostatectomy"
     }]
   },
   "subject" : {
@@ -100,7 +100,7 @@ Radikalprostatektomie-Praeparat, Tumorregion rechte apikale periphere Zone (post
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "26294005",
-        "display" : "Radical prostatectomy (procedure)"
+        "display" : "Radical prostatectomy"
       }]
     },
     "bodySite" : {
@@ -122,7 +122,7 @@ Radikalprostatektomie-Praeparat, Tumorregion rechte apikale periphere Zone (post
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "434746001",
-        "display" : "Specimen vial (physical object)"
+        "display" : "Specimen vial"
       }]
     },
     "additiveReference" : {

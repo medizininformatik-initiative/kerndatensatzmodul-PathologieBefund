@@ -93,7 +93,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-serv
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T11:58:20+00:00",
+  "date" : "2026-09-08T12:58:28+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -853,7 +853,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-serv
         "coding" : [{
           "system" : "http://snomed.info/sct",
           "code" : "726007",
-          "display" : "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+          "display" : "Pathology consultation, comprehensive, records and specimen with report"
         }]
       },
       "mustSupport" : true

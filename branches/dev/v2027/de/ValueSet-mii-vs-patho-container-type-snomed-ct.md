@@ -67,7 +67,7 @@ ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSe
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T11:58:20+00:00",
+  "date" : "2026-09-08T12:58:28+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -119,83 +119,43 @@ ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSe
       "system" : "http://snomed.info/sct",
       "concept" : [{
         "code" : "434746001",
-        "display" : "Specimen vial (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Specimen vial (physical object)"
-        }]
+        "display" : "Specimen vial"
       },
       {
         "code" : "434464009",
-        "display" : "Tissue cassette (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Tissue cassette (physical object)"
-        }]
+        "display" : "Tissue cassette"
       },
       {
         "code" : "434708008",
-        "display" : "Tissue cassette for microarray (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Tissue cassette for microarray (physical object)"
-        }]
+        "display" : "Tissue cassette for microarray"
       },
       {
         "code" : "433466003",
-        "display" : "Microscope slide (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Microscope slide (physical object)"
-        }]
+        "display" : "Microscope slide"
       },
       {
         "code" : "433453003",
-        "display" : "Specimen container component (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Specimen container component (physical object)"
-        }]
+        "display" : "Specimen container component"
       },
       {
         "code" : "434533009",
-        "display" : "Electron microscopy grid (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Electron microscopy grid (physical object)"
-        }]
+        "display" : "Electron microscopy grid"
       },
       {
         "code" : "434822004",
-        "display" : "Specimen well (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Specimen well (physical object)"
-        }]
+        "display" : "Specimen well"
       },
       {
         "code" : "433472003",
-        "display" : "Microscope slide coverslip (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Microscope slide coverslip (physical object)"
-        }]
+        "display" : "Microscope slide coverslip"
       },
       {
         "code" : "434473001",
-        "display" : "Specimen container lid (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "Specimen container lid (physical object)"
-        }]
+        "display" : "Specimen container lid"
       },
       {
         "code" : "706053007",
-        "display" : "General specimen container (physical object)",
-        "designation" : [{
-          "language" : "en",
-          "value" : "General specimen container (physical object)"
-        }]
+        "display" : "General specimen container"
       }]
     }]
   }

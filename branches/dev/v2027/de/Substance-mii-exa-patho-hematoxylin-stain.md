@@ -14,7 +14,7 @@
 
 Profile: [MII PR Biobank Substance Additiv](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance)
 
-**code**: Hematoxylin stain (substance)
+**code**: Hematoxylin stain
 
 
 
@@ -31,7 +31,7 @@ Profile: [MII PR Biobank Substance Additiv](https://simplifier.net/resolve?scope
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "12710003",
-      "display" : "Hematoxylin stain (substance)"
+      "display" : "Hematoxylin stain"
     }]
   }
 }

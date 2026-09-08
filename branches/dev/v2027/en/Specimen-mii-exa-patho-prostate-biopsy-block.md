@@ -20,34 +20,34 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
 
 **status**: Available
 
-**type**: Tissue block specimen (specimen)
+**type**: Tissue block specimen
 
 **subject**: [Max Mustermann Male, DoB: 1959-08-24](Patient-mii-exa-patho-patient-12345.md)
 
-**parent**: [Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy sample](Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.md)
+**parent**: [Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy specimen](Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.md)
 
-**request**: [ServiceRequest Pathology consultation, comprehensive, records and specimen with report (procedure)](ServiceRequest-mii-exa-patho-request.md)
+**request**: [ServiceRequest Pathology consultation, comprehensive, records and specimen with report](ServiceRequest-mii-exa-patho-request.md)
 
 ### Collections
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | - | **Collector** | **Collected[x]** | **Method** | **BodySite** |
-| * | [Practitioner Martin Makro ](Practitioner-mii-exa-patho-practitioner-21234.md) | 2021-01-29 06:15:00+0000 | Sample macroscopy (procedure) | Structure of lateral middle regional part of peripheral zone of right half prostate (body structure) |
+| * | [Practitioner Martin Makro ](Practitioner-mii-exa-patho-practitioner-21234.md) | 2021-01-29 06:15:00+0000 | Sample macroscopy | Right lateral middle peripheral zone of prostate |
 
 ### Processings
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Extension** | **Procedure** |
-| * |  | Preparation of formalin fixed paraffin embedded tissue specimen (procedure) |
+| * |  | Preparation of formalin fixed paraffin embedded tissue specimen |
 
 ### Containers
 
 | | | |
 | :--- | :--- | :--- |
 | - | **Type** | **Additive[x]** |
-| * | Tissue cassette (physical object) | [Substance Paraffin wax (substance)](Substance-mii-exa-patho-paraffin.md) |
+| * | Tissue cassette | [Substance Paraffin wax](Substance-mii-exa-patho-paraffin.md) |
 
 
 
@@ -79,7 +79,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "1201985008",
-      "display" : "Tissue block specimen (specimen)"
+      "display" : "Tissue block specimen"
     }]
   },
   "subject" : {
@@ -100,14 +100,14 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "168126000",
-        "display" : "Sample macroscopy (procedure)"
+        "display" : "Sample macroscopy"
       }]
     },
     "bodySite" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "716917000",
-        "display" : "Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)"
+        "display" : "Right lateral middle peripheral zone of prostate"
       }]
     }
   },
@@ -133,7 +133,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "787376009",
-        "display" : "Preparation of formalin fixed paraffin embedded tissue specimen (procedure)"
+        "display" : "Preparation of formalin fixed paraffin embedded tissue specimen"
       }]
     }
   }],
@@ -142,7 +142,7 @@ Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) v
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "434464009",
-        "display" : "Tissue cassette (physical object)"
+        "display" : "Tissue cassette"
       }]
     },
     "additiveReference" : {

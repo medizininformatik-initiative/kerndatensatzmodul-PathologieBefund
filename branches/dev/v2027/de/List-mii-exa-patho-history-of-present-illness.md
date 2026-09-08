@@ -19,7 +19,7 @@ Profile: [MII PR Patho History Of Present Illness](StructureDefinition-mii-pr-pa
 | Mode: Snapshot List | Status: Current | Code: History of Present illness |
 | Subject:[Max Mustermann Male, DoB: 1959-08-24](Patient-mii-exa-patho-patient-12345.md) | | |
 
-* **Items**: [Condition History of malignant neoplasm (situation)](Condition-mii-exa-patho-problem-list-item-2.md)
+* **Items**: [Condition H/O: malignant neoplasm](Condition-mii-exa-patho-problem-list-item-2.md)
 
 
 

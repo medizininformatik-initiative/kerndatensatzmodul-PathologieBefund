@@ -20,7 +20,7 @@ Profile: [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition
 
 **status**: Final
 
-**type**: Pathology report (record artifact)
+**type**: Pathology report
 
 **encounter**: [Encounter: status = finished; class = ambulatory (ActCode#AMB)](Encounter-mii-exa-patho-encounter-34555.md)
 
@@ -81,7 +81,7 @@ Profile: [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition
     {
       "system" : "http://snomed.info/sct",
       "code" : "371528001",
-      "display" : "Pathology report (record artifact)"
+      "display" : "Pathology report"
     }]
   },
   "subject" : {
