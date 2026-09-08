@@ -122,7 +122,7 @@ Description: "Biopsy site of Specimen A (1st punch)"
 * status = #final
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 
-* code.coding = $LOINC#94738-2 "Biopsy site Patient"
+* code.coding = $LOINC#94738-2 "Biopsy site [Anatomy]"
 * code.extension.url = $fhir-narrative-link
 * code.extension.valueUrl = "#macro-a-biopsy-site-key"
 * valueCodeableConcept = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
@@ -160,7 +160,7 @@ Description: "Biopsy site of Specimen B (2nd punch)"
 * status = #final
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0
-* code.coding = $LOINC#94738-2 "Biopsy site Patient"
+* code.coding = $LOINC#94738-2 "Biopsy site [Anatomy]"
 * valueCodeableConcept = $SCT#716934008 "Right apical peripheral zone of prostate"
 * derivedFrom[+] = Reference(mii-exa-patho-attached-image)
 
@@ -205,7 +205,7 @@ Usage: #example
 * category[laboratory-category].coding = $cs-obs-category#laboratory
 * category[section-type].coding = $LOINC#22634-0 
 * status = #final
-* code.coding = $LOINC#94738-2 "Biopsy site Patient"
+* code.coding = $LOINC#94738-2 "Biopsy site [Anatomy]"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink"
 //* code.extension.valueUrl = "#macro-a-biopsy-site-key"
 * valueCodeableConcept = $SCT#716917000 "Right lateral middle peripheral zone of prostate"
@@ -334,7 +334,7 @@ Usage: #example
 * code = $LOINC#59847-4 //"Histology and Behavior ICD-O-3 Cancer"
 //* code.extension.url = "http://hl7.org/fhir/StructureDefinition/narrativeLink" 
 //* code.extension.valueUrl = "#diagnostic-conclusion-icdo-3-key"
-* valueCodeableConcept = $icd-o-3#8140/3 "Adenocarcinoma, NOS"
+* valueCodeableConcept = $icd-o-3#8140/3 "Adenokarzinom o.n.A."
 * valueCodeableConcept.text = "Adenokarzinom o.n.A."
 
 

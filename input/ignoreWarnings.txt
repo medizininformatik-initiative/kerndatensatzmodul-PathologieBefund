@@ -12,3 +12,20 @@ This IG is for FHIR version 4.0.1, while the package 'hl7.fhir.uv.subscriptions-
 # Slice-Definition der Extension inkonsistent (min 0, Slices summieren sich auf min 1).
 # Upstream-Problem, nicht im Patho-Profil verursacht.
 The slice definition for Specimen.processing:lagerprozess.extension has a minimum of 0 but the slices add up to a minimum of 1
+
+# ---------------------------------------------------------------------------
+# VALUESET_INCLUDE_INVALID_CONCEPT_CODE (unterdrueckt in advisor.json)
+#
+# Der IG Publisher meldet fuer enumerierte ValueSets gegen SNOMED CT und LOINC
+# "Der Code X ist im System Y nicht gueltig" - obwohl SU-TermServ die Codes
+# bestaetigt. Nachgewiesen im Terminologie-Log (output/qa-tx.html) des CI-Laufs
+# 34228970907:
+#   $validate-code  ->  "result": true
+#   $expand         ->  200, alle Codes in "contains", Edition 20260701
+# Betroffen sind ausschliesslich ValueSet.compose.include.concept-Eintraege,
+# nie Instanzen: derselbe Code 434464009 validiert in
+# Specimen/mii-exa-patho-prostate-biopsy-block fehlerfrei.
+# Mit tx.fhir.org trat die Meldung nicht auf; sie kam mit dem Wechsel auf
+# SU-TermServ. Da der Server die Codes bestaetigt, ist die Meldung ein
+# Publisher-Befund und keine Datenkorrektur - Codes zu entfernen waere falsch.
+# ---------------------------------------------------------------------------
