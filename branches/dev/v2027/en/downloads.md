@@ -1,4 +1,4 @@
-# Downloads - MII IG Modul Patho v2027.0.0-ballot.rc1
+# Downloads - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Downloads**
@@ -17,7 +17,7 @@ Inclusion as a dependency in `sushi-config.yaml`:
 
 ```
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.patho: 2027.0.0-ballot.rc1
+  de.medizininformatikinitiative.kerndatensatz.patho: 2027.0.0-ballot.rc2
 
 ```
 

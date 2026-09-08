@@ -1,4 +1,4 @@
-# Artefaktübersicht - MII IG Modul Patho v2027.0.0-ballot.rc1
+# Artefaktübersicht - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * **Artefaktübersicht**

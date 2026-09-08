@@ -1,6 +1,6 @@
 {
   "package": "de.medizininformatikinitiative.kerndatensatz.patho",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot.rc2",
   "fhirVersion": "4.0.1",
   "jurisdiction": "DE",
   "extensions": [],
@@ -63,6 +63,9 @@
   "usage": {
     "http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference": [
       "Composition"
+    ],
+    "http://hl7.eu/fhir/laboratory/StructureDefinition/specimen-focus": [
+      "Specimen"
     ],
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure": [
       "BodyStructure"
@@ -178,6 +181,9 @@
       "Specimen.processing"
     ],
     "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-ebene": [
+      "Specimen"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-infektiositaetsstatus": [
       "Specimen"
     ],
     "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable": [

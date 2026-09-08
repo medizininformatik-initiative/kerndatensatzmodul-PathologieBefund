@@ -1,4 +1,4 @@
-# mii-exa-patho-gleason-pattern-a - MII IG Modul Patho v2027.0.0-ballot.rc1
+# mii-exa-patho-gleason-pattern-a - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) version: 2027.0.0-ballot.rc2
 
 **status**: Final
 
@@ -33,7 +33,7 @@ Profile: [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) ver
   "resourceType" : "Observation",
   "id" : "mii-exa-patho-gleason-pattern-a",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot.rc2"]
   },
   "status" : "final",
   "category" : [{

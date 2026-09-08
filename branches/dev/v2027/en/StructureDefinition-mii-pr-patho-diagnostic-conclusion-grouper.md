@@ -1,4 +1,4 @@
-# MII PR Patho Diagnostic Conclusion Grouper - MII IG Modul Patho v2027.0.0-ballot.rc1
+# MII PR Patho Diagnostic Conclusion Grouper - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_PR_Patho_Diagnostic_Conclusion_Grouper |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-08 | *Computable Name*:MII_PR_Patho_Diagnostic_Conclusion_Grouper |
 
  
 The **MII PR Patho Diagnostic Conclusion Grouper** profile of the Observation resource represents, as `DiagnosticReport.result:diagnostic-conclusion-grouper` for a [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md), the respective observation report section "Diagnostic Conclusion" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md). 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-diag
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-diagnostic-conclusion-grouper",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_PR_Patho_Diagnostic_Conclusion_Grouper",
   "_name" : {
     "extension" : [{
@@ -98,7 +98,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-diag
     }]
   },
   "status" : "active",
-  "date" : "2026-09-03T08:45:38+00:00",
+  "date" : "2026-09-08T11:58:20+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,4 +1,4 @@
-# MII VS Patho Report Code [LOINC] - MII IG Modul Patho v2027.0.0-ballot.rc1
+# MII VS Patho Report Code [LOINC] - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Patho_Report_Code_LOINC |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc | *Version*:2027.0.0-ballot.rc2 |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Patho_Report_Code_LOINC |
 
  
 ValueSet for the report type codes of pathology DiagnosticReports 
@@ -37,7 +37,7 @@ ValueSet for the report type codes of pathology DiagnosticReports
   "resourceType" : "ValueSet",
   "id" : "mii-vs-patho-report-code-loinc",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_VS_Patho_Report_Code_LOINC",
   "_name" : {
     "extension" : [{
@@ -67,7 +67,7 @@ ValueSet for the report type codes of pathology DiagnosticReports
     }]
   },
   "status" : "active",
-  "date" : "2026-09-03T08:45:38+00:00",
+  "date" : "2026-09-08T11:58:20+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

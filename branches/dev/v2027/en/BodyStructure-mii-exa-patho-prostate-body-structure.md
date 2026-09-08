@@ -1,4 +1,4 @@
-# MII EXA Patho Prostate Body Structure - MII IG Modul Patho v2027.0.0-ballot.rc1
+# MII EXA Patho Prostate Body Structure - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -13,14 +13,14 @@
 -------
 
 > **R5: Included anatomic location(s) (new)**
-> **url**[structure](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/structure)
+> **url**[structure](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/structure)
 **value**: Apical peripheral zone of prostate
-> **url**[laterality](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/laterality)
+> **url**[laterality](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/laterality)
 **value**: Right (qualifier value)**landmarkDescription**: Structure of apex of prostate**surfaceOrientation**: Posterior
 > **distanceFromLandmark**
 * value: 15 mm (Details: UCUM codemm = 'mm')
 
-> **url**[bodyLandmarkOrientation](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/bodyLandmarkOrientation)
+> **url**[bodyLandmarkOrientation](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/bodyLandmarkOrientation)
 
 **active**: true
 

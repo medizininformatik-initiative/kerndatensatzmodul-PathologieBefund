@@ -1,4 +1,4 @@
-# mii-exa-patho-micro-grouper-a - MII IG Modul Patho v2027.0.0-ballot.rc1
+# mii-exa-patho-micro-grouper-a - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Microscopic Grouper](StructureDefinition-mii-pr-patho-microscopic-grouper.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Patho Microscopic Grouper](StructureDefinition-mii-pr-patho-microscopic-grouper.md) version: 2027.0.0-ballot.rc2
 
 **status**: Final
 
@@ -37,7 +37,7 @@ Profile: [MII PR Patho Microscopic Grouper](StructureDefinition-mii-pr-patho-mic
   "resourceType" : "Observation",
   "id" : "mii-exa-patho-micro-grouper-a",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper|2027.0.0-ballot.rc2"]
   },
   "status" : "final",
   "category" : [{

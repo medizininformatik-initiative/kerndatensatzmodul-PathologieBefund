@@ -1,4 +1,4 @@
-# MII VS Patho Processing Procedure [SNOMED CT] - MII IG Modul Patho v2027.0.0-ballot.rc1
+# MII VS Patho Processing Procedure [SNOMED CT] - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_VS_Patho_Processing_Procedure_SNOMED_CT |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-08 | *Computable Name*:MII_VS_Patho_Processing_Procedure_SNOMED_CT |
 
  
 Specimen processing procedure 
@@ -37,7 +37,7 @@ Specimen processing procedure
   "resourceType" : "ValueSet",
   "id" : "mii-vs-patho-processing-procedure-snomed-ct",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_VS_Patho_Processing_Procedure_SNOMED_CT",
   "_name" : {
     "extension" : [{
@@ -67,7 +67,7 @@ Specimen processing procedure
     }]
   },
   "status" : "active",
-  "date" : "2026-09-03T08:45:38+00:00",
+  "date" : "2026-09-08T11:58:20+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

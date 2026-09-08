@@ -1,23 +1,23 @@
-# de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc1: MII IG Modul Patho(en)
+# de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc2: MII IG Modul Patho(en)
 
 ## Pages
 
 * [Core Data Set Module Pathology Report](index.md)
 * [Context and references](kontext.md)
-* [Profiles](profile.md)
-* [Terminologies](terminologien.md)
-* [Versioning](version-history.md)
-* [Scenarios](szenarien.md)
-* [Module description](beschreibung.md)
-* [UML](uml.md)
-* [Artifacts Summary](artifacts.md)
-* [Use cases and information model](anwendungsfaelle.md)
-* [Data sets](datensaetze.md)
-* [Translation information](translationinfo.md)
 * [Changelog](changes.md)
+* [Terminologies](terminologien.md)
+* [Profiles](profile.md)
 * [Hierarchy and workflow](hierarchie.md)
-* [Downloads](downloads.md)
+* [Artifacts Summary](artifacts.md)
+* [Scenarios](szenarien.md)
 * [References](referenzen.md)
+* [Data sets](datensaetze.md)
+* [Use cases and information model](anwendungsfaelle.md)
+* [Module description](beschreibung.md)
+* [Translation information](translationinfo.md)
+* [Downloads](downloads.md)
+* [Versioning](version-history.md)
+* [UML](uml.md)
 
 ## Resources
 

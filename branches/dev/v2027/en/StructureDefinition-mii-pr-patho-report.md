@@ -1,4 +1,4 @@
-# MII PR Patho Report - MII IG Modul Patho v2027.0.0-ballot.rc1
+# MII PR Patho Report - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-03 | *Computable Name*:MII_PR_Patho_Report |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report | *Version*:2027.0.0-ballot.rc2 |
+| Active as of 2026-09-08 | *Computable Name*:MII_PR_Patho_Report |
 
  
 The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) resource represents the complete report without possessing document properties (see **MII-PR-Patho-Composition**). 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-repo
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-report",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_PR_Patho_Report",
   "_name" : {
     "extension" : [{
@@ -102,7 +102,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-repo
     }]
   },
   "status" : "active",
-  "date" : "2026-09-03T08:45:38+00:00",
+  "date" : "2026-09-08T11:58:20+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,4 +1,4 @@
-# MII PR Patho Base Observation - MII IG Modul Patho v2027.0.0-ballot.rc1
+# MII PR Patho Base Observation - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Patho_Base_Observation |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation | *Version*:2027.0.0-ballot.rc2 |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_PR_Patho_Base_Observation |
 
  
 Dieses abstrakte Profil sammelt alle gemeinsamen Profilierungsanforderungen der Pathologie Observations und dient als Basis für alle anderen Observation-Profile in diesem Modul. Als abstraktes Profil ist dieses nicht instanziierbar. 
@@ -116,7 +116,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-base-observation",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_PR_Patho_Base_Observation",
   "_name" : {
     "extension" : [{
@@ -146,7 +146,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-09-03T08:45:38+00:00",
+  "date" : "2026-09-08T11:58:20+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

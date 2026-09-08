@@ -1,4 +1,4 @@
-# MII EXA Patho Left Breast Body Structure - MII IG Modul Patho v2027.0.0-ballot.rc1
+# MII EXA Patho Left Breast Body Structure - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -13,14 +13,14 @@
 -------
 
 > **R5: Included anatomic location(s) (new)**
-> **url**[structure](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/structure)
+> **url**[structure](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/structure)
 **value**: Lower outer quadrant of left breast
-> **url**[laterality](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/laterality)
+> **url**[laterality](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/laterality)
 **value**: Left (qualifier value)**landmarkDescription**: Nipple structure**clockFacePosition**: 5 o'clock position**surfaceOrientation**: Distal
 > **distanceFromLandmark**
 * value: 50 mm (Details: UCUM codemm = 'mm')
 
-> **url**[bodyLandmarkOrientation](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/bodyLandmarkOrientation)
+> **url**[bodyLandmarkOrientation](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://www.medizininformatik-initiative.de/fhir/modul-meta/bodyLandmarkOrientation)
 
 **active**: true
 

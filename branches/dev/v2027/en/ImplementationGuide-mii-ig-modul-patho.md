@@ -10,7 +10,7 @@
   "id" : "mii-ig-modul-patho",
   "language" : "de",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot.rc2",
   "name" : "MII_IG_Modul_Patho",
   "_name" : {
     "extension" : [{
@@ -101,19 +101,19 @@
     "id" : "de_medizininformatikinitiative_kerndatensatz_meta",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/ImplementationGuide/mii-ig-meta",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.meta",
-    "version" : "2026.0.0"
+    "version" : "2027.0.0-ballot.rc3"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_biobank",
     "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.biobank",
-    "version" : "2026.0.1"
+    "version" : "2027.0.0-ballot.rc2"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_base",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.base",
-    "version" : "2026.0.1"
+    "version" : "2027.0.0-ballot.rc1"
   },
   {
     "id" : "de_gematik_isik",

@@ -1,4 +1,4 @@
-# MII EXA Patho Breast Resection Sample - MII IG Modul Patho v2027.0.0-ballot.rc1
+# MII EXA Patho Breast Resection Sample - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,17 +12,17 @@
 
 -------
 
-Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) version: 2027.0.0-ballot.rc1
+Profile: [MII PR Patho Specimen](StructureDefinition-mii-pr-patho-specimen.md) version: 2027.0.0-ballot.rc2
 
-> **MII EX Biobank Feature R5**
+> **R5: The physical feature of a specimen (new)**
 * type: Part of left breast
 * description: Praeoperative radiologische Drahtmarkierung der Biopsiestelle
 
-> **MII EX Biobank Feature R5**
+> **R5: The physical feature of a specimen (new)**
 * type: Anterior surgical margin
 * description: Fadenmarkierung lang anterior
 
-> **MII EX Biobank Feature R5**
+> **R5: The physical feature of a specimen (new)**
 * type: Distal surgical margin
 * description: Fadenmarkierung 2x kurz distal
 
@@ -68,7 +68,7 @@ BET-Exzisionspraeparat Mamma links, unterer aeusserer Quadrant, 5 Uhr, 50 mm von
   "resourceType" : "Specimen",
   "id" : "mii-exa-patho-breast-resection-sample",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc1"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc2"]
   },
   "extension" : [{
     "extension" : [{

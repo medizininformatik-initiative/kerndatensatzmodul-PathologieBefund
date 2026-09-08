@@ -1,4 +1,4 @@
-# Changelog - MII IG Modul Patho v2027.0.0-ballot.rc1
+# Changelog - MII IG Modul Patho v2027.0.0-ballot.rc2
 
 * [**Table of Contents**](toc.md)
 * [**Versioning**](version-history.md)
@@ -23,9 +23,7 @@
 * `documentation` Life-cycle tables brought in line with the updated report-form matrix (#247)
 * `feature` Specimen.collection.bodySite: R5 BodyStructure extension (mCode dropped) including prostatectomy and breast example (#259)
 * `feature` EU Lab alignment: DiagnosticReport↔Composition extensions and optional Composition section slices (#262, #263)
-* `fix` Corrections: CapabilityStatement URL, missing substances in the specimen examples
 * `changed` From this version on, the IG is built with the HL7 IG Publisher (previously Simplifier)
-* `changed` CapabilityStatement: RequestGroup resource removed (the profile MII_PR_Patho_Request_Group no longer exists)
 
 ### 2026.0.1
 
