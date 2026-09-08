@@ -22,7 +22,7 @@ Profile: [MII PR Patho Macroscopic Grouper](StructureDefinition-mii-pr-patho-mac
 
 **hasMember**: 
 
-* [Observation Biopsy site Patient](Observation-mii-exa-patho-biopsy-site-a.md)
+* [Observation Biopsy site [Anatomy]](Observation-mii-exa-patho-biopsy-site-a.md)
 * [Observation Length of tissue core(s)](Observation-mii-exa-patho-tissue-length-a.md)
 
 

@@ -1,9 +1,9 @@
 MII_IG_Modul_Patho : Validation Results
 =========================================
 
-err = 28, warn = 389, info = 516
+err = 26, warn = 389, info = 516
 IG Publisher Version: 2.3.2 Out of date - current version is 2.3.4
-Generated Tue Sep 08 13:05:14 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc2 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-patho)
+Generated Tue Sep 08 14:16:38 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot.rc2 (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-patho)
  Build Errors : 0 / 36 / 0
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/BodyStructure-mii-exa-patho-left-breast-body-structure : 0 / 1 / 17
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/BodyStructure-mii-exa-patho-prostate-body-structure : 0 / 1 / 12
@@ -19,8 +19,8 @@ Generated Tue Sep 08 13:05:14 UTC 2026. FHIR version 4.0.1 for de.medizininforma
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/List-mii-exa-patho-active-problems-list : 0 / 0 / 3
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/List-mii-exa-patho-history-of-present-illness : 0 / 0 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Media-mii-exa-patho-attached-image : 0 / 0 / 2
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Observation-mii-exa-patho-biopsy-site-a : 1 / 3 / 7
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Observation-mii-exa-patho-diagnostic-conclusion-1 : 1 / 3 / 5
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Observation-mii-exa-patho-biopsy-site-a : 0 / 3 / 7
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Observation-mii-exa-patho-diagnostic-conclusion-1 : 0 / 3 / 5
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Observation-mii-exa-patho-diagnostic-conclusion-2 : 0 / 3 / 3
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Observation-mii-exa-patho-diagnostic-conclusion-3 : 0 / 3 / 5
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Observation-mii-exa-patho-diagnostic-conclusion-grouper : 0 / 3 / 2
@@ -229,8 +229,7 @@ INFORMATION: Coding.display: Unused 'en' translation 'History of Present illness
 == fsh-generated/resources/Media-mii-exa-patho-attached-image.json ==
 == fsh-generated/resources/Observation-mii-exa-patho-biopsy-site-a.json ==
 INFORMATION: Observation/mii-exa-patho-biopsy-site-a: Observation.category[1]: Keiner der angegebenen Codes ist im Valueset 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://loinc.org#22634-0)
-ERROR: Observation/mii-exa-patho-biopsy-site-a: Observation.code.coding[0].display: Wrong Display Name 'Biopsy site Patient' for http://loinc.org#94738-2. There are no valid display names found for language(s) 'de'. Default display is 'Biopsy site [Anatomy]'
-INFORMATION: Observation/mii-exa-patho-biopsy-site-a: Observation.code.coding[0]: Konnte nicht bestätigen, dass die angegebenen Codes im ValueSet 'MII VS Patho All [LOINC]' (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc|2027.0.0-ballot.rc2) enthalten sind, und es wird empfohlen, einen Code aus diesem ValueSet zu verwenden.
+INFORMATION: Observation/mii-exa-patho-biopsy-site-a: Observation.code.coding[0].display: 'Biopsy site [Anatomy]' is the default display; the code system http://loinc.org has no Display Names for the language de
 INFORMATION: Observation/mii-exa-patho-biopsy-site-a: Observation.value.ofType(CodeableConcept).coding[0].display: 'Right lateral middle peripheral zone of prostate' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
 WARNING: Observation/mii-exa-patho-biopsy-site-a: Observation: Alle Observations sollten ein Subject haben
 WARNING: Observation/mii-exa-patho-biopsy-site-a: Observation: Alle Observations sollten einen Performer haben
@@ -239,7 +238,6 @@ INFORMATION: Coding.display: Unused 'en' translation 'Biopsy site Patient' -> 'B
 INFORMATION: Coding.display: Unused 'en' translation 'Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)' -> 'Structure of lateral middle regional part of peripheral zone of right half prostate (body structure)'
 == fsh-generated/resources/Observation-mii-exa-patho-diagnostic-conclusion-1.json ==
 INFORMATION: Observation/mii-exa-patho-diagnostic-conclusion-1: Observation.category[1]: Keiner der angegebenen Codes ist im Valueset 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://loinc.org#22637-3)
-ERROR: Observation/mii-exa-patho-diagnostic-conclusion-1: Observation.value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Adenocarcinoma, NOS' for http://terminology.hl7.org/CodeSystem/icd-o-3#8140/3. Valid display is 'Adenokarzinom o.n.A.' (for the language(s) 'de')
 WARNING: Observation/mii-exa-patho-diagnostic-conclusion-1: Observation: Alle Observations sollten ein Subject haben
 WARNING: Observation/mii-exa-patho-diagnostic-conclusion-1: Observation: Alle Observations sollten einen Performer haben
 WARNING: Observation/mii-exa-patho-diagnostic-conclusion-1: Observation: Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben

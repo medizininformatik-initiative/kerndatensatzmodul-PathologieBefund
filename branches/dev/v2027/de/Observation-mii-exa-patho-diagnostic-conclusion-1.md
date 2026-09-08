@@ -56,7 +56,7 @@ Profile: [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) ver
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
       "code" : "8140/3",
-      "display" : "Adenocarcinoma, NOS"
+      "display" : "Adenokarzinom o.n.A."
     }],
     "text" : "Adenokarzinom o.n.A."
   }

@@ -31,7 +31,7 @@
     <coding>
       <system value="http://terminology.hl7.org/CodeSystem/icd-o-3"/>
       <code value="8140/3"/>
-      <display value="Adenocarcinoma, NOS"/>
+      <display value="Adenokarzinom o.n.A."/>
     </coding>
     <text value="Adenokarzinom o.n.A."/>
   </valueCodeableConcept>

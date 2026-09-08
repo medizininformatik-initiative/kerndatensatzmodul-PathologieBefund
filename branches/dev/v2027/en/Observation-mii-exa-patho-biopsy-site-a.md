@@ -18,7 +18,7 @@ Profile: [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) ver
 
 **category**: Laboratory, Pathology report gross observation Narrative
 
-**code**: Biopsy site Patient
+**code**: Biopsy site [Anatomy]
 
 **value**: Right lateral middle peripheral zone of prostate
 
@@ -52,7 +52,7 @@ Profile: [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) ver
     "coding" : [{
       "system" : "http://loinc.org",
       "code" : "94738-2",
-      "display" : "Biopsy site Patient"
+      "display" : "Biopsy site [Anatomy]"
     }]
   },
   "valueCodeableConcept" : {
