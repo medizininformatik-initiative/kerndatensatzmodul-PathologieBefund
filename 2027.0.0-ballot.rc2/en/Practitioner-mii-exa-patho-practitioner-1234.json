@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "mii-exa-patho-practitioner-1234",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner mii-exa-patho-practitioner-1234</b></p><a name=\"en-mii-exa-patho-practitioner-1234\"> </a><a name=\"en-hcmii-exa-patho-practitioner-1234\"> </a><p><b>name</b>: Lena Labor </p></div>"
+  },
+  "name" : [{
+    "family" : "Labor",
+    "given" : ["Lena"]
+  }]
+}
