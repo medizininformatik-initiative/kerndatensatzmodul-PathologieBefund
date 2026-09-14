@@ -22,6 +22,4 @@ jobs:
       JAVA_VALIDATOR_VERSION: ${{ vars.JAVA_VALIDATOR_VERSION }}
       # Custom validation report filters
       VALIDATION_REPORT_INCLUDE: errors #errors|warnings|all
-      VALIDATION_REPORT_FILTERS: |
-        StructureDefinition-mii-pr-patho-specimen.json||*slices add up*|
     secrets: inherit

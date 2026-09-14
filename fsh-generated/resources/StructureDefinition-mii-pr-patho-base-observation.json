@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-patho-base-observation",
   "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation",
-  "version": "2027.0.0-ballot.rc2",
+  "version": "2027.0.0-ballot",
   "name": "MII_PR_Patho_Base_Observation",
   "title": "MII PR Patho Base Observation",
   "status": "active",
@@ -210,7 +210,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/sct-body-structures"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-body-structures-sct"
         }
       },
       {
