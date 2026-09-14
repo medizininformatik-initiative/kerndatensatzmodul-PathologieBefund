@@ -400,7 +400,10 @@ Description: "Pathology Active Problems List List Example"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list|2027.0.0-ballot"
 * status = #current 
 * mode = #snapshot
-* code = $LOINC#11450-4 "Problem list - Reported"
-* insert Translation(code.coding[0].display, de-DE, Problemliste - Berichtet)
+// Display bewusst deutsch: der IG ist de-DE, der IG Publisher validiert gegen de.
+// Der Java-Validator prueft gegen en und verlangt "Problem list - Reported" -
+// beides zugleich geht nicht, ein .display traegt eine Sprache. Der Java-Befund
+// ist in advisor.json unterdrueckt. Siehe .claude/haeufige-fehler.md.
+* code = $LOINC#11450-4 "Problemliste - Berichtet"
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * entry.item = Reference(mii-exa-patho-problem-list-item-1)
