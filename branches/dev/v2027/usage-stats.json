@@ -137,7 +137,6 @@
       "ImplementationGuide.name",
       "ImplementationGuide.publisher",
       "ImplementationGuide.title",
-      "List.code.coding.display",
       "Organization.name",
       "StructureDefinition.description",
       "StructureDefinition.differential.element.comment",
