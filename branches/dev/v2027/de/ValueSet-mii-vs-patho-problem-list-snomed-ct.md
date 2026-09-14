@@ -1,4 +1,4 @@
-# MII VS Patho Problem List [SNOMED CT] - MII IG Modul Patho v2027.0.0-ballot.rc2
+# MII VS Patho Problem List [SNOMED CT] - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Patho_Problem_List_SNOMED_CT |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Patho_Problem_List_SNOMED_CT |
 
  
 ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2) 
@@ -37,7 +37,7 @@ ValueSet containing the recommended vocabulary for describing problems, accordin
   "resourceType" : "ValueSet",
   "id" : "mii-vs-patho-problem-list-snomed-ct",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Patho_Problem_List_SNOMED_CT",
   "_name" : {
     "extension" : [{
@@ -67,7 +67,7 @@ ValueSet containing the recommended vocabulary for describing problems, accordin
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T14:30:15+00:00",
+  "date" : "2026-09-14T08:48:26+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,4 +1,4 @@
-# MII PR Patho Base Observation - MII IG Modul Patho v2027.0.0-ballot.rc2
+# MII PR Patho Base Observation - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-08 | *Computable Name*:MII_PR_Patho_Base_Observation |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Patho_Base_Observation |
 
  
 This abstract profile collects all common profiling requirements of the pathology observations and serves as the base for all other observation profiles in this module. As an abstract profile, it is not instantiable. 
@@ -38,7 +38,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-base
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-base-observation",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Patho_Base_Observation",
   "_name" : {
     "extension" : [{
@@ -68,7 +68,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-base
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T14:30:15+00:00",
+  "date" : "2026-09-14T08:48:26+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -307,7 +307,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-base
       "mustSupport" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/sct-body-structures"
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-body-structures-sct"
       }
     },
     {

@@ -1,4 +1,4 @@
-# Kerndatensatz Modul Pathologie-Befund - MII IG Modul Patho v2027.0.0-ballot.rc2
+# Kerndatensatz Modul Pathologie-Befund - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Kerndatensatz Modul Pathologie-Befund**
@@ -7,7 +7,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho | *Version*:2027.0.0-ballot.rc2 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ImplementationGuide/mii-ig-modul-patho | *Version*:2027.0.0-ballot |
 | Active Stand: 2026-09-01 | *Maschinenlesbarer Name*:MII_IG_Modul_Patho |
 
 ### Einführung
@@ -17,7 +17,7 @@ Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatens
 | | |
 | :--- | :--- |
 | Datum | 01.09.2026 |
-| Version | 2027.0.0-ballot.rc2 |
+| Version | 2027.0.0-ballot |
 | Status | Active |
 | Realm | DE |
 

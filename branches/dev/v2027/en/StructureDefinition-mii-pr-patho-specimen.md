@@ -1,4 +1,4 @@
-# MII PR Patho Specimen - MII IG Modul Patho v2027.0.0-ballot.rc2
+# MII PR Patho Specimen - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-08 | *Computable Name*:MII_PR_Patho_Specimen |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Patho_Specimen |
 
  
 This profile inherits from [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core) It is based on the HL7 Domain Analysis Model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR). This model, in particular for pathology, accounts for the role model of specimens, which are both the subject and the product of laboratory processes. The root element (Sample) is clinically obtained specimen material from a patient and corresponds to a Part in the pathology workflow. Child elements are blocks and slides, or a cytological preparation. The child specimens (blocks and slides) should always reference at least their direct parent specimen via the Specimen.parent element. 
@@ -49,6 +49,14 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-spec
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-specimen",
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
     "url" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
     "valueCodeableConcept" : {
       "coding" : [{
@@ -59,7 +67,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-spec
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Patho_Specimen",
   "_name" : {
     "extension" : [{
@@ -111,7 +119,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-spec
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T14:30:15+00:00",
+  "date" : "2026-09-14T08:48:26+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -159,6 +167,16 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-spec
     }]
   }],
   "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Specimen",

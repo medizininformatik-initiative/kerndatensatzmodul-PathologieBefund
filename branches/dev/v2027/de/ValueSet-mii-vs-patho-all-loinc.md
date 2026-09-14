@@ -1,4 +1,4 @@
-# MII VS Patho All [LOINC] - MII IG Modul Patho v2027.0.0-ballot.rc2
+# MII VS Patho All [LOINC] - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc | *Version*:2027.0.0-ballot.rc2 |
-| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Patho_All_LOINC |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Patho_All_LOINC |
 
  
 ValueSet for general LOINC VS binding 
@@ -38,7 +38,7 @@ ValueSet for general LOINC VS binding
   "resourceType" : "ValueSet",
   "id" : "mii-vs-patho-all-loinc",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Patho_All_LOINC",
   "_name" : {
     "extension" : [{
@@ -68,7 +68,7 @@ ValueSet for general LOINC VS binding
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T14:30:15+00:00",
+  "date" : "2026-09-14T08:48:26+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

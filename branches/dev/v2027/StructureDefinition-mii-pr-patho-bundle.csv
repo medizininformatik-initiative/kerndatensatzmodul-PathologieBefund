@@ -694,7 +694,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Bundle.entry:Specimen.resource","Bundle.entry.resource","","","",1,1,"Y","","Y","Specimen {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen]]} {[]}
+"Bundle.entry:Specimen.resource","Bundle.entry.resource","","","",1,1,"Y","","","Specimen {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen]]} {[]}
 ","Sample for analysis","A sample to be used for analysis.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"","","Entity. Role, or Act","Role[classCode=SPEC]"
 "Bundle.entry:Specimen.search","Bundle.entry.search","","","",0,0,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"bdl-2

@@ -1,4 +1,4 @@
-# Anwendungsfälle und Informationsmodell - MII IG Modul Patho v2027.0.0-ballot.rc2
+# Anwendungsfälle und Informationsmodell - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Anwendungsfälle und Informationsmodell**

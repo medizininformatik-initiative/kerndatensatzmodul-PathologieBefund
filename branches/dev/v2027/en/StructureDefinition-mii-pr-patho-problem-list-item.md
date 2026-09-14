@@ -1,4 +1,4 @@
-# MII PR Patho Problem List Item - MII IG Modul Patho v2027.0.0-ballot.rc2
+# MII PR Patho Problem List Item - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-08 | *Computable Name*:MII_PR_Patho_Problem_List_Item |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Patho_Problem_List_Item |
 
  
 The **MII PR Patho Problem List Item** profile of the Condition resource represents the individual list entries of the **MII PR Patho Active Problems** and **MII PR Patho History of Present Illness** profiles. 
@@ -38,7 +38,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-prob
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-problem-list-item",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Patho_Problem_List_Item",
   "_name" : {
     "extension" : [{
@@ -68,7 +68,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-prob
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T14:30:15+00:00",
+  "date" : "2026-09-14T08:48:26+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

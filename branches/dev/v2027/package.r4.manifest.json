@@ -1,6 +1,6 @@
 {
-  "version" : "2027.0.0-ballot.rc2",
-  "date" : "20260908143015",
+  "version" : "2027.0.0-ballot",
+  "date" : "20260914084826",
   "notForPublication" : true,
   "name" : "de.medizininformatikinitiative.kerndatensatz.patho.r4"
 }

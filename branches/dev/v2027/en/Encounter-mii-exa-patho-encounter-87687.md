@@ -1,4 +1,4 @@
-# mii-exa-patho-encounter-87687 - MII IG Modul Patho v2027.0.0-ballot.rc2
+# mii-exa-patho-encounter-87687 - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

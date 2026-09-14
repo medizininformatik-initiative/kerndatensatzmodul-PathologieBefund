@@ -1,4 +1,4 @@
-# Profile - MII IG Modul Patho v2027.0.0-ballot.rc2
+# Profile - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Profile**
@@ -36,7 +36,7 @@ Die vollständige, automatisch erzeugte Liste aller Artefakte einschließlich Te
 
 ### Verpflichtende und must-support-Elemente
 
-Für verpflichtende oder als must-support markierte Elemente gelten die entsprechenden [Regeln der IPS](http://hl7.org/fhir/uv/ips/STU1/design.html#must-support), die auch für diesen Implementation Guide gelten.
+Für verpflichtende oder als must-support markierte Elemente gelten die entsprechenden Regeln der [International Patient Summary](http://hl7.org/fhir/uv/ips/history.html), die auch für diesen Implementation Guide gelten.
 
 ### Anforderungsdokumentation
 

@@ -1,6 +1,6 @@
 {
   "package": "de.medizininformatikinitiative.kerndatensatz.patho",
-  "version": "2027.0.0-ballot.rc2",
+  "version": "2027.0.0-ballot",
   "fhirVersion": "4.0.1",
   "jurisdiction": "DE",
   "extensions": [],
@@ -78,6 +78,9 @@
     ],
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature": [
       "Specimen"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm": [
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
       "CapabilityStatement.rest.resource",

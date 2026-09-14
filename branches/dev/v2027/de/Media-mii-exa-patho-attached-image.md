@@ -1,4 +1,4 @@
-# MII EXA Patho Attached Image - MII IG Modul Patho v2027.0.0-ballot.rc2
+# MII EXA Patho Attached Image - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Attached Image](StructureDefinition-mii-pr-patho-attached-image.md) version: 2027.0.0-ballot.rc2
+Profile: [MII PR Patho Attached Image](StructureDefinition-mii-pr-patho-attached-image.md) version: 2027.0.0-ballot
 
 **status**: Completed
 
@@ -25,7 +25,7 @@ Profile: [MII PR Patho Attached Image](StructureDefinition-mii-pr-patho-attached
 | | |
 | :--- | :--- |
 | - | **Url** |
-| * | [https://pathologie.klinikum-karlsruhe.de/fhir/fn/image](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.meta@2027.0.0-ballot.rc3&canonical=https://pathologie.klinikum-karlsruhe.de/fhir/fn/image) |
+| * | [https://pathologie.klinikum-karlsruhe.de/fhir/fn/image](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2027.0.0-ballot&canonical=https://pathologie.klinikum-karlsruhe.de/fhir/fn/image) |
 
 
 
@@ -36,7 +36,7 @@ Profile: [MII PR Patho Attached Image](StructureDefinition-mii-pr-patho-attached
   "resourceType" : "Media",
   "id" : "mii-exa-patho-attached-image",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|2027.0.0-ballot.rc2"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image|2027.0.0-ballot"]
   },
   "status" : "completed",
   "type" : {

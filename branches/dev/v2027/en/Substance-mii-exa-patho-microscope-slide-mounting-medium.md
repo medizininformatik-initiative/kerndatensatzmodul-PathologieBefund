@@ -1,4 +1,4 @@
-# EXA MII Patho Microscope Slide Mounting Medium - MII IG Modul Patho v2027.0.0-ballot.rc2
+# EXA MII Patho Microscope Slide Mounting Medium - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Biobank Substance Additiv](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance)
+Profile: [MII PR Biobank Substance Additiv](file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-substance-additiv.html)
 
 **code**: Microscope slide mounting medium
 

@@ -1,13 +1,13 @@
 MII_IG_Modul_Patho : Validation Results
 =========================================
 
-err = 26, warn = 389, info = 516
+err = 25, warn = 387, info = 526
 $--
 Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz.patho#$-- (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-patho)
  Build Errors : 0 / 36 / 0
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/BodyStructure-mii-exa-patho-left-breast-body-structure : 0 / 1 / 17
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/BodyStructure-mii-exa-patho-prostate-body-structure : 0 / 1 / 12
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/CapabilityStatement-mii-cps-patho-capability-statement : 0 / 8 / 5
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/CapabilityStatement-mii-cps-patho-capability-statement : 0 / 7 / 5
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Composition-mii-exa-patho-composition : 0 / 2 / 9
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Condition-mii-exa-patho-problem-list-item-1 : 0 / 0 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Condition-mii-exa-patho-problem-list-item-2 : 0 / 0 / 4
@@ -15,7 +15,7 @@ Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Encounter-mii-exa-patho-encounter-12345 : 0 / 0 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Encounter-mii-exa-patho-encounter-34555 : 0 / 0 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Encounter-mii-exa-patho-encounter-87687 : 0 / 0 / 4
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/ImplementationGuide-mii-ig-modul-patho : 0 / 5 / 18
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/ImplementationGuide-mii-ig-modul-patho : 0 / 4 / 18
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/List-mii-exa-patho-active-problems-list : 0 / 0 / 3
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/List-mii-exa-patho-history-of-present-illness : 0 / 0 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Media-mii-exa-patho-attached-image : 0 / 0 / 2
@@ -50,7 +50,7 @@ Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-active-problems-list : 0 / 1 / 8
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-additional-specified-grouper : 0 / 2 / 12
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-attached-image : 0 / 1 / 13
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-base-observation : 0 / 1 / 14
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-base-observation : 0 / 1 / 15
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-bundle : 0 / 2 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-composition : 0 / 12 / 15
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper : 0 / 1 / 12
@@ -63,14 +63,14 @@ Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-report : 0 / 3 / 10
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-section-grouper : 0 / 1 / 12
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-service-request : 0 / 2 / 13
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-specimen : 1 / 11 / 8
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-canadabalsam : 0 / 0 / 3
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-eosin-y : 0 / 0 / 3
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-hematoxylin-stain : 0 / 0 / 3
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-microscope-slide-mounting-medium : 0 / 0 / 3
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-neutral-buffered-formalin : 0 / 0 / 3
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-p63-immunostain : 0 / 2 / 4
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-paraffin : 0 / 0 / 3
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/StructureDefinition-mii-pr-patho-specimen : 0 / 11 / 10
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-canadabalsam : 0 / 0 / 4
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-eosin-y : 0 / 0 / 4
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-hematoxylin-stain : 0 / 0 / 4
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-microscope-slide-mounting-medium : 0 / 0 / 4
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-neutral-buffered-formalin : 0 / 0 / 4
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-p63-immunostain : 0 / 2 / 5
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Substance-mii-exa-patho-paraffin : 0 / 0 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/ValueSet-mii-vs-patho-all-loinc : 0 / 3 / 7
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/ValueSet-mii-vs-patho-collection-method-snomed-ct : 0 / 3 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/ValueSet-mii-vs-patho-composition-type-kdl : 0 / 3 / 16
@@ -154,7 +154,6 @@ INFORMATION: Coding.display: Unused 'en' translation 'Posterior' -> 'Posterior'
 INFORMATION: Quantity.unit: Unused 'en' translation 'mm' -> 'mm'
 == fsh-generated/resources/CapabilityStatement-mii-cps-patho-capability-statement.json ==
 WARNING: CapabilityStatement/mii-cps-patho-capability-statement: CapabilityStatement.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
-WARNING: CapabilityStatement/mii-cps-patho-capability-statement: CapabilityStatement.rest[0].resource[0].searchParam[16].definition: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-specimen-collection-body-site' kann nicht aufgelöst werden
 WARNING: CapabilityStatement/mii-cps-patho-capability-statement: CapabilityStatement.rest[0].resource[1].searchParam[38].definition: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-observation-body-site' kann nicht aufgelöst werden
 WARNING: CapabilityStatement/mii-cps-patho-capability-statement: CapabilityStatement.rest[0].resource[2].searchParam[16].definition: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-servicerequest-reason-code' kann nicht aufgelöst werden
 WARNING: CapabilityStatement/mii-cps-patho-capability-statement: CapabilityStatement.rest[0].resource[2].searchParam[17].definition: Canonical URL 'https://www.medizininformatik-initiative.de/fhir/modul-meta/SearchParameter/mii-sp-meta-servicerequest-supporting-info' kann nicht aufgelöst werden
@@ -216,10 +215,9 @@ INFORMATION: ImplementationGuide.definition.resource.name: Unused 'en' translati
 INFORMATION: ImplementationGuide/mii-ig-modul-patho: ImplementationGuide.language: Reference to draft ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 INFORMATION: ImplementationGuide/mii-ig-modul-patho: ImplementationGuide.language: Reference to trial-use ValueSet http://hl7.org/fhir/ValueSet/languages|4.0.1
 WARNING: ImplementationGuide/mii-ig-modul-patho: ImplementationGuide.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
-WARNING: ImplementationGuide/mii-ig-modul-patho: ImplementationGuide.dependsOn[3].uri: Canonical URL 'http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank' kann nicht aufgelöst werden
 WARNING: ImplementationGuide/mii-ig-modul-patho: ImplementationGuide.dependsOn[5].uri: Canonical URL 'http://fhir.org/packages/de.gematik.isik/ImplementationGuide/de.gematik.isik' kann nicht aufgelöst werden
-WARNING: ImplementationGuide/mii-ig-modul-patho: ImplementationGuide.dependsOn[3]: The canonical URL http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank doesn't point to an actual ImplementationGuide resource
 WARNING: ImplementationGuide/mii-ig-modul-patho: ImplementationGuide.dependsOn[5]: The canonical URL http://fhir.org/packages/de.gematik.isik/ImplementationGuide/de.gematik.isik doesn't point to an actual ImplementationGuide resource
+WARNING: ImplementationGuide/mii-ig-modul-patho: ImplementationGuide.dependsOn[7]: The ImplementationGuide uses package hl7.fhir.eu.extensions.r4#1.3.0 released on 2026-03-27, but the most recent appropriate version is 1.3.1. This reference is getting old and the more recent version should be considered
 INFORMATION: Resource: The resource ImplementationGuide/mii-ig-modul-patho could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/List-mii-exa-patho-active-problems-list.json ==
 INFORMATION: Coding.display: Unused 'en' translation 'Problemliste - Berichtet' -> 'Problem list - Reported'
@@ -266,7 +264,7 @@ WARNING: Observation/mii-exa-patho-gleason-pattern-a: Observation: Alle Observat
 WARNING: Observation/mii-exa-patho-gleason-pattern-a: Observation: Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben
 == fsh-generated/resources/Observation-mii-exa-patho-histologic-type-a.json ==
 INFORMATION: Observation/mii-exa-patho-histologic-type-a: Observation.category[1]: Keiner der angegebenen Codes ist im Valueset 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), und es wird empfohlen, einen Code aus dieserm Valueset zu verwenden) (Codes = http://loinc.org#22635-7)
-INFORMATION: Observation/mii-exa-patho-histologic-type-a: Observation.code.coding[0]: Konnte nicht bestätigen, dass die angegebenen Codes im ValueSet 'MII VS Patho All [LOINC]' (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc|2027.0.0-ballot.rc2) enthalten sind, und es wird empfohlen, einen Code aus diesem ValueSet zu verwenden.
+INFORMATION: Observation/mii-exa-patho-histologic-type-a: Observation.code.coding[0]: Konnte nicht bestätigen, dass die angegebenen Codes im ValueSet 'MII VS Patho All [LOINC]' (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc|2027.0.0-ballot) enthalten sind, und es wird empfohlen, einen Code aus diesem ValueSet zu verwenden.
 WARNING: Observation/mii-exa-patho-histologic-type-a: Observation: Alle Observations sollten ein Subject haben
 WARNING: Observation/mii-exa-patho-histologic-type-a: Observation: Alle Observations sollten einen Performer haben
 WARNING: Observation/mii-exa-patho-histologic-type-a: Observation: Alle Observations sollten ein effectiveDateTime oder eine effectivePeriode haben
@@ -341,7 +339,7 @@ INFORMATION: Coding.display: Unused 'en' translation 'Structure of lower outer q
 INFORMATION: Coding.display: Unused 'en' translation 'Specimen vial (physical object)' -> 'Specimen vial (physical object)'
 INFORMATION: Annotation.text: Unused 'en' translation 'BET-Exzisionspraeparat Mamma links, unterer aeusserer Quadrant, 5 Uhr, 50 mm von der Mamille. Drahthaekchen und zwei Fadenmarkierungen.' -> 'Breast-conserving excision specimen, left breast, lower outer quadrant, 5 o'clock, 50 mm from the nipple. Wire hook and two suture markings.'
 == fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-block.json ==
-INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-block: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc2 überein.
+INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-block: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot überein.
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-block: Specimen.identifier[0].system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-block: Specimen.accessionIdentifier.system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-block: Specimen.type.coding[0].display: 'Tissue block specimen' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
@@ -358,7 +356,7 @@ INFORMATION: Quantity.unit: Unused 'en' translation '°C' -> '°C'
 INFORMATION: Coding.display: Unused 'en' translation 'Preparation of formalin fixed paraffin embedded tissue specimen (procedure)' -> 'Preparation of formalin fixed paraffin embedded tissue specimen (procedure)'
 INFORMATION: Coding.display: Unused 'en' translation 'Tissue cassette (physical object)' -> 'Tissue cassette (physical object)'
 == fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE.json ==
-INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc2 überein.
+INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot überein.
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE: Specimen.identifier[0].system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE: Specimen.accessionIdentifier.system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-HE: Specimen.type.coding[0].display: 'Tissue section' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
@@ -375,7 +373,7 @@ INFORMATION: Quantity.unit: Unused 'en' translation '°C' -> '°C'
 INFORMATION: Coding.display: Unused 'en' translation 'Hematoxylin and eosin stain method (procedure)' -> 'Hematoxylin and eosin stain method (procedure)'
 INFORMATION: Coding.display: Unused 'en' translation 'Microscope slide (physical object)' -> 'Microscope slide (physical object)'
 == fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-schnitt-p63.json ==
-INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot.rc2 überein.
+INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63: Specimen.processing[0]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot überein.
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63: Specimen.identifier[0].system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 WARNING: Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63: Specimen.accessionIdentifier.system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 INFORMATION: Specimen/mii-exa-patho-prostate-biopsy-schnitt-p63: Specimen.type.coding[0].display: 'Tissue section' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
@@ -656,6 +654,7 @@ INFORMATION: StructureDefinition.mapping.v2/name: Unused 'en' translation 'HL7 v
 INFORMATION: StructureDefinition.mapping.sct-concept/name: Unused 'en' translation 'SNOMED CT Concept Domain Binding' -> 'SNOMED CT Concept Domain Binding'
 INFORMATION: StructureDefinition.mapping.sct-attr/name: Unused 'en' translation 'SNOMED CT Attribute Binding' -> 'SNOMED CT Attribute Binding'
 == fsh-generated/resources/StructureDefinition-mii-pr-patho-base-observation.json ==
+INFORMATION: StructureDefinition/mii-pr-patho-base-observation: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/ValueSet-mii-vs-biobank-body-structures-sct.html' at 'div/div/table/tr/td/a' for 'MII VS Biobank BodyStructures SCT' is not a widely supported protocol and should be checked
 WARNING: StructureDefinition/mii-pr-patho-base-observation: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
 INFORMATION: StructureDefinition/mii-pr-patho-base-observation: StructureDefinition.differential.element[7].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/mii-pr-patho-base-observation: StructureDefinition.differential.element[19].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
@@ -832,10 +831,11 @@ INFORMATION: StructureDefinition.mapping.rim/name: Unused 'en' translation 'RIM 
 INFORMATION: StructureDefinition.mapping.w5/name: Unused 'en' translation 'FiveWs Pattern Mapping' -> 'FiveWs Pattern Mapping'
 INFORMATION: StructureDefinition.mapping.quick/name: Unused 'en' translation 'Quality Improvement and Clinical Knowledge (QUICK)' -> 'Quality Improvement and Clinical Knowledge (QUICK)'
 == fsh-generated/resources/StructureDefinition-mii-pr-patho-specimen.json ==
-ERROR: StructureDefinition.snapshot.element[188]: The slice definition for Specimen.processing:lagerprozess.extension has a minimum of 0 but the slices add up to a minimum of 1
-INFORMATION: StructureDefinition/mii-pr-patho-specimen: StructureDefinition.extension[0].value.ofType(CodeableConcept): Reference to draft CodeSystem http://hl7.org/fhir/spdx-license|84728b7
+INFORMATION: StructureDefinition/mii-pr-patho-specimen: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-specimen-core.html' at 'div/div/table/tr/td/a' for 'MII_PR_Biobank_Specimen_Bioprobe_Core' is not a widely supported protocol and should be checked
+INFORMATION: StructureDefinition/mii-pr-patho-specimen: StructureDefinition.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-substance-additiv.html' at 'div/div/table/tr/td/a' for 'MII PR Biobank Substance Additiv' is not a widely supported protocol and should be checked
+INFORMATION: StructureDefinition/mii-pr-patho-specimen: StructureDefinition.extension[1].value.ofType(CodeableConcept): Reference to draft CodeSystem http://hl7.org/fhir/spdx-license|84728b7
 WARNING: StructureDefinition/mii-pr-patho-specimen: StructureDefinition.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found, so the code cannot be validated
-WARNING: StructureDefinition/mii-pr-patho-specimen: StructureDefinition.snapshot.element[16].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '0.1.0', found versions: 0.1.0 (from hl7.fhir.uv.xver-r5.r4#0.1.0), {{unversioned}} (from de.medizininformatikinitiative.kerndatensatz.biobank#2027.0.0-ballot.rc2). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature' to 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature|0.1.0'
+WARNING: StructureDefinition/mii-pr-patho-specimen: StructureDefinition.snapshot.element[16].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '2027.0.0-ballot', found versions: 0.1.0 (from hl7.fhir.uv.xver-r5.r4#0.1.0), 2027.0.0-ballot (from de.medizininformatikinitiative.kerndatensatz.biobank#2027.0.0-ballot). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature' to 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature|2027.0.0-ballot'
 WARNING: StructureDefinition/mii-pr-patho-specimen: StructureDefinition.snapshot.element[64].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v2-0487'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#6.3.0), 3.0.0 (from hl7.terminology.r4#7.3.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v2-0487' to 'http://terminology.hl7.org/ValueSet/v2-0487|3.0.0'
 WARNING: StructureDefinition/mii-pr-patho-specimen: StructureDefinition.snapshot.element[99].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation' to 'http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation|5.3.0'
 WARNING: StructureDefinition/mii-pr-patho-specimen: StructureDefinition.snapshot.element[100].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/quantity-precision'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.3.0', found versions: 4.0.1 (from hl7.fhir.r4.core#4.0.1), 5.2.0 (from hl7.fhir.uv.extensions.r4#5.2.0), 5.3.0 (from hl7.fhir.uv.extensions.r4#5.3.0). Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/quantity-precision' to 'http://hl7.org/fhir/StructureDefinition/quantity-precision|5.3.0'
@@ -852,27 +852,34 @@ INFORMATION: Resource: The resource StructureDefinition/mii-pr-patho-specimen co
 INFORMATION: StructureDefinition.publisher: Unused 'en' translation 'Medizininformatik-Initiative' -> 'Medizininformatik-Initiative'
 INFORMATION: StructureDefinition.contact.name: Unused 'en' translation 'Medizininformatik-Initiative' -> 'Medizininformatik-Initiative'
 == fsh-generated/resources/Substance-mii-exa-patho-canadabalsam.json ==
+INFORMATION: Substance/mii-exa-patho-canadabalsam: Substance.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-substance-additiv.html' at 'div/div/div/p/a' for 'MII PR Biobank Substance Additiv' is not a widely supported protocol and should be checked
 INFORMATION: Substance/mii-exa-patho-canadabalsam: Substance.code.coding[0].display: 'Canada balsam' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
 INFORMATION: Coding.display: Unused 'en' translation 'Canada balsam (substance)' -> 'Canada balsam (substance)'
 == fsh-generated/resources/Substance-mii-exa-patho-eosin-y.json ==
+INFORMATION: Substance/mii-exa-patho-eosin-y: Substance.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-substance-additiv.html' at 'div/div/div/p/a' for 'MII PR Biobank Substance Additiv' is not a widely supported protocol and should be checked
 INFORMATION: Substance/mii-exa-patho-eosin-y: Substance.code.coding[0].display: 'Eosin Y' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
 INFORMATION: Coding.display: Unused 'en' translation 'Eosin Y (substance)' -> 'Eosin Y (substance)'
 == fsh-generated/resources/Substance-mii-exa-patho-hematoxylin-stain.json ==
+INFORMATION: Substance/mii-exa-patho-hematoxylin-stain: Substance.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-substance-additiv.html' at 'div/div/div/p/a' for 'MII PR Biobank Substance Additiv' is not a widely supported protocol and should be checked
 INFORMATION: Substance/mii-exa-patho-hematoxylin-stain: Substance.code.coding[0].display: 'Hematoxylin stain' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
 INFORMATION: Coding.display: Unused 'en' translation 'Hematoxylin stain (substance)' -> 'Hematoxylin stain (substance)'
 == fsh-generated/resources/Substance-mii-exa-patho-microscope-slide-mounting-medium.json ==
+INFORMATION: Substance/mii-exa-patho-microscope-slide-mounting-medium: Substance.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-substance-additiv.html' at 'div/div/div/p/a' for 'MII PR Biobank Substance Additiv' is not a widely supported protocol and should be checked
 INFORMATION: Substance/mii-exa-patho-microscope-slide-mounting-medium: Substance.code.coding[0].display: 'Microscope slide mounting medium' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
 INFORMATION: Coding.display: Unused 'en' translation 'Microscope slide mounting medium (substance)' -> 'Microscope slide mounting medium (substance)'
 == fsh-generated/resources/Substance-mii-exa-patho-neutral-buffered-formalin.json ==
+INFORMATION: Substance/mii-exa-patho-neutral-buffered-formalin: Substance.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-substance-additiv.html' at 'div/div/div/p/a' for 'MII PR Biobank Substance Additiv' is not a widely supported protocol and should be checked
 INFORMATION: Substance/mii-exa-patho-neutral-buffered-formalin: Substance.code.coding[0].display: 'Neutral buffered formalin' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
 INFORMATION: Coding.display: Unused 'en' translation 'Neutral buffered formalin (substance)' -> 'Neutral buffered formalin (substance)'
 == fsh-generated/resources/Substance-mii-exa-patho-p63-immunostain.json ==
+INFORMATION: Substance/mii-exa-patho-p63-immunostain: Substance.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-substance-additiv.html' at 'div/div/div/p/a' for 'MII PR Biobank Substance Additiv' is not a widely supported protocol and should be checked
 WARNING: Substance/mii-exa-patho-p63-immunostain: Substance.identifier[0].system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' löst nicht auf
 WARNING: Substance/mii-exa-patho-p63-immunostain: Substance.code.coding[0].system: A definition for CodeSystem 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht' could not be found, so the code cannot be validated
 INFORMATION: Coding.display: Unused 'en' translation 'Labor and industries number' -> 'Labor and industries number'
 INFORMATION: Coding.display: Unused 'en' translation 'Material' -> 'Material'
 INFORMATION: Coding.display: Unused 'en' translation 'p63 immunostain' -> 'p63 immunostain'
 == fsh-generated/resources/Substance-mii-exa-patho-paraffin.json ==
+INFORMATION: Substance/mii-exa-patho-paraffin: Substance.text.div: Hyperlink scheme 'file' in 'file:///home/runner/work/kerndatensatzmodul-biobank/kerndatensatzmodul-biobank/output/StructureDefinition-mii-pr-biobank-substance-additiv.html' at 'div/div/div/p/a' for 'MII PR Biobank Substance Additiv' is not a widely supported protocol and should be checked
 INFORMATION: Substance/mii-exa-patho-paraffin: Substance.code.coding[0].display: 'Paraffin wax' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
 INFORMATION: Coding.display: Unused 'en' translation 'Paraffin wax (substance)' -> 'Paraffin wax (substance)'
 == fsh-generated/resources/ValueSet-mii-vs-patho-all-loinc.json ==

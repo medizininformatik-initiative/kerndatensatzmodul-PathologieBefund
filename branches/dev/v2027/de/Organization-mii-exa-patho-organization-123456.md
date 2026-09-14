@@ -1,4 +1,4 @@
-# mii-exa-patho-organization-123456 - MII IG Modul Patho v2027.0.0-ballot.rc2
+# mii-exa-patho-organization-123456 - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

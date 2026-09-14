@@ -1,4 +1,4 @@
-# MII VS Patho Composition Type KDL - MII IG Modul Patho v2027.0.0-ballot.rc2
+# MII VS Patho Composition Type KDL - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl | *Version*:2027.0.0-ballot.rc2 |
-| Active as of 2026-09-08 | *Computable Name*:MII_VS_Patho_Composition_Type_KDL |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_VS_Patho_Composition_Type_KDL |
 
  
 ValueSet for the categorization of Pathology Report documents 
@@ -37,7 +37,7 @@ ValueSet for the categorization of Pathology Report documents
   "resourceType" : "ValueSet",
   "id" : "mii-vs-patho-composition-type-kdl",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl",
-  "version" : "2027.0.0-ballot.rc2",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Patho_Composition_Type_KDL",
   "_name" : {
     "extension" : [{
@@ -67,7 +67,7 @@ ValueSet for the categorization of Pathology Report documents
     }]
   },
   "status" : "active",
-  "date" : "2026-09-08T14:30:15+00:00",
+  "date" : "2026-09-14T08:48:26+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

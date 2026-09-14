@@ -1,4 +1,4 @@
-# Versioning - MII IG Modul Patho v2027.0.0-ballot.rc2
+# Versioning - MII IG Modul Patho v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Versioning**
@@ -11,7 +11,7 @@ The module Pathology Report follows the versioning of the MII core data set: a v
 
 | | |
 | :--- | :--- |
-| Current version | 2027.0.0-ballot.rc2 |
+| Current version | 2027.0.0-ballot |
 | Package ID | de.medizininformatikinitiative.kerndatensatz.patho |
 | Canonical | https://www.medizininformatik-initiative.de/fhir/ext/modul-patho |
 | FHIR version | R4 (4.0.1) |
