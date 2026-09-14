@@ -33,7 +33,7 @@ Profile: [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service
 **supportingInfo**: 
 
 * [List for 'History of Present illness' for '->Max Mustermann Male, DoB: 1959-08-24'](List-mii-exa-patho-history-of-present-illness.md)
-* [List for 'Problemliste - Berichtet' for '->Max Mustermann Male, DoB: 1959-08-24'](List-mii-exa-patho-active-problems-list.md)
+* [List for 'Problem list - Reported' for '->Max Mustermann Male, DoB: 1959-08-24'](List-mii-exa-patho-active-problems-list.md)
 
 **specimen**: [Specimen: extension = ; identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht#E12345_21; status = available; type = Prostate tru-cut biopsy specimen](Specimen-mii-exa-patho-prostate-tru-cut-biopsy-sample.md)
 

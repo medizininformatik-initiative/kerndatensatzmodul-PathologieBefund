@@ -1,7 +1,7 @@
 MII_IG_Modul_Patho : Validation Results
 =========================================
 
-err = 25, warn = 387, info = 526
+err = 26, warn = 387, info = 527
 $--
 Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz.patho#$-- (canonical = https://www.medizininformatik-initiative.de/fhir/ext/modul-patho)
  Build Errors : 0 / 36 / 0
@@ -16,7 +16,7 @@ Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Encounter-mii-exa-patho-encounter-34555 : 0 / 0 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Encounter-mii-exa-patho-encounter-87687 : 0 / 0 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/ImplementationGuide-mii-ig-modul-patho : 0 / 4 / 18
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/List-mii-exa-patho-active-problems-list : 0 / 0 / 3
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/List-mii-exa-patho-active-problems-list : 1 / 0 / 3
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/List-mii-exa-patho-history-of-present-illness : 0 / 0 / 4
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Media-mii-exa-patho-attached-image : 0 / 0 / 2
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Observation-mii-exa-patho-biopsy-site-a : 0 / 3 / 7
@@ -39,7 +39,7 @@ Generated $--. FHIR version $-- for de.medizininformatikinitiative.kerndatensatz
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Practitioner-mii-exa-patho-practitioner-2346545 : 0 / 0 / 3
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Practitioner-mii-exa-patho-practitioner-34456 : 0 / 0 / 3
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Practitioner-mii-exa-patho-practitioner-765879 : 0 / 0 / 3
- /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/ServiceRequest-mii-exa-patho-request : 0 / 1 / 5
+ /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/ServiceRequest-mii-exa-patho-request : 0 / 1 / 6
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Specimen-mii-exa-patho-breast-resection-sample : 0 / 3 / 17
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-block : 0 / 4 / 14
  /home/runner/work/kerndatensatzmodul-PathologieBefund/kerndatensatzmodul-PathologieBefund/fsh-generated/resources/Specimen-mii-exa-patho-prostate-biopsy-schnitt-HE : 0 / 4 / 14
@@ -220,6 +220,7 @@ WARNING: ImplementationGuide/mii-ig-modul-patho: ImplementationGuide.dependsOn[5
 WARNING: ImplementationGuide/mii-ig-modul-patho: ImplementationGuide.dependsOn[7]: The ImplementationGuide uses package hl7.fhir.eu.extensions.r4#1.3.0 released on 2026-03-27, but the most recent appropriate version is 1.3.1. This reference is getting old and the more recent version should be considered
 INFORMATION: Resource: The resource ImplementationGuide/mii-ig-modul-patho could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/List-mii-exa-patho-active-problems-list.json ==
+ERROR: List/mii-exa-patho-active-problems-list: List.code.coding[0].display: Wrong Display Name 'Problem list - Reported' for http://loinc.org#11450-4. Valid display is 'Problemliste - Berichtet' (de-DE) (for the language(s) 'de')
 INFORMATION: Coding.display: Unused 'en' translation 'Problemliste - Berichtet' -> 'Problem list - Reported'
 == fsh-generated/resources/List-mii-exa-patho-history-of-present-illness.json ==
 INFORMATION: List/mii-exa-patho-history-of-present-illness: List.code.coding[0].display: 'History of Present illness' is the default display; the code system http://loinc.org has no Display Names for the language de
@@ -315,6 +316,7 @@ INFORMATION: HumanName.given: Unused 'en' translation 'Ulrich' -> 'Ulrich'
 INFORMATION: HumanName.family: Unused 'en' translation 'Färber' -> 'Färber'
 INFORMATION: HumanName.given: Unused 'en' translation 'Frank' -> 'Frank'
 == fsh-generated/resources/ServiceRequest-mii-exa-patho-request.json ==
+INFORMATION: ServiceRequest/mii-exa-patho-request: ServiceRequest.supportingInfo[1]: Dieses Element stimmt mit keinem bekannten Slicedefined in the profile https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2027.0.0-ballot überein.
 WARNING: ServiceRequest/mii-exa-patho-request: ServiceRequest.identifier[0].system: URL-Wert 'https://pathologie.klinikum-karlsruhe.de/fhir/fn/untersuchungsauftrag' löst nicht auf
 INFORMATION: ServiceRequest/mii-exa-patho-request: ServiceRequest.category[0].coding[0].display: 'Pathology consultation, comprehensive, records and specimen with report' is the default display; the code system http://snomed.info/sct has no Display Names for the language de
 INFORMATION: ServiceRequest/mii-exa-patho-request: ServiceRequest.code.coding[0].display: 'Pathology consultation, comprehensive, records and specimen with report' is the default display; the code system http://snomed.info/sct has no Display Names for the language de

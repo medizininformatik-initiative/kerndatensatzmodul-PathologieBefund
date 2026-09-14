@@ -16,7 +16,7 @@ Profile: [MII PR Patho Active Problems List](StructureDefinition-mii-pr-patho-ac
 
 | | | |
 | :--- | :--- | :--- |
-| Mode: Snapshot List | Status: Current | Code: Problemliste - Berichtet |
+| Mode: Snapshot List | Status: Current | Code: Problem list - Reported |
 | Subject:[Max Mustermann Male, DoB: 1959-08-24](Patient-mii-exa-patho-patient-12345.md) | | |
 
 * **Items**: [Condition Malignant neoplastic disease](Condition-mii-exa-patho-problem-list-item-1.md)
@@ -38,7 +38,20 @@ Profile: [MII PR Patho Active Problems List](StructureDefinition-mii-pr-patho-ac
     "coding" : [{
       "system" : "http://loinc.org",
       "code" : "11450-4",
-      "display" : "Problemliste - Berichtet"
+      "display" : "Problem list - Reported",
+      "_display" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Problemliste - Berichtet"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     }]
   },
   "subject" : {
