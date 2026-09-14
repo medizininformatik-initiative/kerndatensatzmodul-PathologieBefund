@@ -10,7 +10,7 @@ Einbindung als Abhängigkeit in `sushi-config.yaml`:
 
 ```yaml
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.patho: 2027.0.0-ballot.rc2
+  de.medizininformatikinitiative.kerndatensatz.patho: 2027.0.0-ballot
 ```
 
 ### Herunterladbare Kopie der Spezifikation

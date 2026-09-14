@@ -15,7 +15,7 @@ Alias: $media-type = http://terminology.hl7.org/CodeSystem/media-type
 Alias: $cs-hl7-condition-category = http://terminology.hl7.org/CodeSystem/condition-category
 // Biobank Terminologien
 Alias: $bio-probenart = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/probenart
-Alias: $bio-bodystructure = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/sct-body-structures
+Alias: $bio-bodystructure = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-body-structures-sct
 Alias: $bio-icd-o-3 = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/icd-o-3-topography
 Alias: $bio-sct-additive = https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/additive
 Alias: $substance-category = http://terminology.hl7.org/CodeSystem/substance-category

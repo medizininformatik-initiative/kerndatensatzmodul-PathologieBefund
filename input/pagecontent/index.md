@@ -5,7 +5,7 @@ Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatens
 | Veröffentlichung   |   |
 |---------|---|
 | Datum   | 01.09.2026  |
-| Version | 2027.0.0-ballot.rc2         |
+| Version | 2027.0.0-ballot         |
 | Status  | Active       |
 | Realm   | DE          |
 
