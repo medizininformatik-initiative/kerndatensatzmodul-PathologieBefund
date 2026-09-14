@@ -1,0 +1,12 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "mii-exa-patho-practitioner-765879",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner mii-exa-patho-practitioner-765879</b></p><a name=\"mii-exa-patho-practitioner-765879\"> </a><a name=\"hcmii-exa-patho-practitioner-765879\"> </a><p><b>name</b>: Frank Färber </p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner mii-exa-patho-practitioner-765879</b></p><a name=\"en-mii-exa-patho-practitioner-765879\"> </a><a name=\"en-hcmii-exa-patho-practitioner-765879\"> </a><p><b>name</b>: Frank Färber </p></div></div>"
+  },
+  "name" : [{
+    "family" : "Färber",
+    "given" : ["Frank"]
+  }]
+}

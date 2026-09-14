@@ -1,0 +1,22 @@
+{
+  "resourceType" : "Organization",
+  "id" : "mii-exa-patho-organization-12345",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Organization mii-exa-patho-organization-12345</b></p><a name=\"mii-exa-patho-organization-12345\"> </a><a name=\"hcmii-exa-patho-organization-12345\"> </a><p><b>name</b>: Institut für Pathologie</p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Organization mii-exa-patho-organization-12345</b></p><a name=\"en-mii-exa-patho-organization-12345\"> </a><a name=\"en-hcmii-exa-patho-organization-12345\"> </a><p><b>name</b>: Institute of Pathology</p></div></div>"
+  },
+  "name" : "Institut für Pathologie",
+  "_name" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Institute of Pathology"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  }
+}

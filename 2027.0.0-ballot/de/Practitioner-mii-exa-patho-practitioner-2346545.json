@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "mii-exa-patho-practitioner-2346545",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner mii-exa-patho-practitioner-2346545</b></p><a name=\"mii-exa-patho-practitioner-2346545\"> </a><a name=\"hcmii-exa-patho-practitioner-2346545\"> </a><p><b>name</b>: Sabine Schnitt </p></div>"
+  },
+  "name" : [{
+    "family" : "Schnitt",
+    "given" : ["Sabine"]
+  }]
+}
