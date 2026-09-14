@@ -12,7 +12,24 @@
       {
         "code": "11450-4",
         "system": "http://loinc.org",
-        "display": "Problemliste - Berichtet"
+        "display": "Problem list - Reported",
+        "_display": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de-DE"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Problemliste - Berichtet"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },

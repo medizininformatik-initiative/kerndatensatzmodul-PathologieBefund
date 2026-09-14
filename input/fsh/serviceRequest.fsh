@@ -400,6 +400,7 @@ Description: "Pathology Active Problems List List Example"
 * meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list|2027.0.0-ballot"
 * status = #current 
 * mode = #snapshot
-* code = $LOINC#11450-4 "Problemliste - Berichtet"
+* code = $LOINC#11450-4 "Problem list - Reported"
+* insert Translation(code.coding[0].display, de-DE, Problemliste - Berichtet)
 * subject = Reference(Patient/mii-exa-patho-patient-12345)
 * entry.item = Reference(mii-exa-patho-problem-list-item-1)
