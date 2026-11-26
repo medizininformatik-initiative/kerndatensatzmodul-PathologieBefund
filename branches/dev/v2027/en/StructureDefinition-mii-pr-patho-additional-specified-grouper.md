@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-additional-specified-grouper | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_PR_Patho_Additional_Specified_Grouper |
+| Active as of 2026-11-26 | *Computable Name*:MII_PR_Patho_Additional_Specified_Grouper |
 
  
 The **MII PR Patho Additional Specified Grouper** profile of the [Observation](http://hl7.org/fhir/R4/observation.html) resource represents, as `DiagnosticReport.result` for a [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md), the respective observation report section "Additional Specified Observations" (corresponding to this CDA section) and acts as an organizer for the corresponding groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md) from non-morphological examinations or from molecular genetic examinations. 
@@ -93,7 +93,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-addi
     }]
   },
   "status" : "active",
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

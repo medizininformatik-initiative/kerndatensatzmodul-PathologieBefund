@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Patho_Report_Code_LOINC |
+| Active as of 2026-11-26 | *Computable Name*:MII_VS_Patho_Report_Code_LOINC |
 
  
 ValueSet for the report type codes of pathology DiagnosticReports 
@@ -67,7 +67,7 @@ ValueSet for the report type codes of pathology DiagnosticReports
     }]
   },
   "status" : "active",
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

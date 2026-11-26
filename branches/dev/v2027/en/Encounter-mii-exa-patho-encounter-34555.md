@@ -14,7 +14,7 @@
 
 **status**: Finished
 
-**class**: [ActCode: AMB](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB) (ambulatory)
+**class**: [ActCode: AMB](http://terminology.hl7.org/7.5.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB) (ambulatory)
 
 **subject**: [Erika Musterfrau Female, DoB: 1962-03-11](Patient-mii-exa-patho-patient-34545.md)
 

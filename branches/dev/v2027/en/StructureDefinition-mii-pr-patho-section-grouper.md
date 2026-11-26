@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-section-grouper | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_PR_Patho_Section_Grouper |
+| Active as of 2026-11-26 | *Computable Name*:MII_PR_Patho_Section_Grouper |
 
  
 The **MII PR Patho Section Grouper** profile is an abstract profile that defines the basis for the pathological grouper profiles but is not intended to be instantiated. As `DiagnosticReport.result:[grouper-name]` for a [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md), the grouper profiles represent the respective observation report section (corresponding to a CDA section) and act as an organizer for these groupings of [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md). 
@@ -90,7 +90,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-sect
     }]
   },
   "status" : "active",
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

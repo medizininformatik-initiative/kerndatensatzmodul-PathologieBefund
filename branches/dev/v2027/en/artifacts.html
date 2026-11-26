@@ -522,11 +522,11 @@ The bundle contains a signature.</p>
                </a>
             </td>
             <td>
-<p>This profile inherits from <a href="https://simplifier.net/isik-stufe-5/isikberichtsubsysteme">Profile - ISiK - BerichtSubsysteme</a> of the specification <a href="https://simplifier.net/isik-stufe-5">ISiK - Stufe 5</a>.</p>
+<p>Dieses Profil erbt von <a href="https://simplifier.net/isik-stufe-5/isikberichtsubsysteme">Profile - ISiK - BerichtSubsysteme</a> aus der Spezifikation <a href="https://simplifier.net/isik-stufe-5">ISiK - Stufe 5</a>.</p>
 
-<p>The <strong>MII PR Patho Composition</strong> profile, as a profile of a Composition resource with special constraints for clinical documents, brings together the resources for a complete, text-centric pathology report with the properties of a clinical document. A complete example of a Composition with narratives can be found in the <a href="https://bih-cei.github.io/ProstateCancerSpec/index.html">Prostate Cancer Spec IG</a>.
-This profile is the first entry in a bundle of <code class="language-plaintext highlighter-rouge">Bundle.type</code> "document"; the structure and signature of the bundle are described in the <a href="StructureDefinition-mii-pr-patho-bundle.html">MII PR Patho Bundle</a> profile.
-In addition to the diagnostic report (<code class="language-plaintext highlighter-rouge">patho-diagnostic-report</code>) and one or more additional complete reports (<code class="language-plaintext highlighter-rouge">additional-diagnostic-report</code>), the observation report sections may optionally also be carried directly as separate sections of the Composition (macroscopy, microscopy, intraoperative, diagnostic conclusion, additional observation); each of these sections references the same grouper as <code class="language-plaintext highlighter-rouge">DiagnosticReport.result</code>. Composition and DiagnosticReport may additionally reference each other via the extension <code class="language-plaintext highlighter-rouge">composition-diagnosticReportReference</code> and the R5 cross-version extension <code class="language-plaintext highlighter-rouge">DiagnosticReport.composition</code> respectively. All of these additions are optional.</p>
+<p>Das Profil <strong>MII PR Patho Composition</strong> fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. Ein vollständiges Beispiel einer Composition mit Narrativen findet sich im <a href="https://bih-cei.github.io/ProstateCancerSpec/index.html">Prostate Cancer Spec IG</a>. 
+Dieses Profil ist das erste Entry in einem Bundle des <code class="language-plaintext highlighter-rouge">Bundle.type</code> “document”; Aufbau und Signatur des Bundles sind im Profil <a href="StructureDefinition-mii-pr-patho-bundle.html">MII PR Patho Bundle</a> beschrieben.
+Neben dem Diagnostischen Report (<code class="language-plaintext highlighter-rouge">patho-diagnostic-report</code>) und einem oder mehreren zusätzlichen kompletten Reports (<code class="language-plaintext highlighter-rouge">additional-diagnostic-report</code>) können die Beobachtungsberichtabschnitte optional auch direkt als eigene Sections der Composition geführt werden (Makroskopie, Mikroskopie, Intraoperativ, Diagnostische Schlussfolgerung, Zusätzliche Beobachtung); jede dieser Sections referenziert denselben Grouper wie <code class="language-plaintext highlighter-rouge">DiagnosticReport.result</code>. Composition und DiagnosticReport können zusätzlich über die Extension <code class="language-plaintext highlighter-rouge">composition-diagnosticReportReference</code> bzw. die R5-Cross-Version-Extension <code class="language-plaintext highlighter-rouge">DiagnosticReport.composition</code> wechselseitig aufeinander verweisen. Alle diese Ergänzungen sind optional. Die Section <code class="language-plaintext highlighter-rouge">patho-diagnostic-report</code> ist optional; die Composition muss aber mindestens diese Section oder die Section Diagnostische Schlussfolgerung enthalten (Invariante <code class="language-plaintext highlighter-rouge">mii-patho-comp-1</code>). Damit kann der DiagnosticReport wie im HL7 EU Laboratory Report allein über die Extension referenziert werden, während die Beobachtungsberichtabschnitte als Sections geführt werden.</p>
 </td>
          </tr>
          <tr>
@@ -656,22 +656,24 @@ In addition to the diagnostic report (<code class="language-plaintext highlighte
                </a>
             </td>
             <td>
-<p>The <strong>MII PR Patho Report</strong> profile of the <a href="http://hl7.org/fhir/diagnosticreport.html">DiagnosticReport</a> resource represents the complete pathology report without having document properties (see <strong>MII-PR-Patho-Composition</strong>).</p>
+<p>Das Profil <strong>MII PR Patho Report</strong> der Ressource <a href="http://hl7.org/fhir/diagnosticreport.html">DiagnosticReport</a> bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe <strong>MII-PR-Patho-Composition</strong>).</p>
 
-<p>It presents highly structured examination results including human-readable texts (narratives) that belong to "panels" of individual examinations. It collects and organizes pathology findings for complex individual results as well and can reference further information on the examination panel, e.g. clinical information and specimen information. A complete, formatted report text should be part of the <strong>MII PR Patho Report</strong>. A complete example of a pathology report with narratives can be found in the <a href="https://bih-cei.github.io/ProstateCancerSpec/index.html">Prostate Cancer Spec IG</a>.</p>
+<p>Es stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des <strong>MII PR Patho Report</strong> sein. Ein vollständiges Beispiel eines Pathologiebefundberichts mit Narrativen findet sich im <a href="https://bih-cei.github.io/ProstateCancerSpec/index.html">Prostate Cancer Spec IG</a>.</p>
 
-<p>The most important features of the <strong>MII PR Patho Report</strong> are:</p>
+<p>Die wichtigsten Besonderheiten des <strong>MII PR Patho Report</strong> sind:</p>
 <ul>
-  <li>the ability to include additional clinical context, e.g. a mix of results from individual observations, images, texts and formatted representations,</li>
-  <li>the ability to include information on several specimens (here the specimens submitted by the clinician),</li>
-  <li>and the ability to represent a summarizing assessment, the conclusion, as well as one or more conclusion codes that are not identical to the pathology findings.</li>
+  <li>die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden,</li>
+  <li>die Möglichkeit, Informationen zu mehreren Proben (hier die klinischerseits eingesandten Proben) zu einzubinden,</li>
+  <li>und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.</li>
 </ul>
 
-<p>As an entry in the section "patho-diagnostic-report" of the <a href="StructureDefinition-mii-pr-patho-composition.html">MII PR Patho Composition</a> profile, the <strong>MII PR Patho Report</strong> forms the core of a persistent "pathology report" document.</p>
+<p>Für <code class="language-plaintext highlighter-rouge">conclusionCode</code> sind Slices je Kodiersystem vorgesehen: ICD-10-GM, ICD-O-3 (Morphologie bzw. Topographie) und SNOMED CT. Jeder <code class="language-plaintext highlighter-rouge">conclusionCode</code> trägt Codings genau eines Systems; unterschiedliche Kodierungen derselben Schlussfolgerung stehen in getrennten Wiederholungen, da sie nicht zwingend dasselbe Konzept bezeichnen.</p>
+
+<p>Das <strong>MII PR Patho Report</strong> bildet als Entry in der Section "patho-diagnostic-report" des Profils <a href="StructureDefinition-mii-pr-patho-composition.html">MII PR Patho Composition</a> den Kern eines persistenten Dokuments "Pathologiebefundbericht".</p>
 
 <hr />
 
-<p>In the table below, elements that are duplicated in the MII PR Patho Composition profile are marked with *.</p>
+<p>In untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Patho Composition dupliziert werden.</p>
 </td>
          </tr>
          <tr>
@@ -1441,7 +1443,7 @@ It is based on the HL7 domain analysis model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 14, 2026 10:33+0000">2026-09-14</span>
+          Generated <span title="Thu, Nov 26, 2026 13:07+0000">2026-11-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

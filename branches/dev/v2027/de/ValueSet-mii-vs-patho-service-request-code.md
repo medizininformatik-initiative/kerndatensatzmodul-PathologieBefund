@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Patho_Service_Request_Code |
+| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_VS_Patho_Service_Request_Code |
 
  
 ValueSet for a preferred set of ServiceRequest codes 
@@ -67,7 +67,7 @@ ValueSet for a preferred set of ServiceRequest codes
     }]
   },
   "status" : "active",
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

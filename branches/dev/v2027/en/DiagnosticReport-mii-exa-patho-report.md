@@ -40,6 +40,8 @@ Well-differentiated acinar adenocarcinoma of the prostate, ISUP grade group 1
 **Coded Conclusions:**
 
 * International Society of Urological Pathology histologic grade group 1
+* Bösartige Neubildung der Prostata
+* Adenokarzinom o.n.A.
 
 
 
@@ -133,6 +135,21 @@ Well-differentiated acinar adenocarcinoma of the prostate, ISUP grade group 1
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "1525761000004109"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "version" : "2021",
+      "code" : "C61",
+      "display" : "Bösartige Neubildung der Prostata"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "code" : "8140/3",
+      "display" : "Adenokarzinom o.n.A."
     }]
   }]
 }

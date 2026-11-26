@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Patho_All_LOINC |
+| Active as of 2026-11-26 | *Computable Name*:MII_VS_Patho_All_LOINC |
 
  
 ValueSet for general LOINC VS binding 
@@ -68,7 +68,7 @@ ValueSet for general LOINC VS binding
     }]
   },
   "status" : "active",
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Patho_Report |
+| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_PR_Patho_Report |
 
  
 Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). 
@@ -19,6 +19,7 @@ Die wichtigsten Besonderheiten des **MII PR Patho Report** sind:
 * die Möglichkeit, Informationen zu mehreren Proben (hier die klinischerseits eingesandten Proben) zu einzubinden,
 * und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit PathologyFindings sind.
  
+Für `conclusionCode` sind Slices je Kodiersystem vorgesehen: ICD-10-GM, ICD-O-3 (Morphologie bzw. Topographie) und SNOMED CT. Jeder `conclusionCode` trägt Codings genau eines Systems; unterschiedliche Kodierungen derselben Schlussfolgerung stehen in getrennten Wiederholungen, da sie nicht zwingend dasselbe Konzept bezeichnen. 
 Das **MII PR Patho Report** bildet als Entry in der Section "patho-diagnostic-report" des Profils [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.md) den Kern eines persistenten Dokuments "Pathologiebefundbericht". 
 -------
  
@@ -59,8 +60,8 @@ Diese Struktur ist abgeleitet von [DiagnosticReport](http://hl7.org/fhir/R4/diag
 
 ** Summary **
 
-Mandatory: 16 elements(4 nested mandatory elements)
- Must-Support: 39 elements
+Mandatory: 16 elements(14 nested mandatory elements)
+ Must-Support: 53 elements
  Fixed: 1 element
 
 **Structures**
@@ -79,7 +80,7 @@ This structure refers to these other structures:
 
 This structure refers to these extensions:
 
-* [http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-workflow-relatedArtifact.html)
+* [http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact](http://hl7.org/fhir/extensions/5.4.0/StructureDefinition-workflow-relatedArtifact.html)
 * [http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-DiagnosticReport.composition.html)
 
 **Slices**
@@ -89,6 +90,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 * The element 1 is sliced based on the value of DiagnosticReport.identifier
 * The element 1 is sliced based on the value of DiagnosticReport.code.coding
 * The element 1 is sliced based on the value of DiagnosticReport.result (ordered, Closed)
+* The element 1 is sliced based on the value of DiagnosticReport.conclusionCode
 
  **Schlüsselelemente-Ansicht** 
 
@@ -112,8 +114,8 @@ Diese Struktur ist abgeleitet von [DiagnosticReport](http://hl7.org/fhir/R4/diag
 
 ** Summary **
 
-Mandatory: 16 elements(4 nested mandatory elements)
- Must-Support: 39 elements
+Mandatory: 16 elements(14 nested mandatory elements)
+ Must-Support: 53 elements
  Fixed: 1 element
 
 **Structures**
@@ -132,7 +134,7 @@ This structure refers to these other structures:
 
 This structure refers to these extensions:
 
-* [http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-workflow-relatedArtifact.html)
+* [http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact](http://hl7.org/fhir/extensions/5.4.0/StructureDefinition-workflow-relatedArtifact.html)
 * [http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-DiagnosticReport.composition.html)
 
 **Slices**
@@ -142,6 +144,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 * The element 1 is sliced based on the value of DiagnosticReport.identifier
 * The element 1 is sliced based on the value of DiagnosticReport.code.coding
 * The element 1 is sliced based on the value of DiagnosticReport.result (ordered, Closed)
+* The element 1 is sliced based on the value of DiagnosticReport.conclusionCode
 
  
 
@@ -208,7 +211,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -234,7 +237,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       "value" : "info@medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). \n\nEs stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein. Ein vollständiges Beispiel eines Pathologiebefundberichts mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\n\nDie wichtigsten Besonderheiten des **MII PR Patho Report** sind: \n- die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden, \n- die Möglichkeit, Informationen zu mehreren Proben (hier die klinischerseits eingesandten Proben) zu einzubinden,\n- und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.  \n\nDas **MII PR Patho Report** bildet als Entry in der Section \"patho-diagnostic-report\" des Profils [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) den Kern eines persistenten Dokuments \"Pathologiebefundbericht\".\n\n---\n\nIn untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Patho Composition dupliziert werden.",
+  "description" : "Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). \n\nEs stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein. Ein vollständiges Beispiel eines Pathologiebefundberichts mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\n\nDie wichtigsten Besonderheiten des **MII PR Patho Report** sind: \n- die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden, \n- die Möglichkeit, Informationen zu mehreren Proben (hier die klinischerseits eingesandten Proben) zu einzubinden,\n- und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.  \n\nFür `conclusionCode` sind Slices je Kodiersystem vorgesehen: ICD-10-GM, ICD-O-3 (Morphologie bzw. Topographie) und SNOMED CT. Jeder `conclusionCode` trägt Codings genau eines Systems; unterschiedliche Kodierungen derselben Schlussfolgerung stehen in getrennten Wiederholungen, da sie nicht zwingend dasselbe Konzept bezeichnen.\n\nDas **MII PR Patho Report** bildet als Entry in der Section \"patho-diagnostic-report\" des Profils [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) den Kern eines persistenten Dokuments \"Pathologiebefundbericht\".\n\n---\n\nIn untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Patho Composition dupliziert werden.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -243,7 +246,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       },
       {
         "url" : "content",
-        "valueString" : "The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) resource represents the complete report without possessing document properties (see **MII-PR-Patho-Composition**).\n\nIt represents highly structured examination results including human-readable texts (narratives) that belong to \"panels\" of individual examinations. It collects and organizes PathologyFindings for even complex individual results and can reference further information on the examination panel, e.g. also clinical information and specimen information. A complete formatted report text should be part of the **MII PR Patho Report**. A complete example of a pathology report with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\n\nThe most important features of the **MII PR Patho Report** are:\n- the ability to incorporate additional clinical context, e.g. a mixture of results from individual observations, images, texts and formatted representations,\n- the ability to incorporate information on multiple specimens (here the specimens submitted by the clinical side),\n- and the ability to represent a summarizing assessment, the conclusion, as well as one or more conclusion.codes that are not identical to PathologyFindings.\n\nAs an entry in the \"patho-diagnostic-report\" section of the [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) profile, the **MII PR Patho Report** forms the core of a persistent document \"pathology report\".\n\n---\n\nIn the table below, elements are marked with * that are duplicated in the MII PR Patho Composition profile."
+        "valueString" : "The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) resource represents the complete report without possessing document properties (see **MII-PR-Patho-Composition**).\n\nIt represents highly structured examination results including human-readable texts (narratives) that belong to \"panels\" of individual examinations. It collects and organizes PathologyFindings for even complex individual results and can reference further information on the examination panel, e.g. also clinical information and specimen information. A complete formatted report text should be part of the **MII PR Patho Report**. A complete example of a pathology report with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\n\nThe most important features of the **MII PR Patho Report** are:\n- the ability to incorporate additional clinical context, e.g. a mixture of results from individual observations, images, texts and formatted representations,\n- the ability to incorporate information on multiple specimens (here the specimens submitted by the clinical side),\n- and the ability to represent a summarizing assessment, the conclusion, as well as one or more conclusion.codes that are not identical to PathologyFindings.\n\nSlices per code system are defined for `conclusionCode`: ICD-10-GM, ICD-O-3 (morphology or topography) and SNOMED CT. Each `conclusionCode` carries codings of exactly one system; different codings of the same conclusion are placed in separate repetitions, as they do not necessarily denote the same concept.\n\nAs an entry in the \"patho-diagnostic-report\" section of the [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) profile, the **MII PR Patho Report** forms the core of a persistent document \"pathology report\".\n\n---\n\nIn the table below, elements are marked with * that are duplicated in the MII PR Patho Composition profile."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
@@ -2148,6 +2151,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     {
       "id" : "DiagnosticReport.conclusionCode",
       "path" : "DiagnosticReport.conclusionCode",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "$this"
+        }],
+        "description" : "Je ein conclusionCode pro Kodiersystem; ein CodeableConcept traegt nur Codings eines Systems",
+        "rules" : "open"
+      },
       "short" : "Schlussfolgerungscode",
       "_short" : {
         "extension" : [{
@@ -2220,6 +2231,261 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:icd10-gm",
+      "path" : "DiagnosticReport.conclusionCode",
+      "sliceName" : "icd10-gm",
+      "short" : "ICD-10-GM",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICD-10-GM"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICD-10-GM"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Diagnose nach ICD-10-GM",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnose nach ICD-10-GM"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis coded in ICD-10-GM"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "*",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:icd10-gm.coding",
+      "path" : "DiagnosticReport.conclusionCode.coding",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:icd10-gm.coding.system",
+      "path" : "DiagnosticReport.conclusionCode.coding.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:icd10-gm.coding.version",
+      "path" : "DiagnosticReport.conclusionCode.coding.version",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:icd10-gm.coding.code",
+      "path" : "DiagnosticReport.conclusionCode.coding.code",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:icd-o-3",
+      "path" : "DiagnosticReport.conclusionCode",
+      "sliceName" : "icd-o-3",
+      "short" : "ICD-O-3",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICD-O-3"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICD-O-3"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Morphologie oder Topographie nach ICD-O-3",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Morphologie oder Topographie nach ICD-O-3"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Morphology or topography coded in ICD-O-3"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "comment" : "Morphologie (z.B. 8140/3) und Topographie (z.B. C61.9) teilen sich das CodeSystem und stehen jeweils in einem eigenen conclusionCode. Die Morphologie kann zusätzlich strukturiert als Finding mit LOINC 59847-4 im MII PR Patho Diagnostic Conclusion Grouper vorliegen.",
+      "min" : 0,
+      "max" : "*",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:icd-o-3.coding",
+      "path" : "DiagnosticReport.conclusionCode.coding",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:icd-o-3.coding.system",
+      "path" : "DiagnosticReport.conclusionCode.coding.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:icd-o-3.coding.version",
+      "path" : "DiagnosticReport.conclusionCode.coding.version",
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:icd-o-3.coding.code",
+      "path" : "DiagnosticReport.conclusionCode.coding.code",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:sct",
+      "path" : "DiagnosticReport.conclusionCode",
+      "sliceName" : "sct",
+      "short" : "SNOMED CT",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "SNOMED CT"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "SNOMED CT"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Diagnostische Schlussfolgerung nach SNOMED CT",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnostische Schlussfolgerung nach SNOMED CT"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnostic conclusion coded in SNOMED CT"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "*",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:sct.coding",
+      "path" : "DiagnosticReport.conclusionCode.coding",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:sct.coding.system",
+      "path" : "DiagnosticReport.conclusionCode.coding.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "DiagnosticReport.conclusionCode:sct.coding.code",
+      "path" : "DiagnosticReport.conclusionCode.coding.code",
+      "min" : 1,
       "mustSupport" : true
     },
     {

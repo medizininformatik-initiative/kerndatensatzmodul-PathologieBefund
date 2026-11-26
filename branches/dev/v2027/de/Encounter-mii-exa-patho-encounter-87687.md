@@ -14,7 +14,7 @@
 
 **status**: Finished
 
-**class**: [ActCode: IMP](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP) (inpatient encounter)
+**class**: [ActCode: IMP](http://terminology.hl7.org/7.5.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP) (inpatient encounter)
 
 **subject**: [Max Mustermann Male, DoB: 1959-08-24](Patient-mii-exa-patho-patient-12345.md)
 

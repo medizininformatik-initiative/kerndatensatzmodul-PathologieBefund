@@ -6,6 +6,12 @@
 
 ## Changelog
 
+### 2027.0.0
+
+* `feature` DiagnosticReport.conclusionCode: Slices je Kodiersystem (ICD-10-GM, ICD-O-3, SNOMED CT) aus der Kommentierung
+* `changed` Composition.section:patho-diagnostic-report 1..* → 0..*; neue Invariante `mii-patho-comp-1`: Section Pathologie-Diagnostikbericht oder Diagnostische Schlussfolgerung ist Pflicht
+* `changed` Composition.relatesTo.targetIdentifier als Must Support, für Bezugsdokumente ohne FHIR-Ressource (z. B. Vorbefund aus Altsystem)
+
 ### 2027.0.0-ballot.rc1
 
 * `documentation` Verweise auf den [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) als Referenzbeispiel ergänzt

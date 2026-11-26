@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7 | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Patho_Report_Category_HL7 |
+| Active as of 2026-11-26 | *Computable Name*:MII_VS_Patho_Report_Category_HL7 |
 
  
 ValueSet for the categorization of Pathology Report documents 
@@ -68,7 +68,7 @@ ValueSet for the categorization of Pathology Report documents
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

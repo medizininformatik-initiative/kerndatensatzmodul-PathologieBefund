@@ -9,11 +9,11 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Patho_Composition |
+| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_PR_Patho_Composition |
 
  
 Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5). 
-Das Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. Ein vollständiges Beispiel einer Composition mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html). Dieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”; Aufbau und Signatur des Bundles sind im Profil [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.md) beschrieben. Neben dem Diagnostischen Report (`patho-diagnostic-report`) und einem oder mehreren zusätzlichen kompletten Reports (`additional-diagnostic-report`) können die Beobachtungsberichtabschnitte optional auch direkt als eigene Sections der Composition geführt werden (Makroskopie, Mikroskopie, Intraoperativ, Diagnostische Schlussfolgerung, Zusätzliche Beobachtung); jede dieser Sections referenziert denselben Grouper wie `DiagnosticReport.result`. Composition und DiagnosticReport können zusätzlich über die Extension `composition-diagnosticReportReference` bzw. die R5-Cross-Version-Extension `DiagnosticReport.composition` wechselseitig aufeinander verweisen. Alle diese Ergänzungen sind optional. 
+Das Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. Ein vollständiges Beispiel einer Composition mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html). Dieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”; Aufbau und Signatur des Bundles sind im Profil [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.md) beschrieben. Neben dem Diagnostischen Report (`patho-diagnostic-report`) und einem oder mehreren zusätzlichen kompletten Reports (`additional-diagnostic-report`) können die Beobachtungsberichtabschnitte optional auch direkt als eigene Sections der Composition geführt werden (Makroskopie, Mikroskopie, Intraoperativ, Diagnostische Schlussfolgerung, Zusätzliche Beobachtung); jede dieser Sections referenziert denselben Grouper wie `DiagnosticReport.result`. Composition und DiagnosticReport können zusätzlich über die Extension `composition-diagnosticReportReference` bzw. die R5-Cross-Version-Extension `DiagnosticReport.composition` wechselseitig aufeinander verweisen. Alle diese Ergänzungen sind optional. Die Section `patho-diagnostic-report` ist optional; die Composition muss aber mindestens diese Section oder die Section Diagnostische Schlussfolgerung enthalten (Invariante `mii-patho-comp-1`). Damit kann der DiagnosticReport wie im HL7 EU Laboratory Report allein über die Extension referenziert werden, während die Beobachtungsberichtabschnitte als Sections geführt werden. 
 
 **Usages:**
 
@@ -40,6 +40,8 @@ Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net
 
 #### Terminology Bindings (Differential)
 
+#### Constraints
+
 #### Terminology Bindings
 
 #### Constraints
@@ -48,8 +50,8 @@ Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net
 
 ** Summary **
 
-Mandatory: 10 elements(2 nested mandatory elements)
- Must-Support: 28 elements
+Mandatory: 9 elements(2 nested mandatory elements)
+ Must-Support: 29 elements
  Fixed: 6 elements
 
 **Structures**
@@ -68,7 +70,7 @@ This structure refers to these other structures:
 
 This structure refers to these extensions:
 
-* [http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-composition-clinicaldocument-versionNumber.html)
+* [http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber](http://hl7.org/fhir/extensions/5.4.0/StructureDefinition-composition-clinicaldocument-versionNumber.html)
 * [http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference](http://hl7.eu/fhir/extensions/1.3.0/StructureDefinition-composition-diagnosticReportReference.html)
 
 **Slices**
@@ -91,6 +93,8 @@ Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net
 
 #### Terminology Bindings (Differential)
 
+#### Constraints
+
  **Snapshot-AnsichtView** 
 
 #### Terminology Bindings
@@ -101,8 +105,8 @@ Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net
 
 ** Summary **
 
-Mandatory: 10 elements(2 nested mandatory elements)
- Must-Support: 28 elements
+Mandatory: 9 elements(2 nested mandatory elements)
+ Must-Support: 29 elements
  Fixed: 6 elements
 
 **Structures**
@@ -121,7 +125,7 @@ This structure refers to these other structures:
 
 This structure refers to these extensions:
 
-* [http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-composition-clinicaldocument-versionNumber.html)
+* [http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber](http://hl7.org/fhir/extensions/5.4.0/StructureDefinition-composition-clinicaldocument-versionNumber.html)
 * [http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference](http://hl7.eu/fhir/extensions/1.3.0/StructureDefinition-composition-diagnosticReportReference.html)
 
 **Slices**
@@ -197,7 +201,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -223,7 +227,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       "value" : "info@medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5). \n\nDas Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. Ein vollständiges Beispiel einer Composition mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html). \nDieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”; Aufbau und Signatur des Bundles sind im Profil [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) beschrieben.\nNeben dem Diagnostischen Report (`patho-diagnostic-report`) und einem oder mehreren zusätzlichen kompletten Reports (`additional-diagnostic-report`) können die Beobachtungsberichtabschnitte optional auch direkt als eigene Sections der Composition geführt werden (Makroskopie, Mikroskopie, Intraoperativ, Diagnostische Schlussfolgerung, Zusätzliche Beobachtung); jede dieser Sections referenziert denselben Grouper wie `DiagnosticReport.result`. Composition und DiagnosticReport können zusätzlich über die Extension `composition-diagnosticReportReference` bzw. die R5-Cross-Version-Extension `DiagnosticReport.composition` wechselseitig aufeinander verweisen. Alle diese Ergänzungen sind optional.",
+  "description" : "Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5). \n\nDas Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. Ein vollständiges Beispiel einer Composition mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html). \nDieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”; Aufbau und Signatur des Bundles sind im Profil [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) beschrieben.\nNeben dem Diagnostischen Report (`patho-diagnostic-report`) und einem oder mehreren zusätzlichen kompletten Reports (`additional-diagnostic-report`) können die Beobachtungsberichtabschnitte optional auch direkt als eigene Sections der Composition geführt werden (Makroskopie, Mikroskopie, Intraoperativ, Diagnostische Schlussfolgerung, Zusätzliche Beobachtung); jede dieser Sections referenziert denselben Grouper wie `DiagnosticReport.result`. Composition und DiagnosticReport können zusätzlich über die Extension `composition-diagnosticReportReference` bzw. die R5-Cross-Version-Extension `DiagnosticReport.composition` wechselseitig aufeinander verweisen. Alle diese Ergänzungen sind optional. Die Section `patho-diagnostic-report` ist optional; die Composition muss aber mindestens diese Section oder die Section Diagnostische Schlussfolgerung enthalten (Invariante `mii-patho-comp-1`). Damit kann der DiagnosticReport wie im HL7 EU Laboratory Report allein über die Extension referenziert werden, während die Beobachtungsberichtabschnitte als Sections geführt werden.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -232,7 +236,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       },
       {
         "url" : "content",
-        "valueString" : "This profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) from the specification [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).\n\nAs a profile of a Composition resource with special constraints for ClinicalDocuments, the **MII PR Patho Composition** profile aggregates the resources for a complete, text-centered pathology report with the properties of a clinical document. A complete example of a Composition with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\nThis profile is the first entry in a Bundle of `Bundle.type` \"document\"; the structure and signature of the Bundle are described in the [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) profile.\nIn addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more additional complete reports (`additional-diagnostic-report`), the observation report sections may optionally be carried directly as separate sections of the Composition (macroscopy, microscopy, intraoperative, diagnostic conclusion, additional observation); each of these sections references the same grouper as `DiagnosticReport.result`. Composition and DiagnosticReport may additionally reference each other via the extension `composition-diagnosticReportReference` and the R5 cross-version extension `DiagnosticReport.composition` respectively. All of these additions are optional."
+        "valueString" : "This profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) from the specification [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).\n\nAs a profile of a Composition resource with special constraints for ClinicalDocuments, the **MII PR Patho Composition** profile aggregates the resources for a complete, text-centered pathology report with the properties of a clinical document. A complete example of a Composition with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).\nThis profile is the first entry in a Bundle of `Bundle.type` \"document\"; the structure and signature of the Bundle are described in the [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) profile.\nIn addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more additional complete reports (`additional-diagnostic-report`), the observation report sections may optionally be carried directly as separate sections of the Composition (macroscopy, microscopy, intraoperative, diagnostic conclusion, additional observation); each of these sections references the same grouper as `DiagnosticReport.result`. Composition and DiagnosticReport may additionally reference each other via the extension `composition-diagnosticReportReference` and the R5 cross-version extension `DiagnosticReport.composition` respectively. All of these additions are optional. The `patho-diagnostic-report` section is optional; however, the Composition must contain at least this section or the Diagnostic Conclusion section (invariant `mii-patho-comp-1`). This allows the DiagnosticReport to be referenced solely via the extension, as in the HL7 EU Laboratory Report, while the observation report sections are carried as sections."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
@@ -278,7 +282,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
   "differential" : {
     "element" : [{
       "id" : "Composition",
-      "path" : "Composition"
+      "path" : "Composition",
+      "constraint" : [{
+        "key" : "mii-patho-comp-1",
+        "severity" : "error",
+        "human" : "Die Composition muss mindestens eine Section Pathologie-Diagnostikbericht (LOINC 60567-5) oder eine Section Diagnostische Schlussfolgerung (LOINC 22637-3) enthalten.",
+        "expression" : "section.code.coding.where(system = 'http://loinc.org' and (code = '60567-5' or code = '22637-3')).exists()",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition"
+      }]
     },
     {
       "id" : "Composition.meta.lastUpdated",
@@ -1448,6 +1459,67 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       "mustSupport" : true
     },
     {
+      "id" : "Composition.relatesTo.target[x]:targetIdentifier",
+      "path" : "Composition.relatesTo.target[x]",
+      "sliceName" : "targetIdentifier",
+      "short" : "Befundnummer des Bezugsdokuments",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Befundnummer des Bezugsdokuments"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Identifier of the related document"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Identifikator des Bezugsdokuments wenn dieses nicht als FHIR-Ressource vorliegt z.B. Vorbefund aus einem anderen Haus oder Altsystem",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Identifikator des Bezugsdokuments wenn dieses nicht als FHIR-Ressource vorliegt z.B. Vorbefund aus einem anderen Haus oder Altsystem"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Identifier of the related document if it is not available as a FHIR resource e.g. a prior report from another institution or a legacy system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Identifier"
+      }],
+      "mustSupport" : true
+    },
+    {
       "id" : "Composition.event",
       "path" : "Composition.event",
       "short" : "Ereignis",
@@ -1634,7 +1706,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "min" : 1,
+      "min" : 0,
       "max" : "*",
       "mustSupport" : true
     },

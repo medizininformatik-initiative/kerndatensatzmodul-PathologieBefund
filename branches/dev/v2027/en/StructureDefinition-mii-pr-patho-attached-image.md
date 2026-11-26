@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-attached-image | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_PR_Patho_Attached_Image |
+| Active as of 2026-11-26 | *Computable Name*:MII_PR_Patho_Attached_Image |
 
  
 The **MII PR Patho Attached Image** profile of the Media resource is used to describe images embedded in the report, i.e. the [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md). To include images in [MII PR Patho Finding](StructureDefinition-mii-pr-patho-finding.md), a reference to an ImagingStudy must be used. The present profile should preferably only be used for the "illustration" of a pathology report. 
@@ -91,7 +91,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-atta
     }]
   },
   "status" : "active",
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

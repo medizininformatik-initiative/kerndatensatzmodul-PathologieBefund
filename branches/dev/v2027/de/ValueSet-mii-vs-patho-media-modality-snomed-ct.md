@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Patho_Media_Modality_SNOMED_CT |
+| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_VS_Patho_Media_Modality_SNOMED_CT |
 
  
 ValueSet with some of the main Media.modalities needed in the pathological scope 
@@ -67,7 +67,7 @@ ValueSet with some of the main Media.modalities needed in the pathological scope
     }]
   },
   "status" : "active",
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

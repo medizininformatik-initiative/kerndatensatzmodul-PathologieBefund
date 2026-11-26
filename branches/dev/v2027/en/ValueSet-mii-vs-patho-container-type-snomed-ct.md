@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct | *Version*:2027.0.0-ballot |
-| Active as of 2026-09-14 | *Computable Name*:MII_VS_Patho_Container_Type_SNOMED_CT |
+| Active as of 2026-11-26 | *Computable Name*:MII_VS_Patho_Container_Type_SNOMED_CT |
 
  
 ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSet 
@@ -67,7 +67,7 @@ ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSe
     }]
   },
   "status" : "active",
-  "date" : "2026-09-14T10:33:39+00:00",
+  "date" : "2026-11-26T13:07:47+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
