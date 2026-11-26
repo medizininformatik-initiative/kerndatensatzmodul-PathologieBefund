@@ -28,8 +28,8 @@
     "fshName": "mii-exa-patho-composition",
     "fshType": "Instance",
     "fshFile": "pathology-report.fsh",
-    "startLine": 647,
-    "endLine": 711
+    "startLine": 704,
+    "endLine": 768
   },
   {
     "outputFile": "Condition-mii-exa-patho-problem-list-item-1.json",
@@ -52,8 +52,8 @@
     "fshName": "mii-exa-patho-report",
     "fshType": "Instance",
     "fshFile": "pathology-report.fsh",
-    "startLine": 539,
-    "endLine": 562
+    "startLine": 594,
+    "endLine": 619
   },
   {
     "outputFile": "Encounter-mii-exa-patho-encounter-12345.json",
@@ -372,8 +372,8 @@
     "fshName": "MII_PR_Patho_Composition",
     "fshType": "Profile",
     "fshFile": "pathology-report.fsh",
-    "startLine": 261,
-    "endLine": 503
+    "startLine": 303,
+    "endLine": 553
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.json",
@@ -437,7 +437,7 @@
     "fshType": "Profile",
     "fshFile": "pathology-report.fsh",
     "startLine": 4,
-    "endLine": 256
+    "endLine": 298
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-section-grouper.json",

@@ -11,6 +11,7 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v2-0916 = http://terminology.hl7.org/ValueSet/v2-0916
 Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias: $icd-o-3 = http://terminology.hl7.org/CodeSystem/icd-o-3
+Alias: $icd10gm = http://fhir.de/CodeSystem/bfarm/icd-10-gm
 Alias: $media-type = http://terminology.hl7.org/CodeSystem/media-type 
 Alias: $cs-hl7-condition-category = http://terminology.hl7.org/CodeSystem/condition-category
 // Biobank Terminologien

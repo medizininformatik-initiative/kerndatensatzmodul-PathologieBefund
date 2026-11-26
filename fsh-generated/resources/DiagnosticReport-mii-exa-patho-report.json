@@ -30,6 +30,35 @@
       }
     ]
   },
+  "conclusionCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "1525761000004109"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "code": "C61",
+          "version": "2021",
+          "display": "Bösartige Neubildung der Prostata"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+          "code": "8140/3",
+          "display": "Adenokarzinom o.n.A."
+        }
+      ]
+    }
+  ],
   "basedOn": [
     {
       "reference": "ServiceRequest/mii-exa-patho-request"
@@ -64,16 +93,6 @@
     }
   ],
   "conclusion": "Gut differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 1",
-  "conclusionCode": [
-    {
-      "coding": [
-        {
-          "code": "1525761000004109",
-          "system": "http://snomed.info/sct"
-        }
-      ]
-    }
-  ],
   "effectiveDateTime": "2021-06-01",
   "media": [
     {

@@ -32,6 +32,12 @@
       }
     }
   ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+      "valueString": "1"
+    }
+  ],
   "section": [
     {
       "code": {
@@ -53,12 +59,6 @@
           "reference": "DiagnosticReport/mii-exa-patho-report"
         }
       ]
-    }
-  ],
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
-      "valueString": "1"
     }
   ],
   "identifier": {

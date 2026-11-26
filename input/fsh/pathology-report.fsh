@@ -14,6 +14,8 @@ Die wichtigsten Besonderheiten des **MII PR Patho Report** sind:
 - die Möglichkeit, zusätzlichen klinischen Kontext, z.B. eine Mischung von Ergebnissen aus Einzelbeobachtungen, Bildern, Texten und formatisierten Darstellungen einzubinden, 
 - die Möglichkeit, Informationen zu mehreren Proben (hier die klinischerseits eingesandten Proben) zu einzubinden,
 - und die Möglichkeit, eine zusammenfassende Bewertung, die Conclusion, sowie einen oder mehrere Conclusion.codes abzubilden, die nicht identisch mit  PathologyFindings sind.  
+
+Für `conclusionCode` sind Slices je Kodiersystem vorgesehen: ICD-10-GM, ICD-O-3 (Morphologie bzw. Topographie) und SNOMED CT. Jeder `conclusionCode` trägt Codings genau eines Systems; unterschiedliche Kodierungen derselben Schlussfolgerung stehen in getrennten Wiederholungen, da sie nicht zwingend dasselbe Konzept bezeichnen.
  
 Das **MII PR Patho Report** bildet als Entry in der Section "patho-diagnostic-report" des Profils [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) den Kern eines persistenten Dokuments "Pathologiebefundbericht".
 
@@ -38,6 +40,8 @@ The most important features of the **MII PR Patho Report** are:
 - the ability to incorporate additional clinical context, e.g. a mixture of results from individual observations, images, texts and formatted representations,
 - the ability to incorporate information on multiple specimens (here the specimens submitted by the clinical side),
 - and the ability to represent a summarizing assessment, the conclusion, as well as one or more conclusion.codes that are not identical to PathologyFindings.
+
+Slices per code system are defined for `conclusionCode`: ICD-10-GM, ICD-O-3 (morphology or topography) and SNOMED CT. Each `conclusionCode` carries codings of exactly one system; different codings of the same conclusion are placed in separate repetitions, as they do not necessarily denote the same concept.
 
 As an entry in the "patho-diagnostic-report" section of the [MII PR Patho Composition](StructureDefinition-mii-pr-patho-composition.html) profile, the **MII PR Patho Report** forms the core of a persistent document "pathology report".
 
@@ -254,6 +258,44 @@ In the table below, elements are marked with * that are duplicated in the MII PR
 * insert Translation(conclusionCode ^short, en-US, Conclusion code)
 * insert Translation(conclusionCode ^definition, de-DE, Kodierung für abschließende diagnostische Schlussfolgerung)
 * insert Translation(conclusionCode ^definition, en-US, Coded diagnostic conclusion)
+// Slices je CodeSystem auf den Wiederholungen von conclusionCode (nicht auf coding):
+// ICD-10-GM, ICD-O-3 und SNOMED CT kodieren nicht zwingend dasselbe Konzept
+// und duerfen daher nicht als aequivalente Codings in einem CodeableConcept stehen.
+* conclusionCode ^slicing.discriminator.type = #pattern
+* conclusionCode ^slicing.discriminator.path = "$this"
+* conclusionCode ^slicing.rules = #open
+* conclusionCode ^slicing.description = "Je ein conclusionCode pro Kodiersystem; ein CodeableConcept traegt nur Codings eines Systems"
+* conclusionCode contains icd10-gm 0..* MS and icd-o-3 0..* MS and sct 0..* MS
+* insert Label(conclusionCode[icd10-gm], ICD-10-GM, Diagnose nach ICD-10-GM)
+* insert Translation(conclusionCode[icd10-gm] ^short, de-DE, ICD-10-GM)
+* insert Translation(conclusionCode[icd10-gm] ^short, en-US, ICD-10-GM)
+* insert Translation(conclusionCode[icd10-gm] ^definition, de-DE, Diagnose nach ICD-10-GM)
+* insert Translation(conclusionCode[icd10-gm] ^definition, en-US, Diagnosis coded in ICD-10-GM)
+* conclusionCode[icd10-gm] ^patternCodeableConcept.coding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+  * coding 1.. MS
+    * system 1.. MS
+    * version 1.. MS
+    * code 1.. MS
+* insert Label(conclusionCode[icd-o-3], ICD-O-3, Morphologie oder Topographie nach ICD-O-3)
+* insert Translation(conclusionCode[icd-o-3] ^short, de-DE, ICD-O-3)
+* insert Translation(conclusionCode[icd-o-3] ^short, en-US, ICD-O-3)
+* insert Translation(conclusionCode[icd-o-3] ^definition, de-DE, Morphologie oder Topographie nach ICD-O-3)
+* insert Translation(conclusionCode[icd-o-3] ^definition, en-US, Morphology or topography coded in ICD-O-3)
+* conclusionCode[icd-o-3] ^comment = "Morphologie (z.B. 8140/3) und Topographie (z.B. C61.9) teilen sich das CodeSystem und stehen jeweils in einem eigenen conclusionCode. Die Morphologie kann zusätzlich strukturiert als Finding mit LOINC 59847-4 im MII PR Patho Diagnostic Conclusion Grouper vorliegen."
+* conclusionCode[icd-o-3] ^patternCodeableConcept.coding.system = "http://terminology.hl7.org/CodeSystem/icd-o-3"
+  * coding 1.. MS
+    * system 1.. MS
+    * version MS
+    * code 1.. MS
+* insert Label(conclusionCode[sct], SNOMED CT, Diagnostische Schlussfolgerung nach SNOMED CT)
+* insert Translation(conclusionCode[sct] ^short, de-DE, SNOMED CT)
+* insert Translation(conclusionCode[sct] ^short, en-US, SNOMED CT)
+* insert Translation(conclusionCode[sct] ^definition, de-DE, Diagnostische Schlussfolgerung nach SNOMED CT)
+* insert Translation(conclusionCode[sct] ^definition, en-US, Diagnostic conclusion coded in SNOMED CT)
+* conclusionCode[sct] ^patternCodeableConcept.coding.system = "http://snomed.info/sct"
+  * coding 1.. MS
+    * system 1.. MS
+    * code 1.. MS
 
 // -------------------------
 // Composition
@@ -267,7 +309,7 @@ Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.n
 
 Das Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. Ein vollständiges Beispiel einer Composition mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html). 
 Dieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”; Aufbau und Signatur des Bundles sind im Profil [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) beschrieben.
-Neben dem Diagnostischen Report (`patho-diagnostic-report`) und einem oder mehreren zusätzlichen kompletten Reports (`additional-diagnostic-report`) können die Beobachtungsberichtabschnitte optional auch direkt als eigene Sections der Composition geführt werden (Makroskopie, Mikroskopie, Intraoperativ, Diagnostische Schlussfolgerung, Zusätzliche Beobachtung); jede dieser Sections referenziert denselben Grouper wie `DiagnosticReport.result`. Composition und DiagnosticReport können zusätzlich über die Extension `composition-diagnosticReportReference` bzw. die R5-Cross-Version-Extension `DiagnosticReport.composition` wechselseitig aufeinander verweisen. Alle diese Ergänzungen sind optional.
+Neben dem Diagnostischen Report (`patho-diagnostic-report`) und einem oder mehreren zusätzlichen kompletten Reports (`additional-diagnostic-report`) können die Beobachtungsberichtabschnitte optional auch direkt als eigene Sections der Composition geführt werden (Makroskopie, Mikroskopie, Intraoperativ, Diagnostische Schlussfolgerung, Zusätzliche Beobachtung); jede dieser Sections referenziert denselben Grouper wie `DiagnosticReport.result`. Composition und DiagnosticReport können zusätzlich über die Extension `composition-diagnosticReportReference` bzw. die R5-Cross-Version-Extension `DiagnosticReport.composition` wechselseitig aufeinander verweisen. Alle diese Ergänzungen sind optional. Die Section `patho-diagnostic-report` ist optional; die Composition muss aber mindestens diese Section oder die Section Diagnostische Schlussfolgerung enthalten (Invariante `mii-patho-comp-1`). Damit kann der DiagnosticReport wie im HL7 EU Laboratory Report allein über die Extension referenziert werden, während die Beobachtungsberichtabschnitte als Sections geführt werden.
 """
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -282,7 +324,7 @@ This profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifi
 
 As a profile of a Composition resource with special constraints for ClinicalDocuments, the **MII PR Patho Composition** profile aggregates the resources for a complete, text-centered pathology report with the properties of a clinical document. A complete example of a Composition with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
 This profile is the first entry in a Bundle of `Bundle.type` "document"; the structure and signature of the Bundle are described in the [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) profile.
-In addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more additional complete reports (`additional-diagnostic-report`), the observation report sections may optionally be carried directly as separate sections of the Composition (macroscopy, microscopy, intraoperative, diagnostic conclusion, additional observation); each of these sections references the same grouper as `DiagnosticReport.result`. Composition and DiagnosticReport may additionally reference each other via the extension `composition-diagnosticReportReference` and the R5 cross-version extension `DiagnosticReport.composition` respectively. All of these additions are optional.
+In addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more additional complete reports (`additional-diagnostic-report`), the observation report sections may optionally be carried directly as separate sections of the Composition (macroscopy, microscopy, intraoperative, diagnostic conclusion, additional observation); each of these sections references the same grouper as `DiagnosticReport.result`. Composition and DiagnosticReport may additionally reference each other via the extension `composition-diagnosticReportReference` and the R5 cross-version extension `DiagnosticReport.composition` respectively. All of these additions are optional. The `patho-diagnostic-report` section is optional; however, the Composition must contain at least this section or the Diagnostic Conclusion section (invariant `mii-patho-comp-1`). This allows the DiagnosticReport to be referenced solely via the extension, as in the HL7 EU Laboratory Report, while the observation report sections are carried as sections.
 """
 * text ^short = "Header-Informationen"
 * meta.lastUpdated MS
@@ -401,11 +443,17 @@ In addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more
 * relatesTo MS
   * code MS
   * targetReference MS
+  * targetIdentifier MS
 * insert Label(relatesTo, Bezieht sich auf, Beziehung zu anderen Dokumenten z.B. Vor- Zusatz- und/oder Korrekturbefunde)
 * insert Translation(relatesTo ^short, de-DE, Bezieht sich auf)
 * insert Translation(relatesTo ^short, en-US, Relates to)
 * insert Translation(relatesTo ^definition, de-DE, Beziehung zu anderen Dokumenten z.B. Vor- Zusatz- und/oder Korrekturbefunde)
 * insert Translation(relatesTo ^definition, en-US, Relationship to other documents) 
+* insert Label(relatesTo.targetIdentifier, Befundnummer des Bezugsdokuments, Identifikator des Bezugsdokuments wenn dieses nicht als FHIR-Ressource vorliegt z.B. Vorbefund aus einem anderen Haus oder Altsystem)
+* insert Translation(relatesTo.targetIdentifier ^short, de-DE, Befundnummer des Bezugsdokuments)
+* insert Translation(relatesTo.targetIdentifier ^short, en-US, Identifier of the related document)
+* insert Translation(relatesTo.targetIdentifier ^definition, de-DE, Identifikator des Bezugsdokuments wenn dieses nicht als FHIR-Ressource vorliegt z.B. Vorbefund aus einem anderen Haus oder Altsystem)
+* insert Translation(relatesTo.targetIdentifier ^definition, en-US, Identifier of the related document if it is not available as a FHIR resource e.g. a prior report from another institution or a legacy system)
 
 * event 1.. MS
 * insert Label(event, Ereignis, Dokumentiertes Pathologie-Ereignis - die Begutachtung bzw. Befundung auf die sich der Befundbericht bezieht)
@@ -415,6 +463,7 @@ In addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more
 * insert Translation(event ^definition, en-US, Documented pathology event - the reporting act the report refers to)
 // Entry referenziert nur auf MII_PR_Patho_Report
 * section 
+* obeys mii-patho-comp-1
 * section.code 1.. MS
 * section.code.coding 1.. MS
 * section.code.coding from mii-vs-patho-all-loinc (required)
@@ -422,11 +471,12 @@ In addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "$this.code.coding"
 * section ^slicing.rules = #open
-// Der DiagnosticReport-zentrische Weg (patho-diagnostic-report) bleibt unveraendert.
+// Der DiagnosticReport-zentrische Weg (patho-diagnostic-report) ist seit 2027 optional (0..*);
+// Invariante mii-patho-comp-1 verlangt patho-diagnostic-report ODER diagnostische-schlussfolgerung.
 // Zusaetzlich koennen die Beobachtungsberichtabschnitte optional direkt als Composition-Sections
 // gefuehrt werden (Angleichung an HL7 EU Lab / US Pathology Composition). Jede Section referenziert
 // denselben Grouper wie DiagnosticReport.result. Alle Section-Slices sind optional (kein Breaking Change).
-* section contains patho-diagnostic-report 1..* MS
+* section contains patho-diagnostic-report 0..* MS
     and makroskopie 0..1 MS
     and mikroskopie 0..1 MS
     and intraoperativ 0..1 MS
@@ -470,7 +520,7 @@ In addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more
   * entry 1.. MS
   * entry only Reference (mii-pr-patho-report)
 // Optionale Beobachtungsberichtabschnitte als Composition-Sections; die entry referenziert jeweils
-// denselben Grouper wie DiagnosticReport.result. section.text (Narrativ) bleibt optional.
+// denselben Grouper wie DiagnosticReport.result. section.text (Narrativ) ist Pflicht (1..1, von ISiKBerichtSubSysteme geerbt).
 * section[makroskopie]
   * code 1.. MS
     * coding 1.. MS
@@ -502,6 +552,11 @@ In addition to the Diagnostic Report (`patho-diagnostic-report`) and one or more
   * entry 1..1 MS
   * entry only Reference(mii-pr-patho-additional-specified-grouper)
 
+
+Invariant: mii-patho-comp-1
+Description: "Die Composition muss mindestens eine Section Pathologie-Diagnostikbericht (LOINC 60567-5) oder eine Section Diagnostische Schlussfolgerung (LOINC 22637-3) enthalten."
+Severity: #error
+Expression: "section.code.coding.where(system = 'http://loinc.org' and (code = '60567-5' or code = '22637-3')).exists()"
 
 //--------------------------------
 // Example
@@ -556,7 +611,9 @@ Usage: #example
 * result[microscopic-observations] = Reference(Observation/mii-exa-patho-micro-grouper-a)
 * result[diagnostic-conclusion] = Reference(Observation/mii-exa-patho-diagnostic-conclusion-grouper)
 * conclusion = "Gut differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 1"
-* conclusionCode = $SCT#1525761000004109
+* conclusionCode[sct] = $SCT#1525761000004109
+* conclusionCode[icd10-gm] = $icd10gm|2021#C61 "Bösartige Neubildung der Prostata"
+* conclusionCode[icd-o-3] = $icd-o-3#8140/3 "Adenokarzinom o.n.A."
 * effectiveDateTime = "2021-06-01"
 * media.link = Reference(Media/mii-exa-patho-attached-image)
 * media.comment = "HE-Schnitt einer Prostatastanze, infiltriert durch Karzinomverbände, fotodokumentiert"
