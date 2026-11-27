@@ -43,7 +43,7 @@ StructureDefinition-mii-lm-patho-logical-model.json                  MII_LM_Path
 StructureDefinition-mii-pr-patho-active-problems-list.json           MII_PR_Patho_Active_Problems_List               Profile   serviceRequest.fsh               249 - 280
 StructureDefinition-mii-pr-patho-additional-specified-grouper.json   MII_PR_Patho_Additional_Specified_Grouper       Profile   patho-groupers.fsh               222 - 265
 StructureDefinition-mii-pr-patho-attached-image.json                 MII_PR_Patho_Attached_Image                     Profile   pathology-imaging.fsh            3 - 71
-StructureDefinition-mii-pr-patho-base-observation.json               MII_PR_Patho_Base_Observation                   Profile   patho-abstract-observations.fsh  5 - 77
+StructureDefinition-mii-pr-patho-base-observation.json               MII_PR_Patho_Base_Observation                   Profile   patho-abstract-observations.fsh  5 - 87
 StructureDefinition-mii-pr-patho-bundle.json                         MII_PR_Patho_Bundle                             Profile   patho-bundle.fsh                 1 - 100
 StructureDefinition-mii-pr-patho-composition.json                    MII_PR_Patho_Composition                        Profile   pathology-report.fsh             308 - 558
 StructureDefinition-mii-pr-patho-diagnostic-conclusion-grouper.json  MII_PR_Patho_Diagnostic_Conclusion_Grouper      Profile   patho-groupers.fsh               273 - 342
@@ -54,7 +54,7 @@ StructureDefinition-mii-pr-patho-macroscopic-grouper.json            MII_PR_Path
 StructureDefinition-mii-pr-patho-microscopic-grouper.json            MII_PR_Patho_Microscopic_Grouper                Profile   patho-groupers.fsh               143 - 186
 StructureDefinition-mii-pr-patho-problem-list-item.json              MII_PR_Patho_Problem_List_Item                  Profile   serviceRequest.fsh               212 - 244
 StructureDefinition-mii-pr-patho-report.json                         MII_PR_Patho_Report                             Profile   pathology-report.fsh             4 - 303
-StructureDefinition-mii-pr-patho-section-grouper.json                MII_PR_Patho_Section_Grouper                    Profile   patho-abstract-observations.fsh  82 - 162
+StructureDefinition-mii-pr-patho-section-grouper.json                MII_PR_Patho_Section_Grouper                    Profile   patho-abstract-observations.fsh  92 - 172
 StructureDefinition-mii-pr-patho-service-request.json                MII_PR_Patho_Service_Request                    Profile   serviceRequest.fsh               4 - 206
 StructureDefinition-mii-pr-patho-specimen.json                       MII_PR_Patho_Specimen                           Profile   specimen.fsh                     1 - 105
 Substance-mii-exa-patho-canadabalsam.json                            mii-exa-patho-canadabalsam                      Instance  specimen.fsh                     379 - 384

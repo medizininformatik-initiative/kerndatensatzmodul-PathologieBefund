@@ -357,7 +357,7 @@
     "fshType": "Profile",
     "fshFile": "patho-abstract-observations.fsh",
     "startLine": 5,
-    "endLine": 77
+    "endLine": 87
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-bundle.json",
@@ -444,8 +444,8 @@
     "fshName": "MII_PR_Patho_Section_Grouper",
     "fshType": "Profile",
     "fshFile": "patho-abstract-observations.fsh",
-    "startLine": 82,
-    "endLine": 162
+    "startLine": 92,
+    "endLine": 172
   },
   {
     "outputFile": "StructureDefinition-mii-pr-patho-service-request.json",

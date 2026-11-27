@@ -38,6 +38,7 @@ Alias: $fhir-capabilitystatement-expectation = http://hl7.org/fhir/StructureDefi
 Alias: $fhir-workflow-related-artifact = http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact
 // Cross-Version-Extension R5: Specimen.collection.bodySite als Reference(BodyStructure)
 Alias: $r5-specimen-collection-bodysite = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite
+Alias: $r5-observation-bodystructure = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.bodyStructure
 // DiagnosticReport <-> Composition Verknuepfung (Angleichung an HL7 EU Lab Report)
 Alias: $r5-diagnosticreport-composition = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $eu-composition-diagnosticreport = http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference

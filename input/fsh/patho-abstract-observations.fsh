@@ -56,6 +56,16 @@ This abstract profile collects all common profiling requirements of the patholog
   * coding[sct] from $bio-bodystructure (required)
     * ^patternCoding.system = $SCT
     * system 1.. MS
+// R5 fuehrt Observation.bodyStructure als Reference(BodyStructure) neben bodySite (CodeableConcept).
+// Die Cross-Version-Extension liegt auf Observation selbst (nicht auf bodySite) und wird an
+// Section Grouper und Finding vererbt (#271); analog zu Specimen.collection.bodySite (#259).
+* extension contains $r5-observation-bodystructure named bodyStructure 0..1 MS
+* extension[bodyStructure].valueReference only Reference(BodyStructure)
+* insert Label(extension[bodyStructure], Koerperstruktur, Verweis auf eine BodyStructure-Ressource mit der detaillierten Lokalisation)
+* insert Translation(extension[bodyStructure] ^short, de-DE, Koerperstruktur)
+* insert Translation(extension[bodyStructure] ^short, en-US, Body structure)
+* insert Translation(extension[bodyStructure] ^definition, de-DE, Verweis auf eine BodyStructure-Ressource mit der detaillierten Lokalisation)
+* insert Translation(extension[bodyStructure] ^definition, en-US, Reference to a BodyStructure resource carrying the detailed location)
 // Untersuchungsmethode
 * method MS
 // Referenz - Probe
