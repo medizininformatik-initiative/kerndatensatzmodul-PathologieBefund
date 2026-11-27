@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "mii-exa-patho-practitioner-21234",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner mii-exa-patho-practitioner-21234</b></p><a name=\"en-mii-exa-patho-practitioner-21234\"> </a><a name=\"en-hcmii-exa-patho-practitioner-21234\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Martin Makro</p><hr/></div>"
+  },
+  "name" : [{
+    "family" : "Makro",
+    "given" : ["Martin"]
+  }]
+}
