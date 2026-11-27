@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-bundle | *Version*:2027.0.0-ballot |
-| Active as of 2026-11-26 | *Computable Name*:MII_PR_Patho_Bundle |
+| Active as of 2026-11-27 | *Computable Name*:MII_PR_Patho_Bundle |
 
  
 This **MII PR Patho Bundle** profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtbundle) of the [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5) specification. It serves to aggregate all resources that are part of the document. The first resource in the bundle (Bundle.entry.resource) should always be a Composition. 
@@ -90,7 +90,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-bund
     }]
   },
   "status" : "active",
-  "date" : "2026-11-26T13:07:47+00:00",
+  "date" : "2026-11-27T12:05:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

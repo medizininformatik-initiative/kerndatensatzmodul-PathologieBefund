@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-problem-list-item | *Version*:2027.0.0-ballot |
-| Active as of 2026-11-26 | *Computable Name*:MII_PR_Patho_Problem_List_Item |
+| Active as of 2026-11-27 | *Computable Name*:MII_PR_Patho_Problem_List_Item |
 
  
 The **MII PR Patho Problem List Item** profile of the Condition resource represents the individual list entries of the **MII PR Patho Active Problems** and **MII PR Patho History of Present Illness** profiles. 
@@ -68,7 +68,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-prob
     }]
   },
   "status" : "active",
-  "date" : "2026-11-26T13:07:47+00:00",
+  "date" : "2026-11-27T12:05:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

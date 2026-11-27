@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_VS_Patho_Composition_Type_SNOMED_CT |
+| Active Stand: 2026-11-27 | *Maschinenlesbarer Name*:MII_VS_Patho_Composition_Type_SNOMED_CT |
 
  
 ValueSet for the types a pathology Composition can have 
@@ -67,7 +67,7 @@ ValueSet for the types a pathology Composition can have
     }]
   },
   "status" : "active",
-  "date" : "2026-11-26T13:07:47+00:00",
+  "date" : "2026-11-27T12:05:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

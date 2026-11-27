@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-active-problems-list | *Version*:2027.0.0-ballot |
-| Active as of 2026-11-26 | *Computable Name*:MII_PR_Patho_Active_Problems_List |
+| Active as of 2026-11-27 | *Computable Name*:MII_PR_Patho_Active_Problems_List |
 
  
 The **MII PR Patho Active Problems** profile of the [List](http://hl7.org/fhir/R4/list.html) resource represents a list of the diseases and/or problems of the patient present at the time of examination, which represent the submitter's clinical question within the Supporting Information of the [MII PR Patho Service Request](StructureDefinition-mii-pr-patho-service-request.md) profile. 
@@ -69,7 +69,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-acti
     }]
   },
   "status" : "active",
-  "date" : "2026-11-26T13:07:47+00:00",
+  "date" : "2026-11-27T12:05:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_PR_Patho_Composition |
+| Active Stand: 2026-11-27 | *Maschinenlesbarer Name*:MII_PR_Patho_Composition |
 
  
 Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5). 
@@ -70,7 +70,7 @@ This structure refers to these other structures:
 
 This structure refers to these extensions:
 
-* [http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber](http://hl7.org/fhir/extensions/5.4.0/StructureDefinition-composition-clinicaldocument-versionNumber.html)
+* [http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber](http://hl7.org/fhir/extensions/5.4.1/StructureDefinition-composition-clinicaldocument-versionNumber.html)
 * [http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference](http://hl7.eu/fhir/extensions/1.3.0/StructureDefinition-composition-diagnosticReportReference.html)
 
 **Slices**
@@ -125,7 +125,7 @@ This structure refers to these other structures:
 
 This structure refers to these extensions:
 
-* [http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber](http://hl7.org/fhir/extensions/5.4.0/StructureDefinition-composition-clinicaldocument-versionNumber.html)
+* [http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber](http://hl7.org/fhir/extensions/5.4.1/StructureDefinition-composition-clinicaldocument-versionNumber.html)
 * [http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference](http://hl7.eu/fhir/extensions/1.3.0/StructureDefinition-composition-diagnosticReportReference.html)
 
 **Slices**
@@ -201,7 +201,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-11-26T13:07:47+00:00",
+  "date" : "2026-11-27T12:05:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

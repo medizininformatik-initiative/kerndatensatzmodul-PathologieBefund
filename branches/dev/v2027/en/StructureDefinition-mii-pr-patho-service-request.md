@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request | *Version*:2027.0.0-ballot |
-| Active as of 2026-11-26 | *Computable Name*:MII_PR_Patho_Service_Request |
+| Active as of 2026-11-27 | *Computable Name*:MII_PR_Patho_Service_Request |
 
  
 The **MII PR Patho Service Request** profile of the [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html) resource represents the description of the clinician's order to the pathology facility. This is usually kept unspecific (“Histology requested”, which corresponds to an order for a consultative assessment), but may be underpinned by specific questions (e.g. “FISH for Her2”, corresponding to a targeted order). If several concrete examinations are to be ordered, one **MII PR Patho Service Request** must be triggered per examination, all of which are grouped together in the `ServiceRequest.requisition` (corresponding to a Placer Order Group). 
@@ -93,7 +93,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-serv
     }]
   },
   "status" : "active",
-  "date" : "2026-11-26T13:07:47+00:00",
+  "date" : "2026-11-27T12:05:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

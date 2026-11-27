@@ -95,7 +95,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.4.0"
+    "version" : "5.4.1"
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_meta",

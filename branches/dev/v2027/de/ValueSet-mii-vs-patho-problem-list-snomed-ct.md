@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_VS_Patho_Problem_List_SNOMED_CT |
+| Active Stand: 2026-11-27 | *Maschinenlesbarer Name*:MII_VS_Patho_Problem_List_SNOMED_CT |
 
  
 ValueSet containing the recommended vocabulary for describing problems, according to the IHE Patient Care Coordination Technical Framework (Vol. 2) 
@@ -67,7 +67,7 @@ ValueSet containing the recommended vocabulary for describing problems, accordin
     }]
   },
   "status" : "active",
-  "date" : "2026-11-26T13:07:47+00:00",
+  "date" : "2026-11-27T12:05:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

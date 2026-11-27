@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_PR_Patho_Report |
+| Active Stand: 2026-11-27 | *Maschinenlesbarer Name*:MII_PR_Patho_Report |
 
  
 Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). 
@@ -62,7 +62,7 @@ Diese Struktur ist abgeleitet von [DiagnosticReport](http://hl7.org/fhir/R4/diag
 
 Mandatory: 16 elements(14 nested mandatory elements)
  Must-Support: 53 elements
- Fixed: 1 element
+ Fixed: 4 elements
 
 **Structures**
 
@@ -80,7 +80,7 @@ This structure refers to these other structures:
 
 This structure refers to these extensions:
 
-* [http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact](http://hl7.org/fhir/extensions/5.4.0/StructureDefinition-workflow-relatedArtifact.html)
+* [http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact](http://hl7.org/fhir/extensions/5.4.1/StructureDefinition-workflow-relatedArtifact.html)
 * [http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-DiagnosticReport.composition.html)
 
 **Slices**
@@ -116,7 +116,7 @@ Diese Struktur ist abgeleitet von [DiagnosticReport](http://hl7.org/fhir/R4/diag
 
 Mandatory: 16 elements(14 nested mandatory elements)
  Must-Support: 53 elements
- Fixed: 1 element
+ Fixed: 4 elements
 
 **Structures**
 
@@ -134,7 +134,7 @@ This structure refers to these other structures:
 
 This structure refers to these extensions:
 
-* [http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact](http://hl7.org/fhir/extensions/5.4.0/StructureDefinition-workflow-relatedArtifact.html)
+* [http://hl7.org/fhir/StructureDefinition/workflow-relatedArtifact](http://hl7.org/fhir/extensions/5.4.1/StructureDefinition-workflow-relatedArtifact.html)
 * [http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition](http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-DiagnosticReport.composition.html)
 
 **Slices**
@@ -211,7 +211,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-11-26T13:07:47+00:00",
+  "date" : "2026-11-27T12:05:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -2153,8 +2153,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       "path" : "DiagnosticReport.conclusionCode",
       "slicing" : {
         "discriminator" : [{
-          "type" : "pattern",
-          "path" : "$this"
+          "type" : "value",
+          "path" : "coding.system"
         }],
         "description" : "Je ein conclusionCode pro Kodiersystem; ein CodeableConcept traegt nur Codings eines Systems",
         "rules" : "open"
@@ -2289,11 +2289,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       },
       "min" : 0,
       "max" : "*",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
-        }]
-      },
       "mustSupport" : true
     },
     {
@@ -2306,6 +2301,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       "id" : "DiagnosticReport.conclusionCode:icd10-gm.coding.system",
       "path" : "DiagnosticReport.conclusionCode.coding.system",
       "min" : 1,
+      "fixedUri" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
       "mustSupport" : true
     },
     {
@@ -2377,11 +2373,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       "comment" : "Morphologie (z.B. 8140/3) und Topographie (z.B. C61.9) teilen sich das CodeSystem und stehen jeweils in einem eigenen conclusionCode. Die Morphologie kann zusätzlich strukturiert als Finding mit LOINC 59847-4 im MII PR Patho Diagnostic Conclusion Grouper vorliegen.",
       "min" : 0,
       "max" : "*",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3"
-        }]
-      },
       "mustSupport" : true
     },
     {
@@ -2394,6 +2385,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       "id" : "DiagnosticReport.conclusionCode:icd-o-3.coding.system",
       "path" : "DiagnosticReport.conclusionCode.coding.system",
       "min" : 1,
+      "fixedUri" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
       "mustSupport" : true
     },
     {
@@ -2463,11 +2455,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       },
       "min" : 0,
       "max" : "*",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://snomed.info/sct"
-        }]
-      },
       "mustSupport" : true
     },
     {
@@ -2480,6 +2467,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
       "id" : "DiagnosticReport.conclusionCode:sct.coding.system",
       "path" : "DiagnosticReport.conclusionCode.coding.system",
       "min" : 1,
+      "fixedUri" : "http://snomed.info/sct",
       "mustSupport" : true
     },
     {

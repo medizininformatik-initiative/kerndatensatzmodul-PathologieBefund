@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc | *Version*:2027.0.0-ballot |
-| Active Stand: 2026-11-26 | *Maschinenlesbarer Name*:MII_VS_Patho_Section_Types_LOINC |
+| Active Stand: 2026-11-27 | *Maschinenlesbarer Name*:MII_VS_Patho_Section_Types_LOINC |
 
  
 ValueSet for IHE PaLM APSR's section types 
@@ -67,7 +67,7 @@ ValueSet for IHE PaLM APSR's section types
     }]
   },
   "status" : "active",
-  "date" : "2026-11-26T13:07:47+00:00",
+  "date" : "2026-11-27T12:05:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

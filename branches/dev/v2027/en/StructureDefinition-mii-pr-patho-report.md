@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report | *Version*:2027.0.0-ballot |
-| Active as of 2026-11-26 | *Computable Name*:MII_PR_Patho_Report |
+| Active as of 2026-11-27 | *Computable Name*:MII_PR_Patho_Report |
 
  
 The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) resource represents the complete report without possessing document properties (see **MII-PR-Patho-Composition**). 
@@ -103,7 +103,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-repo
     }]
   },
   "status" : "active",
-  "date" : "2026-11-26T13:07:47+00:00",
+  "date" : "2026-11-27T12:05:56+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -2045,8 +2045,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-repo
       "path" : "DiagnosticReport.conclusionCode",
       "slicing" : {
         "discriminator" : [{
-          "type" : "pattern",
-          "path" : "$this"
+          "type" : "value",
+          "path" : "coding.system"
         }],
         "description" : "Je ein conclusionCode pro Kodiersystem; ein CodeableConcept traegt nur Codings eines Systems",
         "rules" : "open"
@@ -2181,11 +2181,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-repo
       },
       "min" : 0,
       "max" : "*",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
-        }]
-      },
       "mustSupport" : true
     },
     {
@@ -2198,6 +2193,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-repo
       "id" : "DiagnosticReport.conclusionCode:icd10-gm.coding.system",
       "path" : "DiagnosticReport.conclusionCode.coding.system",
       "min" : 1,
+      "fixedUri" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
       "mustSupport" : true
     },
     {
@@ -2269,11 +2265,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-repo
       "comment" : "Morphologie (z.B. 8140/3) und Topographie (z.B. C61.9) teilen sich das CodeSystem und stehen jeweils in einem eigenen conclusionCode. Die Morphologie kann zusätzlich strukturiert als Finding mit LOINC 59847-4 im MII PR Patho Diagnostic Conclusion Grouper vorliegen.",
       "min" : 0,
       "max" : "*",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3"
-        }]
-      },
       "mustSupport" : true
     },
     {
@@ -2286,6 +2277,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-repo
       "id" : "DiagnosticReport.conclusionCode:icd-o-3.coding.system",
       "path" : "DiagnosticReport.conclusionCode.coding.system",
       "min" : 1,
+      "fixedUri" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
       "mustSupport" : true
     },
     {
@@ -2355,11 +2347,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-repo
       },
       "min" : 0,
       "max" : "*",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://snomed.info/sct"
-        }]
-      },
       "mustSupport" : true
     },
     {
@@ -2372,6 +2359,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-repo
       "id" : "DiagnosticReport.conclusionCode:sct.coding.system",
       "path" : "DiagnosticReport.conclusionCode.coding.system",
       "min" : 1,
+      "fixedUri" : "http://snomed.info/sct",
       "mustSupport" : true
     },
     {
