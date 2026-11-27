@@ -3,7 +3,7 @@ Parent: $isik-basis-bericht-bundle
 Id: mii-pr-patho-bundle
 Title: "MII PR Patho Bundle"
 Description: """
-Dieses Profil **MII PR Patho Bundle** erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtbundle) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).
+Dieses Profil **MII PR Patho Bundle** erbt von [Profile - ISiK - BerichtBundle](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/StructureDefinition-ISiKBerichtBundle.html) aus der Spezifikation [ISiK - Stufe 6 (Basismodul 6.0.0)](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/index.html).
 Es dient der Aggregation aller Ressourcen, die Bestandteil des Dokumentes sind. Dabei sollte die erste Ressource im Bundle (Bundle.entry.resource) stets eine Composition sein.
 
 Das Profil verwendet `Bundle.type` = “document” und einen persistenten, eindeutigen `Bundle.identifier`. Dieser sollte dem `Composition.identifier` entsprechen, beispielsweise einer Eingangsnummer inklusive Versionsnummer. Weitere Slices von Bundle.entry sind ServiceRequest, Specimen, DiagnosticReport, Observation und Patient. Wobei die Slices ServiceRequest und Patient optional sind.
@@ -18,7 +18,7 @@ Das Bundle enthält eine Signatur.
 * ^description.extension[=].extension[=].valueCode = #en-US
 * ^description.extension[=].extension[+].url = "content"
 * ^description.extension[=].extension[=].valueString = """
-This **MII PR Patho Bundle** profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtbundle) of the [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5) specification.
+This **MII PR Patho Bundle** profile inherits from [Profile - ISiK - BerichtBundle](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/StructureDefinition-ISiKBerichtBundle.html) of the [ISiK - Stufe 6 (Basismodul 6.0.0)](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/index.html) specification.
 It serves to aggregate all resources that are part of the document. The first resource in the bundle (Bundle.entry.resource) should always be a Composition.
 
 The profile uses `Bundle.type` = “document” and a persistent, unique `Bundle.identifier`. This should correspond to the `Composition.identifier`, for example an accession number including a version number. Further slices of Bundle.entry are ServiceRequest, Specimen, DiagnosticReport, Observation and Patient. The slices ServiceRequest and Patient are optional.

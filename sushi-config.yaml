@@ -9,14 +9,14 @@ name: MII_IG_Modul_Patho
 language: de-DE
 status: active
 experimental: false
-version: 2027.0.0-ballot
+version: 2027.0.0
 date: "2026-09-01"
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 license: CC-BY-4.0
 jurisdiction: urn:iso:std:iso:3166#DE "Germany"
 packageId: de.medizininformatikinitiative.kerndatensatz.patho
-releaseLabel: ballot
+releaseLabel: release
 publisher:
   name: Medizininformatik-Initiative
   url: https://www.medizininformatik-initiative.de/

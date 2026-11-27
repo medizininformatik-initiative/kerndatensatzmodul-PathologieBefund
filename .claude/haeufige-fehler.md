@@ -72,8 +72,7 @@ aller Codes. Betroffen sind **nur ValueSet-Definitionen**, nie Instanzen —
 derselbe Code validiert in einer Beispielinstanz fehlerfrei. Trat gegen
 `tx.fhir.org` nicht auf.
 
-Codes zu entfernen wäre falsch. Dokumentiert in `input/ignoreWarnings.txt`,
-gemeldet an `hapifhir/org.hl7.fhir.core` (Text: `/tmp/issue/valueset-invalid-concept.md`).
+Codes zu entfernen wäre falsch. Dokumentiert in `input/ignoreWarnings.txt`.
 
 ---
 

@@ -1,6 +1,6 @@
 All elements of the core data set, adapted to the details and requirements of the use cases of the Medical Informatics Initiative, are described as FHIR StructureDefinitions. The necessity of each adaptation is explained in textual form below the respective profile.
 
-The work on the core data set specifications is based, wherever possible, on international standards and terminologies — in particular the [Anatomic Pathology Structured Report (APSR)](https://art-decor.org/art-decor/decor-templates--psr-?section=templates&id=1.3.6.1.4.1.19376.1.8.1.1.1&effectiveDate=2014-05-13T11:57:57&language=de-DE) and the [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/history.html). The adaptation to the conditions of the German healthcare system is achieved by using the [German base profiles of HL7 Deutschland](https://simplifier.net/basisprofil-de-r4).
+The work on the core data set specifications is based, wherever possible, on international standards and terminologies — in particular the [Anatomic Pathology Structured Report (APSR)](https://art-decor.org/art-decor/decor-templates--psr-?section=templates&id=1.3.6.1.4.1.19376.1.8.1.1.1&effectiveDate=2014-05-13T11:57:57&language=de-DE) and the [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/history.html). The adaptation to the conditions of the German healthcare system is achieved by using the [German base profiles of HL7 Deutschland](https://ig.fhir.de/basisprofile-de/).
 
 ### Overview
 

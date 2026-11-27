@@ -3,7 +3,7 @@ Parent: $mii-bio-specimencore
 Id: mii-pr-patho-specimen
 Title: "MII PR Patho Specimen"
 Description: """
-Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core)
+Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://medizininformatik-initiative.github.io/kerndatensatzmodul-biobank/2027.0.0-ballot/StructureDefinition-mii-pr-biobank-specimen-core.html)
 Ihm liegt das Domänen-Analyse-Modell von HL7 (HL7_DAM_SPECIMEN_R2_INFORM_2019APR) zugrunde. Dieses berücksichtigt insbesondere für die Pathologie das Rollenmodell von Specimen, welche sowohl Gegenstand als auch Produkt von Laborprozessen sind. Das Rootelement(Sample) ist ein klinisch gewonnenes Probenmaterial von einem Patienten, entspricht im Pathologie-Workflow einem Part. Tochterelemente sind Blöcke und Schnitte bzw. ein zytologisches Präparat. Die Kinderproben (Blöcke und Schnitte) sollten stets und mindestens ihre direkte Elternprobe über das Element Specimen.parent referenzieren.
 
 Proben werden in verschiedenen Profilen referenziert. Im "PathologieBefund" und in den "Einzelbeobachtungen" der Grouper für Makroskopie und Diagnostische Schlussfolgerungen sollten die Proben des Eingangs (Parts), in den "Einzelbeobachtungen" des Mikroskopie-Groupers die Proben der gefärbten Gewebsschnitt-Ebene referenziert werden.
@@ -17,7 +17,7 @@ Proben werden in verschiedenen Profilen referenziert. Im "PathologieBefund" und 
 * ^description.extension[=].extension[=].valueCode = #en-US
 * ^description.extension[=].extension[+].url = "content"
 * ^description.extension[=].extension[=].valueString = """
-This profile inherits from [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core)
+This profile inherits from [Profile - Specimen - Bioprobe - Core](https://medizininformatik-initiative.github.io/kerndatensatzmodul-biobank/2027.0.0-ballot/StructureDefinition-mii-pr-biobank-specimen-core.html)
 It is based on the HL7 Domain Analysis Model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR). This model, in particular for pathology, accounts for the role model of specimens, which are both the subject and the product of laboratory processes. The root element (Sample) is clinically obtained specimen material from a patient and corresponds to a Part in the pathology workflow. Child elements are blocks and slides, or a cytological preparation. The child specimens (blocks and slides) should always reference at least their direct parent specimen via the Specimen.parent element.
 
 Specimens are referenced in various profiles. In the "PathologyReport" and in the "individual observations" of the groupers for Macroscopy and Diagnostic Conclusions, the specimens of the accession (Parts) should be referenced; in the "individual observations" of the Microscopy grouper, the specimens of the stained tissue slide level should be referenced.
@@ -227,7 +227,7 @@ Description: "HE-stained slide from Prostate tru-cut biopsy sample (specimen)"
 Instance: mii-exa-patho-prostate-tru-cut-biopsy-sample
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -257,7 +257,7 @@ Usage: #example
 Instance: mii-exa-patho-prostate-biopsy-block
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -285,7 +285,7 @@ Usage: #example
 Instance: mii-exa-patho-prostate-biopsy-schnitt-HE
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -315,7 +315,7 @@ Usage: #example
 Instance: mii-exa-patho-prostate-biopsy-schnitt-p63
 InstanceOf: mii-pr-patho-specimen
 Usage: #example
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
 * status = #available
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative skipped for better readability</b></p></div>"
@@ -426,7 +426,7 @@ InstanceOf: mii-pr-patho-specimen
 Usage: #example
 Title: "MII EXA Patho Prostate Resection Sample"
 Description: "Radikalprostatektomie-Praeparat als Einsendeprobe (Part)"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
 * identifier[+]
   * type = $v2-0203#PLAC
   * system = "https://urologie.example-hospital.de/fhir/specimen/placer"
@@ -487,7 +487,7 @@ InstanceOf: mii-pr-patho-specimen
 Usage: #example
 Title: "MII EXA Patho Breast Resection Sample"
 Description: "BET-Exzisionspraeparat der linken Mamma als Einsendeprobe (Part), mit Draht- und Fadenmarkierungen"
-* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0"
 * identifier[+]
   * type = $v2-0203#PLAC
   * system = "https://senologie.example-hospital.de/fhir/specimen/placer"

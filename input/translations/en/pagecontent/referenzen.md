@@ -2,7 +2,7 @@ The information model of the module Pathology Report contains references to the 
 
 * [IHE Anatomic Pathology Structured Report (APSR)](https://wiki.ihe.net/index.php/Anatomic_Pathology_Structured_Report)
 * [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/history.html)
-* [ISiK specification](https://simplifier.net/packages/de.gematik.isik-basismodul/4.0.1)
+* [ISiK specification](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/index.html)
 * [HL7 Europe Laboratory Report](https://hl7.eu/fhir/laboratory/)
 
 ### Reference implementations

@@ -43,7 +43,7 @@ For the data sets *patient*, *encounter* and *managing organization*, the MII mo
 ------
 
 ### Specimen
-As the basis for the specification of the *specimen*, the MII profile [Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core) from the module [Biobank](https://simplifier.net/medizininformatikinitiative-modulbiobank) is used.
+As the basis for the specification of the *specimen*, the MII profile [Bioprobe - Core](https://medizininformatik-initiative.github.io/kerndatensatzmodul-biobank/2027.0.0-ballot/StructureDefinition-mii-pr-biobank-specimen-core.html) from the module [Biobank](https://medizininformatik-initiative.github.io/kerndatensatzmodul-biobank/) is used.
 
 | Logical data model | Description |
 |--|--|

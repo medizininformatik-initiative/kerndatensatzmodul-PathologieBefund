@@ -2,7 +2,7 @@ Das Informationsmodell zum Modul Pathologie-Befund enthält Referenzen zu folgen
 
 * [IHE Anatomic Pathology Structured Report (APSR)](https://wiki.ihe.net/index.php/Anatomic_Pathology_Structured_Report)
 * [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/history.html)
-* [ISiK Spezifikation](https://simplifier.net/packages/de.gematik.isik-basismodul/4.0.1)
+* [ISiK Spezifikation](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/index.html)
 * [HL7 Europe Laboratory Report](https://hl7.eu/fhir/laboratory/)
 
 ### Referenzimplementierungen

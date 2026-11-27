@@ -15,7 +15,7 @@ This IG is for FHIR version 4.0.1, while the package 'hl7.fhir.uv.subscriptions-
 # ValueSet.compose.include.concept-Eintraege, nie Instanzen - derselbe Code 434464009
 # validiert in Specimen/mii-exa-patho-prostate-biopsy-block fehlerfrei. Gegen
 # tx.fhir.org trat die Meldung nicht auf. Codes zu entfernen waere falsch, sie sind
-# gueltig und werden gebraucht; gemeldet an hapifhir/org.hl7.fhir.core.
+# gueltig und werden gebraucht.
 Der Code 100969-5 ist im System http://loinc.org nicht gültig
 Der Code 11526-1 ist im System http://loinc.org nicht gültig
 Der Code 11529-5 ist im System http://loinc.org nicht gültig

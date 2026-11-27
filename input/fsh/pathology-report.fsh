@@ -6,7 +6,7 @@ Parent: DiagnosticReport
 Id: mii-pr-patho-report
 Title: "MII PR Patho Report"
 Description: """
-Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). 
+Das Profil **MII PR Patho Report** der Ressource [DiagnosticReport](http://hl7.org/fhir/R4/diagnosticreport.html) bildet den kompletten Befundbericht ab, ohne Dokumenteigenschaften zu besitzen (siehe **MII-PR-Patho-Composition**). 
 
 Es stellt hochstrukturierte Untersuchungsergebnisse einschließlich menschenlesbarer Texte (Narrative) dar, die zu „Panels“ von Einzeluntersuchungen gehören. Es sammelt und organisiert PathologyFindings für auch komplexe Einzelergebnisse und kann weitere Informationen zum Untersuchungspanel, z.B. auch klinische Informationen und Probeninformationen referenzieren. Ein vollständiger formatierter Befundtext sollte Teil des **MII PR Patho Report** sein. Ein vollständiges Beispiel eines Pathologiebefundberichts mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
  
@@ -32,7 +32,7 @@ In untenstehender Tabelle sind Elemente mit * markiert, die im Profil MII PR Pat
 * ^description.extension[=].extension[=].valueCode = #en-US
 * ^description.extension[=].extension[+].url = "content"
 * ^description.extension[=].extension[=].valueString = """
-The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/diagnosticreport.html) resource represents the complete report without possessing document properties (see **MII-PR-Patho-Composition**).
+The **MII PR Patho Report** profile of the [DiagnosticReport](http://hl7.org/fhir/R4/diagnosticreport.html) resource represents the complete report without possessing document properties (see **MII-PR-Patho-Composition**).
 
 It represents highly structured examination results including human-readable texts (narratives) that belong to "panels" of individual examinations. It collects and organizes PathologyFindings for even complex individual results and can reference further information on the examination panel, e.g. also clinical information and specimen information. A complete formatted report text should be part of the **MII PR Patho Report**. A complete example of a pathology report with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
 
@@ -310,7 +310,7 @@ Parent: $isik-basis-bericht-subsysteme
 Id: mii-pr-patho-composition
 Title: "MII PR Patho Composition"
 Description: """
-Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5). 
+Dieses Profil erbt von [Profile - ISiK - BerichtSubsysteme](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/StructureDefinition-ISiKBerichtSubSysteme.html) aus der Spezifikation [ISiK - Stufe 6 (Basismodul 6.0.0)](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/index.html). 
 
 Das Profil **MII PR Patho Composition** fasst als Profil einer Composition Ressource mit speziellen Constraints für ClinicalDocuments die Ressourcen für einen kompletten, textzentrierten Pathologiebefundbericht mit den Eigenschaften eines klinischen Dokuments zusammen. Ein vollständiges Beispiel einer Composition mit Narrativen findet sich im [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html). 
 Dieses Profil ist das erste Entry in einem Bundle des `Bundle.type` “document”; Aufbau und Signatur des Bundles sind im Profil [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) beschrieben.
@@ -325,7 +325,7 @@ Neben dem Diagnostischen Report (`patho-diagnostic-report`) und einem oder mehre
 * ^description.extension[=].extension[=].valueCode = #en-US
 * ^description.extension[=].extension[+].url = "content"
 * ^description.extension[=].extension[=].valueString = """
-This profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtsubsysteme) from the specification [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).
+This profile inherits from [Profile - ISiK - BerichtSubsysteme](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/StructureDefinition-ISiKBerichtSubSysteme.html) from the specification [ISiK - Stufe 6 (Basismodul 6.0.0)](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/index.html).
 
 As a profile of a Composition resource with special constraints for ClinicalDocuments, the **MII PR Patho Composition** profile aggregates the resources for a complete, text-centered pathology report with the properties of a clinical document. A complete example of a Composition with narratives can be found in the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html).
 This profile is the first entry in a Bundle of `Bundle.type` "document"; the structure and signature of the Bundle are described in the [MII PR Patho Bundle](StructureDefinition-mii-pr-patho-bundle.html) profile.
@@ -599,7 +599,7 @@ Description: "Example for MII_PR_Patho_Report"
 Instance: mii-exa-patho-report
 InstanceOf: mii-pr-patho-report
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0"
 * identifier[Set-ID].type = $v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].value = "E21.12345"
 * identifier[Set-ID].system = "https://pathologie.klinikum-karlsruhe.de/fhir/fn/befundbericht"
@@ -709,7 +709,7 @@ Description: "Example for an MII_PR_Patho_Composition"
 Instance: mii-exa-patho-composition
 InstanceOf: mii-pr-patho-composition
 Usage: #example
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-composition|2027.0.0"
 * text.div = "
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
   <div id=\"befund-titel\">

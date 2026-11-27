@@ -43,7 +43,7 @@ Für die Datensätze *Patient*, *Fall* und *Verwaltende Organisation* werden die
 ------
 
 ### Probe
-Als Basis für die Spezifikation der *Probe* wird das MII-Profil [Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core), aus dem Modul [Biobank](https://simplifier.net/medizininformatikinitiative-modulbiobank) genutzt.
+Als Basis für die Spezifikation der *Probe* wird das MII-Profil [Bioprobe - Core](https://medizininformatik-initiative.github.io/kerndatensatzmodul-biobank/2027.0.0-ballot/StructureDefinition-mii-pr-biobank-specimen-core.html), aus dem Modul [Biobank](https://medizininformatik-initiative.github.io/kerndatensatzmodul-biobank/) genutzt.
 
 | Logisches Datenmodell | Beschreibung |
 |--|--|
