@@ -68,7 +68,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-base
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T12:05:56+00:00",
+  "date" : "2026-11-27T15:16:10+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -170,6 +170,93 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-base
       "id" : "Observation.meta.profile",
       "path" : "Observation.meta.profile",
       "mustSupport" : true
+    },
+    {
+      "id" : "Observation.extension",
+      "path" : "Observation.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Observation.extension:bodyStructure",
+      "path" : "Observation.extension",
+      "sliceName" : "bodyStructure",
+      "short" : "Koerperstruktur",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Koerperstruktur"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Body structure"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Verweis auf eine BodyStructure-Ressource mit der detaillierten Lokalisation",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de-DE"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Verweis auf eine BodyStructure-Ressource mit der detaillierten Lokalisation"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        },
+        {
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en-US"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Reference to a BodyStructure resource carrying the detailed location"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.bodyStructure"]
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.extension:bodyStructure.extension",
+      "path" : "Observation.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Observation.extension:bodyStructure.value[x]",
+      "path" : "Observation.extension.value[x]",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/BodyStructure"]
+      }]
     },
     {
       "id" : "Observation.identifier",

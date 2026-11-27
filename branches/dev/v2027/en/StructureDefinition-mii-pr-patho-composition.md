@@ -91,7 +91,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-comp
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T12:05:56+00:00",
+  "date" : "2026-11-27T15:16:10+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

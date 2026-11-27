@@ -73,6 +73,9 @@
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition": [
       "DiagnosticReport"
     ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.bodyStructure": [
+      "Observation"
+    ],
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite": [
       "Specimen.collection.bodySite"
     ],

@@ -3,21 +3,21 @@
 ## Pages
 
 * [Kerndatensatz Modul Pathologie-Befund](de/index.md)
-* [Hinweise zur Übersetzung](de/translationinfo.md)
-* [Beschreibung des Moduls](de/beschreibung.md)
-* [Datensätze](de/datensaetze.md)
-* [Versionierung](de/version-history.md)
 * [Downloads](de/downloads.md)
-* [Szenarien](de/szenarien.md)
 * [Terminologien](de/terminologien.md)
-* [Referenzen](de/referenzen.md)
-* [UML](de/uml.md)
-* [Anwendungsfälle und Informationsmodell](de/anwendungsfaelle.md)
-* [Hierarchie und Workflow](de/hierarchie.md)
-* [Artefaktübersicht](de/artifacts.md)
-* [Changelog](de/changes.md)
 * [Profile](de/profile.md)
+* [Hierarchie und Workflow](de/hierarchie.md)
+* [Beschreibung des Moduls](de/beschreibung.md)
+* [Referenzen](de/referenzen.md)
+* [Hinweise zur Übersetzung](de/translationinfo.md)
+* [Szenarien](de/szenarien.md)
+* [Anwendungsfälle und Informationsmodell](de/anwendungsfaelle.md)
+* [Artefaktübersicht](de/artifacts.md)
+* [UML](de/uml.md)
+* [Changelog](de/changes.md)
+* [Versionierung](de/version-history.md)
 * [Kontext und Bezüge](de/kontext.md)
+* [Datensätze](de/datensaetze.md)
 
 ## Resources
 
