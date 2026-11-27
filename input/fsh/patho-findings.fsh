@@ -6,7 +6,7 @@ Parent: mii-pr-patho-base-observation
 Id: mii-pr-patho-finding
 Title: "MII PR Patho Finding"
 Description: """
-Das Profil **MII PR Patho Finding** der Ressource Observation bildet als `hasMember`- oder `derivedFrom`-Referenz für ein Profil vom Typ [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html) atomare kodierte Untersuchungsergebnisse ab. Dieses Profil kann verschachtelte Konstrukte bilden, um „Child Observations“ zu erfassen, die eine einzelne Observation weiter spezifizieren. PathoFindings können vom Pathologie-Informationssystem über Questionnaire- / QuestionnaireResponse-Resourcen (siehe [HL7-Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/)) bereitgestellt werden, bzw. werden QuestionnaireResponse Ressourcen referenziert. Jedes **MII PR Patho Finding** sollte die Probe referenzieren, an der die Beobachtung vorgenommen wurde.
+Das Profil **MII PR Patho Finding** der Ressource Observation bildet als `hasMember`- oder `derivedFrom`-Referenz für ein Profil vom Typ [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html) atomare kodierte Untersuchungsergebnisse ab. Dieses Profil kann verschachtelte Konstrukte bilden, um „Child Observations“ zu erfassen, die eine einzelne Observation weiter spezifizieren. PathoFindings können vom Pathologie-Informationssystem über Questionnaire- / QuestionnaireResponse-Resourcen (siehe [HL7-Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/)) bereitgestellt werden, bzw. werden QuestionnaireResponse Ressourcen referenziert. Jedes **MII PR Patho Finding** sollte die Probe referenzieren, an der die Beobachtung vorgenommen wurde.
 
 **Sonderfall:**
 
@@ -23,7 +23,7 @@ Für spezifische Observation-Konstrukte, speziell aus dem Bereich des onkologisc
 * ^description.extension[=].extension[=].valueCode = #en-US
 * ^description.extension[=].extension[+].url = "content"
 * ^description.extension[=].extension[=].valueString = """
-The **MII PR Patho Finding** profile of the Observation resource represents atomic coded examination results as a `hasMember` or `derivedFrom` reference for a profile of type [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html). This profile can form nested constructs to capture "child observations" that further specify a single observation. PathoFindings may be provided by the pathology information system via Questionnaire / QuestionnaireResponse resources (see [HL7 Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/STU3/)), or QuestionnaireResponse resources are referenced. Each **MII PR Patho Finding** should reference the specimen on which the observation was made.
+The **MII PR Patho Finding** profile of the Observation resource represents atomic coded examination results as a `hasMember` or `derivedFrom` reference for a profile of type [MII PR Patho Section Grouper](StructureDefinition-mii-pr-patho-section-grouper.html). This profile can form nested constructs to capture "child observations" that further specify a single observation. PathoFindings may be provided by the pathology information system via Questionnaire / QuestionnaireResponse resources (see [HL7 Implementation Guide Structured Data Capture](http://hl7.org/fhir/uv/sdc/)), or QuestionnaireResponse resources are referenced. Each **MII PR Patho Finding** should reference the specimen on which the observation was made.
 
 **Special case:**
 

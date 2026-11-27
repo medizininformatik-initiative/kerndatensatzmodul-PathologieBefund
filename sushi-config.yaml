@@ -29,7 +29,7 @@ dependencies:
   de.medizininformatikinitiative.kerndatensatz.biobank: 2027.0.0-ballot
   # de.medizininformatikinitiative.kerndatensatz.diagnose: 2026.0.x
   de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot
-  de.gematik.isik: 5.1.2
+  de.gematik.isik: 6.0.0
   # Cross-Version-Extensions R5 -> R4 (BodyStructure an Specimen.collection.bodySite, #259;
   # DiagnosticReport.composition zur Angleichung an HL7 EU Lab Report)
   hl7.fhir.uv.xver-r5.r4: 0.1.0

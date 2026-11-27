@@ -1,3 +1,11 @@
+### 2027.0.0
+- `feature` Base Observation (inherited by Section Grouper and Finding): R5 extension `Observation.bodyStructure` as a reference to BodyStructure (#271)
+- `feature` DiagnosticReport.conclusionCode: slices per code system (ICD-10-GM, ICD-O-3, SNOMED CT)
+- `changed` Composition.section:patho-diagnostic-report 1..* → 0..*; new invariant `mii-patho-comp-1`: section Pathology Diagnostic Report or Diagnostic Conclusion is mandatory
+- `changed` Composition.relatesTo.targetIdentifier as Must Support (e.g. prior report from a legacy system)
+- `changed` Dependency ISiK 5.1.2 → 6.0.0 (parent of Composition, Bundle and Composition.author)
+- `documentation` Finding: link to the HL7 IG Structured Data Capture made version-independent
+
 ### 2027.0.0-ballot.rc1
 - `documentation` References to the [Prostate Cancer Spec IG](https://bih-cei.github.io/ProstateCancerSpec/index.html) added as a reference example
 - `documentation` References to originalText/narrativeLink removed from the section grouper description
