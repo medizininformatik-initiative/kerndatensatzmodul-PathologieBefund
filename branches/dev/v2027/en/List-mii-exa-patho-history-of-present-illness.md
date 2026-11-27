@@ -1,4 +1,4 @@
-# MII EXA Patho History Of Present Illness - MII IG Modul Patho v2027.0.0-ballot
+# MII EXA Patho History Of Present Illness - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho History Of Present Illness](StructureDefinition-mii-pr-patho-history-of-present-illness.md) version: 2027.0.0-ballot
+Profile: [MII PR Patho History Of Present Illness](StructureDefinition-mii-pr-patho-history-of-present-illness.md) version: 2027.0.0
 
 | | | |
 | :--- | :--- | :--- |
@@ -30,7 +30,7 @@ Profile: [MII PR Patho History Of Present Illness](StructureDefinition-mii-pr-pa
   "resourceType" : "List",
   "id" : "mii-exa-patho-history-of-present-illness",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness|2027.0.0-ballot"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness|2027.0.0"]
   },
   "status" : "current",
   "mode" : "snapshot",

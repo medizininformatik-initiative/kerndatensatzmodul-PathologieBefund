@@ -1,4 +1,4 @@
-# MII VS Patho Composition Type [Snomed CT] - MII IG Modul Patho v2027.0.0-ballot
+# MII VS Patho Composition Type [Snomed CT] - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct | *Version*:2027.0.0-ballot |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct | *Version*:2027.0.0 |
 | Active Stand: 2026-11-27 | *Maschinenlesbarer Name*:MII_VS_Patho_Composition_Type_SNOMED_CT |
 
  
@@ -37,7 +37,7 @@ ValueSet for the types a pathology Composition can have
   "resourceType" : "ValueSet",
   "id" : "mii-vs-patho-composition-type-snomed-ct",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0",
   "name" : "MII_VS_Patho_Composition_Type_SNOMED_CT",
   "_name" : {
     "extension" : [{
@@ -67,7 +67,7 @@ ValueSet for the types a pathology Composition can have
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T17:51:17+00:00",
+  "date" : "2026-11-27T19:20:50+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

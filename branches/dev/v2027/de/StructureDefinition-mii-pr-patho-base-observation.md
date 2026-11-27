@@ -1,4 +1,4 @@
-# MII PR Patho Base Observation - MII IG Modul Patho v2027.0.0-ballot
+# MII PR Patho Base Observation - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation | *Version*:2027.0.0-ballot |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation | *Version*:2027.0.0 |
 | Active Stand: 2026-11-27 | *Maschinenlesbarer Name*:MII_PR_Patho_Base_Observation |
 
  
@@ -130,7 +130,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-base-observation",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-base-observation",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0",
   "name" : "MII_PR_Patho_Base_Observation",
   "_name" : {
     "extension" : [{
@@ -160,7 +160,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T17:51:17+00:00",
+  "date" : "2026-11-27T19:20:50+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

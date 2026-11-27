@@ -1,4 +1,4 @@
-# MII PR Patho History Of Present Illness - MII IG Modul Patho v2027.0.0-ballot
+# MII PR Patho History Of Present Illness - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness | *Version*:2027.0.0 |
 | Active as of 2026-11-27 | *Computable Name*:MII_PR_Patho_History_Of_Present_Illness |
 
  
@@ -39,7 +39,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-hist
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-history-of-present-illness",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-history-of-present-illness",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0",
   "name" : "MII_PR_Patho_History_Of_Present_Illness",
   "_name" : {
     "extension" : [{
@@ -69,7 +69,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-hist
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T17:51:17+00:00",
+  "date" : "2026-11-27T19:20:50+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="99e994e7-d5e8-40cc-a9fa-895b75f4ed85"/>
+  <id value="e45ae686-8e0c-4147-afee-a39f7e6c4f25"/>
   <meta>
-    <lastUpdated value="2026-11-27T17:51:17.249+00:00"/>
+    <lastUpdated value="2026-11-27T19:20:50.555+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -21056,7 +21056,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_All_LOINC">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -21078,7 +21078,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -21087,8 +21087,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:c20e1126-31d8-47f0-a245-40a92895fdf0"/>
-          <timestamp value="2026-11-27T17:55:21+00:00"/>
+          <identifier value="urn:uuid:8919c6e9-700a-46a5-b7ca-1ad6ab376331"/>
+          <timestamp value="2026-11-27T19:25:31+00:00"/>
           <total value="257269"/>
           <offset value="0"/>
           <parameter>
@@ -46195,7 +46195,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_All_LOINC">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -46217,7 +46217,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -46226,8 +46226,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:c20e1126-31d8-47f0-a245-40a92895fdf0"/>
-          <timestamp value="2026-11-27T17:55:21+00:00"/>
+          <identifier value="urn:uuid:8919c6e9-700a-46a5-b7ca-1ad6ab376331"/>
+          <timestamp value="2026-11-27T19:25:31+00:00"/>
           <total value="257269"/>
           <offset value="0"/>
           <parameter>
@@ -71334,7 +71334,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_All_LOINC">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -71356,7 +71356,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -71365,8 +71365,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:aefc2730-b93d-40d9-bb1b-3f1e9cffb467"/>
-          <timestamp value="2026-11-27T17:55:23+00:00"/>
+          <identifier value="urn:uuid:692d0cf5-9c3f-44b5-a946-3af87c67731e"/>
+          <timestamp value="2026-11-27T19:25:32+00:00"/>
           <total value="257269"/>
           <offset value="0"/>
           <parameter>
@@ -96459,7 +96459,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Collection_Method_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -96481,7 +96481,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -96490,8 +96490,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:66a6868b-2c9b-48cd-abc5-5a677c27de21"/>
-          <timestamp value="2026-11-27T17:55:44+00:00"/>
+          <identifier value="urn:uuid:9481aa2c-205a-4551-af20-7b7698e26258"/>
+          <timestamp value="2026-11-27T19:26:00+00:00"/>
           <total value="11024"/>
           <offset value="0"/>
           <parameter>
@@ -120562,7 +120562,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Collection_Method_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -120584,7 +120584,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -120593,8 +120593,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:66a6868b-2c9b-48cd-abc5-5a677c27de21"/>
-          <timestamp value="2026-11-27T17:55:44+00:00"/>
+          <identifier value="urn:uuid:9481aa2c-205a-4551-af20-7b7698e26258"/>
+          <timestamp value="2026-11-27T19:26:00+00:00"/>
           <total value="11024"/>
           <offset value="0"/>
           <parameter>
@@ -144665,7 +144665,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Collection_Method_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -144687,7 +144687,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -144696,8 +144696,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:408cd523-2c2c-4cd2-ac6a-3a603e6aae81"/>
-          <timestamp value="2026-11-27T17:55:44+00:00"/>
+          <identifier value="urn:uuid:c3e42c7f-14c6-41d0-ad83-d266fe208ce0"/>
+          <timestamp value="2026-11-27T19:26:01+00:00"/>
           <total value="11024"/>
           <offset value="0"/>
           <parameter>
@@ -149835,7 +149835,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Composition_Type_KDL">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -149857,7 +149857,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -149866,8 +149866,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:682d30e4-3f39-4ddc-95a0-bb2c060ca464"/>
-          <timestamp value="2026-11-27T17:55:45+00:00"/>
+          <identifier value="urn:uuid:d4531989-783c-4856-b7de-68713af1fd62"/>
+          <timestamp value="2026-11-27T19:26:01+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -150012,7 +150012,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Composition_Type_KDL">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -150034,7 +150034,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -150043,8 +150043,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:682d30e4-3f39-4ddc-95a0-bb2c060ca464"/>
-          <timestamp value="2026-11-27T17:55:45+00:00"/>
+          <identifier value="urn:uuid:d4531989-783c-4856-b7de-68713af1fd62"/>
+          <timestamp value="2026-11-27T19:26:01+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -150189,7 +150189,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Composition_Type_KDL">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -150211,7 +150211,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -150220,8 +150220,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:acb487d1-53ef-48af-8a24-31450e181cf5"/>
-          <timestamp value="2026-11-27T17:55:45+00:00"/>
+          <identifier value="urn:uuid:e571b801-14aa-4ea0-9636-11832cb2c711"/>
+          <timestamp value="2026-11-27T19:26:01+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -150399,7 +150399,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Composition_Type_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -150421,7 +150421,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -150430,8 +150430,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:abe0d3d8-6a7e-4c32-b9af-9ca7c1b96286"/>
-          <timestamp value="2026-11-27T17:55:45+00:00"/>
+          <identifier value="urn:uuid:703d15d3-a35a-44ba-a61d-a40c6f82410f"/>
+          <timestamp value="2026-11-27T19:26:01+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -150622,7 +150622,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Composition_Type_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -150644,7 +150644,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -150653,8 +150653,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:abe0d3d8-6a7e-4c32-b9af-9ca7c1b96286"/>
-          <timestamp value="2026-11-27T17:55:45+00:00"/>
+          <identifier value="urn:uuid:703d15d3-a35a-44ba-a61d-a40c6f82410f"/>
+          <timestamp value="2026-11-27T19:26:01+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -150845,7 +150845,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Composition_Type_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -150867,7 +150867,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -150876,8 +150876,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a2439634-5440-4724-a4c6-a0a33cb3a9cb"/>
-          <timestamp value="2026-11-27T17:55:45+00:00"/>
+          <identifier value="urn:uuid:2e6d41da-79b3-49b3-b240-c69d6e19974f"/>
+          <timestamp value="2026-11-27T19:26:02+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -151173,7 +151173,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Container_Type_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -151195,7 +151195,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -151204,8 +151204,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0ba5488a-32ca-4272-bce8-0ebed6251a3c"/>
-          <timestamp value="2026-11-27T17:55:45+00:00"/>
+          <identifier value="urn:uuid:b554ebe8-97b5-46e1-8c7d-ba98ca66ba36"/>
+          <timestamp value="2026-11-27T19:26:02+00:00"/>
           <total value="10"/>
           <offset value="0"/>
           <parameter>
@@ -151516,7 +151516,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Container_Type_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -151538,7 +151538,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -151547,8 +151547,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0ba5488a-32ca-4272-bce8-0ebed6251a3c"/>
-          <timestamp value="2026-11-27T17:55:45+00:00"/>
+          <identifier value="urn:uuid:b554ebe8-97b5-46e1-8c7d-ba98ca66ba36"/>
+          <timestamp value="2026-11-27T19:26:02+00:00"/>
           <total value="10"/>
           <offset value="0"/>
           <parameter>
@@ -151859,7 +151859,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Container_Type_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -151881,7 +151881,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -151890,8 +151890,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:84f978a9-eb50-4e71-8849-c0f06c8d7cba"/>
-          <timestamp value="2026-11-27T17:55:46+00:00"/>
+          <identifier value="urn:uuid:9022a41e-cda8-4c01-8b5b-b70f8109d29d"/>
+          <timestamp value="2026-11-27T19:26:03+00:00"/>
           <total value="10"/>
           <offset value="0"/>
           <parameter>
@@ -152112,7 +152112,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Media_Modality_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -152134,7 +152134,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -152143,8 +152143,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:b7be463c-c912-4fc2-86a8-8c0a6048a7de"/>
-          <timestamp value="2026-11-27T17:55:46+00:00"/>
+          <identifier value="urn:uuid:2bf34bb0-9015-4eb6-8f42-e66610a25e3f"/>
+          <timestamp value="2026-11-27T19:26:03+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -152335,7 +152335,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Media_Modality_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -152357,7 +152357,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -152366,8 +152366,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:b7be463c-c912-4fc2-86a8-8c0a6048a7de"/>
-          <timestamp value="2026-11-27T17:55:46+00:00"/>
+          <identifier value="urn:uuid:2bf34bb0-9015-4eb6-8f42-e66610a25e3f"/>
+          <timestamp value="2026-11-27T19:26:03+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -152558,7 +152558,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Media_Modality_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -152580,7 +152580,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -152589,8 +152589,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:aade5d86-5a11-4537-b97f-c17246c966d8"/>
-          <timestamp value="2026-11-27T17:55:46+00:00"/>
+          <identifier value="urn:uuid:76d0f841-a575-42dd-8f21-59644b3597a2"/>
+          <timestamp value="2026-11-27T19:26:03+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -172686,7 +172686,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Problem_List_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -172708,7 +172708,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -172717,8 +172717,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a47ac185-6093-4feb-b55a-cfe4c1092f54"/>
-          <timestamp value="2026-11-27T17:55:36+00:00"/>
+          <identifier value="urn:uuid:39715b61-bda7-429d-9f3d-08cc247e86ce"/>
+          <timestamp value="2026-11-27T19:25:51+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -196792,7 +196792,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Problem_List_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -196814,7 +196814,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -196823,8 +196823,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a47ac185-6093-4feb-b55a-cfe4c1092f54"/>
-          <timestamp value="2026-11-27T17:55:36+00:00"/>
+          <identifier value="urn:uuid:39715b61-bda7-429d-9f3d-08cc247e86ce"/>
+          <timestamp value="2026-11-27T19:25:51+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -220898,7 +220898,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Problem_List_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -220920,7 +220920,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -220929,8 +220929,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8b8f9cdf-aba1-480a-ae78-ddf19c6bb5d0"/>
-          <timestamp value="2026-11-27T17:55:40+00:00"/>
+          <identifier value="urn:uuid:f5e31b28-939e-40a9-976a-15a4c67a5f12"/>
+          <timestamp value="2026-11-27T19:25:55+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -246004,7 +246004,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Processing_Procedure_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -246026,7 +246026,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -246035,8 +246035,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:e98701ed-d8b0-417d-9026-ead7982079af"/>
-          <timestamp value="2026-11-27T17:55:46+00:00"/>
+          <identifier value="urn:uuid:7e42efa7-3c3e-452f-a741-95c333d99ac7"/>
+          <timestamp value="2026-11-27T19:26:03+00:00"/>
           <total value="5096"/>
           <offset value="0"/>
           <parameter>
@@ -270107,7 +270107,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Processing_Procedure_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -270129,7 +270129,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -270138,8 +270138,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:e98701ed-d8b0-417d-9026-ead7982079af"/>
-          <timestamp value="2026-11-27T17:55:46+00:00"/>
+          <identifier value="urn:uuid:7e42efa7-3c3e-452f-a741-95c333d99ac7"/>
+          <timestamp value="2026-11-27T19:26:03+00:00"/>
           <total value="5096"/>
           <offset value="0"/>
           <parameter>
@@ -294210,7 +294210,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Processing_Procedure_SNOMED_CT">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -294232,7 +294232,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -294241,8 +294241,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:665c07cb-9876-4499-9273-997cd9cdd7ec"/>
-          <timestamp value="2026-11-27T17:55:47+00:00"/>
+          <identifier value="urn:uuid:d40622c7-149a-4450-91e3-fb5fd8c78fee"/>
+          <timestamp value="2026-11-27T19:26:04+00:00"/>
           <total value="5096"/>
           <offset value="0"/>
           <parameter>
@@ -299359,7 +299359,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Report_Category_HL7">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -299382,7 +299382,7 @@
         </title>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -299391,8 +299391,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:145cea25-6b75-4b7b-94dc-4f64599a3425"/>
-          <timestamp value="2026-11-27T17:55:47+00:00"/>
+          <identifier value="urn:uuid:97951898-6da1-4daf-8ee4-7eecab48014c"/>
+          <timestamp value="2026-11-27T19:26:04+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -299511,7 +299511,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Report_Category_HL7">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -299534,7 +299534,7 @@
         </title>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -299543,8 +299543,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:145cea25-6b75-4b7b-94dc-4f64599a3425"/>
-          <timestamp value="2026-11-27T17:55:47+00:00"/>
+          <identifier value="urn:uuid:97951898-6da1-4daf-8ee4-7eecab48014c"/>
+          <timestamp value="2026-11-27T19:26:04+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -299663,7 +299663,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Report_Category_HL7">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -299686,7 +299686,7 @@
         </title>
         <status value="active"/>
         <experimental value="false"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -299695,8 +299695,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:43e6f9ae-3472-4d3d-a796-f58ffd397e65"/>
-          <timestamp value="2026-11-27T17:55:47+00:00"/>
+          <identifier value="urn:uuid:6ff02a27-3b92-48a6-a9c8-dc23316378f5"/>
+          <timestamp value="2026-11-27T19:26:04+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -299940,7 +299940,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Report_Code_LOINC">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -299962,7 +299962,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -299971,8 +299971,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:71c02c87-4b5b-4c8d-b290-a4bd300c6681"/>
-          <timestamp value="2026-11-27T17:55:47+00:00"/>
+          <identifier value="urn:uuid:23a7fbf2-bfac-4f78-b96d-f46953cf1498"/>
+          <timestamp value="2026-11-27T19:26:04+00:00"/>
           <total value="8"/>
           <offset value="0"/>
           <parameter>
@@ -300250,7 +300250,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Report_Code_LOINC">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -300272,7 +300272,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -300281,8 +300281,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:71c02c87-4b5b-4c8d-b290-a4bd300c6681"/>
-          <timestamp value="2026-11-27T17:55:47+00:00"/>
+          <identifier value="urn:uuid:23a7fbf2-bfac-4f78-b96d-f46953cf1498"/>
+          <timestamp value="2026-11-27T19:26:04+00:00"/>
           <total value="8"/>
           <offset value="0"/>
           <parameter>
@@ -300560,7 +300560,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Report_Code_LOINC">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -300582,7 +300582,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -300591,8 +300591,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:61ce9ae0-33f9-4ee2-a22a-c1d0a608ffc2"/>
-          <timestamp value="2026-11-27T17:55:47+00:00"/>
+          <identifier value="urn:uuid:ccf296a3-b89e-4bfb-81ad-1e6774f0885e"/>
+          <timestamp value="2026-11-27T19:26:05+00:00"/>
           <total value="8"/>
           <offset value="0"/>
           <parameter>
@@ -300818,7 +300818,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Section_Types_LOINC">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -300840,7 +300840,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -300849,8 +300849,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:94f92235-34a6-4964-ab0c-79ac0ed161e0"/>
-          <timestamp value="2026-11-27T17:55:29+00:00"/>
+          <identifier value="urn:uuid:b46423bc-2a50-44b3-8523-1fdcd9382619"/>
+          <timestamp value="2026-11-27T19:25:42+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -301056,7 +301056,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Section_Types_LOINC">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -301078,7 +301078,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -301087,8 +301087,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:94f92235-34a6-4964-ab0c-79ac0ed161e0"/>
-          <timestamp value="2026-11-27T17:55:29+00:00"/>
+          <identifier value="urn:uuid:b46423bc-2a50-44b3-8523-1fdcd9382619"/>
+          <timestamp value="2026-11-27T19:25:42+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -301294,7 +301294,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Section_Types_LOINC">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -301316,7 +301316,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -301325,8 +301325,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:3d921d72-2c11-4bcc-b869-1c82eb99dbce"/>
-          <timestamp value="2026-11-27T17:55:33+00:00"/>
+          <identifier value="urn:uuid:00e081b5-8828-438b-9070-38f6216710fc"/>
+          <timestamp value="2026-11-27T19:25:47+00:00"/>
           <total value="5"/>
           <offset value="0"/>
           <parameter>
@@ -321436,7 +321436,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Service_Request_Code">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -321458,7 +321458,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -321467,8 +321467,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:236c79d0-4d35-4ee0-988e-df31c82fc45e"/>
-          <timestamp value="2026-11-27T17:55:48+00:00"/>
+          <identifier value="urn:uuid:2bc698c2-ba46-4794-9a3b-ce4298b6f928"/>
+          <timestamp value="2026-11-27T19:26:05+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -345560,7 +345560,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Service_Request_Code">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -345582,7 +345582,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -345591,8 +345591,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:236c79d0-4d35-4ee0-988e-df31c82fc45e"/>
-          <timestamp value="2026-11-27T17:55:48+00:00"/>
+          <identifier value="urn:uuid:2bc698c2-ba46-4794-9a3b-ce4298b6f928"/>
+          <timestamp value="2026-11-27T19:26:05+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -369684,7 +369684,7 @@
           </div>
         </text>
         <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code"/>
-        <version value="2027.0.0-ballot"/>
+        <version value="2027.0.0"/>
         <name value="MII_VS_Patho_Service_Request_Code">
           <extension url="http://hl7.org/fhir/StructureDefinition/translation">
             <extension url="lang">
@@ -369706,7 +369706,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-11-27T17:51:17+00:00"/>
+        <date value="2026-11-27T19:20:50+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -369715,8 +369715,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:94e0f717-9801-4923-86b9-b5c2801fab4c"/>
-          <timestamp value="2026-11-27T17:55:50+00:00"/>
+          <identifier value="urn:uuid:e96abd7f-3432-4227-9994-d7185358daae"/>
+          <timestamp value="2026-11-27T19:26:08+00:00"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>

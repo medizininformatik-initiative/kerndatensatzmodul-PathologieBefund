@@ -24,7 +24,7 @@
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0",
   "name" : "MII_PR_Patho_Specimen",
   "_name" : {
     "extension" : [{
@@ -76,7 +76,7 @@
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T17:51:17+00:00",
+  "date" : "2026-11-27T19:20:50+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -102,7 +102,7 @@
       "value" : "info@medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core)\nIhm liegt das Domänen-Analyse-Modell von HL7 (HL7_DAM_SPECIMEN_R2_INFORM_2019APR) zugrunde. Dieses berücksichtigt insbesondere für die Pathologie das Rollenmodell von Specimen, welche sowohl Gegenstand als auch Produkt von Laborprozessen sind. Das Rootelement(Sample) ist ein klinisch gewonnenes Probenmaterial von einem Patienten, entspricht im Pathologie-Workflow einem Part. Tochterelemente sind Blöcke und Schnitte bzw. ein zytologisches Präparat. Die Kinderproben (Blöcke und Schnitte) sollten stets und mindestens ihre direkte Elternprobe über das Element Specimen.parent referenzieren.\n\nProben werden in verschiedenen Profilen referenziert. Im \"PathologieBefund\" und in den \"Einzelbeobachtungen\" der Grouper für Makroskopie und Diagnostische Schlussfolgerungen sollten die Proben des Eingangs (Parts), in den \"Einzelbeobachtungen\" des Mikroskopie-Groupers die Proben der gefärbten Gewebsschnitt-Ebene referenziert werden.",
+  "description" : "Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://medizininformatik-initiative.github.io/kerndatensatzmodul-biobank/2027.0.0-ballot/StructureDefinition-mii-pr-biobank-specimen-core.html)\nIhm liegt das Domänen-Analyse-Modell von HL7 (HL7_DAM_SPECIMEN_R2_INFORM_2019APR) zugrunde. Dieses berücksichtigt insbesondere für die Pathologie das Rollenmodell von Specimen, welche sowohl Gegenstand als auch Produkt von Laborprozessen sind. Das Rootelement(Sample) ist ein klinisch gewonnenes Probenmaterial von einem Patienten, entspricht im Pathologie-Workflow einem Part. Tochterelemente sind Blöcke und Schnitte bzw. ein zytologisches Präparat. Die Kinderproben (Blöcke und Schnitte) sollten stets und mindestens ihre direkte Elternprobe über das Element Specimen.parent referenzieren.\n\nProben werden in verschiedenen Profilen referenziert. Im \"PathologieBefund\" und in den \"Einzelbeobachtungen\" der Grouper für Makroskopie und Diagnostische Schlussfolgerungen sollten die Proben des Eingangs (Parts), in den \"Einzelbeobachtungen\" des Mikroskopie-Groupers die Proben der gefärbten Gewebsschnitt-Ebene referenziert werden.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -111,7 +111,7 @@
       },
       {
         "url" : "content",
-        "valueString" : "This profile inherits from [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core)\nIt is based on the HL7 Domain Analysis Model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR). This model, in particular for pathology, accounts for the role model of specimens, which are both the subject and the product of laboratory processes. The root element (Sample) is clinically obtained specimen material from a patient and corresponds to a Part in the pathology workflow. Child elements are blocks and slides, or a cytological preparation. The child specimens (blocks and slides) should always reference at least their direct parent specimen via the Specimen.parent element.\n\nSpecimens are referenced in various profiles. In the \"PathologyReport\" and in the \"individual observations\" of the groupers for Macroscopy and Diagnostic Conclusions, the specimens of the accession (Parts) should be referenced; in the \"individual observations\" of the Microscopy grouper, the specimens of the stained tissue slide level should be referenced."
+        "valueString" : "This profile inherits from [Profile - Specimen - Bioprobe - Core](https://medizininformatik-initiative.github.io/kerndatensatzmodul-biobank/2027.0.0-ballot/StructureDefinition-mii-pr-biobank-specimen-core.html)\nIt is based on the HL7 Domain Analysis Model (HL7_DAM_SPECIMEN_R2_INFORM_2019APR). This model, in particular for pathology, accounts for the role model of specimens, which are both the subject and the product of laboratory processes. The root element (Sample) is clinically obtained specimen material from a patient and corresponds to a Part in the pathology workflow. Child elements are blocks and slides, or a cytological preparation. The child specimens (blocks and slides) should always reference at least their direct parent specimen via the Specimen.parent element.\n\nSpecimens are referenced in various profiles. In the \"PathologyReport\" and in the \"individual observations\" of the groupers for Macroscopy and Diagnostic Conclusions, the specimens of the accession (Parts) should be referenced; in the \"individual observations\" of the Microscopy grouper, the specimens of the stained tissue slide level should be referenced."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]

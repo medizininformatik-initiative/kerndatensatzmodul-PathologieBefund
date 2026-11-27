@@ -1,4 +1,4 @@
-# mii-exa-patho-report - MII IG Modul Patho v2027.0.0-ballot
+# mii-exa-patho-report - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md) version: 2027.0.0-ballot
+Profile: [MII PR Patho Report](StructureDefinition-mii-pr-patho-report.md) version: 2027.0.0
 
 ## Pathology synoptic report 
 
@@ -52,7 +52,7 @@ Gut differenziertes azinäres Adenokarzinom der Prostata, ISUP-Gradgruppe 1
   "resourceType" : "DiagnosticReport",
   "id" : "mii-exa-patho-report",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0"]
   },
   "identifier" : [{
     "type" : {

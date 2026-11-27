@@ -1,4 +1,4 @@
-# EXA MII Patho Neutral Buffered Formalin - MII IG Modul Patho v2027.0.0-ballot
+# EXA MII Patho Neutral Buffered Formalin - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

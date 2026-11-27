@@ -1,4 +1,4 @@
-# Changelog - MII IG Modul Patho v2027.0.0-ballot
+# Changelog - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Versioning**](version-history.md)

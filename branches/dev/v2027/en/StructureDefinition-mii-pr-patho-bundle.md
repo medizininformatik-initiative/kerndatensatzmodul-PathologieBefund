@@ -1,4 +1,4 @@
-# MII PR Patho Bundle - MII IG Modul Patho v2027.0.0-ballot
+# MII PR Patho Bundle - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,11 +8,11 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-bundle | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-bundle | *Version*:2027.0.0 |
 | Active as of 2026-11-27 | *Computable Name*:MII_PR_Patho_Bundle |
 
  
-This **MII PR Patho Bundle** profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtbundle) of the [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5) specification. It serves to aggregate all resources that are part of the document. The first resource in the bundle (Bundle.entry.resource) should always be a Composition. 
+This **MII PR Patho Bundle** profile inherits from [Profile - ISiK - BerichtBundle](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/StructureDefinition-ISiKBerichtBundle.html) of the [ISiK - Stufe 6 (Basismodul 6.0.0)](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/index.html) specification. It serves to aggregate all resources that are part of the document. The first resource in the bundle (Bundle.entry.resource) should always be a Composition. 
 The profile uses `Bundle.type` = “document” and a persistent, unique `Bundle.identifier`. This should correspond to the `Composition.identifier`, for example an accession number including a version number. Further slices of Bundle.entry are ServiceRequest, Specimen, DiagnosticReport, Observation and Patient. The slices ServiceRequest and Patient are optional. The bundle contains a signature. 
 
 **Usages:**
@@ -38,7 +38,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-bund
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-bundle",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-bundle",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0",
   "name" : "MII_PR_Patho_Bundle",
   "_name" : {
     "extension" : [{
@@ -90,7 +90,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-bund
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T17:51:17+00:00",
+  "date" : "2026-11-27T19:20:50+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
@@ -116,7 +116,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-bund
       "value" : "info@medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Dieses Profil **MII PR Patho Bundle** erbt von [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtbundle) aus der Spezifikation [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5).\nEs dient der Aggregation aller Ressourcen, die Bestandteil des Dokumentes sind. Dabei sollte die erste Ressource im Bundle (Bundle.entry.resource) stets eine Composition sein.\n\nDas Profil verwendet `Bundle.type` = “document” und einen persistenten, eindeutigen `Bundle.identifier`. Dieser sollte dem `Composition.identifier` entsprechen, beispielsweise einer Eingangsnummer inklusive Versionsnummer. Weitere Slices von Bundle.entry sind ServiceRequest, Specimen, DiagnosticReport, Observation und Patient. Wobei die Slices ServiceRequest und Patient optional sind.\nDas Bundle enthält eine Signatur.",
+  "description" : "Dieses Profil **MII PR Patho Bundle** erbt von [Profile - ISiK - BerichtBundle](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/StructureDefinition-ISiKBerichtBundle.html) aus der Spezifikation [ISiK - Stufe 6 (Basismodul 6.0.0)](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/index.html).\nEs dient der Aggregation aller Ressourcen, die Bestandteil des Dokumentes sind. Dabei sollte die erste Ressource im Bundle (Bundle.entry.resource) stets eine Composition sein.\n\nDas Profil verwendet `Bundle.type` = “document” und einen persistenten, eindeutigen `Bundle.identifier`. Dieser sollte dem `Composition.identifier` entsprechen, beispielsweise einer Eingangsnummer inklusive Versionsnummer. Weitere Slices von Bundle.entry sind ServiceRequest, Specimen, DiagnosticReport, Observation und Patient. Wobei die Slices ServiceRequest und Patient optional sind.\nDas Bundle enthält eine Signatur.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -125,7 +125,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-bund
       },
       {
         "url" : "content",
-        "valueString" : "This **MII PR Patho Bundle** profile inherits from [Profile - ISiK - BerichtSubsysteme](https://simplifier.net/isik-stufe-5/isikberichtbundle) of the [ISiK - Stufe 5](https://simplifier.net/isik-stufe-5) specification.\nIt serves to aggregate all resources that are part of the document. The first resource in the bundle (Bundle.entry.resource) should always be a Composition.\n\nThe profile uses `Bundle.type` = “document” and a persistent, unique `Bundle.identifier`. This should correspond to the `Composition.identifier`, for example an accession number including a version number. Further slices of Bundle.entry are ServiceRequest, Specimen, DiagnosticReport, Observation and Patient. The slices ServiceRequest and Patient are optional.\nThe bundle contains a signature."
+        "valueString" : "This **MII PR Patho Bundle** profile inherits from [Profile - ISiK - BerichtBundle](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/StructureDefinition-ISiKBerichtBundle.html) of the [ISiK - Stufe 6 (Basismodul 6.0.0)](https://gemspec.gematik.de/ig/fhir/isik/basis/6.0.0/index.html) specification.\nIt serves to aggregate all resources that are part of the document. The first resource in the bundle (Bundle.entry.resource) should always be a Composition.\n\nThe profile uses `Bundle.type` = “document” and a persistent, unique `Bundle.identifier`. This should correspond to the `Composition.identifier`, for example an accession number including a version number. Further slices of Bundle.entry are ServiceRequest, Specimen, DiagnosticReport, Observation and Patient. The slices ServiceRequest and Patient are optional.\nThe bundle contains a signature."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]

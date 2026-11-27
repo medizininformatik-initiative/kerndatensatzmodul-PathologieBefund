@@ -60,11 +60,11 @@
     </valueCodeableConcept>
   </extension>
   <url value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen"/>
-  <version value="2027.0.0-ballot"/>
+  <version value="2027.0.0"/>
   <name value="MII_PR_Patho_Specimen"/>
   <title value="MII PR Patho Specimen"/>
   <status value="active"/>
-  <date value="2026-11-27T17:51:17+00:00"/>
+  <date value="2026-11-27T19:20:50+00:00"/>
   <publisher value="Medizininformatik-Initiative"/>
   <contact>
     <name value="Medizininformatik-Initiative"/>
@@ -77,7 +77,7 @@
       <value value="info@medizininformatik-initiative.de"/>
     </telecom>
   </contact>
-  <description value="Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core)&#xA;Ihm liegt das Domänen-Analyse-Modell von HL7 (HL7_DAM_SPECIMEN_R2_INFORM_2019APR) zugrunde. Dieses berücksichtigt insbesondere für die Pathologie das Rollenmodell von Specimen, welche sowohl Gegenstand als auch Produkt von Laborprozessen sind. Das Rootelement(Sample) ist ein klinisch gewonnenes Probenmaterial von einem Patienten, entspricht im Pathologie-Workflow einem Part. Tochterelemente sind Blöcke und Schnitte bzw. ein zytologisches Präparat. Die Kinderproben (Blöcke und Schnitte) sollten stets und mindestens ihre direkte Elternprobe über das Element Specimen.parent referenzieren.&#xA;&#xA;Proben werden in verschiedenen Profilen referenziert. Im &quot;PathologieBefund&quot; und in den &quot;Einzelbeobachtungen&quot; der Grouper für Makroskopie und Diagnostische Schlussfolgerungen sollten die Proben des Eingangs (Parts), in den &quot;Einzelbeobachtungen&quot; des Mikroskopie-Groupers die Proben der gefärbten Gewebsschnitt-Ebene referenziert werden."/>
+  <description value="Dieses Profil erbt von [Profile - Specimen - Bioprobe - Core](https://medizininformatik-initiative.github.io/kerndatensatzmodul-biobank/2027.0.0-ballot/StructureDefinition-mii-pr-biobank-specimen-core.html)&#xA;Ihm liegt das Domänen-Analyse-Modell von HL7 (HL7_DAM_SPECIMEN_R2_INFORM_2019APR) zugrunde. Dieses berücksichtigt insbesondere für die Pathologie das Rollenmodell von Specimen, welche sowohl Gegenstand als auch Produkt von Laborprozessen sind. Das Rootelement(Sample) ist ein klinisch gewonnenes Probenmaterial von einem Patienten, entspricht im Pathologie-Workflow einem Part. Tochterelemente sind Blöcke und Schnitte bzw. ein zytologisches Präparat. Die Kinderproben (Blöcke und Schnitte) sollten stets und mindestens ihre direkte Elternprobe über das Element Specimen.parent referenzieren.&#xA;&#xA;Proben werden in verschiedenen Profilen referenziert. Im &quot;PathologieBefund&quot; und in den &quot;Einzelbeobachtungen&quot; der Grouper für Makroskopie und Diagnostische Schlussfolgerungen sollten die Proben des Eingangs (Parts), in den &quot;Einzelbeobachtungen&quot; des Mikroskopie-Groupers die Proben der gefärbten Gewebsschnitt-Ebene referenziert werden."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

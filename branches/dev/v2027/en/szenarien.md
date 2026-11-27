@@ -1,4 +1,4 @@
-# Scenarios - MII IG Modul Patho v2027.0.0-ballot
+# Scenarios - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Use cases and information model**](anwendungsfaelle.md)

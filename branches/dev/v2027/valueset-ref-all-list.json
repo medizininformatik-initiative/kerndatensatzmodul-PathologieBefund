@@ -1048,7 +1048,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-all-loinc",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_All_LOINC",
     "title" : "MII VS Patho All [LOINC]",
@@ -1068,7 +1068,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-collection-method-snomed-ct",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Collection_Method_SNOMED_CT",
     "title" : "MII VS Patho Collection Method [SNOMED CT]",
@@ -1080,7 +1080,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-kdl",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Composition_Type_KDL",
     "title" : "MII VS Patho Composition Type KDL",
@@ -1092,7 +1092,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Composition_Type_SNOMED_CT",
     "title" : "MII VS Patho Composition Type [Snomed CT]",
@@ -1104,7 +1104,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Container_Type_SNOMED_CT",
     "title" : "MII VS Patho Container Type [SNOMED CT]",
@@ -1116,7 +1116,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Media_Modality_SNOMED_CT",
     "title" : "MII VS Patho Media Modality [SNOMED CT]",
@@ -1128,7 +1128,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-problem-list-snomed-ct",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Problem_List_SNOMED_CT",
     "title" : "MII VS Patho Problem List [SNOMED CT]",
@@ -1140,7 +1140,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-processing-procedure-snomed-ct",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Processing_Procedure_SNOMED_CT",
     "title" : "MII VS Patho Processing Procedure [SNOMED CT]",
@@ -1152,7 +1152,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Report_Category_HL7",
     "title" : "MII VS Patho Report Category HL7",
@@ -1164,7 +1164,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Report_Code_LOINC",
     "title" : "MII VS Patho Report Code [LOINC]",
@@ -1176,7 +1176,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Section_Types_LOINC",
     "title" : "MII VS Patho Section Types [LOINC]",
@@ -1188,7 +1188,7 @@
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-service-request-code",
-    "version" : "2027.0.0-ballot",
+    "version" : "2027.0.0",
     "status" : "active",
     "name" : "MII_VS_Patho_Service_Request_Code",
     "title" : "MII VS Patho Service Request Code",

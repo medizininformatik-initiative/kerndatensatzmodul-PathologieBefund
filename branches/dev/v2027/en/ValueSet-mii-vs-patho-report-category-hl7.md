@@ -1,4 +1,4 @@
-# MII VS Patho Report Category HL7 - MII IG Modul Patho v2027.0.0-ballot
+# MII VS Patho Report Category HL7 - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7 | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7 | *Version*:2027.0.0 |
 | Active as of 2026-11-27 | *Computable Name*:MII_VS_Patho_Report_Category_HL7 |
 
  
@@ -37,7 +37,7 @@ ValueSet for the categorization of Pathology Report documents
   "resourceType" : "ValueSet",
   "id" : "mii-vs-patho-report-category-hl7",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-category-hl7",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0",
   "name" : "MII_VS_Patho_Report_Category_HL7",
   "_name" : {
     "extension" : [{
@@ -68,7 +68,7 @@ ValueSet for the categorization of Pathology Report documents
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T17:51:17+00:00",
+  "date" : "2026-11-27T19:20:50+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

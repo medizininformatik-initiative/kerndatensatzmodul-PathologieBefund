@@ -1,4 +1,4 @@
-# MII EXA Patho Prostate Body Structure - MII IG Modul Patho v2027.0.0-ballot
+# MII EXA Patho Prostate Body Structure - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

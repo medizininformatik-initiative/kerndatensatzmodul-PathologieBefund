@@ -1,4 +1,4 @@
-# MII VS Patho Container Type [SNOMED CT] - MII IG Modul Patho v2027.0.0-ballot
+# MII VS Patho Container Type [SNOMED CT] - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct | *Version*:2027.0.0 |
 | Active as of 2026-11-27 | *Computable Name*:MII_VS_Patho_Container_Type_SNOMED_CT |
 
  
@@ -37,7 +37,7 @@ ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSe
   "resourceType" : "ValueSet",
   "id" : "mii-vs-patho-container-type-snomed-ct",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-container-type-snomed-ct",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0",
   "name" : "MII_VS_Patho_Container_Type_SNOMED_CT",
   "_name" : {
     "extension" : [{
@@ -67,7 +67,7 @@ ValueSet for container type based on IHE PaLM's ContainerEntityClassType ValueSe
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T17:51:17+00:00",
+  "date" : "2026-11-27T19:20:50+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

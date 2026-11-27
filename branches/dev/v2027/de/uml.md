@@ -1,4 +1,4 @@
-# UML - MII IG Modul Patho v2027.0.0-ballot
+# UML - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Anwendungsfälle und Informationsmodell**](anwendungsfaelle.md)

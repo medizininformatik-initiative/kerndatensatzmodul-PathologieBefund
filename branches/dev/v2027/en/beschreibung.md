@@ -1,4 +1,4 @@
-# Module description - MII IG Modul Patho v2027.0.0-ballot
+# Module description - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * **Module description**

@@ -1,4 +1,4 @@
-# MII PR Patho Macroscopic Grouper - MII IG Modul Patho v2027.0.0-ballot
+# MII PR Patho Macroscopic Grouper - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper | *Version*:2027.0.0 |
 | Active as of 2026-11-27 | *Computable Name*:MII_PR_Patho_Macroscopic_Grouper |
 
  
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-macr
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-patho-macroscopic-grouper",
   "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0",
   "name" : "MII_PR_Patho_Macroscopic_Grouper",
   "_name" : {
     "extension" : [{
@@ -98,7 +98,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-patho-macr
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T17:51:17+00:00",
+  "date" : "2026-11-27T19:20:50+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,4 +1,4 @@
-# Profile - MII IG Modul Patho v2027.0.0-ballot
+# Profile - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * **Profile**
@@ -7,7 +7,7 @@
 
 Alle Elemente des Kerndatensatzes, angepasst an die Details und Anforderungen für die Use Cases der Medizininformatik-Initiative, werden als FHIR StructureDefinitions beschrieben. Die Notwendigkeit der Anpassung wird in textueller Form unterhalb der jeweiligen Profile erläutert.
 
-Die Arbeiten der Kerndatensatzspezifikationen basieren, wo möglich, auf internationalen Standards und Terminologien — insbesondere dem [Anatomic Pathology Structured Report (APSR)](https://art-decor.org/art-decor/decor-templates--psr-?section=templates&id=1.3.6.1.4.1.19376.1.8.1.1.1&effectiveDate=2014-05-13T11:57:57&language=de-DE) und der [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/history.html). Die Anpassung an die Gegebenheiten des deutschen Gesundheitswesens erfolgt über die [Deutschen Basisprofile von HL7 Deutschland](https://simplifier.net/basisprofil-de-r4).
+Die Arbeiten der Kerndatensatzspezifikationen basieren, wo möglich, auf internationalen Standards und Terminologien — insbesondere dem [Anatomic Pathology Structured Report (APSR)](https://art-decor.org/art-decor/decor-templates--psr-?section=templates&id=1.3.6.1.4.1.19376.1.8.1.1.1&effectiveDate=2014-05-13T11:57:57&language=de-DE) und der [International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/history.html). Die Anpassung an die Gegebenheiten des deutschen Gesundheitswesens erfolgt über die [Deutschen Basisprofile von HL7 Deutschland](https://ig.fhir.de/basisprofile-de/).
 
 ### Übersicht
 

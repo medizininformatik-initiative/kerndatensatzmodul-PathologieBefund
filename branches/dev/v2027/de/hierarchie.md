@@ -1,4 +1,4 @@
-# Hierarchie und Workflow - MII IG Modul Patho v2027.0.0-ballot
+# Hierarchie und Workflow - MII IG Modul Patho v2027.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Anwendungsfälle und Informationsmodell**](anwendungsfaelle.md)
