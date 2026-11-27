@@ -261,8 +261,10 @@ In the table below, elements are marked with * that are duplicated in the MII PR
 // Slices je CodeSystem auf den Wiederholungen von conclusionCode (nicht auf coding):
 // ICD-10-GM, ICD-O-3 und SNOMED CT kodieren nicht zwingend dasselbe Konzept
 // und duerfen daher nicht als aequivalente Codings in einem CodeableConcept stehen.
-* conclusionCode ^slicing.discriminator.type = #pattern
-* conclusionCode ^slicing.discriminator.path = "$this"
+// Discriminator value auf coding.system statt pattern auf $this: ein patternCodeableConcept nur mit
+// system (ohne code) schickt der IG Publisher an den Terminologieserver, der es ablehnt.
+* conclusionCode ^slicing.discriminator.type = #value
+* conclusionCode ^slicing.discriminator.path = "coding.system"
 * conclusionCode ^slicing.rules = #open
 * conclusionCode ^slicing.description = "Je ein conclusionCode pro Kodiersystem; ein CodeableConcept traegt nur Codings eines Systems"
 * conclusionCode contains icd10-gm 0..* MS and icd-o-3 0..* MS and sct 0..* MS
@@ -271,9 +273,10 @@ In the table below, elements are marked with * that are duplicated in the MII PR
 * insert Translation(conclusionCode[icd10-gm] ^short, en-US, ICD-10-GM)
 * insert Translation(conclusionCode[icd10-gm] ^definition, de-DE, Diagnose nach ICD-10-GM)
 * insert Translation(conclusionCode[icd10-gm] ^definition, en-US, Diagnosis coded in ICD-10-GM)
-* conclusionCode[icd10-gm] ^patternCodeableConcept.coding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+* conclusionCode[icd10-gm]
   * coding 1.. MS
     * system 1.. MS
+    * system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm" (exactly)
     * version 1.. MS
     * code 1.. MS
 * insert Label(conclusionCode[icd-o-3], ICD-O-3, Morphologie oder Topographie nach ICD-O-3)
@@ -282,9 +285,10 @@ In the table below, elements are marked with * that are duplicated in the MII PR
 * insert Translation(conclusionCode[icd-o-3] ^definition, de-DE, Morphologie oder Topographie nach ICD-O-3)
 * insert Translation(conclusionCode[icd-o-3] ^definition, en-US, Morphology or topography coded in ICD-O-3)
 * conclusionCode[icd-o-3] ^comment = "Morphologie (z.B. 8140/3) und Topographie (z.B. C61.9) teilen sich das CodeSystem und stehen jeweils in einem eigenen conclusionCode. Die Morphologie kann zusätzlich strukturiert als Finding mit LOINC 59847-4 im MII PR Patho Diagnostic Conclusion Grouper vorliegen."
-* conclusionCode[icd-o-3] ^patternCodeableConcept.coding.system = "http://terminology.hl7.org/CodeSystem/icd-o-3"
+* conclusionCode[icd-o-3]
   * coding 1.. MS
     * system 1.. MS
+    * system = "http://terminology.hl7.org/CodeSystem/icd-o-3" (exactly)
     * version MS
     * code 1.. MS
 * insert Label(conclusionCode[sct], SNOMED CT, Diagnostische Schlussfolgerung nach SNOMED CT)
@@ -292,9 +296,10 @@ In the table below, elements are marked with * that are duplicated in the MII PR
 * insert Translation(conclusionCode[sct] ^short, en-US, SNOMED CT)
 * insert Translation(conclusionCode[sct] ^definition, de-DE, Diagnostische Schlussfolgerung nach SNOMED CT)
 * insert Translation(conclusionCode[sct] ^definition, en-US, Diagnostic conclusion coded in SNOMED CT)
-* conclusionCode[sct] ^patternCodeableConcept.coding.system = "http://snomed.info/sct"
+* conclusionCode[sct]
   * coding 1.. MS
     * system 1.. MS
+    * system = "http://snomed.info/sct" (exactly)
     * code 1.. MS
 
 // -------------------------

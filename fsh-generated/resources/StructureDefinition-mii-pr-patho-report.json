@@ -1790,8 +1790,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this"
+              "type": "value",
+              "path": "coding.system"
             }
           ],
           "rules": "open",
@@ -1929,13 +1929,6 @@
         },
         "min": 0,
         "max": "*",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
-            }
-          ]
-        },
         "mustSupport": true
       },
       {
@@ -1948,6 +1941,7 @@
         "id": "DiagnosticReport.conclusionCode:icd10-gm.coding.system",
         "path": "DiagnosticReport.conclusionCode.coding.system",
         "min": 1,
+        "fixedUri": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
         "mustSupport": true
       },
       {
@@ -2031,13 +2025,6 @@
         "comment": "Morphologie (z.B. 8140/3) und Topographie (z.B. C61.9) teilen sich das CodeSystem und stehen jeweils in einem eigenen conclusionCode. Die Morphologie kann zusätzlich strukturiert als Finding mit LOINC 59847-4 im MII PR Patho Diagnostic Conclusion Grouper vorliegen.",
         "min": 0,
         "max": "*",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/icd-o-3"
-            }
-          ]
-        },
         "mustSupport": true
       },
       {
@@ -2050,6 +2037,7 @@
         "id": "DiagnosticReport.conclusionCode:icd-o-3.coding.system",
         "path": "DiagnosticReport.conclusionCode.coding.system",
         "min": 1,
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/icd-o-3",
         "mustSupport": true
       },
       {
@@ -2131,13 +2119,6 @@
         },
         "min": 0,
         "max": "*",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct"
-            }
-          ]
-        },
         "mustSupport": true
       },
       {
@@ -2150,6 +2131,7 @@
         "id": "DiagnosticReport.conclusionCode:sct.coding.system",
         "path": "DiagnosticReport.conclusionCode.coding.system",
         "min": 1,
+        "fixedUri": "http://snomed.info/sct",
         "mustSupport": true
       },
       {
