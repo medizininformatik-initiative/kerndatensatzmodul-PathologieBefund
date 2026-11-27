@@ -68,7 +68,7 @@ ValueSet for the categorization of Pathology Report documents
   },
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T15:16:10+00:00",
+  "date" : "2026-11-27T17:51:17+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

@@ -36,7 +36,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtSubSysteme) 
+Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtSubSysteme) 
 
 #### Terminology Bindings (Differential)
 
@@ -46,7 +46,7 @@ Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtSubSysteme) 
+Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtSubSysteme) 
 
 ** Summary **
 
@@ -58,7 +58,7 @@ Mandatory: 9 elements(2 nested mandatory elements)
 
 This structure refers to these other structures:
 
-* [ISiKPersonImGesundheitsberuf (https://gematik.de/fhir/isik/StructureDefinition/ISiKPersonImGesundheitsberuf)](https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKPersonImGesundheitsberuf)
+* [ISiKPersonImGesundheitsberuf (https://gematik.de/fhir/isik/StructureDefinition/ISiKPersonImGesundheitsberuf)](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKPersonImGesundheitsberuf)
 * [MII PR Patho Report (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report)](StructureDefinition-mii-pr-patho-report.md)
 * [MII PR Patho Macroscopic Grouper (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper)](StructureDefinition-mii-pr-patho-macroscopic-grouper.md)
 * [MII PR Patho Microscopic Grouper (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper)](StructureDefinition-mii-pr-patho-microscopic-grouper.md)
@@ -89,7 +89,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtSubSysteme) 
+Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtSubSysteme) 
 
 #### Terminology Bindings (Differential)
 
@@ -101,7 +101,7 @@ Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtSubSysteme) 
+Diese Struktur ist abgeleitet von [ISiKBerichtSubSysteme](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtSubSysteme) 
 
 ** Summary **
 
@@ -113,7 +113,7 @@ Mandatory: 9 elements(2 nested mandatory elements)
 
 This structure refers to these other structures:
 
-* [ISiKPersonImGesundheitsberuf (https://gematik.de/fhir/isik/StructureDefinition/ISiKPersonImGesundheitsberuf)](https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKPersonImGesundheitsberuf)
+* [ISiKPersonImGesundheitsberuf (https://gematik.de/fhir/isik/StructureDefinition/ISiKPersonImGesundheitsberuf)](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKPersonImGesundheitsberuf)
 * [MII PR Patho Report (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report)](StructureDefinition-mii-pr-patho-report.md)
 * [MII PR Patho Macroscopic Grouper (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper)](StructureDefinition-mii-pr-patho-macroscopic-grouper.md)
 * [MII PR Patho Microscopic Grouper (https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-microscopic-grouper)](StructureDefinition-mii-pr-patho-microscopic-grouper.md)
@@ -201,7 +201,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T15:16:10+00:00",
+  "date" : "2026-11-27T17:51:17+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{

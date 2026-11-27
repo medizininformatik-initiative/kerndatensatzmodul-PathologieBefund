@@ -9,9 +9,11 @@
 ### 2027.0.0
 
 * `feature` Base Observation (vererbt an Section Grouper und Finding): R5-Extension `Observation.bodyStructure` als Verweis auf BodyStructure (#271)
-* `feature` DiagnosticReport.conclusionCode: Slices je Kodiersystem (ICD-10-GM, ICD-O-3, SNOMED CT) aus der Kommentierung
+* `feature` DiagnosticReport.conclusionCode: Slices je Kodiersystem (ICD-10-GM, ICD-O-3, SNOMED CT)
 * `changed` Composition.section:patho-diagnostic-report 1..* → 0..*; neue Invariante `mii-patho-comp-1`: Section Pathologie-Diagnostikbericht oder Diagnostische Schlussfolgerung ist Pflicht
-* `changed` Composition.relatesTo.targetIdentifier als Must Support, für Bezugsdokumente ohne FHIR-Ressource (z. B. Vorbefund aus Altsystem)
+* `changed` Composition.relatesTo.targetIdentifier als Must Support (z. B. Vorbefund aus Altsystem)
+* `changed` Abhängigkeit ISiK 5.1.2 → 6.0.0 (Eltern von Composition, Bundle und Composition.author)
+* `documentation` Finding: Link auf den HL7 IG Structured Data Capture versionsunabhängig
 
 ### 2027.0.0-ballot.rc1
 

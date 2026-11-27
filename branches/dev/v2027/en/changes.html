@@ -317,12 +317,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#202700" id="markdown-toc-202700">2027.0.0</a></li>
   <li><a href="#202700-ballotrc1" id="markdown-toc-202700-ballotrc1">2027.0.0-ballot.rc1</a></li>
   <li><a href="#202601" id="markdown-toc-202601">2026.0.1</a></li>
   <li><a href="#202600-ballot" id="markdown-toc-202600-ballot">2026.0.0-ballot</a></li>
 </ul>
 
 </div>
+<h3 id="202700">2027.0.0</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">feature</code> Base Observation (inherited by Section Grouper and Finding): R5 extension <code class="language-plaintext highlighter-rouge">Observation.bodyStructure</code> as a reference to BodyStructure (#271)</li>
+  <li><code class="language-plaintext highlighter-rouge">feature</code> DiagnosticReport.conclusionCode: slices per code system (ICD-10-GM, ICD-O-3, SNOMED CT)</li>
+  <li><code class="language-plaintext highlighter-rouge">changed</code> Composition.section:patho-diagnostic-report 1..* → 0..*; new invariant <code class="language-plaintext highlighter-rouge">mii-patho-comp-1</code>: section Pathology Diagnostic Report or Diagnostic Conclusion is mandatory</li>
+  <li><code class="language-plaintext highlighter-rouge">changed</code> Composition.relatesTo.targetIdentifier as Must Support (e.g. prior report from a legacy system)</li>
+  <li><code class="language-plaintext highlighter-rouge">changed</code> Dependency ISiK 5.1.2 → 6.0.0 (parent of Composition, Bundle and Composition.author)</li>
+  <li><code class="language-plaintext highlighter-rouge">documentation</code> Finding: link to the HL7 IG Structured Data Capture made version-independent</li>
+</ul>
+
 <h3 id="202700-ballotrc1">2027.0.0-ballot.rc1</h3>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">documentation</code> References to the <a href="https://bih-cei.github.io/ProstateCancerSpec/index.html">Prostate Cancer Spec IG</a> added as a reference example</li>
@@ -405,7 +416,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik-Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.patho#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Nov 27, 2026 15:16+0000">2026-11-27</span>
+          Generated <span title="Fri, Nov 27, 2026 17:51+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

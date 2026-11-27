@@ -35,13 +35,13 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [ISiKBerichtBundle](https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtBundle) 
+Diese Struktur ist abgeleitet von [ISiKBerichtBundle](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtBundle) 
 
 #### Terminology Bindings
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [ISiKBerichtBundle](https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtBundle) 
+Diese Struktur ist abgeleitet von [ISiKBerichtBundle](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtBundle) 
 
 ** Summary **
 
@@ -65,7 +65,7 @@ This structure refers to these other structures:
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [ISiKBerichtBundle](https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtBundle) 
+Diese Struktur ist abgeleitet von [ISiKBerichtBundle](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtBundle) 
 
  **Snapshot-AnsichtView** 
 
@@ -73,7 +73,7 @@ Diese Struktur ist abgeleitet von [ISiKBerichtBundle](https://simplifier.net/res
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [ISiKBerichtBundle](https://simplifier.net/resolve?scope=de.gematik.isik@5.1.2&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtBundle) 
+Diese Struktur ist abgeleitet von [ISiKBerichtBundle](https://simplifier.net/resolve?scope=de.gematik.isik@6.0.0&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKBerichtBundle) 
 
 ** Summary **
 
@@ -154,7 +154,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-patho
     }]
   },
   "status" : "active",
-  "date" : "2026-11-27T15:16:10+00:00",
+  "date" : "2026-11-27T17:51:17+00:00",
   "publisher" : "Medizininformatik-Initiative",
   "_publisher" : {
     "extension" : [{
